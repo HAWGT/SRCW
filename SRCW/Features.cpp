@@ -25,43 +25,46 @@ void HookGame()
 
 void UnlockAll()
 {
-	for (int i = 0; i < SDK::UObject::GObjects->Num(); i++)
+	if (GetKeyState(VK_SHIFT) & 0x8000)
 	{
-		SDK::UObject* Obj = SDK::UObject::GObjects->GetByIndex(i);
-
-		if (!Obj)
-			continue;
-
-		if (Obj->IsDefaultObject())
-			continue;
-
-		if (Obj->IsA(SDK::UHonorTitleListDataAsset::StaticClass()))
+		for (int i = 0; i < SDK::UObject::GObjects->Num(); i++)
 		{
-			SDK::UHonorTitleListDataAsset* Title = static_cast<SDK::UHonorTitleListDataAsset*>(Obj);
+			SDK::UObject* Obj = SDK::UObject::GObjects->GetByIndex(i);
 
-			for (const auto& t : Title->HonorTitleTableDataMap)
+			if (!Obj)
+				continue;
+
+			if (Obj->IsDefaultObject())
+				continue;
+
+			if (Obj->IsA(SDK::UHonorTitleListDataAsset::StaticClass()))
 			{
-				std::cout << t.Key() << "\n" << std::endl;
-				SDK::UAppSaveGameHelper::UnlockHonorTitle(t.Key());
+				SDK::UHonorTitleListDataAsset* Title = static_cast<SDK::UHonorTitleListDataAsset*>(Obj);
+
+				for (const auto& t : Title->HonorTitleTableDataMap)
+				{
+					std::cout << t.Key() << "\n" << std::endl;
+					SDK::UAppSaveGameHelper::UnlockHonorTitle(t.Key());
+				}
 			}
-
-			bUnlocked = true;
 		}
-	}
 
-	for (int i = 0; i < (uint8_t)SDK::EDriverId::Num; i++)
-	{
-		SDK::UAppSaveGameHelper::SetDriverSelectable(SDK::EDriverId(i));
-	}
-	
-	SDK::UMachineCustomizeUtilityLibrary::StoreAllAura();
-	SDK::UMachineCustomizeUtilityLibrary::StoreAllHorn();
-	SDK::UMachineCustomizeUtilityLibrary::StoreAllMachineAssembly();
-	SDK::UMachineCustomizeUtilityLibrary::StoreAllMachineParts();
-	SDK::UMachineCustomizeUtilityLibrary::StoreAllSticker();
-	SDK::UMachineCustomizeUtilityLibrary::UnlockGadgetAll();
+		for (int i = 0; i < (uint8_t)SDK::EDriverId::Num; i++)
+		{
+			SDK::UAppSaveGameHelper::SetDriverSelectable(SDK::EDriverId(i));
+		}
 
-	std::cout << "Unlocked Everything!\n";
+		SDK::UMachineCustomizeUtilityLibrary::StoreAllAura();
+		SDK::UMachineCustomizeUtilityLibrary::StoreAllHorn();
+		SDK::UMachineCustomizeUtilityLibrary::StoreAllMachineAssembly();
+		SDK::UMachineCustomizeUtilityLibrary::StoreAllMachineParts();
+		SDK::UMachineCustomizeUtilityLibrary::StoreAllSticker();
+		SDK::UMachineCustomizeUtilityLibrary::UnlockGadgetAll();
+
+		std::cout << "Unlocked Everything!\n";
+
+		bUnlocked = true;
+	}
 }
 
 void __fastcall hk_AActor_ProcessEvent(SDK::AActor* Class, SDK::UFunction* Function, void* Parms)
@@ -70,8 +73,6 @@ void __fastcall hk_AActor_ProcessEvent(SDK::AActor* Class, SDK::UFunction* Funct
 	{
 		UnlockAll();
 	}
-
-	//std::cout << Function->GetName() << "\n";
 
 	Orig_AActor_ProcessEvent(Class, Function, Parms);
 }
