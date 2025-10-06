@@ -2,9 +2,6 @@
 
 void HookGame()
 {
-	//TODO: 
-	//enable console
-
 	bool bHooked = false;
 
 	while (!bHooked)
