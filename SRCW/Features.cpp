@@ -25,7 +25,7 @@ void HookGame()
 
 void UnlockAll()
 {
-	if (GetKeyState(VK_SHIFT) & 0x8000)
+	if (SDK::UAppSaveGameHelper::IsReadHint(SDK::EHintId::Tips10001))
 	{
 		for (int i = 0; i < SDK::UObject::GObjects->Num(); i++)
 		{
@@ -43,7 +43,6 @@ void UnlockAll()
 
 				for (const auto& t : Title->HonorTitleTableDataMap)
 				{
-					std::cout << t.Key() << "\n" << std::endl;
 					SDK::UAppSaveGameHelper::UnlockHonorTitle(t.Key());
 				}
 			}
@@ -69,7 +68,7 @@ void UnlockAll()
 
 void __fastcall hk_AActor_ProcessEvent(SDK::AActor* Class, SDK::UFunction* Function, void* Parms)
 {
-	if (!Function->GetName().compare("ReceiveDrawHUD") && !bUnlocked)
+	if (!Function->GetName().compare("OnInitStateSelectPlayMode"))
 	{
 		UnlockAll();
 	}
