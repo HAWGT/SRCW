@@ -58,8 +58,6 @@ void UnlockAll()
 		SDK::UMachineCustomizeUtilityLibrary::UnlockGadgetAll();
 
 		std::cout << "Unlocked Everything!\n";
-
-		bUnlocked = true;
 	}
 }
 

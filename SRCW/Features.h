@@ -12,8 +12,6 @@
 
 inline const char ConfigFileName[] = ".\\UNION\\Binaries\\Win64\\SRCW.ini";
 
-inline bool bUnlocked = false;
-
 void HookGame();
 void UnlockAll();
 
