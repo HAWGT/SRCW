@@ -9,7 +9,6 @@
 #include "CppSDK/SDK/UnionSystem_structs.hpp"
 #include "CppSDK/SDK/UNION_parameters.hpp"
 #include "CppSDK/SDK/BP_MenuRacerLobby_classes.hpp"
-#include "CppSDK/SDK/BP_MenuDriverPawn_classes.hpp"
 
 inline const char ConfigFileName[] = ".\\UNION\\Binaries\\Win64\\SRCW.ini";
 
