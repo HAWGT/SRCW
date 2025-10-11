@@ -46,11 +46,6 @@ void Clear(SDK::AActor* Class, SDK::UFunction* Function)
 				mm.Value().MachineIds.Clear();
 			}
 
-			for (auto& sm : Content->StageDLCMap)
-			{
-				sm.Value().StageIds.Clear();
-			}
-
 			for (auto& hm : Content->HonorOtherTitleDLCMap)
 			{
 				hm.Value().HonorTitleIds.Clear();
@@ -66,7 +61,7 @@ void Clear(SDK::AActor* Class, SDK::UFunction* Function)
 				sm.Value().StickerIds.Clear();
 			}
 
-			std::cout << Class->GetName() << " " << Function->GetName() << " Cleared DLCs!\n";
+			std::cout << " Cleared DLCs!\n";
 
 			bCleared = true;
 		}
