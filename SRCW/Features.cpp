@@ -61,7 +61,7 @@ void Clear(SDK::AActor* Class, SDK::UFunction* Function)
 				sm.Value().StickerIds.Clear();
 			}
 
-			std::cout << " Cleared DLCs!\n";
+			std::cout << "Cleared DLCs!\n";
 
 			bCleared = true;
 		}
