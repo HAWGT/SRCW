@@ -50,7 +50,6 @@ void Clear(SDK::AActor* Class, SDK::UFunction* Function)
 			{
 				sm.Value().StageIds.Clear();
 			}
-		
 
 			for (auto& hm : Content->HonorOtherTitleDLCMap)
 			{
