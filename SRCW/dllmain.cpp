@@ -34,7 +34,7 @@ void Init()
 			if (!param.compare("Console"))
 			{
 				if (value == 1) CreateConsole("SRCW");
-				std::cout << "[*] System Shock" << "\n";
+				std::cout << "[*] Sonic Racing Crossworlds" << "\n";
 				std::cout << "[+] Settings Loaded: " << "\n";
 				std::cout << param << " " << value << "\n";
 			}
