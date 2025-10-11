@@ -113,7 +113,6 @@ void __fastcall hk_AActor_ProcessEvent(SDK::AActor* Class, SDK::UFunction* Funct
 	if (!bCleared)
 	{
 		Clear();
-		bCleared = true;
 	}
 
 	if (!Function->GetName().compare("OnInitStateSelectPlayMode") && !bUnlocked)
