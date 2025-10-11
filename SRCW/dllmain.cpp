@@ -38,6 +38,12 @@ void Init()
 				std::cout << "[+] Settings Loaded: " << "\n";
 				std::cout << param << " " << value << "\n";
 			}
+
+			if (!param.compare("ClearOnly"))
+			{
+				bUnlocked = (value == 1);
+				std::cout << param << " " << value << "\n";
+			}
 		}
 
 		config.close();
@@ -49,6 +55,7 @@ void Init()
 		ConfigFile.open(ConfigFileName, std::ofstream::out | std::ofstream::trunc);
 
 		ConfigFile << "Console 0" << std::endl;
+		ConfigFile << "ClearOnly 0" << std::endl;
 
 		ConfigFile.close();
 	}
