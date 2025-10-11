@@ -20,6 +20,60 @@ void HookGame()
 	}
 }
 
+void Clear(SDK::AActor* Class, SDK::UFunction* Function)
+{
+	for (int i = 0; i < SDK::UObject::GObjects->Num(); i++)
+	{
+		SDK::UObject* Obj = SDK::UObject::GObjects->GetByIndex(i);
+
+		if (!Obj)
+			continue;
+
+		if (Obj->IsDefaultObject())
+			continue;
+
+		if (Obj->IsA(SDK::UContentDataAsset::StaticClass()))
+		{
+			auto Content = static_cast<SDK::UContentDataAsset*>(Obj);
+
+			for (auto& cm : Content->CharaDLCMap)
+			{
+				cm.Value().DriverIds.Clear();
+			}
+
+			for (auto& mm : Content->MachineDLCMap)
+			{
+				mm.Value().MachineIds.Clear();
+			}
+
+			for (auto& sm : Content->StageDLCMap)
+			{
+				sm.Value().StageIds.Clear();
+			}
+		
+
+			for (auto& hm : Content->HonorOtherTitleDLCMap)
+			{
+				hm.Value().HonorTitleIds.Clear();
+			}
+
+			for (auto& am : Content->AlbumDLCMap)
+			{
+				am.Value().AlbumIds.Clear();
+			}
+
+			for (auto& sm : Content->StickerDLCMap)
+			{
+				sm.Value().StickerIds.Clear();
+			}
+
+			std::cout << Class->GetName() << " " << Function->GetName() << " Cleared DLCs!\n";
+
+			bCleared = true;
+		}
+	}
+}
+
 void UnlockAll()
 {
 	for (int i = 0; i < SDK::UObject::GObjects->Num(); i++)
@@ -34,7 +88,7 @@ void UnlockAll()
 
 		if (Obj->IsA(SDK::UHonorTitleListDataAsset::StaticClass()))
 		{
-			SDK::UHonorTitleListDataAsset* Title = static_cast<SDK::UHonorTitleListDataAsset*>(Obj);
+			auto Title = static_cast<SDK::UHonorTitleListDataAsset*>(Obj);
 
 			for (const auto& t : Title->HonorTitleTableDataMap)
 			{
@@ -56,11 +110,19 @@ void UnlockAll()
 	SDK::UMachineCustomizeUtilityLibrary::UnlockGadgetAll();
 
 	std::cout << "Unlocked Everything!\n";
+
+	bUnlocked = true;
 }
 
 void __fastcall hk_AActor_ProcessEvent(SDK::AActor* Class, SDK::UFunction* Function, void* Parms)
 {
-	if (!Function->GetName().compare("OnInitStateSelectPlayMode"))
+	if (!bCleared)
+	{
+		Clear(Class, Function);
+		bCleared = true;
+	}
+
+	if (!Function->GetName().compare("OnInitStateSelectPlayMode") && !bUnlocked)
 	{
 		UnlockAll();
 	}

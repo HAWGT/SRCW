@@ -12,7 +12,11 @@
 
 inline const char ConfigFileName[] = ".\\UNION\\Binaries\\Win64\\SRCW.ini";
 
+inline bool bCleared = false;
+inline bool bUnlocked = false;
+
 void HookGame();
+void Clear(SDK::AActor* Class, SDK::UFunction* Function);
 void UnlockAll();
 
 void __fastcall hk_AActor_ProcessEvent(SDK::AActor* Class, SDK::UFunction* Function, void* Parms);
