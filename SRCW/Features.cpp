@@ -20,7 +20,7 @@ void HookGame()
 	}
 }
 
-void Clear(SDK::AActor* Class, SDK::UFunction* Function)
+void Clear()
 {
 	for (int i = 0; i < SDK::UObject::GObjects->Num(); i++)
 	{
@@ -112,7 +112,7 @@ void __fastcall hk_AActor_ProcessEvent(SDK::AActor* Class, SDK::UFunction* Funct
 {
 	if (!bCleared)
 	{
-		Clear(Class, Function);
+		Clear();
 		bCleared = true;
 	}
 
