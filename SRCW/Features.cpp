@@ -14,14 +14,14 @@ void HookGame()
 			continue;
 		}
 
-		BYTE* AActor_ProcessEvent_Addr = PatternScan("48 89 5C 24 10 48 89 6C 24 18 57 48 83 EC ? F7 82 B0 00 00 00 ? ? ? ?");
+		Orig_AActor_ProcessEvent = reinterpret_cast<AActor_ProcessEvent_t>(PatternScan("48 89 5C 24 10 48 89 6C 24 18 57 48 83 EC ? F7 82 B0 00 00 00 ? ? ? ?"));
 
-		if (!AActor_ProcessEvent_Addr)
+		if (!Orig_AActor_ProcessEvent)
 		{
 			continue;
 		}
 
-		Orig_AActor_ProcessEvent = reinterpret_cast<AActor_ProcessEvent_t>(TrampHook64(AActor_ProcessEvent_Addr, (BYTE*)hk_AActor_ProcessEvent, 15));
+		Orig_AActor_ProcessEvent = reinterpret_cast<AActor_ProcessEvent_t>(TrampHook64((BYTE*)Orig_AActor_ProcessEvent, (BYTE*)hk_AActor_ProcessEvent, 15));
 
 		if (!Orig_AActor_ProcessEvent)
 		{
