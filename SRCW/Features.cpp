@@ -23,11 +23,6 @@ void HookGame()
 
 		Orig_AActor_ProcessEvent = reinterpret_cast<AActor_ProcessEvent_t>(TrampHook64((BYTE*)Orig_AActor_ProcessEvent, (BYTE*)hk_AActor_ProcessEvent, 15));
 
-		if (!Orig_AActor_ProcessEvent)
-		{
-			continue;
-		}
-
 		bHooked = true;
 	}
 }
