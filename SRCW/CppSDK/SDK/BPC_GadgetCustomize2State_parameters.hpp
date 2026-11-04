@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UnionUI_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params

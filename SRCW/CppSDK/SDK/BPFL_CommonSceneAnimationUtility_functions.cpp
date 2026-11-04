@@ -24,11 +24,11 @@ namespace SDK
 // EDriverPose                             In_Pose                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UDataTable*                       DataTable                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// TSoftObjectPtr<class UAnimSequenceBase>*Anim                                                   (Parm, OutParm, HasGetValueTypeHash)
+// TSoftObjectPtr<class UAnimSequenceBase>*anim                                                   (Parm, OutParm, HasGetValueTypeHash)
 // double*                                 Time                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool*                                   bSkipFacialBlend                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPFL_CommonSceneAnimationUtility_C::GetSceneDriverAnimationAsset(EDriverId In_DriverId, EDriverPose In_Pose, class UDataTable* DataTable, class UObject* __WorldContext, TSoftObjectPtr<class UAnimSequenceBase>* Anim, double* Time, bool* bSkipFacialBlend)
+void UBPFL_CommonSceneAnimationUtility_C::GetSceneDriverAnimationAsset(EDriverId In_DriverId, EDriverPose In_Pose, class UDataTable* DataTable, class UObject* __WorldContext, TSoftObjectPtr<class UAnimSequenceBase>* anim, double* Time, bool* bSkipFacialBlend)
 {
 	static class UFunction* Func = nullptr;
 
@@ -44,8 +44,8 @@ void UBPFL_CommonSceneAnimationUtility_C::GetSceneDriverAnimationAsset(EDriverId
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
-	if (Anim != nullptr)
-		*Anim = Parms.Anim;
+	if (anim != nullptr)
+		*anim = Parms.anim;
 
 	if (Time != nullptr)
 		*Time = Parms.Time;

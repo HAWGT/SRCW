@@ -36,7 +36,7 @@ public:
 	void ExecuteUbergraph_WBP_Ready_Sub_Gadget(int32 EntryPoint);
 	void HiddenCaptionEvent(bool bIsHidden);
 	void SetGadgetCaptionEvent(int32 PlayerIndex_0, int32 SlotState, int32 SlotIndex);
-	void UpdateGadgetDetail(int32 InGadgetId);
+	void UpdateGadgetDetail(int32 InSlotIndex);
 	void UpdatePlayerIndex();
 
 public:

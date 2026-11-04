@@ -17,6 +17,34 @@
 namespace SDK
 {
 
+// Function WBP_GadgetIcon.WBP_GadgetIcon_C.AnimPlayGadgetIconLoopBlink
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_GadgetIcon_C::AnimPlayGadgetIconLoopBlink()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_GadgetIcon_C", "AnimPlayGadgetIconLoopBlink");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_GadgetIcon.WBP_GadgetIcon_C.AnimStopGadgetIconLoopBlink
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_GadgetIcon_C::AnimStopGadgetIconLoopBlink()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_GadgetIcon_C", "AnimStopGadgetIconLoopBlink");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_GadgetIcon.WBP_GadgetIcon_C.ExecuteUbergraph_WBP_GadgetIcon
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -60,20 +88,6 @@ void UWBP_GadgetIcon_C::OnBackKeyPressed()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("WBP_GadgetIcon_C", "OnBackKeyPressed");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_GadgetIcon.WBP_GadgetIcon_C.OnConstInitBpWidgetRef
-// (Event, Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWBP_GadgetIcon_C::OnConstInitBpWidgetRef()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetIcon_C", "OnConstInitBpWidgetRef");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -211,6 +225,34 @@ void UWBP_GadgetIcon_C::OnLeftShoulderPressed()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("WBP_GadgetIcon_C", "OnLeftShoulderPressed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_GadgetIcon.WBP_GadgetIcon_C.OnLeftStickButtonPressed
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_GadgetIcon_C::OnLeftStickButtonPressed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_GadgetIcon_C", "OnLeftStickButtonPressed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_GadgetIcon.WBP_GadgetIcon_C.OnLeftStickButtonReleased
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_GadgetIcon_C::OnLeftStickButtonReleased()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_GadgetIcon_C", "OnLeftStickButtonReleased");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

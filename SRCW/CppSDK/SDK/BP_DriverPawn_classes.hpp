@@ -10,38 +10,38 @@
 
 #include "Basic.hpp"
 
+#include "UnionRun_structs.hpp"
+#include "Engine_structs.hpp"
+#include "UnionSystem_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "UnionSystem_structs.hpp"
-#include "Engine_structs.hpp"
-#include "UnionRun_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_DriverPawn.BP_DriverPawn_C
-// 0x0420 (0x0970 - 0x0550)
+// 0x04A0 (0x0A00 - 0x0560)
 class ABP_DriverPawn_C final : public ADriver
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0550(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UGFurComponent*                         GFur;                                              // 0x0558(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SteeringWheel;                                     // 0x0560(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 SkeletalMesh;                                      // 0x0568(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0570(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	EDriverId                                     DriverId;                                          // 0x0578(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_579[0x7];                                      // 0x0579(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(EItemId Activated_Item_Id)> OnActivateItem;                        // 0x0580(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	class UDriverAnimInstance*                    DriverAnimInstance;                                // 0x0590(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FHoldItemCreateParam                   HoldItemParam;                                     // 0x0598(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	TMulticastInlineDelegate<void()>              OnBindItem;                                        // 0x05A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          bHoverboard;                                       // 0x05B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_5B9[0x7];                                      // 0x05B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDriverData                            DriverData;                                        // 0x05C0(0x0398)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          bUseRivalSkin;                                     // 0x0958(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_959[0x7];                                      // 0x0959(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UStaticMesh*>                    RefSteeringWheelMesh;                              // 0x0960(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0560(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UGFurComponent*                         GFur;                                              // 0x0568(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SteeringWheel;                                     // 0x0570(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 SkeletalMesh;                                      // 0x0578(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0580(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	EDriverId                                     DriverId;                                          // 0x0588(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	uint8                                         Pad_589[0x7];                                      // 0x0589(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(EItemId Activated_Item_Id)> OnActivateItem;                        // 0x0590(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class UDriverAnimInstance*                    DriverAnimInstance;                                // 0x05A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FHoldItemCreateParam                   HoldItemParam;                                     // 0x05A8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	TMulticastInlineDelegate<void()>              OnBindItem;                                        // 0x05B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          bHoverboard;                                       // 0x05C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	uint8                                         Pad_5C9[0x7];                                      // 0x05C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDriverData                            DriverData;                                        // 0x05D0(0x0418)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          bUseRivalSkin;                                     // 0x09E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	uint8                                         Pad_9E9[0x7];                                      // 0x09E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UStaticMesh*>                    RefSteeringWheelMesh;                              // 0x09F0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void BindCurvesMaterialPlayer(class UCurveTable* In_CurveTable, ERacerMaterialAnimation In_Enum);
@@ -57,6 +57,7 @@ public:
 	void SetItemParam(const struct FHoldItemCreateParam& InHoldItemParam, bool* Return);
 	void SetLightingChannels(bool Channel0, bool Channel1, bool Channel2);
 	void SetRideableStatusType(ECarStatusType StatusType);
+	bool SetSkeletalMeshLOD(const int32 InLOD);
 	void SetupCharacterById(EDriverId In_DriverId);
 	bool UseItem();
 	bool UseItemInDirection(const EDriverDirection Direction);

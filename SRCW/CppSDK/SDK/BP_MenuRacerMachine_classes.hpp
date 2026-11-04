@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_MenuRacerMachine.BP_MenuRacerMachine_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0548 - 0x0548)
 class ABP_MenuRacerMachine_C final : public AMenuRacerMachine
 {
 public:

@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "UNION_structs.hpp"
 #include "UnionSystem_structs.hpp"
-#include "UMG_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "UNION_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK::Params
@@ -29,7 +29,7 @@ public:
 DUMPER7_ASSERTS_WBP_Friend_ListTop_C_EndDisplay;
 
 // Function WBP_Friend_ListTop.WBP_Friend_ListTop_C.ExecuteUbergraph_WBP_Friend_ListTop
-// 0x0618 (0x0618 - 0x0000)
+// 0x0650 (0x0650 - 0x0000)
 struct WBP_Friend_ListTop_C_ExecuteUbergraph_WBP_Friend_ListTop final
 {
 public:
@@ -122,37 +122,37 @@ public:
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_15;           // 0x02A0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_bInVisible;                           // 0x02B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_2B1[0x7];                                      // 0x02B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFriendListPlayerInfo                  K2Node_CustomEvent_InListPlayerInfo_1;             // 0x02B8(0x00F0)(ConstParm)
-	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x03A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3A9[0x7];                                      // 0x03A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFriendListPlayerInfo                  K2Node_CustomEvent_InListPlayerInfo;               // 0x03B0(0x00F0)()
-	EBlockPlayerState                             CallFunc_GetRacerInfoData_OutBlockPlayerState;     // 0x04A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A1[0x7];                                      // 0x04A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLobbyPlayerData                       CallFunc_GetRacerInfoData_OutLobbyPlayerData;      // 0x04A8(0x0100)()
-	struct FSoundHandle                           CallFunc_SoundPlay_ReturnValue_2;                  // 0x05A8(0x0004)()
-	struct FSoundHandle                           CallFunc_SoundPlay_ReturnValue_3;                  // 0x05AC(0x0004)()
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x05B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_CreatePlayAnimationProxyObject_Result;    // 0x05B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimationPlayCallbackProxy*      CallFunc_CreatePlayAnimationProxyObject_ReturnValue; // 0x05C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_4;                              // 0x05C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x05C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CA[0x6];                                      // 0x05CA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x05D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue_1;        // 0x05D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AAppPlayerController*                   K2Node_DynamicCast_AsApp_Player_Controller;        // 0x05E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x05E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5E9[0x7];                                      // 0x05E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AAppPlayerController*                   K2Node_DynamicCast_AsApp_Player_Controller_1;      // 0x05F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x05F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5F9[0x7];                                      // 0x05F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUnionUIButtonBase*                     K2Node_CustomEvent_Button;                         // 0x0600(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_PanelIndex;                     // 0x0608(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_ButtonIndex;                    // 0x060C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_UnregisterMainMenu_ReturnValue;           // 0x0610(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_5;                              // 0x0611(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_2;                              // 0x0612(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default_2;                           // 0x0613(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSoundHandle                           CallFunc_SoundPlay_ReturnValue_4;                  // 0x0614(0x0004)()
+	struct FFriendListPlayerInfo                  K2Node_CustomEvent_InListPlayerInfo_1;             // 0x02B8(0x00F8)(ConstParm)
+	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x03B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3B1[0x7];                                      // 0x03B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFriendListPlayerInfo                  K2Node_CustomEvent_InListPlayerInfo;               // 0x03B8(0x00F8)()
+	EBlockPlayerState                             CallFunc_GetRacerInfoData_OutBlockPlayerState;     // 0x04B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4B1[0x7];                                      // 0x04B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLobbyPlayerData                       CallFunc_GetRacerInfoData_OutLobbyPlayerData;      // 0x04B8(0x0128)()
+	struct FSoundHandle                           CallFunc_SoundPlay_ReturnValue_2;                  // 0x05E0(0x0004)()
+	struct FSoundHandle                           CallFunc_SoundPlay_ReturnValue_3;                  // 0x05E4(0x0004)()
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x05E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_CreatePlayAnimationProxyObject_Result;    // 0x05F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimationPlayCallbackProxy*      CallFunc_CreatePlayAnimationProxyObject_ReturnValue; // 0x05F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_4;                              // 0x0600(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0601(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_602[0x6];                                      // 0x0602(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0608(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue_1;        // 0x0610(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AAppPlayerController*                   K2Node_DynamicCast_AsApp_Player_Controller;        // 0x0618(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0620(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_621[0x7];                                      // 0x0621(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AAppPlayerController*                   K2Node_DynamicCast_AsApp_Player_Controller_1;      // 0x0628(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0630(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_631[0x7];                                      // 0x0631(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUnionUIButtonBase*                     K2Node_CustomEvent_Button;                         // 0x0638(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_CustomEvent_PanelIndex;                     // 0x0640(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_CustomEvent_ButtonIndex;                    // 0x0644(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_UnregisterMainMenu_ReturnValue;           // 0x0648(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_5;                              // 0x0649(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_2;                              // 0x064A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default_2;                           // 0x064B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSoundHandle                           CallFunc_SoundPlay_ReturnValue_4;                  // 0x064C(0x0004)()
 };
 DUMPER7_ASSERTS_WBP_Friend_ListTop_C_ExecuteUbergraph_WBP_Friend_ListTop;
 
@@ -182,29 +182,29 @@ public:
 DUMPER7_ASSERTS_WBP_Friend_ListTop_C_GetBlockType;
 
 // Function WBP_Friend_ListTop.WBP_Friend_ListTop_C.GetRacerData
-// 0x0388 (0x0388 - 0x0000)
+// 0x03E8 (0x03E8 - 0x0000)
 struct WBP_Friend_ListTop_C_GetRacerData final
 {
 public:
-	struct FFriendListPlayerInfo                  InFriendListPlayerInfo;                            // 0x0000(0x00F0)(BlueprintVisible, BlueprintReadOnly, Parm)
-	EBlockPlayerState                             OutBlockType;                                      // 0x00F0(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F1[0x7];                                       // 0x00F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLobbyPlayerData                       OutRacerData;                                      // 0x00F8(0x0100)(Parm, OutParm)
-	class FString                                 RetPlayerName;                                     // 0x01F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	TArray<int32>                                 RetArrayUsedMachineCount;                          // 0x0208(0x0010)(Edit, BlueprintVisible)
-	TArray<struct FUsageCountChara>               RetArrayUsageCountChara;                           // 0x0218(0x0010)(Edit, BlueprintVisible)
-	int32                                         RetTitleId;                                        // 0x0228(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EAppSupportedPlatform                         RetPlatform;                                       // 0x022C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ERateRank                                     RetRank;                                           // 0x022D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EBlockPlayerState                             RetBlockType;                                      // 0x022E(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ERateRank                                     CallFunc_GetRank_OutRateRank;                      // 0x022F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<int32>                                 CallFunc_GetUseMachineTypeCounts_OutUsedMachineCount; // 0x0230(0x0010)(ReferenceParm)
-	TArray<struct FUsageCountChara>               CallFunc_GetUseCharacterCounts_OutUsageCountChara; // 0x0240(0x0010)(ReferenceParm)
-	EBlockPlayerState                             CallFunc_GetBlockType_OutBlockType;                // 0x0250(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EAppSupportedPlatform                         CallFunc_Get_Platform_Type_OutPlatformType;        // 0x0251(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_252[0x6];                                      // 0x0252(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLobbyRacerInfoData                    K2Node_MakeStruct_LobbyRacerInfoData;              // 0x0258(0x0030)()
-	struct FLobbyPlayerData                       K2Node_MakeStruct_LobbyPlayerData;                 // 0x0288(0x0100)()
+	struct FFriendListPlayerInfo                  InFriendListPlayerInfo;                            // 0x0000(0x00F8)(BlueprintVisible, BlueprintReadOnly, Parm)
+	EBlockPlayerState                             OutBlockType;                                      // 0x00F8(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F9[0x7];                                       // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLobbyPlayerData                       OutRacerData;                                      // 0x0100(0x0128)(Parm, OutParm)
+	class FString                                 RetPlayerName;                                     // 0x0228(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	TArray<int32>                                 RetArrayUsedMachineCount;                          // 0x0238(0x0010)(Edit, BlueprintVisible)
+	TArray<struct FUsageCountChara>               RetArrayUsageCountChara;                           // 0x0248(0x0010)(Edit, BlueprintVisible)
+	int32                                         RetTitleId;                                        // 0x0258(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EAppSupportedPlatform                         RetPlatform;                                       // 0x025C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ERateRank                                     RetRank;                                           // 0x025D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EBlockPlayerState                             RetBlockType;                                      // 0x025E(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ERateRank                                     CallFunc_GetRank_OutRateRank;                      // 0x025F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<int32>                                 CallFunc_GetUseMachineTypeCounts_OutUsedMachineCount; // 0x0260(0x0010)(ReferenceParm)
+	TArray<struct FUsageCountChara>               CallFunc_GetUseCharacterCounts_OutUsageCountChara; // 0x0270(0x0010)(ReferenceParm)
+	EBlockPlayerState                             CallFunc_GetBlockType_OutBlockType;                // 0x0280(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EAppSupportedPlatform                         CallFunc_Get_Platform_Type_OutPlatformType;        // 0x0281(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_282[0x6];                                      // 0x0282(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLobbyRacerInfoData                    K2Node_MakeStruct_LobbyRacerInfoData;              // 0x0288(0x0038)()
+	struct FLobbyPlayerData                       K2Node_MakeStruct_LobbyPlayerData;                 // 0x02C0(0x0128)()
 };
 DUMPER7_ASSERTS_WBP_Friend_ListTop_C_GetRacerData;
 
@@ -392,11 +392,11 @@ public:
 DUMPER7_ASSERTS_WBP_Friend_ListTop_C_OnPlayerIconSelectStart;
 
 // Function WBP_Friend_ListTop.WBP_Friend_ListTop_C.OnRacerInfoDisplayStart
-// 0x00F0 (0x00F0 - 0x0000)
+// 0x00F8 (0x00F8 - 0x0000)
 struct WBP_Friend_ListTop_C_OnRacerInfoDisplayStart final
 {
 public:
-	struct FFriendListPlayerInfo                  InListPlayerInfo;                                  // 0x0000(0x00F0)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FFriendListPlayerInfo                  InListPlayerInfo;                                  // 0x0000(0x00F8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
 DUMPER7_ASSERTS_WBP_Friend_ListTop_C_OnRacerInfoDisplayStart;
 
@@ -484,11 +484,11 @@ public:
 DUMPER7_ASSERTS_WBP_Friend_ListTop_C_SetupPlayerIconList;
 
 // Function WBP_Friend_ListTop.WBP_Friend_ListTop_C.SetupRacerInfoWidget
-// 0x00F0 (0x00F0 - 0x0000)
+// 0x00F8 (0x00F8 - 0x0000)
 struct WBP_Friend_ListTop_C_SetupRacerInfoWidget final
 {
 public:
-	struct FFriendListPlayerInfo                  InListPlayerInfo;                                  // 0x0000(0x00F0)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FFriendListPlayerInfo                  InListPlayerInfo;                                  // 0x0000(0x00F8)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
 DUMPER7_ASSERTS_WBP_Friend_ListTop_C_SetupRacerInfoWidget;
 

@@ -105,6 +105,34 @@ void UWBP_Race_Sub_Btn_Key_C::OnDriftReleased()
 }
 
 
+// Function WBP_Race_Sub_Btn_Key.WBP_Race_Sub_Btn_Key_C.OnDuelUltimatePressed
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Race_Sub_Btn_Key_C::OnDuelUltimatePressed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Race_Sub_Btn_Key_C", "OnDuelUltimatePressed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Race_Sub_Btn_Key.WBP_Race_Sub_Btn_Key_C.OnDuelUltimateReleased
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Race_Sub_Btn_Key_C::OnDuelUltimateReleased()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Race_Sub_Btn_Key_C", "OnDuelUltimateReleased");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_Race_Sub_Btn_Key.WBP_Race_Sub_Btn_Key_C.OnEmotePressed
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 

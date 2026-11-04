@@ -51,6 +51,68 @@ void UWBP_HeaderMenu_Sub_PlayerNamePlate_C::ExecuteUbergraph_WBP_HeaderMenu_Sub_
 }
 
 
+// Function WBP_HeaderMenu_Sub_PlayerNamePlate.WBP_HeaderMenu_Sub_PlayerNamePlate_C.SetArabicVerticalOffset
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FText&                      InText                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UWBP_HeaderMenu_Sub_PlayerNamePlate_C::SetArabicVerticalOffset(const class FText& InText)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_HeaderMenu_Sub_PlayerNamePlate_C", "SetArabicVerticalOffset");
+
+	Params::WBP_HeaderMenu_Sub_PlayerNamePlate_C_SetArabicVerticalOffset Parms{};
+
+	Parms.InText = std::move(InText);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_HeaderMenu_Sub_PlayerNamePlate.WBP_HeaderMenu_Sub_PlayerNamePlate_C.SetupDuelCompeUserData
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InRoundPoint                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_HeaderMenu_Sub_PlayerNamePlate_C::SetupDuelCompeUserData(int32 InRoundPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_HeaderMenu_Sub_PlayerNamePlate_C", "SetupDuelCompeUserData");
+
+	Params::WBP_HeaderMenu_Sub_PlayerNamePlate_C_SetupDuelCompeUserData Parms{};
+
+	Parms.InRoundPoint = InRoundPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_HeaderMenu_Sub_PlayerNamePlate.WBP_HeaderMenu_Sub_PlayerNamePlate_C.SetupLegendCompeUserData
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ELegendCompeRateGrade                   InLegendGrade                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InLegendRate                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_HeaderMenu_Sub_PlayerNamePlate_C::SetupLegendCompeUserData(ELegendCompeRateGrade InLegendGrade, int32 InLegendRate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_HeaderMenu_Sub_PlayerNamePlate_C", "SetupLegendCompeUserData");
+
+	Params::WBP_HeaderMenu_Sub_PlayerNamePlate_C_SetupLegendCompeUserData Parms{};
+
+	Parms.InLegendGrade = InLegendGrade;
+	Parms.InLegendRate = InLegendRate;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_HeaderMenu_Sub_PlayerNamePlate.WBP_HeaderMenu_Sub_PlayerNamePlate_C.SetUpUserData
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -82,6 +144,26 @@ void UWBP_HeaderMenu_Sub_PlayerNamePlate_C::SetUpUserData(const class FText& InU
 	Parms.IsShowingLegendCompeIcon = IsShowingLegendCompeIcon;
 	Parms.LegendGrade = LegendGrade;
 	Parms.InLegendRate = InLegendRate;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_HeaderMenu_Sub_PlayerNamePlate.WBP_HeaderMenu_Sub_PlayerNamePlate_C.SetWinStreakVisibility
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    IsVisible_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_HeaderMenu_Sub_PlayerNamePlate_C::SetWinStreakVisibility(bool IsVisible_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_HeaderMenu_Sub_PlayerNamePlate_C", "SetWinStreakVisibility");
+
+	Params::WBP_HeaderMenu_Sub_PlayerNamePlate_C_SetWinStreakVisibility Parms{};
+
+	Parms.IsVisible_0 = IsVisible_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

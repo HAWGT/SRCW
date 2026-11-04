@@ -10,38 +10,47 @@
 
 #include "Basic.hpp"
 
-#include "UnionSystem_structs.hpp"
-#include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
 #include "UnionRun_structs.hpp"
+#include "UnionSystem_structs.hpp"
+#include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BPC_RaceSequenceStateEntryRacer.BPC_RaceSequenceStateEntryRacer_C
-// 0x0028 (0x0148 - 0x0120)
+// 0x0048 (0x01B8 - 0x0170)
 class UBPC_RaceSequenceStateEntryRacer_C final : public URaceSequenceStateEntryRacer
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0120(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	TArray<class UNiagaraComponent*>              Out_Effects;                                       // 0x0128(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	class ABP_EntryRacers_C*                      PlayerObject;                                      // 0x0138(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UDataTable*                             CameraOffsetDataTable;                             // 0x0140(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0170(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	TArray<class UNiagaraComponent*>              Out_Effects;                                       // 0x0178(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	class ABP_EntryRacers_C*                      PlayerObject;                                      // 0x0188(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UDataTable*                             CameraOffsetDataTable;                             // 0x0190(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 EntryRacers;                                       // 0x0198(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 EntryDuel;                                         // 0x01A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            EntryRacerWidget;                                  // 0x01A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           WidgeStartDisplayEventHandle;                      // 0x01B0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void CloseRaceRuleInfoUIForFriendMatch();
+	void CreateEntryEvent();
+	void CreateEntryRacerUI_Duel();
+	void CreateEntryRaceUI();
+	void DestroyEntryRaceUI();
+	void ExecuteUbergraph_BPC_RaceSequenceStateEntryRacer(int32 EntryPoint);
 	void GetOffsetTransformByStageId(EStageId In_StageId, const struct FTransform& In_Transform, struct FTransform* Out_Transform);
-	void OnInitState();
-	void OnUpdateState(float InDeltaTime);
+	void OnChangeSequence();
+	void OnEnabledSkip();
 	void OnExitState();
 	void OnFinishedPlay_Sequence();
-	void OnChangeSequence();
+	void OnFullScreenMouseClick();
+	void OnInitState();
 	void OnKeyPressed_Event(const struct FKey& PressedKey);
 	void OnScenePlayerFinishedUI();
-	void OnFullScreenMouseClick();
-	void OnEnabledSkip();
-	void ExecuteUbergraph_BPC_RaceSequenceStateEntryRacer(int32 EntryPoint);
+	void OnUpdateState(float InDeltaTime);
+	void WidgetStartDisplayEvent();
 
 public:
 	static class UClass* StaticClass()

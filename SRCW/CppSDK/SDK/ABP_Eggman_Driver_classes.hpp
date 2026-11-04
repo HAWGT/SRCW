@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ABP_Eggman_Driver.ABP_Eggman_Driver_C
-// 0x0000 (0x5CF0 - 0x5CF0)
+// 0x0000 (0x7040 - 0x7040)
 class UABP_Eggman_Driver_C final : public UABPT_Driver_C
 {
 public:

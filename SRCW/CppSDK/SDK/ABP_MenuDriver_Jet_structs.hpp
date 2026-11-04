@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // ScriptStruct ABP_MenuDriver_Jet.ABP_MenuDriver_Jet_C.AnimBlueprintGeneratedConstantData
-// 0x0000 (0x09B0 - 0x09B0)
+// 0x0000 (0x0F20 - 0x0F20)
 struct ABP_MenuDriver_Jet::FAnimBlueprintGeneratedConstantData final : public ABPT_MenuDriver::FAnimBlueprintGeneratedConstantData
 {
 };

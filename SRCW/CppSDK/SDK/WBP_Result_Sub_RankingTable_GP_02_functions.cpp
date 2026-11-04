@@ -457,20 +457,6 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::PlayMatchPoint()
 }
 
 
-// Function WBP_Result_Sub_RankingTable_GP_02.WBP_Result_Sub_RankingTable_GP_02_C.PlayPlayerEffect
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_Result_Sub_RankingTable_GP_02_C::PlayPlayerEffect()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "PlayPlayerEffect");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function WBP_Result_Sub_RankingTable_GP_02.WBP_Result_Sub_RankingTable_GP_02_C.PlayPlayerEffect_Impl
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -814,20 +800,6 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::SetEarnPointValue(int32 EarnPoint)
 	Parms.EarnPoint = EarnPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Result_Sub_RankingTable_GP_02.WBP_Result_Sub_RankingTable_GP_02_C.SetFace
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_Result_Sub_RankingTable_GP_02_C::SetFace()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "SetFace");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -1346,6 +1318,20 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::SetupVisibleSettingByGameMode(EGameMo
 	Parms.GameMode = GameMode;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Result_Sub_RankingTable_GP_02.WBP_Result_Sub_RankingTable_GP_02_C.UpdateFaceIcon
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_Result_Sub_RankingTable_GP_02_C::UpdateFaceIcon()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "UpdateFaceIcon");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

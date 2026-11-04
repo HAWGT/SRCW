@@ -275,6 +275,29 @@ void ABP_DriverPawn_C::SetRideableStatusType(ECarStatusType StatusType)
 }
 
 
+// Function BP_DriverPawn.BP_DriverPawn_C.SetSkeletalMeshLOD
+// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const int32                             InLOD                                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool ABP_DriverPawn_C::SetSkeletalMeshLOD(const int32 InLOD)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_DriverPawn_C", "SetSkeletalMeshLOD");
+
+	Params::BP_DriverPawn_C_SetSkeletalMeshLOD Parms{};
+
+	Parms.InLOD = InLOD;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function BP_DriverPawn.BP_DriverPawn_C.SetupCharacterById
 // (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:

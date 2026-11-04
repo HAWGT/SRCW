@@ -10,19 +10,19 @@
 
 #include "Basic.hpp"
 
+#include "UnionRun_structs.hpp"
+#include "UnionSystem_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
-#include "UnionSystem_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "UnionRun_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_MenuRacerPreview.BP_MenuRacerPreview_C
-// 0x05E8 (0x0930 - 0x0348)
+// 0x0668 (0x09B0 - 0x0348)
 class ABP_MenuRacerPreview_C final : public AMenuRacerBase
 {
 public:
@@ -62,9 +62,9 @@ public:
 	uint8                                         Pad_573[0x5];                                      // 0x0573(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UStickerBakerHandle*                    FrontStickerBakerHandle;                           // 0x0578(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UStickerBakerHandle*                    RearStickerBakerHandle;                            // 0x0580(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FDriverData                            CurrentDriverData;                                 // 0x0588(0x0398)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          bAutoInitialSetup;                                 // 0x0920(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsForCapture;                                      // 0x0921(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FDriverData                            CurrentDriverData;                                 // 0x0588(0x0418)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          bAutoInitialSetup;                                 // 0x09A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsForCapture;                                      // 0x09A1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AddRotation(double InDeltaRotation);

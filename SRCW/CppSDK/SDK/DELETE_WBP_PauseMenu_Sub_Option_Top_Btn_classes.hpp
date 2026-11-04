@@ -50,6 +50,8 @@ public:
 	void OnBrakeInput(float InValue);
 	void OnDriftPressed();
 	void OnDriftReleased();
+	void OnDuelUltimatePressed();
+	void OnDuelUltimateReleased();
 	void OnEmotePressed();
 	void OnEmoteReleased();
 	void OnFocus_Impl();

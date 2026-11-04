@@ -10,17 +10,17 @@
 
 #include "Basic.hpp"
 
-#include "UNION_structs.hpp"
 #include "Engine_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
+#include "UNION_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_GadgetInfo_Sub_Category.WBP_GadgetInfo_Sub_Category_C
-// 0x0078 (0x0358 - 0x02E0)
+// 0x0088 (0x0368 - 0x02E0)
 class UWBP_GadgetInfo_Sub_Category_C final : public UUserWidget
 {
 public:
@@ -38,6 +38,8 @@ public:
 	class UWBP_GadgetIcon_Cost01_Icon_C*          WBP_GadgetIcon_Cost01_Icon_06;                     // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	TArray<class UWBP_GadgetIcon_Cost01_Icon_C*>  IconList;                                          // 0x0340(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 	bool                                          OverList;                                          // 0x0350(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_351[0x7];                                      // 0x0351(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 DebugPreviewGadgetList;                            // 0x0358(0x0010)(Edit, BlueprintVisible)
 
 public:
 	void Construct();

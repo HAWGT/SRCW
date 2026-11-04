@@ -17,6 +17,20 @@
 namespace SDK
 {
 
+// Function WBP_CollaboInfo.WBP_CollaboInfo_C.ReleaseResource
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_CollaboInfo_C::ReleaseResource()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_CollaboInfo_C", "ReleaseResource");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_CollaboInfo.WBP_CollaboInfo_C.SetSchedule
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:

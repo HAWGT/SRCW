@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function BPC_RaceSequenceStateTermination.BPC_RaceSequenceStateTermination_C.NextCeremony
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBPC_RaceSequenceStateTermination_C::NextCeremony()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateTermination_C", "NextCeremony");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BPC_RaceSequenceStateTermination.BPC_RaceSequenceStateTermination_C.BindOnLoadingEndAnimFinished
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -40,34 +26,6 @@ void UBPC_RaceSequenceStateTermination_C::BindOnLoadingEndAnimFinished()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BPC_RaceSequenceStateTermination_C", "BindOnLoadingEndAnimFinished");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_RaceSequenceStateTermination.BPC_RaceSequenceStateTermination_C.SetSelectMode
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBPC_RaceSequenceStateTermination_C::SetSelectMode()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateTermination_C", "SetSelectMode");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_RaceSequenceStateTermination.BPC_RaceSequenceStateTermination_C.SetGrandPrixNextRaceSetting
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UBPC_RaceSequenceStateTermination_C::SetGrandPrixNextRaceSetting()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateTermination_C", "SetGrandPrixNextRaceSetting");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -87,109 +45,35 @@ void UBPC_RaceSequenceStateTermination_C::ConstructionScript()
 }
 
 
-// Function BPC_RaceSequenceStateTermination.BPC_RaceSequenceStateTermination_C.StartOpenLevelToMenu
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_RaceSequenceStateTermination_C::StartOpenLevelToMenu()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateTermination_C", "StartOpenLevelToMenu");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_RaceSequenceStateTermination.BPC_RaceSequenceStateTermination_C.StartMatchRace
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_RaceSequenceStateTermination_C::StartMatchRace()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateTermination_C", "StartMatchRace");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_RaceSequenceStateTermination.BPC_RaceSequenceStateTermination_C.StartErrorHandling
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_RaceSequenceStateTermination_C::StartErrorHandling()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateTermination_C", "StartErrorHandling");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_RaceSequenceStateTermination.BPC_RaceSequenceStateTermination_C.StartGrandPrix
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_RaceSequenceStateTermination_C::StartGrandPrix()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateTermination_C", "StartGrandPrix");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_RaceSequenceStateTermination.BPC_RaceSequenceStateTermination_C.StartTimeTrial
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_RaceSequenceStateTermination_C::StartTimeTrial()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateTermination_C", "StartTimeTrial");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_RaceSequenceStateTermination.BPC_RaceSequenceStateTermination_C.StartMiddleLoading
-// (BlueprintCallable, BlueprintEvent)
+// Function BPC_RaceSequenceStateTermination.BPC_RaceSequenceStateTermination_C.ExecuteUbergraph_BPC_RaceSequenceStateTermination
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// int32                                   InLoadingPhaseNum                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bInLoadingProgressMode                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bInEndHide                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_RaceSequenceStateTermination_C::StartMiddleLoading(int32 InLoadingPhaseNum, bool bInLoadingProgressMode, bool bInEndHide)
+void UBPC_RaceSequenceStateTermination_C::ExecuteUbergraph_BPC_RaceSequenceStateTermination(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateTermination_C", "StartMiddleLoading");
+		Func = Class->GetFunction("BPC_RaceSequenceStateTermination_C", "ExecuteUbergraph_BPC_RaceSequenceStateTermination");
 
-	Params::BPC_RaceSequenceStateTermination_C_StartMiddleLoading Parms{};
+	Params::BPC_RaceSequenceStateTermination_C_ExecuteUbergraph_BPC_RaceSequenceStateTermination Parms{};
 
-	Parms.InLoadingPhaseNum = InLoadingPhaseNum;
-	Parms.bInLoadingProgressMode = bInLoadingProgressMode;
-	Parms.bInEndHide = bInEndHide;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BPC_RaceSequenceStateTermination.BPC_RaceSequenceStateTermination_C.StartParty
-// (BlueprintCallable, BlueprintEvent)
+// Function BPC_RaceSequenceStateTermination.BPC_RaceSequenceStateTermination_C.NextCeremony
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPC_RaceSequenceStateTermination_C::StartParty()
+void UBPC_RaceSequenceStateTermination_C::NextCeremony()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateTermination_C", "StartParty");
+		Func = Class->GetFunction("BPC_RaceSequenceStateTermination_C", "NextCeremony");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -223,23 +107,139 @@ void UBPC_RaceSequenceStateTermination_C::OnRaceTermination()
 }
 
 
-// Function BPC_RaceSequenceStateTermination.BPC_RaceSequenceStateTermination_C.ExecuteUbergraph_BPC_RaceSequenceStateTermination
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BPC_RaceSequenceStateTermination.BPC_RaceSequenceStateTermination_C.SetGrandPrixNextRaceSetting
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UBPC_RaceSequenceStateTermination_C::ExecuteUbergraph_BPC_RaceSequenceStateTermination(int32 EntryPoint)
+void UBPC_RaceSequenceStateTermination_C::SetGrandPrixNextRaceSetting()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateTermination_C", "ExecuteUbergraph_BPC_RaceSequenceStateTermination");
+		Func = Class->GetFunction("BPC_RaceSequenceStateTermination_C", "SetGrandPrixNextRaceSetting");
 
-	Params::BPC_RaceSequenceStateTermination_C_ExecuteUbergraph_BPC_RaceSequenceStateTermination Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
+
+// Function BPC_RaceSequenceStateTermination.BPC_RaceSequenceStateTermination_C.SetSelectMode
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBPC_RaceSequenceStateTermination_C::SetSelectMode()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_RaceSequenceStateTermination_C", "SetSelectMode");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_RaceSequenceStateTermination.BPC_RaceSequenceStateTermination_C.StartErrorHandling
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_RaceSequenceStateTermination_C::StartErrorHandling()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_RaceSequenceStateTermination_C", "StartErrorHandling");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_RaceSequenceStateTermination.BPC_RaceSequenceStateTermination_C.StartGrandPrix
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_RaceSequenceStateTermination_C::StartGrandPrix()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_RaceSequenceStateTermination_C", "StartGrandPrix");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_RaceSequenceStateTermination.BPC_RaceSequenceStateTermination_C.StartMatchRace
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_RaceSequenceStateTermination_C::StartMatchRace()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_RaceSequenceStateTermination_C", "StartMatchRace");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_RaceSequenceStateTermination.BPC_RaceSequenceStateTermination_C.StartMiddleLoading
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InLoadingPhaseNum                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bInLoadingProgressMode                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bInEndHide                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_RaceSequenceStateTermination_C::StartMiddleLoading(int32 InLoadingPhaseNum, bool bInLoadingProgressMode, bool bInEndHide)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_RaceSequenceStateTermination_C", "StartMiddleLoading");
+
+	Params::BPC_RaceSequenceStateTermination_C_StartMiddleLoading Parms{};
+
+	Parms.InLoadingPhaseNum = InLoadingPhaseNum;
+	Parms.bInLoadingProgressMode = bInLoadingProgressMode;
+	Parms.bInEndHide = bInEndHide;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_RaceSequenceStateTermination.BPC_RaceSequenceStateTermination_C.StartOpenLevelToMenu
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_RaceSequenceStateTermination_C::StartOpenLevelToMenu()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_RaceSequenceStateTermination_C", "StartOpenLevelToMenu");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_RaceSequenceStateTermination.BPC_RaceSequenceStateTermination_C.StartParty
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_RaceSequenceStateTermination_C::StartParty()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_RaceSequenceStateTermination_C", "StartParty");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_RaceSequenceStateTermination.BPC_RaceSequenceStateTermination_C.StartTimeTrial
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_RaceSequenceStateTermination_C::StartTimeTrial()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_RaceSequenceStateTermination_C", "StartTimeTrial");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

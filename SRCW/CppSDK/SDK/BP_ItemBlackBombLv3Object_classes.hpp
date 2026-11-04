@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_ItemBlackBombLv3Object.BP_ItemBlackBombLv3Object_C
-// 0x0000 (0x0A00 - 0x0A00)
+// 0x0000 (0x0A10 - 0x0A10)
 class ABP_ItemBlackBombLv3Object_C final : public AItemBlackBombLv3Object
 {
 public:

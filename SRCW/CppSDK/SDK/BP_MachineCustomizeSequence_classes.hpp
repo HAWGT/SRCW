@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
+#include "UnionRun_structs.hpp"
+#include "UnionSystem_structs.hpp"
+#include "Engine_structs.hpp"
 #include "ST_GarageData_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "UnionSystem_structs.hpp"
-#include "Engine_structs.hpp"
-#include "UnionRun_structs.hpp"
 #include "EMachineCustomizeSequenceMode_structs.hpp"
 
 
@@ -78,7 +78,7 @@ public:
 	class AAppPlayerController* GetAppPlayerController() const;
 	void GetGarageData(struct FST_GarageData* OutGarageData) const;
 	class UMachineCustomTop* GetMachineCustomTop() const;
-	void GetParamData(EDriverId InDriverId, EMachineId InFrontPartsId, EMachineId InRearPartsId, EMachineId InTirePartsId, const TArray<EGadgetId>& InGadgetIds, struct FRacerParamData* OutParamData) const;
+	void GetParamData(EDriverId InDriverId, EMachineId InFrontPartsId, EMachineId InRearPartsId, EMachineId InTirePartsId, const TArray<EGadgetId>& InGadgetIds, TArray<EGadgetId>& InSpGadgetIds, struct FRacerParamData* OutParamData) const;
 	class APlayerController* GetPlayerController() const;
 	class AMenuRacerBase* GetRacer() const;
 

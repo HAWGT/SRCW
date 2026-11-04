@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function WBP_GadgetCustom_Sub_GadgetPlate.WBP_GadgetCustom_Sub_GadgetPlate_C.BindDelegateEvents
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Event, Protected, BlueprintCallable, BlueprintEvent)
 
 void UWBP_GadgetCustom_Sub_GadgetPlate_C::BindDelegateEvents()
 {
@@ -31,22 +31,22 @@ void UWBP_GadgetCustom_Sub_GadgetPlate_C::BindDelegateEvents()
 }
 
 
-// Function WBP_GadgetCustom_Sub_GadgetPlate.WBP_GadgetCustom_Sub_GadgetPlate_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function WBP_GadgetCustom_Sub_GadgetPlate.WBP_GadgetCustom_Sub_GadgetPlate_C.CreateDummyWidget
+// (Event, Protected, BlueprintCallable, BlueprintEvent)
 
-void UWBP_GadgetCustom_Sub_GadgetPlate_C::Construct()
+void UWBP_GadgetCustom_Sub_GadgetPlate_C::CreateDummyWidget()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_GadgetPlate_C", "Construct");
+		Func = Class->GetFunction("WBP_GadgetCustom_Sub_GadgetPlate_C", "CreateDummyWidget");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
 // Function WBP_GadgetCustom_Sub_GadgetPlate.WBP_GadgetCustom_Sub_GadgetPlate_C.ExecuteUbergraph_WBP_GadgetCustom_Sub_GadgetPlate
-// (Final, UbergraphFunction)
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -62,181 +62,6 @@ void UWBP_GadgetCustom_Sub_GadgetPlate_C::ExecuteUbergraph_WBP_GadgetCustom_Sub_
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_GadgetCustom_Sub_GadgetPlate.WBP_GadgetCustom_Sub_GadgetPlate_C.GetGadgetIds
-// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// TArray<EGadgetId>*                      OutGadgetIds                                           (Parm, OutParm)
-
-void UWBP_GadgetCustom_Sub_GadgetPlate_C::GetGadgetIds(TArray<EGadgetId>* OutGadgetIds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_GadgetPlate_C", "GetGadgetIds");
-
-	Params::WBP_GadgetCustom_Sub_GadgetPlate_C_GetGadgetIds Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (OutGadgetIds != nullptr)
-		*OutGadgetIds = std::move(Parms.OutGadgetIds);
-}
-
-
-// Function WBP_GadgetCustom_Sub_GadgetPlate.WBP_GadgetCustom_Sub_GadgetPlate_C.InVisiblePreviewEquippedGadget
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_GadgetCustom_Sub_GadgetPlate_C::InVisiblePreviewEquippedGadget()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_GadgetPlate_C", "InVisiblePreviewEquippedGadget");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_GadgetCustom_Sub_GadgetPlate.WBP_GadgetCustom_Sub_GadgetPlate_C.OnConstDummyGadgetIconRef
-// (Event, Protected, BlueprintCallable, BlueprintEvent)
-
-void UWBP_GadgetCustom_Sub_GadgetPlate_C::OnConstDummyGadgetIconRef()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_GadgetPlate_C", "OnConstDummyGadgetIconRef");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_GadgetCustom_Sub_GadgetPlate.WBP_GadgetCustom_Sub_GadgetPlate_C.OnConstDummyGadgetIconSetup
-// (Event, Protected, BlueprintCallable, BlueprintEvent)
-
-void UWBP_GadgetCustom_Sub_GadgetPlate_C::OnConstDummyGadgetIconSetup()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_GadgetPlate_C", "OnConstDummyGadgetIconSetup");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_GadgetCustom_Sub_GadgetPlate.WBP_GadgetCustom_Sub_GadgetPlate_C.OnConstDummyWidget
-// (Event, Protected, BlueprintCallable, BlueprintEvent)
-
-void UWBP_GadgetCustom_Sub_GadgetPlate_C::OnConstDummyWidget()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_GadgetPlate_C", "OnConstDummyWidget");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_GadgetCustom_Sub_GadgetPlate.WBP_GadgetCustom_Sub_GadgetPlate_C.OnConstGadgetIconRef
-// (Event, Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWBP_GadgetCustom_Sub_GadgetPlate_C::OnConstGadgetIconRef()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_GadgetPlate_C", "OnConstGadgetIconRef");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_GadgetCustom_Sub_GadgetPlate.WBP_GadgetCustom_Sub_GadgetPlate_C.OnConstGadgetIconSetup
-// (Event, Protected, BlueprintCallable, BlueprintEvent)
-
-void UWBP_GadgetCustom_Sub_GadgetPlate_C::OnConstGadgetIconSetup()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_GadgetPlate_C", "OnConstGadgetIconSetup");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_GadgetCustom_Sub_GadgetPlate.WBP_GadgetCustom_Sub_GadgetPlate_C.OnConstGridLayoutControl
-// (Event, Protected, BlueprintCallable, BlueprintEvent)
-
-void UWBP_GadgetCustom_Sub_GadgetPlate_C::OnConstGridLayoutControl()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_GadgetPlate_C", "OnConstGridLayoutControl");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_GadgetCustom_Sub_GadgetPlate.WBP_GadgetCustom_Sub_GadgetPlate_C.OnConstPlateImageRef
-// (Event, Protected, BlueprintCallable, BlueprintEvent)
-
-void UWBP_GadgetCustom_Sub_GadgetPlate_C::OnConstPlateImageRef()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_GadgetPlate_C", "OnConstPlateImageRef");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_GadgetCustom_Sub_GadgetPlate.WBP_GadgetCustom_Sub_GadgetPlate_C.OnConstPresetCustomTabRef
-// (Event, Protected, BlueprintCallable, BlueprintEvent)
-
-void UWBP_GadgetCustom_Sub_GadgetPlate_C::OnConstPresetCustomTabRef()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_GadgetPlate_C", "OnConstPresetCustomTabRef");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_GadgetCustom_Sub_GadgetPlate.WBP_GadgetCustom_Sub_GadgetPlate_C.OnConstPreviewEquippedGadgetRef
-// (Event, Protected, BlueprintCallable, BlueprintEvent)
-
-void UWBP_GadgetCustom_Sub_GadgetPlate_C::OnConstPreviewEquippedGadgetRef()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_GadgetPlate_C", "OnConstPreviewEquippedGadgetRef");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_GadgetCustom_Sub_GadgetPlate.WBP_GadgetCustom_Sub_GadgetPlate_C.OnConstTextClassNameRef
-// (Event, Protected, BlueprintCallable, BlueprintEvent)
-
-void UWBP_GadgetCustom_Sub_GadgetPlate_C::OnConstTextClassNameRef()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_GadgetPlate_C", "OnConstTextClassNameRef");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -389,7 +214,7 @@ void UWBP_GadgetCustom_Sub_GadgetPlate_C::Scene_OnRightShoulder(class UUnionUIBu
 
 
 // Function WBP_GadgetCustom_Sub_GadgetPlate.WBP_GadgetCustom_Sub_GadgetPlate_C.Set Ready Flag
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    IsReady                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -463,98 +288,6 @@ void UWBP_GadgetCustom_Sub_GadgetPlate_C::SetTabWidgetVisible(bool bInIsVisible)
 	Params::WBP_GadgetCustom_Sub_GadgetPlate_C_SetTabWidgetVisible Parms{};
 
 	Parms.bInIsVisible = bInIsVisible;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_GadgetCustom_Sub_GadgetPlate.WBP_GadgetCustom_Sub_GadgetPlate_C.SetupGadgetIcons
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const bool                              InRankUp                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const int32                             InSlotNum                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_GadgetCustom_Sub_GadgetPlate_C::SetupGadgetIcons(const bool InRankUp, const int32 InSlotNum)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_GadgetPlate_C", "SetupGadgetIcons");
-
-	Params::WBP_GadgetCustom_Sub_GadgetPlate_C_SetupGadgetIcons Parms{};
-
-	Parms.InRankUp = InRankUp;
-	Parms.InSlotNum = InSlotNum;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_GadgetCustom_Sub_GadgetPlate.WBP_GadgetCustom_Sub_GadgetPlate_C.SetupGadgetIconsToPlayerDetail
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const bool                              InRankUp                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const int32                             InSlotNum                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_GadgetCustom_Sub_GadgetPlate_C::SetupGadgetIconsToPlayerDetail(const bool InRankUp, const int32 InSlotNum)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_GadgetPlate_C", "SetupGadgetIconsToPlayerDetail");
-
-	Params::WBP_GadgetCustom_Sub_GadgetPlate_C_SetupGadgetIconsToPlayerDetail Parms{};
-
-	Parms.InRankUp = InRankUp;
-	Parms.InSlotNum = InSlotNum;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_GadgetCustom_Sub_GadgetPlate.WBP_GadgetCustom_Sub_GadgetPlate_C.UpdatePreviewEquippedGadget
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const int32                             InPlayerIndex                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const int32                             InSlotNum                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const EGadgetId                         InGadgetId                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_GadgetCustom_Sub_GadgetPlate_C::UpdatePreviewEquippedGadget(const int32 InPlayerIndex, const int32 InSlotNum, const EGadgetId InGadgetId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_GadgetPlate_C", "UpdatePreviewEquippedGadget");
-
-	Params::WBP_GadgetCustom_Sub_GadgetPlate_C_UpdatePreviewEquippedGadget Parms{};
-
-	Parms.InPlayerIndex = InPlayerIndex;
-	Parms.InSlotNum = InSlotNum;
-	Parms.InGadgetId = InGadgetId;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_GadgetCustom_Sub_GadgetPlate.WBP_GadgetCustom_Sub_GadgetPlate_C.VisiblePreviewEquippedGadget
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const int32                             InPlayerIndex                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const int32                             InSlotNum                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const EGadgetId                         InGadgetId                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_GadgetCustom_Sub_GadgetPlate_C::VisiblePreviewEquippedGadget(const int32 InPlayerIndex, const int32 InSlotNum, const EGadgetId InGadgetId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_GadgetPlate_C", "VisiblePreviewEquippedGadget");
-
-	Params::WBP_GadgetCustom_Sub_GadgetPlate_C_VisiblePreviewEquippedGadget Parms{};
-
-	Parms.InPlayerIndex = InPlayerIndex;
-	Parms.InSlotNum = InSlotNum;
-	Parms.InGadgetId = InGadgetId;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

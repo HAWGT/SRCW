@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_ItemWeightObject.BP_ItemWeightObject_C
-// 0x0000 (0x06C0 - 0x06C0)
+// 0x0000 (0x06D0 - 0x06D0)
 class ABP_ItemWeightObject_C final : public AItemWeightObject
 {
 public:

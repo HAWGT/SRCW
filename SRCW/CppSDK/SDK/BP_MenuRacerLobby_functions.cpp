@@ -31,6 +31,20 @@ void ABP_MenuRacerLobby_C::Attach_Driver()
 }
 
 
+// Function BP_MenuRacerLobby.BP_MenuRacerLobby_C.AttachCrown
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_MenuRacerLobby_C::AttachCrown()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MenuRacerLobby_C", "AttachCrown");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_MenuRacerLobby.BP_MenuRacerLobby_C.ChangeMachineColor
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -50,20 +64,6 @@ void ABP_MenuRacerLobby_C::ChangeMachineColor(int32 InGroupIndex, bool InEnableE
 	Parms.InEnableEffect = InEnableEffect;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_MenuRacerLobby.BP_MenuRacerLobby_C.ChangeVisibleCrownfromRacerVisible
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_MenuRacerLobby_C::ChangeVisibleCrownfromRacerVisible()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuRacerLobby_C", "ChangeVisibleCrownfromRacerVisible");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -112,20 +112,6 @@ void ABP_MenuRacerLobby_C::CheckChangeParam(EDriverId Racer_Data_Driver_Id, ECar
 
 	if (ChangedTirePartsId != nullptr)
 		*ChangedTirePartsId = Parms.ChangedTirePartsId;
-}
-
-
-// Function BP_MenuRacerLobby.BP_MenuRacerLobby_C.DestroyCrown
-// (Private, BlueprintCallable, BlueprintEvent)
-
-void ABP_MenuRacerLobby_C::DestroyCrown()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuRacerLobby_C", "DestroyCrown");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -223,20 +209,6 @@ void ABP_MenuRacerLobby_C::GetDriverData(EDriverId DriverId_0, struct FDriverDat
 
 	if (bFind != nullptr)
 		*bFind = Parms.bFind;
-}
-
-
-// Function BP_MenuRacerLobby.BP_MenuRacerLobby_C.HiddenCrown
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_MenuRacerLobby_C::HiddenCrown()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuRacerLobby_C", "HiddenCrown");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -485,9 +457,9 @@ void ABP_MenuRacerLobby_C::RoomEntryAnimLooping()
 // Parameters:
 // EDriverId                               InDriverId                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FUserMachineCustomizeData& InCustomizeData                                        (BlueprintVisible, BlueprintReadOnly, Parm)
-// bool                                    bIsSpawnCrown                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ECrownGrade                             InCrownGrade                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_MenuRacerLobby_C::SetAll(EDriverId InDriverId, const struct FUserMachineCustomizeData& InCustomizeData, bool bIsSpawnCrown)
+void ABP_MenuRacerLobby_C::SetAll(EDriverId InDriverId, const struct FUserMachineCustomizeData& InCustomizeData, ECrownGrade InCrownGrade)
 {
 	static class UFunction* Func = nullptr;
 
@@ -498,7 +470,7 @@ void ABP_MenuRacerLobby_C::SetAll(EDriverId InDriverId, const struct FUserMachin
 
 	Parms.InDriverId = InDriverId;
 	Parms.InCustomizeData = std::move(InCustomizeData);
-	Parms.bIsSpawnCrown = bIsSpawnCrown;
+	Parms.InCrownGrade = InCrownGrade;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -630,26 +602,6 @@ void ABP_MenuRacerLobby_C::SetupMeshComps(bool bUse, int32 Lod_0)
 }
 
 
-// Function BP_MenuRacerLobby.BP_MenuRacerLobby_C.SetVisibilityCrown
-// (Event, Protected, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bIsVisible                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_MenuRacerLobby_C::SetVisibilityCrown(bool bIsVisible)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuRacerLobby_C", "SetVisibilityCrown");
-
-	Params::BP_MenuRacerLobby_C_SetVisibilityCrown Parms{};
-
-	Parms.bIsVisible = bIsVisible;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_MenuRacerLobby.BP_MenuRacerLobby_C.SpawnDriverActor
 // (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
 
@@ -695,9 +647,9 @@ void ABP_MenuRacerLobby_C::SpawnMachine()
 // Function BP_MenuRacerLobby.BP_MenuRacerLobby_C.SpawnOrVisibleCrown
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bIsNotSpawn                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ECrownGrade                             CrownGrade                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_MenuRacerLobby_C::SpawnOrVisibleCrown(bool bIsNotSpawn)
+void ABP_MenuRacerLobby_C::SpawnOrVisibleCrown(ECrownGrade CrownGrade)
 {
 	static class UFunction* Func = nullptr;
 
@@ -706,7 +658,7 @@ void ABP_MenuRacerLobby_C::SpawnOrVisibleCrown(bool bIsNotSpawn)
 
 	Params::BP_MenuRacerLobby_C_SpawnOrVisibleCrown Parms{};
 
-	Parms.bIsNotSpawn = bIsNotSpawn;
+	Parms.CrownGrade = CrownGrade;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -741,6 +693,20 @@ void ABP_MenuRacerLobby_C::StopRotation()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BP_MenuRacerLobby_C", "StopRotation");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_MenuRacerLobby.BP_MenuRacerLobby_C.UpdateSteeringWheelMaterial
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_MenuRacerLobby_C::UpdateSteeringWheelMaterial()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MenuRacerLobby_C", "UpdateSteeringWheelMaterial");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

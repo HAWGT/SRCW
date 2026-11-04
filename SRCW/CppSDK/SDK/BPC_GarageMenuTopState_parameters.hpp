@@ -10,14 +10,161 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "UnionSystem_structs.hpp"
 #include "UNION_structs.hpp"
 #include "ST_GarageData_structs.hpp"
+#include "Engine_structs.hpp"
+#include "UnionSystem_structs.hpp"
 
 
 namespace SDK::Params
 {
+
+// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.ExecuteUbergraph_BPC_GarageMenuTopState
+// 0x05A8 (0x05A8 - 0x0000)
+struct BPC_GarageMenuTopState_C_ExecuteUbergraph_BPC_GarageMenuTopState final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue;              // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(EMachineId InMachineID)>       K2Node_CreateDelegate_OutputDelegate;              // 0x000C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(EMachineId InMachineID, EMachinePartsType InMachinePartsType)> K2Node_CreateDelegate_OutputDelegate_1; // 0x001C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FST_GarageData                         CallFunc_GetGarageData_OutGarageData;              // 0x0030(0x0058)(ZeroConstructor, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FST_GarageData                         K2Node_SetFieldsInStruct_StructOut;                // 0x0088(0x0058)(ZeroConstructor, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	class AHierarchicalStateMachine*              CallFunc_GetChildStateMachine_ReturnValue;         // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ABP_MachineCustomizeSequence_C*         K2Node_DynamicCast_AsBP_Machine_Customize_Sequence; // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F1[0x7];                                       // 0x00F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AAppPlayerController*                   CallFunc_GetAppPlayerController_OutAppPlayerController; // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bInIsControllable_1;            // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bInIsControllable;              // 0x0101(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EGarageChildSequenceId                        K2Node_CustomEvent_InChildSequenceId_1;            // 0x0102(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EGarageChildSequenceId                        K2Node_CustomEvent_InChildSequenceId;              // 0x0103(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0104(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EMachineId                                    K2Node_CustomEvent_InMachineId_2;                  // 0x0105(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_106[0x2];                                      // 0x0106(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FST_GarageData                         CallFunc_GetGarageData_OutGarageData_1;            // 0x0108(0x0058)(ZeroConstructor, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	EMachineId                                    K2Node_CustomEvent_InMachineId_1;                  // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EMachinePartsType                             K2Node_CustomEvent_InMachinePartsType_1;           // 0x0161(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_162[0x6];                                      // 0x0162(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FST_GarageData                         CallFunc_GetGarageData_OutGarageData_2;            // 0x0168(0x0058)(ZeroConstructor, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FST_GarageData                         K2Node_SetFieldsInStruct_StructOut_1;              // 0x01C0(0x0058)(ZeroConstructor, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FST_GarageData                         CallFunc_GetGarageData_OutGarageData_3;            // 0x0218(0x0058)(ZeroConstructor, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FST_GarageData                         K2Node_SetFieldsInStruct_StructOut_2;              // 0x0270(0x0058)(ZeroConstructor, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	EMachineId                                    K2Node_CustomEvent_InMachineId;                    // 0x02C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EMachinePartsType                             K2Node_CustomEvent_InMachinePartsType;             // 0x02C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2CA[0x6];                                      // 0x02CA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FST_GarageData                         CallFunc_GetGarageData_OutGarageData_4;            // 0x02D0(0x0058)(ZeroConstructor, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FST_GarageData                         K2Node_SetFieldsInStruct_StructOut_3;              // 0x0328(0x0058)(ZeroConstructor, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FST_GarageData                         CallFunc_GetGarageData_OutGarageData_5;            // 0x0380(0x0058)(ZeroConstructor, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FST_GarageData                         K2Node_SetFieldsInStruct_StructOut_4;              // 0x03D8(0x0058)(ZeroConstructor, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	EEndPlayReason                                K2Node_Event_EndPlayReason;                        // 0x0430(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_431[0x7];                                      // 0x0431(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AHierarchicalStateMachine*              CallFunc_GetChildStateMachine_ReturnValue_1;       // 0x0438(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FST_GarageData                         CallFunc_GetGarageData_OutGarageData_6;            // 0x0440(0x0058)(ZeroConstructor, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	class ABP_MachineCustomizeSequence_C*         K2Node_DynamicCast_AsBP_Machine_Customize_Sequence_1; // 0x0498(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x04A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_PlayAnim_ReturnValue;                     // 0x04A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4A2[0x6];                                      // 0x04A2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FST_GarageData                         CallFunc_GetGarageData_OutGarageData_7;            // 0x04A8(0x0058)(ZeroConstructor, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_2;            // 0x0500(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(EGarageChildSequenceId InChildSequenceId)> K2Node_CreateDelegate_OutputDelegate_3; // 0x0510(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(EGarageChildSequenceId InChildSequenceId)> K2Node_CreateDelegate_OutputDelegate_4; // 0x0520(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_5;            // 0x0530(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_6;            // 0x0540(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_1;            // 0x0550(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_551[0x7];                                      // 0x0551(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AHierarchicalStateMachine*              CallFunc_GetOwnerStateMachine_ReturnValue;         // 0x0558(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_1;             // 0x0560(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_564[0x4];                                      // 0x0564(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_GarageSequence_C*                   K2Node_DynamicCast_AsBP_Garage_Sequence;           // 0x0568(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0570(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_2;            // 0x0571(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_572[0x2];                                      // 0x0572(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_7;            // 0x0574(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_2;             // 0x0584(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMenuWorldSubsystem*                    CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0588(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UWBP_Garage_MainMenu_C*                 CallFunc_Create_ReturnValue;                       // 0x0590(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UCommonMenuFooterMenu*                  CallFunc_GetFooter_ReturnValue;                    // 0x0598(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x05A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_GarageMenuTopState_C_ExecuteUbergraph_BPC_GarageMenuTopState;
+
+// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.GadgetCustomizeSequence_OnMachinePartsFocused
+// 0x0002 (0x0002 - 0x0000)
+struct BPC_GarageMenuTopState_C_GadgetCustomizeSequence_OnMachinePartsFocused final
+{
+public:
+	EMachineId                                    InMachineID;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EMachinePartsType                             InMachinePartsType;                                // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_GarageMenuTopState_C_GadgetCustomizeSequence_OnMachinePartsFocused;
+
+// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.GadgetCustomizeSequence_OnParamWindowControlStateChanged
+// 0x0001 (0x0001 - 0x0000)
+struct BPC_GarageMenuTopState_C_GadgetCustomizeSequence_OnParamWindowControlStateChanged final
+{
+public:
+	bool                                          bInIsControllable;                                 // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_GarageMenuTopState_C_GadgetCustomizeSequence_OnParamWindowControlStateChanged;
+
+// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.GadgetCustomizeSequence_OnTurntableControlStateChanged
+// 0x0001 (0x0001 - 0x0000)
+struct BPC_GarageMenuTopState_C_GadgetCustomizeSequence_OnTurntableControlStateChanged final
+{
+public:
+	bool                                          bInIsControllable;                                 // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_GarageMenuTopState_C_GadgetCustomizeSequence_OnTurntableControlStateChanged;
+
+// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.MachineCustomizeSequence_OnMachineFocused
+// 0x0001 (0x0001 - 0x0000)
+struct BPC_GarageMenuTopState_C_MachineCustomizeSequence_OnMachineFocused final
+{
+public:
+	EMachineId                                    InMachineID;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_GarageMenuTopState_C_MachineCustomizeSequence_OnMachineFocused;
+
+// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.MachineCustomizeSequence_OnShortcutCustomizeStarted
+// 0x0002 (0x0002 - 0x0000)
+struct BPC_GarageMenuTopState_C_MachineCustomizeSequence_OnShortcutCustomizeStarted final
+{
+public:
+	EMachineId                                    InMachineID;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EMachinePartsType                             InMachinePartsType;                                // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_GarageMenuTopState_C_MachineCustomizeSequence_OnShortcutCustomizeStarted;
+
+// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.ReceiveEndPlay
+// 0x0001 (0x0001 - 0x0000)
+struct BPC_GarageMenuTopState_C_ReceiveEndPlay final
+{
+public:
+	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_GarageMenuTopState_C_ReceiveEndPlay;
+
+// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.TopWidget_OnDecisionAnimFinished
+// 0x0001 (0x0001 - 0x0000)
+struct BPC_GarageMenuTopState_C_TopWidget_OnDecisionAnimFinished final
+{
+public:
+	EGarageChildSequenceId                        InChildSequenceId;                                 // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_GarageMenuTopState_C_TopWidget_OnDecisionAnimFinished;
+
+// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.TopWidget_OnFocus
+// 0x0001 (0x0001 - 0x0000)
+struct BPC_GarageMenuTopState_C_TopWidget_OnFocus final
+{
+public:
+	EGarageChildSequenceId                        InChildSequenceId;                                 // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_GarageMenuTopState_C_TopWidget_OnFocus;
 
 // Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.UpdateRacer
 // 0x03E0 (0x03E0 - 0x0000)
@@ -41,155 +188,6 @@ public:
 	struct FST_GarageData                         CallFunc_GetGarageData_OutGarageData_6;            // 0x0388(0x0058)(ZeroConstructor, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_GarageMenuTopState_C_UpdateRacer;
-
-// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.GadgetCustomizeSequence_OnTurntableControlStateChanged
-// 0x0001 (0x0001 - 0x0000)
-struct BPC_GarageMenuTopState_C_GadgetCustomizeSequence_OnTurntableControlStateChanged final
-{
-public:
-	bool                                          bInIsControllable;                                 // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_GarageMenuTopState_C_GadgetCustomizeSequence_OnTurntableControlStateChanged;
-
-// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.GadgetCustomizeSequence_OnParamWindowControlStateChanged
-// 0x0001 (0x0001 - 0x0000)
-struct BPC_GarageMenuTopState_C_GadgetCustomizeSequence_OnParamWindowControlStateChanged final
-{
-public:
-	bool                                          bInIsControllable;                                 // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_GarageMenuTopState_C_GadgetCustomizeSequence_OnParamWindowControlStateChanged;
-
-// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.TopWidget_OnDecisionAnimFinished
-// 0x0001 (0x0001 - 0x0000)
-struct BPC_GarageMenuTopState_C_TopWidget_OnDecisionAnimFinished final
-{
-public:
-	EGarageChildSequenceId                        InChildSequenceId;                                 // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_GarageMenuTopState_C_TopWidget_OnDecisionAnimFinished;
-
-// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.TopWidget_OnFocus
-// 0x0001 (0x0001 - 0x0000)
-struct BPC_GarageMenuTopState_C_TopWidget_OnFocus final
-{
-public:
-	EGarageChildSequenceId                        InChildSequenceId;                                 // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_GarageMenuTopState_C_TopWidget_OnFocus;
-
-// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.MachineCustomizeSequence_OnMachineFocused
-// 0x0001 (0x0001 - 0x0000)
-struct BPC_GarageMenuTopState_C_MachineCustomizeSequence_OnMachineFocused final
-{
-public:
-	EMachineId                                    InMachineID;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_GarageMenuTopState_C_MachineCustomizeSequence_OnMachineFocused;
-
-// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.GadgetCustomizeSequence_OnMachinePartsFocused
-// 0x0002 (0x0002 - 0x0000)
-struct BPC_GarageMenuTopState_C_GadgetCustomizeSequence_OnMachinePartsFocused final
-{
-public:
-	EMachineId                                    InMachineID;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EMachinePartsType                             InMachinePartsType;                                // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_GarageMenuTopState_C_GadgetCustomizeSequence_OnMachinePartsFocused;
-
-// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.MachineCustomizeSequence_OnShortcutCustomizeStarted
-// 0x0002 (0x0002 - 0x0000)
-struct BPC_GarageMenuTopState_C_MachineCustomizeSequence_OnShortcutCustomizeStarted final
-{
-public:
-	EMachineId                                    InMachineID;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EMachinePartsType                             InMachinePartsType;                                // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_GarageMenuTopState_C_MachineCustomizeSequence_OnShortcutCustomizeStarted;
-
-// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.ReceiveEndPlay
-// 0x0001 (0x0001 - 0x0000)
-struct BPC_GarageMenuTopState_C_ReceiveEndPlay final
-{
-public:
-	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_GarageMenuTopState_C_ReceiveEndPlay;
-
-// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.ExecuteUbergraph_BPC_GarageMenuTopState
-// 0x05A8 (0x05A8 - 0x0000)
-struct BPC_GarageMenuTopState_C_ExecuteUbergraph_BPC_GarageMenuTopState final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(EMachineId InMachineID)>       K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(EMachineId InMachineID, EMachinePartsType InMachinePartsType)> K2Node_CreateDelegate_OutputDelegate_1; // 0x0014(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FST_GarageData                         CallFunc_GetGarageData_OutGarageData;              // 0x0028(0x0058)(ZeroConstructor, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	struct FST_GarageData                         K2Node_SetFieldsInStruct_StructOut;                // 0x0080(0x0058)(ZeroConstructor, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	class AHierarchicalStateMachine*              CallFunc_GetChildStateMachine_ReturnValue;         // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ABP_MachineCustomizeSequence_C*         K2Node_DynamicCast_AsBP_Machine_Customize_Sequence; // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E9[0x7];                                       // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AAppPlayerController*                   CallFunc_GetAppPlayerController_OutAppPlayerController; // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bInIsControllable_1;            // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bInIsControllable;              // 0x00F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGarageChildSequenceId                        K2Node_CustomEvent_InChildSequenceId_1;            // 0x00FA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGarageChildSequenceId                        K2Node_CustomEvent_InChildSequenceId;              // 0x00FB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x00FC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EMachineId                                    K2Node_CustomEvent_InMachineId_2;                  // 0x00FD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_FE[0x2];                                       // 0x00FE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FST_GarageData                         CallFunc_GetGarageData_OutGarageData_1;            // 0x0100(0x0058)(ZeroConstructor, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	EMachineId                                    K2Node_CustomEvent_InMachineId_1;                  // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EMachinePartsType                             K2Node_CustomEvent_InMachinePartsType_1;           // 0x0159(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_15A[0x6];                                      // 0x015A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FST_GarageData                         CallFunc_GetGarageData_OutGarageData_2;            // 0x0160(0x0058)(ZeroConstructor, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	struct FST_GarageData                         K2Node_SetFieldsInStruct_StructOut_1;              // 0x01B8(0x0058)(ZeroConstructor, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	struct FST_GarageData                         CallFunc_GetGarageData_OutGarageData_3;            // 0x0210(0x0058)(ZeroConstructor, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	struct FST_GarageData                         K2Node_SetFieldsInStruct_StructOut_2;              // 0x0268(0x0058)(ZeroConstructor, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	EMachineId                                    K2Node_CustomEvent_InMachineId;                    // 0x02C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EMachinePartsType                             K2Node_CustomEvent_InMachinePartsType;             // 0x02C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C2[0x6];                                      // 0x02C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FST_GarageData                         CallFunc_GetGarageData_OutGarageData_4;            // 0x02C8(0x0058)(ZeroConstructor, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	struct FST_GarageData                         K2Node_SetFieldsInStruct_StructOut_3;              // 0x0320(0x0058)(ZeroConstructor, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	struct FST_GarageData                         CallFunc_GetGarageData_OutGarageData_5;            // 0x0378(0x0058)(ZeroConstructor, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	struct FST_GarageData                         K2Node_SetFieldsInStruct_StructOut_4;              // 0x03D0(0x0058)(ZeroConstructor, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	EEndPlayReason                                K2Node_Event_EndPlayReason;                        // 0x0428(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_429[0x7];                                      // 0x0429(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FST_GarageData                         CallFunc_GetGarageData_OutGarageData_6;            // 0x0430(0x0058)(ZeroConstructor, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	class AHierarchicalStateMachine*              CallFunc_GetChildStateMachine_ReturnValue_1;       // 0x0488(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_PlayAnim_ReturnValue;                     // 0x0490(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_491[0x7];                                      // 0x0491(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_MachineCustomizeSequence_C*         K2Node_DynamicCast_AsBP_Machine_Customize_Sequence_1; // 0x0498(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x04A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A1[0x3];                                      // 0x04A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_2;            // 0x04A4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B4[0x4];                                      // 0x04B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FST_GarageData                         CallFunc_GetGarageData_OutGarageData_7;            // 0x04B8(0x0058)(ZeroConstructor, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_3;            // 0x0510(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(EGarageChildSequenceId InChildSequenceId)> K2Node_CreateDelegate_OutputDelegate_4; // 0x0520(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(EGarageChildSequenceId InChildSequenceId)> K2Node_CreateDelegate_OutputDelegate_5; // 0x0530(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_6;            // 0x0540(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_7;            // 0x0550(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UWBP_Garage_MainMenu_C*                 CallFunc_Create_ReturnValue;                       // 0x0560(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UMenuWorldSubsystem*                    CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0568(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0570(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_571[0x7];                                      // 0x0571(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AHierarchicalStateMachine*              CallFunc_GetOwnerStateMachine_ReturnValue;         // 0x0578(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue;              // 0x0580(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_581[0x7];                                      // 0x0581(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_GarageSequence_C*                   K2Node_DynamicCast_AsBP_Garage_Sequence;           // 0x0588(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0590(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_591[0x3];                                      // 0x0591(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0594(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_1;            // 0x0598(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_599[0x3];                                      // 0x0599(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_1;             // 0x059C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_2;            // 0x05A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A1[0x3];                                      // 0x05A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_2;             // 0x05A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_GarageMenuTopState_C_ExecuteUbergraph_BPC_GarageMenuTopState;
 
 }
 

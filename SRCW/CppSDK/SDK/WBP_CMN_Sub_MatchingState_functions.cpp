@@ -196,8 +196,10 @@ void UWBP_CMN_Sub_MatchingState_C::SetOnlineGameMode(EOnlineGameMode InOnlineGam
 // Parameters:
 // bool                                    bIsMulti                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EOnlineGameMode                         InOnlineGameMode                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EOnlineGameMode                         InSquadOnlineGameMode                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsVisible_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_CMN_Sub_MatchingState_C::SetOnlineGameModeIcon(bool bIsMulti, EOnlineGameMode InOnlineGameMode)
+void UWBP_CMN_Sub_MatchingState_C::SetOnlineGameModeIcon(bool bIsMulti, EOnlineGameMode InOnlineGameMode, EOnlineGameMode InSquadOnlineGameMode, bool IsVisible_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -208,6 +210,8 @@ void UWBP_CMN_Sub_MatchingState_C::SetOnlineGameModeIcon(bool bIsMulti, EOnlineG
 
 	Parms.bIsMulti = bIsMulti;
 	Parms.InOnlineGameMode = InOnlineGameMode;
+	Parms.InSquadOnlineGameMode = InSquadOnlineGameMode;
+	Parms.IsVisible_0 = IsVisible_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

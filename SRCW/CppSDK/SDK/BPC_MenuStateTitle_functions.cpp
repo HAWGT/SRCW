@@ -17,15 +17,49 @@
 namespace SDK
 {
 
-// Function BPC_MenuStateTitle.BPC_MenuStateTitle_C.Play Title BGM
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BPC_MenuStateTitle.BPC_MenuStateTitle_C.ExecuteUbergraph_BPC_MenuStateTitle
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_MenuStateTitle_C::Play_Title_BGM()
+void UBPC_MenuStateTitle_C::ExecuteUbergraph_BPC_MenuStateTitle(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTitle_C", "Play Title BGM");
+		Func = Class->GetFunction("BPC_MenuStateTitle_C", "ExecuteUbergraph_BPC_MenuStateTitle");
+
+	Params::BPC_MenuStateTitle_C_ExecuteUbergraph_BPC_MenuStateTitle Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_MenuStateTitle.BPC_MenuStateTitle_C.OnExitState
+// (Event, Public, BlueprintEvent)
+
+void UBPC_MenuStateTitle_C::OnExitState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MenuStateTitle_C", "OnExitState");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_MenuStateTitle.BPC_MenuStateTitle_C.OnInitState
+// (Event, Public, BlueprintEvent)
+
+void UBPC_MenuStateTitle_C::OnInitState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MenuStateTitle_C", "OnInitState");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -51,20 +85,6 @@ void UBPC_MenuStateTitle_C::OnLoaded_4765DBF64D84C160A2E9C08B7DD924AD(TSubclassO
 }
 
 
-// Function BPC_MenuStateTitle.BPC_MenuStateTitle_C.OnInitState
-// (Event, Public, BlueprintEvent)
-
-void UBPC_MenuStateTitle_C::OnInitState()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTitle_C", "OnInitState");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BPC_MenuStateTitle.BPC_MenuStateTitle_C.OnUpdateState
 // (Event, Public, BlueprintEvent)
 // Parameters:
@@ -85,37 +105,17 @@ void UBPC_MenuStateTitle_C::OnUpdateState(float InDeltaTime)
 }
 
 
-// Function BPC_MenuStateTitle.BPC_MenuStateTitle_C.OnExitState
-// (Event, Public, BlueprintEvent)
+// Function BPC_MenuStateTitle.BPC_MenuStateTitle_C.Play Title BGM
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPC_MenuStateTitle_C::OnExitState()
+void UBPC_MenuStateTitle_C::Play_Title_BGM()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTitle_C", "OnExitState");
+		Func = Class->GetFunction("BPC_MenuStateTitle_C", "Play Title BGM");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_MenuStateTitle.BPC_MenuStateTitle_C.ExecuteUbergraph_BPC_MenuStateTitle
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_MenuStateTitle_C::ExecuteUbergraph_BPC_MenuStateTitle(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTitle_C", "ExecuteUbergraph_BPC_MenuStateTitle");
-
-	Params::BPC_MenuStateTitle_C_ExecuteUbergraph_BPC_MenuStateTitle Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

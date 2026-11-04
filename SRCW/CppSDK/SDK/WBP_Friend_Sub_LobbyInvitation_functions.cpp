@@ -17,6 +17,221 @@
 namespace SDK
 {
 
+// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.AddListItemWidgetByListItemIndex
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InListItemIndex                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Friend_Sub_LobbyInvitation_C::AddListItemWidgetByListItemIndex(int32 InListItemIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "AddListItemWidgetByListItemIndex");
+
+	Params::WBP_Friend_Sub_LobbyInvitation_C_AddListItemWidgetByListItemIndex Parms{};
+
+	Parms.InListItemIndex = InListItemIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.Check Lobby Join Attention
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool*                                   bOutAttention                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Friend_Sub_LobbyInvitation_C::Check_Lobby_Join_Attention(bool* bOutAttention)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "Check Lobby Join Attention");
+
+	Params::WBP_Friend_Sub_LobbyInvitation_C_Check_Lobby_Join_Attention Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (bOutAttention != nullptr)
+		*bOutAttention = Parms.bOutAttention;
+}
+
+
+// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.ClearButtonNavigation
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_Friend_Sub_LobbyInvitation_C::ClearButtonNavigation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "ClearButtonNavigation");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWBP_Friend_Sub_LobbyInvitation_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.CreateNumberInputWidget
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_Friend_Sub_LobbyInvitation_C::CreateNumberInputWidget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "CreateNumberInputWidget");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.DestroyNumberInputWidget
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Friend_Sub_LobbyInvitation_C::DestroyNumberInputWidget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "DestroyNumberInputWidget");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWBP_Friend_Sub_LobbyInvitation_C::Destruct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "Destruct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.ExecuteAfterConfirmWidget
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EFriendListCommandType                  CommandType                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InButtonIndex                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bInCanceled                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Friend_Sub_LobbyInvitation_C::ExecuteAfterConfirmWidget(EFriendListCommandType CommandType, int32 InButtonIndex, bool bInCanceled)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "ExecuteAfterConfirmWidget");
+
+	Params::WBP_Friend_Sub_LobbyInvitation_C_ExecuteAfterConfirmWidget Parms{};
+
+	Parms.CommandType = CommandType;
+	Parms.InButtonIndex = InButtonIndex;
+	Parms.bInCanceled = bInCanceled;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.ExecuteUbergraph_WBP_Friend_Sub_LobbyInvitation
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Friend_Sub_LobbyInvitation_C::ExecuteUbergraph_WBP_Friend_Sub_LobbyInvitation(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "ExecuteUbergraph_WBP_Friend_Sub_LobbyInvitation");
+
+	Params::WBP_Friend_Sub_LobbyInvitation_C_ExecuteUbergraph_WBP_Friend_Sub_LobbyInvitation Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.FocusListItemWidget
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bInPlayFocusSound                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Friend_Sub_LobbyInvitation_C::FocusListItemWidget(bool bInPlayFocusSound)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "FocusListItemWidget");
+
+	Params::WBP_Friend_Sub_LobbyInvitation_C_FocusListItemWidget Parms{};
+
+	Parms.bInPlayFocusSound = bInPlayFocusSound;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.GetNumberInputWidget
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UFriendListNumberInputWidget*     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UFriendListNumberInputWidget* UWBP_Friend_Sub_LobbyInvitation_C::GetNumberInputWidget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "GetNumberInputWidget");
+
+	Params::WBP_Friend_Sub_LobbyInvitation_C_GetNumberInputWidget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.GetScrollBoxWidget
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UScrollBox*                       ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UScrollBox* UWBP_Friend_Sub_LobbyInvitation_C::GetScrollBoxWidget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "GetScrollBoxWidget");
+
+	Params::WBP_Friend_Sub_LobbyInvitation_C_GetScrollBoxWidget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.GetShortLobbyIdButtonText
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -35,27 +250,6 @@ void UWBP_Friend_Sub_LobbyInvitation_C::GetShortLobbyIdButtonText(class FText* O
 
 	if (OutText != nullptr)
 		*OutText = std::move(Parms.OutText);
-}
-
-
-// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.IsOnlyJoinPublicLobby
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// bool*                                   bOutOnlyJoin                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Friend_Sub_LobbyInvitation_C::IsOnlyJoinPublicLobby(bool* bOutOnlyJoin)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "IsOnlyJoinPublicLobby");
-
-	Params::WBP_Friend_Sub_LobbyInvitation_C_IsOnlyJoinPublicLobby Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (bOutOnlyJoin != nullptr)
-		*bOutOnlyJoin = Parms.bOutOnlyJoin;
 }
 
 
@@ -80,44 +274,90 @@ void UWBP_Friend_Sub_LobbyInvitation_C::IsOnlyJoinPrivateLobby(bool* bOutOnlyJoi
 }
 
 
-// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.GetNumberInputWidget
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.IsOnlyJoinPublicLobby
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UFriendListNumberInputWidget*     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// bool*                                   bOutOnlyJoin                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-class UFriendListNumberInputWidget* UWBP_Friend_Sub_LobbyInvitation_C::GetNumberInputWidget()
+void UWBP_Friend_Sub_LobbyInvitation_C::IsOnlyJoinPublicLobby(bool* bOutOnlyJoin)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "GetNumberInputWidget");
+		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "IsOnlyJoinPublicLobby");
 
-	Params::WBP_Friend_Sub_LobbyInvitation_C_GetNumberInputWidget Parms{};
+	Params::WBP_Friend_Sub_LobbyInvitation_C_IsOnlyJoinPublicLobby Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	return Parms.ReturnValue;
+	if (bOutOnlyJoin != nullptr)
+		*bOutOnlyJoin = Parms.bOutOnlyJoin;
 }
 
 
-// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.Check Lobby Join Attention
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.OnAttentionPopupWindowDecision
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool*                                   bOutAttention                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UUnionUIButtonBase*               Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// int32                                   PanelIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   ButtonIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Friend_Sub_LobbyInvitation_C::Check_Lobby_Join_Attention(bool* bOutAttention)
+void UWBP_Friend_Sub_LobbyInvitation_C::OnAttentionPopupWindowDecision(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "Check Lobby Join Attention");
+		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "OnAttentionPopupWindowDecision");
 
-	Params::WBP_Friend_Sub_LobbyInvitation_C_Check_Lobby_Join_Attention Parms{};
+	Params::WBP_Friend_Sub_LobbyInvitation_C_OnAttentionPopupWindowDecision Parms{};
+
+	Parms.Button = Button;
+	Parms.PanelIndex = PanelIndex;
+	Parms.ButtonIndex = ButtonIndex;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
 
-	if (bOutAttention != nullptr)
-		*bOutAttention = Parms.bOutAttention;
+
+// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.OnButtonDecisionEvent
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UUnionUIButtonBase*               Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Friend_Sub_LobbyInvitation_C::OnButtonDecisionEvent(class UUnionUIButtonBase* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "OnButtonDecisionEvent");
+
+	Params::WBP_Friend_Sub_LobbyInvitation_C_OnButtonDecisionEvent Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.OnDirectionChange
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UUnionUIButtonBase*               Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// EUnionUIControlDir                      Dir                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Friend_Sub_LobbyInvitation_C::OnDirectionChange(class UUnionUIButtonBase* Button, EUnionUIControlDir Dir)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "OnDirectionChange");
+
+	Params::WBP_Friend_Sub_LobbyInvitation_C_OnDirectionChange Parms{};
+
+	Parms.Button = Button;
+	Parms.Dir = Dir;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -146,37 +386,23 @@ struct FEventReply UWBP_Friend_Sub_LobbyInvitation_C::OnFocusReceived(const stru
 }
 
 
-// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.GetScrollBoxWidget
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.OnListItemCancelDown
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UScrollBox*                       ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UUnionUIButtonBase*               Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-class UScrollBox* UWBP_Friend_Sub_LobbyInvitation_C::GetScrollBoxWidget()
+void UWBP_Friend_Sub_LobbyInvitation_C::OnListItemCancelDown(class UUnionUIButtonBase* Button)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "GetScrollBoxWidget");
+		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "OnListItemCancelDown");
 
-	Params::WBP_Friend_Sub_LobbyInvitation_C_GetScrollBoxWidget Parms{};
+	Params::WBP_Friend_Sub_LobbyInvitation_C_OnListItemCancelDown Parms{};
+
+	Parms.Button = Button;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWBP_Friend_Sub_LobbyInvitation_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -200,43 +426,19 @@ void UWBP_Friend_Sub_LobbyInvitation_C::OnListItemDecisionDown(class UUnionUIBut
 }
 
 
-// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.SetupListItemWidgetSingle
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UWBP_Friend_Sub_PlayerPlate_Small_C*InItemListWidget                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// const struct FFriendListPlayerInfo&     InListPlayerInfo                                       (BlueprintVisible, BlueprintReadOnly, Parm)
-// int32                                   InButtonIndex                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Friend_Sub_LobbyInvitation_C::SetupListItemWidgetSingle(class UWBP_Friend_Sub_PlayerPlate_Small_C* InItemListWidget, const struct FFriendListPlayerInfo& InListPlayerInfo, int32 InButtonIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "SetupListItemWidgetSingle");
-
-	Params::WBP_Friend_Sub_LobbyInvitation_C_SetupListItemWidgetSingle Parms{};
-
-	Parms.InItemListWidget = InItemListWidget;
-	Parms.InListPlayerInfo = std::move(InListPlayerInfo);
-	Parms.InButtonIndex = InButtonIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.OnListItemCancelDown
+// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.OnLobbyIdButtonDecisionEvent
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UUnionUIButtonBase*               Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Friend_Sub_LobbyInvitation_C::OnListItemCancelDown(class UUnionUIButtonBase* Button)
+void UWBP_Friend_Sub_LobbyInvitation_C::OnLobbyIdButtonDecisionEvent(class UUnionUIButtonBase* Button)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "OnListItemCancelDown");
+		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "OnLobbyIdButtonDecisionEvent");
 
-	Params::WBP_Friend_Sub_LobbyInvitation_C_OnListItemCancelDown Parms{};
+	Params::WBP_Friend_Sub_LobbyInvitation_C_OnLobbyIdButtonDecisionEvent Parms{};
 
 	Parms.Button = Button;
 
@@ -244,21 +446,25 @@ void UWBP_Friend_Sub_LobbyInvitation_C::OnListItemCancelDown(class UUnionUIButto
 }
 
 
-// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.FocusListItemWidget
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.OnLobbyIdSearchSuccess
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bInPlayFocusSound                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const TArray<struct FCommon_UserSearchData>&InUserSearchData                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const TArray<struct FLobbyId>&          InLobbyIdData                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// ELobbyType                              InLobbyType                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Friend_Sub_LobbyInvitation_C::FocusListItemWidget(bool bInPlayFocusSound)
+void UWBP_Friend_Sub_LobbyInvitation_C::OnLobbyIdSearchSuccess(const TArray<struct FCommon_UserSearchData>& InUserSearchData, const TArray<struct FLobbyId>& InLobbyIdData, ELobbyType InLobbyType)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "FocusListItemWidget");
+		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "OnLobbyIdSearchSuccess");
 
-	Params::WBP_Friend_Sub_LobbyInvitation_C_FocusListItemWidget Parms{};
+	Params::WBP_Friend_Sub_LobbyInvitation_C_OnLobbyIdSearchSuccess Parms{};
 
-	Parms.bInPlayFocusSound = bInPlayFocusSound;
+	Parms.InUserSearchData = std::move(InUserSearchData);
+	Parms.InLobbyIdData = std::move(InLobbyIdData);
+	Parms.InLobbyType = InLobbyType;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -288,20 +494,6 @@ void UWBP_Friend_Sub_LobbyInvitation_C::OnNumberInputWidgetDecision(class UUnion
 }
 
 
-// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.CreateNumberInputWidget
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_Friend_Sub_LobbyInvitation_C::CreateNumberInputWidget()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "CreateNumberInputWidget");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.OnUserSearchSuccess
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -322,123 +514,17 @@ void UWBP_Friend_Sub_LobbyInvitation_C::OnUserSearchSuccess(const TArray<struct 
 }
 
 
-// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.ExecuteAfterConfirmWidget
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EFriendListCommandType                  CommandType                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InButtonIndex                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bInCanceled                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Friend_Sub_LobbyInvitation_C::ExecuteAfterConfirmWidget(EFriendListCommandType CommandType, int32 InButtonIndex, bool bInCanceled)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "ExecuteAfterConfirmWidget");
-
-	Params::WBP_Friend_Sub_LobbyInvitation_C_ExecuteAfterConfirmWidget Parms{};
-
-	Parms.CommandType = CommandType;
-	Parms.InButtonIndex = InButtonIndex;
-	Parms.bInCanceled = bInCanceled;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.OnButtonDecisionEvent
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UUnionUIButtonBase*               Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Friend_Sub_LobbyInvitation_C::OnButtonDecisionEvent(class UUnionUIButtonBase* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "OnButtonDecisionEvent");
-
-	Params::WBP_Friend_Sub_LobbyInvitation_C_OnButtonDecisionEvent Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.OnLobbyIdButtonDecisionEvent
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UUnionUIButtonBase*               Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Friend_Sub_LobbyInvitation_C::OnLobbyIdButtonDecisionEvent(class UUnionUIButtonBase* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "OnLobbyIdButtonDecisionEvent");
-
-	Params::WBP_Friend_Sub_LobbyInvitation_C_OnLobbyIdButtonDecisionEvent Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.SetOwnLobbyIdText
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FString&                    InLobbyId                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// bool                                    bInWaitDisplay                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Friend_Sub_LobbyInvitation_C::SetOwnLobbyIdText(const class FString& InLobbyId, bool bInWaitDisplay)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "SetOwnLobbyIdText");
-
-	Params::WBP_Friend_Sub_LobbyInvitation_C_SetOwnLobbyIdText Parms{};
-
-	Parms.InLobbyId = std::move(InLobbyId);
-	Parms.bInWaitDisplay = bInWaitDisplay;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.SetupListItemWidget
+// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.ResetContentsWidgetFocus
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_Friend_Sub_LobbyInvitation_C::SetupListItemWidget()
+void UWBP_Friend_Sub_LobbyInvitation_C::ResetContentsWidgetFocus()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "SetupListItemWidget");
+		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "ResetContentsWidgetFocus");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.AddListItemWidgetByListItemIndex
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InListItemIndex                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Friend_Sub_LobbyInvitation_C::AddListItemWidgetByListItemIndex(int32 InListItemIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "AddListItemWidgetByListItemIndex");
-
-	Params::WBP_Friend_Sub_LobbyInvitation_C_AddListItemWidgetByListItemIndex Parms{};
-
-	Parms.InListItemIndex = InListItemIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -462,6 +548,28 @@ void UWBP_Friend_Sub_LobbyInvitation_C::SetButtonControlEnable(bool bInEnable)
 }
 
 
+// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.SetButtonControlEnableSingle
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWBP_Friend_SubMenu_Btn_C*        InSubMenuButton                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// bool                                    bInEnable                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Friend_Sub_LobbyInvitation_C::SetButtonControlEnableSingle(class UWBP_Friend_SubMenu_Btn_C* InSubMenuButton, bool bInEnable)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "SetButtonControlEnableSingle");
+
+	Params::WBP_Friend_Sub_LobbyInvitation_C_SetButtonControlEnableSingle Parms{};
+
+	Parms.InSubMenuButton = InSubMenuButton;
+	Parms.bInEnable = bInEnable;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.SetButtonNavigation
 // (BlueprintCallable, BlueprintEvent)
 
@@ -476,41 +584,19 @@ void UWBP_Friend_Sub_LobbyInvitation_C::SetButtonNavigation()
 }
 
 
-// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.UpdateLobbyId
+// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.SetContentsControlEnable
 // (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FString&                    InShortLobbyId                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// bool                                    InRequestSuccess                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Friend_Sub_LobbyInvitation_C::UpdateLobbyId(const class FString& InShortLobbyId, bool InRequestSuccess)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "UpdateLobbyId");
-
-	Params::WBP_Friend_Sub_LobbyInvitation_C_UpdateLobbyId Parms{};
-
-	Parms.InShortLobbyId = std::move(InShortLobbyId);
-	Parms.InRequestSuccess = InRequestSuccess;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.SetListItemWidgetInteractableState
-// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    bInEnable                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Friend_Sub_LobbyInvitation_C::SetListItemWidgetInteractableState(bool bInEnable)
+void UWBP_Friend_Sub_LobbyInvitation_C::SetContentsControlEnable(bool bInEnable)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "SetListItemWidgetInteractableState");
+		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "SetContentsControlEnable");
 
-	Params::WBP_Friend_Sub_LobbyInvitation_C_SetListItemWidgetInteractableState Parms{};
+	Params::WBP_Friend_Sub_LobbyInvitation_C_SetContentsControlEnable Parms{};
 
 	Parms.bInEnable = bInEnable;
 
@@ -540,47 +626,63 @@ void UWBP_Friend_Sub_LobbyInvitation_C::SetListItemWidgetButtonChangeableState(i
 }
 
 
-// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.SetWidgetFocus
+// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.SetListItemWidgetInteractableState
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class APlayerController*                PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    bInPlayFocusSound                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bInEnable                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Friend_Sub_LobbyInvitation_C::SetWidgetFocus(class APlayerController* PlayerController, bool bInPlayFocusSound)
+void UWBP_Friend_Sub_LobbyInvitation_C::SetListItemWidgetInteractableState(bool bInEnable)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "SetWidgetFocus");
+		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "SetListItemWidgetInteractableState");
 
-	Params::WBP_Friend_Sub_LobbyInvitation_C_SetWidgetFocus Parms{};
+	Params::WBP_Friend_Sub_LobbyInvitation_C_SetListItemWidgetInteractableState Parms{};
 
-	Parms.PlayerController = PlayerController;
-	Parms.bInPlayFocusSound = bInPlayFocusSound;
+	Parms.bInEnable = bInEnable;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.OnAttentionPopupWindowDecision
+// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.SetOwnLobbyIdText
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UUnionUIButtonBase*               Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// int32                                   PanelIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   ButtonIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    InLobbyId                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// bool                                    bInWaitDisplay                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Friend_Sub_LobbyInvitation_C::OnAttentionPopupWindowDecision(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
+void UWBP_Friend_Sub_LobbyInvitation_C::SetOwnLobbyIdText(const class FString& InLobbyId, bool bInWaitDisplay)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "OnAttentionPopupWindowDecision");
+		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "SetOwnLobbyIdText");
 
-	Params::WBP_Friend_Sub_LobbyInvitation_C_OnAttentionPopupWindowDecision Parms{};
+	Params::WBP_Friend_Sub_LobbyInvitation_C_SetOwnLobbyIdText Parms{};
 
-	Parms.Button = Button;
-	Parms.PanelIndex = PanelIndex;
-	Parms.ButtonIndex = ButtonIndex;
+	Parms.InLobbyId = std::move(InLobbyId);
+	Parms.bInWaitDisplay = bInWaitDisplay;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.SetScrollBoxVisibility
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ESlateVisibility                        Param                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Friend_Sub_LobbyInvitation_C::SetScrollBoxVisibility(ESlateVisibility Param)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "SetScrollBoxVisibility");
+
+	Params::WBP_Friend_Sub_LobbyInvitation_C_SetScrollBoxVisibility Parms{};
+
+	Parms.Param = Param;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -606,184 +708,6 @@ void UWBP_Friend_Sub_LobbyInvitation_C::SetupAttentionPopupWindow(EFriendListCom
 }
 
 
-// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.UpdateButtonSelectable
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_Friend_Sub_LobbyInvitation_C::UpdateButtonSelectable()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "UpdateButtonSelectable");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.OnLobbyIdSearchSuccess
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const TArray<struct FCommon_UserSearchData>&InUserSearchData                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// const TArray<struct FLobbyId>&          InLobbyIdData                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// ELobbyType                              InLobbyType                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Friend_Sub_LobbyInvitation_C::OnLobbyIdSearchSuccess(const TArray<struct FCommon_UserSearchData>& InUserSearchData, const TArray<struct FLobbyId>& InLobbyIdData, ELobbyType InLobbyType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "OnLobbyIdSearchSuccess");
-
-	Params::WBP_Friend_Sub_LobbyInvitation_C_OnLobbyIdSearchSuccess Parms{};
-
-	Parms.InUserSearchData = std::move(InUserSearchData);
-	Parms.InLobbyIdData = std::move(InLobbyIdData);
-	Parms.InLobbyType = InLobbyType;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.SetContentsControlEnable
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bInEnable                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Friend_Sub_LobbyInvitation_C::SetContentsControlEnable(bool bInEnable)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "SetContentsControlEnable");
-
-	Params::WBP_Friend_Sub_LobbyInvitation_C_SetContentsControlEnable Parms{};
-
-	Parms.bInEnable = bInEnable;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.ClearButtonNavigation
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_Friend_Sub_LobbyInvitation_C::ClearButtonNavigation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "ClearButtonNavigation");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.SetButtonControlEnableSingle
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UWBP_Friend_SubMenu_Btn_C*        InSubMenuButton                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// bool                                    bInEnable                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Friend_Sub_LobbyInvitation_C::SetButtonControlEnableSingle(class UWBP_Friend_SubMenu_Btn_C* InSubMenuButton, bool bInEnable)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "SetButtonControlEnableSingle");
-
-	Params::WBP_Friend_Sub_LobbyInvitation_C_SetButtonControlEnableSingle Parms{};
-
-	Parms.InSubMenuButton = InSubMenuButton;
-	Parms.bInEnable = bInEnable;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.OnDirectionChange
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UUnionUIButtonBase*               Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// EUnionUIControlDir                      Dir                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Friend_Sub_LobbyInvitation_C::OnDirectionChange(class UUnionUIButtonBase* Button, EUnionUIControlDir Dir)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "OnDirectionChange");
-
-	Params::WBP_Friend_Sub_LobbyInvitation_C_OnDirectionChange Parms{};
-
-	Parms.Button = Button;
-	Parms.Dir = Dir;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.DestroyNumberInputWidget
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_Friend_Sub_LobbyInvitation_C::DestroyNumberInputWidget()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "DestroyNumberInputWidget");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.ResetContentsWidgetFocus
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_Friend_Sub_LobbyInvitation_C::ResetContentsWidgetFocus()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "ResetContentsWidgetFocus");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.SetScrollBoxVisibility
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// ESlateVisibility                        Param                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Friend_Sub_LobbyInvitation_C::SetScrollBoxVisibility(ESlateVisibility Param)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "SetScrollBoxVisibility");
-
-	Params::WBP_Friend_Sub_LobbyInvitation_C_SetScrollBoxVisibility Parms{};
-
-	Parms.Param = Param;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.Destruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWBP_Friend_Sub_LobbyInvitation_C::Destruct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "Destruct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.SetupButton
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 
@@ -798,21 +722,97 @@ void UWBP_Friend_Sub_LobbyInvitation_C::SetupButton()
 }
 
 
-// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.ExecuteUbergraph_WBP_Friend_Sub_LobbyInvitation
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.SetupListItemWidget
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_Friend_Sub_LobbyInvitation_C::ExecuteUbergraph_WBP_Friend_Sub_LobbyInvitation(int32 EntryPoint)
+void UWBP_Friend_Sub_LobbyInvitation_C::SetupListItemWidget()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "ExecuteUbergraph_WBP_Friend_Sub_LobbyInvitation");
+		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "SetupListItemWidget");
 
-	Params::WBP_Friend_Sub_LobbyInvitation_C_ExecuteUbergraph_WBP_Friend_Sub_LobbyInvitation Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
+
+// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.SetupListItemWidgetSingle
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWBP_Friend_Sub_PlayerPlate_Small_C*InItemListWidget                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// const struct FFriendListPlayerInfo&     InListPlayerInfo                                       (BlueprintVisible, BlueprintReadOnly, Parm)
+// int32                                   InButtonIndex                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Friend_Sub_LobbyInvitation_C::SetupListItemWidgetSingle(class UWBP_Friend_Sub_PlayerPlate_Small_C* InItemListWidget, const struct FFriendListPlayerInfo& InListPlayerInfo, int32 InButtonIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "SetupListItemWidgetSingle");
+
+	Params::WBP_Friend_Sub_LobbyInvitation_C_SetupListItemWidgetSingle Parms{};
+
+	Parms.InItemListWidget = InItemListWidget;
+	Parms.InListPlayerInfo = std::move(InListPlayerInfo);
+	Parms.InButtonIndex = InButtonIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.SetWidgetFocus
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class APlayerController*                PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    bInPlayFocusSound                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Friend_Sub_LobbyInvitation_C::SetWidgetFocus(class APlayerController* PlayerController, bool bInPlayFocusSound)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "SetWidgetFocus");
+
+	Params::WBP_Friend_Sub_LobbyInvitation_C_SetWidgetFocus Parms{};
+
+	Parms.PlayerController = PlayerController;
+	Parms.bInPlayFocusSound = bInPlayFocusSound;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.UpdateButtonSelectable
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Friend_Sub_LobbyInvitation_C::UpdateButtonSelectable()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "UpdateButtonSelectable");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Friend_Sub_LobbyInvitation.WBP_Friend_Sub_LobbyInvitation_C.UpdateLobbyId
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    InShortLobbyId                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// bool                                    InRequestSuccess                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Friend_Sub_LobbyInvitation_C::UpdateLobbyId(const class FString& InShortLobbyId, bool InRequestSuccess)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Friend_Sub_LobbyInvitation_C", "UpdateLobbyId");
+
+	Params::WBP_Friend_Sub_LobbyInvitation_C_UpdateLobbyId Parms{};
+
+	Parms.InShortLobbyId = std::move(InShortLobbyId);
+	Parms.InRequestSuccess = InRequestSuccess;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

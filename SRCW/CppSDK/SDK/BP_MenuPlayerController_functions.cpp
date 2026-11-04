@@ -358,9 +358,9 @@ void ABP_MenuPlayerController_C::OnChangeControllerInputType(EAppControllerInput
 
 
 // Function BP_MenuPlayerController.BP_MenuPlayerController_C.OnMousePointerEventBP
-// (Event, Public, BlueprintEvent)
+// (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// const struct FPointerEvent&             InPointerEvent                                         (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FPointerEvent&             InPointerEvent                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
 void ABP_MenuPlayerController_C::OnMousePointerEventBP(const struct FPointerEvent& InPointerEvent)
 {

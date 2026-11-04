@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "UNION_structs.hpp"
-#include "UnionSystem_structs.hpp"
-#include "EGadgetCustomizeSequenceMode_structs.hpp"
 #include "EMachineCustomizeSequenceMode_structs.hpp"
+#include "UnionSystem_structs.hpp"
+#include "UNION_structs.hpp"
+#include "EGadgetCustomizeSequenceMode_structs.hpp"
 
 
 namespace SDK

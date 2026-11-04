@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
-#include "UnionUI_structs.hpp"
+#include "UNION_classes.hpp"
 #include "UMG_structs.hpp"
+#include "UnionUI_structs.hpp"
 
 
 namespace SDK
@@ -99,7 +99,7 @@ public:
 	void SetTestTextParam();
 	void SetTitleText(const class FText& InText);
 	void Setup(EHintId InHintId, bool bInDecisionClose);
-	void UnBindAnimationEvent();
+	void UnbindAnimationEvent();
 	void UpdateDisplay(EHintId InHintId);
 	void UpdateFooter(bool bInIsTips);
 	void UpdateInputType();

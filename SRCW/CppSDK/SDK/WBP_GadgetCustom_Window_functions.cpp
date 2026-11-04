@@ -17,40 +17,6 @@
 namespace SDK
 {
 
-// Function WBP_GadgetCustom_Window.WBP_GadgetCustom_Window_C.ApplyGadgetCustomCategoryHeader
-// (Event, Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWBP_GadgetCustom_Window_C::ApplyGadgetCustomCategoryHeader()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "ApplyGadgetCustomCategoryHeader");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_GadgetCustom_Window.WBP_GadgetCustom_Window_C.ApplyGadgetCustomScrollPrintBox
-// (Event, Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const bool                              bInReSize                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_GadgetCustom_Window_C::ApplyGadgetCustomScrollPrintBox(const bool bInReSize)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "ApplyGadgetCustomScrollPrintBox");
-
-	Params::WBP_GadgetCustom_Window_C_ApplyGadgetCustomScrollPrintBox Parms{};
-
-	Parms.bInReSize = bInReSize;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_GadgetCustom_Window.WBP_GadgetCustom_Window_C.BndEvt__WBP_GadgetCustom_Window_MouseInteraction_Decision_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
 // (BlueprintEvent)
 
@@ -252,10 +218,10 @@ void UWBP_GadgetCustom_Window_C::FinishedPurchaseAnim()
 // int32*                                  IndexOnBox                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EGadgetCategory*                        GadgetCategory                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32*                                  CenterElementTypeIndex                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EGadgetId*                              gadgetId                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EGadgetId*                              GadgetID                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EGadgetState*                           SelectedGadgetState                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_GadgetCustom_Window_C::GetCurrentCenterBoxGadgetInfo(int32* IndexOnBox, EGadgetCategory* GadgetCategory, int32* CenterElementTypeIndex, EGadgetId* gadgetId, EGadgetState* SelectedGadgetState)
+void UWBP_GadgetCustom_Window_C::GetCurrentCenterBoxGadgetInfo(int32* IndexOnBox, EGadgetCategory* GadgetCategory, int32* CenterElementTypeIndex, EGadgetId* GadgetID, EGadgetState* SelectedGadgetState)
 {
 	static class UFunction* Func = nullptr;
 
@@ -275,8 +241,8 @@ void UWBP_GadgetCustom_Window_C::GetCurrentCenterBoxGadgetInfo(int32* IndexOnBox
 	if (CenterElementTypeIndex != nullptr)
 		*CenterElementTypeIndex = Parms.CenterElementTypeIndex;
 
-	if (gadgetId != nullptr)
-		*gadgetId = Parms.gadgetId;
+	if (GadgetID != nullptr)
+		*GadgetID = Parms.GadgetID;
 
 	if (SelectedGadgetState != nullptr)
 		*SelectedGadgetState = Parms.SelectedGadgetState;
@@ -323,10 +289,10 @@ void UWBP_GadgetCustom_Window_C::GetCurrentCenterBoxInfo(int32* IndexOnBox, ECar
 // int32*                                  IndexOnBox                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EGadgetCategory*                        OutGadgetCategory                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32*                                  CenterElementTypeIndex                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EGadgetId*                              gadgetId                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EGadgetId*                              GadgetID                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EGadgetState*                           OutGadgetState                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_GadgetCustom_Window_C::GetNextBoxGadgetInfo(bool DownRight, int32* IndexOnBox, EGadgetCategory* OutGadgetCategory, int32* CenterElementTypeIndex, EGadgetId* gadgetId, EGadgetState* OutGadgetState)
+void UWBP_GadgetCustom_Window_C::GetNextBoxGadgetInfo(bool DownRight, int32* IndexOnBox, EGadgetCategory* OutGadgetCategory, int32* CenterElementTypeIndex, EGadgetId* GadgetID, EGadgetState* OutGadgetState)
 {
 	static class UFunction* Func = nullptr;
 
@@ -348,8 +314,8 @@ void UWBP_GadgetCustom_Window_C::GetNextBoxGadgetInfo(bool DownRight, int32* Ind
 	if (CenterElementTypeIndex != nullptr)
 		*CenterElementTypeIndex = Parms.CenterElementTypeIndex;
 
-	if (gadgetId != nullptr)
-		*gadgetId = Parms.gadgetId;
+	if (GadgetID != nullptr)
+		*GadgetID = Parms.GadgetID;
 
 	if (OutGadgetState != nullptr)
 		*OutGadgetState = Parms.OutGadgetState;
@@ -394,48 +360,6 @@ void UWBP_GadgetCustom_Window_C::OnCancelByCross(class UUnionUIButtonBase* Butto
 	Parms.Button = Button;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_GadgetCustom_Window.WBP_GadgetCustom_Window_C.OnConstFocusCursor
-// (Event, Protected, BlueprintCallable, BlueprintEvent)
-
-void UWBP_GadgetCustom_Window_C::OnConstFocusCursor()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "OnConstFocusCursor");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_GadgetCustom_Window.WBP_GadgetCustom_Window_C.OnConstGadgetCategoryHeader
-// (Event, Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWBP_GadgetCustom_Window_C::OnConstGadgetCategoryHeader()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "OnConstGadgetCategoryHeader");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_GadgetCustom_Window.WBP_GadgetCustom_Window_C.OnConstGadgetCustomTypeBox
-// (Event, Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWBP_GadgetCustom_Window_C::OnConstGadgetCustomTypeBox()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "OnConstGadgetCustomTypeBox");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -534,20 +458,6 @@ void UWBP_GadgetCustom_Window_C::OnInitReadyWidget()
 }
 
 
-// Function WBP_GadgetCustom_Window.WBP_GadgetCustom_Window_C.OnInitRentalGadgetWidget
-// (Event, Protected, BlueprintCallable, BlueprintEvent)
-
-void UWBP_GadgetCustom_Window_C::OnInitRentalGadgetWidget()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "OnInitRentalGadgetWidget");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function WBP_GadgetCustom_Window.WBP_GadgetCustom_Window_C.OnPadFaceLeftCallback
 // (Private, BlueprintCallable, BlueprintEvent)
 
@@ -563,7 +473,7 @@ void UWBP_GadgetCustom_Window_C::OnPadFaceLeftCallback()
 
 
 // Function WBP_GadgetCustom_Window.WBP_GadgetCustom_Window_C.PlayPurchaseAnim
-// (Event, Protected, BlueprintCallable, BlueprintEvent)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void UWBP_GadgetCustom_Window_C::PlayPurchaseAnim()
 {
@@ -611,26 +521,6 @@ void UWBP_GadgetCustom_Window_C::SetCenterControllable(bool bAble)
 	Params::WBP_GadgetCustom_Window_C_SetCenterControllable Parms{};
 
 	Parms.bAble = bAble;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_GadgetCustom_Window.WBP_GadgetCustom_Window_C.SetCenterCursorVisible
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    NewVisible                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_GadgetCustom_Window_C::SetCenterCursorVisible(bool NewVisible)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "SetCenterCursorVisible");
-
-	Params::WBP_GadgetCustom_Window_C_SetCenterCursorVisible Parms{};
-
-	Parms.NewVisible = NewVisible;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -698,26 +588,6 @@ void UWBP_GadgetCustom_Window_C::SetFocusByPlayerIndex(class APlayerController* 
 }
 
 
-// Function WBP_GadgetCustom_Window.WBP_GadgetCustom_Window_C.SetLightVer
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    IsLight                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_GadgetCustom_Window_C::SetLightVer(bool IsLight)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "SetLightVer");
-
-	Params::WBP_GadgetCustom_Window_C_SetLightVer Parms{};
-
-	Parms.IsLight = IsLight;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_GadgetCustom_Window.WBP_GadgetCustom_Window_C.SetPlayerControllerIndex
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -773,6 +643,26 @@ void UWBP_GadgetCustom_Window_C::UpCrossButtonRegister(int32 InPlayerIndex)
 	Params::WBP_GadgetCustom_Window_C_UpCrossButtonRegister Parms{};
 
 	Parms.InPlayerIndex = InPlayerIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_GadgetCustom_Window.WBP_GadgetCustom_Window_C.UpdateDebugFilterText
+// (Event, Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const EGadgetCustomWindowFilterType     InFilterType                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_GadgetCustom_Window_C::UpdateDebugFilterText(const EGadgetCustomWindowFilterType InFilterType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "UpdateDebugFilterText");
+
+	Params::WBP_GadgetCustom_Window_C_UpdateDebugFilterText Parms{};
+
+	Parms.InFilterType = InFilterType;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

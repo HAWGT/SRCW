@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
-#include "UnionUI_structs.hpp"
 #include "UMG_structs.hpp"
+#include "UnionUI_structs.hpp"
 
 
 namespace SDK
@@ -44,47 +44,47 @@ public:
 	class FText                                   OutNumberInputText;                                // 0x0588(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
-	void GetShortLobbyIdButtonText(class FText* OutText);
-	void IsOnlyJoinPublicLobby(bool* bOutOnlyJoin);
-	void IsOnlyJoinPrivateLobby(bool* bOutOnlyJoin);
-	class UFriendListNumberInputWidget* GetNumberInputWidget();
-	void Check_Lobby_Join_Attention(bool* bOutAttention);
-	struct FEventReply OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent);
-	class UScrollBox* GetScrollBoxWidget();
-	void Construct();
-	void OnListItemDecisionDown(class UUnionUIButtonBase* Button);
-	void SetupListItemWidgetSingle(class UWBP_Friend_Sub_PlayerPlate_Small_C* InItemListWidget, const struct FFriendListPlayerInfo& InListPlayerInfo, int32 InButtonIndex);
-	void OnListItemCancelDown(class UUnionUIButtonBase* Button);
-	void FocusListItemWidget(bool bInPlayFocusSound);
-	void OnNumberInputWidgetDecision(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex);
-	void CreateNumberInputWidget();
-	void OnUserSearchSuccess(const TArray<struct FCommon_UserSearchData>& InUserSearchData);
-	void ExecuteAfterConfirmWidget(EFriendListCommandType CommandType, int32 InButtonIndex, bool bInCanceled);
-	void OnButtonDecisionEvent(class UUnionUIButtonBase* Button);
-	void OnLobbyIdButtonDecisionEvent(class UUnionUIButtonBase* Button);
-	void SetOwnLobbyIdText(const class FString& InLobbyId, bool bInWaitDisplay);
-	void SetupListItemWidget();
 	void AddListItemWidgetByListItemIndex(int32 InListItemIndex);
-	void SetButtonControlEnable(bool bInEnable);
-	void SetButtonNavigation();
-	void UpdateLobbyId(const class FString& InShortLobbyId, bool InRequestSuccess);
-	void SetListItemWidgetInteractableState(bool bInEnable);
-	void SetListItemWidgetButtonChangeableState(int32 InListItemIndex, bool bEnable);
-	void SetWidgetFocus(class APlayerController* PlayerController, bool bInPlayFocusSound);
-	void OnAttentionPopupWindowDecision(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex);
-	void SetupAttentionPopupWindow(EFriendListCommandType InCommandType);
-	void UpdateButtonSelectable();
-	void OnLobbyIdSearchSuccess(const TArray<struct FCommon_UserSearchData>& InUserSearchData, const TArray<struct FLobbyId>& InLobbyIdData, ELobbyType InLobbyType);
-	void SetContentsControlEnable(bool bInEnable);
+	void Check_Lobby_Join_Attention(bool* bOutAttention);
 	void ClearButtonNavigation();
-	void SetButtonControlEnableSingle(class UWBP_Friend_SubMenu_Btn_C* InSubMenuButton, bool bInEnable);
-	void OnDirectionChange(class UUnionUIButtonBase* Button, EUnionUIControlDir Dir);
+	void Construct();
+	void CreateNumberInputWidget();
 	void DestroyNumberInputWidget();
-	void ResetContentsWidgetFocus();
-	void SetScrollBoxVisibility(ESlateVisibility Param);
 	void Destruct();
-	void SetupButton();
+	void ExecuteAfterConfirmWidget(EFriendListCommandType CommandType, int32 InButtonIndex, bool bInCanceled);
 	void ExecuteUbergraph_WBP_Friend_Sub_LobbyInvitation(int32 EntryPoint);
+	void FocusListItemWidget(bool bInPlayFocusSound);
+	class UFriendListNumberInputWidget* GetNumberInputWidget();
+	class UScrollBox* GetScrollBoxWidget();
+	void GetShortLobbyIdButtonText(class FText* OutText);
+	void IsOnlyJoinPrivateLobby(bool* bOutOnlyJoin);
+	void IsOnlyJoinPublicLobby(bool* bOutOnlyJoin);
+	void OnAttentionPopupWindowDecision(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex);
+	void OnButtonDecisionEvent(class UUnionUIButtonBase* Button);
+	void OnDirectionChange(class UUnionUIButtonBase* Button, EUnionUIControlDir Dir);
+	struct FEventReply OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent);
+	void OnListItemCancelDown(class UUnionUIButtonBase* Button);
+	void OnListItemDecisionDown(class UUnionUIButtonBase* Button);
+	void OnLobbyIdButtonDecisionEvent(class UUnionUIButtonBase* Button);
+	void OnLobbyIdSearchSuccess(const TArray<struct FCommon_UserSearchData>& InUserSearchData, const TArray<struct FLobbyId>& InLobbyIdData, ELobbyType InLobbyType);
+	void OnNumberInputWidgetDecision(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex);
+	void OnUserSearchSuccess(const TArray<struct FCommon_UserSearchData>& InUserSearchData);
+	void ResetContentsWidgetFocus();
+	void SetButtonControlEnable(bool bInEnable);
+	void SetButtonControlEnableSingle(class UWBP_Friend_SubMenu_Btn_C* InSubMenuButton, bool bInEnable);
+	void SetButtonNavigation();
+	void SetContentsControlEnable(bool bInEnable);
+	void SetListItemWidgetButtonChangeableState(int32 InListItemIndex, bool bEnable);
+	void SetListItemWidgetInteractableState(bool bInEnable);
+	void SetOwnLobbyIdText(const class FString& InLobbyId, bool bInWaitDisplay);
+	void SetScrollBoxVisibility(ESlateVisibility Param);
+	void SetupAttentionPopupWindow(EFriendListCommandType InCommandType);
+	void SetupButton();
+	void SetupListItemWidget();
+	void SetupListItemWidgetSingle(class UWBP_Friend_Sub_PlayerPlate_Small_C* InItemListWidget, const struct FFriendListPlayerInfo& InListPlayerInfo, int32 InButtonIndex);
+	void SetWidgetFocus(class APlayerController* PlayerController, bool bInPlayFocusSound);
+	void UpdateButtonSelectable();
+	void UpdateLobbyId(const class FString& InShortLobbyId, bool InRequestSuccess);
 
 	bool CheckButtonWidgetExist() const;
 

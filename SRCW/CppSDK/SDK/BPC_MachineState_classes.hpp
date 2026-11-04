@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "UnionSystem_structs.hpp"
+#include "UnionRun_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "UnionSystem_structs.hpp"
-#include "Engine_structs.hpp"
-#include "UnionRun_structs.hpp"
 #include "UnionLib_structs.hpp"
 
 
@@ -39,37 +39,37 @@ public:
 	double                                        MachinePartsUpdateDelay;                           // 0x01E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BindCharaMachineSelectWindow(class UCharaMachineSelectBase* InWindow);
-	void BindColorWindow(class UWBP_MachineCustom_Sub_PresetPaint_C* InColorWindow);
-	void BindMachineTypeSelectWindow(class UMachineTypeScrollControl* InMachineTypeSelectWindow);
-	void CharaMachineSelect_ColorDecisionButtonFocusEvent(int32 InPlayerIndex);
-	void CharaMachineSelect_OnMachineColorCancelEvent(int32 InPlayerIndex);
-	void CharaMachineSelect_OnMachineColorDecisionEvent(int32 InPlayerIndex);
+	void SetupMachineColorSelectWindow(int32 InPlayerIndex);
 	void CharaMachineSelect_OnMachineColorFocusEvent(const struct FST_ColorPresetSelectPageItemData& ColorPreset, int32 PlayerIndex, int32 ButtonIndex);
 	void CharaMachineSelect_OnMachineColorSelectEvent(const struct FST_ColorPresetSelectPageItemData& ColorPreset, int32 PlayerIndex);
+	void CharaMachineSelect_OnMachineColorCancelEvent(int32 InPlayerIndex);
+	void CharaMachineSelect_OnMachineColorDecisionEvent(int32 InPlayerIndex);
+	void CharaMachineSelect_ColorDecisionButtonFocusEvent(int32 InPlayerIndex);
 	void CharaMachineSelect_OnMachinePartsCancelEvent(int32 InPlayerIndex);
 	void CharaMachineSelect_OnMachinePartsDecisionEvent(int32 InPlayerIndex);
-	void CharaMachineSelect_OnMachinePartsFocusEvent(int32 PlayerIndex, EMachineId FrontPartsId, EMachineId RearPartsId, EMachineId TirePartsId);
 	void CharaMachineSelect_OnMachinePartsSelectEvent(int32 PlayerIndex, EMachineId FrontPartsId, EMachineId RearPartsId, EMachineId TirePartsId);
+	void CharaMachineSelect_OnMachinePartsFocusEvent(int32 PlayerIndex, EMachineId FrontPartsId, EMachineId RearPartsId, EMachineId TirePartsId);
 	void CharaMachineSelect_OnMachineSelectModeChanged(int32 PlayerIndex, UNION::EMachineSelectMode Mode);
-	void DecideMachine(int32 InPlayerIndex);
-	void ExecuteUbergraph_BPC_MachineState(int32 EntryPoint);
-	void OnExitState();
-	void OnInitState();
 	void OnMachineTypeCancelCallback(int32 SelectedPlayerControllerIndex);
 	void OnMachineTypeDecideCallback(int32 SelectedPlayerControllerIndex, ECarStatusType SelectedMachineType, EMachineId SelectedBaseMachineId);
 	void OnMachineTypeFocusEvent(class UUnionUIButtonBase* Button);
 	void OnMachineTypeScrollEndCallback(int32 SelectedPlayerControllerIndex, ECarStatusType SelectedMachineType, EMachineId SelectedBaseMachineId);
-	void ReceiveTick(float DeltaSeconds);
-	void SetupMachineColorSelectWindow(int32 InPlayerIndex);
 	void ShouldShowSimpleCustomizeTipsWindow(bool* bOutShouldShow);
 	void ShowTipsWindow(EHintId InHintId);
-	void TipsWindow_CloseEndDelegate();
-	void UnbindCharaMachineSelectWindow(class UCharaMachineSelectBase* InWindow);
-	void UnbindColorWindow(class UWBP_MachineCustom_Sub_PresetPaint_C* InColorWindow);
-	void UnbindMachineTypeSelectWindow(class UMachineTypeScrollControl* InMachineTypeSelectWindow);
 	void UpdateNavigationSimpleCustomizeColor(int32 ButtonIndex, int32 PlayerIndex);
 	void UpdateRemainTime(int32 InPlayerIndex, double InDeltaTime, bool* Result);
+	void BindColorWindow(class UWBP_MachineCustom_Sub_PresetPaint_C* InColorWindow);
+	void UnbindColorWindow(class UWBP_MachineCustom_Sub_PresetPaint_C* InColorWindow);
+	void BindMachineTypeSelectWindow(class UMachineTypeScrollControl* InMachineTypeSelectWindow);
+	void BindCharaMachineSelectWindow(class UCharaMachineSelectBase* InWindow);
+	void UnbindCharaMachineSelectWindow(class UCharaMachineSelectBase* InWindow);
+	void UnbindMachineTypeSelectWindow(class UMachineTypeScrollControl* InMachineTypeSelectWindow);
+	void TipsWindow_CloseEndDelegate();
+	void OnInitState();
+	void OnExitState();
+	void DecideMachine(int32 InPlayerIndex);
+	void ReceiveTick(float DeltaSeconds);
+	void ExecuteUbergraph_BPC_MachineState(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

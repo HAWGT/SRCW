@@ -21,7 +21,7 @@ namespace SDK
 class UBPF_AppUtilityLibrary_C final : public UBlueprintFunctionLibrary
 {
 public:
-	static void OpenRewardDialog(const class FText& Title, TArray<struct FRewardGetWindowParam>& rewardList, class UObject* __WorldContext, class UWBP_ItemGet_Window_C** RewardDialogWidget, int32* ZOrder);
+	static void OpenRewardDialog(const class FText& Title, TArray<struct FRewardGetWindowParam>& RewardList, class UObject* __WorldContext, class UWBP_ItemGet_Window_C** RewardDialogWidget, int32* ZOrder);
 	static void Set_Input_Blocked(class APlayerController* Controller, bool bBlocked, class UObject* __WorldContext);
 
 public:

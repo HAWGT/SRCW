@@ -139,5 +139,28 @@ class UWidget* UWBP_CMN_ItemIcon_C::GetWidget(ERewardType InRewardType) const
 	return Parms.ReturnValue;
 }
 
+
+// Function WBP_CMN_ItemIcon.WBP_CMN_ItemIcon_C.GetWidgetForRivalDuel
+// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// ERewardType                             InRewardType                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UWBP_CMN_ItemIcon_C::GetWidgetForRivalDuel(ERewardType InRewardType) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_CMN_ItemIcon_C", "GetWidgetForRivalDuel");
+
+	Params::WBP_CMN_ItemIcon_C_GetWidgetForRivalDuel Parms{};
+
+	Parms.InRewardType = InRewardType;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
 }
 

@@ -90,7 +90,7 @@ public:
 	EAppControllerInputType                       K2Node_Event_BeforeType;                           // 0x05B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EAppControllerInputType                       K2Node_Event_AfterType;                            // 0x05B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_5B2[0x6];                                      // 0x05B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerEvent                          K2Node_Event_InPointerEvent;                       // 0x05B8(0x0078)()
+	struct FPointerEvent                          K2Node_Event_InPointerEvent;                       // 0x05B8(0x0078)(ConstParm)
 	class FString                                 CallFunc_GetEnumeratorUserFriendlyName_ReturnValue; // 0x0630(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_GetEnumeratorUserFriendlyName_ReturnValue_1; // 0x0640(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0650(0x0010)()
@@ -298,7 +298,7 @@ DUMPER7_ASSERTS_BP_MenuPlayerController_C_OnChangeControllerInputType;
 struct BP_MenuPlayerController_C_OnMousePointerEventBP final
 {
 public:
-	struct FPointerEvent                          InPointerEvent;                                    // 0x0000(0x0078)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FPointerEvent                          InPointerEvent;                                    // 0x0000(0x0078)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
 DUMPER7_ASSERTS_BP_MenuPlayerController_C_OnMousePointerEventBP;
 

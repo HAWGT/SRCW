@@ -58,6 +58,20 @@ void UBPC_NoticePopup_C::DLCInfoClosed_CreateTopInfo(bool IsAccept)
 }
 
 
+// Function BPC_NoticePopup.BPC_NoticePopup_C.DuelInfoClosed_CreateTopInfo
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_NoticePopup_C::DuelInfoClosed_CreateTopInfo()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_NoticePopup_C", "DuelInfoClosed_CreateTopInfo");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BPC_NoticePopup.BPC_NoticePopup_C.ExecuteUbergraph_BPC_NoticePopup
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -103,6 +117,31 @@ void UBPC_NoticePopup_C::ForceReleaseWidget()
 		Func = Class->GetFunction("BPC_NoticePopup_C", "ForceReleaseWidget");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_NoticePopup.BPC_NoticePopup_C.GetTopInfoWidget
+// (Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UWBP_TopInfo_C**                  TopInfoWidget                                          (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// bool*                                   IsValid                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_NoticePopup_C::GetTopInfoWidget(class UWBP_TopInfo_C** TopInfoWidget, bool* IsValid)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_NoticePopup_C", "GetTopInfoWidget");
+
+	Params::BPC_NoticePopup_C_GetTopInfoWidget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (TopInfoWidget != nullptr)
+		*TopInfoWidget = Parms.TopInfoWidget;
+
+	if (IsValid != nullptr)
+		*IsValid = Parms.IsValid;
 }
 
 
@@ -374,6 +413,20 @@ void UBPC_NoticePopup_C::TopInfoClosed()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BPC_NoticePopup_C", "TopInfoClosed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_NoticePopup.BPC_NoticePopup_C.TopInfoClosed_CreateDuelInfo
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_NoticePopup_C::TopInfoClosed_CreateDuelInfo()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_NoticePopup_C", "TopInfoClosed_CreateDuelInfo");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

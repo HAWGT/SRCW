@@ -141,6 +141,32 @@ void UABPT_Driver_C::Driver_ItemOrWispHoldingLayer(const struct FPoseLink& InPos
 }
 
 
+// Function ABPT_Driver.ABPT_Driver_C.DrivingControlRigLayer
+// (HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FPoseLink&                 InPose_Driving                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// int32                                   machineType_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FPoseLink*                       DrivingControlRigLayer_0                               (Parm, OutParm, NoDestructor)
+
+void UABPT_Driver_C::DrivingControlRigLayer(const struct FPoseLink& InPose_Driving, int32 machineType_0, struct FPoseLink* DrivingControlRigLayer_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABPT_Driver_C", "DrivingControlRigLayer");
+
+	Params::ABPT_Driver_C_DrivingControlRigLayer Parms{};
+
+	Parms.InPose_Driving = std::move(InPose_Driving);
+	Parms.machineType_0 = machineType_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (DrivingControlRigLayer_0 != nullptr)
+		*DrivingControlRigLayer_0 = std::move(Parms.DrivingControlRigLayer_0);
+}
+
+
 // Function ABPT_Driver.ABPT_Driver_C.DrivingLayer
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -442,6 +468,34 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 }
 
 
+// Function ABPT_Driver.ABPT_Driver_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_ControlRig_A3935D44452343465CA07F910ECD9312
+// (BlueprintEvent)
+
+void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_ControlRig_A3935D44452343465CA07F910ECD9312()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_ControlRig_A3935D44452343465CA07F910ECD9312");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ABPT_Driver.ABPT_Driver_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_LinkedAnimLayer_E301E6404DFFE6B8AEAACB859FE576B5
+// (BlueprintEvent)
+
+void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_LinkedAnimLayer_E301E6404DFFE6B8AEAACB859FE576B5()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_LinkedAnimLayer_E301E6404DFFE6B8AEAACB859FE576B5");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function ABPT_Driver.ABPT_Driver_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_0518092342DE0753C49B5E8AEEE62CC0
 // (BlueprintEvent)
 
@@ -605,6 +659,20 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_2E3A54A44BA9CCBB6A8A6DB197AA5C92");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ABPT_Driver.ABPT_Driver_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_3699CBC8420AD8140EC6738209557FBD
+// (BlueprintEvent)
+
+void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_3699CBC8420AD8140EC6738209557FBD()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_3699CBC8420AD8140EC6738209557FBD");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -815,6 +883,20 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_6DE8D28E43CBB1259598C28F2D429152");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ABPT_Driver.ABPT_Driver_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_6EE1141246750879786EF4B176891564
+// (BlueprintEvent)
+
+void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_6EE1141246750879786EF4B176891564()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_6EE1141246750879786EF4B176891564");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1072,6 +1154,20 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 }
 
 
+// Function ABPT_Driver.ABPT_Driver_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_01A2570342EDCB1F07C03891C7E221E5
+// (BlueprintEvent)
+
+void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_01A2570342EDCB1F07C03891C7E221E5()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_01A2570342EDCB1F07C03891C7E221E5");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function ABPT_Driver.ABPT_Driver_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_0637EAC54DDA4F9006335989C71C3A23
 // (BlueprintEvent)
 
@@ -1156,6 +1252,20 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 }
 
 
+// Function ABPT_Driver.ABPT_Driver_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_321FD70B4BE4BAA734C49F8B9AB460B4
+// (BlueprintEvent)
+
+void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_321FD70B4BE4BAA734C49F8B9AB460B4()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_321FD70B4BE4BAA734C49F8B9AB460B4");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function ABPT_Driver.ABPT_Driver_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_3305BDC44429773D89F0C0995FF21609
 // (BlueprintEvent)
 
@@ -1235,6 +1345,20 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_52C51EF84FAA7860965AA1A1249F660C");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ABPT_Driver.ABPT_Driver_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_5824508C44FE9AA352B4CD9C1FE5D011
+// (BlueprintEvent)
+
+void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_5824508C44FE9AA352B4CD9C1FE5D011()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_5824508C44FE9AA352B4CD9C1FE5D011");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1361,6 +1485,20 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_9D6941F948D8D50A854683B31707785D");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ABPT_Driver.ABPT_Driver_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_A42E1AD341AEF7DF0BC89EA6DDA115C1
+// (BlueprintEvent)
+
+void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_A42E1AD341AEF7DF0BC89EA6DDA115C1()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_A42E1AD341AEF7DF0BC89EA6DDA115C1");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1591,7 +1729,7 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 
 // Function ABPT_Driver.ABPT_Driver_C.ExecuteUbergraph_ABPT_Driver
-// (Final, UbergraphFunction)
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -1756,9 +1894,11 @@ void UABPT_Driver_C::Is_Hoverboarder_Form(bool* bHoverboarderForm)
 // (HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FPoseLink&                 InPose                                                 (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// bool                                    bUseRace                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FPoseLink&                 InNoTransPose                                          (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 // struct FPoseLink*                       KawaiiPhysicsLayer_0                                   (Parm, OutParm, NoDestructor)
 
-void UABPT_Driver_C::KawaiiPhysicsLayer(const struct FPoseLink& InPose, struct FPoseLink* KawaiiPhysicsLayer_0)
+void UABPT_Driver_C::KawaiiPhysicsLayer(const struct FPoseLink& InPose, bool bUseRace, const struct FPoseLink& InNoTransPose, struct FPoseLink* KawaiiPhysicsLayer_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1768,6 +1908,8 @@ void UABPT_Driver_C::KawaiiPhysicsLayer(const struct FPoseLink& InPose, struct F
 	Params::ABPT_Driver_C_KawaiiPhysicsLayer Parms{};
 
 	Parms.InPose = std::move(InPose);
+	Parms.bUseRace = bUseRace;
+	Parms.InNoTransPose = std::move(InNoTransPose);
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -1909,6 +2051,32 @@ void UABPT_Driver_C::ScaleFaceLayer(const struct FPoseLink& InFaceOverride, bool
 
 	if (ScaleFaceLayer_0 != nullptr)
 		*ScaleFaceLayer_0 = std::move(Parms.ScaleFaceLayer_0);
+}
+
+
+// Function ABPT_Driver.ABPT_Driver_C.ScaleFacialOverrideVerTwo
+// (HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FPoseLink&                 InBasePose                                             (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// const struct FPoseLink&                 InDefaultPose                                          (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// struct FPoseLink*                       ScaleFacialOverrideVerTwo_0                            (Parm, OutParm, NoDestructor)
+
+void UABPT_Driver_C::ScaleFacialOverrideVerTwo(const struct FPoseLink& InBasePose, const struct FPoseLink& InDefaultPose, struct FPoseLink* ScaleFacialOverrideVerTwo_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABPT_Driver_C", "ScaleFacialOverrideVerTwo");
+
+	Params::ABPT_Driver_C_ScaleFacialOverrideVerTwo Parms{};
+
+	Parms.InBasePose = std::move(InBasePose);
+	Parms.InDefaultPose = std::move(InDefaultPose);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (ScaleFacialOverrideVerTwo_0 != nullptr)
+		*ScaleFacialOverrideVerTwo_0 = std::move(Parms.ScaleFacialOverrideVerTwo_0);
 }
 
 

@@ -10,18 +10,18 @@
 
 #include "Basic.hpp"
 
-#include "UNION_structs.hpp"
-#include "UNION_classes.hpp"
+#include "UnionRun_structs.hpp"
 #include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
-#include "UnionRun_structs.hpp"
+#include "UNION_structs.hpp"
+#include "UNION_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BPC_MachineCustomizePartsSelectState.BPC_MachineCustomizePartsSelectState_C
-// 0x0048 (0x0150 - 0x0108)
+// 0x00C0 (0x01C8 - 0x0108)
 class UBPC_MachineCustomizePartsSelectState_C final : public UMachineCustomizePartsSelectState
 {
 public:
@@ -31,11 +31,14 @@ public:
 	class UCharaMachineParamWindow*               ParamWindow;                                       // 0x0120(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	struct FUserStickerCustomizeData              StickerCustomizeData;                              // 0x0128(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
 	class UHintPopupWindow*                       TipsWindow;                                        // 0x0148(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FUserMachineCustomizeData              InCustomizeData;                                   // 0x0150(0x0078)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
+	void ResetSticker(const struct FUserMachineCustomizeData& InUpdateCustomizeData, struct FUserMachineCustomizeData* OutCustomizeData);
+	void SetMachineCustomizeDataWithoutPartsId(const struct FUserMachineCustomizeData& InCustomizeData_0);
 	void TipsWindow_CloseTipsWindow();
 	void OpenTipsWindow(EHintId InHintId);
-	void UpdateCustomizeData(const struct FUserMachineCustomizeData& InCustomizeData, struct FUserMachineCustomizeData* OutCustomizeData);
+	void UpdateCustomizeData(const struct FUserMachineCustomizeData& InCustomizeData_0, struct FUserMachineCustomizeData* OutCustomizeData);
 	void OnPartsSelected(EMachinePartsType InPartsType, EMachineId InPartsId);
 	void OnPartsFocused(EMachinePartsType InPartsType, EMachineId InPartsId);
 	void SetCustomizeModelView();

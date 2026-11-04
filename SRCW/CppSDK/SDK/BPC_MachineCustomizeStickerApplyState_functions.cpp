@@ -219,6 +219,26 @@ void UBPC_MachineCustomizeStickerApplyState_C::ToStickerEdit()
 }
 
 
+// Function BPC_MachineCustomizeStickerApplyState.BPC_MachineCustomizeStickerApplyState_C.StickerApply_OnCancel
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          Objcet                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_MachineCustomizeStickerApplyState_C::StickerApply_OnCancel(class UObject* Objcet)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MachineCustomizeStickerApplyState_C", "StickerApply_OnCancel");
+
+	Params::BPC_MachineCustomizeStickerApplyState_C_StickerApply_OnCancel Parms{};
+
+	Parms.Objcet = Objcet;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BPC_MachineCustomizeStickerApplyState.BPC_MachineCustomizeStickerApplyState_C.PopupWindow_OnDecision
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -243,40 +263,6 @@ void UBPC_MachineCustomizeStickerApplyState_C::PopupWindow_OnDecision(class UUni
 }
 
 
-// Function BPC_MachineCustomizeStickerApplyState.BPC_MachineCustomizeStickerApplyState_C.StickerApply_OnCancel
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UObject*                          Objcet                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_MachineCustomizeStickerApplyState_C::StickerApply_OnCancel(class UObject* Objcet)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerApplyState_C", "StickerApply_OnCancel");
-
-	Params::BPC_MachineCustomizeStickerApplyState_C_StickerApply_OnCancel Parms{};
-
-	Parms.Objcet = Objcet;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_MachineCustomizeStickerApplyState.BPC_MachineCustomizeStickerApplyState_C.OnInitState
-// (Event, Public, BlueprintEvent)
-
-void UBPC_MachineCustomizeStickerApplyState_C::OnInitState()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerApplyState_C", "OnInitState");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BPC_MachineCustomizeStickerApplyState.BPC_MachineCustomizeStickerApplyState_C.SetActiveAuraEffect
 // (Event, Protected, BlueprintEvent)
 // Parameters:
@@ -294,6 +280,20 @@ void UBPC_MachineCustomizeStickerApplyState_C::SetActiveAuraEffect(bool IsActive
 	Parms.IsActive_0 = IsActive_0;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_MachineCustomizeStickerApplyState.BPC_MachineCustomizeStickerApplyState_C.OnInitState
+// (Event, Public, BlueprintEvent)
+
+void UBPC_MachineCustomizeStickerApplyState_C::OnInitState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MachineCustomizeStickerApplyState_C", "OnInitState");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

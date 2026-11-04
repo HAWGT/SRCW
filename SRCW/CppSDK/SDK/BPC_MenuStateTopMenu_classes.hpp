@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "UnionSystem_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
+#include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
 #include "UnionUI_structs.hpp"
 #include "UnionLib_structs.hpp"
@@ -22,7 +22,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BPC_MenuStateTopMenu.BPC_MenuStateTopMenu_C
-// 0x0040 (0x0178 - 0x0138)
+// 0x0048 (0x0180 - 0x0138)
 class UBPC_MenuStateTopMenu_C final : public UMenuSequenceStateBase
 {
 public:
@@ -34,29 +34,30 @@ public:
 	TArray<struct FRewardAchievementData>         RewardAchievementDataArray;                        // 0x0158(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	class UUnionUIPopupWindowBase*                PopupWindow;                                       // 0x0168(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UUnionUIPopupWindowBase*                RewardWindow;                                      // 0x0170(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	EDriverId                                     TempDriverId;                                      // 0x0178(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SetupRacerConfig();
+	void ClearRewardDisplayRequest();
 	void ConvertDriverIdToIndex(EDriverId ID, int32* Index_0);
 	void ConvertIndexToDriverId(int32 Index_0, EDriverId* ID);
 	void CreateRewardGetDisplay();
-	void OnRewardDisplayEnd_Impl();
-	void SetRewardDisplayParam();
-	void ClearRewardDisplayRequest();
-	void OnUISceneDecisionEvent_Impl(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex);
 	void CreateRewardGetDisplayConfirmWindow();
-	void OnRewardDisplayEndSaveComplete(ESaveDataStatus Status);
-	void StartRewardGetDisplay();
 	void EndRewardGetDisplay();
-	void OnInitState();
-	void OnUpdateState(float InDeltaTime);
-	void OnExitState();
-	void OnPopupOK(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex);
-	void NgCreatePopupWindow();
 	void EventFinishedFade(EUnionUIFadeDirection FadeDirection);
-	void OnFinishedTopMenuEvent(ETopMenuPlayMode TopMenuPlayMode, ETopMenuGameMode TopMenuGameMode);
-	void OnBackEvent();
 	void ExecuteUbergraph_BPC_MenuStateTopMenu(int32 EntryPoint);
+	void NgCreatePopupWindow();
+	void OnBackEvent();
+	void OnExitState();
+	void OnFinishedTopMenuEvent(ETopMenuPlayMode TopMenuPlayMode, ETopMenuGameMode TopMenuGameMode);
+	void OnInitState();
+	void OnPopupOK(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex);
+	void OnRewardDisplayEnd_Impl();
+	void OnRewardDisplayEndSaveComplete(ESaveDataStatus Status);
+	void OnUISceneDecisionEvent_Impl(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex);
+	void OnUpdateState(float InDeltaTime);
+	void SetRewardDisplayParam();
+	void SetupRacerConfig();
+	void StartRewardGetDisplay();
 
 public:
 	static class UClass* StaticClass()

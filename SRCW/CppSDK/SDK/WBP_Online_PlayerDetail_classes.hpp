@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
 #include "UMG_structs.hpp"
 
 
@@ -67,7 +67,7 @@ public:
 	void OnUpdateNiceCount(int32 InNiceCount);
 	void PreConstruct(bool IsDesignTime);
 	void Set_Lobby_Player_Data(const struct FLobbyPlayerData& InPlayerData, bool bIsBlocked, bool bIsOwn, bool bIsSentNice, int32 NiceCounts, const class FString& ProductUserId_0, EBlockPlayerState BlockType, bool bIsNPC);
-	void SetPlayerDetailData(const struct FLobbyPlayerData& InPlayerData, EBlockPlayerState InBlockType, bool bInIsOwn, bool bInIsSendNice, bool bInIsNPC, int32 InNiceCount, const class FString& InProductUserId, bool bInIsOwnHost, EMatchingLobbyType InLobbyType, const class FString& InPlatformId, const class FString& InPlatform, bool bInIsEnableBlockWindowButton);
+	void SetPlayerDetailData(const struct FLobbyPlayerData& InPlayerData, EBlockPlayerState InBlockType, bool bInIsOwn, bool bInIsSendNice, bool bInIsNPC, int32 InNiceCount, const class FString& InProductUserId, bool bInIsOwnHost, EMatchingLobbyType InLobbyType, const class FString& InPlatformId, const class FString& InPlatform, bool bInIsEnableBlockWindowButton, bool bExceptGadgetPage);
 
 public:
 	static class UClass* StaticClass()

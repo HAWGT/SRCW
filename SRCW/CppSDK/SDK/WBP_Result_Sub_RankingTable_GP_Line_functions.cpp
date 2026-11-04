@@ -607,6 +607,20 @@ void UWBP_Result_Sub_RankingTable_GP_Line_C::PreConstruct(bool IsDesignTime)
 }
 
 
+// Function WBP_Result_Sub_RankingTable_GP_Line.WBP_Result_Sub_RankingTable_GP_Line_C.RemoveResultDonpaTicket
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_Result_Sub_RankingTable_GP_Line_C::RemoveResultDonpaTicket()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_Line_C", "RemoveResultDonpaTicket");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_Result_Sub_RankingTable_GP_Line.WBP_Result_Sub_RankingTable_GP_Line_C.SequenceEvent__ENTRYPOINTWBP_Result_Sub_RankingTable_GP_Line
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:

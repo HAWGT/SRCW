@@ -112,9 +112,9 @@ void UWBP_Ready_Sub_Gadget_C::SetGadgetCaptionEvent(int32 PlayerIndex_0, int32 S
 // Function WBP_Ready_Sub_Gadget.WBP_Ready_Sub_Gadget_C.UpdateGadgetDetail
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   InGadgetId                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InSlotIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Ready_Sub_Gadget_C::UpdateGadgetDetail(int32 InGadgetId)
+void UWBP_Ready_Sub_Gadget_C::UpdateGadgetDetail(int32 InSlotIndex)
 {
 	static class UFunction* Func = nullptr;
 
@@ -123,7 +123,7 @@ void UWBP_Ready_Sub_Gadget_C::UpdateGadgetDetail(int32 InGadgetId)
 
 	Params::WBP_Ready_Sub_Gadget_C_UpdateGadgetDetail Parms{};
 
-	Parms.InGadgetId = InGadgetId;
+	Parms.InSlotIndex = InSlotIndex;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

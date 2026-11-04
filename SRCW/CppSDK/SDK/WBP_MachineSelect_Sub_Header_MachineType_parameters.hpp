@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "UNION_structs.hpp"
+#include "UnionRun_structs.hpp"
 #include "UnionSystem_structs.hpp"
+#include "UNION_structs.hpp"
 #include "UMG_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "UnionRun_structs.hpp"
 
 
 namespace SDK::Params

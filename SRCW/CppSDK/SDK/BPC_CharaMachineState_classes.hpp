@@ -11,11 +11,11 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
-#include "UNION_classes.hpp"
+#include "UnionRun_structs.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 #include "UnionUI_structs.hpp"
 #include "UnionLib_structs.hpp"
-#include "UnionRun_structs.hpp"
 
 
 namespace SDK
@@ -35,29 +35,29 @@ public:
 	class UClass*                                 LastClass;                                         // 0x0170(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void OnMachineSelectToCharaSelectCallback();
-	void OnCharaSelectToClassSelectCallbackFade(EUnionUIFadeDirection FadeDirection);
-	void OnCharaSelectToClassSelectCallback();
-	void HiddenFooterSubButtonState();
-	void ResetCharaMachineSequence();
-	void SetupCharaMachineSequence();
-	void SetupSubLevel();
-	void SetMessageBarVisible(bool bInIsVisible);
-	void FinalizeMessageBar();
-	void SetupMessageBar();
-	void InitMenuRacer();
-	void OnLoaded_CA296C1A47793A25D708E9B025DC0235(TSubclassOf<class UObject> Loaded);
-	void OnExitEventCallback();
-	void MatchingTimeOut(float InTimeOutTime);
-	void OnTimeout();
 	void BindCharaMachineSequence();
-	void UnbindCharaMachineSequence();
-	void OnInitState();
-	void OnExitState();
 	void ExecuteUbergraph_BPC_CharaMachineState(int32 EntryPoint);
+	void FinalizeMessageBar();
+	void HiddenFooterSubButtonState();
+	void InitMenuRacer();
+	void MatchingTimeOut(float InTimeOutTime);
+	void OnCharaSelectToClassSelectCallback();
+	void OnCharaSelectToClassSelectCallbackFade(EUnionUIFadeDirection FadeDirection);
+	void OnExitEventCallback();
+	void OnExitState();
+	void OnInitState();
+	void OnLoaded_CA296C1A47793A25D708E9B025DC0235(TSubclassOf<class UObject> Loaded);
+	void OnMachineSelectToCharaSelectCallback();
+	void OnTimeout();
+	void ResetCharaMachineSequence();
+	void SetMessageBarVisible(bool bInIsVisible);
+	void SetupCharaMachineSequence();
+	void SetupMessageBar();
+	void SetupSubLevel();
+	void UnbindCharaMachineSequence();
 
-	class FName GetSubLevelName() const;
 	class ULevelStreaming* GetSubLevel() const;
+	class FName GetSubLevelName() const;
 
 public:
 	static class UClass* StaticClass()

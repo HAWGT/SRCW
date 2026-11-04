@@ -233,6 +233,20 @@ void UWBP_GadgetCustom_Sub_Cursor_C::OnFaceButtonLeftPressed()
 }
 
 
+// Function WBP_GadgetCustom_Sub_Cursor.WBP_GadgetCustom_Sub_Cursor_C.OnFaceButtonTopPressed
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_GadgetCustom_Sub_Cursor_C::OnFaceButtonTopPressed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_GadgetCustom_Sub_Cursor_C", "OnFaceButtonTopPressed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_GadgetCustom_Sub_Cursor.WBP_GadgetCustom_Sub_Cursor_C.OnFocus_Impl
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -298,6 +312,48 @@ struct FEventReply UWBP_GadgetCustom_Sub_Cursor_C::OnFocusReceived(const struct 
 }
 
 
+// Function WBP_GadgetCustom_Sub_Cursor.WBP_GadgetCustom_Sub_Cursor_C.OnLeftShoulderPressed
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_GadgetCustom_Sub_Cursor_C::OnLeftShoulderPressed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_GadgetCustom_Sub_Cursor_C", "OnLeftShoulderPressed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_GadgetCustom_Sub_Cursor.WBP_GadgetCustom_Sub_Cursor_C.OnLeftStickButtonPressed
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_GadgetCustom_Sub_Cursor_C::OnLeftStickButtonPressed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_GadgetCustom_Sub_Cursor_C", "OnLeftStickButtonPressed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_GadgetCustom_Sub_Cursor.WBP_GadgetCustom_Sub_Cursor_C.OnLeftStickButtonReleased
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_GadgetCustom_Sub_Cursor_C::OnLeftStickButtonReleased()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_GadgetCustom_Sub_Cursor_C", "OnLeftStickButtonReleased");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_GadgetCustom_Sub_Cursor.WBP_GadgetCustom_Sub_Cursor_C.OnMouseButtonDown
 // (BlueprintCosmetic, Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -340,6 +396,20 @@ void UWBP_GadgetCustom_Sub_Cursor_C::OnRemovedFromFocusPath(const struct FFocusE
 	Parms.InFocusEvent = std::move(InFocusEvent);
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_GadgetCustom_Sub_Cursor.WBP_GadgetCustom_Sub_Cursor_C.OnRightShoulderPressed
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_GadgetCustom_Sub_Cursor_C::OnRightShoulderPressed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_GadgetCustom_Sub_Cursor_C", "OnRightShoulderPressed");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

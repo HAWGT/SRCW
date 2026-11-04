@@ -10,23 +10,22 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "UNION_classes.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_GadgetCustom_Sub_Cursor.WBP_GadgetCustom_Sub_Cursor_C
-// 0x0030 (0x04D8 - 0x04A8)
+// 0x0020 (0x0528 - 0x0508)
 class UWBP_GadgetCustom_Sub_Cursor_C final : public UGadgetCustomSubCursor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 Cursor_Image;                                      // 0x04B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void()>              OnTriggerFocus;                                    // 0x04B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void()>              OnPadFaceLeft;                                     // 0x04C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0508(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 Cursor_Image;                                      // 0x0510(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void()>              OnTriggerFocus;                                    // 0x0518(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void Construct();
@@ -41,11 +40,16 @@ public:
 	void OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent);
 	void OnBackKeyPressed();
 	void OnFaceButtonLeftPressed();
+	void OnFaceButtonTopPressed();
 	void OnFocus_Impl(class UUnionUIButtonBase* Button);
 	void OnFocusLost(const struct FFocusEvent& InFocusEvent);
 	struct FEventReply OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent);
+	void OnLeftShoulderPressed();
+	void OnLeftStickButtonPressed();
+	void OnLeftStickButtonReleased();
 	struct FEventReply OnMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
 	void OnRemovedFromFocusPath(const struct FFocusEvent& InFocusEvent);
+	void OnRightShoulderPressed();
 	void SetPlayerControllerIndex(const int32 InPlayerControllerIndex);
 
 public:

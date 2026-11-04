@@ -288,6 +288,28 @@ void UWBP_PrivateMatch_Popup_Sub_Info_C::PreConstruct(bool IsDesignTime)
 }
 
 
+// Function WBP_PrivateMatch_Popup_Sub_Info.WBP_PrivateMatch_Popup_Sub_Info_C.Set Navigation Buttons
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   SwitcherIndex                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsAllStop                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_PrivateMatch_Popup_Sub_Info_C::Set_Navigation_Buttons(int32 SwitcherIndex, bool bIsAllStop)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PrivateMatch_Popup_Sub_Info_C", "Set Navigation Buttons");
+
+	Params::WBP_PrivateMatch_Popup_Sub_Info_C_Set_Navigation_Buttons Parms{};
+
+	Parms.SwitcherIndex = SwitcherIndex;
+	Parms.bIsAllStop = bIsAllStop;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_PrivateMatch_Popup_Sub_Info.WBP_PrivateMatch_Popup_Sub_Info_C.SetActiveWidgetButtonText
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -318,8 +340,9 @@ void UWBP_PrivateMatch_Popup_Sub_Info_C::SetActiveWidgetButtonText(TArray<class 
 // Parameters:
 // int32                                   SwitcherIndex                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   ButtonIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    GrayOut                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_PrivateMatch_Popup_Sub_Info_C::SetButtonGrayOut(int32 SwitcherIndex, int32 ButtonIndex)
+void UWBP_PrivateMatch_Popup_Sub_Info_C::SetButtonGrayOut(int32 SwitcherIndex, int32 ButtonIndex, bool GrayOut)
 {
 	static class UFunction* Func = nullptr;
 
@@ -330,6 +353,7 @@ void UWBP_PrivateMatch_Popup_Sub_Info_C::SetButtonGrayOut(int32 SwitcherIndex, i
 
 	Parms.SwitcherIndex = SwitcherIndex;
 	Parms.ButtonIndex = ButtonIndex;
+	Parms.GrayOut = GrayOut;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

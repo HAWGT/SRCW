@@ -12,8 +12,8 @@
 
 #include "UnionSystem_structs.hpp"
 #include "UnionSystem_classes.hpp"
-#include "InputCore_structs.hpp"
 #include "Engine_structs.hpp"
+#include "InputCore_structs.hpp"
 
 
 namespace SDK

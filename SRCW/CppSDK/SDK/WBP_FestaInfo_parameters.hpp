@@ -14,46 +14,21 @@
 namespace SDK::Params
 {
 
-// Function WBP_FestaInfo.WBP_FestaInfo_C.SetSchedule
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_FestaInfo_C_SetSchedule final
+// Function WBP_FestaInfo.WBP_FestaInfo_C.ExecuteUbergraph_WBP_FestaInfo
+// 0x0020 (0x0020 - 0x0000)
+struct WBP_FestaInfo_C_ExecuteUbergraph_WBP_FestaInfo final
 {
 public:
-	class FText                                   Schedule;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UNetMasterDataManageSubsystem*          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_CheckStartNoticeDateTime_ReturnValue;     // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_CheckFestaStartDateTime_ReturnValue;      // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_12[0x2];                                       // 0x0012(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_SelectInt_ReturnValue;                    // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_SelectInt_ReturnValue_1;                  // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WBP_FestaInfo_C_SetSchedule;
-
-// Function WBP_FestaInfo.WBP_FestaInfo_C.SetTextureBG
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_FestaInfo_C_SetTextureBG final
-{
-public:
-	class UTexture2D*                             Texture;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_FestaInfo_C_SetTextureBG;
-
-// Function WBP_FestaInfo.WBP_FestaInfo_C.SetTitle
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_FestaInfo_C_SetTitle final
-{
-public:
-	class FText                                   Title;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-};
-DUMPER7_ASSERTS_WBP_FestaInfo_C_SetTitle;
-
-// Function WBP_FestaInfo.WBP_FestaInfo_C.SetupHeldPop
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_FestaInfo_C_SetupHeldPop final
-{
-public:
-	class UNetMasterDataManageSubsystem*          CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_CheckStartNoticeDateTime_ReturnValue;     // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_CheckFestaStartDateTime_ReturnValue;      // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_SelectInt_ReturnValue;                    // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_FestaInfo_C_SetupHeldPop;
+DUMPER7_ASSERTS_WBP_FestaInfo_C_ExecuteUbergraph_WBP_FestaInfo;
 
 }
 

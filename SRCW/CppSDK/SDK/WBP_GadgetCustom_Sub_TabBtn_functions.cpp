@@ -79,48 +79,6 @@ void UWBP_GadgetCustom_Sub_TabBtn_C::OnBackKeyPressed()
 }
 
 
-// Function WBP_GadgetCustom_Sub_TabBtn.WBP_GadgetCustom_Sub_TabBtn_C.OnConstFestaIconImage
-// (Event, Protected, BlueprintCallable, BlueprintEvent)
-
-void UWBP_GadgetCustom_Sub_TabBtn_C::OnConstFestaIconImage()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TabBtn_C", "OnConstFestaIconImage");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_GadgetCustom_Sub_TabBtn.WBP_GadgetCustom_Sub_TabBtn_C.OnConstMouseInteractionButton
-// (Event, Protected, BlueprintCallable, BlueprintEvent)
-
-void UWBP_GadgetCustom_Sub_TabBtn_C::OnConstMouseInteractionButton()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TabBtn_C", "OnConstMouseInteractionButton");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_GadgetCustom_Sub_TabBtn.WBP_GadgetCustom_Sub_TabBtn_C.OnConstNameText
-// (Event, Protected, BlueprintCallable, BlueprintEvent)
-
-void UWBP_GadgetCustom_Sub_TabBtn_C::OnConstNameText()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TabBtn_C", "OnConstNameText");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function WBP_GadgetCustom_Sub_TabBtn.WBP_GadgetCustom_Sub_TabBtn_C.OnDownKeyPressed
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 

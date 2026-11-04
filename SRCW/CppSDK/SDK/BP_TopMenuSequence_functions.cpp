@@ -31,6 +31,20 @@ void ABP_TopMenuSequence_C::AttachMainCamera()
 }
 
 
+// Function BP_TopMenuSequence.BP_TopMenuSequence_C.AttachMainCameraToPlayer
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_TopMenuSequence_C::AttachMainCameraToPlayer()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TopMenuSequence_C", "AttachMainCameraToPlayer");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_TopMenuSequence.BP_TopMenuSequence_C.BackFromNoticePopup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -84,6 +98,26 @@ void ABP_TopMenuSequence_C::BndEvt__BP_TopMenuSequence_BPC_FriendList_K2Node_Com
 		Func = Class->GetFunction("BP_TopMenuSequence_C", "BndEvt__BP_TopMenuSequence_BPC_FriendList_K2Node_ComponentBoundEvent_0_OnChangeStateDelegate__DelegateSignature");
 
 	Params::BP_TopMenuSequence_C_BndEvt__BP_TopMenuSequence_BPC_FriendList_K2Node_ComponentBoundEvent_0_OnChangeStateDelegate__DelegateSignature Parms{};
+
+	Parms.State = State;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_TopMenuSequence.BP_TopMenuSequence_C.BndEvt__BP_TopMenuSequence_BPC_PlayMission_K2Node_ComponentBoundEvent_0_OnChangeStateDelegate__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// EMenuSequenceSubState                   State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_TopMenuSequence_C::BndEvt__BP_TopMenuSequence_BPC_PlayMission_K2Node_ComponentBoundEvent_0_OnChangeStateDelegate__DelegateSignature(EMenuSequenceSubState State)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TopMenuSequence_C", "BndEvt__BP_TopMenuSequence_BPC_PlayMission_K2Node_ComponentBoundEvent_0_OnChangeStateDelegate__DelegateSignature");
+
+	Params::BP_TopMenuSequence_C_BndEvt__BP_TopMenuSequence_BPC_PlayMission_K2Node_ComponentBoundEvent_0_OnChangeStateDelegate__DelegateSignature Parms{};
 
 	Parms.State = State;
 
@@ -175,14 +209,28 @@ void ABP_TopMenuSequence_C::Call_DodonpaEvent_RaceParkIntro()
 }
 
 
+// Function BP_TopMenuSequence.BP_TopMenuSequence_C.Call_DodonpaEvent_RivalDuel
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_TopMenuSequence_C::Call_DodonpaEvent_RivalDuel()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TopMenuSequence_C", "Call_DodonpaEvent_RivalDuel");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_TopMenuSequence.BP_TopMenuSequence_C.CallDodonpaEvent
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class FName                             EventName                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EGrandPrixEventFlag                     SaveDataFlagId                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EGrandPrixEventFlag                     SaveFlagId                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EMenuSequenceBGM                        BGM_ID                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_TopMenuSequence_C::CallDodonpaEvent(class FName EventName, EGrandPrixEventFlag SaveDataFlagId, EMenuSequenceBGM BGM_ID)
+void ABP_TopMenuSequence_C::CallDodonpaEvent(class FName EventName, EGrandPrixEventFlag SaveFlagId, EMenuSequenceBGM BGM_ID)
 {
 	static class UFunction* Func = nullptr;
 
@@ -192,7 +240,31 @@ void ABP_TopMenuSequence_C::CallDodonpaEvent(class FName EventName, EGrandPrixEv
 	Params::BP_TopMenuSequence_C_CallDodonpaEvent Parms{};
 
 	Parms.EventName = EventName;
-	Parms.SaveDataFlagId = SaveDataFlagId;
+	Parms.SaveFlagId = SaveFlagId;
+	Parms.BGM_ID = BGM_ID;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_TopMenuSequence.BP_TopMenuSequence_C.CallDodonpaEventSeason2
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             EventName                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EAppendDialogueEventBitFlag             SaveFlagId                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EMenuSequenceBGM                        BGM_ID                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_TopMenuSequence_C::CallDodonpaEventSeason2(class FName EventName, EAppendDialogueEventBitFlag SaveFlagId, EMenuSequenceBGM BGM_ID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TopMenuSequence_C", "CallDodonpaEventSeason2");
+
+	Params::BP_TopMenuSequence_C_CallDodonpaEventSeason2 Parms{};
+
+	Parms.EventName = EventName;
+	Parms.SaveFlagId = SaveFlagId;
 	Parms.BGM_ID = BGM_ID;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -264,6 +336,26 @@ void ABP_TopMenuSequence_C::DodonpaEventEnd_Fever_NextGarage()
 		Func = Class->GetFunction("BP_TopMenuSequence_C", "DodonpaEventEnd_Fever_NextGarage");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_TopMenuSequence.BP_TopMenuSequence_C.ExchangeToGarage
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EMenuSequenceSubState                   State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_TopMenuSequence_C::ExchangeToGarage(EMenuSequenceSubState State)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TopMenuSequence_C", "ExchangeToGarage");
+
+	Params::BP_TopMenuSequence_C_ExchangeToGarage Parms{};
+
+	Parms.State = State;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -348,6 +440,26 @@ void ABP_TopMenuSequence_C::FinishedFadeToCharaMachineSelect(EUnionUIFadeDirecti
 		Func = Class->GetFunction("BP_TopMenuSequence_C", "FinishedFadeToCharaMachineSelect");
 
 	Params::BP_TopMenuSequence_C_FinishedFadeToCharaMachineSelect Parms{};
+
+	Parms.FadeDirection = FadeDirection;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_TopMenuSequence.BP_TopMenuSequence_C.FinishedFadeToExchange
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EUnionUIFadeDirection                   FadeDirection                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_TopMenuSequence_C::FinishedFadeToExchange(EUnionUIFadeDirection FadeDirection)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TopMenuSequence_C", "FinishedFadeToExchange");
+
+	Params::BP_TopMenuSequence_C_FinishedFadeToExchange Parms{};
 
 	Parms.FadeDirection = FadeDirection;
 
@@ -533,6 +645,20 @@ void ABP_TopMenuSequence_C::GetTipsHintId(EHintId* OutTipsHintId)
 }
 
 
+// Function BP_TopMenuSequence.BP_TopMenuSequence_C.GotoExchange
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_TopMenuSequence_C::GotoExchange()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TopMenuSequence_C", "GotoExchange");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_TopMenuSequence.BP_TopMenuSequence_C.GotoOnlineFromFriendList
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 
@@ -542,6 +668,34 @@ void ABP_TopMenuSequence_C::GotoOnlineFromFriendList()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BP_TopMenuSequence_C", "GotoOnlineFromFriendList");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_TopMenuSequence.BP_TopMenuSequence_C.GotoOnlineFromPlayMission
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_TopMenuSequence_C::GotoOnlineFromPlayMission()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TopMenuSequence_C", "GotoOnlineFromPlayMission");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_TopMenuSequence.BP_TopMenuSequence_C.GoToPlayMission
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_TopMenuSequence_C::GoToPlayMission()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TopMenuSequence_C", "GoToPlayMission");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -671,6 +825,26 @@ void ABP_TopMenuSequence_C::OnCancelCharaMachineFade(EUnionUIFadeDirection FadeD
 	Params::BP_TopMenuSequence_C_OnCancelCharaMachineFade Parms{};
 
 	Parms.FadeDirection = FadeDirection;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_TopMenuSequence.BP_TopMenuSequence_C.OnCancelExchange
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EMenuSequenceSubState                   State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_TopMenuSequence_C::OnCancelExchange(EMenuSequenceSubState State)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnCancelExchange");
+
+	Params::BP_TopMenuSequence_C_OnCancelExchange Parms{};
+
+	Parms.State = State;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -1730,6 +1904,26 @@ void ABP_TopMenuSequence_C::Set_UIVisible_by_in_State(ETopMenuSequenceState In_S
 }
 
 
+// Function BP_TopMenuSequence.BP_TopMenuSequence_C.SetGameModeId
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ETopMenuGameMode                        Selection                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_TopMenuSequence_C::SetGameModeId(ETopMenuGameMode Selection)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TopMenuSequence_C", "SetGameModeId");
+
+	Params::BP_TopMenuSequence_C_SetGameModeId Parms{};
+
+	Parms.Selection = Selection;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_TopMenuSequence.BP_TopMenuSequence_C.SetHintRequestIfUnread
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -1751,7 +1945,7 @@ void ABP_TopMenuSequence_C::SetHintRequestIfUnread(EHintId InputPin)
 
 
 // Function BP_TopMenuSequence.BP_TopMenuSequence_C.SetklaxonEnableByInState
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ETopMenuSequenceState                   In_State                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -1894,6 +2088,32 @@ void ABP_TopMenuSequence_C::SetStoreUIVisibility(ESlateVisibility Visibility)
 }
 
 
+// Function BP_TopMenuSequence.BP_TopMenuSequence_C.SetTopMenuUIVisibility
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const ESlateVisibility                  InVisibility                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsSetTopMenu                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsSetSubMenu                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsSetHeader                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_TopMenuSequence_C::SetTopMenuUIVisibility(const ESlateVisibility InVisibility, bool bIsSetTopMenu, bool bIsSetSubMenu, bool bIsSetHeader)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TopMenuSequence_C", "SetTopMenuUIVisibility");
+
+	Params::BP_TopMenuSequence_C_SetTopMenuUIVisibility Parms{};
+
+	Parms.InVisibility = InVisibility;
+	Parms.bIsSetTopMenu = bIsSetTopMenu;
+	Parms.bIsSetSubMenu = bIsSetSubMenu;
+	Parms.bIsSetHeader = bIsSetHeader;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_TopMenuSequence.BP_TopMenuSequence_C.SetupBaseWidget
 // (BlueprintCallable, BlueprintEvent)
 
@@ -1937,20 +2157,6 @@ void ABP_TopMenuSequence_C::StreamingInstallErrorWindow()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BP_TopMenuSequence_C", "StreamingInstallErrorWindow");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_TopMenuSequence.BP_TopMenuSequence_C.UpdateTimeTable
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_TopMenuSequence_C::UpdateTimeTable()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "UpdateTimeTable");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

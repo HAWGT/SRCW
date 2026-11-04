@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "MovieRenderPipelineSettings_structs.hpp"
 #include "UMG_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "MovieRenderPipelineCore_classes.hpp"
+#include "MovieRenderPipelineSettings_structs.hpp"
 
 
 namespace SDK

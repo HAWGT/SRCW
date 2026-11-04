@@ -58,6 +58,111 @@ void UWBP_TopInfo_C::ExecuteUbergraph_WBP_TopInfo(int32 EntryPoint)
 }
 
 
+// Function WBP_TopInfo.WBP_TopInfo_C.GetTopInfoSubCategory
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UWBP_TopInfo_Sub_Category_C**     WidgetObject                                           (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_TopInfo_C::GetTopInfoSubCategory(class UWBP_TopInfo_Sub_Category_C** WidgetObject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_TopInfo_C", "GetTopInfoSubCategory");
+
+	Params::WBP_TopInfo_C_GetTopInfoSubCategory Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (WidgetObject != nullptr)
+		*WidgetObject = Parms.WidgetObject;
+}
+
+
+// Function WBP_TopInfo.WBP_TopInfo_C.GetTopInfoSubCategoryL
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UWBP_TopInfo_Sub_Category_C**     WidgetObject                                           (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_TopInfo_C::GetTopInfoSubCategoryL(class UWBP_TopInfo_Sub_Category_C** WidgetObject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_TopInfo_C", "GetTopInfoSubCategoryL");
+
+	Params::WBP_TopInfo_C_GetTopInfoSubCategoryL Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (WidgetObject != nullptr)
+		*WidgetObject = Parms.WidgetObject;
+}
+
+
+// Function WBP_TopInfo.WBP_TopInfo_C.GetTopInfoSubCategoryLScroll
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UWBP_TopInfo_Sub_Category_C**     WidgetObject                                           (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_TopInfo_C::GetTopInfoSubCategoryLScroll(class UWBP_TopInfo_Sub_Category_C** WidgetObject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_TopInfo_C", "GetTopInfoSubCategoryLScroll");
+
+	Params::WBP_TopInfo_C_GetTopInfoSubCategoryLScroll Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (WidgetObject != nullptr)
+		*WidgetObject = Parms.WidgetObject;
+}
+
+
+// Function WBP_TopInfo.WBP_TopInfo_C.GetTopInfoSubCategoryR
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UWBP_TopInfo_Sub_Category_C**     WidgetObject                                           (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_TopInfo_C::GetTopInfoSubCategoryR(class UWBP_TopInfo_Sub_Category_C** WidgetObject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_TopInfo_C", "GetTopInfoSubCategoryR");
+
+	Params::WBP_TopInfo_C_GetTopInfoSubCategoryR Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (WidgetObject != nullptr)
+		*WidgetObject = Parms.WidgetObject;
+}
+
+
+// Function WBP_TopInfo.WBP_TopInfo_C.GetTopInfoSubCategoryRScroll
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UWBP_TopInfo_Sub_Category_C**     WidgetObject                                           (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_TopInfo_C::GetTopInfoSubCategoryRScroll(class UWBP_TopInfo_Sub_Category_C** WidgetObject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_TopInfo_C", "GetTopInfoSubCategoryRScroll");
+
+	Params::WBP_TopInfo_C_GetTopInfoSubCategoryRScroll Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (WidgetObject != nullptr)
+		*WidgetObject = Parms.WidgetObject;
+}
+
+
 // Function WBP_TopInfo.WBP_TopInfo_C.GetValidPageNum
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -1356,15 +1461,12 @@ void UWBP_TopInfo_C::SetupEmarjencyInfo(bool IsNew)
 
 
 // Function WBP_TopInfo.WBP_TopInfo_C.SetupFestaInfo
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const class FText&                      Title                                                  (BlueprintVisible, BlueprintReadOnly, Parm)
-// const struct FDateTime&                 StartTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// const struct FDateTime&                 endTime                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UTexture2D*                       TextureBG                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// struct FFestaInfoDispData&              InfoDispData                                           (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // bool                                    IsNew                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_TopInfo_C::SetupFestaInfo(const class FText& Title, const struct FDateTime& StartTime, const struct FDateTime& endTime, class UTexture2D* TextureBG, bool IsNew)
+void UWBP_TopInfo_C::SetupFestaInfo(struct FFestaInfoDispData& InfoDispData, bool IsNew)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1373,13 +1475,12 @@ void UWBP_TopInfo_C::SetupFestaInfo(const class FText& Title, const struct FDate
 
 	Params::WBP_TopInfo_C_SetupFestaInfo Parms{};
 
-	Parms.Title = std::move(Title);
-	Parms.StartTime = std::move(StartTime);
-	Parms.endTime = std::move(endTime);
-	Parms.TextureBG = TextureBG;
+	Parms.InfoDispData = std::move(InfoDispData);
 	Parms.IsNew = IsNew;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	InfoDispData = std::move(Parms.InfoDispData);
 }
 
 
@@ -1387,11 +1488,11 @@ void UWBP_TopInfo_C::SetupFestaInfo(const class FText& Title, const struct FDate
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const struct FDateTime&                 StartTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// const struct FDateTime&                 endTime                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FDateTime&                 EndTime                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // bool                                    IsNew                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FLegendCompeInfoDispData&  DispData                                               (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWBP_TopInfo_C::SetupLegendInfo(const struct FDateTime& StartTime, const struct FDateTime& endTime, bool IsNew, const struct FLegendCompeInfoDispData& DispData)
+void UWBP_TopInfo_C::SetupLegendInfo(const struct FDateTime& StartTime, const struct FDateTime& EndTime, bool IsNew, const struct FLegendCompeInfoDispData& DispData)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1401,7 +1502,7 @@ void UWBP_TopInfo_C::SetupLegendInfo(const struct FDateTime& StartTime, const st
 	Params::WBP_TopInfo_C_SetupLegendInfo Parms{};
 
 	Parms.StartTime = std::move(StartTime);
-	Parms.endTime = std::move(endTime);
+	Parms.EndTime = std::move(EndTime);
 	Parms.IsNew = IsNew;
 	Parms.DispData = std::move(DispData);
 

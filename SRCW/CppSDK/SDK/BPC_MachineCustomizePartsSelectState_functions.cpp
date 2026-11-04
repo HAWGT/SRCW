@@ -17,6 +17,50 @@
 namespace SDK
 {
 
+// Function BPC_MachineCustomizePartsSelectState.BPC_MachineCustomizePartsSelectState_C.ResetSticker
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FUserMachineCustomizeData& InUpdateCustomizeData                                  (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FUserMachineCustomizeData*       OutCustomizeData                                       (Parm, OutParm)
+
+void UBPC_MachineCustomizePartsSelectState_C::ResetSticker(const struct FUserMachineCustomizeData& InUpdateCustomizeData, struct FUserMachineCustomizeData* OutCustomizeData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MachineCustomizePartsSelectState_C", "ResetSticker");
+
+	Params::BPC_MachineCustomizePartsSelectState_C_ResetSticker Parms{};
+
+	Parms.InUpdateCustomizeData = std::move(InUpdateCustomizeData);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (OutCustomizeData != nullptr)
+		*OutCustomizeData = std::move(Parms.OutCustomizeData);
+}
+
+
+// Function BPC_MachineCustomizePartsSelectState.BPC_MachineCustomizePartsSelectState_C.SetMachineCustomizeDataWithoutPartsId
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FUserMachineCustomizeData& InCustomizeData_0                                      (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UBPC_MachineCustomizePartsSelectState_C::SetMachineCustomizeDataWithoutPartsId(const struct FUserMachineCustomizeData& InCustomizeData_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MachineCustomizePartsSelectState_C", "SetMachineCustomizeDataWithoutPartsId");
+
+	Params::BPC_MachineCustomizePartsSelectState_C_SetMachineCustomizeDataWithoutPartsId Parms{};
+
+	Parms.InCustomizeData_0 = std::move(InCustomizeData_0);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BPC_MachineCustomizePartsSelectState.BPC_MachineCustomizePartsSelectState_C.TipsWindow_CloseTipsWindow
 // (Private, BlueprintCallable, BlueprintEvent)
 
@@ -54,10 +98,10 @@ void UBPC_MachineCustomizePartsSelectState_C::OpenTipsWindow(EHintId InHintId)
 // Function BPC_MachineCustomizePartsSelectState.BPC_MachineCustomizePartsSelectState_C.UpdateCustomizeData
 // (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FUserMachineCustomizeData& InCustomizeData                                        (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FUserMachineCustomizeData& InCustomizeData_0                                      (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FUserMachineCustomizeData*       OutCustomizeData                                       (Parm, OutParm)
 
-void UBPC_MachineCustomizePartsSelectState_C::UpdateCustomizeData(const struct FUserMachineCustomizeData& InCustomizeData, struct FUserMachineCustomizeData* OutCustomizeData)
+void UBPC_MachineCustomizePartsSelectState_C::UpdateCustomizeData(const struct FUserMachineCustomizeData& InCustomizeData_0, struct FUserMachineCustomizeData* OutCustomizeData)
 {
 	static class UFunction* Func = nullptr;
 
@@ -66,7 +110,7 @@ void UBPC_MachineCustomizePartsSelectState_C::UpdateCustomizeData(const struct F
 
 	Params::BPC_MachineCustomizePartsSelectState_C_UpdateCustomizeData Parms{};
 
-	Parms.InCustomizeData = std::move(InCustomizeData);
+	Parms.InCustomizeData_0 = std::move(InCustomizeData_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 

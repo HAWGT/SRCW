@@ -11,19 +11,19 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
-#include "Engine_structs.hpp"
 #include "UnionRun_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_ItemHomingPunchObject.BP_ItemHomingPunchObject_C
-// 0x0010 (0x0A00 - 0x09F0)
+// 0x0010 (0x0A10 - 0x0A00)
 class ABP_ItemHomingPunchObject_C final : public AItemHomingPunchObject
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x09F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0A00(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_BP_ItemHomingPunchObject(int32 EntryPoint);

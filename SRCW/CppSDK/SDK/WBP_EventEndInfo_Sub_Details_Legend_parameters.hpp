@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "UNION_structs.hpp"
 #include "UnionSystem_structs.hpp"
-#include "UMG_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "UNION_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK::Params
@@ -260,7 +260,7 @@ public:
 DUMPER7_ASSERTS_WBP_EventEndInfo_Sub_Details_Legend_C_SetPointNumber;
 
 // Function WBP_EventEndInfo_Sub_Details_Legend.WBP_EventEndInfo_Sub_Details_Legend_C.SetQRTexture
-// 0x0290 (0x0290 - 0x0000)
+// 0x02B8 (0x02B8 - 0x0000)
 struct WBP_EventEndInfo_Sub_Details_Legend_C_SetQRTexture final
 {
 public:
@@ -281,9 +281,10 @@ public:
 	TSoftObjectPtr<class UTexture2D>              Temp_softobject_Variable_12;                       // 0x01E8(0x0028)(UObjectWrapper, HasGetValueTypeHash)
 	TSoftObjectPtr<class UTexture2D>              Temp_softobject_Variable_13;                       // 0x0210(0x0028)(UObjectWrapper, HasGetValueTypeHash)
 	TSoftObjectPtr<class UTexture2D>              Temp_softobject_Variable_14;                       // 0x0238(0x0028)(UObjectWrapper, HasGetValueTypeHash)
-	ELanguage                                     CallFunc_GetTextLang_ReturnValue;                  // 0x0260(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_261[0x7];                                      // 0x0261(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class UTexture2D>              K2Node_Select_Default;                             // 0x0268(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UTexture2D>              Temp_softobject_Variable_15;                       // 0x0260(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	ELanguage                                     CallFunc_GetTextLang_ReturnValue;                  // 0x0288(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_289[0x7];                                      // 0x0289(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UTexture2D>              K2Node_Select_Default;                             // 0x0290(0x0028)(UObjectWrapper, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_EventEndInfo_Sub_Details_Legend_C_SetQRTexture;
 

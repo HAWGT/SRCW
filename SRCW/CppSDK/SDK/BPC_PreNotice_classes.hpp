@@ -11,24 +11,22 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
-#include "UMG_structs.hpp"
 #include "UnionUI_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BPC_PreNotice.BPC_PreNotice_C
-// 0x0040 (0x0288 - 0x0248)
+// 0x0038 (0x0288 - 0x0250)
 class UBPC_PreNotice_C final : public UPreNoticeState
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0248(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	int32                                         LastFestaId;                                       // 0x0250(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         LastFestaPoint;                                    // 0x0254(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0250(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UWBP_Popup_Window_Tutorial_C*           TutorialPopup;                                     // 0x0258(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UUnionUIPopupWindowBase*                PopupWindow;                                       // 0x0260(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UBPC_DodonpaEventState_C*               DodonpaEventState;                                 // 0x0268(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
@@ -38,50 +36,51 @@ public:
 	class ABP_CommonConnectingUI_C*               CommonConnectingUI;                                // 0x0280(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void PlayStoredBgm();
-	void StorePrevBgmID();
-	void IsFestaForceStart(bool* isForceStart);
-	void CallDodonpaEvent(class FName EventName, EGrandPrixEventFlag SaveDataFlagId, EMenuSequenceBGM BGM_ID);
-	void SetSubMenuVisibility(ESlateVisibility Visibility);
 	void AttachMainCamera();
-	void DoCompensationNext();
-	void OnReceiveSaveCompensation(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error);
-	void OnExitStateTutorialVideo();
-	void OnInitStateTutorialVideo();
-	void DelayOpenWindow();
-	void EndTutorialPopup(ESlateVisibility InVisibility);
-	void OnFinishedFade(EUnionUIFadeDirection FadeDirection);
-	void OnInitState();
-	void OnExitState();
-	void OnInitializeFlow_final();
-	void Call_DodonpaEvent_GrandPrixCleard();
 	void Call_DodonpaEvent_FestaIntro();
-	void OnEndFade_FestaIntro(EUnionUIFadeDirection FadeDirection);
-	void OnInitializeFlow_DLC_Freecontents();
-	void OnEndFade_GrandPrixCleard(EUnionUIFadeDirection FadeDirection);
-	void OpenNoticePopup();
-	void OnFinishedFade_TutorialPopup(EUnionUIFadeDirection FadeDirection);
+	void Call_DodonpaEvent_GrandPrixCleard();
+	void CallDodonpaEvent(class FName EventName, EGrandPrixEventFlag SaveDataFlagId, EMenuSequenceBGM BGM_ID);
+	void CallDodonpaEventSeason2(class FName EventName, EAppendDialogueEventBitFlag SaveDataFlagId, EMenuSequenceBGM BGM_ID);
 	void DebugSkip();
+	void DelayOpenWindow();
+	void DoCompensationNext();
+	void EndTutorialPopup(ESlateVisibility InVisibility);
+	void ExecuteUbergraph_BPC_PreNotice(int32 EntryPoint);
+	void IsFestaForceStart(bool* isForceStart);
+	void OnAttentionPopupWindowDecision(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex);
 	void OnDecisionStreamingInstall(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex);
-	void OnInitializeFlow_NoticePopup();
-	void OnInitializeFlow_FestaEndReward();
-	void OnInitializeFlow_StreamingInstallCheck();
-	void ReturnTutorialVideo();
-	void OnInitializeFlow_ClearGrandPrix();
-	void OnInitializeFlow_TutorialCheck();
-	void OnReceiveCheckFestaReward(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error);
-	void OnErrorPopupWindowClose(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex);
-	void Call_DodonpaEvent_LegendInfo();
-	void OnEndFade_LegendInfo(EUnionUIFadeDirection FadeDirection);
-	void OnInitializeFlow_LegendCompeEndReward();
-	void OnReceiveCheckLegendCompeReward(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error);
-	void OnReceiveCheckCompensation(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error);
-	void OnInitializeFlow_Compensation();
 	void OnDodonpaEvent_FestaIntro(bool IsSucceeded);
 	void OnDodonpaEventEnd_GrandPrixCleard(bool IsSucceeded);
-	void OnDodonpaEventEnd_LegendInfo(bool IsSucceeded);
-	void OnAttentionPopupWindowDecision(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex);
-	void ExecuteUbergraph_BPC_PreNotice(int32 EntryPoint);
+	void OnEndFade_FestaIntro(EUnionUIFadeDirection FadeDirection);
+	void OnEndFade_GrandPrixCleard(EUnionUIFadeDirection FadeDirection);
+	void OnErrorPopupWindowClose(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex);
+	void OnExitState();
+	void OnExitStateTutorialVideo();
+	void OnFinishedFade(EUnionUIFadeDirection FadeDirection);
+	void OnFinishedFade_TutorialPopup(EUnionUIFadeDirection FadeDirection);
+	void OnInitializeFlow_ClearGrandPrix();
+	void OnInitializeFlow_Compensation();
+	void OnInitializeFlow_DLC_Freecontents();
+	void OnInitializeFlow_DuelCompeEndReward();
+	void OnInitializeFlow_FestaEndReward();
+	void OnInitializeFlow_final();
+	void OnInitializeFlow_LegendCompeEndReward();
+	void OnInitializeFlow_NoticePopup();
+	void OnInitializeFlow_StreamingInstallCheck();
+	void OnInitializeFlow_TutorialCheck();
+	void OnInitState();
+	void OnInitStateTutorialVideo();
+	void OnReceiveCheckCompensation(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error);
+	void OnReceiveCheckFestaReward(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error);
+	void OnReceiveCheckLegendCompeReward(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error);
+	void OnReceiveSaveCompensation(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error);
+	void OpenNoticePopup();
+	void PlayStoredBgm();
+	void ReturnTutorialVideo();
+	void SetPopupFirstPage_Festa();
+	void SetPopupFirstPage_LegendCompe();
+	void SetSubMenuVisibility(ESlateVisibility Visibility);
+	void StorePrevBgmID();
 
 public:
 	static class UClass* StaticClass()

@@ -85,26 +85,6 @@ void ABP_CharaMachineSequence_C::BndEvt__BP_CharaMachineSequence_BPC_MachineStat
 }
 
 
-// Function BP_CharaMachineSequence.BP_CharaMachineSequence_C.CustomEvent
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EUnionUIFadeDirection                   FadeDirection                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_CharaMachineSequence_C::CustomEvent(EUnionUIFadeDirection FadeDirection)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "CustomEvent");
-
-	Params::BP_CharaMachineSequence_C_CustomEvent Parms{};
-
-	Parms.FadeDirection = FadeDirection;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_CharaMachineSequence.BP_CharaMachineSequence_C.ExecuteUbergraph_BP_CharaMachineSequence
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -136,6 +116,26 @@ void ABP_CharaMachineSequence_C::FinalizeMessageBar()
 		Func = Class->GetFunction("BP_CharaMachineSequence_C", "FinalizeMessageBar");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_CharaMachineSequence.BP_CharaMachineSequence_C.FinishedFadeEvent
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EUnionUIFadeDirection                   FadeDirection                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_CharaMachineSequence_C::FinishedFadeEvent(EUnionUIFadeDirection FadeDirection)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CharaMachineSequence_C", "FinishedFadeEvent");
+
+	Params::BP_CharaMachineSequence_C_FinishedFadeEvent Parms{};
+
+	Parms.FadeDirection = FadeDirection;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -685,96 +685,6 @@ void ABP_CharaMachineSequence_C::UnbindMachineState()
 }
 
 
-// Function BP_CharaMachineSequence.BP_CharaMachineSequence_C.UpdateParamWindow
-// (Event, Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InPlayerIndex                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_CharaMachineSequence_C::UpdateParamWindow(int32 InPlayerIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "UpdateParamWindow");
-
-	Params::BP_CharaMachineSequence_C_UpdateParamWindow Parms{};
-
-	Parms.InPlayerIndex = InPlayerIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_CharaMachineSequence.BP_CharaMachineSequence_C.UpdateParamWindowByCharaId
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InPlayerIndex                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EDriverId                               InDriverId                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_CharaMachineSequence_C::UpdateParamWindowByCharaId(int32 InPlayerIndex, EDriverId InDriverId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "UpdateParamWindowByCharaId");
-
-	Params::BP_CharaMachineSequence_C_UpdateParamWindowByCharaId Parms{};
-
-	Parms.InPlayerIndex = InPlayerIndex;
-	Parms.InDriverId = InDriverId;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_CharaMachineSequence.BP_CharaMachineSequence_C.UpdateParamWindowByMachineId
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InPlayerIndex                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EMachineId                              InMachineID                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_CharaMachineSequence_C::UpdateParamWindowByMachineId(int32 InPlayerIndex, EMachineId InMachineID)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "UpdateParamWindowByMachineId");
-
-	Params::BP_CharaMachineSequence_C_UpdateParamWindowByMachineId Parms{};
-
-	Parms.InPlayerIndex = InPlayerIndex;
-	Parms.InMachineID = InMachineID;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_CharaMachineSequence.BP_CharaMachineSequence_C.UpdateParamWindowByMachinePartsIds
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InPlayerIndex                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EMachineId                              InFrontPartsId                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EMachineId                              InRearPartsId                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EMachineId                              InTirePartsId                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_CharaMachineSequence_C::UpdateParamWindowByMachinePartsIds(int32 InPlayerIndex, EMachineId InFrontPartsId, EMachineId InRearPartsId, EMachineId InTirePartsId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "UpdateParamWindowByMachinePartsIds");
-
-	Params::BP_CharaMachineSequence_C_UpdateParamWindowByMachinePartsIds Parms{};
-
-	Parms.InPlayerIndex = InPlayerIndex;
-	Parms.InFrontPartsId = InFrontPartsId;
-	Parms.InRearPartsId = InRearPartsId;
-	Parms.InTirePartsId = InTirePartsId;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_CharaMachineSequence.BP_CharaMachineSequence_C.GetMachineTransformOffset
 // (Event, Protected, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
@@ -827,9 +737,10 @@ void ABP_CharaMachineSequence_C::GetMessageBarVisible(bool* IsVisible) const
 // EMachineId                              InRearPartsId                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EMachineId                              InTirePartsId                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const TArray<EGadgetId>&                InGadgetIds                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<EGadgetId>&                      InSpGadgetIds                                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // struct FRacerParamData*                 OutParamData                                           (Parm, OutParm, NoDestructor)
 
-void ABP_CharaMachineSequence_C::GetParamData(EDriverId InDriverId, EMachineId InFrontPartsId, EMachineId InRearPartsId, EMachineId InTirePartsId, const TArray<EGadgetId>& InGadgetIds, struct FRacerParamData* OutParamData) const
+void ABP_CharaMachineSequence_C::GetParamData(EDriverId InDriverId, EMachineId InFrontPartsId, EMachineId InRearPartsId, EMachineId InTirePartsId, const TArray<EGadgetId>& InGadgetIds, TArray<EGadgetId>& InSpGadgetIds, struct FRacerParamData* OutParamData) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -843,8 +754,11 @@ void ABP_CharaMachineSequence_C::GetParamData(EDriverId InDriverId, EMachineId I
 	Parms.InRearPartsId = InRearPartsId;
 	Parms.InTirePartsId = InTirePartsId;
 	Parms.InGadgetIds = std::move(InGadgetIds);
+	Parms.InSpGadgetIds = std::move(InSpGadgetIds);
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	InSpGadgetIds = std::move(Parms.InSpGadgetIds);
 
 	if (OutParamData != nullptr)
 		*OutParamData = std::move(Parms.OutParamData);

@@ -17,6 +17,40 @@
 namespace SDK
 {
 
+// Function BPC_RaceSequenceStateCreateRace.BPC_RaceSequenceStateCreateRace_C.EndLoadTimeMeasurement
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UBPC_RaceSequenceStateCreateRace_C::EndLoadTimeMeasurement()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_RaceSequenceStateCreateRace_C", "EndLoadTimeMeasurement");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_RaceSequenceStateCreateRace.BPC_RaceSequenceStateCreateRace_C.ExecuteUbergraph_BPC_RaceSequenceStateCreateRace
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_RaceSequenceStateCreateRace_C::ExecuteUbergraph_BPC_RaceSequenceStateCreateRace(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_RaceSequenceStateCreateRace_C", "ExecuteUbergraph_BPC_RaceSequenceStateCreateRace");
+
+	Params::BPC_RaceSequenceStateCreateRace_C_ExecuteUbergraph_BPC_RaceSequenceStateCreateRace Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BPC_RaceSequenceStateCreateRace.BPC_RaceSequenceStateCreateRace_C.IsNextEntryRacerSequence
 // (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -34,34 +68,6 @@ bool UBPC_RaceSequenceStateCreateRace_C::IsNextEntryRacerSequence()
 	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
-}
-
-
-// Function BPC_RaceSequenceStateCreateRace.BPC_RaceSequenceStateCreateRace_C.EndLoadTimeMeasurement
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UBPC_RaceSequenceStateCreateRace_C::EndLoadTimeMeasurement()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateCreateRace_C", "EndLoadTimeMeasurement");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_RaceSequenceStateCreateRace.BPC_RaceSequenceStateCreateRace_C.OnInitState
-// (Event, Public, BlueprintEvent)
-
-void UBPC_RaceSequenceStateCreateRace_C::OnInitState()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateCreateRace_C", "OnInitState");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -85,6 +91,34 @@ void UBPC_RaceSequenceStateCreateRace_C::OnFinishedFade(EUnionUIFadeDirection Fa
 }
 
 
+// Function BPC_RaceSequenceStateCreateRace.BPC_RaceSequenceStateCreateRace_C.OnFinishVSOutAnimation
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_RaceSequenceStateCreateRace_C::OnFinishVSOutAnimation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_RaceSequenceStateCreateRace_C", "OnFinishVSOutAnimation");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_RaceSequenceStateCreateRace.BPC_RaceSequenceStateCreateRace_C.OnInitState
+// (Event, Public, BlueprintEvent)
+
+void UBPC_RaceSequenceStateCreateRace_C::OnInitState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_RaceSequenceStateCreateRace_C", "OnInitState");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BPC_RaceSequenceStateCreateRace.BPC_RaceSequenceStateCreateRace_C.OnUpdateState
 // (Event, Public, BlueprintEvent)
 // Parameters:
@@ -105,23 +139,17 @@ void UBPC_RaceSequenceStateCreateRace_C::OnUpdateState(float InDeltaTime)
 }
 
 
-// Function BPC_RaceSequenceStateCreateRace.BPC_RaceSequenceStateCreateRace_C.ExecuteUbergraph_BPC_RaceSequenceStateCreateRace
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BPC_RaceSequenceStateCreateRace.BPC_RaceSequenceStateCreateRace_C.VSInAnimationFinishEvent
+// (BlueprintCallable, BlueprintEvent)
 
-void UBPC_RaceSequenceStateCreateRace_C::ExecuteUbergraph_BPC_RaceSequenceStateCreateRace(int32 EntryPoint)
+void UBPC_RaceSequenceStateCreateRace_C::VSInAnimationFinishEvent()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateCreateRace_C", "ExecuteUbergraph_BPC_RaceSequenceStateCreateRace");
+		Func = Class->GetFunction("BPC_RaceSequenceStateCreateRace_C", "VSInAnimationFinishEvent");
 
-	Params::BPC_RaceSequenceStateCreateRace_C_ExecuteUbergraph_BPC_RaceSequenceStateCreateRace Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

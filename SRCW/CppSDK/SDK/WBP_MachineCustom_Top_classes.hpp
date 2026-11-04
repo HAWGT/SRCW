@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
-#include "UMG_structs.hpp"
+#include "UNION_classes.hpp"
 #include "EMachineCustomizeWindowId_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK

@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "UNION_classes.hpp"
 #include "UnionUI_structs.hpp"
 
 
@@ -41,35 +41,35 @@ public:
 	TArray<class UTexture2D*>                     FinalRoundTextures;                                // 0x0188(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
-	void IsOpenGrandprixFinalTipsWindow(EHintId InHintId, bool* EnableOpenWindow);
+	void CreateSequncePlayerByStageId(class ALevelSequenceActor** Out_Actor, class ULevelSequencePlayer** Out_Player, bool* Out_Result);
 	void CreateTipsWindow(EHintId InHintId);
 	void DebugLoadLevelSequence(EStageId In_StageId, class ULevelSequence** Out_LevelSequence);
-	void CreateSequncePlayerByStageId(class ALevelSequenceActor** Out_Actor, class ULevelSequencePlayer** Out_Player, bool* Out_Result);
-	void OnLoaded_68D7799743460276E4D57EAD7AE3E92C(class UObject* Loaded);
-	void OnLoaded_07CB097840A0285D5C47FF9CB2FE2527(class UObject* Loaded);
-	void StartFinalRoundTextureLoad();
-	void OnInitState();
-	void OnUpdateState(float InDeltaTime);
-	void OnExitState();
-	void OnChangeSequence();
-	void OnPlayEnd_イベント();
-	void StartCourseView();
-	void StartFinalRoundScene();
-	void OnFinalRoundSceneSkip(const struct FKey& PressedKey);
+	void ExecuteUbergraph_BPC_RaceSequenceStateIntroduceCourse(int32 EntryPoint);
+	void IsOpenGrandprixFinalTipsWindow(EHintId InHintId, bool* EnableOpenWindow);
 	void OnAnimCompleted_Event();
-	void StartCourseInfoBasicRoundUI();
-	void OnRemoved_イベント();
-	void RemoveFinalRoundWidget();
-	void TipsWindow_CloseEndDelegate();
-	void OnFadeEnd(EUnionUIFadeDirection FadeDirection);
-	void StartShowTipsWindow();
-	void OnEndLoadFinalRoundTexture();
-	void OnFullScreenMouseClickEvent();
-	void OnFullScreenMouseSkipEvent();
-	void OnKeyPressed_Event(const struct FKey& PressedKey);
+	void OnChangeSequence();
 	void OnEnabledSkip();
 	void OnEnabledSkip2();
-	void ExecuteUbergraph_BPC_RaceSequenceStateIntroduceCourse(int32 EntryPoint);
+	void OnEndLoadFinalRoundTexture();
+	void OnExitState();
+	void OnFadeEnd(EUnionUIFadeDirection FadeDirection);
+	void OnFinalRoundSceneSkip(const struct FKey& PressedKey);
+	void OnFullScreenMouseClickEvent();
+	void OnFullScreenMouseSkipEvent();
+	void OnInitState();
+	void OnKeyPressed_Event(const struct FKey& PressedKey);
+	void OnLoaded_07CB097840A0285D5C47FF9CB2FE2527(class UObject* Loaded);
+	void OnLoaded_68D7799743460276E4D57EAD7AE3E92C(class UObject* Loaded);
+	void OnPlayEnd_イベント();
+	void OnRemoved_イベント();
+	void OnUpdateState(float InDeltaTime);
+	void RemoveFinalRoundWidget();
+	void StartCourseInfoBasicRoundUI();
+	void StartCourseView();
+	void StartFinalRoundScene();
+	void StartFinalRoundTextureLoad();
+	void StartShowTipsWindow();
+	void TipsWindow_CloseEndDelegate();
 
 public:
 	static class UClass* StaticClass()

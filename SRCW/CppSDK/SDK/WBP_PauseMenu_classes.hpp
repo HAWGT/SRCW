@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "UNION_structs.hpp"
 #include "UnionSystem_structs.hpp"
-#include "Engine_structs.hpp"
-#include "UnionUI_classes.hpp"
 #include "UnionRun_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UMG_structs.hpp"
+#include "UnionUI_classes.hpp"
+#include "UNION_structs.hpp"
 
 
 namespace SDK
@@ -84,50 +84,50 @@ public:
 	TMulticastInlineDelegate<void(class UWBP_PauseMenu_Sub_Option_Btn_03_C* InButton, int32 InIndex)> OnClickedOption; // 0x0590(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void SequenceEvent__ENTRYPOINTWBP_PauseMenu();
-	void OnSpecialButtonPressedOptionPanel();
+	void BindGadgetInfo();
 	void ChangeOwnerPlayerConntroller();
-	void OnFocusMenuPanel(class UUnionUIButtonBase* Button, int32 ButtonIndex);
-	void OnCancelMenuPanel(class UUnionUIButtonBase* Button, int32 ButtonIndex);
-	void OnDecisionDownMenuPanel(class UUnionUIButtonBase* Button, int32 ButtonIndex);
-	void OnDecideMenuPanel(class UUnionUIButtonBase* Button, int32 ButtonIndex);
-	void ReturnFromPopuup();
+	void ClickOption(class UWBP_PauseMenu_Sub_Option_Btn_03_C* InButton);
 	void ExecTimeTrialSetting();
-	void SetInitialFocus();
-	void ShowFooterMenu();
-	void InitializeRedStartRing(int32 PlayerIndex);
-	void IsGadgetInfoModeinIndex(int32 PlayerControllerIndex, bool* IsMode);
-	void IsGadgetInfoMode(bool* IsMode);
-	void SetGadgetInfoMode(int32 PlayerControllerIndex);
-	void SetGadgetInfo();
+	void ExecuteUbergraph_WBP_PauseMenu(int32 EntryPoint);
 	void Finalize();
-	void InitializeGadgetInfo();
-	void InitializeSpeedClass();
-	void InitializeRSR();
-	void SetVisibilityOptionButtons(TArray<class UUnionUIButtonBase*>& Buttons, ESlateVisibility Visibility_0);
-	bool IsSinglePlay();
-	void InitializePlayerIcon();
-	void UnregisterMenuButton();
 	void Flip_Assist_Enabled(ERacePauseMenuItem Type, int32 PlayerIndex);
 	void GetAssistEnabled(ERacePauseMenuItem Type, int32 PlayerIndex, bool* ValidIndex, bool* Value);
 	void GetOptionType(int32 ButtonIndex, ERacePauseMenuItem* Type);
-	void ClickOption(class UWBP_PauseMenu_Sub_Option_Btn_03_C* InButton);
-	void SetOption(ERacePauseMenuItem PauseID, int32 PlayerIndex);
-	void InitilaizeOptionButtonsState(TArray<class UUnionUIButtonBase*>& Buttons, int32 PlayerIndex);
-	void InitializeOptionButton();
-	void InitializeMenuButton(class UCommonRaceMenuContentsInfo* Contents);
-	void Initialize(int32 OwnerPlayerIndex, class UCommonRaceMenuContentsInfo* Contents, int32 PlayerCount);
-	struct FEventReply OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent);
-	void SequenceEvent();
 	void HideAll();
-	void PlayAnimationIn();
+	void Initialize(int32 OwnerPlayerIndex, class UCommonRaceMenuContentsInfo* Contents, int32 PlayerCount);
+	void InitializeGadgetInfo();
+	void InitializeMenuButton(class UCommonRaceMenuContentsInfo* Contents);
+	void InitializeOptionButton();
+	void InitializePlayerIcon();
+	void InitializeRedStartRing(int32 PlayerIndex);
+	void InitializeRSR();
+	void InitializeSpeedClass();
+	void InitilaizeOptionButtonsState(TArray<class UUnionUIButtonBase*>& Buttons, int32 PlayerIndex);
+	void IsGadgetInfoMode(bool* IsMode);
+	void IsGadgetInfoModeinIndex(int32 PlayerControllerIndex, bool* IsMode);
+	bool IsSinglePlay();
+	void OnCancelMenuPanel(class UUnionUIButtonBase* Button, int32 ButtonIndex);
+	void OnDecideMenuPanel(class UUnionUIButtonBase* Button, int32 ButtonIndex);
+	void OnDecisionDownMenuPanel(class UUnionUIButtonBase* Button, int32 ButtonIndex);
+	void OnFocusMenuPanel(class UUnionUIButtonBase* Button, int32 ButtonIndex);
+	struct FEventReply OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent);
 	void OnItemFocused_イベント(int32 PlayerIndex, int32 SlotState, int32 SlotIndex);
 	void OnItemFocused_イベント_0(int32 PlayerIndex, int32 SlotState, int32 SlotIndex);
 	void OnItemFocused_イベント_1(int32 PlayerIndex, int32 SlotState, int32 SlotIndex);
 	void OnItemFocused_イベント_2(int32 PlayerIndex, int32 SlotState, int32 SlotIndex);
+	void OnSpecialButtonPressedOptionPanel();
+	void PlayAnimationIn();
 	void ReturnFromPopupForDelay();
-	void BindGadgetInfo();
-	void ExecuteUbergraph_WBP_PauseMenu(int32 EntryPoint);
+	void ReturnFromPopuup();
+	void SequenceEvent();
+	void SequenceEvent__ENTRYPOINTWBP_PauseMenu();
+	void SetGadgetInfo();
+	void SetGadgetInfoMode(int32 PlayerControllerIndex);
+	void SetInitialFocus();
+	void SetOption(ERacePauseMenuItem PauseID, int32 PlayerIndex);
+	void SetVisibilityOptionButtons(TArray<class UUnionUIButtonBase*>& Buttons, ESlateVisibility Visibility_0);
+	void ShowFooterMenu();
+	void UnregisterMenuButton();
 
 	void GetMenuButton(int32 Index_0, class UWBP_CMN_RaceMenu_Sub_Btn_C** Button) const;
 

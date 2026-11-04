@@ -179,15 +179,15 @@ void UBPC_DodonpaEventState_C::OnUpdateState(float InDeltaTime)
 }
 
 
-// Function BPC_DodonpaEventState.BPC_DodonpaEventState_C.Set DodonpaEventFooter
+// Function BPC_DodonpaEventState.BPC_DodonpaEventState_C.Set Dodonpa Event Footer
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPC_DodonpaEventState_C::Set_DodonpaEventFooter()
+void UBPC_DodonpaEventState_C::Set_Dodonpa_Event_Footer()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_DodonpaEventState_C", "Set DodonpaEventFooter");
+		Func = Class->GetFunction("BPC_DodonpaEventState_C", "Set Dodonpa Event Footer");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -208,6 +208,30 @@ void UBPC_DodonpaEventState_C::SetDodonpaEventStatus(class FName InCallEventName
 		Func = Class->GetFunction("BPC_DodonpaEventState_C", "SetDodonpaEventStatus");
 
 	Params::BPC_DodonpaEventState_C_SetDodonpaEventStatus Parms{};
+
+	Parms.InCallEventName = InCallEventName;
+	Parms.InSaveDataFlagId = InSaveDataFlagId;
+	Parms.InBGMId = InBGMId;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_DodonpaEventState.BPC_DodonpaEventState_C.SetDodonpaEventStatusSeason2
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             InCallEventName                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EAppendDialogueEventBitFlag             InSaveDataFlagId                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EMenuSequenceBGM                        InBGMId                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_DodonpaEventState_C::SetDodonpaEventStatusSeason2(class FName InCallEventName, EAppendDialogueEventBitFlag InSaveDataFlagId, EMenuSequenceBGM InBGMId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_DodonpaEventState_C", "SetDodonpaEventStatusSeason2");
+
+	Params::BPC_DodonpaEventState_C_SetDodonpaEventStatusSeason2 Parms{};
 
 	Parms.InCallEventName = InCallEventName;
 	Parms.InSaveDataFlagId = InSaveDataFlagId;

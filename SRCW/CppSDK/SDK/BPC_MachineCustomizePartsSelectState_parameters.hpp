@@ -10,15 +10,52 @@
 
 #include "Basic.hpp"
 
-#include "ST_GarageData_structs.hpp"
 #include "Engine_structs.hpp"
-#include "UNION_structs.hpp"
-#include "UnionSystem_structs.hpp"
 #include "UnionRun_structs.hpp"
+#include "UnionSystem_structs.hpp"
+#include "ST_GarageData_structs.hpp"
+#include "UNION_structs.hpp"
 
 
 namespace SDK::Params
 {
+
+// Function BPC_MachineCustomizePartsSelectState.BPC_MachineCustomizePartsSelectState_C.ResetSticker
+// 0x0130 (0x0130 - 0x0000)
+struct BPC_MachineCustomizePartsSelectState_C_ResetSticker final
+{
+public:
+	struct FUserMachineCustomizeData              InUpdateCustomizeData;                             // 0x0000(0x0078)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FUserMachineCustomizeData              OutCustomizeData;                                  // 0x0078(0x0078)(Parm, OutParm)
+	int32                                         Temp_int_Variable;                                 // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x00F4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F5[0x3];                                       // 0x00F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_1;                               // 0x00FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_1;           // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_101[0x3];                                      // 0x0101(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0104(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_2;                               // 0x0108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_2;           // 0x010C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_10D[0x3];                                      // 0x010D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_3;                               // 0x0114(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_3;           // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_119[0x3];                                      // 0x0119(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x011C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSpecifiedMachineCustomConditionResult CallFunc_GetSpecifiedMachineCustomConditionResult_ReturnValue; // 0x0120(0x000A)(NoDestructor)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x012A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_MachineCustomizePartsSelectState_C_ResetSticker;
+
+// Function BPC_MachineCustomizePartsSelectState.BPC_MachineCustomizePartsSelectState_C.SetMachineCustomizeDataWithoutPartsId
+// 0x0078 (0x0078 - 0x0000)
+struct BPC_MachineCustomizePartsSelectState_C_SetMachineCustomizeDataWithoutPartsId final
+{
+public:
+	struct FUserMachineCustomizeData              InCustomizeData_0;                                 // 0x0000(0x0078)(BlueprintVisible, BlueprintReadOnly, Parm)
+};
+DUMPER7_ASSERTS_BPC_MachineCustomizePartsSelectState_C_SetMachineCustomizeDataWithoutPartsId;
 
 // Function BPC_MachineCustomizePartsSelectState.BPC_MachineCustomizePartsSelectState_C.TipsWindow_CloseTipsWindow
 // 0x0020 (0x0020 - 0x0000)
@@ -54,7 +91,7 @@ DUMPER7_ASSERTS_BPC_MachineCustomizePartsSelectState_C_OpenTipsWindow;
 struct BPC_MachineCustomizePartsSelectState_C_UpdateCustomizeData final
 {
 public:
-	struct FUserMachineCustomizeData              InCustomizeData;                                   // 0x0000(0x0078)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FUserMachineCustomizeData              InCustomizeData_0;                                 // 0x0000(0x0078)(BlueprintVisible, BlueprintReadOnly, Parm)
 	struct FUserMachineCustomizeData              OutCustomizeData;                                  // 0x0078(0x0078)(Parm, OutParm)
 	struct FUserMachineCustomizeData              TempCustomizeData;                                 // 0x00F0(0x0078)(Edit, BlueprintVisible)
 	struct FUserStickerData                       Temp_struct_Variable;                              // 0x0168(0x0028)(ConstParm, NoDestructor)
@@ -79,20 +116,20 @@ public:
 DUMPER7_ASSERTS_BPC_MachineCustomizePartsSelectState_C_UpdateCustomizeData;
 
 // Function BPC_MachineCustomizePartsSelectState.BPC_MachineCustomizePartsSelectState_C.OnPartsSelected
-// 0x01E8 (0x01E8 - 0x0000)
+// 0x01F8 (0x01F8 - 0x0000)
 struct BPC_MachineCustomizePartsSelectState_C_OnPartsSelected final
 {
 public:
 	EMachinePartsType                             InPartsType;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EMachineId                                    InPartsId;                                         // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EMachineId                                    CallFunc_GetCurrentPartsIds_OutFrontPartsId;       // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EMachineId                                    CallFunc_GetCurrentPartsIds_OutRearPartsId;        // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EMachineId                                    CallFunc_GetCurrentPartsIds_OutTirePartsId;        // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUserMachineCustomizeData              CallFunc_GetSelectedMachineCustomizeData_ReturnValue; // 0x0008(0x0078)()
-	struct FUserMachineCustomizeData              K2Node_SetFieldsInStruct_StructOut;                // 0x0080(0x0078)()
-	struct FUserMachineCustomizeData              CallFunc_GetSelectedMachineCustomizeData_ReturnValue_1; // 0x00F8(0x0078)()
-	struct FUserMachineCustomizeData              CallFunc_UpdateCustomizeData_OutCustomizeData;     // 0x0170(0x0078)()
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUserMachineCustomizeData              CallFunc_UpdateSpecifiedMachinedataTabDecision_ReturnValue; // 0x0008(0x0078)()
+	struct FUserMachineCustomizeData              CallFunc_UpdateCustomizeData_OutCustomizeData;     // 0x0080(0x0078)()
+	struct FUserMachineCustomizeData              CallFunc_ResetSticker_OutCustomizeData;            // 0x00F8(0x0078)()
+	struct FSpecifiedMachineCustomConditionResult CallFunc_GetSpecifiedMachineCustomConditionResult_ReturnValue; // 0x0170(0x000A)(NoDestructor)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x017A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_17B[0x5];                                      // 0x017B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUserMachineCustomizeData              CallFunc_GetSelectedMachineCustomizeData_ReturnValue; // 0x0180(0x0078)()
 };
 DUMPER7_ASSERTS_BPC_MachineCustomizePartsSelectState_C_OnPartsSelected;
 
@@ -111,22 +148,33 @@ public:
 DUMPER7_ASSERTS_BPC_MachineCustomizePartsSelectState_C_OnPartsFocused;
 
 // Function BPC_MachineCustomizePartsSelectState.BPC_MachineCustomizePartsSelectState_C.SetCustomizeModelView
-// 0x02D8 (0x02D8 - 0x0000)
+// 0x03D8 (0x03D8 - 0x0000)
 struct BPC_MachineCustomizePartsSelectState_C_SetCustomizeModelView final
 {
 public:
-	EMachineId                                    CallFunc_GetCurrentPartsIds_OutFrontPartsId;       // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EMachineId                                    CallFunc_GetCurrentPartsIds_OutRearPartsId;        // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EMachineId                                    CallFunc_GetCurrentPartsIds_OutTirePartsId;        // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3[0x5];                                        // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUserMachineCustomizeData              CallFunc_GetSelectedMachineCustomizeData_ReturnValue; // 0x0008(0x0078)()
-	struct FUserMachineCustomizeData              CallFunc_Get_Customize_Data_OutCustomizeData;      // 0x0080(0x0078)()
-	struct FUserMachineCustomizeData              K2Node_SetFieldsInStruct_StructOut;                // 0x00F8(0x0078)()
-	struct FUserMachineCustomizeData              CallFunc_UpdateCustomizeData_OutCustomizeData;     // 0x0170(0x0078)()
-	struct FUserMachineCustomizeData              CallFunc_Get_Customize_Data_OutCustomizeData_1;    // 0x01E8(0x0078)()
-	struct FUserMachineCustomizeData              CallFunc_Get_Customize_Data_OutCustomizeData_2;    // 0x0260(0x0078)()
+	struct FSpecifiedMachineCustomConditionResult CallFunc_GetSpecifiedMachineCustomConditionResult_ReturnValue; // 0x0000(0x000A)(NoDestructor)
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUserMachineCustomizeData              CallFunc_UpdateCustomizeData_OutCustomizeData;     // 0x0010(0x0078)()
+	struct FUserMachineCustomizeData              CallFunc_ResetSticker_OutCustomizeData;            // 0x0088(0x0078)()
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_101[0x7];                                      // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUserMachineCustomizeData              CallFunc_UpdateCustomizeData_OutCustomizeData_1;   // 0x0108(0x0078)()
+	struct FUserMachineCustomizeData              CallFunc_ResetSticker_OutCustomizeData_1;          // 0x0180(0x0078)()
+	struct FUserMachineCustomizeData              CallFunc_UpdateSpecifiedMachinedataPartsSelect_ReturnValue; // 0x01F8(0x0078)()
+	struct FUserMachineCustomizeData              CallFunc_GetSelectedMachineCustomizeData_ReturnValue; // 0x0270(0x0078)()
+	struct FUserMachineCustomizeData              CallFunc_Get_Customize_Data_OutCustomizeData;      // 0x02E8(0x0078)()
+	struct FUserMachineCustomizeData              CallFunc_Get_Customize_Data_OutCustomizeData_1;    // 0x0360(0x0078)()
 };
 DUMPER7_ASSERTS_BPC_MachineCustomizePartsSelectState_C_SetCustomizeModelView;
+
+// Function BPC_MachineCustomizePartsSelectState.BPC_MachineCustomizePartsSelectState_C.OnExit
+// 0x0001 (0x0001 - 0x0000)
+struct BPC_MachineCustomizePartsSelectState_C_OnExit final
+{
+public:
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_MachineCustomizePartsSelectState_C_OnExit;
 
 // Function BPC_MachineCustomizePartsSelectState.BPC_MachineCustomizePartsSelectState_C.OnSetup
 // 0x0080 (0x0080 - 0x0000)

@@ -22,9 +22,8 @@ struct WBP_CMN_LR_Arrow_C_ExecuteUbergraph_WBP_CMN_LR_Arrow final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsEnableMouseClick_ReturnValue;           // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsEnableMouseClick_ReturnValue_1;         // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsEnableMouseClick_ReturnValue;           // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsEnableMouseClick_ReturnValue_1;         // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_CMN_LR_Arrow_C_ExecuteUbergraph_WBP_CMN_LR_Arrow;
 
@@ -46,15 +45,6 @@ public:
 };
 DUMPER7_ASSERTS_WBP_CMN_LR_Arrow_C_PlayAnimationRightIn;
 
-// Function WBP_CMN_LR_Arrow.WBP_CMN_LR_Arrow_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_CMN_LR_Arrow_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_CMN_LR_Arrow_C_PreConstruct;
-
 // Function WBP_CMN_LR_Arrow.WBP_CMN_LR_Arrow_C.SetIsGamepadKey
 // 0x0001 (0x0001 - 0x0000)
 struct WBP_CMN_LR_Arrow_C_SetIsGamepadKey final
@@ -64,22 +54,14 @@ public:
 };
 DUMPER7_ASSERTS_WBP_CMN_LR_Arrow_C_SetIsGamepadKey;
 
-// Function WBP_CMN_LR_Arrow.WBP_CMN_LR_Arrow_C.SetVisibleButton
-// 0x0009 (0x0009 - 0x0000)
-struct WBP_CMN_LR_Arrow_C_SetVisibleButton final
+// Function WBP_CMN_LR_Arrow.WBP_CMN_LR_Arrow_C.SetVisibilityControllerBtn
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_CMN_LR_Arrow_C_SetVisibilityControllerBtn final
 {
 public:
-	bool                                          IsVisibility;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_2;                              // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_3;                              // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              InVisibility;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WBP_CMN_LR_Arrow_C_SetVisibleButton;
+DUMPER7_ASSERTS_WBP_CMN_LR_Arrow_C_SetVisibilityControllerBtn;
 
 // Function WBP_CMN_LR_Arrow.WBP_CMN_LR_Arrow_C.IsVisibleButton
 // 0x0001 (0x0001 - 0x0000)

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "UnionRun_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
@@ -40,6 +40,8 @@ public:
 	void OnBrakeInput(float InValue);
 	void OnDriftPressed();
 	void OnDriftReleased();
+	void OnDuelUltimatePressed();
+	void OnDuelUltimateReleased();
 	void OnEmotePressed();
 	void OnEmoteReleased();
 	void OnHornPressed();

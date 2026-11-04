@@ -219,6 +219,26 @@ void ABP_RaceResultRateRankSequence_C::OnInitStateUpdateRate()
 }
 
 
+// Function BP_RaceResultRateRankSequence.BP_RaceResultRateRankSequence_C.OnLoaded_51BE2A1A474F78A38D0684BD7DF13E4A
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TSubclassOf<class UObject>              Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+
+void ABP_RaceResultRateRankSequence_C::OnLoaded_51BE2A1A474F78A38D0684BD7DF13E4A(TSubclassOf<class UObject> Loaded)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_RaceResultRateRankSequence_C", "OnLoaded_51BE2A1A474F78A38D0684BD7DF13E4A");
+
+	Params::BP_RaceResultRateRankSequence_C_OnLoaded_51BE2A1A474F78A38D0684BD7DF13E4A Parms{};
+
+	Parms.Loaded = Loaded;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_RaceResultRateRankSequence.BP_RaceResultRateRankSequence_C.OnLoaded_8253A9344CCF796B76F6C29F92EDA292
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:

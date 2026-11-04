@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 #include "UMG_structs.hpp"
 
 
@@ -46,6 +46,7 @@ public:
 	void PressButtonAnimation();
 	void Set_Icon_Visibility(ESlateVisibility Visibility_0);
 	void SetText(const class FText& InText);
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 
 public:
 	static class UClass* StaticClass()

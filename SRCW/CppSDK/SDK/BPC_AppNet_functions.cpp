@@ -69,6 +69,28 @@ void UBPC_AppNet_C::CheckInvitationNoticeDisplay(class ULobbyJoinInfo* InLobbyJo
 }
 
 
+// Function BPC_AppNet.BPC_AppNet_C.CREATEDELEGATE_PROXYFUNCTION_0
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FLobbyInvitationNoticeInfo&LobbyInvitationNoticeInfo_0                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class ULobbyJoinInfo*                   LobbyInfo                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_AppNet_C::CREATEDELEGATE_PROXYFUNCTION_0(const struct FLobbyInvitationNoticeInfo& LobbyInvitationNoticeInfo_0, class ULobbyJoinInfo* LobbyInfo)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_AppNet_C", "CREATEDELEGATE_PROXYFUNCTION_0");
+
+	Params::BPC_AppNet_C_CREATEDELEGATE_PROXYFUNCTION_0 Parms{};
+
+	Parms.LobbyInvitationNoticeInfo_0 = std::move(LobbyInvitationNoticeInfo_0);
+	Parms.LobbyInfo = LobbyInfo;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BPC_AppNet.BPC_AppNet_C.DisplayFinishEvent
 // (BlueprintCallable, BlueprintEvent)
 

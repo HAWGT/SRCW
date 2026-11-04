@@ -11,10 +11,9 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
-#include "UnionLib_structs.hpp"
 #include "UnionUI_structs.hpp"
 
 
@@ -22,47 +21,40 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C
-// 0x0078 (0x0328 - 0x02B0)
+// 0x0058 (0x03F0 - 0x0398)
 class UBPC_GadgetCustomize2SelectState_C final : public UGadgetCustomize2SelectState
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class ABP_GadgetCustomize2Sequence_C*         Sequence;                                          // 0x02B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	EGadgetCustomizeSelectMode                    SelectMode;                                        // 0x02C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C1[0x7];                                      // 0x02C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGadgetSelectWindow*                    SelectWindow;                                      // 0x02C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UDummyWidget*                           DummyWidget;                                       // 0x02D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TArray<EGadgetId>                             LastGadgetIds;                                     // 0x02D8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class UCommonCountNumberWidget*               TicketBox;                                         // 0x02E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TArray<class UClass*>                         CustomizeWindowClasses;                            // 0x02F0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class UMenuInputRecieveObject*                InputReceiver;                                     // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UWBP_Popup_Window_Hint_C*               TipsWindow;                                        // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	EHintId                                       TipsIdGadgetPlateRankUp;                           // 0x0310(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_311[0x3];                                      // 0x0311(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         GadgetCustomDecide_ControlPlayer;                  // 0x0314(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetCategory                               GadgetCustomDecide_GadgetCategory;                 // 0x0318(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetId                                     GadgetCustomDecide_GadgetId;                       // 0x0319(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetState                                  GadgetCustomDecide_GadgetState;                    // 0x031A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          DebugUseSpecialRule;                               // 0x031B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGroupRaceRule                                DebugSpecialRule;                                  // 0x031C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_31D[0x3];                                      // 0x031D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         InPlayerIndex;                                     // 0x0320(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0398(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class ABP_GadgetCustomize2Sequence_C*         Sequence;                                          // 0x03A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	EGadgetCustomizeSelectMode                    SelectMode;                                        // 0x03A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3A9[0x7];                                      // 0x03A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGadgetSelectWindow*                    SelectWindow;                                      // 0x03B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UDummyWidget*                           DummyWidget;                                       // 0x03B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UCommonCountNumberWidget*               TicketBox;                                         // 0x03C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TArray<class UClass*>                         CustomizeWindowClasses;                            // 0x03C8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UMenuInputRecieveObject*                InputReceiver;                                     // 0x03D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UWBP_Popup_Window_Hint_C*               TipsWindow;                                        // 0x03E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	EHintId                                       TipsIdGadgetPlate;                                 // 0x03E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          DebugUseSpecialRule;                               // 0x03E9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EGroupRaceRule                                DebugSpecialRule;                                  // 0x03EA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsAnyTipsShown;                                    // 0x03EB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void CREATEDELEGATE_PROXYFUNCTION_0(class UObject* Object, const int32& PlayerControllerIndex);
+	void UpdateDonpaTicketBox();
+	void ChangeCustomizeWindowZOrder(const int32 InZOrder);
+	void SequenceEnd_FadeInFinished(const EUnionUIFadeDirection InFadeDirection);
 	void CreateGadgetPurchasePopup(bool* OutSuccess);
 	void SetFocusToDummyAll();
-	void SetFocusToDummy(const int32& InPlayerIndex_0);
-	void PlaySoundGadgetAttachCancel();
-	void PlaySoundGadgetAttach();
+	void SetFocusToDummy(const int32& InPlayerIndex);
 	void SetSequenceDirty(const bool InDirty);
-	void UpdateGadgetDetailWindowFromGadgetPlateLastFocus(const int32 InPlayerIndex_0);
-	void UnbindGadgetPlateDelegate(const int32 InPlayerIndex_0);
-	void BindGadgetPlateDelegate(const int32 InPlayerIndex_0);
-	void BindGadgetSelectWindowDelegate(const int32 InPlayerIndex_0);
+	void UnbindGadgetPlateDelegate(const int32 InPlayerIndex);
+	void BindGadgetPlateDelegate(const int32 InPlayerIndex);
+	void BindGadgetSelectWindowDelegate(const int32 InPlayerIndex);
 	void SetupDummyWidget();
 	void ChangeFooterZOrder();
 	void SetupDonpaTicketBoxWidget();
-	void SetupMachineParameterWidget();
 	void SetupGadgetDetailWidget();
 	void SetupGadgetCustomizeBaseWidget();
 	void UnbindsGadgetPlatePresetTabDelegate();
@@ -71,52 +63,25 @@ public:
 	void DebugPrintCurrentGadgetIds(TArray<EGadgetId>& InGadgetIds);
 	void SetHintReadOfLowerRank();
 	void SetupFestaSpecialRule();
-	void UpdateGadgetDetailWindow(const int32 InPlayerIndex_0, const EGadgetId InGadgetId);
-	void UpdateGadgetCustomWindow(const int32 InPlayerIndex_0, const int32 InPlateSlotFocusIndex);
-	void UpdateMachineParameterAll();
-	void UpdateMachineParameter(const int32 InPlayerIndex_0, const bool bDiffVisible);
-	void SetPlateWindowInValidIcons(int32 InPlayerId);
-	void Custom_Window_on_Item_Focused(int32 InPlayerIndex_0, EGadgetId InGadgetId, EGadgetState InGadgetState);
-	void FinalizeRewardDialog();
+	void UpdateGadgetCustomWindow(const int32 InPlayerIndex, const int32 InPlateSlotFocusIndex);
+	void Custom_Window_on_Item_Focused(int32 InPlayerIndex, EGadgetId InGadgetId, EGadgetState InGadgetState);
 	void SetBeforeGadgetPlateRankUpTipsWindowFlag(EHintId InHintId);
-	void Set_Gadget_Plate_Rank_Up_ID(bool* EnableOpenWindow);
-	void SetRacerGadgetPlateDataAll();
+	void Set_Tips_Id_Gadget_Plate(bool* EnableOpenWindow);
 	void TerminateInputReceiver();
 	void SetupInputReceiver();
-	void UpdateTicketBox();
-	void ReturnFocusAll();
-	void ReturnFocus(int32 InPlayerIndex_0);
-	void SetAttachedGadgetIdsToWindow(int32 InPlayerIndex_0);
 	void FinalizeWidgets();
 	void SetProperties();
-	void CustomWindow_OnFocusChangeUp(int32 PlayerIndex, EGadgetId gadgetId, EGadgetCategory CategoryId, EGadgetState GadgetState);
-	void CustomWindow_OnFocusChangeDown(int32 PlayerIndex, EGadgetId gadgetId, EGadgetCategory CategoryId, EGadgetState GadgetState);
-	void CustomWindow_OnFocusChangeRight(int32 PlayerIndex, EGadgetId gadgetId, EGadgetCategory CategoryId, EGadgetState GadgetState);
-	void CustomWindow_OnFocusChangeLeft(int32 PlayerIndex, EGadgetId gadgetId, EGadgetCategory CategoryId, EGadgetState GadgetState);
-	void CreateTipsWindow(EHintId InHintId);
-	void TipsWindow_CloseEndDelegate();
-	void OnDetachGadget(class UObject* Object, const int32& PlayerControllerIndex);
+	void OnAllTipsFinished();
 	void OnViewParameter(class UObject* Object, const int32& PlayerControllerIndex);
-	void SelectWindow_OnItemSelected(int32 PlayerIndex, EGadgetId gadgetId, EGadgetState GadgetState);
-	void SelectWindow_OnCancel(int32 PlayerIndex);
-	void SelectWindow_OnItemFocused(int32 PlayerIndex, EGadgetId gadgetId, EGadgetState GadgetState);
-	void RewardDialog_Purchase_OnResult(EDialogResult Result);
-	void RewardDialog_Unlock_OnResult(EDialogResult Result);
-	void SelectWindow_OnPurchaseAnimFinished();
-	void PlateWindow_OnItemFocused(int32 PlayerIndex, int32 SlotState, int32 SlotIndex);
-	void PlateWindow_OnItemSelected(int32 PlayerIndex, int32 SlotState, int32 SlotIndex);
-	void PlateWindow_OnCancel(int32 PlayerIndex);
-	void PlateWindow_OnLeftShoulder(int32 PlayerIndex);
-	void PlateWindow_OnRightShoulder(int32 PlayerIndex);
-	void Finished_SequenceEnd_FadeIn(EUnionUIFadeDirection FadeDirection);
-	void GadgetTabSelect(int32 InPlayerIndex_0, int32 InPresetNum);
+	void TipsWindow_CloseEndDelegate();
+	void SelectWindow_OnItemSelected(int32 PlayerIndex, EGadgetId GadgetID, EGadgetState GadgetState);
+	void SelectWindow_OnItemFocused(int32 PlayerIndex, EGadgetId GadgetID, EGadgetState GadgetState);
 	void OnInitState();
 	void OnExitState();
 	void ShowTipsWindow();
 	void Finished_SequenceBegin_FadeOut(EUnionUIFadeDirection FadeDirection);
-	void GadgetCustomWindow_OnSctollStart(int32 SelectedPlayerControllerIndex, EGadgetCategory SelectedGadgetCategory, EGadgetId SelectedGadgetId, EGadgetState SelectedGadgetState);
-	void GadgetCustomWindow_OnGadgetCategoryCancel(int32 SelectedPlayerControllerIndex, EGadgetCategory SelectedGadgetCategory, EGadgetId SelectedGadgetId, EGadgetState SelectedGadgetState);
-	void GadgetCustomWindow_OnGadgetCategoryDecide(int32 SelectedPlayerControllerIndex, EGadgetCategory SelectedGadgetCategory, EGadgetId SelectedGadgetId, EGadgetState SelectedGadgetState);
+	void CreateTipsWindow(EHintId InHintId);
+	void RequestNextTips();
 	void ExecuteUbergraph_BPC_GadgetCustomize2SelectState(int32 EntryPoint);
 
 public:

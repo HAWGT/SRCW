@@ -37,29 +37,15 @@ void UWBP_GadgetCustom_Sub_Tab_C::ExecuteUbergraph_WBP_GadgetCustom_Sub_Tab(int3
 }
 
 
-// Function WBP_GadgetCustom_Sub_Tab.WBP_GadgetCustom_Sub_Tab_C.OnConstTabButtons
+// Function WBP_GadgetCustom_Sub_Tab.WBP_GadgetCustom_Sub_Tab_C.PreConstButtonText
 // (Event, Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UWBP_GadgetCustom_Sub_Tab_C::OnConstTabButtons()
+void UWBP_GadgetCustom_Sub_Tab_C::PreConstButtonText()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_Tab_C", "OnConstTabButtons");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_GadgetCustom_Sub_Tab.WBP_GadgetCustom_Sub_Tab_C.OnConstTexts
-// (Event, Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWBP_GadgetCustom_Sub_Tab_C::OnConstTexts()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_Tab_C", "OnConstTexts");
+		Func = Class->GetFunction("WBP_GadgetCustom_Sub_Tab_C", "PreConstButtonText");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

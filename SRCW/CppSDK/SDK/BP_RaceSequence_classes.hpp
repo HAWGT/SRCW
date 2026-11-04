@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "UnionRun_structs.hpp"
 #include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "UnionRun_structs.hpp"
 #include "UnionUI_structs.hpp"
 #include "UnionLib_structs.hpp"
 
@@ -23,30 +23,26 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_RaceSequence.BP_RaceSequence_C
-// 0x0268 (0x06B0 - 0x0448)
+// 0x0310 (0x0778 - 0x0468)
 class ABP_RaceSequence_C final : public ARaceSequence
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0448(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBPC_RaceSequenceStateSave_C*           BPC_RaceSequenceStateSave;                         // 0x0450(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBPC_RaceSequenceStateDriverGetting_C*  BPC_RaceSequenceStateDriverGetting;                // 0x0458(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBPC_RaceSequenceStateTermination_C*    BPC_RaceSequenceStateTermination;                  // 0x0460(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBPC_AppNet_C*                          BPC_AppNet;                                        // 0x0468(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBPC_RaceSequenceStateReadyParam_C*     BPC_RaceSequenceStateReadyParam;                   // 0x0470(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBPC_RaceSequenceStatePauseMenu_C*      BPC_RaceSequenceStatePauseMenu;                    // 0x0478(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBPC_RaceSequenceStateRivalTeamEliminateResult_C* BPC_RaceSequenceStateRivalTeamEliminateResult; // 0x0480(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBPC_RaceSequenceStateSetupAssets_C*    BPC_RaceSequenceStateSetupAssets;                  // 0x0488(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBPC_RaceSequenceStateGadgetPlate_C*    BPC_RaceSequenceStateGadgetPlate;                  // 0x0490(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBPC_RaceSequenceStateSendRaceEnd_C*    BPC_RaceSequenceStateSendRaceEnd;                  // 0x0498(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBPC_RaceSequenceStateSendRaceStart_C*  BPC_RaceSequenceStateSendRaceStart;                // 0x04A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBPC_JudgeEndingState_C*                BPC_JudgeEndingState;                              // 0x04A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBPC_RaceSequenceStateEnding_C*         BPC_RaceSequenceStateEnding;                       // 0x04B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBPC_RaceSequenceStateResultRival_C*    BPC_RaceSequenceStateResultRival;                  // 0x04B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBPC_RaceSequenceStateCeremony_C*       BPC_RaceSequenceStateCeremony;                     // 0x04C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBPC_RaceSequenceStateSpawnRacer_C*     BPC_RaceSequenceStateSpawnRacer;                   // 0x04C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBPC_RaceSequenceStateFeaturedRacer_C*  BPC_RaceSequenceStateFeaturedRacer;                // 0x04D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBPC_RaceSequenceStatePerformRival_C*   BPC_RaceSequenceStatePerformRival;                 // 0x04D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBPC_RaceSequenceStateEntryRival_C*     BPC_RaceSequenceStateEntryRival;                   // 0x04E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0468(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBPC_RaceSequenceStateSave_C*           BPC_RaceSequenceStateSave;                         // 0x0470(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBPC_RaceSequenceStateDriverGetting_C*  BPC_RaceSequenceStateDriverGetting;                // 0x0478(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBPC_RaceSequenceStateTermination_C*    BPC_RaceSequenceStateTermination;                  // 0x0480(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBPC_AppNet_C*                          BPC_AppNet;                                        // 0x0488(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBPC_RaceSequenceStateReadyParam_C*     BPC_RaceSequenceStateReadyParam;                   // 0x0490(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBPC_RaceSequenceStatePauseMenu_C*      BPC_RaceSequenceStatePauseMenu;                    // 0x0498(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBPC_RaceSequenceStateRivalTeamEliminateResult_C* BPC_RaceSequenceStateRivalTeamEliminateResult; // 0x04A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBPC_RaceSequenceStateSetupAssets_C*    BPC_RaceSequenceStateSetupAssets;                  // 0x04A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBPC_RaceSequenceStateGadgetPlate_C*    BPC_RaceSequenceStateGadgetPlate;                  // 0x04B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBPC_RaceSequenceStateSendRaceEnd_C*    BPC_RaceSequenceStateSendRaceEnd;                  // 0x04B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBPC_RaceSequenceStateSendRaceStart_C*  BPC_RaceSequenceStateSendRaceStart;                // 0x04C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBPC_JudgeEndingState_C*                BPC_JudgeEndingState;                              // 0x04C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBPC_RaceSequenceStateEnding_C*         BPC_RaceSequenceStateEnding;                       // 0x04D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBPC_RaceSequenceStateCeremony_C*       BPC_RaceSequenceStateCeremony;                     // 0x04D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBPC_RaceSequenceStateSpawnRacer_C*     BPC_RaceSequenceStateSpawnRacer;                   // 0x04E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UBPC_RaceSequenceStateEntryRacer_C*     BPC_RaceSequenceStateEntryRacer;                   // 0x04E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UBPC_RaceSequenceStateIntroduceCourse_C* BPC_RaceSequenceStateIntroduceCourse;             // 0x04F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UBPC_RaceSequenceStateEndMenu_C*        BPC_RaceSequenceStateEndMenu;                      // 0x04F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
@@ -84,10 +80,15 @@ public:
 	struct FSoundHandle                           RaceSilenceSoundHandle;                            // 0x0680(0x0004)(Edit, BlueprintVisible, DisableEditOnInstance)
 	uint8                                         Pad_684[0x4];                                      // 0x0684(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UObject*>                        CharaIcons;                                        // 0x0688(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	int32                                         Tmp;                                               // 0x0698(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         tmp;                                               // 0x0698(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_69C[0x4];                                      // 0x069C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 LoadRaceEndMenuSequence;                           // 0x06A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class UWBP_System_BlackBoard_C*               BlackBoard;                                        // 0x06A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TSoftClassPtr<class UClass>                   ResultRivalComponentClass;                         // 0x06B0(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftClassPtr<class UClass>                   DuelResultRivalComponentClass;                     // 0x06D8(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftClassPtr<class UClass>                   PerformRivalComponentClass;                        // 0x0700(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftClassPtr<class UClass>                   EntryRivalComponentClass;                          // 0x0728(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftClassPtr<class UClass>                   FeaturedRacerComponentClass;                       // 0x0750(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
 	void AfterReadyStatusObject();
@@ -98,7 +99,7 @@ public:
 	void BindRaceBGMEvent(class UAppRaceEventManager* AppRaceEventManager);
 	void BindSilenceSoundEvent(class UAppRaceEventManager* AppRaceEventManager);
 	void ChangeDomainPre1st(int32 RacerIndex);
-	void ChangeSubEvent(const EMainSubCourseIndex& NextMainSubState, int32 RacerID);
+	void ChangeSubEvent(const EMainSubCourseIndex& NextMainSubState, int32 RacerId);
 	void ChangeSubMapTexture(int32 DomainIndex, EMainSubCourseIndex NextMainSubState, EStageCourseMainSubMapInfo* MainSubState);
 	void Chara_Machine_COMROM();
 	void CheckDebugGenericVar();
@@ -174,6 +175,8 @@ public:
 	void StatusObjectEventInt(const int32& EventId, const int32& Value);
 	void StopBGM();
 	void StopRaceBGM();
+	void VSInAnimationFinishEvent();
+	void VSWindowOutAnimationFinishEvent();
 
 public:
 	static class UClass* StaticClass()

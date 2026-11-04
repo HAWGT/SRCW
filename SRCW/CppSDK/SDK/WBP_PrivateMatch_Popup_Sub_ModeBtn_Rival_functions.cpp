@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function WBP_PrivateMatch_Popup_Sub_ModeBtn_Rival.WBP_PrivateMatch_Popup_Sub_ModeBtn_Rival_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWBP_PrivateMatch_Popup_Sub_ModeBtn_Rival_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PrivateMatch_Popup_Sub_ModeBtn_Rival_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function WBP_PrivateMatch_Popup_Sub_ModeBtn_Rival.WBP_PrivateMatch_Popup_Sub_ModeBtn_Rival_C.ExecuteUbergraph_WBP_PrivateMatch_Popup_Sub_ModeBtn_Rival
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -65,20 +51,6 @@ void UWBP_PrivateMatch_Popup_Sub_ModeBtn_Rival_C::OnAcceptKeyPressed()
 }
 
 
-// Function WBP_PrivateMatch_Popup_Sub_ModeBtn_Rival.WBP_PrivateMatch_Popup_Sub_ModeBtn_Rival_C.OnActiveToSelectAnimFinished
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_PrivateMatch_Popup_Sub_ModeBtn_Rival_C::OnActiveToSelectAnimFinished()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PrivateMatch_Popup_Sub_ModeBtn_Rival_C", "OnActiveToSelectAnimFinished");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function WBP_PrivateMatch_Popup_Sub_ModeBtn_Rival.WBP_PrivateMatch_Popup_Sub_ModeBtn_Rival_C.OnAddedToFocusPath
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
@@ -108,68 +80,6 @@ void UWBP_PrivateMatch_Popup_Sub_ModeBtn_Rival_C::OnBackKeyPressed()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("WBP_PrivateMatch_Popup_Sub_ModeBtn_Rival_C", "OnBackKeyPressed");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_PrivateMatch_Popup_Sub_ModeBtn_Rival.WBP_PrivateMatch_Popup_Sub_ModeBtn_Rival_C.OnDecisionAnimFinished
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_PrivateMatch_Popup_Sub_ModeBtn_Rival_C::OnDecisionAnimFinished()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PrivateMatch_Popup_Sub_ModeBtn_Rival_C", "OnDecisionAnimFinished");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_PrivateMatch_Popup_Sub_ModeBtn_Rival.WBP_PrivateMatch_Popup_Sub_ModeBtn_Rival_C.OnDecisionAnimStart
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_PrivateMatch_Popup_Sub_ModeBtn_Rival_C::OnDecisionAnimStart()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PrivateMatch_Popup_Sub_ModeBtn_Rival_C", "OnDecisionAnimStart");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_PrivateMatch_Popup_Sub_ModeBtn_Rival.WBP_PrivateMatch_Popup_Sub_ModeBtn_Rival_C.OnFocus_Impl
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UUnionUIButtonBase*               Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_PrivateMatch_Popup_Sub_ModeBtn_Rival_C::OnFocus_Impl(class UUnionUIButtonBase* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PrivateMatch_Popup_Sub_ModeBtn_Rival_C", "OnFocus_Impl");
-
-	Params::WBP_PrivateMatch_Popup_Sub_ModeBtn_Rival_C_OnFocus_Impl Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_PrivateMatch_Popup_Sub_ModeBtn_Rival.WBP_PrivateMatch_Popup_Sub_ModeBtn_Rival_C.OnFocusAnimStart
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_PrivateMatch_Popup_Sub_ModeBtn_Rival_C::OnFocusAnimStart()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PrivateMatch_Popup_Sub_ModeBtn_Rival_C", "OnFocusAnimStart");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -215,34 +125,6 @@ void UWBP_PrivateMatch_Popup_Sub_ModeBtn_Rival_C::OnRemovedFromFocusPath(const s
 }
 
 
-// Function WBP_PrivateMatch_Popup_Sub_ModeBtn_Rival.WBP_PrivateMatch_Popup_Sub_ModeBtn_Rival_C.OnSlectToActiveAnimFinished
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_PrivateMatch_Popup_Sub_ModeBtn_Rival_C::OnSlectToActiveAnimFinished()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PrivateMatch_Popup_Sub_ModeBtn_Rival_C", "OnSlectToActiveAnimFinished");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_PrivateMatch_Popup_Sub_ModeBtn_Rival.WBP_PrivateMatch_Popup_Sub_ModeBtn_Rival_C.OnUnFocusAnimStart
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_PrivateMatch_Popup_Sub_ModeBtn_Rival_C::OnUnFocusAnimStart()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PrivateMatch_Popup_Sub_ModeBtn_Rival_C", "OnUnFocusAnimStart");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function WBP_PrivateMatch_Popup_Sub_ModeBtn_Rival.WBP_PrivateMatch_Popup_Sub_ModeBtn_Rival_C.SetButtonInDetailText
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -280,20 +162,6 @@ void UWBP_PrivateMatch_Popup_Sub_ModeBtn_Rival_C::SetButtonInText(const class FT
 	Parms.InText = std::move(InText);
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_PrivateMatch_Popup_Sub_ModeBtn_Rival.WBP_PrivateMatch_Popup_Sub_ModeBtn_Rival_C.SetupButton
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_PrivateMatch_Popup_Sub_ModeBtn_Rival_C::SetupButton()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PrivateMatch_Popup_Sub_ModeBtn_Rival_C", "SetupButton");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

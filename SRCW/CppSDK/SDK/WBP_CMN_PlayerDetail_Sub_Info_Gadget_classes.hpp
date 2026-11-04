@@ -10,36 +10,37 @@
 
 #include "Basic.hpp"
 
-#include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
-#include "UMG_classes.hpp"
+#include "UNION_classes.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_CMN_PlayerDetail_Sub_Info_Gadget.WBP_CMN_PlayerDetail_Sub_Info_Gadget_C
-// 0x0040 (0x0320 - 0x02E0)
-class UWBP_CMN_PlayerDetail_Sub_Info_Gadget_C final : public UUserWidget
+// 0x0070 (0x0390 - 0x0320)
+class UWBP_CMN_PlayerDetail_Sub_Info_Gadget_C final : public UPlayerDetail_GadgetInfo
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWBP_CMN_PlayerDetail_Sub_Info_Gadget_List_C* WBP_CMN_PlayerDetail_Sub_Info_Gadget_List_01; // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_CMN_PlayerDetail_Sub_Info_Gadget_List_C* WBP_CMN_PlayerDetail_Sub_Info_Gadget_List_02; // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_CMN_PlayerDetail_Sub_Info_Gadget_List_C* WBP_CMN_PlayerDetail_Sub_Info_Gadget_List_03; // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_CMN_PlayerDetail_Sub_Info_Gadget_List_C* WBP_CMN_PlayerDetail_Sub_Info_Gadget_List_04; // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_CMN_PlayerDetail_Sub_Info_Gadget_List_C* WBP_CMN_PlayerDetail_Sub_Info_Gadget_List_05; // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_CMN_PlayerDetail_Sub_Info_Gadget_List_C* WBP_CMN_PlayerDetail_Sub_Info_Gadget_List_06; // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_GadgetCustom_Sub_GadgetPlate_C*    WBP_GadgetCustom_Sub_GadgetPlate;                  // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0320(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 Blue_Wall;                                         // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Blue_Wall_shadow;                                  // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Cover;                                             // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Cover_2;                                           // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Cover_Shadow;                                      // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Donpa;                                             // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 gadget;                                            // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Read_Wall_shadow;                                  // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Red_Wall;                                          // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UUnionRichTextBlock*                    TXT_CloseInfo;                                     // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_RaceBefore_Sub_DuelLine_Blue_C*    WBP_RaceBefore_Sub_DuelLine_Blue_1;                // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_RaceBefore_Sub_DuelLine_Red_C*     WBP_RaceBefore_Sub_DuelLine_Red_1;                 // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        WidgetSwitcher_Gadget;                             // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void Construct();
 	void ExecuteUbergraph_WBP_CMN_PlayerDetail_Sub_Info_Gadget(int32 EntryPoint);
-	void SetGadgetList(const struct FGadgetPlateUIData& InPlateUIData, TArray<EGadgetId>& DisableGadgetList);
-	void SetupGadgetListDefaultSlots(const struct FGadgetPlateUIData& InGadgetPlateUIData, TArray<EGadgetId>& InDisableGadgetList, TArray<class UWBP_CMN_PlayerDetail_Sub_Info_Gadget_List_C*>& InOutList, int32 InTotalCost, int32 InDisableSlotSize, int32* OutNewTotalCost, int32* OutNewDisableSlotSize);
-	void SetupGadgetListEmptySlots(const struct FGadgetPlateUIData& InGadgetPlateUIData, TArray<class UWBP_CMN_PlayerDetail_Sub_Info_Gadget_List_C*>& InOutList, int32 InTotalCost);
-	void SetupGadgetListInvalidSlots(TArray<class UWBP_CMN_PlayerDetail_Sub_Info_Gadget_List_C*>& InOutList, int32 InInvalidSlotCount);
-	void SetupGadgetListLockSlots(TArray<class UWBP_CMN_PlayerDetail_Sub_Info_Gadget_List_C*>& InOutList);
+	void SetExceptGadgetPage(bool IsExceptGadgetPage);
 
 public:
 	static class UClass* StaticClass()

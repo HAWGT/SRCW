@@ -24,6 +24,7 @@ class UBPFL_Widget_C final : public UBlueprintFunctionLibrary
 {
 public:
 	static void ChangeInputRegistrationOnVisibilityChanged(class UWidget* Target, ESlateVisibility Visibility, class UObject* __WorldContext);
+	static void CreateWidgetFromSoftClass(TSoftClassPtr<class UClass> SoftClass, class APlayerController* OwningPlayer, class UObject* __WorldContext, class UUserWidget** UserWidget);
 	static void ReplacementPlatformIconTexture_(class UImage* InImage, class UObject* __WorldContext);
 
 public:

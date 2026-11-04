@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
 #include "ABPT_HoldItem_structs.hpp"
 #include "AnimGraphRuntime_structs.hpp"
+#include "UNION_classes.hpp"
 
 
 namespace SDK

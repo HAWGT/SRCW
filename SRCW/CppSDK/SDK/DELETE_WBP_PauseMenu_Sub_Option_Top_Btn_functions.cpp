@@ -231,6 +231,34 @@ void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnDriftReleased()
 }
 
 
+// Function DELETE_WBP_PauseMenu_Sub_Option_Top_Btn.DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C.OnDuelUltimatePressed
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnDuelUltimatePressed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", "OnDuelUltimatePressed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function DELETE_WBP_PauseMenu_Sub_Option_Top_Btn.DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C.OnDuelUltimateReleased
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnDuelUltimateReleased()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", "OnDuelUltimateReleased");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function DELETE_WBP_PauseMenu_Sub_Option_Top_Btn.DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C.OnEmotePressed
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 

@@ -31,6 +31,20 @@ void UWBP_System_AutoSave_C::Construct()
 }
 
 
+// Function WBP_System_AutoSave.WBP_System_AutoSave_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWBP_System_AutoSave_C::Destruct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_System_AutoSave_C", "Destruct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_System_AutoSave.WBP_System_AutoSave_C.ExecuteUbergraph_WBP_System_AutoSave
 // (Final, UbergraphFunction)
 // Parameters:

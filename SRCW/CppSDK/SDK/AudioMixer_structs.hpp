@@ -198,6 +198,15 @@ public:
 };
 DUMPER7_ASSERTS_FSubmixEffectEQBand;
 
+// ScriptStruct AudioMixer.SubmixEffectSubmixEQSettings
+// 0x0010 (0x0010 - 0x0000)
+struct FSubmixEffectSubmixEQSettings final
+{
+public:
+	TArray<struct FSubmixEffectEQBand>            EQBands;                                           // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FSubmixEffectSubmixEQSettings;
+
 // ScriptStruct AudioMixer.AudioOutputDeviceInfo
 // 0x0048 (0x0048 - 0x0000)
 struct FAudioOutputDeviceInfo final
@@ -272,15 +281,6 @@ public:
 	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FSubmixEffectDynamicsProcessorSettings;
-
-// ScriptStruct AudioMixer.SubmixEffectSubmixEQSettings
-// 0x0010 (0x0010 - 0x0000)
-struct FSubmixEffectSubmixEQSettings final
-{
-public:
-	TArray<struct FSubmixEffectEQBand>            EQBands;                                           // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FSubmixEffectSubmixEQSettings;
 
 // ScriptStruct AudioMixer.SubmixEffectReverbSettings
 // 0x0040 (0x0040 - 0x0000)

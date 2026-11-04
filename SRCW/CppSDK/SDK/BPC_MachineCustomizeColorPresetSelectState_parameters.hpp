@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "ST_ColorPresetSelectPageData_structs.hpp"
-#include "ST_GarageData_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "ST_ColorPresetSelectPageItemData_structs.hpp"
-#include "UNION_structs.hpp"
+#include "ST_GarageData_structs.hpp"
 #include "UnionSystem_structs.hpp"
+#include "ST_ColorPresetSelectPageData_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "UNION_structs.hpp"
 
 
 namespace SDK::Params
@@ -53,19 +53,21 @@ public:
 DUMPER7_ASSERTS_BPC_MachineCustomizeColorPresetSelectState_C_EventColorPresetSelectPage_OnItemSelected;
 
 // Function BPC_MachineCustomizeColorPresetSelectState.BPC_MachineCustomizeColorPresetSelectState_C.EventColorPresetSelectPage_OnItemFocused
-// 0x0248 (0x0248 - 0x0000)
+// 0x0250 (0x0250 - 0x0000)
 struct BPC_MachineCustomizeColorPresetSelectState_C_EventColorPresetSelectPage_OnItemFocused final
 {
 public:
 	struct FST_ColorPresetSelectPageItemData      ItemData;                                          // 0x0000(0x0058)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	int32                                         InPlayerIndex;                                     // 0x0058(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         ButtonIndex;                                       // 0x005C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUserMachineCustomizeData              CallFunc_Get_Customize_Data_OutCustomizeData;      // 0x0068(0x0078)()
-	struct FUserMachineCustomizeData              K2Node_SetFieldsInStruct_StructOut;                // 0x00E0(0x0078)()
-	struct FUserMachineCustomizeData              CallFunc_GetSelectedMachineCustomizeData_ReturnValue; // 0x0158(0x0078)()
-	struct FUserMachineCustomizeData              CallFunc_SetAllMachineColorsAsPreset_ReturnValue;  // 0x01D0(0x0078)()
+	struct FSpecifiedMachineCustomConditionResult CallFunc_GetSpecifiedMachineCustomConditionResult_ReturnValue; // 0x0060(0x000A)(NoDestructor)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x006A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x006B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUserMachineCustomizeData              CallFunc_Get_Customize_Data_OutCustomizeData;      // 0x0070(0x0078)()
+	struct FUserMachineCustomizeData              CallFunc_GetSelectedMachineCustomizeData_ReturnValue; // 0x00E8(0x0078)()
+	struct FUserMachineCustomizeData              K2Node_SetFieldsInStruct_StructOut;                // 0x0160(0x0078)()
+	struct FUserMachineCustomizeData              CallFunc_SetAllMachineColorsAsPreset_ReturnValue;  // 0x01D8(0x0078)()
 };
 DUMPER7_ASSERTS_BPC_MachineCustomizeColorPresetSelectState_C_EventColorPresetSelectPage_OnItemFocused;
 

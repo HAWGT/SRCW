@@ -17,23 +17,17 @@
 namespace SDK
 {
 
-// Function BPC_MachineCustomizeHornSelectState.BPC_MachineCustomizeHornSelectState_C.CreateRewardDialog
-// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class URewardDialog*                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// Function BPC_MachineCustomizeHornSelectState.BPC_MachineCustomizeHornSelectState_C.PlaySoundPossible
+// (Event, Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-class URewardDialog* UBPC_MachineCustomizeHornSelectState_C::CreateRewardDialog()
+void UBPC_MachineCustomizeHornSelectState_C::PlaySoundPossible()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeHornSelectState_C", "CreateRewardDialog");
+		Func = Class->GetFunction("BPC_MachineCustomizeHornSelectState_C", "PlaySoundPossible");
 
-	Params::BPC_MachineCustomizeHornSelectState_C_CreateRewardDialog Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -51,17 +45,23 @@ void UBPC_MachineCustomizeHornSelectState_C::PlaySoundImpossible()
 }
 
 
-// Function BPC_MachineCustomizeHornSelectState.BPC_MachineCustomizeHornSelectState_C.PlaySoundPossible
-// (Event, Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BPC_MachineCustomizeHornSelectState.BPC_MachineCustomizeHornSelectState_C.CreateRewardDialog
+// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class URewardDialog*                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_MachineCustomizeHornSelectState_C::PlaySoundPossible()
+class URewardDialog* UBPC_MachineCustomizeHornSelectState_C::CreateRewardDialog()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeHornSelectState_C", "PlaySoundPossible");
+		Func = Class->GetFunction("BPC_MachineCustomizeHornSelectState_C", "CreateRewardDialog");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BPC_MachineCustomizeHornSelectState_C_CreateRewardDialog Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 

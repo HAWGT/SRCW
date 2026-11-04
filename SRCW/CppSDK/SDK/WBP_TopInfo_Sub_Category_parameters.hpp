@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "UnionSystem_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UMG_structs.hpp"
+#include "Engine_structs.hpp"
+#include "UnionSystem_structs.hpp"
 
 
 namespace SDK::Params
@@ -31,7 +31,7 @@ public:
 DUMPER7_ASSERTS_WBP_TopInfo_Sub_Category_C_ExecuteUbergraph_WBP_TopInfo_Sub_Category;
 
 // Function WBP_TopInfo_Sub_Category.WBP_TopInfo_Sub_Category_C.SetSwitcherIndex
-// 0x00F0 (0x00F0 - 0x0000)
+// 0x0110 (0x0110 - 0x0000)
 struct WBP_TopInfo_Sub_Category_C_SetSwitcherIndex final
 {
 public:
@@ -44,15 +44,17 @@ public:
 	class FText                                   Temp_text_Variable_4;                              // 0x0048(0x0010)()
 	class FText                                   Temp_text_Variable_5;                              // 0x0058(0x0010)()
 	class FText                                   Temp_text_Variable_6;                              // 0x0068(0x0010)()
-	class FText                                   K2Node_Select_Default;                             // 0x0078(0x0010)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0088(0x0048)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00D0(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00E0(0x0010)()
+	class FText                                   Temp_text_Variable_7;                              // 0x0078(0x0010)()
+	class FText                                   Temp_text_Variable_8;                              // 0x0088(0x0010)()
+	class FText                                   K2Node_Select_Default;                             // 0x0098(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x00A8(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00F0(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0100(0x0010)()
 };
 DUMPER7_ASSERTS_WBP_TopInfo_Sub_Category_C_SetSwitcherIndex;
 
 // Function WBP_TopInfo_Sub_Category.WBP_TopInfo_Sub_Category_C.Setup Gudget Info
-// 0x0038 (0x0038 - 0x0000)
+// 0x0048 (0x0048 - 0x0000)
 struct WBP_TopInfo_Sub_Category_C_Setup_Gudget_Info final
 {
 public:
@@ -61,6 +63,7 @@ public:
 	TArray<int32>                                 DisableGadgetIdRankMatch;                          // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	TArray<int32>                                 DisableGadgetIdFesta;                              // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	TArray<int32>                                 DisableGadgetIdLegendCompe;                        // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	TArray<int32>                                 DisableGadgetIdDuelCompe;                          // 0x0038(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
 DUMPER7_ASSERTS_WBP_TopInfo_Sub_Category_C_Setup_Gudget_Info;
 
@@ -79,17 +82,6 @@ public:
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_TopInfo_Sub_Category_C_SetupDLCInfo;
-
-// Function WBP_TopInfo_Sub_Category.WBP_TopInfo_Sub_Category_C.SetupFestaInfo
-// 0x0028 (0x0028 - 0x0000)
-struct WBP_TopInfo_Sub_Category_C_SetupFestaInfo final
-{
-public:
-	class FText                                   Title;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-	class FText                                   Schedule;                                          // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-	class UTexture2D*                             Texture;                                           // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_TopInfo_Sub_Category_C_SetupFestaInfo;
 
 // Function WBP_TopInfo_Sub_Category.WBP_TopInfo_Sub_Category_C.SetupFreecontentInfo
 // 0x0028 (0x0028 - 0x0000)
@@ -142,7 +134,7 @@ public:
 DUMPER7_ASSERTS_WBP_TopInfo_Sub_Category_C_SetupWorldMatchInfo;
 
 // Function WBP_TopInfo_Sub_Category.WBP_TopInfo_Sub_Category_C.UpdateButtonAnim
-// 0x0028 (0x0028 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct WBP_TopInfo_Sub_Category_C_UpdateButtonAnim final
 {
 public:
@@ -152,8 +144,11 @@ public:
 	class UWBP_Popup_Sub_Btn_Standard_C*          L_Target;                                          // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimationForward_ReturnValue;         // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimationForward_ReturnValue_1;       // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UWBP_DuelInfo_C*                        K2Node_DynamicCast_AsWBP_Duel_Info;                // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimationForward_ReturnValue;         // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimationForward_ReturnValue_1;       // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_TopInfo_Sub_Category_C_UpdateButtonAnim;
 

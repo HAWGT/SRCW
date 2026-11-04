@@ -17,40 +17,6 @@
 namespace SDK
 {
 
-// Function WBP_GadgetCustom_ScrollSnapPoint.WBP_GadgetCustom_ScrollSnapPoint_C.ExecuteUbergraph_WBP_GadgetCustom_ScrollSnapPoint
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_GadgetCustom_ScrollSnapPoint_C::ExecuteUbergraph_WBP_GadgetCustom_ScrollSnapPoint(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_ScrollSnapPoint_C", "ExecuteUbergraph_WBP_GadgetCustom_ScrollSnapPoint");
-
-	Params::WBP_GadgetCustom_ScrollSnapPoint_C_ExecuteUbergraph_WBP_GadgetCustom_ScrollSnapPoint Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_GadgetCustom_ScrollSnapPoint.WBP_GadgetCustom_ScrollSnapPoint_C.OnInitialized
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWBP_GadgetCustom_ScrollSnapPoint_C::OnInitialized()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_ScrollSnapPoint_C", "OnInitialized");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function WBP_GadgetCustom_ScrollSnapPoint.WBP_GadgetCustom_ScrollSnapPoint_C.Resize
 // (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:

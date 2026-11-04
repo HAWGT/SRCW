@@ -51,138 +51,23 @@ void UWBP_CMN_PlayerDetail_Sub_Info_Gadget_C::ExecuteUbergraph_WBP_CMN_PlayerDet
 }
 
 
-// Function WBP_CMN_PlayerDetail_Sub_Info_Gadget.WBP_CMN_PlayerDetail_Sub_Info_Gadget_C.SetGadgetList
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function WBP_CMN_PlayerDetail_Sub_Info_Gadget.WBP_CMN_PlayerDetail_Sub_Info_Gadget_C.SetExceptGadgetPage
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FGadgetPlateUIData&        InPlateUIData                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// TArray<EGadgetId>&                      DisableGadgetList                                      (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// bool                                    IsExceptGadgetPage                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_CMN_PlayerDetail_Sub_Info_Gadget_C::SetGadgetList(const struct FGadgetPlateUIData& InPlateUIData, TArray<EGadgetId>& DisableGadgetList)
+void UWBP_CMN_PlayerDetail_Sub_Info_Gadget_C::SetExceptGadgetPage(bool IsExceptGadgetPage)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PlayerDetail_Sub_Info_Gadget_C", "SetGadgetList");
+		Func = Class->GetFunction("WBP_CMN_PlayerDetail_Sub_Info_Gadget_C", "SetExceptGadgetPage");
 
-	Params::WBP_CMN_PlayerDetail_Sub_Info_Gadget_C_SetGadgetList Parms{};
+	Params::WBP_CMN_PlayerDetail_Sub_Info_Gadget_C_SetExceptGadgetPage Parms{};
 
-	Parms.InPlateUIData = std::move(InPlateUIData);
-	Parms.DisableGadgetList = std::move(DisableGadgetList);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	DisableGadgetList = std::move(Parms.DisableGadgetList);
-}
-
-
-// Function WBP_CMN_PlayerDetail_Sub_Info_Gadget.WBP_CMN_PlayerDetail_Sub_Info_Gadget_C.SetupGadgetListDefaultSlots
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FGadgetPlateUIData&        InGadgetPlateUIData                                    (BlueprintVisible, BlueprintReadOnly, Parm)
-// TArray<EGadgetId>&                      InDisableGadgetList                                    (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// TArray<class UWBP_CMN_PlayerDetail_Sub_Info_Gadget_List_C*>&InOutList                                              (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-// int32                                   InTotalCost                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InDisableSlotSize                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32*                                  OutNewTotalCost                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32*                                  OutNewDisableSlotSize                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_CMN_PlayerDetail_Sub_Info_Gadget_C::SetupGadgetListDefaultSlots(const struct FGadgetPlateUIData& InGadgetPlateUIData, TArray<EGadgetId>& InDisableGadgetList, TArray<class UWBP_CMN_PlayerDetail_Sub_Info_Gadget_List_C*>& InOutList, int32 InTotalCost, int32 InDisableSlotSize, int32* OutNewTotalCost, int32* OutNewDisableSlotSize)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PlayerDetail_Sub_Info_Gadget_C", "SetupGadgetListDefaultSlots");
-
-	Params::WBP_CMN_PlayerDetail_Sub_Info_Gadget_C_SetupGadgetListDefaultSlots Parms{};
-
-	Parms.InGadgetPlateUIData = std::move(InGadgetPlateUIData);
-	Parms.InDisableGadgetList = std::move(InDisableGadgetList);
-	Parms.InOutList = std::move(InOutList);
-	Parms.InTotalCost = InTotalCost;
-	Parms.InDisableSlotSize = InDisableSlotSize;
+	Parms.IsExceptGadgetPage = IsExceptGadgetPage;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	InDisableGadgetList = std::move(Parms.InDisableGadgetList);
-	InOutList = std::move(Parms.InOutList);
-
-	if (OutNewTotalCost != nullptr)
-		*OutNewTotalCost = Parms.OutNewTotalCost;
-
-	if (OutNewDisableSlotSize != nullptr)
-		*OutNewDisableSlotSize = Parms.OutNewDisableSlotSize;
-}
-
-
-// Function WBP_CMN_PlayerDetail_Sub_Info_Gadget.WBP_CMN_PlayerDetail_Sub_Info_Gadget_C.SetupGadgetListEmptySlots
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FGadgetPlateUIData&        InGadgetPlateUIData                                    (BlueprintVisible, BlueprintReadOnly, Parm)
-// TArray<class UWBP_CMN_PlayerDetail_Sub_Info_Gadget_List_C*>&InOutList                                              (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-// int32                                   InTotalCost                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_CMN_PlayerDetail_Sub_Info_Gadget_C::SetupGadgetListEmptySlots(const struct FGadgetPlateUIData& InGadgetPlateUIData, TArray<class UWBP_CMN_PlayerDetail_Sub_Info_Gadget_List_C*>& InOutList, int32 InTotalCost)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PlayerDetail_Sub_Info_Gadget_C", "SetupGadgetListEmptySlots");
-
-	Params::WBP_CMN_PlayerDetail_Sub_Info_Gadget_C_SetupGadgetListEmptySlots Parms{};
-
-	Parms.InGadgetPlateUIData = std::move(InGadgetPlateUIData);
-	Parms.InOutList = std::move(InOutList);
-	Parms.InTotalCost = InTotalCost;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	InOutList = std::move(Parms.InOutList);
-}
-
-
-// Function WBP_CMN_PlayerDetail_Sub_Info_Gadget.WBP_CMN_PlayerDetail_Sub_Info_Gadget_C.SetupGadgetListInvalidSlots
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TArray<class UWBP_CMN_PlayerDetail_Sub_Info_Gadget_List_C*>&InOutList                                              (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-// int32                                   InInvalidSlotCount                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_CMN_PlayerDetail_Sub_Info_Gadget_C::SetupGadgetListInvalidSlots(TArray<class UWBP_CMN_PlayerDetail_Sub_Info_Gadget_List_C*>& InOutList, int32 InInvalidSlotCount)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PlayerDetail_Sub_Info_Gadget_C", "SetupGadgetListInvalidSlots");
-
-	Params::WBP_CMN_PlayerDetail_Sub_Info_Gadget_C_SetupGadgetListInvalidSlots Parms{};
-
-	Parms.InOutList = std::move(InOutList);
-	Parms.InInvalidSlotCount = InInvalidSlotCount;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	InOutList = std::move(Parms.InOutList);
-}
-
-
-// Function WBP_CMN_PlayerDetail_Sub_Info_Gadget.WBP_CMN_PlayerDetail_Sub_Info_Gadget_C.SetupGadgetListLockSlots
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TArray<class UWBP_CMN_PlayerDetail_Sub_Info_Gadget_List_C*>&InOutList                                              (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-
-void UWBP_CMN_PlayerDetail_Sub_Info_Gadget_C::SetupGadgetListLockSlots(TArray<class UWBP_CMN_PlayerDetail_Sub_Info_Gadget_List_C*>& InOutList)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PlayerDetail_Sub_Info_Gadget_C", "SetupGadgetListLockSlots");
-
-	Params::WBP_CMN_PlayerDetail_Sub_Info_Gadget_C_SetupGadgetListLockSlots Parms{};
-
-	Parms.InOutList = std::move(InOutList);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	InOutList = std::move(Parms.InOutList);
 }
 
 }

@@ -11,19 +11,19 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_RaceResultRateRankSequence.BP_RaceResultRateRankSequence_C
-// 0x0008 (0x05D8 - 0x05D0)
+// 0x0008 (0x0678 - 0x0670)
 class ABP_RaceResultRateRankSequence_C final : public ARaceResultRateRankSequence
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x05D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0670(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void CreateRankUpRewardGetDisplay();
@@ -40,6 +40,7 @@ public:
 	void OnInitStateRankUp();
 	void OnInitStateStartDisplay();
 	void OnInitStateUpdateRate();
+	void OnLoaded_51BE2A1A474F78A38D0684BD7DF13E4A(TSubclassOf<class UObject> Loaded);
 	void OnLoaded_8253A9344CCF796B76F6C29F92EDA292(TSubclassOf<class UObject> Loaded);
 	void OnLoaded_954DBACF48FD86B2267102BA58197816(TSubclassOf<class UObject> Loaded);
 

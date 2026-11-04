@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
 #include "UnionUI_structs.hpp"
 
 
@@ -21,18 +21,14 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BPC_GetDLCFreeContent.BPC_GetDLCFreeContent_C
-// 0x0050 (0x01A0 - 0x0150)
+// 0x0030 (0x01B0 - 0x0180)
 class UBPC_GetDLCFreeContent_C final : public UGetFreeContentState
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0150(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWBP_ItemGet_Window_C*                  RewardGetWindow;                                   // 0x0158(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FRewardGetWindowParam>          Reward_Array;                                      // 0x0160(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<EDriverId>                             CharacterList;                                     // 0x0170(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class UWBP_AddCharacterInfo_C*                UnlockCharacterWidget;                             // 0x0180(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CharacterListIndex;                                // 0x0188(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_18C[0x4];                                      // 0x018C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void()>              OnSkipEvent;                                       // 0x0190(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0180(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWBP_ItemGet_Window_C*                  RewardGetWindow;                                   // 0x0188(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FRewardGetWindowParam>          Reward_Array;                                      // 0x0190(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMulticastInlineDelegate<void()>              OnSkipEvent;                                       // 0x01A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void CreateSilentSkipFooter();
@@ -48,20 +44,27 @@ public:
 	void MainFlow_DLC();
 	void MainFlow_EndSequence();
 	void MainFlow_FreeContent();
+	void MainFlow_RivalDuelSpecialReward();
 	void NoRewardError();
 	void OnClosed_DLCNoticeUnlockItem();
 	void OnClosed_FreeContentNoticeUnlockItem();
+	void OnClosed_RivalDuelSpecialRewardNoticeUnlockItem();
 	void OnComplete_Save(ESaveDataStatus Status);
 	void OnEndAnim_DLCUnclockCharacter();
 	void OnEndAnim_FreeContentUnclockCharacter();
+	void OnEndAnim_RivalDuelSpecialRewardUnlockCharacter();
 	void OnExitState();
 	void OnFinishedFade(EUnionUIFadeDirection FadeDirection);
 	void OnInitState();
 	void OnSkip();
-	void OpenRewardWindow(TArray<struct FRewardGetWindowParam>& rewardList, const class FText& Title, class UWBP_ItemGet_Window_C** newParam);
-	void OpenUnlockCharacter();
+	void OpenRewardWindow(TArray<struct FRewardGetWindowParam>& RewardList, const class FText& Title, class UWBP_ItemGet_Window_C** newParam);
+	void RivalDuelSpecialReward_RewardDialog();
+	void RivalDuelSpecialReward_UnlockCharacter();
+	void RivalDuelSpecialRewardFlow_End();
+	void RivalDuelSpecialRewardFlow_Start();
 	void SkipDLC_UnlockCharacter();
 	void SKIPFreeContent_UnlockCharacter();
+	void SkipRivalDuelSpecialReward_UnlockCharacter();
 
 public:
 	static class UClass* StaticClass()

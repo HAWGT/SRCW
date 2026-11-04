@@ -51,6 +51,28 @@ void UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::ExecuteUbergraph_WBP_CourseSe
 }
 
 
+// Function WBP_CourseSelect_Sub_Thumbnail_CrossWorld.WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C.InitializeCommonCourseSelect
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<EStageId>&                       InStageIds                                             (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::InitializeCommonCourseSelect(TArray<EStageId>& InStageIds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C", "InitializeCommonCourseSelect");
+
+	Params::WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C_InitializeCommonCourseSelect Parms{};
+
+	Parms.InStageIds = std::move(InStageIds);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	InStageIds = std::move(Parms.InStageIds);
+}
+
+
 // Function WBP_CourseSelect_Sub_Thumbnail_CrossWorld.WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C.InitializeCrossWorldCourseSelect
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -258,6 +280,26 @@ void UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::SetGameModeId(EGameModeId InG
 }
 
 
+// Function WBP_CourseSelect_Sub_Thumbnail_CrossWorld.WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C.SetInitializeFocusIndex
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   FocusIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::SetInitializeFocusIndex(int32 FocusIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C", "SetInitializeFocusIndex");
+
+	Params::WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C_SetInitializeFocusIndex Parms{};
+
+	Parms.FocusIndex = FocusIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_CourseSelect_Sub_Thumbnail_CrossWorld.WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C.SetMedalView
 // (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -388,6 +430,32 @@ void UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::SetupCourseSelectSubStageBox(
 
 	InStageIds = std::move(Parms.InStageIds);
 	InMedalAcuisitions = std::move(Parms.InMedalAcuisitions);
+}
+
+
+// Function WBP_CourseSelect_Sub_Thumbnail_CrossWorld.WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C.SetupCourseSelectSubStageBox_Common
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWBP_CourseSelect_Sub_StageBox_Multiple_C*InCourseSelect                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// int32                                   InPageIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TArray<EStageId>&                       InStageIds                                             (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::SetupCourseSelectSubStageBox_Common(class UWBP_CourseSelect_Sub_StageBox_Multiple_C* InCourseSelect, int32 InPageIndex, TArray<EStageId>& InStageIds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C", "SetupCourseSelectSubStageBox_Common");
+
+	Params::WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C_SetupCourseSelectSubStageBox_Common Parms{};
+
+	Parms.InCourseSelect = InCourseSelect;
+	Parms.InPageIndex = InPageIndex;
+	Parms.InStageIds = std::move(InStageIds);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	InStageIds = std::move(Parms.InStageIds);
 }
 
 

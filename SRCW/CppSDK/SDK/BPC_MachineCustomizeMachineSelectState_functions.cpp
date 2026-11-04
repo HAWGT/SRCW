@@ -345,6 +345,20 @@ void UBPC_MachineCustomizeMachineSelectState_C::UnbindMachineTypeSelectWindow(cl
 }
 
 
+// Function BPC_MachineCustomizeMachineSelectState.BPC_MachineCustomizeMachineSelectState_C.RemoveTipsWindow
+// (Event, Protected, BlueprintEvent)
+
+void UBPC_MachineCustomizeMachineSelectState_C::RemoveTipsWindow()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MachineCustomizeMachineSelectState_C", "RemoveTipsWindow");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BPC_MachineCustomizeMachineSelectState.BPC_MachineCustomizeMachineSelectState_C.ExecuteUbergraph_BPC_MachineCustomizeMachineSelectState
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:

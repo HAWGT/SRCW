@@ -10,18 +10,18 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
-#include "UnionUI_structs.hpp"
 #include "UMG_structs.hpp"
+#include "UnionUI_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_Friend_Sub_AllScroll.WBP_Friend_Sub_AllScroll_C
-// 0x0050 (0x0540 - 0x04F0)
+// 0x0058 (0x0548 - 0x04F0)
 class UWBP_Friend_Sub_AllScroll_C final : public UFriendListContentsWidget
 {
 public:
@@ -33,6 +33,7 @@ public:
 	uint8                                         Pad_524[0x4];                                      // 0x0524(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UWBP_Friend_Sub_PlayerPlate_Small_C*> ScrollBoxWidgetArray;                         // 0x0528(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 	class UUnionUIButtonBase*                     CurrentDecidedButton;                              // 0x0538(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         OnlineSettingSelectIndexList;                      // 0x0540(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AddListItemWidgetByListItemIndex(int32 InListItemIndex);

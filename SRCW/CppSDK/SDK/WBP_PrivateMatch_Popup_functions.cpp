@@ -838,6 +838,28 @@ void UWBP_PrivateMatch_Popup_C::OnPanelDecision_Impl(class UUnionUIButtonBase* B
 }
 
 
+// Function WBP_PrivateMatch_Popup.WBP_PrivateMatch_Popup_C.OnPanelDecisionDown_Impl
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UUnionUIButtonBase*               Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// int32                                   ButtonIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_PrivateMatch_Popup_C::OnPanelDecisionDown_Impl(class UUnionUIButtonBase* Button, int32 ButtonIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PrivateMatch_Popup_C", "OnPanelDecisionDown_Impl");
+
+	Params::WBP_PrivateMatch_Popup_C_OnPanelDecisionDown_Impl Parms{};
+
+	Parms.Button = Button;
+	Parms.ButtonIndex = ButtonIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_PrivateMatch_Popup.WBP_PrivateMatch_Popup_C.OnRightKeyPressed
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 
@@ -1357,8 +1379,9 @@ void UWBP_PrivateMatch_Popup_C::SetButtonsInteractableState(class UUnionUIButton
 // Parameters:
 // int32                                   SwitcherIndex                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   ButtonIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bGrayOut                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_PrivateMatch_Popup_C::SettingGrayOutButton(int32 SwitcherIndex, int32 ButtonIndex)
+void UWBP_PrivateMatch_Popup_C::SettingGrayOutButton(int32 SwitcherIndex, int32 ButtonIndex, bool bGrayOut)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1369,6 +1392,7 @@ void UWBP_PrivateMatch_Popup_C::SettingGrayOutButton(int32 SwitcherIndex, int32 
 
 	Parms.SwitcherIndex = SwitcherIndex;
 	Parms.ButtonIndex = ButtonIndex;
+	Parms.bGrayOut = bGrayOut;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

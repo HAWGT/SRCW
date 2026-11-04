@@ -246,6 +246,34 @@ void UWBP_Result_DonpaTicket_C::OnAcceptKeyPressed()
 }
 
 
+// Function WBP_Result_DonpaTicket.WBP_Result_DonpaTicket_C.OnDuelMedalInAnimationFinish
+// (Event, Protected, BlueprintEvent)
+
+void UWBP_Result_DonpaTicket_C::OnDuelMedalInAnimationFinish()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Result_DonpaTicket_C", "OnDuelMedalInAnimationFinish");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Result_DonpaTicket.WBP_Result_DonpaTicket_C.OnDuelMedalOutAnimationFinish
+// (Event, Protected, BlueprintEvent)
+
+void UWBP_Result_DonpaTicket_C::OnDuelMedalOutAnimationFinish()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Result_DonpaTicket_C", "OnDuelMedalOutAnimationFinish");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_Result_DonpaTicket.WBP_Result_DonpaTicket_C.OnFullScreenMouseClick
 // (BlueprintCallable, BlueprintEvent)
 
@@ -316,6 +344,48 @@ void UWBP_Result_DonpaTicket_C::PlayAnimOnBPFromRivalLevel()
 }
 
 
+// Function WBP_Result_DonpaTicket.WBP_Result_DonpaTicket_C.RescaleNumTextScaleBox
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Result_DonpaTicket_C::RescaleNumTextScaleBox()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Result_DonpaTicket_C", "RescaleNumTextScaleBox");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Result_DonpaTicket.WBP_Result_DonpaTicket_C.SequenceEvent
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_Result_DonpaTicket_C::SequenceEvent()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Result_DonpaTicket_C", "SequenceEvent");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Result_DonpaTicket.WBP_Result_DonpaTicket_C.SequenceEvent__ENTRYPOINTWBP_Result_DonpaTicket
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Result_DonpaTicket_C::SequenceEvent__ENTRYPOINTWBP_Result_DonpaTicket()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Result_DonpaTicket_C", "SequenceEvent__ENTRYPOINTWBP_Result_DonpaTicket");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_Result_DonpaTicket.WBP_Result_DonpaTicket_C.SetAddDonpaTicket
 // (BlueprintCallable, BlueprintEvent)
 
@@ -367,26 +437,6 @@ void UWBP_Result_DonpaTicket_C::SetAddDonpaTicketNum(int32 AddTicketNum, bool bI
 
 	Parms.AddTicketNum = AddTicketNum;
 	Parms.bIsTicketUpdate = bIsTicketUpdate;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Result_DonpaTicket.WBP_Result_DonpaTicket_C.SetChanceUpIconEnable
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    IsEnable                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Result_DonpaTicket_C::SetChanceUpIconEnable(bool IsEnable)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_DonpaTicket_C", "SetChanceUpIconEnable");
-
-	Params::WBP_Result_DonpaTicket_C_SetChanceUpIconEnable Parms{};
-
-	Parms.IsEnable = IsEnable;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -454,17 +504,45 @@ void UWBP_Result_DonpaTicket_C::SetOpenDonpaTicket(int32 PrevNum, int32 CurNum)
 }
 
 
-// Function WBP_Result_DonpaTicket.WBP_Result_DonpaTicket_C.SetupChanceUpParam
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function WBP_Result_DonpaTicket.WBP_Result_DonpaTicket_C.SetTicketChanceUpIconEnable
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    IsEnable                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Result_DonpaTicket_C::SetupChanceUpParam()
+void UWBP_Result_DonpaTicket_C::SetTicketChanceUpIconEnable(bool IsEnable)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_DonpaTicket_C", "SetupChanceUpParam");
+		Func = Class->GetFunction("WBP_Result_DonpaTicket_C", "SetTicketChanceUpIconEnable");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WBP_Result_DonpaTicket_C_SetTicketChanceUpIconEnable Parms{};
+
+	Parms.IsEnable = IsEnable;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Result_DonpaTicket.WBP_Result_DonpaTicket_C.SetUltimateShowdownPointUp
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// EUltimateShowdownCalcType               calcType                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   calcValue                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Result_DonpaTicket_C::SetUltimateShowdownPointUp(EUltimateShowdownCalcType calcType, int32 calcValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Result_DonpaTicket_C", "SetUltimateShowdownPointUp");
+
+	Params::WBP_Result_DonpaTicket_C_SetUltimateShowdownPointUp Parms{};
+
+	Parms.calcType = calcType;
+	Parms.calcValue = calcValue;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -490,6 +568,20 @@ void UWBP_Result_DonpaTicket_C::SetupForOpenDonpaTicket(int32 PrevNum, int32 Cur
 }
 
 
+// Function WBP_Result_DonpaTicket.WBP_Result_DonpaTicket_C.SetupTicketChanceUpParam
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Result_DonpaTicket_C::SetupTicketChanceUpParam()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Result_DonpaTicket_C", "SetupTicketChanceUpParam");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_Result_DonpaTicket.WBP_Result_DonpaTicket_C.Tick
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
@@ -509,6 +601,20 @@ void UWBP_Result_DonpaTicket_C::Tick(const struct FGeometry& MyGeometry, float I
 	Parms.InDeltaTime = InDeltaTime;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Result_DonpaTicket.WBP_Result_DonpaTicket_C.UpdateBonusAddMedalNum_AnimationEvent
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_Result_DonpaTicket_C::UpdateBonusAddMedalNum_AnimationEvent()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Result_DonpaTicket_C", "UpdateBonusAddMedalNum_AnimationEvent");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

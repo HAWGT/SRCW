@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "UNION_structs.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_structs.hpp"
 #include "UMG_classes.hpp"
 
 
@@ -19,7 +19,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_PrivateMatch_Popup_Sub_Info.WBP_PrivateMatch_Popup_Sub_Info_C
-// 0x00D8 (0x03B8 - 0x02E0)
+// 0x00E0 (0x03C0 - 0x02E0)
 class UWBP_PrivateMatch_Popup_Sub_Info_C final : public UUserWidget
 {
 public:
@@ -42,14 +42,15 @@ public:
 	class UWBP_Online_MatchingInfo_Sub_WaitingIcon_C* WBP_Online_MatchingInfo_Sub_WaitingIcon_UpLoad; // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_PrivateMatch_Popup_Sub_LobbyBtn_C* WBP_PrivateMatch_Popup_Sub_LobbyBtn_01;            // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_PrivateMatch_Popup_Sub_LobbyBtn_C* WBP_PrivateMatch_Popup_Sub_LobbyBtn_02;            // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_PrivateMatch_Popup_Sub_ModeBtn_Free_C* WBP_PrivateMatch_Popup_Sub_ModeBtn_Free;       // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_PrivateMatch_Popup_Sub_ModeBtn_Rival_C* WBP_PrivateMatch_Popup_Sub_ModeBtn_Rival;     // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidgetSwitcher*                        WS_Information;                                    // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          bJoin;                                             // 0x0390(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_391[0x7];                                      // 0x0391(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPrivateMatchPopup*                     Private_Match_Popup;                               // 0x0398(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void()>              PopupOutAnimFinishEvent;                           // 0x03A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	EPrivateMatchShowMenuType                     OpenShowMenuType;                                  // 0x03B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWBP_PrivateMatch_Popup_Sub_ModeBtn_Duel_C* WBP_PrivateMatch_Popup_Sub_ModeBtn_Duel;       // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_PrivateMatch_Popup_Sub_ModeBtn_Free_C* WBP_PrivateMatch_Popup_Sub_ModeBtn_Free;       // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_PrivateMatch_Popup_Sub_ModeBtn_Rival_C* WBP_PrivateMatch_Popup_Sub_ModeBtn_Rival;     // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        WS_Information;                                    // 0x0390(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          bJoin;                                             // 0x0398(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_399[0x7];                                      // 0x0399(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPrivateMatchPopup*                     Private_Match_Popup;                               // 0x03A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void()>              PopupOutAnimFinishEvent;                           // 0x03A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	EPrivateMatchShowMenuType                     OpenShowMenuType;                                  // 0x03B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void CompletedGoAnimationFinish();
@@ -68,8 +69,9 @@ public:
 	void PlayWaitingIconGoAnimation();
 	void PlayWaitingIconInAnimation();
 	void PreConstruct(bool IsDesignTime);
+	void Set_Navigation_Buttons(int32 SwitcherIndex, bool bIsAllStop);
 	void SetActiveWidgetButtonText(TArray<class FText>& Array, TArray<class UPrivateMatchButton*>& Buttons);
-	void SetButtonGrayOut(int32 SwitcherIndex, int32 ButtonIndex);
+	void SetButtonGrayOut(int32 SwitcherIndex, int32 ButtonIndex, bool GrayOut);
 	void SetButtonIcon(const int32 IconIndex, int32 ButtonIndex);
 	void SetButtonsText(const TArray<class FText>& InTextArray);
 	void SetInitFocusButton();

@@ -33,7 +33,7 @@ public:
 	bool                                          IsAnmSkip;                                         // 0x0314(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bRewardDispFinish;                                 // 0x0315(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_316[0x2];                                      // 0x0316(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ticketNum;                                         // 0x0318(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         TicketNum;                                         // 0x0318(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETimeTrialClearRankId                         ClearRank;                                         // 0x031C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_31D[0x3];                                      // 0x031D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<ERewardRedStarRingType>                RewardRedStarRingTypes;                            // 0x0320(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
@@ -47,7 +47,6 @@ public:
 	void Finished_AA894A354B37BA861733F197727695A6();
 	void Finished_CC39BDB44CC1ABDB85271FAB5BA5550F();
 	void GetTicketNum(int32* Num);
-	void IsResultReward(bool* bIsResultReward);
 	void IsRewardDispComplete(bool* bIsComplete);
 	void IsVisibleRSR(bool* visisble);
 	void PlayOtherResultReward(const TArray<struct FHonorCommendationData>& HonorList, int32 Param_Index_0);

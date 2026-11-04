@@ -20,7 +20,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_CourseSelect_Sub_StageBox_Multiple.WBP_CourseSelect_Sub_StageBox_Multiple_C
-// 0x0178 (0x0550 - 0x03D8)
+// 0x0180 (0x0558 - 0x03D8)
 class UWBP_CourseSelect_Sub_StageBox_Multiple_C final : public UUnionUISceneBase
 {
 public:
@@ -41,15 +41,21 @@ public:
 	TMulticastInlineDelegate<void()>              OnDecide;                                          // 0x0520(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	TMulticastInlineDelegate<void()>              OnCancel;                                          // 0x0530(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	TMulticastInlineDelegate<void(EUINavigation Navigation)> OnNextPanelFocus;                       // 0x0540(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	int32                                         MultipleStageThumbnailIndex;                       // 0x0550(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
+	void BP_OnEntryReleased();
+	void BP_OnItemExpansionChanged(bool bIsExpanded);
+	void BP_OnItemSelectionChanged(bool bIsSelected);
 	void Construct();
 	void DeactivateStageBox();
 	void ExecuteUbergraph_WBP_CourseSelect_Sub_StageBox_Multiple(int32 EntryPoint);
 	void GetEnableCourse(int32 Index_0, bool* bEnableCourse);
+	void InitUnlockAnimation(EStageId TargetStage);
 	class UWidget* Next_Panel_Navigation(EUINavigation Navigation_0);
 	void OnDecideCourseEvent(class UUnionUIButtonBase* Button);
 	struct FEventReply OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent);
+	void OnListItemObjectSet(class UObject* ListItemObject);
 	void SetButtonsInteractableState(bool Interactable);
 	void SetCourseId(int32 InIndex, EStageId InCourseId, double OpenThreshold, bool ForceHidden);
 	void SetCourseNameText(const class FText& CourseNameText, int32 Index_0);

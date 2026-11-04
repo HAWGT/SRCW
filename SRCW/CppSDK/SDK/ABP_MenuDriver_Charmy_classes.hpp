@@ -18,11 +18,12 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ABP_MenuDriver_Charmy.ABP_MenuDriver_Charmy_C
-// 0x0010 (0x1CD0 - 0x1CC0)
+// 0x0000 (0x37E0 - 0x37E0)
 class UABP_MenuDriver_Charmy_C final : public UABPT_MenuDriver_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_ABP_MenuDriver_Charmy_C;            // 0x1CC0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_37D5[0x3];                                     // 0x37D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame_ABP_MenuDriver_Charmy_C;            // 0x37D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void AnimNotify_CrownOff();

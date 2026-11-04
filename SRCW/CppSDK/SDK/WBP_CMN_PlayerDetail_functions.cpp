@@ -1160,8 +1160,9 @@ void UWBP_CMN_PlayerDetail_C::SetNiceCounts(int32 Counts)
 // bool                                    bIsCom                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    bIsOpenFriendList                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EMatchingLobbyType                      InLobbyType                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bExceptGadgetPage                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_CMN_PlayerDetail_C::Setup(const struct FLobbyPlayerData& InRacerData, bool bIsOwn, EBlockPlayerState BlockType, bool bIsCom, bool bIsOpenFriendList, EMatchingLobbyType InLobbyType)
+void UWBP_CMN_PlayerDetail_C::Setup(const struct FLobbyPlayerData& InRacerData, bool bIsOwn, EBlockPlayerState BlockType, bool bIsCom, bool bIsOpenFriendList, EMatchingLobbyType InLobbyType, bool bExceptGadgetPage)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1176,6 +1177,7 @@ void UWBP_CMN_PlayerDetail_C::Setup(const struct FLobbyPlayerData& InRacerData, 
 	Parms.bIsCom = bIsCom;
 	Parms.bIsOpenFriendList = bIsOpenFriendList;
 	Parms.InLobbyType = InLobbyType;
+	Parms.bExceptGadgetPage = bExceptGadgetPage;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

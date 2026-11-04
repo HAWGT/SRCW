@@ -17,138 +17,6 @@
 namespace SDK
 {
 
-// Function WBP_Friend_Sub_AddFriend.WBP_Friend_Sub_AddFriend_C.AddListItemWidgetByListItemIndex
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InListItemIndex                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Friend_Sub_AddFriend_C::AddListItemWidgetByListItemIndex(int32 InListItemIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AddFriend_C", "AddListItemWidgetByListItemIndex");
-
-	Params::WBP_Friend_Sub_AddFriend_C_AddListItemWidgetByListItemIndex Parms{};
-
-	Parms.InListItemIndex = InListItemIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Friend_Sub_AddFriend.WBP_Friend_Sub_AddFriend_C.CreateNumberInputWidget
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_Friend_Sub_AddFriend_C::CreateNumberInputWidget()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AddFriend_C", "CreateNumberInputWidget");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Friend_Sub_AddFriend.WBP_Friend_Sub_AddFriend_C.DestroyNumberInputWidget
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_Friend_Sub_AddFriend_C::DestroyNumberInputWidget()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AddFriend_C", "DestroyNumberInputWidget");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Friend_Sub_AddFriend.WBP_Friend_Sub_AddFriend_C.ExecuteAfterConfirmWidget
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EFriendListCommandType                  CommandType                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InButtonIndex                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bInCanceled                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Friend_Sub_AddFriend_C::ExecuteAfterConfirmWidget(EFriendListCommandType CommandType, int32 InButtonIndex, bool bInCanceled)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AddFriend_C", "ExecuteAfterConfirmWidget");
-
-	Params::WBP_Friend_Sub_AddFriend_C_ExecuteAfterConfirmWidget Parms{};
-
-	Parms.CommandType = CommandType;
-	Parms.InButtonIndex = InButtonIndex;
-	Parms.bInCanceled = bInCanceled;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Friend_Sub_AddFriend.WBP_Friend_Sub_AddFriend_C.ExecuteUbergraph_WBP_Friend_Sub_AddFriend
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Friend_Sub_AddFriend_C::ExecuteUbergraph_WBP_Friend_Sub_AddFriend(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AddFriend_C", "ExecuteUbergraph_WBP_Friend_Sub_AddFriend");
-
-	Params::WBP_Friend_Sub_AddFriend_C_ExecuteUbergraph_WBP_Friend_Sub_AddFriend Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Friend_Sub_AddFriend.WBP_Friend_Sub_AddFriend_C.FocusListItemWidget
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bInPlayFocusSound                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Friend_Sub_AddFriend_C::FocusListItemWidget(bool bInPlayFocusSound)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AddFriend_C", "FocusListItemWidget");
-
-	Params::WBP_Friend_Sub_AddFriend_C_FocusListItemWidget Parms{};
-
-	Parms.bInPlayFocusSound = bInPlayFocusSound;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Friend_Sub_AddFriend.WBP_Friend_Sub_AddFriend_C.GenerateSubMenu
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UUnionUIButtonBase*               Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Friend_Sub_AddFriend_C::GenerateSubMenu(class UUnionUIButtonBase* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AddFriend_C", "GenerateSubMenu");
-
-	Params::WBP_Friend_Sub_AddFriend_C_GenerateSubMenu Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_Friend_Sub_AddFriend.WBP_Friend_Sub_AddFriend_C.GetNumberInputWidget
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -166,68 +34,6 @@ class UFriendListNumberInputWidget* UWBP_Friend_Sub_AddFriend_C::GetNumberInputW
 	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
-}
-
-
-// Function WBP_Friend_Sub_AddFriend.WBP_Friend_Sub_AddFriend_C.GetScrollBoxWidget
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class UScrollBox*                       ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-class UScrollBox* UWBP_Friend_Sub_AddFriend_C::GetScrollBoxWidget()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AddFriend_C", "GetScrollBoxWidget");
-
-	Params::WBP_Friend_Sub_AddFriend_C_GetScrollBoxWidget Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function WBP_Friend_Sub_AddFriend.WBP_Friend_Sub_AddFriend_C.OnButtonDecisionEvent
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UUnionUIButtonBase*               Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Friend_Sub_AddFriend_C::OnButtonDecisionEvent(class UUnionUIButtonBase* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AddFriend_C", "OnButtonDecisionEvent");
-
-	Params::WBP_Friend_Sub_AddFriend_C_OnButtonDecisionEvent Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Friend_Sub_AddFriend.WBP_Friend_Sub_AddFriend_C.OnDirectionEvent
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UUnionUIButtonBase*               Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// EUnionUIControlDir                      Dir                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Friend_Sub_AddFriend_C::OnDirectionEvent(class UUnionUIButtonBase* Button, EUnionUIControlDir Dir)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AddFriend_C", "OnDirectionEvent");
-
-	Params::WBP_Friend_Sub_AddFriend_C_OnDirectionEvent Parms{};
-
-	Parms.Button = Button;
-	Parms.Dir = Dir;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -256,6 +62,70 @@ struct FEventReply UWBP_Friend_Sub_AddFriend_C::OnFocusReceived(const struct FGe
 }
 
 
+// Function WBP_Friend_Sub_AddFriend.WBP_Friend_Sub_AddFriend_C.GetScrollBoxWidget
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UScrollBox*                       ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UScrollBox* UWBP_Friend_Sub_AddFriend_C::GetScrollBoxWidget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Friend_Sub_AddFriend_C", "GetScrollBoxWidget");
+
+	Params::WBP_Friend_Sub_AddFriend_C_GetScrollBoxWidget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WBP_Friend_Sub_AddFriend.WBP_Friend_Sub_AddFriend_C.OnListItemDecisionDown
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UUnionUIButtonBase*               Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Friend_Sub_AddFriend_C::OnListItemDecisionDown(class UUnionUIButtonBase* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Friend_Sub_AddFriend_C", "OnListItemDecisionDown");
+
+	Params::WBP_Friend_Sub_AddFriend_C_OnListItemDecisionDown Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Friend_Sub_AddFriend.WBP_Friend_Sub_AddFriend_C.SetupListItemWidgetSingle
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWBP_Friend_Sub_PlayerPlate_Small_C*InItemListWidget                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// const struct FFriendListPlayerInfo&     InListPlayerInfo                                       (BlueprintVisible, BlueprintReadOnly, Parm)
+// int32                                   InButtonIndex                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Friend_Sub_AddFriend_C::SetupListItemWidgetSingle(class UWBP_Friend_Sub_PlayerPlate_Small_C* InItemListWidget, const struct FFriendListPlayerInfo& InListPlayerInfo, int32 InButtonIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Friend_Sub_AddFriend_C", "SetupListItemWidgetSingle");
+
+	Params::WBP_Friend_Sub_AddFriend_C_SetupListItemWidgetSingle Parms{};
+
+	Parms.InItemListWidget = InItemListWidget;
+	Parms.InListPlayerInfo = std::move(InListPlayerInfo);
+	Parms.InButtonIndex = InButtonIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_Friend_Sub_AddFriend.WBP_Friend_Sub_AddFriend_C.OnListItemCancelDown
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -276,19 +146,39 @@ void UWBP_Friend_Sub_AddFriend_C::OnListItemCancelDown(class UUnionUIButtonBase*
 }
 
 
-// Function WBP_Friend_Sub_AddFriend.WBP_Friend_Sub_AddFriend_C.OnListItemDecisionDown
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_Friend_Sub_AddFriend.WBP_Friend_Sub_AddFriend_C.FocusListItemWidget
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UUnionUIButtonBase*               Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// bool                                    bInPlayFocusSound                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Friend_Sub_AddFriend_C::OnListItemDecisionDown(class UUnionUIButtonBase* Button)
+void UWBP_Friend_Sub_AddFriend_C::FocusListItemWidget(bool bInPlayFocusSound)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AddFriend_C", "OnListItemDecisionDown");
+		Func = Class->GetFunction("WBP_Friend_Sub_AddFriend_C", "FocusListItemWidget");
 
-	Params::WBP_Friend_Sub_AddFriend_C_OnListItemDecisionDown Parms{};
+	Params::WBP_Friend_Sub_AddFriend_C_FocusListItemWidget Parms{};
+
+	Parms.bInPlayFocusSound = bInPlayFocusSound;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Friend_Sub_AddFriend.WBP_Friend_Sub_AddFriend_C.OnButtonDecisionEvent
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UUnionUIButtonBase*               Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Friend_Sub_AddFriend_C::OnButtonDecisionEvent(class UUnionUIButtonBase* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Friend_Sub_AddFriend_C", "OnButtonDecisionEvent");
+
+	Params::WBP_Friend_Sub_AddFriend_C_OnButtonDecisionEvent Parms{};
 
 	Parms.Button = Button;
 
@@ -320,15 +210,15 @@ void UWBP_Friend_Sub_AddFriend_C::OnNumberInputWidgetDecision(class UUnionUIButt
 }
 
 
-// Function WBP_Friend_Sub_AddFriend.WBP_Friend_Sub_AddFriend_C.OnRacerInfoEnd
-// (Event, Public, BlueprintEvent)
+// Function WBP_Friend_Sub_AddFriend.WBP_Friend_Sub_AddFriend_C.CreateNumberInputWidget
+// (BlueprintCallable, BlueprintEvent)
 
-void UWBP_Friend_Sub_AddFriend_C::OnRacerInfoEnd()
+void UWBP_Friend_Sub_AddFriend_C::CreateNumberInputWidget()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AddFriend_C", "OnRacerInfoEnd");
+		Func = Class->GetFunction("WBP_Friend_Sub_AddFriend_C", "CreateNumberInputWidget");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -354,17 +244,61 @@ void UWBP_Friend_Sub_AddFriend_C::OnUserSearchSuccess(const TArray<struct FCommo
 }
 
 
-// Function WBP_Friend_Sub_AddFriend.WBP_Friend_Sub_AddFriend_C.ResetContentsWidgetFocus
+// Function WBP_Friend_Sub_AddFriend.WBP_Friend_Sub_AddFriend_C.ExecuteAfterConfirmWidget
 // (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EFriendListCommandType                  CommandType                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InButtonIndex                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bInCanceled                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Friend_Sub_AddFriend_C::ResetContentsWidgetFocus()
+void UWBP_Friend_Sub_AddFriend_C::ExecuteAfterConfirmWidget(EFriendListCommandType CommandType, int32 InButtonIndex, bool bInCanceled)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AddFriend_C", "ResetContentsWidgetFocus");
+		Func = Class->GetFunction("WBP_Friend_Sub_AddFriend_C", "ExecuteAfterConfirmWidget");
+
+	Params::WBP_Friend_Sub_AddFriend_C_ExecuteAfterConfirmWidget Parms{};
+
+	Parms.CommandType = CommandType;
+	Parms.InButtonIndex = InButtonIndex;
+	Parms.bInCanceled = bInCanceled;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Friend_Sub_AddFriend.WBP_Friend_Sub_AddFriend_C.SetupListItemWidget
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Friend_Sub_AddFriend_C::SetupListItemWidget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Friend_Sub_AddFriend_C", "SetupListItemWidget");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Friend_Sub_AddFriend.WBP_Friend_Sub_AddFriend_C.AddListItemWidgetByListItemIndex
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InListItemIndex                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Friend_Sub_AddFriend_C::AddListItemWidgetByListItemIndex(int32 InListItemIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Friend_Sub_AddFriend_C", "AddListItemWidgetByListItemIndex");
+
+	Params::WBP_Friend_Sub_AddFriend_C_AddListItemWidgetByListItemIndex Parms{};
+
+	Parms.InListItemIndex = InListItemIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -388,17 +322,45 @@ void UWBP_Friend_Sub_AddFriend_C::SetButtonControlEnable(bool bInEnable)
 }
 
 
-// Function WBP_Friend_Sub_AddFriend.WBP_Friend_Sub_AddFriend_C.SetButtonsPanel
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_Friend_Sub_AddFriend.WBP_Friend_Sub_AddFriend_C.SetWidgetFocus
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class APlayerController*                PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    bInPlayFocusSound                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Friend_Sub_AddFriend_C::SetButtonsPanel()
+void UWBP_Friend_Sub_AddFriend_C::SetWidgetFocus(class APlayerController* PlayerController, bool bInPlayFocusSound)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AddFriend_C", "SetButtonsPanel");
+		Func = Class->GetFunction("WBP_Friend_Sub_AddFriend_C", "SetWidgetFocus");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WBP_Friend_Sub_AddFriend_C_SetWidgetFocus Parms{};
+
+	Parms.PlayerController = PlayerController;
+	Parms.bInPlayFocusSound = bInPlayFocusSound;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Friend_Sub_AddFriend.WBP_Friend_Sub_AddFriend_C.SetListItemWidgetInteractableState
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bInEnable                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Friend_Sub_AddFriend_C::SetListItemWidgetInteractableState(bool bInEnable)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Friend_Sub_AddFriend_C", "SetListItemWidgetInteractableState");
+
+	Params::WBP_Friend_Sub_AddFriend_C_SetListItemWidgetInteractableState Parms{};
+
+	Parms.bInEnable = bInEnable;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -424,21 +386,99 @@ void UWBP_Friend_Sub_AddFriend_C::SetListItemWidgetButtonChangeableState(int32 I
 }
 
 
-// Function WBP_Friend_Sub_AddFriend.WBP_Friend_Sub_AddFriend_C.SetListItemWidgetInteractableState
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_Friend_Sub_AddFriend.WBP_Friend_Sub_AddFriend_C.OnDirectionEvent
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bInEnable                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UUnionUIButtonBase*               Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// EUnionUIControlDir                      Dir                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Friend_Sub_AddFriend_C::SetListItemWidgetInteractableState(bool bInEnable)
+void UWBP_Friend_Sub_AddFriend_C::OnDirectionEvent(class UUnionUIButtonBase* Button, EUnionUIControlDir Dir)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AddFriend_C", "SetListItemWidgetInteractableState");
+		Func = Class->GetFunction("WBP_Friend_Sub_AddFriend_C", "OnDirectionEvent");
 
-	Params::WBP_Friend_Sub_AddFriend_C_SetListItemWidgetInteractableState Parms{};
+	Params::WBP_Friend_Sub_AddFriend_C_OnDirectionEvent Parms{};
 
-	Parms.bInEnable = bInEnable;
+	Parms.Button = Button;
+	Parms.Dir = Dir;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Friend_Sub_AddFriend.WBP_Friend_Sub_AddFriend_C.SetButtonsPanel
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_Friend_Sub_AddFriend_C::SetButtonsPanel()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Friend_Sub_AddFriend_C", "SetButtonsPanel");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Friend_Sub_AddFriend.WBP_Friend_Sub_AddFriend_C.DestroyNumberInputWidget
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Friend_Sub_AddFriend_C::DestroyNumberInputWidget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Friend_Sub_AddFriend_C", "DestroyNumberInputWidget");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Friend_Sub_AddFriend.WBP_Friend_Sub_AddFriend_C.ResetContentsWidgetFocus
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Friend_Sub_AddFriend_C::ResetContentsWidgetFocus()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Friend_Sub_AddFriend_C", "ResetContentsWidgetFocus");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Friend_Sub_AddFriend.WBP_Friend_Sub_AddFriend_C.OnRacerInfoEnd
+// (Event, Public, BlueprintEvent)
+
+void UWBP_Friend_Sub_AddFriend_C::OnRacerInfoEnd()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Friend_Sub_AddFriend_C", "OnRacerInfoEnd");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Friend_Sub_AddFriend.WBP_Friend_Sub_AddFriend_C.GenerateSubMenu
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UUnionUIButtonBase*               Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Friend_Sub_AddFriend_C::GenerateSubMenu(class UUnionUIButtonBase* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Friend_Sub_AddFriend_C", "GenerateSubMenu");
+
+	Params::WBP_Friend_Sub_AddFriend_C_GenerateSubMenu Parms{};
+
+	Parms.Button = Button;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -478,61 +518,21 @@ void UWBP_Friend_Sub_AddFriend_C::SetupButton()
 }
 
 
-// Function WBP_Friend_Sub_AddFriend.WBP_Friend_Sub_AddFriend_C.SetupListItemWidget
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_Friend_Sub_AddFriend_C::SetupListItemWidget()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AddFriend_C", "SetupListItemWidget");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Friend_Sub_AddFriend.WBP_Friend_Sub_AddFriend_C.SetupListItemWidgetSingle
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_Friend_Sub_AddFriend.WBP_Friend_Sub_AddFriend_C.ExecuteUbergraph_WBP_Friend_Sub_AddFriend
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// class UWBP_Friend_Sub_PlayerPlate_Small_C*InItemListWidget                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// const struct FFriendListPlayerInfo&     InListPlayerInfo                                       (BlueprintVisible, BlueprintReadOnly, Parm)
-// int32                                   InButtonIndex                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Friend_Sub_AddFriend_C::SetupListItemWidgetSingle(class UWBP_Friend_Sub_PlayerPlate_Small_C* InItemListWidget, const struct FFriendListPlayerInfo& InListPlayerInfo, int32 InButtonIndex)
+void UWBP_Friend_Sub_AddFriend_C::ExecuteUbergraph_WBP_Friend_Sub_AddFriend(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AddFriend_C", "SetupListItemWidgetSingle");
+		Func = Class->GetFunction("WBP_Friend_Sub_AddFriend_C", "ExecuteUbergraph_WBP_Friend_Sub_AddFriend");
 
-	Params::WBP_Friend_Sub_AddFriend_C_SetupListItemWidgetSingle Parms{};
+	Params::WBP_Friend_Sub_AddFriend_C_ExecuteUbergraph_WBP_Friend_Sub_AddFriend Parms{};
 
-	Parms.InItemListWidget = InItemListWidget;
-	Parms.InListPlayerInfo = std::move(InListPlayerInfo);
-	Parms.InButtonIndex = InButtonIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Friend_Sub_AddFriend.WBP_Friend_Sub_AddFriend_C.SetWidgetFocus
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class APlayerController*                PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    bInPlayFocusSound                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Friend_Sub_AddFriend_C::SetWidgetFocus(class APlayerController* PlayerController, bool bInPlayFocusSound)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AddFriend_C", "SetWidgetFocus");
-
-	Params::WBP_Friend_Sub_AddFriend_C_SetWidgetFocus Parms{};
-
-	Parms.PlayerController = PlayerController;
-	Parms.bInPlayFocusSound = bInPlayFocusSound;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

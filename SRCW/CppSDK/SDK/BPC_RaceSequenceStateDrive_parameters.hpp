@@ -16,25 +16,6 @@
 namespace SDK::Params
 {
 
-// Function BPC_RaceSequenceStateDrive.BPC_RaceSequenceStateDrive_C.NoticeChangeRaceStateEvent
-// 0x0002 (0x0002 - 0x0000)
-struct BPC_RaceSequenceStateDrive_C_NoticeChangeRaceStateEvent final
-{
-public:
-	ERaceInfoStateType                            InNewState;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ERaceInfoStateType                            InOldState;                                        // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_RaceSequenceStateDrive_C_NoticeChangeRaceStateEvent;
-
-// Function BPC_RaceSequenceStateDrive.BPC_RaceSequenceStateDrive_C.OnUpdateState
-// 0x0004 (0x0004 - 0x0000)
-struct BPC_RaceSequenceStateDrive_C_OnUpdateState final
-{
-public:
-	float                                         InDeltaTime;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_RaceSequenceStateDrive_C_OnUpdateState;
-
 // Function BPC_RaceSequenceStateDrive.BPC_RaceSequenceStateDrive_C.ExecuteUbergraph_BPC_RaceSequenceStateDrive
 // 0x00C0 (0x00C0 - 0x0000)
 struct BPC_RaceSequenceStateDrive_C_ExecuteUbergraph_BPC_RaceSequenceStateDrive final
@@ -90,6 +71,25 @@ public:
 	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue_10;       // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_RaceSequenceStateDrive_C_ExecuteUbergraph_BPC_RaceSequenceStateDrive;
+
+// Function BPC_RaceSequenceStateDrive.BPC_RaceSequenceStateDrive_C.NoticeChangeRaceStateEvent
+// 0x0002 (0x0002 - 0x0000)
+struct BPC_RaceSequenceStateDrive_C_NoticeChangeRaceStateEvent final
+{
+public:
+	ERaceInfoStateType                            InNewState;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ERaceInfoStateType                            InOldState;                                        // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_RaceSequenceStateDrive_C_NoticeChangeRaceStateEvent;
+
+// Function BPC_RaceSequenceStateDrive.BPC_RaceSequenceStateDrive_C.OnUpdateState
+// 0x0004 (0x0004 - 0x0000)
+struct BPC_RaceSequenceStateDrive_C_OnUpdateState final
+{
+public:
+	float                                         InDeltaTime;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_RaceSequenceStateDrive_C_OnUpdateState;
 
 }
 

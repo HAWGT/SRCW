@@ -10,9 +10,31 @@
 
 #include "Basic.hpp"
 
+#include "UnionSystem_structs.hpp"
+
 
 namespace SDK::Params
 {
+
+// Function WBP_HeaderMenu_Sub_Rule_TimeTable_Plan_02.WBP_HeaderMenu_Sub_Rule_TimeTable_Plan_02_C.SetupEXGadget
+// 0x0128 (0x0128 - 0x0000)
+struct WBP_HeaderMenu_Sub_Rule_TimeTable_Plan_02_C_SetupEXGadget final
+{
+public:
+	EGadgetId                                     exGadgetId;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetEnumeratorUserFriendlyName_ReturnValue; // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0028(0x0010)()
+	struct FGadgetData                            CallFunc_GetGadgetData_OutGadgetId;                // 0x0038(0x00D0)()
+	bool                                          CallFunc_GetGadgetData_ReturnValue;                // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_109[0x7];                                      // 0x0109(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                CallFunc_LoadAsset_Blocking_ReturnValue;           // 0x0110(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UTexture2D*                             K2Node_DynamicCast_As_____2D;                      // 0x0118(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_HeaderMenu_Sub_Rule_TimeTable_Plan_02_C_SetupEXGadget;
 
 // Function WBP_HeaderMenu_Sub_Rule_TimeTable_Plan_02.WBP_HeaderMenu_Sub_Rule_TimeTable_Plan_02_C.StartAnimation
 // 0x0030 (0x0030 - 0x0000)

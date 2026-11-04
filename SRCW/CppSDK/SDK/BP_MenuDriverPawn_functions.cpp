@@ -321,6 +321,20 @@ void ABP_MenuDriverPawn_C::PlayFaceOverrideMontage(EMenuDriverAnimationStateId I
 }
 
 
+// Function BP_MenuDriverPawn.BP_MenuDriverPawn_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_MenuDriverPawn_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MenuDriverPawn_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_MenuDriverPawn.BP_MenuDriverPawn_C.SetAnimationBoneSetting
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -446,6 +460,29 @@ void ABP_MenuDriverPawn_C::SetRideableStatusType(ECarStatusType StatusType)
 	Parms.StatusType = StatusType;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_MenuDriverPawn.BP_MenuDriverPawn_C.SetSkeletalMeshLOD
+// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const int32                             InLOD                                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool ABP_MenuDriverPawn_C::SetSkeletalMeshLOD(const int32 InLOD)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MenuDriverPawn_C", "SetSkeletalMeshLOD");
+
+	Params::BP_MenuDriverPawn_C_SetSkeletalMeshLOD Parms{};
+
+	Parms.InLOD = InLOD;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 

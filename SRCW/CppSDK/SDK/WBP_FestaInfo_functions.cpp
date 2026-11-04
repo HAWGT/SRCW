@@ -17,68 +17,28 @@
 namespace SDK
 {
 
-// Function WBP_FestaInfo.WBP_FestaInfo_C.SetSchedule
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_FestaInfo.WBP_FestaInfo_C.ExecuteUbergraph_WBP_FestaInfo
+// (Final, UbergraphFunction)
 // Parameters:
-// const class FText&                      Schedule                                               (BlueprintVisible, BlueprintReadOnly, Parm)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_FestaInfo_C::SetSchedule(const class FText& Schedule)
+void UWBP_FestaInfo_C::ExecuteUbergraph_WBP_FestaInfo(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FestaInfo_C", "SetSchedule");
+		Func = Class->GetFunction("WBP_FestaInfo_C", "ExecuteUbergraph_WBP_FestaInfo");
 
-	Params::WBP_FestaInfo_C_SetSchedule Parms{};
+	Params::WBP_FestaInfo_C_ExecuteUbergraph_WBP_FestaInfo Parms{};
 
-	Parms.Schedule = std::move(Schedule);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_FestaInfo.WBP_FestaInfo_C.SetTextureBG
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UTexture2D*                       Texture                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_FestaInfo_C::SetTextureBG(class UTexture2D* Texture)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FestaInfo_C", "SetTextureBG");
-
-	Params::WBP_FestaInfo_C_SetTextureBG Parms{};
-
-	Parms.Texture = Texture;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_FestaInfo.WBP_FestaInfo_C.SetTitle
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FText&                      Title                                                  (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void UWBP_FestaInfo_C::SetTitle(const class FText& Title)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FestaInfo_C", "SetTitle");
-
-	Params::WBP_FestaInfo_C_SetTitle Parms{};
-
-	Parms.Title = std::move(Title);
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
 // Function WBP_FestaInfo.WBP_FestaInfo_C.SetupHeldPop
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Event, Protected, BlueprintCallable, BlueprintEvent)
 
 void UWBP_FestaInfo_C::SetupHeldPop()
 {

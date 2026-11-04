@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_MachineActor.BP_MachineActor_C
-// 0x0000 (0x09E8 - 0x09E8)
+// 0x0000 (0x0A30 - 0x0A30)
 class ABP_MachineActor_C final : public AMachineInRaceActor
 {
 public:

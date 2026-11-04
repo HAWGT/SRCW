@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
 namespace SDK
@@ -28,12 +28,12 @@ public:
 	struct FSoundHandle                           TitleBGMHandle;                                    // 0x0148(0x0004)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
-	void Play_Title_BGM();
-	void OnLoaded_4765DBF64D84C160A2E9C08B7DD924AD(TSubclassOf<class UObject> Loaded);
-	void OnInitState();
-	void OnUpdateState(float InDeltaTime);
-	void OnExitState();
 	void ExecuteUbergraph_BPC_MenuStateTitle(int32 EntryPoint);
+	void OnExitState();
+	void OnInitState();
+	void OnLoaded_4765DBF64D84C160A2E9C08B7DD924AD(TSubclassOf<class UObject> Loaded);
+	void OnUpdateState(float InDeltaTime);
+	void Play_Title_BGM();
 
 public:
 	static class UClass* StaticClass()

@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "UnionRun_structs.hpp"
 #include "UnionSystem_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
-#include "UnionRun_structs.hpp"
 #include "ST_RacerDataForPreview_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
@@ -23,66 +23,64 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_MenuRacerLobby.BP_MenuRacerLobby_C
-// 0x0510 (0x0890 - 0x0380)
+// 0x0560 (0x08F0 - 0x0390)
 class ABP_MenuRacerLobby_C final : public AMenuRacerLobby
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0380(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UMachineAuraEffectComponent*            MachineAuraEffect;                                 // 0x0388(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0390(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	struct FST_RacerDataForPreview                RacerData;                                         // 0x0398(0x000D)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3A5[0x3];                                      // 0x03A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_MenuRacerMachine_C*                 MachineActor;                                      // 0x03A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class ABP_MenuRacerHoverboard_C*              HoverboardActor;                                   // 0x03B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class ABP_MenuDriverPawn_C*                   DriverPawn;                                        // 0x03B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        RotationSpeed;                                     // 0x03C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        RotationVelocity;                                  // 0x03C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundAtomCue*                          EngineSound_Front;                                 // 0x03D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class USoundAtomCue*                          EngineSound_Rear;                                  // 0x03D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UChildActorComponent*                   DriverComponent;                                   // 0x03E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         Lod;                                               // 0x03E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3EC[0x4];                                      // 0x03EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UChildActorComponent*                   MachineComponet;                                   // 0x03F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UChildActorComponent*                   HoverboardComponet;                                // 0x03F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsJustSpawnedMachineActor;                         // 0x0400(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsJustSpawnedHoverboardActor;                      // 0x0401(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_402[0x6];                                      // 0x0402(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UNiagaraComponent*                      HornEffectComponent;                               // 0x0408(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           RoomEntryAnimTimer;                                // 0x0410(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        RoomEntryTimerCnt;                                 // 0x0418(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                ActorDefaultLocate;                                // 0x0420(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   RingComponent;                                     // 0x0438(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 ActiveActor;                                       // 0x0440(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraSystem*                         HornEffect;                                        // 0x0448(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class USoundAtomCue*                          HornSE;                                            // 0x0450(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          bHoverboard;                                       // 0x0458(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ChangeMachineType;                                 // 0x0459(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ECarStatusType                                StatusType;                                        // 0x045A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_45B[0x5];                                      // 0x045B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(class ABP_MenuRacerLobby_C* MenuRacer)> OnAttachedEnd;             // 0x0460(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	class ABP_ChampionCrown_C*                    CrownActor;                                        // 0x0470(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UStickerBakerHandle*                    FrontStickerBakerHandle;                           // 0x0478(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UStickerBakerHandle*                    RearStickerBakerHandle;                            // 0x0480(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FDriverData                            CurrentDriverData;                                 // 0x0488(0x0398)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class UNiagaraComponent*                      AuraEffectComponent;                               // 0x0820(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FDriverCrownDataTableStruct            CrownData;                                         // 0x0828(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance)
-	EMachineAuraId                                AuraId;                                            // 0x0888(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ECarStatusType                                CarStatusType;                                     // 0x0889(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EMachineColorPresetId                         OverRideMachineColor;                              // 0x088A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bIsOverRideMachineColor;                           // 0x088B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0390(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UMachineAuraEffectComponent*            MachineAuraEffect;                                 // 0x0398(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x03A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FST_RacerDataForPreview                RacerData;                                         // 0x03A8(0x000D)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3B5[0x3];                                      // 0x03B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_MenuRacerMachine_C*                 MachineActor;                                      // 0x03B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class ABP_MenuRacerHoverboard_C*              HoverboardActor;                                   // 0x03C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class ABP_MenuDriverPawn_C*                   DriverPawn;                                        // 0x03C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        RotationSpeed;                                     // 0x03D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        RotationVelocity;                                  // 0x03D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundAtomCue*                          EngineSound_Front;                                 // 0x03E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class USoundAtomCue*                          EngineSound_Rear;                                  // 0x03E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UChildActorComponent*                   DriverComponent;                                   // 0x03F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         Lod;                                               // 0x03F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3FC[0x4];                                      // 0x03FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UChildActorComponent*                   MachineComponet;                                   // 0x0400(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UChildActorComponent*                   HoverboardComponet;                                // 0x0408(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsJustSpawnedMachineActor;                         // 0x0410(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsJustSpawnedHoverboardActor;                      // 0x0411(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_412[0x6];                                      // 0x0412(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UNiagaraComponent*                      HornEffectComponent;                               // 0x0418(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           RoomEntryAnimTimer;                                // 0x0420(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        RoomEntryTimerCnt;                                 // 0x0428(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                ActorDefaultLocate;                                // 0x0430(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   RingComponent;                                     // 0x0448(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 ActiveActor;                                       // 0x0450(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraSystem*                         HornEffect;                                        // 0x0458(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class USoundAtomCue*                          HornSE;                                            // 0x0460(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          bHoverboard;                                       // 0x0468(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ChangeMachineType;                                 // 0x0469(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ECarStatusType                                StatusType;                                        // 0x046A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46B[0x5];                                      // 0x046B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(class ABP_MenuRacerLobby_C* MenuRacer)> OnAttachedEnd;             // 0x0470(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class UStickerBakerHandle*                    FrontStickerBakerHandle;                           // 0x0480(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UStickerBakerHandle*                    RearStickerBakerHandle;                            // 0x0488(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FDriverData                            CurrentDriverData;                                 // 0x0490(0x0418)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UNiagaraComponent*                      AuraEffectComponent;                               // 0x08A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FDriverCrownDataTableStruct            CrownData;                                         // 0x08B0(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance)
+	EMachineAuraId                                AuraId;                                            // 0x08E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ECarStatusType                                CarStatusType;                                     // 0x08E9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EMachineColorPresetId                         OverRideMachineColor;                              // 0x08EA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsOverRideMachineColor;                           // 0x08EB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EGroupColorId                                 OverRideGroupColor;                                // 0x08EC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Attach_Driver();
+	void AttachCrown();
 	void ChangeMachineColor(int32 InGroupIndex, bool InEnableEffect);
-	void ChangeVisibleCrownfromRacerVisible();
 	void CheckChangeParam(EDriverId Racer_Data_Driver_Id, ECarStatusType Racer_Data_Vehicle_Type, EMachineId Racer_Data_Front_Parts_Id, EMachineId Racer_Data_Rear_Parts_Id, EMachineId Racer_Data_Tire_Parts_Id, bool* ChangedDriverId, bool* ChangedVehicleType, bool* ChangedFrontPartsId, bool* ChangedRearPartsId, bool* ChangedTirePartsId);
-	void DestroyCrown();
 	void DestroyDriverActor();
 	void DestroyMachineComponet();
 	void ExecuteUbergraph_BP_MenuRacerLobby(int32 EntryPoint);
 	void GetDriver(EDriverId* DriverId_0);
 	void GetDriverData(EDriverId DriverId_0, struct FDriverData* DriverData, bool* bFind);
-	void HiddenCrown();
 	void Initialize();
 	void OnCreateAuraEffect(EMachineAuraId InAuraID, ECarStatusType InType);
 	void PlayDriverAnimation(int32 StateId, int32 Index_0);
@@ -96,20 +94,20 @@ public:
 	void ReceiveTick(float DeltaSeconds);
 	void RoomEntryAnimEvent();
 	void RoomEntryAnimLooping();
-	void SetAll(EDriverId InDriverId, const struct FUserMachineCustomizeData& InCustomizeData, bool bIsSpawnCrown);
+	void SetAll(EDriverId InDriverId, const struct FUserMachineCustomizeData& InCustomizeData, ECrownGrade InCrownGrade);
 	void SetBoneSetting(bool UseBoneControl, const struct FRotator& NeckRotation, const struct FRotator& SpineRotation);
 	void SetDriver(EDriverId DriverId_0);
 	void SetForcedLod(int32 NewForcedLodModel);
 	void SetHornData(EMachineHornType InHornType);
 	void SetLODLevel(int32 Lod_0);
 	void SetupMeshComps(bool bUse, int32 Lod_0);
-	void SetVisibilityCrown(bool bIsVisible);
 	void SpawnDriverActor();
 	void SpawnHoverboard();
 	void SpawnMachine();
-	void SpawnOrVisibleCrown(bool bIsNotSpawn);
+	void SpawnOrVisibleCrown(ECrownGrade CrownGrade);
 	void StartRotation(int32 InPlayerIndex);
 	void StopRotation();
+	void UpdateSteeringWheelMaterial();
 
 	EMachineHornType GetHornID(const struct FST_RacerDataForPreview& ST_RacerDataForPreview) const;
 

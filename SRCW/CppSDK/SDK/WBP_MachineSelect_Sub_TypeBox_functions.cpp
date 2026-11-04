@@ -633,10 +633,10 @@ void UWBP_MachineSelect_Sub_TypeBox_C::GetMachineIdCurrent(EMachineId* MachineId
 // Function WBP_MachineSelect_Sub_TypeBox.WBP_MachineSelect_Sub_TypeBox_C.GetMachineIdNext
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// bool                                    isNext                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsNext                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EMachineId*                             MachineId                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_MachineSelect_Sub_TypeBox_C::GetMachineIdNext(bool isNext, EMachineId* MachineId) const
+void UWBP_MachineSelect_Sub_TypeBox_C::GetMachineIdNext(bool IsNext, EMachineId* MachineId) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -645,7 +645,7 @@ void UWBP_MachineSelect_Sub_TypeBox_C::GetMachineIdNext(bool isNext, EMachineId*
 
 	Params::WBP_MachineSelect_Sub_TypeBox_C_GetMachineIdNext Parms{};
 
-	Parms.isNext = isNext;
+	Parms.IsNext = IsNext;
 
 	UObject::ProcessEvent(Func, &Parms);
 

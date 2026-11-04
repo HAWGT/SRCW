@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
 
 
 namespace SDK
@@ -38,10 +38,10 @@ public:
 	void Construct();
 	void ExecuteUbergraph_WBP_Friend_LobbyNotice(int32 EntryPoint);
 	void Finished_A30B153F4C34604DA75029AB1A775F07();
+	void FinishShowingNoticeEvent();
 	void OnAnimationInFinished();
 	void OnAnimationOutFinished();
 	struct FEventReply OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent);
-	void OnHoldInputEnd();
 	void OnInitialized();
 	void OnSpecialPressedEvent(class UObject* Object);
 	void OnSpecialReleasedEvent(class UObject* Object);
@@ -49,6 +49,7 @@ public:
 	void PlayAnimationOut();
 	void PreConstruct(bool IsDesignTime);
 	void RegisterMenuInputReceiveObject();
+	void SequenceEvent__ENTRYPOINTWBP_Friend_LobbyNotice();
 	void SetControlIcon();
 	void SetMenuInputReceiveObject();
 	void SetupNoticeSequenceType(ELobbyInvitationSequenceType SequenceType);

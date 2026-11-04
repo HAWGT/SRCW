@@ -17,119 +17,19 @@
 namespace SDK
 {
 
-// Function BPC_MachineState.BPC_MachineState_C.BindCharaMachineSelectWindow
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class UCharaMachineSelectBase*          InWindow                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_MachineState_C::BindCharaMachineSelectWindow(class UCharaMachineSelectBase* InWindow)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "BindCharaMachineSelectWindow");
-
-	Params::BPC_MachineState_C_BindCharaMachineSelectWindow Parms{};
-
-	Parms.InWindow = InWindow;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_MachineState.BPC_MachineState_C.BindColorWindow
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UWBP_MachineCustom_Sub_PresetPaint_C*InColorWindow                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_MachineState_C::BindColorWindow(class UWBP_MachineCustom_Sub_PresetPaint_C* InColorWindow)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "BindColorWindow");
-
-	Params::BPC_MachineState_C_BindColorWindow Parms{};
-
-	Parms.InColorWindow = InColorWindow;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_MachineState.BPC_MachineState_C.BindMachineTypeSelectWindow
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class UMachineTypeScrollControl*        InMachineTypeSelectWindow                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_MachineState_C::BindMachineTypeSelectWindow(class UMachineTypeScrollControl* InMachineTypeSelectWindow)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "BindMachineTypeSelectWindow");
-
-	Params::BPC_MachineState_C_BindMachineTypeSelectWindow Parms{};
-
-	Parms.InMachineTypeSelectWindow = InMachineTypeSelectWindow;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_MachineState.BPC_MachineState_C.CharaMachineSelect_ColorDecisionButtonFocusEvent
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BPC_MachineState.BPC_MachineState_C.SetupMachineColorSelectWindow
+// (Event, Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int32                                   InPlayerIndex                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_MachineState_C::CharaMachineSelect_ColorDecisionButtonFocusEvent(int32 InPlayerIndex)
+void UBPC_MachineState_C::SetupMachineColorSelectWindow(int32 InPlayerIndex)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "CharaMachineSelect_ColorDecisionButtonFocusEvent");
+		Func = Class->GetFunction("BPC_MachineState_C", "SetupMachineColorSelectWindow");
 
-	Params::BPC_MachineState_C_CharaMachineSelect_ColorDecisionButtonFocusEvent Parms{};
-
-	Parms.InPlayerIndex = InPlayerIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_MachineState.BPC_MachineState_C.CharaMachineSelect_OnMachineColorCancelEvent
-// (Private, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InPlayerIndex                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_MachineState_C::CharaMachineSelect_OnMachineColorCancelEvent(int32 InPlayerIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "CharaMachineSelect_OnMachineColorCancelEvent");
-
-	Params::BPC_MachineState_C_CharaMachineSelect_OnMachineColorCancelEvent Parms{};
-
-	Parms.InPlayerIndex = InPlayerIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_MachineState.BPC_MachineState_C.CharaMachineSelect_OnMachineColorDecisionEvent
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InPlayerIndex                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_MachineState_C::CharaMachineSelect_OnMachineColorDecisionEvent(int32 InPlayerIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "CharaMachineSelect_OnMachineColorDecisionEvent");
-
-	Params::BPC_MachineState_C_CharaMachineSelect_OnMachineColorDecisionEvent Parms{};
+	Params::BPC_MachineState_C_SetupMachineColorSelectWindow Parms{};
 
 	Parms.InPlayerIndex = InPlayerIndex;
 
@@ -183,6 +83,66 @@ void UBPC_MachineState_C::CharaMachineSelect_OnMachineColorSelectEvent(const str
 }
 
 
+// Function BPC_MachineState.BPC_MachineState_C.CharaMachineSelect_OnMachineColorCancelEvent
+// (Private, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InPlayerIndex                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_MachineState_C::CharaMachineSelect_OnMachineColorCancelEvent(int32 InPlayerIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MachineState_C", "CharaMachineSelect_OnMachineColorCancelEvent");
+
+	Params::BPC_MachineState_C_CharaMachineSelect_OnMachineColorCancelEvent Parms{};
+
+	Parms.InPlayerIndex = InPlayerIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_MachineState.BPC_MachineState_C.CharaMachineSelect_OnMachineColorDecisionEvent
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InPlayerIndex                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_MachineState_C::CharaMachineSelect_OnMachineColorDecisionEvent(int32 InPlayerIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MachineState_C", "CharaMachineSelect_OnMachineColorDecisionEvent");
+
+	Params::BPC_MachineState_C_CharaMachineSelect_OnMachineColorDecisionEvent Parms{};
+
+	Parms.InPlayerIndex = InPlayerIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_MachineState.BPC_MachineState_C.CharaMachineSelect_ColorDecisionButtonFocusEvent
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InPlayerIndex                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_MachineState_C::CharaMachineSelect_ColorDecisionButtonFocusEvent(int32 InPlayerIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MachineState_C", "CharaMachineSelect_ColorDecisionButtonFocusEvent");
+
+	Params::BPC_MachineState_C_CharaMachineSelect_ColorDecisionButtonFocusEvent Parms{};
+
+	Parms.InPlayerIndex = InPlayerIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BPC_MachineState.BPC_MachineState_C.CharaMachineSelect_OnMachinePartsCancelEvent
 // (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -223,32 +183,6 @@ void UBPC_MachineState_C::CharaMachineSelect_OnMachinePartsDecisionEvent(int32 I
 }
 
 
-// Function BPC_MachineState.BPC_MachineState_C.CharaMachineSelect_OnMachinePartsFocusEvent
-// (Private, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   PlayerIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EMachineId                              FrontPartsId                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EMachineId                              RearPartsId                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EMachineId                              TirePartsId                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_MachineState_C::CharaMachineSelect_OnMachinePartsFocusEvent(int32 PlayerIndex, EMachineId FrontPartsId, EMachineId RearPartsId, EMachineId TirePartsId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "CharaMachineSelect_OnMachinePartsFocusEvent");
-
-	Params::BPC_MachineState_C_CharaMachineSelect_OnMachinePartsFocusEvent Parms{};
-
-	Parms.PlayerIndex = PlayerIndex;
-	Parms.FrontPartsId = FrontPartsId;
-	Parms.RearPartsId = RearPartsId;
-	Parms.TirePartsId = TirePartsId;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BPC_MachineState.BPC_MachineState_C.CharaMachineSelect_OnMachinePartsSelectEvent
 // (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -265,6 +199,32 @@ void UBPC_MachineState_C::CharaMachineSelect_OnMachinePartsSelectEvent(int32 Pla
 		Func = Class->GetFunction("BPC_MachineState_C", "CharaMachineSelect_OnMachinePartsSelectEvent");
 
 	Params::BPC_MachineState_C_CharaMachineSelect_OnMachinePartsSelectEvent Parms{};
+
+	Parms.PlayerIndex = PlayerIndex;
+	Parms.FrontPartsId = FrontPartsId;
+	Parms.RearPartsId = RearPartsId;
+	Parms.TirePartsId = TirePartsId;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_MachineState.BPC_MachineState_C.CharaMachineSelect_OnMachinePartsFocusEvent
+// (Private, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   PlayerIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EMachineId                              FrontPartsId                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EMachineId                              RearPartsId                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EMachineId                              TirePartsId                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_MachineState_C::CharaMachineSelect_OnMachinePartsFocusEvent(int32 PlayerIndex, EMachineId FrontPartsId, EMachineId RearPartsId, EMachineId TirePartsId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MachineState_C", "CharaMachineSelect_OnMachinePartsFocusEvent");
+
+	Params::BPC_MachineState_C_CharaMachineSelect_OnMachinePartsFocusEvent Parms{};
 
 	Parms.PlayerIndex = PlayerIndex;
 	Parms.FrontPartsId = FrontPartsId;
@@ -294,74 +254,6 @@ void UBPC_MachineState_C::CharaMachineSelect_OnMachineSelectModeChanged(int32 Pl
 	Parms.Mode = Mode;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_MachineState.BPC_MachineState_C.DecideMachine
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InPlayerIndex                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_MachineState_C::DecideMachine(int32 InPlayerIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "DecideMachine");
-
-	Params::BPC_MachineState_C_DecideMachine Parms{};
-
-	Parms.InPlayerIndex = InPlayerIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_MachineState.BPC_MachineState_C.ExecuteUbergraph_BPC_MachineState
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_MachineState_C::ExecuteUbergraph_BPC_MachineState(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "ExecuteUbergraph_BPC_MachineState");
-
-	Params::BPC_MachineState_C_ExecuteUbergraph_BPC_MachineState Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_MachineState.BPC_MachineState_C.OnExitState
-// (Event, Public, BlueprintEvent)
-
-void UBPC_MachineState_C::OnExitState()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "OnExitState");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_MachineState.BPC_MachineState_C.OnInitState
-// (Event, Public, BlueprintEvent)
-
-void UBPC_MachineState_C::OnInitState()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "OnInitState");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -453,46 +345,6 @@ void UBPC_MachineState_C::OnMachineTypeScrollEndCallback(int32 SelectedPlayerCon
 }
 
 
-// Function BPC_MachineState.BPC_MachineState_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_MachineState_C::ReceiveTick(float DeltaSeconds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "ReceiveTick");
-
-	Params::BPC_MachineState_C_ReceiveTick Parms{};
-
-	Parms.DeltaSeconds = DeltaSeconds;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_MachineState.BPC_MachineState_C.SetupMachineColorSelectWindow
-// (Event, Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InPlayerIndex                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_MachineState_C::SetupMachineColorSelectWindow(int32 InPlayerIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "SetupMachineColorSelectWindow");
-
-	Params::BPC_MachineState_C_SetupMachineColorSelectWindow Parms{};
-
-	Parms.InPlayerIndex = InPlayerIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BPC_MachineState.BPC_MachineState_C.ShouldShowSimpleCustomizeTipsWindow
 // (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -529,80 +381,6 @@ void UBPC_MachineState_C::ShowTipsWindow(EHintId InHintId)
 	Params::BPC_MachineState_C_ShowTipsWindow Parms{};
 
 	Parms.InHintId = InHintId;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_MachineState.BPC_MachineState_C.TipsWindow_CloseEndDelegate
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_MachineState_C::TipsWindow_CloseEndDelegate()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "TipsWindow_CloseEndDelegate");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_MachineState.BPC_MachineState_C.UnbindCharaMachineSelectWindow
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class UCharaMachineSelectBase*          InWindow                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_MachineState_C::UnbindCharaMachineSelectWindow(class UCharaMachineSelectBase* InWindow)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "UnbindCharaMachineSelectWindow");
-
-	Params::BPC_MachineState_C_UnbindCharaMachineSelectWindow Parms{};
-
-	Parms.InWindow = InWindow;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_MachineState.BPC_MachineState_C.UnbindColorWindow
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UWBP_MachineCustom_Sub_PresetPaint_C*InColorWindow                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_MachineState_C::UnbindColorWindow(class UWBP_MachineCustom_Sub_PresetPaint_C* InColorWindow)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "UnbindColorWindow");
-
-	Params::BPC_MachineState_C_UnbindColorWindow Parms{};
-
-	Parms.InColorWindow = InColorWindow;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_MachineState.BPC_MachineState_C.UnbindMachineTypeSelectWindow
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class UMachineTypeScrollControl*        InMachineTypeSelectWindow                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_MachineState_C::UnbindMachineTypeSelectWindow(class UMachineTypeScrollControl* InMachineTypeSelectWindow)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "UnbindMachineTypeSelectWindow");
-
-	Params::BPC_MachineState_C_UnbindMachineTypeSelectWindow Parms{};
-
-	Parms.InMachineTypeSelectWindow = InMachineTypeSelectWindow;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -653,6 +431,228 @@ void UBPC_MachineState_C::UpdateRemainTime(int32 InPlayerIndex, double InDeltaTi
 
 	if (Result != nullptr)
 		*Result = Parms.Result;
+}
+
+
+// Function BPC_MachineState.BPC_MachineState_C.BindColorWindow
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWBP_MachineCustom_Sub_PresetPaint_C*InColorWindow                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_MachineState_C::BindColorWindow(class UWBP_MachineCustom_Sub_PresetPaint_C* InColorWindow)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MachineState_C", "BindColorWindow");
+
+	Params::BPC_MachineState_C_BindColorWindow Parms{};
+
+	Parms.InColorWindow = InColorWindow;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_MachineState.BPC_MachineState_C.UnbindColorWindow
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWBP_MachineCustom_Sub_PresetPaint_C*InColorWindow                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_MachineState_C::UnbindColorWindow(class UWBP_MachineCustom_Sub_PresetPaint_C* InColorWindow)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MachineState_C", "UnbindColorWindow");
+
+	Params::BPC_MachineState_C_UnbindColorWindow Parms{};
+
+	Parms.InColorWindow = InColorWindow;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_MachineState.BPC_MachineState_C.BindMachineTypeSelectWindow
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UMachineTypeScrollControl*        InMachineTypeSelectWindow                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_MachineState_C::BindMachineTypeSelectWindow(class UMachineTypeScrollControl* InMachineTypeSelectWindow)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MachineState_C", "BindMachineTypeSelectWindow");
+
+	Params::BPC_MachineState_C_BindMachineTypeSelectWindow Parms{};
+
+	Parms.InMachineTypeSelectWindow = InMachineTypeSelectWindow;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_MachineState.BPC_MachineState_C.BindCharaMachineSelectWindow
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UCharaMachineSelectBase*          InWindow                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_MachineState_C::BindCharaMachineSelectWindow(class UCharaMachineSelectBase* InWindow)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MachineState_C", "BindCharaMachineSelectWindow");
+
+	Params::BPC_MachineState_C_BindCharaMachineSelectWindow Parms{};
+
+	Parms.InWindow = InWindow;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_MachineState.BPC_MachineState_C.UnbindCharaMachineSelectWindow
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UCharaMachineSelectBase*          InWindow                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_MachineState_C::UnbindCharaMachineSelectWindow(class UCharaMachineSelectBase* InWindow)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MachineState_C", "UnbindCharaMachineSelectWindow");
+
+	Params::BPC_MachineState_C_UnbindCharaMachineSelectWindow Parms{};
+
+	Parms.InWindow = InWindow;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_MachineState.BPC_MachineState_C.UnbindMachineTypeSelectWindow
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UMachineTypeScrollControl*        InMachineTypeSelectWindow                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_MachineState_C::UnbindMachineTypeSelectWindow(class UMachineTypeScrollControl* InMachineTypeSelectWindow)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MachineState_C", "UnbindMachineTypeSelectWindow");
+
+	Params::BPC_MachineState_C_UnbindMachineTypeSelectWindow Parms{};
+
+	Parms.InMachineTypeSelectWindow = InMachineTypeSelectWindow;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_MachineState.BPC_MachineState_C.TipsWindow_CloseEndDelegate
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_MachineState_C::TipsWindow_CloseEndDelegate()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MachineState_C", "TipsWindow_CloseEndDelegate");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_MachineState.BPC_MachineState_C.OnInitState
+// (Event, Public, BlueprintEvent)
+
+void UBPC_MachineState_C::OnInitState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MachineState_C", "OnInitState");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_MachineState.BPC_MachineState_C.OnExitState
+// (Event, Public, BlueprintEvent)
+
+void UBPC_MachineState_C::OnExitState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MachineState_C", "OnExitState");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_MachineState.BPC_MachineState_C.DecideMachine
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InPlayerIndex                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_MachineState_C::DecideMachine(int32 InPlayerIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MachineState_C", "DecideMachine");
+
+	Params::BPC_MachineState_C_DecideMachine Parms{};
+
+	Parms.InPlayerIndex = InPlayerIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_MachineState.BPC_MachineState_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_MachineState_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MachineState_C", "ReceiveTick");
+
+	Params::BPC_MachineState_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_MachineState.BPC_MachineState_C.ExecuteUbergraph_BPC_MachineState
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_MachineState_C::ExecuteUbergraph_BPC_MachineState(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MachineState_C", "ExecuteUbergraph_BPC_MachineState");
+
+	Params::BPC_MachineState_C_ExecuteUbergraph_BPC_MachineState Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

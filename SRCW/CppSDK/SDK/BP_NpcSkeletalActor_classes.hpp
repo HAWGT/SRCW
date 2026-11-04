@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_NpcSkeletalActor.BP_NpcSkeletalActor_C
-// 0x0000 (0x05E0 - 0x05E0)
+// 0x0000 (0x05E8 - 0x05E8)
 class ABP_NpcSkeletalActor_C final : public ASimpleNPCSkeletalActor
 {
 public:

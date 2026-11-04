@@ -10,34 +10,34 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BPC_RaceSequenceStateSendRaceStart.BPC_RaceSequenceStateSendRaceStart_C
-// 0x0058 (0x0178 - 0x0120)
+// 0x0058 (0x01A0 - 0x0148)
 class UBPC_RaceSequenceStateSendRaceStart_C final : public URaceSequenceStateSendRaceStart
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0120(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	int32                                         RequestHandle;                                     // 0x0128(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_12C[0x4];                                      // 0x012C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FString>                         Entry_User_Ids;                                    // 0x0130(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class FString                                 Entry_Race_Id;                                     // 0x0140(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	bool                                          IsLobbyHost;                                       // 0x0150(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_151[0x3];                                      // 0x0151(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         BonusChanceType;                                   // 0x0154(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BonusChanceParam;                                  // 0x0158(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsRaceHost;                                        // 0x015C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESequenceMainType                             MainSequenceType;                                  // 0x015D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESequenceSubType                              SubSequenceType;                                   // 0x015E(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_15F[0x1];                                      // 0x015F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FString>                         Entry_Online_User_Ids;                             // 0x0160(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	int32                                         OrderParam;                                        // 0x0170(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0148(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	int32                                         RequestHandle;                                     // 0x0150(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_154[0x4];                                      // 0x0154(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FString>                         Entry_User_Ids;                                    // 0x0158(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class FString                                 Entry_Race_Id;                                     // 0x0168(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	bool                                          IsLobbyHost;                                       // 0x0178(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_179[0x3];                                      // 0x0179(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         BonusChanceType;                                   // 0x017C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BonusChanceParam;                                  // 0x0180(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsRaceHost;                                        // 0x0184(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESequenceMainType                             MainSequenceType;                                  // 0x0185(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESequenceSubType                              SubSequenceType;                                   // 0x0186(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_187[0x1];                                      // 0x0187(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FString>                         Entry_Online_User_Ids;                             // 0x0188(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	int32                                         OrderParam;                                        // 0x0198(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BindRecvLobbyAttributeEvent();
@@ -51,7 +51,7 @@ public:
 	void FinishedSendStartSaveRankMatchStart_Event(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error);
 	void GetBonusChanceData(bool* IsValid, int32* BonusChanceType_0, int32* BonusChanceParam_0);
 	void GetLobbyContextParam();
-	void GetStartSaveRequestParam(int32* characterId, int32* courseId, struct FCommon_MachineData* MachineData, struct FCommon_GadgetData* GadgetData, struct FCommon_DegreeData* DegreeData);
+	void GetStartSaveRequestParam(int32* characterId, int32* CourseId, struct FCommon_MachineData* MachineData, struct FCommon_GadgetData* GadgetData, struct FCommon_DegreeData* DegreeData);
 	void OccurServerError(EResponseCodeAbstract ResponseCode, int32 Code);
 	void OnExitState();
 	void OnInitState();

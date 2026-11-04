@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 #include "UMG_structs.hpp"
 #include "UnionLib_structs.hpp"
 
@@ -21,37 +21,34 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_ReadySequenceActor.BP_ReadySequenceActor_C
-// 0x0148 (0x03D8 - 0x0290)
+// 0x00E0 (0x03D8 - 0x02F8)
 class ABP_ReadySequenceActor_C final : public AReadySequenceActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0290(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0298(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UReadyWindow*                           ReadyWindow;                                       // 0x02A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UMenuInputRecieveObject*                MenuInputRecieveObject;                            // 0x02A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	int32                                         Player_Num;                                        // 0x02B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_2B4[0x4];                                      // 0x02B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<bool>                                  bISReadyFlags;                                     // 0x02B8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<class UGadgetPlateWindow*>             Gadget_Plate_Windows;                              // 0x02C8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	TArray<class UReadyOption*>                   Ready_Options;                                     // 0x02D8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	TArray<class UClass*>                         ReadyWindows;                                      // 0x02E8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TMulticastInlineDelegate<void()>              ReadyEndEvent;                                     // 0x02F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void()>              CancelInputEvent;                                  // 0x0308(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          bIsGadgetSelected;                                 // 0x0318(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_319[0x7];                                      // 0x0319(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUnionUISceneBase*                      PopupWindow;                                       // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UCommonMenuFooterMenu*                  Footer;                                            // 0x0328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	TArray<class UCharaMachineParamWindow*>       Chara_Machine_Param_Windows;                       // 0x0330(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	TMap<int32, bool>                             GadgetParamVisibleMap;                             // 0x0340(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          bIsInGame;                                         // 0x0390(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bSkipGoFlag;                                       // 0x0391(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_392[0x6];                                      // 0x0392(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 BackupPresetSettings;                              // 0x0398(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<struct FUserAssistData>                BackupAssistData;                                  // 0x03A8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          WaitFlag;                                          // 0x03B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B9[0x7];                                      // 0x03B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UReadyWindow*>                   ReadyWindowArr;                                    // 0x03C0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	bool                                          InvalidChangeSaveFlag;                             // 0x03D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0300(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UReadyWindow*                           ReadyWindow;                                       // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UMenuInputRecieveObject*                MenuInputRecieveObject;                            // 0x0310(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	int32                                         Player_Num;                                        // 0x0318(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	uint8                                         Pad_31C[0x4];                                      // 0x031C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<bool>                                  bISReadyFlags;                                     // 0x0320(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<class UGadgetPlateWindow*>             Gadget_Plate_Windows;                              // 0x0330(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	TArray<class UReadyOption*>                   Ready_Options;                                     // 0x0340(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	TArray<class UClass*>                         ReadyWindows;                                      // 0x0350(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMulticastInlineDelegate<void()>              ReadyEndEvent;                                     // 0x0360(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void()>              CancelInputEvent;                                  // 0x0370(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          bIsGadgetSelected;                                 // 0x0380(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_381[0x7];                                      // 0x0381(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUnionUISceneBase*                      PopupWindow;                                       // 0x0388(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UCommonMenuFooterMenu*                  Footer;                                            // 0x0390(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	bool                                          bIsInGame;                                         // 0x0398(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bSkipGoFlag;                                       // 0x0399(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	uint8                                         Pad_39A[0x6];                                      // 0x039A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 BackupPresetSettings;                              // 0x03A0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<struct FUserAssistData>                BackupAssistData;                                  // 0x03B0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          WaitFlag;                                          // 0x03C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C1[0x7];                                      // 0x03C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UReadyWindow*>                   ReadyWindowArr;                                    // 0x03C8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 
 public:
 	void BackupSettings();
@@ -60,7 +57,7 @@ public:
 	void CancelReady(int32 PlayerIndex);
 	void Check_Permission_Input(int32 PlayerIndex, bool* bISPermission);
 	void CheckInputEvent(class UObject* Object, const int32& PlayerControllerIndex);
-	void CheckTimeTrialDisableGadget(bool* bIsValid);
+	void CheckSinglePlayDisableGadget(EGameModeId InGmaeModeId, bool* bIsValid);
 	void CreateReadyWidget(bool Optimize, bool bLoadCharaTexture);
 	void DisableOptionChange();
 	void ExecuteUbergraph_BP_ReadySequenceActor(int32 EntryPoint);
@@ -105,10 +102,8 @@ public:
 	void SetUpGadgetIconMouseInp_ut(ESlateVisibility InVisibility);
 	void SetupGadgetPlateWindow();
 	void SetUpOptionEvent();
-	void SetupParamWindow(int32 PlayerIndex, bool IsSlide);
 	void SetUpParamWindowEvent(class UObject* Object, const int32& PlayerControllerIndex);
 	void SetUpPlayersParam(int32 PlayerIndex);
-	void SetVisibleCharaMachineParam(int32 PlayerIndex, bool Visible);
 	void StartSetUpPlayersParam();
 	void TimeTrialWarningPopup();
 	void UnbindInputEvent();

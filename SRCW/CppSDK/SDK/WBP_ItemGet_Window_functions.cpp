@@ -215,6 +215,29 @@ void UWBP_ItemGet_Window_C::GetDriverData(EDriverId InDriverId, struct FDriverDa
 }
 
 
+// Function WBP_ItemGet_Window.WBP_ItemGet_Window_C.GetDuelMedalItemNameText
+// (Event, Protected, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const int32                             InDuelMedalNum                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm)
+
+class FText UWBP_ItemGet_Window_C::GetDuelMedalItemNameText(const int32 InDuelMedalNum)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ItemGet_Window_C", "GetDuelMedalItemNameText");
+
+	Params::WBP_ItemGet_Window_C_GetDuelMedalItemNameText Parms{};
+
+	Parms.InDuelMedalNum = InDuelMedalNum;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function WBP_ItemGet_Window.WBP_ItemGet_Window_C.GetMachineTypeFromMachineId
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -924,10 +947,10 @@ void UWBP_ItemGet_Window_C::SetRivalRewardEffectVisible(bool bInVisible)
 // Function WBP_ItemGet_Window.WBP_ItemGet_Window_C.SetStickerWidget
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   stickerId                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   StickerId                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // TSoftObjectPtr<class UTexture2D>        InIconTexture                                          (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void UWBP_ItemGet_Window_C::SetStickerWidget(int32 stickerId, TSoftObjectPtr<class UTexture2D> InIconTexture)
+void UWBP_ItemGet_Window_C::SetStickerWidget(int32 StickerId, TSoftObjectPtr<class UTexture2D> InIconTexture)
 {
 	static class UFunction* Func = nullptr;
 
@@ -936,7 +959,7 @@ void UWBP_ItemGet_Window_C::SetStickerWidget(int32 stickerId, TSoftObjectPtr<cla
 
 	Params::WBP_ItemGet_Window_C_SetStickerWidget Parms{};
 
-	Parms.stickerId = stickerId;
+	Parms.StickerId = StickerId;
 	Parms.InIconTexture = InIconTexture;
 
 	UObject::ProcessEvent(Func, &Parms);

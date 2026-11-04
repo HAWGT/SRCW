@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_MachineCustom_CMN_Window.WBP_MachineCustom_CMN_Window_C
-// 0x0000 (0x0328 - 0x0328)
+// 0x0000 (0x0348 - 0x0348)
 class UWBP_MachineCustom_CMN_Window_C final : public UMachineCustomCommonWindow
 {
 public:

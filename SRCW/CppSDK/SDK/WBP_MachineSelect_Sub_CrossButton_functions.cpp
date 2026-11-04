@@ -236,6 +236,20 @@ struct FEventReply UWBP_MachineSelect_Sub_CrossButton_C::OnFocusReceived(const s
 }
 
 
+// Function WBP_MachineSelect_Sub_CrossButton.WBP_MachineSelect_Sub_CrossButton_C.OnRightShoulderPressed
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_MachineSelect_Sub_CrossButton_C::OnRightShoulderPressed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_MachineSelect_Sub_CrossButton_C", "OnRightShoulderPressed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_MachineSelect_Sub_CrossButton.WBP_MachineSelect_Sub_CrossButton_C.OnSpecialPressed
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 

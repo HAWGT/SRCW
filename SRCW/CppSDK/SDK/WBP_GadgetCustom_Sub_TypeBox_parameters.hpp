@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "UNION_structs.hpp"
 #include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
 #include "EMachineSelectMode_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "UNION_structs.hpp"
 
 
 namespace SDK::Params
@@ -203,15 +203,6 @@ public:
 };
 DUMPER7_ASSERTS_WBP_GadgetCustom_Sub_TypeBox_C_SetFocusIndex;
 
-// Function WBP_GadgetCustom_Sub_TypeBox.WBP_GadgetCustom_Sub_TypeBox_C.SetLightVer
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_GadgetCustom_Sub_TypeBox_C_SetLightVer final
-{
-public:
-	bool                                          IsLight;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_GadgetCustom_Sub_TypeBox_C_SetLightVer;
-
 // Function WBP_GadgetCustom_Sub_TypeBox.WBP_GadgetCustom_Sub_TypeBox_C.SetMode
 // 0x0001 (0x0001 - 0x0000)
 struct WBP_GadgetCustom_Sub_TypeBox_C_SetMode final
@@ -248,8 +239,9 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CallFunc_IsLightVar_ReturnValue;                   // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_12[0x2];                                       // 0x0012(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

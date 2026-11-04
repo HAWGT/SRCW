@@ -11,39 +11,55 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
-#include "UMG_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK::Params
 {
 
+// Function WBP_GadgetIcon.WBP_GadgetIcon_C.AnimPlayGadgetIconLoopBlink
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_GadgetIcon_C_AnimPlayGadgetIconLoopBlink final
+{
+public:
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_GadgetIcon_C_AnimPlayGadgetIconLoopBlink;
+
+// Function WBP_GadgetIcon.WBP_GadgetIcon_C.AnimStopGadgetIconLoopBlink
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_GadgetIcon_C_AnimStopGadgetIconLoopBlink final
+{
+public:
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_GadgetIcon_C_AnimStopGadgetIconLoopBlink;
+
 // Function WBP_GadgetIcon.WBP_GadgetIcon_C.ExecuteUbergraph_WBP_GadgetIcon
-// 0x0060 (0x0060 - 0x0000)
+// 0x0080 (0x0080 - 0x0000)
 struct WBP_GadgetIcon_C_ExecuteUbergraph_WBP_GadgetIcon final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGeometry                              K2Node_CustomEvent_MyGeometry;                     // 0x0004(0x0038)(IsPlainOldData, NoDestructor)
-	struct FFocusEvent                            K2Node_CustomEvent_InFocusEvent;                   // 0x003C(0x0008)(NoDestructor)
-	int32                                         CallFunc_GetUserIndexByFocusEvent_ReturnValue;     // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFocusEvent                            K2Node_Event_InFocusEvent;                         // 0x0048(0x0008)(NoDestructor)
-	struct FSoundHandle                           CallFunc_SoundPlay_ReturnValue;                    // 0x0050(0x0004)()
-	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGadgetPlateWindow*                     CallFunc_GetOwnerGadgetPlate_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetPlayerIndex_ReturnValue;               // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGadgetPlateWindow*                     CallFunc_GetOwnerGadgetPlate_ReturnValue_1;        // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetPlayerIndex_ReturnValue_1;             // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometry                              K2Node_CustomEvent_MyGeometry;                     // 0x0028(0x0038)(IsPlainOldData, NoDestructor)
+	struct FFocusEvent                            K2Node_CustomEvent_InFocusEvent;                   // 0x0060(0x0008)(NoDestructor)
+	int32                                         CallFunc_GetUserIndexByFocusEvent_ReturnValue;     // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFocusEvent                            K2Node_Event_InFocusEvent;                         // 0x006C(0x0008)(NoDestructor)
+	struct FSoundHandle                           CallFunc_SoundPlay_ReturnValue;                    // 0x0074(0x0004)()
+	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_GadgetIcon_C_ExecuteUbergraph_WBP_GadgetIcon;
-
-// Function WBP_GadgetIcon.WBP_GadgetIcon_C.OnConstInitBpWidgetRef
-// 0x0030 (0x0030 - 0x0000)
-struct WBP_GadgetIcon_C_OnConstInitBpWidgetRef final
-{
-public:
-	TArray<class UMaterialInstance*>              K2Node_MakeArray_Array;                            // 0x0000(0x0010)(ReferenceParm)
-	TArray<class UMaterialInstance*>              K2Node_MakeArray_Array_1;                          // 0x0010(0x0010)(ReferenceParm)
-	TArray<class UImage*>                         K2Node_MakeArray_Array_2;                          // 0x0020(0x0010)(ReferenceParm, ContainsInstancedReference)
-};
-DUMPER7_ASSERTS_WBP_GadgetIcon_C_OnConstInitBpWidgetRef;
 
 // Function WBP_GadgetIcon.WBP_GadgetIcon_C.OnConstUseType
 // 0x0010 (0x0010 - 0x0000)
@@ -114,12 +130,14 @@ public:
 DUMPER7_ASSERTS_WBP_GadgetIcon_C_SetGadgetSelectCursorColor;
 
 // Function WBP_GadgetIcon.WBP_GadgetIcon_C.SetIconBaseShape
-// 0x0008 (0x0008 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct WBP_GadgetIcon_C_SetIconBaseShape final
 {
 public:
 	int32                                         InSizeX;                                           // 0x0000(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         InSizeY;                                           // 0x0004(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWBP_GadgetCustom_Sub_HexagonCursor_C*  K2Node_DynamicCast_AsWBP_Gadget_Custom_Sub_Hexagon_Cursor; // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_GadgetIcon_C_SetIconBaseShape;
 

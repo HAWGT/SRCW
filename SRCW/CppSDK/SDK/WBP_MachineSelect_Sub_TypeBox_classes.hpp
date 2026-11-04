@@ -11,11 +11,11 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
-#include "Engine_structs.hpp"
 #include "UnionRun_structs.hpp"
+#include "Engine_structs.hpp"
+#include "UMG_structs.hpp"
 #include "UnionUI_classes.hpp"
 #include "EMachineSelectMode_structs.hpp"
-#include "UMG_structs.hpp"
 
 
 namespace SDK
@@ -82,7 +82,7 @@ public:
 	void GetIconTexture(EMachineId InMachineID, class UTexture2D** OutIconTexture, bool* bOutIsFound) const;
 	void GetMachineId(int32 InMachineIndex, EMachineId* OutMachineId) const;
 	void GetMachineIdCurrent(EMachineId* MachineId) const;
-	void GetMachineIdNext(bool isNext, EMachineId* MachineId) const;
+	void GetMachineIdNext(bool IsNext, EMachineId* MachineId) const;
 	void GetMachineIds(TArray<EMachineId>* MachineIds_0) const;
 	void GetMachineNum(int32* OutMachineNum) const;
 	void GetMachineType(ECarStatusType* Machine_Type) const;

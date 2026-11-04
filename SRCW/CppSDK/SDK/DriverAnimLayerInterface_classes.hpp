@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "UNION_structs.hpp"
 #include "Engine_classes.hpp"
+#include "UNION_structs.hpp"
 
 
 namespace SDK
@@ -22,14 +22,17 @@ namespace SDK
 class IDriverAnimLayerInterface_C final
 {
 public:
+	void DrivingControlRigLayer(const struct FPoseLink& InPose_Driving, int32 machineType, struct FPoseLink* DrivingControlRigLayer_0);
+	void FullTimeControlRigLayer(const struct FPoseLink& InPose_Emote, int32 InMachineType, struct FPoseLink* FullTimeControlRigLayer_0);
 	void HoverboardControlRogLayer(const struct FPoseLink& HoverboardPose, struct FPoseLink* HoverboardControlRogLayer_0);
 	void HoverboardItemHoldBlendLeft(const struct FPoseLink& BasePose, const struct FPoseLink& LeftHoldPose, struct FPoseLink* HoverboardItemHoldBlendLeft_0);
 	void HoverboardItemHoldBlendRight(const struct FPoseLink& BasePose, const struct FPoseLink& RightHoldPose, struct FPoseLink* HoverboardItemHoldBlendRight_0);
-	void KawaiiPhysicsLayer(const struct FPoseLink& InPose, struct FPoseLink* KawaiiPhysicsLayer_0);
+	void KawaiiPhysicsLayer(const struct FPoseLink& InPose, bool bUseRace, const struct FPoseLink& InNoTransPose, struct FPoseLink* KawaiiPhysicsLayer_0);
 	void MachineItemHoldBlendLeft(const struct FPoseLink& BasePose, const struct FPoseLink& LeftHoldPose, struct FPoseLink* MachineItemHoldBlendLeft_0);
 	void MachineItemHoldBlendRight(const struct FPoseLink& BasePose, const struct FPoseLink& LeftHoldPose, struct FPoseLink* MachineItemHoldBlendRight_0);
 	void MenuFacialOverride(const struct FPoseLink& MenuFinalPose, bool InPlayingMontage, const struct FPoseLink& MenuDefaltFace, const struct FPoseLink& MenuOverrideFace, struct FPoseLink* MenuFacialOverride_0);
 	void ScaleFaceLayer(const struct FPoseLink& InFaceOverride, bool bPlayMontage, EBoneScaleFaceType InStateMachineFaceType, EBoneScaleFaceType InMontageFaceType, struct FPoseLink* ScaleFaceLayer_0);
+	void ScaleFacialOverrideVerTwo(const struct FPoseLink& InBasePose, const struct FPoseLink& InDefaultPose, struct FPoseLink* ScaleFacialOverrideVerTwo_0);
 
 public:
 	static class UClass* StaticClass()
