@@ -938,9 +938,9 @@ public:
 	static bool HasStartFrame(class UMovieSceneSection* Section);
 	static void SetEndFrame(class UMovieSceneSection* Section, int32 EndFrame);
 	static void SetEndFrameBounded(class UMovieSceneSection* Section, bool bIsBounded);
-	static void SetEndFrameSeconds(class UMovieSceneSection* Section, float endTime);
+	static void SetEndFrameSeconds(class UMovieSceneSection* Section, float EndTime);
 	static void SetRange(class UMovieSceneSection* Section, int32 StartFrame, int32 EndFrame);
-	static void SetRangeSeconds(class UMovieSceneSection* Section, float StartTime, float endTime);
+	static void SetRangeSeconds(class UMovieSceneSection* Section, float StartTime, float EndTime);
 	static void SetStartFrame(class UMovieSceneSection* Section, int32 StartFrame);
 	static void SetStartFrameBounded(class UMovieSceneSection* Section, bool bIsBounded);
 	static void SetStartFrameSeconds(class UMovieSceneSection* Section, float StartTime);
@@ -1028,7 +1028,7 @@ public:
 	static void SetMarkedFrameInSequence(class UMovieSceneSequence* Sequence, int32 InMarkIndex, const struct FFrameNumber& InFrameNumber, EMovieSceneTimeUnit TimeUnit);
 	static void SetMarkedFramesLocked(class UMovieSceneSequence* Sequence, bool bInLocked);
 	static void SetPlaybackEnd(class UMovieSceneSequence* Sequence, int32 EndFrame);
-	static void SetPlaybackEndSeconds(class UMovieSceneSequence* Sequence, float endTime);
+	static void SetPlaybackEndSeconds(class UMovieSceneSequence* Sequence, float EndTime);
 	static void SetPlaybackRangeLocked(class UMovieSceneSequence* Sequence, bool bInLocked);
 	static void SetPlaybackStart(class UMovieSceneSequence* Sequence, int32 StartFrame);
 	static void SetPlaybackStartSeconds(class UMovieSceneSequence* Sequence, float StartTime);

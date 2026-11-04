@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_MenuRacerHoverboard.BP_MenuRacerHoverboard_C
-// 0x0000 (0x0790 - 0x0790)
+// 0x0000 (0x0B88 - 0x0B88)
 class ABP_MenuRacerHoverboard_C final : public AMenuRacerHoverboard
 {
 public:

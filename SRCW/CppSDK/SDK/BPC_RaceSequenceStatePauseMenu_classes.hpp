@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
 namespace SDK
@@ -28,12 +28,12 @@ public:
 	bool                                          IsCreated;                                         // 0x0130(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void カスタムイベント();
+	void CreatePauseMenu(bool IsCreate, class UWBP_PauseMenu_C* PauseMenu);
+	void ExecuteUbergraph_BPC_RaceSequenceStatePauseMenu(int32 EntryPoint);
 	void OnExitState();
 	void OnInitState();
 	void ReceiveBeginPlay();
-	void CreatePauseMenu(bool IsCreate, class UWBP_PauseMenu_C* PauseMenu);
-	void ExecuteUbergraph_BPC_RaceSequenceStatePauseMenu(int32 EntryPoint);
+	void カスタムイベント();
 
 public:
 	static class UClass* StaticClass()

@@ -37,6 +37,26 @@ void UWBP_HeaderMenu_Sub_Rule_TimeTable_Plan_01_C::Fixed_Display(bool Fixed)
 }
 
 
+// Function WBP_HeaderMenu_Sub_Rule_TimeTable_Plan_01.WBP_HeaderMenu_Sub_Rule_TimeTable_Plan_01_C.SetupEXGadget
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EGadgetId                               exGadgetId                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_HeaderMenu_Sub_Rule_TimeTable_Plan_01_C::SetupEXGadget(EGadgetId exGadgetId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_HeaderMenu_Sub_Rule_TimeTable_Plan_01_C", "SetupEXGadget");
+
+	Params::WBP_HeaderMenu_Sub_Rule_TimeTable_Plan_01_C_SetupEXGadget Parms{};
+
+	Parms.exGadgetId = exGadgetId;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_HeaderMenu_Sub_Rule_TimeTable_Plan_01.WBP_HeaderMenu_Sub_Rule_TimeTable_Plan_01_C.StartAnimation
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:

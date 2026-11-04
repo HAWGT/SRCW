@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
+#include "UnionRun_structs.hpp"
 #include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
 #include "UnionLib_structs.hpp"
-#include "UnionRun_structs.hpp"
 #include "UnionUI_structs.hpp"
 
 
@@ -49,9 +49,9 @@ public:
 	void BindOnExit();
 	void BndEvt__BP_CharaMachineSequence_BPC_CharaSelectState_K2Node_ComponentBoundEvent_2_OnBackStateDelegate__DelegateSignature(EMenuSequenceSubState State);
 	void BndEvt__BP_CharaMachineSequence_BPC_MachineState_K2Node_ComponentBoundEvent_3_OnBackStateDelegate__DelegateSignature(EMenuSequenceSubState State);
-	void CustomEvent(EUnionUIFadeDirection FadeDirection);
 	void ExecuteUbergraph_BP_CharaMachineSequence(int32 EntryPoint);
 	void FinalizeMessageBar();
+	void FinishedFadeEvent(EUnionUIFadeDirection FadeDirection);
 	void HideLoadingDisplayWidget(class UUnionUILoadingDisplay* InLoadingDisplayWidget);
 	void InitializeSelectedPlayerCharacterIndex();
 	void MachineState_OnMachinePartsFocus(int32 PlayerIndex, EMachineId FrontPartsId, EMachineId RearPartsId, EMachineId TirePartsId);
@@ -80,14 +80,10 @@ public:
 	void StartFade();
 	void StartMoveCameraTransform(bool bCharaSelect, bool NoLerp);
 	void UnbindMachineState();
-	void UpdateParamWindow(int32 InPlayerIndex);
-	void UpdateParamWindowByCharaId(int32 InPlayerIndex, EDriverId InDriverId);
-	void UpdateParamWindowByMachineId(int32 InPlayerIndex, EMachineId InMachineID);
-	void UpdateParamWindowByMachinePartsIds(int32 InPlayerIndex, EMachineId InFrontPartsId, EMachineId InRearPartsId, EMachineId InTirePartsId);
 
 	struct FTransform GetMachineTransformOffset(EMachineId InMachineID) const;
 	void GetMessageBarVisible(bool* IsVisible) const;
-	void GetParamData(EDriverId InDriverId, EMachineId InFrontPartsId, EMachineId InRearPartsId, EMachineId InTirePartsId, const TArray<EGadgetId>& InGadgetIds, struct FRacerParamData* OutParamData) const;
+	void GetParamData(EDriverId InDriverId, EMachineId InFrontPartsId, EMachineId InRearPartsId, EMachineId InTirePartsId, const TArray<EGadgetId>& InGadgetIds, TArray<EGadgetId>& InSpGadgetIds, struct FRacerParamData* OutParamData) const;
 	class ULevelStreaming* GetSubLevel() const;
 	struct FTransform GetSubLevelTransform(int32 InPlayerIndex, bool IsCharaSelect) const;
 	bool IsLevelLoaded() const;

@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "UNION_structs.hpp"
-#include "UnionSystem_structs.hpp"
 #include "UnionRun_structs.hpp"
-#include "UMG_structs.hpp"
-#include "UnionUI_structs.hpp"
+#include "UnionSystem_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "UNION_structs.hpp"
+#include "UnionUI_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK::Params
@@ -49,6 +49,15 @@ public:
 };
 DUMPER7_ASSERTS_WBP_MachineSelect_Sub_TypeWindow_C_BndEvt__WBP_MachineSelect_Sub_TypeWindow_MLC_Up_Button_K2Node_ComponentBoundEvent_2_OnUnionButtonEvent__DelegateSignature;
 
+// Function WBP_MachineSelect_Sub_TypeWindow.WBP_MachineSelect_Sub_TypeWindow_C.BndEvt__WBP_MachineSelect_Sub_TypeWindow_MLC_Up_Button_K2Node_ComponentBoundEvent_3_OnUnionButtonEvent__DelegateSignature
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_MachineSelect_Sub_TypeWindow_C_BndEvt__WBP_MachineSelect_Sub_TypeWindow_MLC_Up_Button_K2Node_ComponentBoundEvent_3_OnUnionButtonEvent__DelegateSignature final
+{
+public:
+	class UUnionUIButtonBase*                     Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_MachineSelect_Sub_TypeWindow_C_BndEvt__WBP_MachineSelect_Sub_TypeWindow_MLC_Up_Button_K2Node_ComponentBoundEvent_3_OnUnionButtonEvent__DelegateSignature;
+
 // Function WBP_MachineSelect_Sub_TypeWindow.WBP_MachineSelect_Sub_TypeWindow_C.CreateCrossButton
 // 0x0008 (0x0008 - 0x0000)
 struct WBP_MachineSelect_Sub_TypeWindow_C_CreateCrossButton final
@@ -59,7 +68,7 @@ public:
 DUMPER7_ASSERTS_WBP_MachineSelect_Sub_TypeWindow_C_CreateCrossButton;
 
 // Function WBP_MachineSelect_Sub_TypeWindow.WBP_MachineSelect_Sub_TypeWindow_C.ExecuteUbergraph_WBP_MachineSelect_Sub_TypeWindow
-// 0x0088 (0x0088 - 0x0000)
+// 0x0098 (0x0098 - 0x0000)
 struct WBP_MachineSelect_Sub_TypeWindow_C_ExecuteUbergraph_WBP_MachineSelect_Sub_TypeWindow final
 {
 public:
@@ -70,11 +79,11 @@ public:
 	bool                                          CallFunc_IsEnableMouseClick_ReturnValue_3;         // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsEnableMouseClick_ReturnValue_4;         // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUnionUIButtonBase*                     K2Node_ComponentBoundEvent_Button_2;               // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UUnionUIButtonBase*                     K2Node_ComponentBoundEvent_Button_3;               // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	EUnionUIControlDir                            K2Node_ComponentBoundEvent_Dir;                    // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUnionUIButtonBase*                     K2Node_ComponentBoundEvent_Button_1;               // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UUnionUIButtonBase*                     K2Node_ComponentBoundEvent_Button;                 // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UUnionUIButtonBase*                     K2Node_ComponentBoundEvent_Button_2;               // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UUnionUIButtonBase*                     K2Node_ComponentBoundEvent_Button_1;               // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_MakeLiteralInt_ReturnValue;               // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUnionUISceneCaptureManager*            CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -90,12 +99,13 @@ public:
 	class ABP_UI3DCaptureTo2D_C*                  K2Node_DynamicCast_AsBP_UI3DCapture_to_2D;         // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EMachineId                                    CallFunc_ConvertRom1stTypeIndexToMachineId_MachineId; // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x006A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6B[0x1];                                       // 0x006B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetRom1stMachineIdByMachineId_1stMAchineIndex; // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0078(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	uint8                                         Pad_6A[0x6];                                       // 0x006A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUnionUIButtonBase*                     K2Node_ComponentBoundEvent_Button;                 // 0x0070(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetRom1stMachineIdByMachineId_1stMAchineIndex; // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0088(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_MachineSelect_Sub_TypeWindow_C_ExecuteUbergraph_WBP_MachineSelect_Sub_TypeWindow;
 

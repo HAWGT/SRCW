@@ -10,15 +10,63 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "UNION_structs.hpp"
 #include "UnionSystem_structs.hpp"
-#include "UnionLib_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UnionUI_structs.hpp"
+#include "UNION_structs.hpp"
 
 
 namespace SDK::Params
 {
+
+// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.CREATEDELEGATE_PROXYFUNCTION_0
+// 0x0010 (0x0010 - 0x0000)
+struct BPC_GadgetCustomize2SelectState_C_CREATEDELEGATE_PROXYFUNCTION_0 final
+{
+public:
+	class UObject*                                Object;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         PlayerControllerIndex;                             // 0x0008(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_CREATEDELEGATE_PROXYFUNCTION_0;
+
+// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.UpdateDonpaTicketBox
+// 0x0008 (0x0008 - 0x0000)
+struct BPC_GadgetCustomize2SelectState_C_UpdateDonpaTicketBox final
+{
+public:
+	int32                                         CallFunc_GetDonpaTicket_ReturnValue;               // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_UpdateDonpaTicketBox;
+
+// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.ChangeCustomizeWindowZOrder
+// 0x0038 (0x0038 - 0x0000)
+struct BPC_GadgetCustomize2SelectState_C_ChangeCustomizeWindowZOrder final
+{
+public:
+	int32                                         InZOrder;                                          // 0x0000(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0008(0x0010)(ReferenceParm)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0020(0x0010)()
+	bool                                          CallFunc_ChangeZOrder_ReturnValue;                 // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_ChangeCustomizeWindowZOrder;
+
+// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.SequenceEnd_FadeInFinished
+// 0x0030 (0x0030 - 0x0000)
+struct BPC_GadgetCustomize2SelectState_C_SequenceEnd_FadeInFinished final
+{
+public:
+	EUnionUIFadeDirection                         InFadeDirection;                                   // 0x0000(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0008(0x0010)(ReferenceParm)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0020(0x0010)()
+};
+DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_SequenceEnd_FadeInFinished;
 
 // Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.CreateGadgetPurchasePopup
 // 0x0018 (0x0018 - 0x0000)
@@ -29,19 +77,21 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWBP_DonpaTicketApp_C*                  CallFunc_Create_ReturnValue;                       // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_CreateGadgetPurchasePopup;
 
 // Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.SetFocusToDummyAll
-// 0x0010 (0x0010 - 0x0000)
+// 0x0014 (0x0014 - 0x0000)
 struct BPC_GadgetCustomize2SelectState_C_SetFocusToDummyAll final
 {
 public:
-	int32                                         Temp_int_Variable;                                 // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetSequencePlayerNum_ReturnValue;         // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable;                                 // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_SetFocusToDummyAll;
 
@@ -50,29 +100,11 @@ DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_SetFocusToDummyAll;
 struct BPC_GadgetCustomize2SelectState_C_SetFocusToDummy final
 {
 public:
-	int32                                         InPlayerIndex_0;                                   // 0x0000(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         InPlayerIndex;                                     // 0x0000(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_SetFocusToDummy;
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.PlaySoundGadgetAttachCancel
-// 0x0004 (0x0004 - 0x0000)
-struct BPC_GadgetCustomize2SelectState_C_PlaySoundGadgetAttachCancel final
-{
-public:
-	struct FSoundHandle                           CallFunc_SoundPlay_ReturnValue;                    // 0x0000(0x0004)()
-};
-DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_PlaySoundGadgetAttachCancel;
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.PlaySoundGadgetAttach
-// 0x0004 (0x0004 - 0x0000)
-struct BPC_GadgetCustomize2SelectState_C_PlaySoundGadgetAttach final
-{
-public:
-	struct FSoundHandle                           CallFunc_SoundPlay_ReturnValue;                    // 0x0000(0x0004)()
-};
-DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_PlaySoundGadgetAttach;
 
 // Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.SetSequenceDirty
 // 0x0002 (0x0002 - 0x0000)
@@ -84,35 +116,12 @@ public:
 };
 DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_SetSequenceDirty;
 
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.UpdateGadgetDetailWindowFromGadgetPlateLastFocus
-// 0x0130 (0x0130 - 0x0000)
-struct BPC_GadgetCustomize2SelectState_C_UpdateGadgetDetailWindowFromGadgetPlateLastFocus final
-{
-public:
-	int32                                         InPlayerIndex_0;                                   // 0x0000(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         TempPlayerIndex;                                   // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_1;            // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0018(0x0048)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0060(0x0048)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00A8(0x0010)(ReferenceParm)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x00B8(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00C8(0x0010)()
-	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x00D8(0x0010)()
-	struct FGadgetPlateUIData                     CallFunc_GetSelectedGadgetPlateUIData_OutGadgetPlateUIData; // 0x00E8(0x0028)()
-	TArray<int32>                                 CallFunc_ConvertGadgetPlateUIDataToSlotStates_OutSlotStates; // 0x0110(0x0010)(ReferenceParm)
-	class UGadgetDetailWindow*                    CallFunc_Array_Get_Item;                           // 0x0120(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_1;         // 0x0129(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_UpdateGadgetDetailWindowFromGadgetPlateLastFocus;
-
 // Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.UnbindGadgetPlateDelegate
 // 0x00E0 (0x00E0 - 0x0000)
 struct BPC_GadgetCustomize2SelectState_C_UnbindGadgetPlateDelegate final
 {
 public:
-	int32                                         InPlayerIndex_0;                                   // 0x0000(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         InPlayerIndex;                                     // 0x0000(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGadgetPlateWindow*                     TempPlate;                                         // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -132,52 +141,63 @@ public:
 DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_UnbindGadgetPlateDelegate;
 
 // Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.BindGadgetPlateDelegate
-// 0x00E0 (0x00E0 - 0x0000)
+// 0x0100 (0x0100 - 0x0000)
 struct BPC_GadgetCustomize2SelectState_C_BindGadgetPlateDelegate final
 {
 public:
-	int32                                         InPlayerIndex_0;                                   // 0x0000(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         InPlayerIndex;                                     // 0x0000(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGadgetPlateWindow*                     TempPlate;                                         // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0018(0x0048)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0060(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0070(0x0010)()
-	class UGadgetPlateWindow*                     CallFunc_Array_Get_Item;                           // 0x0080(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0089(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8A[0x2];                                       // 0x008A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(int32 PlayerIndex)>            K2Node_CreateDelegate_OutputDelegate;              // 0x008C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(int32 PlayerIndex)>            K2Node_CreateDelegate_OutputDelegate_1;            // 0x009C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(int32 PlayerIndex)>            K2Node_CreateDelegate_OutputDelegate_2;            // 0x00AC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(int32 PlayerIndex, int32 SlotState, int32 SlotIndex)> K2Node_CreateDelegate_OutputDelegate_3; // 0x00BC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(int32 PlayerIndex, int32 SlotState, int32 SlotIndex)> K2Node_CreateDelegate_OutputDelegate_4; // 0x00CC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(int32 PlayerIndex)>            K2Node_CreateDelegate_OutputDelegate;              // 0x0018(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0028(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0070(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0080(0x0010)()
+	TDelegate<void(int32 PlayerIndex)>            K2Node_CreateDelegate_OutputDelegate_1;            // 0x0090(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(int32 PlayerIndex)>            K2Node_CreateDelegate_OutputDelegate_2;            // 0x00A0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UGadgetPlateWindow*                     CallFunc_Array_Get_Item;                           // 0x00B0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x00B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_BA[0x2];                                       // 0x00BA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(int32 PlayerIndex)>            K2Node_CreateDelegate_OutputDelegate_3;            // 0x00BC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(int32 PlayerIndex)>            K2Node_CreateDelegate_OutputDelegate_4;            // 0x00CC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(int32 PlayerIndex, int32 SlotState, int32 SlotIndex)> K2Node_CreateDelegate_OutputDelegate_5; // 0x00DC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(int32 PlayerIndex, int32 SlotState, int32 SlotIndex)> K2Node_CreateDelegate_OutputDelegate_6; // 0x00EC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_BindGadgetPlateDelegate;
 
 // Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.BindGadgetSelectWindowDelegate
-// 0x0100 (0x0100 - 0x0000)
+// 0x0158 (0x0158 - 0x0000)
 struct BPC_GadgetCustomize2SelectState_C_BindGadgetSelectWindowDelegate final
 {
 public:
-	int32                                         InPlayerIndex_0;                                   // 0x0000(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         InPlayerIndex;                                     // 0x0000(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGadgetCustomWindow*                    TempWindow;                                        // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0018(0x0048)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0060(0x0010)(ReferenceParm)
-	class UGadgetCustomWindow*                    CallFunc_Array_Get_Item;                           // 0x0070(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0078(0x0010)()
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(int32 InParam)>                K2Node_CreateDelegate_OutputDelegate;              // 0x0010(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(int32 InParam)>                K2Node_CreateDelegate_OutputDelegate_1;            // 0x0020(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(int32 InParam)>                K2Node_CreateDelegate_OutputDelegate_2;            // 0x0030(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(int32 InParam)>                K2Node_CreateDelegate_OutputDelegate_3;            // 0x0040(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(int32 InParam)>                K2Node_CreateDelegate_OutputDelegate_4;            // 0x0050(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UGadgetCustomSubCursor*                 CallFunc_GetFocusCursor_ReturnValue;               // 0x0060(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_69[0x3];                                       // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(int32 PlayerIndex, EGadgetId GadgetID, EGadgetCategory CategoryId, EGadgetState GadgetState)> K2Node_CreateDelegate_OutputDelegate_5; // 0x006C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGadgetCustomWindow*                    CallFunc_Array_Get_Item;                           // 0x0080(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0089(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_8A[0x2];                                       // 0x008A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(int32 PlayerIndex, EGadgetId gadgetId, EGadgetCategory CategoryId, EGadgetState GadgetState)> K2Node_CreateDelegate_OutputDelegate; // 0x008C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(int32 PlayerIndex, EGadgetId gadgetId, EGadgetCategory CategoryId, EGadgetState GadgetState)> K2Node_CreateDelegate_OutputDelegate_1; // 0x009C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(int32 PlayerIndex, EGadgetId gadgetId, EGadgetCategory CategoryId, EGadgetState GadgetState)> K2Node_CreateDelegate_OutputDelegate_2; // 0x00AC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(int32 PlayerIndex, EGadgetId gadgetId, EGadgetCategory CategoryId, EGadgetState GadgetState)> K2Node_CreateDelegate_OutputDelegate_3; // 0x00BC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(int32 PlayerIndex, EGadgetId gadgetId, EGadgetState GadgetState)> K2Node_CreateDelegate_OutputDelegate_4; // 0x00CC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(int32 SelectedPlayerControllerIndex, EGadgetCategory SelectedGadgetCategory, EGadgetId SelectedGadgetId, EGadgetState SelectedGadgetState)> K2Node_CreateDelegate_OutputDelegate_5; // 0x00DC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(int32 SelectedPlayerControllerIndex, EGadgetCategory SelectedGadgetCategory, EGadgetId SelectedGadgetId, EGadgetState SelectedGadgetState)> K2Node_CreateDelegate_OutputDelegate_6; // 0x00EC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(int32 PlayerIndex, EGadgetId GadgetID, EGadgetCategory CategoryId, EGadgetState GadgetState)> K2Node_CreateDelegate_OutputDelegate_6; // 0x008C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(int32 PlayerIndex, EGadgetId GadgetID, EGadgetCategory CategoryId, EGadgetState GadgetState)> K2Node_CreateDelegate_OutputDelegate_7; // 0x009C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(int32 PlayerIndex, EGadgetId GadgetID, EGadgetCategory CategoryId, EGadgetState GadgetState)> K2Node_CreateDelegate_OutputDelegate_8; // 0x00AC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(int32 PlayerIndex, EGadgetId GadgetID, EGadgetState GadgetState)> K2Node_CreateDelegate_OutputDelegate_9; // 0x00BC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(int32 SelectedPlayerControllerIndex, EGadgetCategory SelectedGadgetCategory, EGadgetId SelectedGadgetId, EGadgetState SelectedGadgetState)> K2Node_CreateDelegate_OutputDelegate_10; // 0x00CC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_DC[0x4];                                       // 0x00DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x00E0(0x0048)(HasGetValueTypeHash)
+	TDelegate<void(int32 SelectedPlayerControllerIndex, EGadgetCategory SelectedGadgetCategory, EGadgetId SelectedGadgetId, EGadgetState SelectedGadgetState)> K2Node_CreateDelegate_OutputDelegate_11; // 0x0128(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0138(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0148(0x0010)()
 };
 DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_BindGadgetSelectWindowDelegate;
 
@@ -219,26 +239,6 @@ public:
 };
 DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_SetupDonpaTicketBoxWidget;
 
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.SetupMachineParameterWidget
-// 0x0040 (0x0040 - 0x0000)
-struct BPC_GadgetCustomize2SelectState_C_SetupMachineParameterWidget final
-{
-public:
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x000C(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UCharaMachineParamWindow*>       CallFunc_GetmachineParameterWindows_OutMachineParameterWindows; // 0x0018(0x0010)(ReferenceParm, ContainsInstancedReference)
-	class UCharaMachineParamWindow*               CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_SetupMachineParameterWidget;
-
 // Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.SetupGadgetDetailWidget
 // 0x0038 (0x0038 - 0x0000)
 struct BPC_GadgetCustomize2SelectState_C_SetupGadgetDetailWidget final
@@ -253,21 +253,23 @@ public:
 DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_SetupGadgetDetailWidget;
 
 // Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.SetupGadgetCustomizeBaseWidget
-// 0x0028 (0x0028 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct BPC_GadgetCustomize2SelectState_C_SetupGadgetCustomizeBaseWidget final
 {
 public:
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsFestaSpecialRuleContinuous_ReturnValue; // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGadgetCustomizeWindowData             K2Node_MakeStruct_GadgetCustomizeWindowData;       // 0x0004(0x0004)(NoDestructor)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue;              // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 CallFunc_Array_Get_Item;                           // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UGadgetCustomizeWindow*                 CallFunc_Create_ReturnValue;                       // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetSequencePlayerNum_ReturnValue;         // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsFestaSpecialRuleContinuous_ReturnValue; // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetSequencePlayerNum_ReturnValue_1;       // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGadgetCustomizeWindowData             K2Node_MakeStruct_GadgetCustomizeWindowData;       // 0x000C(0x0004)(NoDestructor)
+	int32                                         CallFunc_GetSequencePlayerNum_ReturnValue_2;       // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue;              // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 CallFunc_Array_Get_Item;                           // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UGadgetCustomizeWindow*                 CallFunc_Create_ReturnValue;                       // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_SetupGadgetCustomizeBaseWidget;
 
@@ -404,217 +406,54 @@ public:
 DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_DebugPrintCurrentGadgetIds;
 
 // Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.SetHintReadOfLowerRank
-// 0x0002 (0x0002 - 0x0000)
+// 0x0008 (0x0008 - 0x0000)
 struct BPC_GadgetCustomize2SelectState_C_SetHintReadOfLowerRank final
 {
 public:
-	EGadgetPlateId                                CallFunc_GetGadgetPlateIdFromTotalRaceCount_ReturnValue; // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetTotalRaceCount_ReturnValue;            // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EGadgetPlateId                                CallFunc_GetGadgetPlateIdFromTotalRaceCount_ReturnValue; // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_SetHintReadOfLowerRank;
 
 // Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.SetupFestaSpecialRule
-// 0x0028 (0x0028 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct BPC_GadgetCustomize2SelectState_C_SetupFestaSpecialRule final
 {
 public:
-	struct FGadgetPlateUIData                     TempRentalGadgetInfo;                              // 0x0000(0x0028)(Edit, BlueprintVisible)
+	struct FGadgetPlateUIData                     TempRentalGadgetInfo;                              // 0x0000(0x0038)(Edit, BlueprintVisible)
 };
 DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_SetupFestaSpecialRule;
 
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.UpdateGadgetDetailWindow
-// 0x00F8 (0x00F8 - 0x0000)
-struct BPC_GadgetCustomize2SelectState_C_UpdateGadgetDetailWindow final
-{
-public:
-	int32                                         InPlayerIndex_0;                                   // 0x0000(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetId                                     InGadgetId;                                        // 0x0004(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_GetValidValue_ReturnValue;                // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Conv_ByteToString_ReturnValue;            // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0028(0x0010)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0038(0x0048)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0080(0x0048)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00C8(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00D8(0x0010)()
-	class UGadgetDetailWindow*                    CallFunc_Array_Get_Item;                           // 0x00E8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_UpdateGadgetDetailWindow;
-
 // Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.UpdateGadgetCustomWindow
-// 0x0020 (0x0020 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct BPC_GadgetCustomize2SelectState_C_UpdateGadgetCustomWindow final
 {
 public:
-	int32                                         InPlayerIndex_0;                                   // 0x0000(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         InPlayerIndex;                                     // 0x0000(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         InPlateSlotFocusIndex;                             // 0x0004(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsUseRentalGadgetPlate_ReturnValue;       // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsFestaSpecialRuleContinuous_ReturnValue; // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGadgetCustomWindow*                    CallFunc_Array_Get_Item;                           // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UGadgetCustomWindow*                    CallFunc_Array_Get_Item;                           // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_UpdateGadgetCustomWindow;
 
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.UpdateMachineParameterAll
-// 0x0018 (0x0018 - 0x0000)
-struct BPC_GadgetCustomize2SelectState_C_UpdateMachineParameterAll final
-{
-public:
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsFocusCustomWindowFlag_ReturnValue;      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_UpdateMachineParameterAll;
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.UpdateMachineParameter
-// 0x0538 (0x0538 - 0x0000)
-struct BPC_GadgetCustomize2SelectState_C_UpdateMachineParameter final
-{
-public:
-	int32                                         InPlayerIndex_0;                                   // 0x0000(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bDiffVisible;                                      // 0x0004(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         TempPlayerIndex;                                   // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<EGadgetId>                             TempCandParamGadgetIds;                            // 0x0010(0x0010)(Edit, BlueprintVisible)
-	TArray<EGadgetId>                             TempPlateGadgetIds;                                // 0x0020(0x0010)(Edit, BlueprintVisible)
-	class UGadgetPlateWindow*                     TempPlateWindow;                                   // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	EMachineId                                    TempMachineTire;                                   // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EMachineId                                    TempMachineRear;                                   // 0x0039(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EMachineId                                    TempMachineFront;                                  // 0x003A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EMachineId                                    TempMachineId;                                     // 0x003B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EDriverId                                     TempDriverId;                                      // 0x003C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_BoolToText_ReturnValue;              // 0x0040(0x0010)()
-	class FText                                   CallFunc_Conv_BoolToText_ReturnValue_1;            // 0x0050(0x0010)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0060(0x0048)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x00A8(0x0048)(HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x00F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x00F8(0x0048)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0140(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0150(0x0010)()
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_1;            // 0x0160(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x0168(0x0048)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x01B0(0x0010)(ReferenceParm)
-	bool                                          CallFunc_IsFocusCustomWindowFlag_ReturnValue;      // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C1[0x7];                                      // 0x01C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x01C8(0x0010)()
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_2;            // 0x01D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_4;            // 0x01E0(0x0048)(HasGetValueTypeHash)
-	TArray<EGadgetId>                             CallFunc_GetGadgetIds_OutGadgetIds;                // 0x0228(0x0010)(ReferenceParm)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_2;                          // 0x0238(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_2;                     // 0x0248(0x0010)()
-	class UGadgetCustomWindow*                    CallFunc_Array_Get_Item;                           // 0x0258(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UGadgetCustomSubTypeBox*                CallFunc_GetCenterCategoryTypeBox_ReturnValue;     // 0x0260(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	EGadgetId                                     CallFunc_GetCenterGadgetId_ReturnValue;            // 0x0268(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0269(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_26A[0x2];                                      // 0x026A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Get_Item_1;                         // 0x026C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetAttachGadgetToPlateMockup_OutAttachableSlotIndex; // 0x0270(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_274[0x4];                                      // 0x0274(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGadgetPlateUIData                     CallFunc_GetAttachGadgetToPlateMockup_OutResult;   // 0x0278(0x0028)()
-	TArray<EGadgetId>                             CallFunc_ConvertGadgetPlateUIDataToIds_OutGadgetIds; // 0x02A0(0x0010)(ReferenceParm)
-	class UMasterDataManageSubsystem*             CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x02B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UMasterDataManageSubsystem*             CallFunc_GetGameInstanceSubsystem_ReturnValue_1;   // 0x02B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FRacerParamData                        CallFunc_GetParamData_OutParamData;                // 0x02C0(0x0050)(NoDestructor)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_3;            // 0x0310(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_5;            // 0x0318(0x0048)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_3;                          // 0x0360(0x0010)(ReferenceParm)
-	int32                                         CallFunc_GetSelectedMachineID_OutId;               // 0x0370(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EOutputExecsPin_SuccessFailed                 CallFunc_GetSelectedMachineID_OutExecsPin;         // 0x0374(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_375[0x3];                                      // 0x0375(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Format_ReturnValue_3;                     // 0x0378(0x0010)()
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0388(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_Conv_IntToByte_ReturnValue;               // 0x0389(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_GetValidValue_ReturnValue;                // 0x038A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38B[0x1];                                      // 0x038B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRacerParamData                        CallFunc_GetParamData_OutParamData_1;              // 0x038C(0x0050)(NoDestructor)
-	uint8                                         Pad_3DC[0x4];                                      // 0x03DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUserMachineCustomizeData              CallFunc_GetMachineCustomizeDataById_OutUserMachineCustomizeData; // 0x03E0(0x0078)()
-	struct FRacerParamData                        CallFunc_GetParamData_OutParamData_2;              // 0x0458(0x0050)(NoDestructor)
-	EDriverId                                     CallFunc_GetSelectedDriverId_OutId;                // 0x04A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EOutputExecsPin_SuccessFailed                 CallFunc_GetSelectedDriverId_OutExecsPin;          // 0x04A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x04AA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AB[0x5];                                      // 0x04AB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGadgetPlateWindow*                     CallFunc_Array_Get_Item_2;                         // 0x04B0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UGadgetCustomWindow*                    CallFunc_Array_Get_Item_3;                         // 0x04B8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x04C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4C1[0x7];                                      // 0x04C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCharaMachineParamWindow*               CallFunc_Array_Get_Item_4;                         // 0x04C8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TArray<EGadgetId>                             K2Node_Select_Default;                             // 0x04D0(0x0010)(ConstParm, ReferenceParm)
-	struct FRacerParamData                        CallFunc_GetParamData_OutParamData_3;              // 0x04E0(0x0050)(NoDestructor)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0530(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_UpdateMachineParameter;
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.SetPlateWindowInValidIcons
-// 0x0150 (0x0150 - 0x0000)
-struct BPC_GadgetCustomize2SelectState_C_SetPlateWindowInValidIcons final
-{
-public:
-	int32                                         InPlayerId;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGadgetPlateUIData                     CallFunc_GetSelectedGadgetPlateUIData_OutGadgetPlateUIData; // 0x0008(0x0028)()
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 CallFunc_ConvertGadgetPlateUIDataToSlotStates_OutSlotStates; // 0x0038(0x0010)(ReferenceParm)
-	int32                                         CallFunc_Array_Get_Item;                           // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x004D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E[0x2];                                       // 0x004E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGameModeId                                   CallFunc_GetSelectedGameModeId_ReturnValue;        // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0055(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56[0x2];                                       // 0x0056(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_1;         // 0x005C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5D[0x3];                                       // 0x005D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGadgetPlateWindow*                     CallFunc_Array_Get_Item_1;                         // 0x0060(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWBP_GadgetCustom_Sub_GadgetPlate_C*    K2Node_DynamicCast_AsWBP_Gadget_Custom_Sub_Gadget_Plate; // 0x0068(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_71[0x3];                                       // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UEquipmentGadgetIcon*                   CallFunc_Array_Get_Item_2;                         // 0x0078(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGadgetData                            CallFunc_GetGadgetData_OutGadgetData;              // 0x0088(0x00C0)()
-	bool                                          CallFunc_GetGadgetData_ReturnValue;                // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0149(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_SetPlateWindowInValidIcons;
-
 // Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.Custom Window on Item Focused
-// 0x0018 (0x0018 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct BPC_GadgetCustomize2SelectState_C_Custom_Window_on_Item_Focused final
 {
 public:
-	int32                                         InPlayerIndex_0;                                   // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         InPlayerIndex;                                     // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EGadgetId                                     InGadgetId;                                        // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EGadgetState                                  InGadgetState;                                     // 0x0005(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGadgetDetailWindow*                    CallFunc_Array_Get_Item;                           // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetLastFocusPlateSlotIndex_ReturnValue;   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetLastFocusSelectWindowGadget_ReturnValue; // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGadgetDetailWindow*                    CallFunc_Array_Get_Item;                           // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_Custom_Window_on_Item_Focused;
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.FinalizeRewardDialog
-// 0x0001 (0x0001 - 0x0000)
-struct BPC_GadgetCustomize2SelectState_C_FinalizeRewardDialog final
-{
-public:
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_FinalizeRewardDialog;
 
 // Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.SetBeforeGadgetPlateRankUpTipsWindowFlag
 // 0x0003 (0x0003 - 0x0000)
@@ -627,40 +466,42 @@ public:
 };
 DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_SetBeforeGadgetPlateRankUpTipsWindowFlag;
 
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.Set Gadget Plate Rank Up ID
-// 0x0010 (0x0010 - 0x0000)
-struct BPC_GadgetCustomize2SelectState_C_Set_Gadget_Plate_Rank_Up_ID final
+// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.Set Tips Id Gadget Plate
+// 0x002C (0x002C - 0x0000)
+struct BPC_GadgetCustomize2SelectState_C_Set_Tips_Id_Gadget_Plate final
 {
 public:
 	bool                                          EnableOpenWindow;                                  // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsReadHint_ReturnValue;                   // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetPlateId                                CallFunc_GetGadgetPlateIdFromTotalRaceCount_ReturnValue; // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetIsOnlineGameMode_ReturnValue;          // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7[0x1];                                        // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetSelectedPlayerCount_ReturnValue;       // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x000E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EGadgetPlateId                                GadgetPlateId;                                     // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue;              // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3[0x1];                                        // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsReadHint_ReturnValue;                   // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_Conv_IntToByte_ReturnValue;               // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsReadHint_ReturnValue_1;                 // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x000E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F[0x1];                                        // 0x000F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetTotalRaceCount_ReturnValue;            // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EGadgetPlateId                                CallFunc_GetGadgetPlateIdFromTotalRaceCount_ReturnValue; // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsReadHint_ReturnValue_2;                 // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x0016(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_1;            // 0x0017(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetIsOnlineGameMode_ReturnValue;          // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_3;                // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A[0x2];                                       // 0x001A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_1;             // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetSelectedPlayerCount_ReturnValue;       // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_Conv_IntToByte_ReturnValue_1;             // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0025(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_ByteByte_ReturnValue;        // 0x0026(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0027(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_Set_Gadget_Plate_Rank_Up_ID;
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.SetRacerGadgetPlateDataAll
-// 0x0040 (0x0040 - 0x0000)
-struct BPC_GadgetCustomize2SelectState_C_SetRacerGadgetPlateDataAll final
-{
-public:
-	int32                                         Temp_int_Variable;                                 // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGadgetPlateUIData                     CallFunc_GetSelectedGadgetPlateUIData_OutGadgetPlateUIData; // 0x0008(0x0028)()
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_SetRacerGadgetPlateDataAll;
+DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_Set_Tips_Id_Gadget_Plate;
 
 // Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.TerminateInputReceiver
 // 0x0030 (0x0030 - 0x0000)
@@ -675,10 +516,10 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_UnregisterSingleSubMenu_ReturnValue;      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetSequencePlayerNum_ReturnValue;         // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_UnregisterSingleSubMenu_ReturnValue;      // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_TerminateInputReceiver;
 
@@ -694,142 +535,30 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class UObject* Object, const int32& PlayerControllerIndex)> K2Node_CreateDelegate_OutputDelegate; // 0x0020(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class UObject* Object, const int32& PlayerControllerIndex)> K2Node_CreateDelegate_OutputDelegate_1; // 0x0030(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMenuInputRecieveObject*                CallFunc_SpawnObject_ReturnValue;                  // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetSequencePlayerNum_ReturnValue;         // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class UObject* Object, const int32& PlayerControllerIndex)> K2Node_CreateDelegate_OutputDelegate; // 0x0024(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(class UObject* Object, const int32& PlayerControllerIndex)> K2Node_CreateDelegate_OutputDelegate_1; // 0x003C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMenuInputRecieveObject*                CallFunc_SpawnObject_ReturnValue;                  // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_SetupInputReceiver;
 
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.UpdateTicketBox
-// 0x0004 (0x0004 - 0x0000)
-struct BPC_GadgetCustomize2SelectState_C_UpdateTicketBox final
-{
-public:
-	int32                                         CallFunc_GetDonpaTicket_ReturnValue;               // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_UpdateTicketBox;
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.ReturnFocusAll
-// 0x0010 (0x0010 - 0x0000)
-struct BPC_GadgetCustomize2SelectState_C_ReturnFocusAll final
-{
-public:
-	int32                                         Temp_int_Variable;                                 // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_ReturnFocusAll;
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.ReturnFocus
-// 0x0030 (0x0030 - 0x0000)
-struct BPC_GadgetCustomize2SelectState_C_ReturnFocus final
-{
-public:
-	int32                                         InPlayerIndex_0;                                   // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGadgetCustomWindow*                    CallFunc_Array_Get_Item;                           // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue_1;        // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UGadgetPlateWindow*                     CallFunc_Array_Get_Item_1;                         // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_ReturnFocus;
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.SetAttachedGadgetIdsToWindow
-// 0x0004 (0x0004 - 0x0000)
-struct BPC_GadgetCustomize2SelectState_C_SetAttachedGadgetIdsToWindow final
-{
-public:
-	int32                                         InPlayerIndex_0;                                   // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_SetAttachedGadgetIdsToWindow;
-
 // Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.SetProperties
-// 0x0030 (0x0030 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct BPC_GadgetCustomize2SelectState_C_SetProperties final
 {
 public:
-	TArray<EGadgetCustomize2SequenceSubState>     K2Node_MakeArray_Array;                            // 0x0000(0x0010)(ReferenceParm)
-	EGadgetCustomizeSelectMode                    CallFunc_GetSelectMode_OutSelectMode;              // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetPlayerNum_OutPlayerNum;                // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AHierarchicalStateMachine*              CallFunc_GetOwnerStateMachine_ReturnValue;         // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ABP_GadgetCustomize2Sequence_C*         K2Node_DynamicCast_AsBP_Gadget_Customize_2Sequence; // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EGadgetCustomizeSelectMode                    CallFunc_GetSelectMode_OutSelectMode;              // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetPlayerNum_OutPlayerNum;                // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AHierarchicalStateMachine*              CallFunc_GetOwnerStateMachine_ReturnValue;         // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ABP_GadgetCustomize2Sequence_C*         K2Node_DynamicCast_AsBP_Gadget_Customize_2Sequence; // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_SetProperties;
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.CustomWindow_OnFocusChangeUp
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_GadgetCustomize2SelectState_C_CustomWindow_OnFocusChangeUp final
-{
-public:
-	int32                                         PlayerIndex;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetId                                     gadgetId;                                          // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetCategory                               CategoryId;                                        // 0x0005(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetState                                  GadgetState;                                       // 0x0006(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_CustomWindow_OnFocusChangeUp;
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.CustomWindow_OnFocusChangeDown
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_GadgetCustomize2SelectState_C_CustomWindow_OnFocusChangeDown final
-{
-public:
-	int32                                         PlayerIndex;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetId                                     gadgetId;                                          // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetCategory                               CategoryId;                                        // 0x0005(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetState                                  GadgetState;                                       // 0x0006(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_CustomWindow_OnFocusChangeDown;
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.CustomWindow_OnFocusChangeRight
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_GadgetCustomize2SelectState_C_CustomWindow_OnFocusChangeRight final
-{
-public:
-	int32                                         PlayerIndex;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetId                                     gadgetId;                                          // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetCategory                               CategoryId;                                        // 0x0005(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetState                                  GadgetState;                                       // 0x0006(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_CustomWindow_OnFocusChangeRight;
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.CustomWindow_OnFocusChangeLeft
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_GadgetCustomize2SelectState_C_CustomWindow_OnFocusChangeLeft final
-{
-public:
-	int32                                         PlayerIndex;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetId                                     gadgetId;                                          // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetCategory                               CategoryId;                                        // 0x0005(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetState                                  GadgetState;                                       // 0x0006(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_CustomWindow_OnFocusChangeLeft;
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.CreateTipsWindow
-// 0x0001 (0x0001 - 0x0000)
-struct BPC_GadgetCustomize2SelectState_C_CreateTipsWindow final
-{
-public:
-	EHintId                                       InHintId;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_CreateTipsWindow;
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.OnDetachGadget
-// 0x0010 (0x0010 - 0x0000)
-struct BPC_GadgetCustomize2SelectState_C_OnDetachGadget final
-{
-public:
-	class UObject*                                Object;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         PlayerControllerIndex;                             // 0x0008(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_OnDetachGadget;
 
 // Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.OnViewParameter
 // 0x0010 (0x0010 - 0x0000)
@@ -847,19 +576,10 @@ struct BPC_GadgetCustomize2SelectState_C_SelectWindow_OnItemSelected final
 {
 public:
 	int32                                         PlayerIndex;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetId                                     gadgetId;                                          // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EGadgetId                                     GadgetID;                                          // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EGadgetState                                  GadgetState;                                       // 0x0005(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_SelectWindow_OnItemSelected;
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.SelectWindow_OnCancel
-// 0x0004 (0x0004 - 0x0000)
-struct BPC_GadgetCustomize2SelectState_C_SelectWindow_OnCancel final
-{
-public:
-	int32                                         PlayerIndex;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_SelectWindow_OnCancel;
 
 // Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.SelectWindow_OnItemFocused
 // 0x0008 (0x0008 - 0x0000)
@@ -867,96 +587,10 @@ struct BPC_GadgetCustomize2SelectState_C_SelectWindow_OnItemFocused final
 {
 public:
 	int32                                         PlayerIndex;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetId                                     gadgetId;                                          // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EGadgetId                                     GadgetID;                                          // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EGadgetState                                  GadgetState;                                       // 0x0005(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_SelectWindow_OnItemFocused;
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.RewardDialog_Purchase_OnResult
-// 0x0001 (0x0001 - 0x0000)
-struct BPC_GadgetCustomize2SelectState_C_RewardDialog_Purchase_OnResult final
-{
-public:
-	EDialogResult                                 Result;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_RewardDialog_Purchase_OnResult;
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.RewardDialog_Unlock_OnResult
-// 0x0001 (0x0001 - 0x0000)
-struct BPC_GadgetCustomize2SelectState_C_RewardDialog_Unlock_OnResult final
-{
-public:
-	EDialogResult                                 Result;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_RewardDialog_Unlock_OnResult;
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.PlateWindow_OnItemFocused
-// 0x000C (0x000C - 0x0000)
-struct BPC_GadgetCustomize2SelectState_C_PlateWindow_OnItemFocused final
-{
-public:
-	int32                                         PlayerIndex;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         SlotState;                                         // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         SlotIndex;                                         // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_PlateWindow_OnItemFocused;
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.PlateWindow_OnItemSelected
-// 0x000C (0x000C - 0x0000)
-struct BPC_GadgetCustomize2SelectState_C_PlateWindow_OnItemSelected final
-{
-public:
-	int32                                         PlayerIndex;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         SlotState;                                         // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         SlotIndex;                                         // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_PlateWindow_OnItemSelected;
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.PlateWindow_OnCancel
-// 0x0004 (0x0004 - 0x0000)
-struct BPC_GadgetCustomize2SelectState_C_PlateWindow_OnCancel final
-{
-public:
-	int32                                         PlayerIndex;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_PlateWindow_OnCancel;
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.PlateWindow_OnLeftShoulder
-// 0x0004 (0x0004 - 0x0000)
-struct BPC_GadgetCustomize2SelectState_C_PlateWindow_OnLeftShoulder final
-{
-public:
-	int32                                         PlayerIndex;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_PlateWindow_OnLeftShoulder;
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.PlateWindow_OnRightShoulder
-// 0x0004 (0x0004 - 0x0000)
-struct BPC_GadgetCustomize2SelectState_C_PlateWindow_OnRightShoulder final
-{
-public:
-	int32                                         PlayerIndex;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_PlateWindow_OnRightShoulder;
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.Finished_SequenceEnd_FadeIn
-// 0x0001 (0x0001 - 0x0000)
-struct BPC_GadgetCustomize2SelectState_C_Finished_SequenceEnd_FadeIn final
-{
-public:
-	EUnionUIFadeDirection                         FadeDirection;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_Finished_SequenceEnd_FadeIn;
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.GadgetTabSelect
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_GadgetCustomize2SelectState_C_GadgetTabSelect final
-{
-public:
-	int32                                         InPlayerIndex_0;                                   // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         InPresetNum;                                       // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_GadgetTabSelect;
 
 // Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.Finished_SequenceBegin_FadeOut
 // 0x0001 (0x0001 - 0x0000)
@@ -967,398 +601,125 @@ public:
 };
 DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_Finished_SequenceBegin_FadeOut;
 
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.GadgetCustomWindow_OnSctollStart
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_GadgetCustomize2SelectState_C_GadgetCustomWindow_OnSctollStart final
+// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.CreateTipsWindow
+// 0x0001 (0x0001 - 0x0000)
+struct BPC_GadgetCustomize2SelectState_C_CreateTipsWindow final
 {
 public:
-	int32                                         SelectedPlayerControllerIndex;                     // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetCategory                               SelectedGadgetCategory;                            // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetId                                     SelectedGadgetId;                                  // 0x0005(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetState                                  SelectedGadgetState;                               // 0x0006(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EHintId                                       InHintId;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_GadgetCustomWindow_OnSctollStart;
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.GadgetCustomWindow_OnGadgetCategoryCancel
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_GadgetCustomize2SelectState_C_GadgetCustomWindow_OnGadgetCategoryCancel final
-{
-public:
-	int32                                         SelectedPlayerControllerIndex;                     // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetCategory                               SelectedGadgetCategory;                            // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetId                                     SelectedGadgetId;                                  // 0x0005(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetState                                  SelectedGadgetState;                               // 0x0006(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_GadgetCustomWindow_OnGadgetCategoryCancel;
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.GadgetCustomWindow_OnGadgetCategoryDecide
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_GadgetCustomize2SelectState_C_GadgetCustomWindow_OnGadgetCategoryDecide final
-{
-public:
-	int32                                         SelectedPlayerControllerIndex;                     // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetCategory                               SelectedGadgetCategory;                            // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetId                                     SelectedGadgetId;                                  // 0x0005(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetState                                  SelectedGadgetState;                               // 0x0006(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_GadgetCustomWindow_OnGadgetCategoryDecide;
+DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_CreateTipsWindow;
 
 // Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.ExecuteUbergraph_BPC_GadgetCustomize2SelectState
-// 0x1078 (0x1078 - 0x0000)
+// 0x05C0 (0x05C0 - 0x0000)
 struct BPC_GadgetCustomize2SelectState_C_ExecuteUbergraph_BPC_GadgetCustomize2SelectState final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(EDialogResult Result)>         K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	EHintId                                       K2Node_CustomEvent_InHintId;                       // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x0018(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                K2Node_CustomEvent_Object_1;                       // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_PlayerControllerIndex_1;        // 0x0038(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue_1;        // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FGadgetPlateUIData                     CallFunc_GetSelectedGadgetPlateUIData_OutGadgetPlateUIData; // 0x0048(0x0028)()
-	struct FGadgetPlateUIData                     CallFunc_GetSelectedGadgetPlateUIData_OutGadgetPlateUIData_1; // 0x0070(0x0028)()
-	TArray<int32>                                 CallFunc_ConvertGadgetPlateUIDataToSlotStates_OutSlotStates; // 0x0098(0x0010)(ReferenceParm)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A9[0x3];                                       // 0x00A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSoundHandle                           CallFunc_SoundPlay_ReturnValue;                    // 0x00AC(0x0004)()
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_AttachGadgetToPlate_ReturnValue;          // 0x00C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSoundHandle                           CallFunc_SoundPlay_ReturnValue;                    // 0x0004(0x0004)()
+	class UObject*                                K2Node_CustomEvent_Object;                         // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_CustomEvent_PlayerControllerIndex;          // 0x0010(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCharaMachineParamWindow*               CallFunc_Array_Get_Item;                           // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0028(0x0048)(HasGetValueTypeHash)
+	bool                                          CallFunc_PlayAnim_ReturnValue;                     // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0078(0x0010)(ReferenceParm)
+	bool                                          CallFunc_PlayAnim_ReturnValue_1;                   // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0090(0x0010)()
+	bool                                          CallFunc_GetParameterWindowOpenFlag_ReturnValue;   // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x00A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A2[0x2];                                       // 0x00A2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         K2Node_CustomEvent_PlayerIndex_1;                  // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EGadgetId                                     K2Node_CustomEvent_GadgetId_1;                     // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EGadgetState                                  K2Node_CustomEvent_GadgetState_1;                  // 0x00A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_AA[0x2];                                       // 0x00AA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         K2Node_CustomEvent_PlayerIndex;                    // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EGadgetId                                     K2Node_CustomEvent_GadgetId;                       // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EGadgetState                                  K2Node_CustomEvent_GadgetState;                    // 0x00B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x00B2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetLastFocusSelectWindowGadget_ReturnValue; // 0x00B3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetLastFocusPlateSlotIndex_ReturnValue;   // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_GetEnumeratorName_ReturnValue;            // 0x00BC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_C4[0x4];                                       // 0x00C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x00C8(0x0048)(HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0111(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0112(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_113[0x5];                                      // 0x0113(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGadgetPlateWindow*                     CallFunc_Array_Get_Item;                           // 0x0118(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UGadgetPlateWindow*                     CallFunc_Array_Get_Item_1;                         // 0x0120(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_129[0x7];                                      // 0x0129(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGadgetPlateWindow*                     CallFunc_Array_Get_Item_2;                         // 0x0130(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FSoundHandle                           CallFunc_SoundPlay_ReturnValue_1;                  // 0x0138(0x0004)()
-	struct FSoundHandle                           CallFunc_SoundPlay_ReturnValue_2;                  // 0x013C(0x0004)()
-	class UObject*                                K2Node_CustomEvent_Object;                         // 0x0140(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_PlayerControllerIndex;          // 0x0148(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14C[0x4];                                      // 0x014C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_1;            // 0x0150(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0158(0x0048)(HasGetValueTypeHash)
-	struct FSoundHandle                           CallFunc_SoundPlay_ReturnValue_3;                  // 0x01A0(0x0004)()
-	uint8                                         Pad_1A4[0x4];                                      // 0x01A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x01A8(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x01B8(0x0010)()
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x01C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C9[0x7];                                      // 0x01C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCharaMachineParamWindow*               CallFunc_Array_Get_Item_3;                         // 0x01D0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_PlayAnim_ReturnValue;                     // 0x01D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_PlayAnim_ReturnValue_1;                   // 0x01D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x01DA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1DB[0x1];                                      // 0x01DB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         K2Node_CustomEvent_PlayerIndex_8;                  // 0x01DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetId                                     K2Node_CustomEvent_GadgetId_2;                     // 0x01E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetCategory                               K2Node_CustomEvent_CategoryId;                     // 0x01E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetState                                  K2Node_CustomEvent_GadgetState_2;                  // 0x01E2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_Get_Item_4;                         // 0x01E3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1E4[0x4];                                      // 0x01E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGadgetCustomWindow*                    CallFunc_Array_Get_Item_5;                         // 0x01E8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UGadgetPlateWindow*                     CallFunc_Array_Get_Item_6;                         // 0x01F0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Get_Item_7;                         // 0x01F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_1;         // 0x01FC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1FD[0x3];                                      // 0x01FD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         K2Node_CustomEvent_PlayerIndex_9;                  // 0x0200(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetId                                     K2Node_CustomEvent_GadgetId_3;                     // 0x0204(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetCategory                               K2Node_CustomEvent_CategoryId_1;                   // 0x0205(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetState                                  K2Node_CustomEvent_GadgetState_3;                  // 0x0206(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_207[0x1];                                      // 0x0207(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGadgetCustomWindow*                    CallFunc_Array_Get_Item_8;                         // 0x0208(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UGadgetPlateWindow*                     CallFunc_Array_Get_Item_9;                         // 0x0210(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Get_Item_10;                        // 0x0218(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_2;         // 0x021C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21D[0x3];                                      // 0x021D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         K2Node_CustomEvent_PlayerIndex_10;                 // 0x0220(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetId                                     K2Node_CustomEvent_GadgetId_4;                     // 0x0224(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetCategory                               K2Node_CustomEvent_CategoryId_2;                   // 0x0225(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetState                                  K2Node_CustomEvent_GadgetState_4;                  // 0x0226(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_227[0x1];                                      // 0x0227(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGadgetCustomWindow*                    CallFunc_Array_Get_Item_11;                        // 0x0228(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UGadgetPlateWindow*                     CallFunc_Array_Get_Item_12;                        // 0x0230(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Get_Item_13;                        // 0x0238(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_3;         // 0x023C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_23D[0x3];                                      // 0x023D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         K2Node_CustomEvent_PlayerIndex_11;                 // 0x0240(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetId                                     K2Node_CustomEvent_GadgetId_5;                     // 0x0244(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetCategory                               K2Node_CustomEvent_CategoryId_3;                   // 0x0245(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetState                                  K2Node_CustomEvent_GadgetState_5;                  // 0x0246(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_247[0x1];                                      // 0x0247(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGadgetCustomWindow*                    CallFunc_Array_Get_Item_14;                        // 0x0248(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UGadgetPlateWindow*                     CallFunc_Array_Get_Item_15;                        // 0x0250(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Get_Item_16;                        // 0x0258(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_4;         // 0x025C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_25D[0x3];                                      // 0x025D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0260(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0264(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess_2;                    // 0x0268(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsUseRentalGadgetPlate_ReturnValue;       // 0x0269(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_26A[0x6];                                      // 0x026A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGadgetData                            CallFunc_GetGadgetData_OutGadgetData;              // 0x0270(0x00C0)()
-	bool                                          CallFunc_GetGadgetData_ReturnValue;                // 0x0330(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0331(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_332[0x6];                                      // 0x0332(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                CallFunc_LoadAsset_Blocking_ReturnValue;           // 0x0338(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UTexture2D*                             K2Node_DynamicCast_As_____2D;                      // 0x0340(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0348(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_349[0x7];                                      // 0x0349(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGadgetDetailWindow*                    CallFunc_Array_Get_Item_17;                        // 0x0350(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FRewardDialogParameter                 K2Node_MakeStruct_RewardDialogParameter;           // 0x0358(0x0088)()
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x03E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3E1[0x3];                                      // 0x03E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSoundHandle                           CallFunc_SoundPlay_ReturnValue_4;                  // 0x03E4(0x0004)()
-	TDelegate<void(EDialogResult Result)>         K2Node_CreateDelegate_OutputDelegate_2;            // 0x03E8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsMultiPlayerControl_ReturnValue;         // 0x03F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3F9[0x3];                                      // 0x03F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         K2Node_CustomEvent_PlayerIndex_7;                  // 0x03FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetId                                     K2Node_CustomEvent_GadgetId_1;                     // 0x0400(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetState                                  K2Node_CustomEvent_GadgetState_1;                  // 0x0401(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x0402(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess_3;                    // 0x0403(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_GetEnumeratorName_ReturnValue;            // 0x0404(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_40C[0x4];                                      // 0x040C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGadgetData                            CallFunc_GetGadgetData_OutGadgetData_1;            // 0x0410(0x00C0)()
-	bool                                          CallFunc_GetGadgetData_ReturnValue_1;              // 0x04D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D1[0x7];                                      // 0x04D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_NameToText_ReturnValue;              // 0x04D8(0x0010)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x04E8(0x0048)(HasGetValueTypeHash)
-	class UObject*                                CallFunc_LoadAsset_Blocking_ReturnValue_1;         // 0x0530(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FGadgetData                            CallFunc_GetGadgetData_OutGadgetData_2;            // 0x0538(0x00C0)()
-	bool                                          CallFunc_GetGadgetData_ReturnValue_2;              // 0x05F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5F9[0x7];                                      // 0x05F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTexture2D*                             K2Node_DynamicCast_As_____2D_1;                    // 0x0600(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0608(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_609[0x7];                                      // 0x0609(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRewardDialogParameter                 K2Node_MakeStruct_RewardDialogParameter_1;         // 0x0610(0x0088)()
-	class UObject*                                CallFunc_LoadAsset_Blocking_ReturnValue_2;         // 0x0698(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x06A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6A1[0x7];                                      // 0x06A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTexture2D*                             K2Node_DynamicCast_As_____2D_2;                    // 0x06A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x06B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6B1[0x7];                                      // 0x06B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRewardDialogParameter                 K2Node_MakeStruct_RewardDialogParameter_2;         // 0x06B8(0x0088)()
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x0740(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_741[0x3];                                      // 0x0741(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         K2Node_CustomEvent_PlayerIndex_6;                  // 0x0744(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UGadgetPlateWindow*                     CallFunc_Array_Get_Item_18;                        // 0x0748(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue_2;        // 0x0750(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_2;          // 0x0758(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0759(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_75A[0x2];                                      // 0x075A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         K2Node_CustomEvent_PlayerIndex_5;                  // 0x075C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetId                                     K2Node_CustomEvent_GadgetId;                       // 0x0760(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetState                                  K2Node_CustomEvent_GadgetState;                    // 0x0761(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_762[0x2];                                      // 0x0762(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0764(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UGadgetDetailWindow*                    CallFunc_Array_Get_Item_19;                        // 0x0768(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UUnionUITransitionManager*              CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0770(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(EUnionUIFadeDirection FadeDirection)> K2Node_CreateDelegate_OutputDelegate_3;     // 0x0778(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_4;            // 0x0788(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0798(0x0008)(NoDestructor, HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_2;            // 0x07A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_AttachGadgetToPlate_ReturnValue_1;        // 0x07A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7AC[0x4];                                      // 0x07AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x07B0(0x0048)(HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x07F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7F9[0x7];                                      // 0x07F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x0800(0x0010)(ReferenceParm)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_3;                // 0x0810(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_811[0x7];                                      // 0x0811(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0818(0x0010)()
-	TDelegate<void(EDialogResult Result)>         K2Node_CreateDelegate_OutputDelegate_5;            // 0x0828(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	EDialogResult                                 K2Node_CustomEvent_Result_1;                       // 0x0838(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess_4;                    // 0x0839(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_83A[0x2];                                      // 0x083A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(EDialogResult Result)>         K2Node_CreateDelegate_OutputDelegate_6;            // 0x083C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	EDialogResult                                 K2Node_CustomEvent_Result;                         // 0x084C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue;              // 0x084D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetId                                     CallFunc_Array_Get_Item_20;                        // 0x084E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_84F[0x1];                                      // 0x084F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGadgetData                            CallFunc_GetGadgetData_OutGadgetData_3;            // 0x0850(0x00C0)()
-	bool                                          CallFunc_GetGadgetData_ReturnValue_3;              // 0x0910(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_911[0x3];                                      // 0x0911(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_1;             // 0x0914(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetId                                     CallFunc_Array_Get_Item_21;                        // 0x0918(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_919[0x3];                                      // 0x0919(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable;                                 // 0x091C(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UUnionUITransitionManager*              CallFunc_GetGameInstanceSubsystem_ReturnValue_1;   // 0x0920(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(EUnionUIFadeDirection FadeDirection)> K2Node_CreateDelegate_OutputDelegate_7;     // 0x0928(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(EDialogResult Result)>         K2Node_CreateDelegate_OutputDelegate_8;            // 0x0938(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_4;            // 0x0948(0x0048)(HasGetValueTypeHash)
-	class UGadgetCustomWindow*                    CallFunc_Array_Get_Item_22;                        // 0x0990(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_5;            // 0x0998(0x0048)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_2;                          // 0x09E0(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_2;                     // 0x09F0(0x0010)()
-	TDelegate<void(EDialogResult Result)>         K2Node_CreateDelegate_OutputDelegate_9;            // 0x0A00(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_PlayerIndex_4;                  // 0x0A10(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_SlotState_1;                    // 0x0A14(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_SlotIndex_1;                    // 0x0A18(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_PlayerIndex_3;                  // 0x0A1C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_SlotState;                      // 0x0A20(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_SlotIndex;                      // 0x0A24(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue_3;        // 0x0A28(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_PlayerIndex_2;                  // 0x0A30(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_PlayerIndex_1;                  // 0x0A34(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_3;          // 0x0A38(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A39[0x3];                                      // 0x0A39(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         K2Node_CustomEvent_PlayerIndex;                    // 0x0A3C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UGadgetDetailWindow*                    CallFunc_Array_Get_Item_23;                        // 0x0A40(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UAppSequenceLogManagerSubsystem*        CallFunc_GetGameInstanceSubsystem_ReturnValue_2;   // 0x0A48(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	EGadgetCustomize2SequenceSubState             Temp_byte_Variable;                                // 0x0A50(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A51[0x3];                                      // 0x0A51(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable_1;                               // 0x0A54(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_2;                               // 0x0A58(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A5C[0x4];                                      // 0x0A5C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWBP_DonpaTicketApp_C*                  CallFunc_Create_ReturnValue;                       // 0x0A60(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_1;            // 0x0A68(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A69[0x7];                                      // 0x0A69(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGadgetPlateWindow*                     CallFunc_Array_Get_Item_24;                        // 0x0A70(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_2;             // 0x0A78(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_2;            // 0x0A7C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A7D[0x3];                                      // 0x0A7D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_3;             // 0x0A80(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A84[0x4];                                      // 0x0A84(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMenuWorldSubsystem*                    CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0A88(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0A90(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A91[0x3];                                      // 0x0A91(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0A94(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0A98(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A99[0x7];                                      // 0x0A99(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMenuWorldSubsystem*                    CallFunc_GetWorldSubsystem_ReturnValue_1;          // 0x0AA0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UGadgetCustomWindow*                    CallFunc_Array_Get_Item_25;                        // 0x0AA8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0AB0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AB1[0x7];                                      // 0x0AB1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWBP_GadgetCustom_Window_C*             K2Node_DynamicCast_AsWBP_Gadget_Custom_Window;     // 0x0AB8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0AC0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetCustomize2SequenceSubState             Temp_byte_Variable_1;                              // 0x0AC1(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AC2[0x6];                                      // 0x0AC2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGadgetCustomSubTypeBox*                CallFunc_GetCenterCategoryTypeBox_ReturnValue;     // 0x0AC8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	EGadgetCustomize2SequenceSubState             Temp_byte_Variable_2;                              // 0x0AD0(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AD1[0x7];                                      // 0x0AD1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWBP_DonpaTicketApp_C*                  CallFunc_Create_ReturnValue_1;                     // 0x0AD8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWBP_DonpaTicketApp_C*                  CallFunc_Create_ReturnValue_2;                     // 0x0AE0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UGadgetCustomWindow*                    CallFunc_Array_Get_Item_26;                        // 0x0AE8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0AF0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AF4[0x4];                                      // 0x0AF4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGadgetCustomSubTypeBox*                CallFunc_GetCenterCategoryTypeBox_ReturnValue_1;   // 0x0AF8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_3;                // 0x0B00(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0B01(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetId                                     CallFunc_GetCenterGadgetId_ReturnValue;            // 0x0B02(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_3;            // 0x0B03(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_4;             // 0x0B04(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_5;             // 0x0B08(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_4;            // 0x0B0C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B0D[0x3];                                      // 0x0B0D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGadgetPlateWindow*                     CallFunc_Array_Get_Item_27;                        // 0x0B10(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_GetEnumeratorName_ReturnValue_1;          // 0x0B18(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_NameToText_ReturnValue_1;            // 0x0B20(0x0010)()
-	bool                                          Temp_bool_Variable;                                // 0x0B30(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B31[0x7];                                      // 0x0B31(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_6;            // 0x0B38(0x0048)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_3;                          // 0x0B80(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_3;                     // 0x0B90(0x0010)()
-	struct FSoundHandle                           CallFunc_SoundPlay_ReturnValue_5;                  // 0x0BA0(0x0004)()
-	int32                                         CallFunc_GetGadgetSlotStateLocked_ReturnValue;     // 0x0BA4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x0BA8(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_4;          // 0x0BA9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_4;                // 0x0BAA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_BAB[0x1];                                      // 0x0BAB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSoundHandle                           CallFunc_SoundPlay_ReturnValue_6;                  // 0x0BAC(0x0004)()
-	EUnionUIFadeDirection                         K2Node_CustomEvent_FadeDirection_1;                // 0x0BB0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsUseRentalGadgetPlate_ReturnValue_1;     // 0x0BB1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsFestaSpecialRuleContinuous_ReturnValue; // 0x0BB2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_5;                // 0x0BB3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_6;                // 0x0BB4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_BB5[0x3];                                      // 0x0BB5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         K2Node_CustomEvent_InPlayerIndex;                  // 0x0BB8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_InPresetNum;                    // 0x0BBC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_3;            // 0x0BC0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_7;            // 0x0BC8(0x0048)(HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_4;            // 0x0C10(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_8;            // 0x0C18(0x0048)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_4;                          // 0x0C60(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_4;                     // 0x0C70(0x0010)()
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_5;            // 0x0C80(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C81[0x3];                                      // 0x0C81(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_6;             // 0x0C84(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UGadgetPlateWindow*                     CallFunc_Array_Get_Item_28;                        // 0x0C88(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class USaveDataManageSubsystem*               CallFunc_GetGameInstanceSubsystem_ReturnValue_3;   // 0x0C90(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UEquipmentGadgetIcon*                   CallFunc_GetGadgetIcon_ReturnValue;                // 0x0C98(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x0CA0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetCustomize2SequenceSubState             Temp_byte_Variable_3;                              // 0x0CA1(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CA2[0x6];                                      // 0x0CA2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWBP_Popup_Window_Hint_C*               CallFunc_Create_ReturnValue_3;                     // 0x0CA8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ChangeZOrder_ReturnValue;                 // 0x0CB0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CB1[0x7];                                      // 0x0CB1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMenuWorldSubsystem*                    CallFunc_GetWorldSubsystem_ReturnValue_2;          // 0x0CB8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_6;            // 0x0CC0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_6;                    // 0x0CC1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CC2[0x2];                                      // 0x0CC2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_7;             // 0x0CC4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Set_Gadget_Plate_Rank_Up_ID_EnableOpenWindow; // 0x0CC8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EUnionUIFadeDirection                         K2Node_CustomEvent_FadeDirection;                  // 0x0CC9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CCA[0x2];                                      // 0x0CCA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         K2Node_CustomEvent_SelectedPlayerControllerIndex_2; // 0x0CCC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetCategory                               K2Node_CustomEvent_SelectedGadgetCategory_2;       // 0x0CD0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetId                                     K2Node_CustomEvent_SelectedGadgetId_2;             // 0x0CD1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetState                                  K2Node_CustomEvent_SelectedGadgetState_2;          // 0x0CD2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CD3[0x1];                                      // 0x0CD3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_8;             // 0x0CD4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UGadgetDetailWindow*                    CallFunc_Array_Get_Item_29;                        // 0x0CD8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_SelectedPlayerControllerIndex_1; // 0x0CE0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetCategory                               K2Node_CustomEvent_SelectedGadgetCategory_1;       // 0x0CE4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetId                                     K2Node_CustomEvent_SelectedGadgetId_1;             // 0x0CE5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetState                                  K2Node_CustomEvent_SelectedGadgetState_1;          // 0x0CE6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CE7[0x1];                                      // 0x0CE7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetEnumeratorUserFriendlyName_ReturnValue; // 0x0CE8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetEnumeratorUserFriendlyName_ReturnValue_1; // 0x0CF8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0D08(0x0010)()
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x0D18(0x0010)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_9;            // 0x0D28(0x0048)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_10;           // 0x0D70(0x0048)(HasGetValueTypeHash)
-	class FString                                 CallFunc_GetEnumeratorUserFriendlyName_ReturnValue_2; // 0x0DB8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class UGadgetPlateWindow*                     CallFunc_Array_Get_Item_30;                        // 0x0DC8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_2;          // 0x0DD0(0x0010)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_11;           // 0x0DE0(0x0048)(HasGetValueTypeHash)
-	class UGadgetPlateWindow*                     CallFunc_Array_Get_Item_31;                        // 0x0E28(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UGadgetCustomWindow*                    CallFunc_Array_Get_Item_32;                        // 0x0E30(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_7;                    // 0x0E38(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E39[0x7];                                      // 0x0E39(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGadgetCustomSubTypeBox*                CallFunc_GetCenterCategoryTypeBox_ReturnValue_2;   // 0x0E40(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_8;                    // 0x0E48(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E49[0x7];                                      // 0x0E49(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_5;            // 0x0E50(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_12;           // 0x0E58(0x0048)(HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue_4;        // 0x0EA0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_5;                          // 0x0EA8(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_5;                     // 0x0EB8(0x0010)()
-	int32                                         K2Node_CustomEvent_SelectedPlayerControllerIndex;  // 0x0EC8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetCategory                               K2Node_CustomEvent_SelectedGadgetCategory;         // 0x0ECC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetId                                     K2Node_CustomEvent_SelectedGadgetId;               // 0x0ECD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetState                                  K2Node_CustomEvent_SelectedGadgetState;            // 0x0ECE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_ECF[0x1];                                      // 0x0ECF(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetEnumeratorUserFriendlyName_ReturnValue_3; // 0x0ED0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_3;          // 0x0EE0(0x0010)()
-	class FString                                 CallFunc_GetEnumeratorUserFriendlyName_ReturnValue_4; // 0x0EF0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_13;           // 0x0F00(0x0048)(HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_4;          // 0x0F48(0x0010)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_14;           // 0x0F58(0x0048)(HasGetValueTypeHash)
-	class FString                                 CallFunc_GetEnumeratorUserFriendlyName_ReturnValue_5; // 0x0FA0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_5;          // 0x0FB0(0x0010)()
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_6;            // 0x0FC0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_15;           // 0x0FC8(0x0048)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_16;           // 0x1010(0x0048)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_6;                          // 0x1058(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_6;                     // 0x1068(0x0010)()
+	struct FGadgetData                            CallFunc_GetGadgetData_OutGadgetId;                // 0x00C8(0x00D0)()
+	bool                                          CallFunc_GetGadgetData_ReturnValue;                // 0x0198(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_199[0x7];                                      // 0x0199(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_NameToText_ReturnValue;              // 0x01A0(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x01B0(0x0048)(HasGetValueTypeHash)
+	class UObject*                                CallFunc_LoadAsset_Blocking_ReturnValue;           // 0x01F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FGadgetData                            CallFunc_GetGadgetData_OutGadgetId_1;              // 0x0200(0x00D0)()
+	bool                                          CallFunc_GetGadgetData_ReturnValue_1;              // 0x02D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2D1[0x7];                                      // 0x02D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTexture2D*                             K2Node_DynamicCast_As_____2D;                      // 0x02D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x02E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2E1[0x7];                                      // 0x02E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRewardDialogParameter                 K2Node_MakeStruct_RewardDialogParameter;           // 0x02E8(0x0098)()
+	class UObject*                                CallFunc_LoadAsset_Blocking_ReturnValue_1;         // 0x0380(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0388(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_389[0x7];                                      // 0x0389(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTexture2D*                             K2Node_DynamicCast_As_____2D_1;                    // 0x0390(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0398(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_399[0x7];                                      // 0x0399(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRewardDialogParameter                 K2Node_MakeStruct_RewardDialogParameter_1;         // 0x03A0(0x0098)()
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x0438(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetSequenceControlState_ReturnValue;      // 0x0439(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_43A[0x2];                                      // 0x043A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetSelectedGadgetPresetId_ReturnValue;    // 0x043C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetLastFocusPlateSlotIndex_ReturnValue_1; // 0x0440(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_444[0x4];                                      // 0x0444(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_1;            // 0x0448(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UGadgetDetailWindow*                    CallFunc_Array_Get_Item_1;                         // 0x0450(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x0458(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x04A0(0x0010)(ReferenceParm)
+	int32                                         CallFunc_AttachSaveGadgetPlatePreset_OutAttachedIndex; // 0x04B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_AttachSaveGadgetPlatePreset_ReturnValue;  // 0x04B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4B5[0x3];                                      // 0x04B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x04B8(0x0010)()
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x04C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x04C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetLastFocusPlateSlotIndex_ReturnValue;   // 0x04CA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4CB[0x1];                                      // 0x04CB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(EDialogResult Result)>         K2Node_CreateDelegate_OutputDelegate;              // 0x04CC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(EDialogResult Result)>         K2Node_CreateDelegate_OutputDelegate_1;            // 0x04DC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4EC[0x4];                                      // 0x04EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWBP_Popup_Window_Hint_C*               CallFunc_Create_ReturnValue;                       // 0x04F0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x04F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4F9[0x7];                                      // 0x04F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUnionUITransitionManager*              CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0500(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(EUnionUIFadeDirection FadeDirection)> K2Node_CreateDelegate_OutputDelegate_2;     // 0x0508(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_3;            // 0x0518(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(EDialogResult Result)>         K2Node_CreateDelegate_OutputDelegate_4;            // 0x0528(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0538(0x0008)(NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue;              // 0x0540(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_1;            // 0x0541(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_542[0x2];                                      // 0x0542(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_1;             // 0x0544(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_2;             // 0x0548(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_54C[0x4];                                      // 0x054C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMenuWorldSubsystem*                    CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0550(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UMenuWorldSubsystem*                    CallFunc_GetWorldSubsystem_ReturnValue_1;          // 0x0558(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UCommonMenuFooterMenu*                  CallFunc_GetFooter_ReturnValue;                    // 0x0560(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UCommonMenuFooterMenu*                  CallFunc_GetFooter_ReturnValue_1;                  // 0x0568(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0570(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0571(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_572[0x6];                                      // 0x0572(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWBP_DonpaTicketApp_C*                  CallFunc_Create_ReturnValue_1;                     // 0x0578(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Set_Tips_Id_Gadget_Plate_EnableOpenWindow; // 0x0580(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_581[0x7];                                      // 0x0581(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWBP_DonpaTicketApp_C*                  CallFunc_Create_ReturnValue_2;                     // 0x0588(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	EUnionUIFadeDirection                         K2Node_CustomEvent_FadeDirection;                  // 0x0590(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_591[0x7];                                      // 0x0591(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0598(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_5;            // 0x05A0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class USaveDataManageSubsystem*               CallFunc_GetGameInstanceSubsystem_ReturnValue_1;   // 0x05B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	EHintId                                       K2Node_CustomEvent_InHintId;                       // 0x05B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_2;            // 0x05B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5BA[0x2];                                      // 0x05BA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_3;             // 0x05BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_GadgetCustomize2SelectState_C_ExecuteUbergraph_BPC_GadgetCustomize2SelectState;
 

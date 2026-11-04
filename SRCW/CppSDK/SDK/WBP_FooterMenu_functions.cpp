@@ -449,6 +449,26 @@ void UWBP_FooterMenu_C::PlayAnimOut()
 }
 
 
+// Function WBP_FooterMenu.WBP_FooterMenu_C.RegisterPressedFooter
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UCommonMenuFooterButton*          FooterButton                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_FooterMenu_C::RegisterPressedFooter(class UCommonMenuFooterButton* FooterButton)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_FooterMenu_C", "RegisterPressedFooter");
+
+	Params::WBP_FooterMenu_C_RegisterPressedFooter Parms{};
+
+	Parms.FooterButton = FooterButton;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_FooterMenu.WBP_FooterMenu_C.Show
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 

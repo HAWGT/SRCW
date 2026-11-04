@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "UNION_structs.hpp"
 #include "UnionSystem_structs.hpp"
+#include "UNION_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "UMG_structs.hpp"
 #include "UnionUI_structs.hpp"
 #include "ST_ColorPresetSelectPageItemData_structs.hpp"
 #include "ST_ColorPresetSelectPageData_structs.hpp"
-#include "UMG_structs.hpp"
 
 
 namespace SDK::Params
@@ -127,22 +127,22 @@ public:
 DUMPER7_ASSERTS_WBP_MachineCustom_Sub_PresetPaint_C_Event_OnSideNavigationCustom;
 
 // Function WBP_MachineCustom_Sub_PresetPaint.WBP_MachineCustom_Sub_PresetPaint_C.ExecuteUbergraph_WBP_MachineCustom_Sub_PresetPaint
-// 0x00D0 (0x00D0 - 0x0000)
+// 0x0148 (0x0148 - 0x0000)
 struct WBP_MachineCustom_Sub_PresetPaint_C_ExecuteUbergraph_WBP_MachineCustom_Sub_PresetPaint final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUnionUIButtonsPanel*                   CallFunc_CreateButtonsPanel_ReturnValue;           // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_MakeLiteralBool_ReturnValue;              // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)> K2Node_CreateDelegate_OutputDelegate; // 0x001C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)> K2Node_CreateDelegate_OutputDelegate_1; // 0x002C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(EUnionUIControlDir Direction, class UUnionUIButtonBase* Button, int32 RowIndex, int32 ColumnIndex)> K2Node_CreateDelegate_OutputDelegate_2; // 0x003C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)> K2Node_CreateDelegate_OutputDelegate_3; // 0x004C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_MakeLiteralBool_ReturnValue;              // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)> K2Node_CreateDelegate_OutputDelegate; // 0x0020(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)> K2Node_CreateDelegate_OutputDelegate_1; // 0x0030(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(EUnionUIControlDir Direction, class UUnionUIButtonBase* Button, int32 RowIndex, int32 ColumnIndex)> K2Node_CreateDelegate_OutputDelegate_2; // 0x0040(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)> K2Node_CreateDelegate_OutputDelegate_3; // 0x0050(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TArray<class UWBP_MachinrCustom_Sub_Paint_PresetWindow_C*> CallFunc_GetPage_OutList;             // 0x0060(0x0010)(ReferenceParm, ContainsInstancedReference)
 	class UWBP_MachinrCustom_Sub_Paint_PresetWindow_C* CallFunc_GetPageForIndex_Output;              // 0x0070(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWBP_MachinrCustom_Sub_Paint_PresetWindow_C* CallFunc_Array_Get_Item;                      // 0x0078(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
@@ -159,6 +159,13 @@ public:
 	uint8                                         Pad_AE[0x2];                                       // 0x00AE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)> K2Node_CreateDelegate_OutputDelegate_4; // 0x00B0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)> K2Node_CreateDelegate_OutputDelegate_5; // 0x00C0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetLastFocusedButton_OutLastFocusedButtonIndex; // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D4[0x4];                                       // 0x00D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUserWidget*                            CallFunc_GetLastFocusedButton_ReturnValue;         // 0x00D8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWBP_MachinrCustom_Sub_Paint_PresetIcon_C* K2Node_DynamicCast_AsWBP_Machinr_Custom_Sub_Paint_Preset_Icon; // 0x00E0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E9[0x7];                                       // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FST_ColorPresetSelectPageItemData      CallFunc_GetItemData_OutItemData;                  // 0x00F0(0x0058)(HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_MachineCustom_Sub_PresetPaint_C_ExecuteUbergraph_WBP_MachineCustom_Sub_PresetPaint;
 

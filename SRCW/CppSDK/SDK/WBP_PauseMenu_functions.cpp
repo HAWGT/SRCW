@@ -17,29 +17,15 @@
 namespace SDK
 {
 
-// Function WBP_PauseMenu.WBP_PauseMenu_C.SequenceEvent__ENTRYPOINTWBP_PauseMenu
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_PauseMenu.WBP_PauseMenu_C.BindGadgetInfo
+// (BlueprintCallable, BlueprintEvent)
 
-void UWBP_PauseMenu_C::SequenceEvent__ENTRYPOINTWBP_PauseMenu()
+void UWBP_PauseMenu_C::BindGadgetInfo()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_C", "SequenceEvent__ENTRYPOINTWBP_PauseMenu");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_PauseMenu.WBP_PauseMenu_C.OnSpecialButtonPressedOptionPanel
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_PauseMenu_C::OnSpecialButtonPressedOptionPanel()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_C", "OnSpecialButtonPressedOptionPanel");
+		Func = Class->GetFunction("WBP_PauseMenu_C", "BindGadgetInfo");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -59,105 +45,23 @@ void UWBP_PauseMenu_C::ChangeOwnerPlayerConntroller()
 }
 
 
-// Function WBP_PauseMenu.WBP_PauseMenu_C.OnFocusMenuPanel
+// Function WBP_PauseMenu.WBP_PauseMenu_C.ClickOption
 // (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UUnionUIButtonBase*               Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// int32                                   ButtonIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UWBP_PauseMenu_Sub_Option_Btn_03_C*InButton                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_PauseMenu_C::OnFocusMenuPanel(class UUnionUIButtonBase* Button, int32 ButtonIndex)
+void UWBP_PauseMenu_C::ClickOption(class UWBP_PauseMenu_Sub_Option_Btn_03_C* InButton)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_C", "OnFocusMenuPanel");
+		Func = Class->GetFunction("WBP_PauseMenu_C", "ClickOption");
 
-	Params::WBP_PauseMenu_C_OnFocusMenuPanel Parms{};
+	Params::WBP_PauseMenu_C_ClickOption Parms{};
 
-	Parms.Button = Button;
-	Parms.ButtonIndex = ButtonIndex;
+	Parms.InButton = InButton;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_PauseMenu.WBP_PauseMenu_C.OnCancelMenuPanel
-// (Private, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UUnionUIButtonBase*               Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// int32                                   ButtonIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_PauseMenu_C::OnCancelMenuPanel(class UUnionUIButtonBase* Button, int32 ButtonIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_C", "OnCancelMenuPanel");
-
-	Params::WBP_PauseMenu_C_OnCancelMenuPanel Parms{};
-
-	Parms.Button = Button;
-	Parms.ButtonIndex = ButtonIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_PauseMenu.WBP_PauseMenu_C.OnDecisionDownMenuPanel
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UUnionUIButtonBase*               Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// int32                                   ButtonIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_PauseMenu_C::OnDecisionDownMenuPanel(class UUnionUIButtonBase* Button, int32 ButtonIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_C", "OnDecisionDownMenuPanel");
-
-	Params::WBP_PauseMenu_C_OnDecisionDownMenuPanel Parms{};
-
-	Parms.Button = Button;
-	Parms.ButtonIndex = ButtonIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_PauseMenu.WBP_PauseMenu_C.OnDecideMenuPanel
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UUnionUIButtonBase*               Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// int32                                   ButtonIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_PauseMenu_C::OnDecideMenuPanel(class UUnionUIButtonBase* Button, int32 ButtonIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_C", "OnDecideMenuPanel");
-
-	Params::WBP_PauseMenu_C_OnDecideMenuPanel Parms{};
-
-	Parms.Button = Button;
-	Parms.ButtonIndex = ButtonIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_PauseMenu.WBP_PauseMenu_C.ReturnFromPopuup
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_PauseMenu_C::ReturnFromPopuup()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_C", "ReturnFromPopuup");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -175,130 +79,23 @@ void UWBP_PauseMenu_C::ExecTimeTrialSetting()
 }
 
 
-// Function WBP_PauseMenu.WBP_PauseMenu_C.SetInitialFocus
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_PauseMenu_C::SetInitialFocus()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_C", "SetInitialFocus");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_PauseMenu.WBP_PauseMenu_C.ShowFooterMenu
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWBP_PauseMenu_C::ShowFooterMenu()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_C", "ShowFooterMenu");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_PauseMenu.WBP_PauseMenu_C.InitializeRedStartRing
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function WBP_PauseMenu.WBP_PauseMenu_C.ExecuteUbergraph_WBP_PauseMenu
+// (Final, UbergraphFunction)
 // Parameters:
-// int32                                   PlayerIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_PauseMenu_C::InitializeRedStartRing(int32 PlayerIndex)
+void UWBP_PauseMenu_C::ExecuteUbergraph_WBP_PauseMenu(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_C", "InitializeRedStartRing");
+		Func = Class->GetFunction("WBP_PauseMenu_C", "ExecuteUbergraph_WBP_PauseMenu");
 
-	Params::WBP_PauseMenu_C_InitializeRedStartRing Parms{};
+	Params::WBP_PauseMenu_C_ExecuteUbergraph_WBP_PauseMenu Parms{};
 
-	Parms.PlayerIndex = PlayerIndex;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_PauseMenu.WBP_PauseMenu_C.IsGadgetInfoModeinIndex
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   PlayerControllerIndex                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool*                                   IsMode                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_PauseMenu_C::IsGadgetInfoModeinIndex(int32 PlayerControllerIndex, bool* IsMode)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_C", "IsGadgetInfoModeinIndex");
-
-	Params::WBP_PauseMenu_C_IsGadgetInfoModeinIndex Parms{};
-
-	Parms.PlayerControllerIndex = PlayerControllerIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (IsMode != nullptr)
-		*IsMode = Parms.IsMode;
-}
-
-
-// Function WBP_PauseMenu.WBP_PauseMenu_C.IsGadgetInfoMode
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool*                                   IsMode                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_PauseMenu_C::IsGadgetInfoMode(bool* IsMode)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_C", "IsGadgetInfoMode");
-
-	Params::WBP_PauseMenu_C_IsGadgetInfoMode Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (IsMode != nullptr)
-		*IsMode = Parms.IsMode;
-}
-
-
-// Function WBP_PauseMenu.WBP_PauseMenu_C.SetGadgetInfoMode
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   PlayerControllerIndex                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_PauseMenu_C::SetGadgetInfoMode(int32 PlayerControllerIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_C", "SetGadgetInfoMode");
-
-	Params::WBP_PauseMenu_C_SetGadgetInfoMode Parms{};
-
-	Parms.PlayerControllerIndex = PlayerControllerIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_PauseMenu.WBP_PauseMenu_C.SetGadgetInfo
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWBP_PauseMenu_C::SetGadgetInfo()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_C", "SetGadgetInfo");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -311,120 +108,6 @@ void UWBP_PauseMenu_C::Finalize()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("WBP_PauseMenu_C", "Finalize");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_PauseMenu.WBP_PauseMenu_C.InitializeGadgetInfo
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWBP_PauseMenu_C::InitializeGadgetInfo()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_C", "InitializeGadgetInfo");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_PauseMenu.WBP_PauseMenu_C.InitializeSpeedClass
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWBP_PauseMenu_C::InitializeSpeedClass()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_C", "InitializeSpeedClass");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_PauseMenu.WBP_PauseMenu_C.InitializeRSR
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_PauseMenu_C::InitializeRSR()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_C", "InitializeRSR");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_PauseMenu.WBP_PauseMenu_C.SetVisibilityOptionButtons
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TArray<class UUnionUIButtonBase*>&      Buttons                                                (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-// ESlateVisibility                        Visibility_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_PauseMenu_C::SetVisibilityOptionButtons(TArray<class UUnionUIButtonBase*>& Buttons, ESlateVisibility Visibility_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_C", "SetVisibilityOptionButtons");
-
-	Params::WBP_PauseMenu_C_SetVisibilityOptionButtons Parms{};
-
-	Parms.Buttons = std::move(Buttons);
-	Parms.Visibility_0 = Visibility_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Buttons = std::move(Parms.Buttons);
-}
-
-
-// Function WBP_PauseMenu.WBP_PauseMenu_C.IsSinglePlay
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-bool UWBP_PauseMenu_C::IsSinglePlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_C", "IsSinglePlay");
-
-	Params::WBP_PauseMenu_C_IsSinglePlay Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function WBP_PauseMenu.WBP_PauseMenu_C.InitializePlayerIcon
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_PauseMenu_C::InitializePlayerIcon()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_C", "InitializePlayerIcon");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_PauseMenu.WBP_PauseMenu_C.UnregisterMenuButton
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWBP_PauseMenu_C::UnregisterMenuButton()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_C", "UnregisterMenuButton");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -506,103 +189,17 @@ void UWBP_PauseMenu_C::GetOptionType(int32 ButtonIndex, ERacePauseMenuItem* Type
 }
 
 
-// Function WBP_PauseMenu.WBP_PauseMenu_C.ClickOption
-// (Private, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UWBP_PauseMenu_Sub_Option_Btn_03_C*InButton                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// Function WBP_PauseMenu.WBP_PauseMenu_C.HideAll
+// (BlueprintCallable, BlueprintEvent)
 
-void UWBP_PauseMenu_C::ClickOption(class UWBP_PauseMenu_Sub_Option_Btn_03_C* InButton)
+void UWBP_PauseMenu_C::HideAll()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_C", "ClickOption");
-
-	Params::WBP_PauseMenu_C_ClickOption Parms{};
-
-	Parms.InButton = InButton;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_PauseMenu.WBP_PauseMenu_C.SetOption
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// ERacePauseMenuItem                      PauseID                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   PlayerIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_PauseMenu_C::SetOption(ERacePauseMenuItem PauseID, int32 PlayerIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_C", "SetOption");
-
-	Params::WBP_PauseMenu_C_SetOption Parms{};
-
-	Parms.PauseID = PauseID;
-	Parms.PlayerIndex = PlayerIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_PauseMenu.WBP_PauseMenu_C.InitilaizeOptionButtonsState
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TArray<class UUnionUIButtonBase*>&      Buttons                                                (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-// int32                                   PlayerIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_PauseMenu_C::InitilaizeOptionButtonsState(TArray<class UUnionUIButtonBase*>& Buttons, int32 PlayerIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_C", "InitilaizeOptionButtonsState");
-
-	Params::WBP_PauseMenu_C_InitilaizeOptionButtonsState Parms{};
-
-	Parms.Buttons = std::move(Buttons);
-	Parms.PlayerIndex = PlayerIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Buttons = std::move(Parms.Buttons);
-}
-
-
-// Function WBP_PauseMenu.WBP_PauseMenu_C.InitializeOptionButton
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWBP_PauseMenu_C::InitializeOptionButton()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_C", "InitializeOptionButton");
+		Func = Class->GetFunction("WBP_PauseMenu_C", "HideAll");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_PauseMenu.WBP_PauseMenu_C.InitializeMenuButton
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UCommonRaceMenuContentsInfo*      Contents                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_PauseMenu_C::InitializeMenuButton(class UCommonRaceMenuContentsInfo* Contents)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_C", "InitializeMenuButton");
-
-	Params::WBP_PauseMenu_C_InitializeMenuButton Parms{};
-
-	Parms.Contents = Contents;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -630,6 +227,293 @@ void UWBP_PauseMenu_C::Initialize(int32 OwnerPlayerIndex, class UCommonRaceMenuC
 }
 
 
+// Function WBP_PauseMenu.WBP_PauseMenu_C.InitializeGadgetInfo
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWBP_PauseMenu_C::InitializeGadgetInfo()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PauseMenu_C", "InitializeGadgetInfo");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_PauseMenu.WBP_PauseMenu_C.InitializeMenuButton
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UCommonRaceMenuContentsInfo*      Contents                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_PauseMenu_C::InitializeMenuButton(class UCommonRaceMenuContentsInfo* Contents)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PauseMenu_C", "InitializeMenuButton");
+
+	Params::WBP_PauseMenu_C_InitializeMenuButton Parms{};
+
+	Parms.Contents = Contents;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PauseMenu.WBP_PauseMenu_C.InitializeOptionButton
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWBP_PauseMenu_C::InitializeOptionButton()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PauseMenu_C", "InitializeOptionButton");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_PauseMenu.WBP_PauseMenu_C.InitializePlayerIcon
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_PauseMenu_C::InitializePlayerIcon()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PauseMenu_C", "InitializePlayerIcon");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_PauseMenu.WBP_PauseMenu_C.InitializeRedStartRing
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   PlayerIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_PauseMenu_C::InitializeRedStartRing(int32 PlayerIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PauseMenu_C", "InitializeRedStartRing");
+
+	Params::WBP_PauseMenu_C_InitializeRedStartRing Parms{};
+
+	Parms.PlayerIndex = PlayerIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PauseMenu.WBP_PauseMenu_C.InitializeRSR
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_PauseMenu_C::InitializeRSR()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PauseMenu_C", "InitializeRSR");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_PauseMenu.WBP_PauseMenu_C.InitializeSpeedClass
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWBP_PauseMenu_C::InitializeSpeedClass()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PauseMenu_C", "InitializeSpeedClass");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_PauseMenu.WBP_PauseMenu_C.InitilaizeOptionButtonsState
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<class UUnionUIButtonBase*>&      Buttons                                                (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+// int32                                   PlayerIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_PauseMenu_C::InitilaizeOptionButtonsState(TArray<class UUnionUIButtonBase*>& Buttons, int32 PlayerIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PauseMenu_C", "InitilaizeOptionButtonsState");
+
+	Params::WBP_PauseMenu_C_InitilaizeOptionButtonsState Parms{};
+
+	Parms.Buttons = std::move(Buttons);
+	Parms.PlayerIndex = PlayerIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Buttons = std::move(Parms.Buttons);
+}
+
+
+// Function WBP_PauseMenu.WBP_PauseMenu_C.IsGadgetInfoMode
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool*                                   IsMode                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_PauseMenu_C::IsGadgetInfoMode(bool* IsMode)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PauseMenu_C", "IsGadgetInfoMode");
+
+	Params::WBP_PauseMenu_C_IsGadgetInfoMode Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (IsMode != nullptr)
+		*IsMode = Parms.IsMode;
+}
+
+
+// Function WBP_PauseMenu.WBP_PauseMenu_C.IsGadgetInfoModeinIndex
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   PlayerControllerIndex                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   IsMode                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_PauseMenu_C::IsGadgetInfoModeinIndex(int32 PlayerControllerIndex, bool* IsMode)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PauseMenu_C", "IsGadgetInfoModeinIndex");
+
+	Params::WBP_PauseMenu_C_IsGadgetInfoModeinIndex Parms{};
+
+	Parms.PlayerControllerIndex = PlayerControllerIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (IsMode != nullptr)
+		*IsMode = Parms.IsMode;
+}
+
+
+// Function WBP_PauseMenu.WBP_PauseMenu_C.IsSinglePlay
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool UWBP_PauseMenu_C::IsSinglePlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PauseMenu_C", "IsSinglePlay");
+
+	Params::WBP_PauseMenu_C_IsSinglePlay Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WBP_PauseMenu.WBP_PauseMenu_C.OnCancelMenuPanel
+// (Private, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UUnionUIButtonBase*               Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// int32                                   ButtonIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_PauseMenu_C::OnCancelMenuPanel(class UUnionUIButtonBase* Button, int32 ButtonIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PauseMenu_C", "OnCancelMenuPanel");
+
+	Params::WBP_PauseMenu_C_OnCancelMenuPanel Parms{};
+
+	Parms.Button = Button;
+	Parms.ButtonIndex = ButtonIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PauseMenu.WBP_PauseMenu_C.OnDecideMenuPanel
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UUnionUIButtonBase*               Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// int32                                   ButtonIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_PauseMenu_C::OnDecideMenuPanel(class UUnionUIButtonBase* Button, int32 ButtonIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PauseMenu_C", "OnDecideMenuPanel");
+
+	Params::WBP_PauseMenu_C_OnDecideMenuPanel Parms{};
+
+	Parms.Button = Button;
+	Parms.ButtonIndex = ButtonIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PauseMenu.WBP_PauseMenu_C.OnDecisionDownMenuPanel
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UUnionUIButtonBase*               Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// int32                                   ButtonIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_PauseMenu_C::OnDecisionDownMenuPanel(class UUnionUIButtonBase* Button, int32 ButtonIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PauseMenu_C", "OnDecisionDownMenuPanel");
+
+	Params::WBP_PauseMenu_C_OnDecisionDownMenuPanel Parms{};
+
+	Parms.Button = Button;
+	Parms.ButtonIndex = ButtonIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PauseMenu.WBP_PauseMenu_C.OnFocusMenuPanel
+// (Private, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UUnionUIButtonBase*               Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// int32                                   ButtonIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_PauseMenu_C::OnFocusMenuPanel(class UUnionUIButtonBase* Button, int32 ButtonIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PauseMenu_C", "OnFocusMenuPanel");
+
+	Params::WBP_PauseMenu_C_OnFocusMenuPanel Parms{};
+
+	Parms.Button = Button;
+	Parms.ButtonIndex = ButtonIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_PauseMenu.WBP_PauseMenu_C.OnFocusReceived
 // (BlueprintCosmetic, Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -652,48 +536,6 @@ struct FEventReply UWBP_PauseMenu_C::OnFocusReceived(const struct FGeometry& MyG
 	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
-}
-
-
-// Function WBP_PauseMenu.WBP_PauseMenu_C.SequenceEvent
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_PauseMenu_C::SequenceEvent()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_C", "SequenceEvent");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_PauseMenu.WBP_PauseMenu_C.HideAll
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_PauseMenu_C::HideAll()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_C", "HideAll");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_PauseMenu.WBP_PauseMenu_C.PlayAnimationIn
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_PauseMenu_C::PlayAnimationIn()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_C", "PlayAnimationIn");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -793,6 +635,34 @@ void UWBP_PauseMenu_C::OnItemFocused_イベント_2(int32 PlayerIndex, int32 Slo
 }
 
 
+// Function WBP_PauseMenu.WBP_PauseMenu_C.OnSpecialButtonPressedOptionPanel
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_PauseMenu_C::OnSpecialButtonPressedOptionPanel()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PauseMenu_C", "OnSpecialButtonPressedOptionPanel");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_PauseMenu.WBP_PauseMenu_C.PlayAnimationIn
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_PauseMenu_C::PlayAnimationIn()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PauseMenu_C", "PlayAnimationIn");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_PauseMenu.WBP_PauseMenu_C.ReturnFromPopupForDelay
 // (BlueprintCallable, BlueprintEvent)
 
@@ -807,37 +677,167 @@ void UWBP_PauseMenu_C::ReturnFromPopupForDelay()
 }
 
 
-// Function WBP_PauseMenu.WBP_PauseMenu_C.BindGadgetInfo
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_PauseMenu.WBP_PauseMenu_C.ReturnFromPopuup
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_PauseMenu_C::BindGadgetInfo()
+void UWBP_PauseMenu_C::ReturnFromPopuup()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_C", "BindGadgetInfo");
+		Func = Class->GetFunction("WBP_PauseMenu_C", "ReturnFromPopuup");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_PauseMenu.WBP_PauseMenu_C.ExecuteUbergraph_WBP_PauseMenu
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WBP_PauseMenu.WBP_PauseMenu_C.SequenceEvent
+// (BlueprintCallable, BlueprintEvent)
 
-void UWBP_PauseMenu_C::ExecuteUbergraph_WBP_PauseMenu(int32 EntryPoint)
+void UWBP_PauseMenu_C::SequenceEvent()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_C", "ExecuteUbergraph_WBP_PauseMenu");
+		Func = Class->GetFunction("WBP_PauseMenu_C", "SequenceEvent");
 
-	Params::WBP_PauseMenu_C_ExecuteUbergraph_WBP_PauseMenu Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
+
+// Function WBP_PauseMenu.WBP_PauseMenu_C.SequenceEvent__ENTRYPOINTWBP_PauseMenu
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_PauseMenu_C::SequenceEvent__ENTRYPOINTWBP_PauseMenu()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PauseMenu_C", "SequenceEvent__ENTRYPOINTWBP_PauseMenu");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_PauseMenu.WBP_PauseMenu_C.SetGadgetInfo
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWBP_PauseMenu_C::SetGadgetInfo()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PauseMenu_C", "SetGadgetInfo");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_PauseMenu.WBP_PauseMenu_C.SetGadgetInfoMode
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   PlayerControllerIndex                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_PauseMenu_C::SetGadgetInfoMode(int32 PlayerControllerIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PauseMenu_C", "SetGadgetInfoMode");
+
+	Params::WBP_PauseMenu_C_SetGadgetInfoMode Parms{};
+
+	Parms.PlayerControllerIndex = PlayerControllerIndex;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PauseMenu.WBP_PauseMenu_C.SetInitialFocus
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_PauseMenu_C::SetInitialFocus()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PauseMenu_C", "SetInitialFocus");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_PauseMenu.WBP_PauseMenu_C.SetOption
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ERacePauseMenuItem                      PauseID                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   PlayerIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_PauseMenu_C::SetOption(ERacePauseMenuItem PauseID, int32 PlayerIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PauseMenu_C", "SetOption");
+
+	Params::WBP_PauseMenu_C_SetOption Parms{};
+
+	Parms.PauseID = PauseID;
+	Parms.PlayerIndex = PlayerIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PauseMenu.WBP_PauseMenu_C.SetVisibilityOptionButtons
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<class UUnionUIButtonBase*>&      Buttons                                                (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+// ESlateVisibility                        Visibility_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_PauseMenu_C::SetVisibilityOptionButtons(TArray<class UUnionUIButtonBase*>& Buttons, ESlateVisibility Visibility_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PauseMenu_C", "SetVisibilityOptionButtons");
+
+	Params::WBP_PauseMenu_C_SetVisibilityOptionButtons Parms{};
+
+	Parms.Buttons = std::move(Buttons);
+	Parms.Visibility_0 = Visibility_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Buttons = std::move(Parms.Buttons);
+}
+
+
+// Function WBP_PauseMenu.WBP_PauseMenu_C.ShowFooterMenu
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWBP_PauseMenu_C::ShowFooterMenu()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PauseMenu_C", "ShowFooterMenu");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_PauseMenu.WBP_PauseMenu_C.UnregisterMenuButton
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWBP_PauseMenu_C::UnregisterMenuButton()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PauseMenu_C", "UnregisterMenuButton");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

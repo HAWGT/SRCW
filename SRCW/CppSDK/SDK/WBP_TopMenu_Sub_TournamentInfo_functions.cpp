@@ -31,6 +31,34 @@ void UWBP_TopMenu_Sub_TournamentInfo_C::BndEvt__WBP_TopMenu_Sub_TournamentInfo_M
 }
 
 
+// Function WBP_TopMenu_Sub_TournamentInfo.WBP_TopMenu_Sub_TournamentInfo_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWBP_TopMenu_Sub_TournamentInfo_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_TopMenu_Sub_TournamentInfo_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_TopMenu_Sub_TournamentInfo.WBP_TopMenu_Sub_TournamentInfo_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWBP_TopMenu_Sub_TournamentInfo_C::Destruct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_TopMenu_Sub_TournamentInfo_C", "Destruct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_TopMenu_Sub_TournamentInfo.WBP_TopMenu_Sub_TournamentInfo_C.ExecuteUbergraph_WBP_TopMenu_Sub_TournamentInfo
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -46,6 +74,26 @@ void UWBP_TopMenu_Sub_TournamentInfo_C::ExecuteUbergraph_WBP_TopMenu_Sub_Tournam
 	Params::WBP_TopMenu_Sub_TournamentInfo_C_ExecuteUbergraph_WBP_TopMenu_Sub_TournamentInfo Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_TopMenu_Sub_TournamentInfo.WBP_TopMenu_Sub_TournamentInfo_C.OnVisibilityChangedEvent
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ESlateVisibility                        InVisibility                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_TopMenu_Sub_TournamentInfo_C::OnVisibilityChangedEvent(ESlateVisibility InVisibility)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_TopMenu_Sub_TournamentInfo_C", "OnVisibilityChangedEvent");
+
+	Params::WBP_TopMenu_Sub_TournamentInfo_C_OnVisibilityChangedEvent Parms{};
+
+	Parms.InVisibility = InVisibility;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

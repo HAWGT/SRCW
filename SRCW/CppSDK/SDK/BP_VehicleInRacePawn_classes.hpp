@@ -11,45 +11,45 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_VehicleInRacePawn.BP_VehicleInRacePawn_C
-// 0x0400 (0x0DE0 - 0x09E0)
+// 0x0480 (0x0F20 - 0x0AA0)
 class ABP_VehicleInRacePawn_C final : public AVehicleInRacePawn
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x09E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	float                                         Timeline_CountDown_ItemCountDown_D7F13C784585628358525B8BFBB668C8; // 0x09E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            Timeline_CountDown__Direction_D7F13C784585628358525B8BFBB668C8; // 0x09EC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9ED[0x3];                                      // 0x09ED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     Timeline_CountDown;                                // 0x09F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	float                                         Timeline_Damage_Spin_In_Intensity_Damage_Intensity_E780DC2640C5BFB6924AA5B5B7E94652; // 0x09F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            Timeline_Damage_Spin_In_Intensity__Direction_E780DC2640C5BFB6924AA5B5B7E94652; // 0x09FC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9FD[0x3];                                      // 0x09FD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     Timeline_Damage_Spin_In_Intensity;                 // 0x0A00(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	float                                         Timeline_Damage_In_Intensity_Damage_Intensity_1B12843C4C159894D1354B91D4B84FDE; // 0x0A08(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            Timeline_Damage_In_Intensity__Direction_1B12843C4C159894D1354B91D4B84FDE; // 0x0A0C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A0D[0x3];                                      // 0x0A0D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     Timeline_Damage_In_Intensity;                      // 0x0A10(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	float                                         Timeline_FadeOut_Ink_FadeOut_Ink_51D33DC14B71B11189DA0ABA0855515F; // 0x0A18(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            Timeline_FadeOut_Ink__Direction_51D33DC14B71B11189DA0ABA0855515F; // 0x0A1C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A1D[0x3];                                      // 0x0A1D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     Timeline_FadeOut_Ink;                              // 0x0A20(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	float                                         Timeline_Drift_In_Intensity_Drift_Intensity_C3149F7E457D97BFB172D1BF2190F343; // 0x0A28(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            Timeline_Drift_In_Intensity__Direction_C3149F7E457D97BFB172D1BF2190F343; // 0x0A2C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A2D[0x3];                                      // 0x0A2D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     Timeline_Drift_In_Intensity;                       // 0x0A30(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	float                                         Timeline_Scale_Down_ScaleRate_F78E34F74DA4B82C40D04B9705E5A57B; // 0x0A38(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            Timeline_Scale_Down__Direction_F78E34F74DA4B82C40D04B9705E5A57B; // 0x0A3C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A3D[0x3];                                      // 0x0A3D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     Timeline_Scale_Down;                               // 0x0A40(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FDriverData                            DriverData;                                        // 0x0A48(0x0398)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AA0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	float                                         Timeline_CountDown_ItemCountDown_D7F13C784585628358525B8BFBB668C8; // 0x0AA8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            Timeline_CountDown__Direction_D7F13C784585628358525B8BFBB668C8; // 0x0AAC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_AAD[0x3];                                      // 0x0AAD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     Timeline_CountDown;                                // 0x0AB0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	float                                         Timeline_Damage_Spin_In_Intensity_Damage_Intensity_E780DC2640C5BFB6924AA5B5B7E94652; // 0x0AB8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            Timeline_Damage_Spin_In_Intensity__Direction_E780DC2640C5BFB6924AA5B5B7E94652; // 0x0ABC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_ABD[0x3];                                      // 0x0ABD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     Timeline_Damage_Spin_In_Intensity;                 // 0x0AC0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	float                                         Timeline_Damage_In_Intensity_Damage_Intensity_1B12843C4C159894D1354B91D4B84FDE; // 0x0AC8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            Timeline_Damage_In_Intensity__Direction_1B12843C4C159894D1354B91D4B84FDE; // 0x0ACC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_ACD[0x3];                                      // 0x0ACD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     Timeline_Damage_In_Intensity;                      // 0x0AD0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	float                                         Timeline_FadeOut_Ink_FadeOut_Ink_51D33DC14B71B11189DA0ABA0855515F; // 0x0AD8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            Timeline_FadeOut_Ink__Direction_51D33DC14B71B11189DA0ABA0855515F; // 0x0ADC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_ADD[0x3];                                      // 0x0ADD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     Timeline_FadeOut_Ink;                              // 0x0AE0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	float                                         Timeline_Drift_In_Intensity_Drift_Intensity_C3149F7E457D97BFB172D1BF2190F343; // 0x0AE8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            Timeline_Drift_In_Intensity__Direction_C3149F7E457D97BFB172D1BF2190F343; // 0x0AEC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_AED[0x3];                                      // 0x0AED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     Timeline_Drift_In_Intensity;                       // 0x0AF0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	float                                         Timeline_Scale_Down_ScaleRate_F78E34F74DA4B82C40D04B9705E5A57B; // 0x0AF8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            Timeline_Scale_Down__Direction_F78E34F74DA4B82C40D04B9705E5A57B; // 0x0AFC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_AFD[0x3];                                      // 0x0AFD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     Timeline_Scale_Down;                               // 0x0B00(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FDriverData                            DriverData;                                        // 0x0B08(0x0418)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void ChangeVehicleSize(float SizeRate);

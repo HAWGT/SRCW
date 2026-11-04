@@ -12,8 +12,8 @@
 
 #include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
-#include "UMG_classes.hpp"
 #include "UnionUI_structs.hpp"
+#include "UMG_classes.hpp"
 
 
 namespace SDK
@@ -50,7 +50,7 @@ public:
 	bool                                          AfterFade;                                         // 0x03C1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_3C2[0x6];                                      // 0x03C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UObject*>                        CharaIcons;                                        // 0x03C8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	int32                                         Tmp;                                               // 0x03D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         tmp;                                               // 0x03D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AfterStatusObjectReady();

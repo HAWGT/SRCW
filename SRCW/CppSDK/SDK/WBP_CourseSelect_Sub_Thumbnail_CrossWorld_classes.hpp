@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "UNION_classes.hpp"
 
 
 namespace SDK
@@ -51,6 +51,7 @@ public:
 public:
 	void Construct();
 	void ExecuteUbergraph_WBP_CourseSelect_Sub_Thumbnail_CrossWorld(int32 EntryPoint);
+	void InitializeCommonCourseSelect(TArray<EStageId>& InStageIds);
 	void InitializeCrossWorldCourseSelect(ESpeedClassId InSpeedClassId);
 	void NextPanelNavigation(EUINavigation Selection);
 	void OnCancelCourseEvent(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex);
@@ -61,12 +62,14 @@ public:
 	void PreConstruct(bool IsDesignTime);
 	void SetFocusIndex(int32 InIndex);
 	void SetGameModeId(EGameModeId InGameModeId);
+	void SetInitializeFocusIndex(int32 FocusIndex);
 	void SetMedalView(class UWBP_CourseSelect_Sub_StageBox_Multiple_C* InCourseSelect, int32 InPageIndex, const TArray<ETimeTrialClearRankId>& TimeTrialClearRanks);
 	void SetScrollActiveFlag(bool bIsScrollActive_0);
 	void SetStageBoxInteractableState(bool Interactable);
 	void Setup_Medal_Acquisitions(ESpeedClassId InSpeedClass);
 	void Setup_Tmb(const TMap<EStageId, TSoftObjectPtr<class UTexture2D>>& StageId_Tmb);
 	void SetupCourseSelectSubStageBox(class UWBP_CourseSelect_Sub_StageBox_Multiple_C* InCourseSelect, int32 InPageIndex, TArray<EStageId>& InStageIds, TArray<bool>& InMedalAcuisitions);
+	void SetupCourseSelectSubStageBox_Common(class UWBP_CourseSelect_Sub_StageBox_Multiple_C* InCourseSelect, int32 InPageIndex, TArray<EStageId>& InStageIds);
 	void ThumbnailBindEvent();
 
 public:

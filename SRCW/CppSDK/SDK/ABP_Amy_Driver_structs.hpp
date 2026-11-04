@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // ScriptStruct ABP_Amy_Driver.ABP_Amy_Driver_C.AnimBlueprintGeneratedConstantData
-// 0x0000 (0x2D10 - 0x2D10)
+// 0x0000 (0x3100 - 0x3100)
 struct ABP_Amy_Driver::FAnimBlueprintGeneratedConstantData final : public ABPT_Driver::FAnimBlueprintGeneratedConstantData
 {
 };

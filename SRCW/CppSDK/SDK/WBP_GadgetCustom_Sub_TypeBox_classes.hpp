@@ -11,11 +11,11 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
+#include "UnionRun_structs.hpp"
+#include "Engine_structs.hpp"
+#include "EMachineSelectMode_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
-#include "UnionRun_structs.hpp"
-#include "EMachineSelectMode_structs.hpp"
 
 
 namespace SDK
@@ -78,7 +78,6 @@ public:
 	void RightScrollAnimFinished();
 	void RightScrollAnimStarted();
 	void SetFocusIndex(int32 InCategoryIndex);
-	void SetLightVer(bool IsLight);
 	void SetMode(EMachineSelectMode::EMachineSelectMode InMode);
 	void SetPlayerControllerIndex(const int32 InPlayerControllerIndex);
 	void Setup(class UGadgetCustomWindow* InGadgetCustomWindow);

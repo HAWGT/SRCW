@@ -296,6 +296,30 @@ void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::OnFocusThumbnail(EStageId StageC
 }
 
 
+// Function WBP_CourseSelect_Sub_ThumbnailSelecter.WBP_CourseSelect_Sub_ThumbnailSelecter_C.OnMainStageStoreEvent
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EStageId                                StageId                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   PanelIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   ButtonIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::OnMainStageStoreEvent(EStageId StageId, int32 PanelIndex, int32 ButtonIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_CourseSelect_Sub_ThumbnailSelecter_C", "OnMainStageStoreEvent");
+
+	Params::WBP_CourseSelect_Sub_ThumbnailSelecter_C_OnMainStageStoreEvent Parms{};
+
+	Parms.StageId = StageId;
+	Parms.PanelIndex = PanelIndex;
+	Parms.ButtonIndex = ButtonIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_CourseSelect_Sub_ThumbnailSelecter.WBP_CourseSelect_Sub_ThumbnailSelecter_C.Set Time Trial 3Pieace Course
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:

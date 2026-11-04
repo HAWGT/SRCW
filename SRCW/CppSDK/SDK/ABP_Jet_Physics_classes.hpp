@@ -10,18 +10,18 @@
 
 #include "Basic.hpp"
 
-#include "UNION_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "ControlRig_structs.hpp"
 #include "KawaiiPhysics_structs.hpp"
+#include "ControlRig_structs.hpp"
+#include "UNION_structs.hpp"
 
 
 namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ABP_Jet_Physics.ABP_Jet_Physics_C
-// 0x5000 (0x5370 - 0x0370)
+// 0x53F0 (0x5760 - 0x0370)
 class UABP_Jet_Physics_C final : public UAnimInstance
 {
 public:
@@ -29,42 +29,49 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0370(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x0378(0x0008)()
 	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x0380(0x0008)()
-	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_13;                  // 0x0388(0x00B8)()
-	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_12;                  // 0x0440(0x00B8)()
-	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_11;                  // 0x04F8(0x00B8)()
-	struct FAnimNode_Root                         AnimGraphNode_Root_8;                              // 0x05B0(0x0020)()
-	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_10;                  // 0x05D0(0x00B8)()
-	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_9;                   // 0x0688(0x00B8)()
-	struct FAnimNode_Root                         AnimGraphNode_Root_7;                              // 0x0740(0x0020)()
-	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_8;                   // 0x0760(0x00B8)()
-	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_7;                   // 0x0818(0x00B8)()
-	struct FAnimNode_Root                         AnimGraphNode_Root_6;                              // 0x08D0(0x0020)()
-	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_6;                   // 0x08F0(0x00B8)()
-	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_5;                   // 0x09A8(0x00B8)()
-	struct FAnimNode_Root                         AnimGraphNode_Root_5;                              // 0x0A60(0x0020)()
-	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_4;                   // 0x0A80(0x00B8)()
-	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_3;                   // 0x0B38(0x00B8)()
-	struct FAnimNode_Root                         AnimGraphNode_Root_4;                              // 0x0BF0(0x0020)()
-	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_2;                   // 0x0C10(0x00B8)()
-	struct FAnimNode_Root                         AnimGraphNode_Root_3;                              // 0x0CC8(0x0020)()
-	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_1;                   // 0x0CE8(0x00B8)()
-	struct FAnimNode_ControlRig                   AnimGraphNode_ControlRig;                          // 0x0DA0(0x04D0)(ContainsInstancedReference)
-	struct FAnimNode_Root                         AnimGraphNode_Root_2;                              // 0x1270(0x0020)()
-	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose;                     // 0x1290(0x00B8)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x1348(0x0020)()
-	uint8                                         Pad_1368[0x8];                                     // 0x1368(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_7;                     // 0x1370(0x07F0)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x1B60(0x0020)()
-	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_6;                     // 0x1B80(0x07F0)()
-	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_5;                     // 0x2370(0x07F0)()
-	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_4;                     // 0x2B60(0x07F0)()
-	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_3;                     // 0x3350(0x07F0)()
-	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_2;                     // 0x3B40(0x07F0)()
-	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_1;                     // 0x4330(0x07F0)()
-	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics;                       // 0x4B20(0x07F0)()
-	struct FAnimNode_Root                         AnimGraphNode_Root_1;                              // 0x5310(0x0020)()
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x5330(0x0020)()
-	struct FKawaiiPhysicsSettings                 Common_Physics_Settings;                           // 0x5350(0x0018)(Edit, BlueprintVisible, NoDestructor)
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_18;                  // 0x0388(0x00B8)()
+	struct FAnimNode_Root                         AnimGraphNode_Root_11;                             // 0x0440(0x0020)()
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_17;                  // 0x0460(0x00B8)()
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_16;                  // 0x0518(0x00B8)()
+	struct FAnimNode_Root                         AnimGraphNode_Root_10;                             // 0x05D0(0x0020)()
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_15;                  // 0x05F0(0x00B8)()
+	struct FAnimNode_Root                         AnimGraphNode_Root_9;                              // 0x06A8(0x0020)()
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_14;                  // 0x06C8(0x00B8)()
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_13;                  // 0x0780(0x00B8)()
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_12;                  // 0x0838(0x00B8)()
+	struct FAnimNode_Root                         AnimGraphNode_Root_8;                              // 0x08F0(0x0020)()
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_11;                  // 0x0910(0x00B8)()
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_10;                  // 0x09C8(0x00B8)()
+	struct FAnimNode_Root                         AnimGraphNode_Root_7;                              // 0x0A80(0x0020)()
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_9;                   // 0x0AA0(0x00B8)()
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_8;                   // 0x0B58(0x00B8)()
+	struct FAnimNode_Root                         AnimGraphNode_Root_6;                              // 0x0C10(0x0020)()
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_7;                   // 0x0C30(0x00B8)()
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_6;                   // 0x0CE8(0x00B8)()
+	struct FAnimNode_Root                         AnimGraphNode_Root_5;                              // 0x0DA0(0x0020)()
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_5;                   // 0x0DC0(0x00B8)()
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_4;                   // 0x0E78(0x00B8)()
+	struct FAnimNode_Root                         AnimGraphNode_Root_4;                              // 0x0F30(0x0020)()
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_3;                   // 0x0F50(0x00B8)()
+	struct FAnimNode_Root                         AnimGraphNode_Root_3;                              // 0x1008(0x0020)()
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_2;                   // 0x1028(0x00B8)()
+	struct FAnimNode_ControlRig                   AnimGraphNode_ControlRig;                          // 0x10E0(0x04D0)(ContainsInstancedReference)
+	struct FAnimNode_Root                         AnimGraphNode_Root_2;                              // 0x15B0(0x0020)()
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_1;                   // 0x15D0(0x00B8)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x1688(0x0020)()
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose;                     // 0x16A8(0x00B8)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x1760(0x0020)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_7;                     // 0x1780(0x07F0)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_6;                     // 0x1F70(0x07F0)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_5;                     // 0x2760(0x07F0)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_4;                     // 0x2F50(0x07F0)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_3;                     // 0x3740(0x07F0)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_2;                     // 0x3F30(0x07F0)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics_1;                     // 0x4720(0x07F0)()
+	struct FAnimNode_KawaiiPhysics                AnimGraphNode_KawaiiPhysics;                       // 0x4F10(0x07F0)()
+	struct FAnimNode_Root                         AnimGraphNode_Root_1;                              // 0x5700(0x0020)()
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x5720(0x0020)()
+	struct FKawaiiPhysicsSettings                 Common_Physics_Settings;                           // 0x5740(0x0018)(Edit, BlueprintVisible, NoDestructor)
 
 public:
 	void AnimGraph(struct FPoseLink* AnimGraph_0);
@@ -72,7 +79,7 @@ public:
 	void HoverboardControlRogLayer(const struct FPoseLink& HoverboardPose, struct FPoseLink* HoverboardControlRogLayer_0);
 	void HoverboardItemHoldBlendLeft(const struct FPoseLink& BasePose, const struct FPoseLink& LeftHoldPose, struct FPoseLink* HoverboardItemHoldBlendLeft_0);
 	void HoverboardItemHoldBlendRight(const struct FPoseLink& BasePose, const struct FPoseLink& RightHoldPose, struct FPoseLink* HoverboardItemHoldBlendRight_0);
-	void KawaiiPhysicsLayer(const struct FPoseLink& InPose, struct FPoseLink* KawaiiPhysicsLayer_0);
+	void KawaiiPhysicsLayer(const struct FPoseLink& InPose, bool bUseRace, const struct FPoseLink& InNoTransPose, struct FPoseLink* KawaiiPhysicsLayer_0);
 	void MachineItemHoldBlendLeft(const struct FPoseLink& BasePose, const struct FPoseLink& LeftHoldPose, struct FPoseLink* MachineItemHoldBlendLeft_0);
 	void MachineItemHoldBlendRight(const struct FPoseLink& BasePose, const struct FPoseLink& LeftHoldPose, struct FPoseLink* MachineItemHoldBlendRight_0);
 	void ScaleFaceLayer(const struct FPoseLink& InFaceOverride, bool bPlayMontage, EBoneScaleFaceType InStateMachineFaceType, EBoneScaleFaceType InMontageFaceType, struct FPoseLink* ScaleFaceLayer_0);

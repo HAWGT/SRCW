@@ -32,7 +32,7 @@ void UWBP_HonorTitle_Plate_C::Construct()
 
 
 // Function WBP_HonorTitle_Plate.WBP_HonorTitle_Plate_C.ExecuteUbergraph_WBP_HonorTitle_Plate
-// (Final, UbergraphFunction, HasDefaults)
+// (Final, UbergraphFunction)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -51,52 +51,32 @@ void UWBP_HonorTitle_Plate_C::ExecuteUbergraph_WBP_HonorTitle_Plate(int32 EntryP
 }
 
 
-// Function WBP_HonorTitle_Plate.WBP_HonorTitle_Plate_C.OnLoaded_BB0FBEFC4AB0250706392F9C5C9D14C8
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_HonorTitle_Plate.WBP_HonorTitle_Plate_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_HonorTitle_Plate_C::OnLoaded_BB0FBEFC4AB0250706392F9C5C9D14C8(class UObject* Loaded)
+void UWBP_HonorTitle_Plate_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HonorTitle_Plate_C", "OnLoaded_BB0FBEFC4AB0250706392F9C5C9D14C8");
+		Func = Class->GetFunction("WBP_HonorTitle_Plate_C", "PreConstruct");
 
-	Params::WBP_HonorTitle_Plate_C_OnLoaded_BB0FBEFC4AB0250706392F9C5C9D14C8 Parms{};
+	Params::WBP_HonorTitle_Plate_C_PreConstruct Parms{};
 
-	Parms.Loaded = Loaded;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_HonorTitle_Plate.WBP_HonorTitle_Plate_C.OnLoaded_EEF55983447D6E2AAAF1AB9849C4A735
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_HonorTitle_Plate_C::OnLoaded_EEF55983447D6E2AAAF1AB9849C4A735(class UObject* Loaded)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HonorTitle_Plate_C", "OnLoaded_EEF55983447D6E2AAAF1AB9849C4A735");
-
-	Params::WBP_HonorTitle_Plate_C_OnLoaded_EEF55983447D6E2AAAF1AB9849C4A735 Parms{};
-
-	Parms.Loaded = Loaded;
+	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
 // Function WBP_HonorTitle_Plate.WBP_HonorTitle_Plate_C.SetHonorTitle
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   InHonorId                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InHonorTitleId                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_HonorTitle_Plate_C::SetHonorTitle(int32 InHonorId)
+void UWBP_HonorTitle_Plate_C::SetHonorTitle(int32 InHonorTitleId)
 {
 	static class UFunction* Func = nullptr;
 
@@ -105,127 +85,7 @@ void UWBP_HonorTitle_Plate_C::SetHonorTitle(int32 InHonorId)
 
 	Params::WBP_HonorTitle_Plate_C_SetHonorTitle Parms{};
 
-	Parms.InHonorId = InHonorId;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_HonorTitle_Plate.WBP_HonorTitle_Plate_C.SetupLegendCompeHonorTitle
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TSoftObjectPtr<class UObject>           PlateImageTexture2D                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-// EHonorTitleFontColor                    FontColor                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const class FText&                      HonorTitleVB                                           (BlueprintVisible, BlueprintReadOnly, Parm)
-// int32                                   RoundCount                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_HonorTitle_Plate_C::SetupLegendCompeHonorTitle(TSoftObjectPtr<class UObject> PlateImageTexture2D, EHonorTitleFontColor FontColor, const class FText& HonorTitleVB, int32 RoundCount)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HonorTitle_Plate_C", "SetupLegendCompeHonorTitle");
-
-	Params::WBP_HonorTitle_Plate_C_SetupLegendCompeHonorTitle Parms{};
-
-	Parms.PlateImageTexture2D = PlateImageTexture2D;
-	Parms.FontColor = FontColor;
-	Parms.HonorTitleVB = std::move(HonorTitleVB);
-	Parms.RoundCount = RoundCount;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_HonorTitle_Plate.WBP_HonorTitle_Plate_C.SetupNormalHonorTitlePlate
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TSoftObjectPtr<class UObject>           PlateImageTexture2D                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-// EHonorTitleFontColor                    FontColor                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const class FText&                      HonorTitleVB                                           (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void UWBP_HonorTitle_Plate_C::SetupNormalHonorTitlePlate(TSoftObjectPtr<class UObject> PlateImageTexture2D, EHonorTitleFontColor FontColor, const class FText& HonorTitleVB)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HonorTitle_Plate_C", "SetupNormalHonorTitlePlate");
-
-	Params::WBP_HonorTitle_Plate_C_SetupNormalHonorTitlePlate Parms{};
-
-	Parms.PlateImageTexture2D = PlateImageTexture2D;
-	Parms.FontColor = FontColor;
-	Parms.HonorTitleVB = std::move(HonorTitleVB);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_HonorTitle_Plate.WBP_HonorTitle_Plate_C.SetupOtherTypeHonorTitle
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TSoftObjectPtr<class UObject>           PlateImageTexture2D                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-// EHonorTitleFontColor                    FontColor                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const class FText&                      HonorTitleVB                                           (BlueprintVisible, BlueprintReadOnly, Parm)
-// EHonorTitleDisplayControlCategory       DisplayControlCategory                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   DisplayControlSubParam                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_HonorTitle_Plate_C::SetupOtherTypeHonorTitle(TSoftObjectPtr<class UObject> PlateImageTexture2D, EHonorTitleFontColor FontColor, const class FText& HonorTitleVB, EHonorTitleDisplayControlCategory DisplayControlCategory, int32 DisplayControlSubParam)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HonorTitle_Plate_C", "SetupOtherTypeHonorTitle");
-
-	Params::WBP_HonorTitle_Plate_C_SetupOtherTypeHonorTitle Parms{};
-
-	Parms.PlateImageTexture2D = PlateImageTexture2D;
-	Parms.FontColor = FontColor;
-	Parms.HonorTitleVB = std::move(HonorTitleVB);
-	Parms.DisplayControlCategory = DisplayControlCategory;
-	Parms.DisplayControlSubParam = DisplayControlSubParam;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_HonorTitle_Plate.WBP_HonorTitle_Plate_C.SetupTitlePlate
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FHonorTitleListData&       SetUpData                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm)
-
-void UWBP_HonorTitle_Plate_C::SetupTitlePlate(const struct FHonorTitleListData& SetUpData)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HonorTitle_Plate_C", "SetupTitlePlate");
-
-	Params::WBP_HonorTitle_Plate_C_SetupTitlePlate Parms{};
-
-	Parms.SetUpData = std::move(SetUpData);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_HonorTitle_Plate.WBP_HonorTitle_Plate_C.SetupTournamentHonorTitle
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FText&                      HonorTitleVB                                           (BlueprintVisible, BlueprintReadOnly, Parm)
-// int32                                   DisplayControlSubParam                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_HonorTitle_Plate_C::SetupTournamentHonorTitle(const class FText& HonorTitleVB, int32 DisplayControlSubParam)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HonorTitle_Plate_C", "SetupTournamentHonorTitle");
-
-	Params::WBP_HonorTitle_Plate_C_SetupTournamentHonorTitle Parms{};
-
-	Parms.HonorTitleVB = std::move(HonorTitleVB);
-	Parms.DisplayControlSubParam = DisplayControlSubParam;
+	Parms.InHonorTitleId = InHonorTitleId;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

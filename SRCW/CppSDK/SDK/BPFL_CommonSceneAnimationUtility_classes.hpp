@@ -22,7 +22,7 @@ namespace SDK
 class UBPFL_CommonSceneAnimationUtility_C final : public UBlueprintFunctionLibrary
 {
 public:
-	static void GetSceneDriverAnimationAsset(EDriverId In_DriverId, EDriverPose In_Pose, class UDataTable* DataTable, class UObject* __WorldContext, TSoftObjectPtr<class UAnimSequenceBase>* Anim, double* Time, bool* bSkipFacialBlend);
+	static void GetSceneDriverAnimationAsset(EDriverId In_DriverId, EDriverPose In_Pose, class UDataTable* DataTable, class UObject* __WorldContext, TSoftObjectPtr<class UAnimSequenceBase>* anim, double* Time, bool* bSkipFacialBlend);
 	static void LoadSceneDriverAnimationAssets(TArray<class ASceneDriver*>& In_SceneDrivers, class UDataTable* DataTable, class UObject* __WorldContext, TArray<class UObject*>* LoadAssets);
 
 public:

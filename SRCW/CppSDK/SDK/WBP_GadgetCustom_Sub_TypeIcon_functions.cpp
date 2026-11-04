@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function WBP_GadgetCustom_Sub_TypeIcon.WBP_GadgetCustom_Sub_TypeIcon_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWBP_GadgetCustom_Sub_TypeIcon_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TypeIcon_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function WBP_GadgetCustom_Sub_TypeIcon.WBP_GadgetCustom_Sub_TypeIcon_C.ExecuteUbergraph_WBP_GadgetCustom_Sub_TypeIcon
 // (Final, UbergraphFunction)
 // Parameters:
@@ -69,20 +55,6 @@ void UWBP_GadgetCustom_Sub_TypeIcon_C::GetIndex(int32* Output_Get)
 
 	if (Output_Get != nullptr)
 		*Output_Get = Parms.Output_Get;
-}
-
-
-// Function WBP_GadgetCustom_Sub_TypeIcon.WBP_GadgetCustom_Sub_TypeIcon_C.InitGadgetIConRef
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_GadgetCustom_Sub_TypeIcon_C::InitGadgetIConRef()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TypeIcon_C", "InitGadgetIConRef");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 

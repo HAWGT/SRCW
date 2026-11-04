@@ -10,66 +10,66 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
-#include "ABP_MonsterTruck_SmallCockpit_structs.hpp"
 #include "Engine_structs.hpp"
-#include "ControlRig_structs.hpp"
 #include "AnimGraphRuntime_structs.hpp"
+#include "ABP_MonsterTruck_SmallCockpit_structs.hpp"
+#include "ControlRig_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "UNION_classes.hpp"
 
 
 namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ABP_MonsterTruck_SmallCockpit.ABP_MonsterTruck_SmallCockpit_C
-// 0x10B0 (0x2250 - 0x11A0)
+// 0x10B0 (0x27E0 - 0x1730)
 class UABP_MonsterTruck_SmallCockpit_C final : public UMonsterTruckAnimInstance
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x11A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct ABP_MonsterTruck_SmallCockpit::FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables; // 0x11A8(0x0018)(HasGetValueTypeHash)
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x11C0(0x0008)()
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x11C8(0x0008)()
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x11D0(0x0020)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_11;                 // 0x11F0(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_10;                 // 0x1218(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_9;                  // 0x1240(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_8;                  // 0x1268(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_7;                  // 0x1290(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_6;                  // 0x12B8(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_5;                  // 0x12E0(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_4;                  // 0x1308(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_3;                  // 0x1330(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_2;                  // 0x1358(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_1;                  // 0x1380(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult;                    // 0x13A8(0x0028)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_3;                    // 0x13D0(0x0048)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_6;                       // 0x1418(0x0020)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_2;                    // 0x1438(0x0048)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_5;                       // 0x1480(0x0020)()
-	struct FAnimNode_BlendSpacePlayer             AnimGraphNode_BlendSpacePlayer_2;                  // 0x14A0(0x0070)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_4;                       // 0x1510(0x0020)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_1;                    // 0x1530(0x0048)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_3;                       // 0x1578(0x0020)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x1598(0x0048)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_2;                       // 0x15E0(0x0020)()
-	struct FAnimNode_BlendSpacePlayer             AnimGraphNode_BlendSpacePlayer_1;                  // 0x1600(0x0070)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_1;                       // 0x1670(0x0020)()
-	struct FAnimNode_BlendSpacePlayer             AnimGraphNode_BlendSpacePlayer;                    // 0x1690(0x0070)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult;                         // 0x1700(0x0020)()
-	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine;                        // 0x1720(0x00C8)()
-	struct FAnimNode_ControlRig                   AnimGraphNode_ControlRig_1;                        // 0x17E8(0x04D0)(ContainsInstancedReference)
-	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x1CB8(0x0048)()
-	struct FAnimNode_ControlRig                   AnimGraphNode_ControlRig;                          // 0x1D00(0x04D0)(ContainsInstancedReference)
-	bool                                          __CustomProperty_IsEnableWheelUpdate_CF2430BC4CF8A5C2CC7ABCB9B3EBD9BD; // 0x21D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21D1[0x7];                                     // 0x21D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FRotator>                       __CustomProperty_WheelRot_CF2430BC4CF8A5C2CC7ABCB9B3EBD9BD; // 0x21D8(0x0010)()
-	bool                                          __CustomProperty_IsEnableWheelUpdate_7F785B4B4DDA1AD29E7EAC94026DA528; // 0x21E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21E9[0x7];                                     // 0x21E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                __CustomProperty_WheelPosRR_7F785B4B4DDA1AD29E7EAC94026DA528; // 0x21F0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                __CustomProperty_WheelPosRL_7F785B4B4DDA1AD29E7EAC94026DA528; // 0x2208(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                __CustomProperty_WheelPosFR_7F785B4B4DDA1AD29E7EAC94026DA528; // 0x2220(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                __CustomProperty_WheelPosFL_7F785B4B4DDA1AD29E7EAC94026DA528; // 0x2238(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1730(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct ABP_MonsterTruck_SmallCockpit::FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables; // 0x1738(0x0018)(HasGetValueTypeHash)
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x1750(0x0008)()
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x1758(0x0008)()
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x1760(0x0020)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_11;                 // 0x1780(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_10;                 // 0x17A8(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_9;                  // 0x17D0(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_8;                  // 0x17F8(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_7;                  // 0x1820(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_6;                  // 0x1848(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_5;                  // 0x1870(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_4;                  // 0x1898(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_3;                  // 0x18C0(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_2;                  // 0x18E8(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_1;                  // 0x1910(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult;                    // 0x1938(0x0028)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_3;                    // 0x1960(0x0048)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_6;                       // 0x19A8(0x0020)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_2;                    // 0x19C8(0x0048)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_5;                       // 0x1A10(0x0020)()
+	struct FAnimNode_BlendSpacePlayer             AnimGraphNode_BlendSpacePlayer_2;                  // 0x1A30(0x0070)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_4;                       // 0x1AA0(0x0020)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_1;                    // 0x1AC0(0x0048)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_3;                       // 0x1B08(0x0020)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x1B28(0x0048)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_2;                       // 0x1B70(0x0020)()
+	struct FAnimNode_BlendSpacePlayer             AnimGraphNode_BlendSpacePlayer_1;                  // 0x1B90(0x0070)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_1;                       // 0x1C00(0x0020)()
+	struct FAnimNode_BlendSpacePlayer             AnimGraphNode_BlendSpacePlayer;                    // 0x1C20(0x0070)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult;                         // 0x1C90(0x0020)()
+	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine;                        // 0x1CB0(0x00C8)()
+	struct FAnimNode_ControlRig                   AnimGraphNode_ControlRig_1;                        // 0x1D78(0x04D0)(ContainsInstancedReference)
+	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x2248(0x0048)()
+	struct FAnimNode_ControlRig                   AnimGraphNode_ControlRig;                          // 0x2290(0x04D0)(ContainsInstancedReference)
+	bool                                          __CustomProperty_IsEnableWheelUpdate_CF2430BC4CF8A5C2CC7ABCB9B3EBD9BD; // 0x2760(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2761[0x7];                                     // 0x2761(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FRotator>                       __CustomProperty_WheelRot_CF2430BC4CF8A5C2CC7ABCB9B3EBD9BD; // 0x2768(0x0010)()
+	bool                                          __CustomProperty_IsEnableWheelUpdate_7F785B4B4DDA1AD29E7EAC94026DA528; // 0x2778(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2779[0x7];                                     // 0x2779(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                __CustomProperty_WheelPosRR_7F785B4B4DDA1AD29E7EAC94026DA528; // 0x2780(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                __CustomProperty_WheelPosRL_7F785B4B4DDA1AD29E7EAC94026DA528; // 0x2798(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                __CustomProperty_WheelPosFR_7F785B4B4DDA1AD29E7EAC94026DA528; // 0x27B0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                __CustomProperty_WheelPosFL_7F785B4B4DDA1AD29E7EAC94026DA528; // 0x27C8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AnimGraph(struct FPoseLink* AnimGraph_0);

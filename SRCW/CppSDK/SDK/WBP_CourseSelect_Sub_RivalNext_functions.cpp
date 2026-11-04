@@ -71,6 +71,28 @@ void UWBP_CourseSelect_Sub_RivalNext_C::PreConstruct(bool IsDesignTime)
 }
 
 
+// Function WBP_CourseSelect_Sub_RivalNext.WBP_CourseSelect_Sub_RivalNext_C.SetControllerButtonIndex
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   SwitherIndex                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   ButtonIndex_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_CourseSelect_Sub_RivalNext_C::SetControllerButtonIndex(int32 SwitherIndex, int32 ButtonIndex_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_CourseSelect_Sub_RivalNext_C", "SetControllerButtonIndex");
+
+	Params::WBP_CourseSelect_Sub_RivalNext_C_SetControllerButtonIndex Parms{};
+
+	Parms.SwitherIndex = SwitherIndex;
+	Parms.ButtonIndex_0 = ButtonIndex_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_CourseSelect_Sub_RivalNext.WBP_CourseSelect_Sub_RivalNext_C.UpdateDisplayLevel
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:

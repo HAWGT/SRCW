@@ -20,8 +20,8 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_EntryRacers.BP_EntryRacers_C
-// 0x0148 (0x0480 - 0x0338)
-class ABP_EntryRacers_C final : public ALevelSequenceActor
+// 0x0150 (0x0488 - 0x0338)
+class ABP_EntryRacers_C : public ALevelSequenceActor
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0338(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
@@ -45,6 +45,7 @@ public:
 	uint8                                         Pad_459[0x7];                                      // 0x0459(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TMulticastInlineDelegate<void()>              OnFinishedUI;                                      // 0x0460(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	TArray<class UObject*>                        DriverAnimationAssets;                             // 0x0470(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UWBP_RaceBefore_SpecialInfo_C*          RandomEventWidget;                                 // 0x0480(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BndEvt__BP_EntryAllRacers_SequencePlayer_K2Node_ComponentBoundEvent_0_OnMovieSceneSequencePlayerEvent__DelegateSignature();

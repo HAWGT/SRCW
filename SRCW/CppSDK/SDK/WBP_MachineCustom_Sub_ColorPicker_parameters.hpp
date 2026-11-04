@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "EColorDetailWindowMode_structs.hpp"
 #include "UMG_structs.hpp"
 #include "ST_ColorDetailWindowData_structs.hpp"
 #include "ST_PullDownMenuData_structs.hpp"
-#include "EColorDetailWindowMode_structs.hpp"
 #include "ST_PullDownMenuItemData_structs.hpp"
 #include "ST_ColorDetailWindowColorItemData_structs.hpp"
 #include "CoreUObject_structs.hpp"

@@ -158,6 +158,22 @@ enum class EMoviePipelineShutterTiming : uint8
 	EMoviePipelineShutterTiming_MAX          = 3,
 };
 
+// ScriptStruct MovieRenderPipelineCore.MovieGraphPinProperties
+// 0x0020 (0x0020 - 0x0000)
+struct FMovieGraphPinProperties final
+{
+public:
+	class FName                                   Label;                                             // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMovieGraphValueType                          Type;                                              // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                TypeObject;                                        // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	bool                                          bAllowMultipleConnections;                         // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsBranch;                                         // 0x0019(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsBuiltIn;                                        // 0x001A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1B[0x5];                                       // 0x001B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FMovieGraphPinProperties;
+
 // ScriptStruct MovieRenderPipelineCore.MoviePipelinePassIdentifier
 // 0x0020 (0x0020 - 0x0000)
 struct FMoviePipelinePassIdentifier final
@@ -233,6 +249,27 @@ public:
 };
 DUMPER7_ASSERTS_FMoviePipelineOutputData;
 
+// ScriptStruct MovieRenderPipelineCore.MovieGraphImagePreviewData
+// 0x0050 (0x0050 - 0x0000)
+struct FMovieGraphImagePreviewData final
+{
+public:
+	class UTexture*                               Texture;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMovieGraphRenderDataIdentifier        Identifier;                                        // 0x0008(0x0048)(BlueprintVisible, BlueprintReadOnly, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FMovieGraphImagePreviewData;
+
+// ScriptStruct MovieRenderPipelineCore.MovieGraphNamedResolution
+// 0x0020 (0x0020 - 0x0000)
+struct FMovieGraphNamedResolution final
+{
+public:
+	class FName                                   ProfileName;                                       // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FIntPoint                              Resolution;                                        // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Description;                                       // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FMovieGraphNamedResolution;
+
 // ScriptStruct MovieRenderPipelineCore.MovieGraphVersioningSettings
 // 0x0008 (0x0008 - 0x0000)
 struct FMovieGraphVersioningSettings final
@@ -252,6 +289,24 @@ public:
 	TArray<class UMovieGraphNode*>                NodeInstances;                                     // 0x0000(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
 };
 DUMPER7_ASSERTS_FMovieGraphEvaluatedSettingsStack;
+
+// ScriptStruct MovieRenderPipelineCore.MovieGraphEvaluatedBranchConfig
+// 0x0050 (0x0050 - 0x0000)
+struct FMovieGraphEvaluatedBranchConfig final
+{
+public:
+	TMap<class FString, struct FMovieGraphEvaluatedSettingsStack> NamedNodes;                        // 0x0000(0x0050)(Transient, NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FMovieGraphEvaluatedBranchConfig;
+
+// ScriptStruct MovieRenderPipelineCore.MovieGraphEvaluationContext_VisitedNodeInfo
+// 0x0050 (0x0050 - 0x0000)
+struct FMovieGraphEvaluationContext_VisitedNodeInfo final
+{
+public:
+	TSet<class UMovieGraphNode*>                  VisitedNodes;                                      // 0x0000(0x0050)(UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
+};
+DUMPER7_ASSERTS_FMovieGraphEvaluationContext_VisitedNodeInfo;
 
 // ScriptStruct MovieRenderPipelineCore.MovieGraphTimeStepData
 // 0x0068 (0x0068 - 0x0000)
@@ -279,24 +334,6 @@ public:
 	struct FFrameNumber                           ShotFrameNumber;                                   // 0x0064(0x0004)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FMovieGraphTimeStepData;
-
-// ScriptStruct MovieRenderPipelineCore.MovieGraphEvaluatedBranchConfig
-// 0x0050 (0x0050 - 0x0000)
-struct FMovieGraphEvaluatedBranchConfig final
-{
-public:
-	TMap<class FString, struct FMovieGraphEvaluatedSettingsStack> NamedNodes;                        // 0x0000(0x0050)(Transient, NativeAccessSpecifierPrivate)
-};
-DUMPER7_ASSERTS_FMovieGraphEvaluatedBranchConfig;
-
-// ScriptStruct MovieRenderPipelineCore.MovieGraphEvaluationContext_VisitedNodeInfo
-// 0x0050 (0x0050 - 0x0000)
-struct FMovieGraphEvaluationContext_VisitedNodeInfo final
-{
-public:
-	TSet<class UMovieGraphNode*>                  VisitedNodes;                                      // 0x0000(0x0050)(UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
-};
-DUMPER7_ASSERTS_FMovieGraphEvaluationContext_VisitedNodeInfo;
 
 // ScriptStruct MovieRenderPipelineCore.MovieGraphTraversalContext
 // 0x00D0 (0x00D0 - 0x0000)
@@ -328,16 +365,6 @@ public:
 	uint8                                         Pad_150[0x10];                                     // 0x0150(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FMovieGraphEvaluationContext;
-
-// ScriptStruct MovieRenderPipelineCore.MovieGraphImagePreviewData
-// 0x0050 (0x0050 - 0x0000)
-struct FMovieGraphImagePreviewData final
-{
-public:
-	class UTexture*                               Texture;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FMovieGraphRenderDataIdentifier        Identifier;                                        // 0x0008(0x0048)(BlueprintVisible, BlueprintReadOnly, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FMovieGraphImagePreviewData;
 
 // ScriptStruct MovieRenderPipelineCore.MovieGraphInitConfig
 // 0x0020 (0x0020 - 0x0000)
@@ -393,17 +420,6 @@ public:
 };
 DUMPER7_ASSERTS_FMovieGraphFilenameResolveParams;
 
-// ScriptStruct MovieRenderPipelineCore.MovieGraphNamedResolution
-// 0x0020 (0x0020 - 0x0000)
-struct FMovieGraphNamedResolution final
-{
-public:
-	class FName                                   ProfileName;                                       // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FIntPoint                              Resolution;                                        // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Description;                                       // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FMovieGraphNamedResolution;
-
 // ScriptStruct MovieRenderPipelineCore.MovieGraphPropertyInfo
 // 0x0018 (0x0018 - 0x0000)
 struct FMovieGraphPropertyInfo final
@@ -416,22 +432,6 @@ public:
 	class UObject*                                ValueTypeObject;                                   // 0x0010(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 };
 DUMPER7_ASSERTS_FMovieGraphPropertyInfo;
-
-// ScriptStruct MovieRenderPipelineCore.MovieGraphPinProperties
-// 0x0020 (0x0020 - 0x0000)
-struct FMovieGraphPinProperties final
-{
-public:
-	class FName                                   Label;                                             // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EMovieGraphValueType                          Type;                                              // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                TypeObject;                                        // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	bool                                          bAllowMultipleConnections;                         // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsBranch;                                         // 0x0019(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsBuiltIn;                                        // 0x001A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B[0x5];                                       // 0x001B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FMovieGraphPinProperties;
 
 // ScriptStruct MovieRenderPipelineCore.MovieGraphBranch
 // 0x0008 (0x0008 - 0x0000)

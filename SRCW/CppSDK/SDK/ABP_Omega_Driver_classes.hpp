@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ABP_Omega_Driver.ABP_Omega_Driver_C
-// 0x0000 (0x5CF0 - 0x5CF0)
+// 0x0000 (0x7040 - 0x7040)
 class UABP_Omega_Driver_C final : public UABPT_Driver_C
 {
 public:

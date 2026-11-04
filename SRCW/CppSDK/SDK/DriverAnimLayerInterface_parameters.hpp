@@ -10,12 +10,36 @@
 
 #include "Basic.hpp"
 
-#include "UNION_structs.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_structs.hpp"
 
 
 namespace SDK::Params
 {
+
+// Function DriverAnimLayerInterface.DriverAnimLayerInterface_C.DrivingControlRigLayer
+// 0x0028 (0x0028 - 0x0000)
+struct DriverAnimLayerInterface_C_DrivingControlRigLayer final
+{
+public:
+	struct FPoseLink                              InPose_Driving;                                    // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	int32                                         machineType;                                       // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPoseLink                              DrivingControlRigLayer_0;                          // 0x0018(0x0010)(Parm, OutParm, NoDestructor)
+};
+DUMPER7_ASSERTS_DriverAnimLayerInterface_C_DrivingControlRigLayer;
+
+// Function DriverAnimLayerInterface.DriverAnimLayerInterface_C.FullTimeControlRigLayer
+// 0x0028 (0x0028 - 0x0000)
+struct DriverAnimLayerInterface_C_FullTimeControlRigLayer final
+{
+public:
+	struct FPoseLink                              InPose_Emote;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	int32                                         InMachineType;                                     // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPoseLink                              FullTimeControlRigLayer_0;                         // 0x0018(0x0010)(Parm, OutParm, NoDestructor)
+};
+DUMPER7_ASSERTS_DriverAnimLayerInterface_C_FullTimeControlRigLayer;
 
 // Function DriverAnimLayerInterface.DriverAnimLayerInterface_C.HoverboardControlRogLayer
 // 0x0020 (0x0020 - 0x0000)
@@ -50,12 +74,15 @@ public:
 DUMPER7_ASSERTS_DriverAnimLayerInterface_C_HoverboardItemHoldBlendRight;
 
 // Function DriverAnimLayerInterface.DriverAnimLayerInterface_C.KawaiiPhysicsLayer
-// 0x0020 (0x0020 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct DriverAnimLayerInterface_C_KawaiiPhysicsLayer final
 {
 public:
 	struct FPoseLink                              InPose;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	struct FPoseLink                              KawaiiPhysicsLayer_0;                              // 0x0010(0x0010)(Parm, OutParm, NoDestructor)
+	bool                                          bUseRace;                                          // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPoseLink                              InNoTransPose;                                     // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	struct FPoseLink                              KawaiiPhysicsLayer_0;                              // 0x0028(0x0010)(Parm, OutParm, NoDestructor)
 };
 DUMPER7_ASSERTS_DriverAnimLayerInterface_C_KawaiiPhysicsLayer;
 
@@ -108,6 +135,17 @@ public:
 	struct FPoseLink                              ScaleFaceLayer_0;                                  // 0x0018(0x0010)(Parm, OutParm, NoDestructor)
 };
 DUMPER7_ASSERTS_DriverAnimLayerInterface_C_ScaleFaceLayer;
+
+// Function DriverAnimLayerInterface.DriverAnimLayerInterface_C.ScaleFacialOverrideVerTwo
+// 0x0030 (0x0030 - 0x0000)
+struct DriverAnimLayerInterface_C_ScaleFacialOverrideVerTwo final
+{
+public:
+	struct FPoseLink                              InBasePose;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	struct FPoseLink                              InDefaultPose;                                     // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	struct FPoseLink                              ScaleFacialOverrideVerTwo_0;                       // 0x0020(0x0010)(Parm, OutParm, NoDestructor)
+};
+DUMPER7_ASSERTS_DriverAnimLayerInterface_C_ScaleFacialOverrideVerTwo;
 
 }
 

@@ -38,6 +38,15 @@ public:
 };
 DUMPER7_ASSERTS_FPropertyPathSegment;
 
+// ScriptStruct PropertyPath.PropertyPathTestBaseStruct
+// 0x0008 (0x0008 - 0x0000)
+struct alignas(0x08) FPropertyPathTestBaseStruct
+{
+public:
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPropertyPathTestBaseStruct;
+
 // ScriptStruct PropertyPath.CachedPropertyPath
 // 0x0038 (0x0038 - 0x0000)
 struct FCachedPropertyPath
@@ -49,15 +58,6 @@ public:
 	uint8                                         Pad_20[0x18];                                      // 0x0020(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FCachedPropertyPath;
-
-// ScriptStruct PropertyPath.PropertyPathTestBaseStruct
-// 0x0008 (0x0008 - 0x0000)
-struct alignas(0x08) FPropertyPathTestBaseStruct
-{
-public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FPropertyPathTestBaseStruct;
 
 // ScriptStruct PropertyPath.PropertyPathTestInnerStruct
 // 0x0020 (0x0028 - 0x0008)

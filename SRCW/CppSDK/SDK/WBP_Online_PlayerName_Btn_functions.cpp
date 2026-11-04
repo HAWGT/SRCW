@@ -399,6 +399,28 @@ void UWBP_Online_PlayerName_Btn_C::PlayAnimationSelect()
 }
 
 
+// Function WBP_Online_PlayerName_Btn.WBP_Online_PlayerName_Btn_C.SetArabicVerticalOffset
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FText&                      InText                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
+// class UUnionRichTextBlock*              UnionRichTextBlock                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Online_PlayerName_Btn_C::SetArabicVerticalOffset(const class FText& InText, class UUnionRichTextBlock* UnionRichTextBlock)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Online_PlayerName_Btn_C", "SetArabicVerticalOffset");
+
+	Params::WBP_Online_PlayerName_Btn_C_SetArabicVerticalOffset Parms{};
+
+	Parms.InText = std::move(InText);
+	Parms.UnionRichTextBlock = UnionRichTextBlock;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_Online_PlayerName_Btn.WBP_Online_PlayerName_Btn_C.SetBlockState
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -443,8 +465,9 @@ void UWBP_Online_PlayerName_Btn_C::SetContext(const struct FPlayerNameContext& I
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    bIsRival                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsPoweredRival                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Online_PlayerName_Btn_C::SetIsRival(bool bIsRival)
+void UWBP_Online_PlayerName_Btn_C::SetIsRival(bool bIsRival, bool bIsPoweredRival)
 {
 	static class UFunction* Func = nullptr;
 
@@ -454,6 +477,7 @@ void UWBP_Online_PlayerName_Btn_C::SetIsRival(bool bIsRival)
 	Params::WBP_Online_PlayerName_Btn_C_SetIsRival Parms{};
 
 	Parms.bIsRival = bIsRival;
+	Parms.bIsPoweredRival = bIsPoweredRival;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -554,6 +578,46 @@ void UWBP_Online_PlayerName_Btn_C::SetVisibilityPlatformIcon(ESlateVisibility In
 	Params::WBP_Online_PlayerName_Btn_C_SetVisibilityPlatformIcon Parms{};
 
 	Parms.InVisibility = InVisibility;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Online_PlayerName_Btn.WBP_Online_PlayerName_Btn_C.SetWinCount
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InWinCount                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Online_PlayerName_Btn_C::SetWinCount(int32 InWinCount)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Online_PlayerName_Btn_C", "SetWinCount");
+
+	Params::WBP_Online_PlayerName_Btn_C_SetWinCount Parms{};
+
+	Parms.InWinCount = InWinCount;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Online_PlayerName_Btn.WBP_Online_PlayerName_Btn_C.SetWinCountVisibility
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    IsVisible_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Online_PlayerName_Btn_C::SetWinCountVisibility(bool IsVisible_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Online_PlayerName_Btn_C", "SetWinCountVisibility");
+
+	Params::WBP_Online_PlayerName_Btn_C_SetWinCountVisibility Parms{};
+
+	Parms.IsVisible_0 = IsVisible_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

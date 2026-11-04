@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_ItemMagnetObject.BP_ItemMagnetObject_C
-// 0x0000 (0x0980 - 0x0980)
+// 0x0000 (0x0990 - 0x0990)
 class ABP_ItemMagnetObject_C final : public AItemMagnetObject
 {
 public:

@@ -97,6 +97,28 @@ void UWBP_ResultRate_Sub_RankIcon_C::Set_Rank_SText_Impl(const class FText& Num)
 }
 
 
+// Function WBP_ResultRate_Sub_RankIcon.WBP_ResultRate_Sub_RankIcon_C.SetDuelCompePoint
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// const EDuelCompeRank                    InDuelCompeRank                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const int32                             InRoundPoint                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_ResultRate_Sub_RankIcon_C::SetDuelCompePoint(const EDuelCompeRank InDuelCompeRank, const int32 InRoundPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ResultRate_Sub_RankIcon_C", "SetDuelCompePoint");
+
+	Params::WBP_ResultRate_Sub_RankIcon_C_SetDuelCompePoint Parms{};
+
+	Parms.InDuelCompeRank = InDuelCompeRank;
+	Parms.InRoundPoint = InRoundPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_ResultRate_Sub_RankIcon.WBP_ResultRate_Sub_RankIcon_C.SetLegendCompeGrade
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:

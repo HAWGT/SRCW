@@ -762,15 +762,15 @@ void UWBP_Popup_Window_Hint_C::Setup(EHintId InHintId, bool bInDecisionClose)
 }
 
 
-// Function WBP_Popup_Window_Hint.WBP_Popup_Window_Hint_C.UnBindAnimationEvent
+// Function WBP_Popup_Window_Hint.WBP_Popup_Window_Hint_C.UnbindAnimationEvent
 // (BlueprintCallable, BlueprintEvent)
 
-void UWBP_Popup_Window_Hint_C::UnBindAnimationEvent()
+void UWBP_Popup_Window_Hint_C::UnbindAnimationEvent()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "UnBindAnimationEvent");
+		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "UnbindAnimationEvent");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

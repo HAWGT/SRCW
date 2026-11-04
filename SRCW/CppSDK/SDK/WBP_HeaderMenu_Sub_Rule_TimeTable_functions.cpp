@@ -181,8 +181,9 @@ void UWBP_HeaderMenu_Sub_Rule_TimeTable_C::SetInnerVisible(bool bDisplay)
 // EGroupRaceRule                          InGroupRaceRule                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    InIsEnd                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    InIsSpRule                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EGadgetId                               InExGadgetId                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_HeaderMenu_Sub_Rule_TimeTable_C::SetTimeTable(int32 InTimetableIndex, const struct FDateTime& InTime, EGroupRaceRule InGroupRaceRule, bool InIsEnd, bool InIsSpRule)
+void UWBP_HeaderMenu_Sub_Rule_TimeTable_C::SetTimeTable(int32 InTimetableIndex, const struct FDateTime& InTime, EGroupRaceRule InGroupRaceRule, bool InIsEnd, bool InIsSpRule, EGadgetId InExGadgetId)
 {
 	static class UFunction* Func = nullptr;
 
@@ -196,6 +197,7 @@ void UWBP_HeaderMenu_Sub_Rule_TimeTable_C::SetTimeTable(int32 InTimetableIndex, 
 	Parms.InGroupRaceRule = InGroupRaceRule;
 	Parms.InIsEnd = InIsEnd;
 	Parms.InIsSpRule = InIsSpRule;
+	Parms.InExGadgetId = InExGadgetId;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -244,7 +246,7 @@ void UWBP_HeaderMenu_Sub_Rule_TimeTable_C::SetVisibilityButtonIcon(ESlateVisibil
 
 
 // Function WBP_HeaderMenu_Sub_Rule_TimeTable.WBP_HeaderMenu_Sub_Rule_TimeTable_C.SetVisibilityOpenWidget
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Event, Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ESlateVisibility                        InVisibility                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -264,7 +266,7 @@ void UWBP_HeaderMenu_Sub_Rule_TimeTable_C::SetVisibilityOpenWidget(ESlateVisibil
 
 
 // Function WBP_HeaderMenu_Sub_Rule_TimeTable.WBP_HeaderMenu_Sub_Rule_TimeTable_C.SetVisibilityRankCalcWidget
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Event, Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ESlateVisibility                        InVisibility                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

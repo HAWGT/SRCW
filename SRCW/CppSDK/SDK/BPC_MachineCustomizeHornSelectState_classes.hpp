@@ -21,9 +21,9 @@ namespace SDK
 class UBPC_MachineCustomizeHornSelectState_C final : public UMachineCustomizeHornSelectState
 {
 public:
-	class URewardDialog* CreateRewardDialog();
-	void PlaySoundImpossible();
 	void PlaySoundPossible();
+	void PlaySoundImpossible();
+	class URewardDialog* CreateRewardDialog();
 
 	class AGarageCamera* GetCamera() const;
 	class UMachineHornComponent* GetHornComponent() const;

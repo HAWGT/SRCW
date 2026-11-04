@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "ST_StickerPresetPageItemData_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "UNION_structs.hpp"
-#include "UNION_classes.hpp"
-#include "ST_StickerPresetPageData_structs.hpp"
 #include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
+#include "ST_StickerPresetPageItemData_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "ST_StickerPresetPageData_structs.hpp"
+#include "UNION_structs.hpp"
+#include "UNION_classes.hpp"
 
 
 namespace SDK
@@ -57,42 +57,43 @@ public:
 	struct FST_StickerPresetPageItemData          InitialStickerItem;                                // 0x0270(0x0090)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
-	void RewardDialog_Purchase_OnResult(EDialogResult Result);
-	void DeleteDialog();
-	void CreateDialog();
-	void TipsWindow_CloseTipsWindow();
-	void OpenTipsWindow(EHintId InHintId);
-	void StickerSelectPage_OnCancel(int32 InPlayerIndex);
-	void Unbind();
 	void Bind();
+	void CreateDialog();
+	void DeleteDialog();
+	void ExecuteUbergraph_BPC_MachineCustomizeStickerSelectState(int32 EntryPoint);
 	void HideFooter();
-	void SetupFooter();
 	void HidePopupWindow();
-	void ShowPopupWindow();
-	void TurnStickerFrameVisible(class AUnionStickerBase* Sticker, bool IsVisible);
-	void OverrideStickers(TArray<class AActor*>& OverlapStickers, bool IsRear);
-	void SetExtraSticker(bool IsExtra, bool IsRear, EExtraStickerPattern Pattern, int32 stickerId);
-	void SettingStickersScale(TArray<struct FUserStickerData>& Array);
-	void SetupRewardDialogUnlock();
-	void SetupRewardDialogPurchase();
-	void SetStickerColor(bool IsColorChangeable, class AUnionStickerBase* Sticker);
-	void SetupStickerMasterSystem();
-	void SetRearMaterial(class UTexture* Texture);
-	void SetFrontMaterial(class UTexture* Texture);
-	void SetupStickerSelect();
-	void OnInitState();
-	void StickerSelectPage_OnItemSelected(const struct FST_StickerPresetPageItemData& ItemData, int32 InPlayerIndex);
-	void OnFocusedEvent(const struct FST_StickerPresetPageItemData& ItemData, int32 InPlayerIndex, int32 ButtonIndex);
+	void LeftShoulderEvent(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex);
 	void OnExitState();
-	void RewardDialog_Unlock_OnResult(EDialogResult Result);
-	void StickerSelectPage_OnPurchaseAnimFinished();
+	void OnFocusedEvent(const struct FST_StickerPresetPageItemData& ItemData, int32 InPlayerIndex, int32 ButtonIndex);
+	void OnInitState();
+	void OpenTipsWindow(EHintId InHintId);
+	void OverrideStickers(TArray<class AActor*>& OverlapStickers, bool IsRear);
 	void PopupWindow_OnDecision(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex);
+	void RewardDialog_Purchase_OnResult(EDialogResult Result);
+	void RewardDialog_Unlock_OnResult(EDialogResult Result);
+	void RightShoulderEvent(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex);
+	void SelectExtraSticker(class AUnionStickerBase* InStickerBase, int32 InStickerId, bool bIsRear, class UTexture* StickerTexture);
+	void SetActiveAuraEffect(bool IsActive_0);
+	void SetExtraSticker(bool IsExtra, bool IsRear, EExtraStickerPattern Pattern, int32 StickerId);
+	void SetFrontMaterial(class UTexture* Texture);
+	void SetRearMaterial(class UTexture* Texture);
+	void SetStickerColor(bool IsColorChangeable, class AUnionStickerBase* Sticker);
+	void SettingStickersScale(TArray<struct FUserStickerData>& Array);
+	void SetupFooter();
+	void SetupRewardDialogPurchase();
+	void SetupRewardDialogUnlock();
+	void SetupStickerMasterSystem();
+	void SetupStickerSelect();
+	void ShowPopupWindow();
 	void ShowTips();
 	void StartOpenTipsWindow();
-	void LeftShoulderEvent(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex);
-	void RightShoulderEvent(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex);
-	void SetActiveAuraEffect(bool IsActive_0);
-	void ExecuteUbergraph_BPC_MachineCustomizeStickerSelectState(int32 EntryPoint);
+	void StickerSelectPage_OnCancel(int32 InPlayerIndex);
+	void StickerSelectPage_OnItemSelected(const struct FST_StickerPresetPageItemData& ItemData, int32 InPlayerIndex);
+	void StickerSelectPage_OnPurchaseAnimFinished();
+	void TipsWindow_CloseTipsWindow();
+	void TurnStickerFrameVisible(class AUnionStickerBase* Sticker, bool IsVisible);
+	void Unbind();
 
 	void IsOpenTabControlTipsWindow(bool* bEnableOpenWindow) const;
 

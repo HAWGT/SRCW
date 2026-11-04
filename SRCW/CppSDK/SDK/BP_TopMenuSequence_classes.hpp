@@ -10,78 +10,88 @@
 
 #include "Basic.hpp"
 
-#include "UNION_structs.hpp"
-#include "UNION_classes.hpp"
+#include "UnionRun_structs.hpp"
 #include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_structs.hpp"
+#include "UNION_classes.hpp"
+#include "UnionUI_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UnionLib_structs.hpp"
-#include "UnionUI_structs.hpp"
-#include "UnionRun_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_TopMenuSequence.BP_TopMenuSequence_C
-// 0x00C0 (0x04F8 - 0x0438)
+// 0x00E0 (0x0518 - 0x0438)
 class ABP_TopMenuSequence_C final : public ATopMenuSequence
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0438(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBPC_ReceiveOnlineReward_C*             BPC_ReceiveOnlineReward;                           // 0x0440(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBPC_SegaAccount_C*                     BPC_SegaAccount;                                   // 0x0448(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBPC_OnlineRewardRestoration_C*         BPC_OnlineRewardRestoration;                       // 0x0450(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBPC_LegendCompeNoticeEventEnd_C*       BPC_LegendCompeNoticeEventEnd;                     // 0x0458(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBPC_Etcetera_C*                        BPC_Etcetera;                                      // 0x0460(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBPC_DodonpaEventState_C*               BPC_DodonpaEventState;                             // 0x0468(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBPC_NoticePopup_C*                     BPC_NoticePopup;                                   // 0x0470(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBPC_PlayerProfile_C*                   BPC_PlayerProfile;                                 // 0x0478(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBPC_GadgetCustomize2State_C*           BPC_GadgetCustomize2State;                         // 0x0480(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBPC_GetDLCFreeContent_C*               BPC_GetDLCFreeContent;                             // 0x0488(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBPC_NoticeEventEnd_C*                  BPC_NoticeEventEnd;                                // 0x0490(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBPC_PreNotice_C*                       BPC_PreNotice;                                     // 0x0498(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBPC_FriendList_C*                      BPC_FriendList;                                    // 0x04A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBPC_LobbyPlayerList_C*                 BPC_LobbyPlayerList;                               // 0x04A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UWBP_TopMenu_C*                         TopMenu;                                           // 0x04B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FName                                   LobbyLevel;                                        // 0x04B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 MainCamera;                                        // 0x04C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UHintPopupWindow*                       TipsWindow;                                        // 0x04C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AMenuCameraManager*                     CameraManager;                                     // 0x04D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	ETopMenuSequenceState                         BackToState;                                       // 0x04D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EHintId                                       UnLockSubMenuTipsID;                               // 0x04D9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bTopGameModeToCharamachine;                        // 0x04DA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bTopSubModeToCharamachine;                         // 0x04DB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bDisableInAnimationFlag;                           // 0x04DC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bIsAlone;                                          // 0x04DD(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4DE[0x2];                                      // 0x04DE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        GarageDisableTime;                                 // 0x04E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bIsPlayerListInputFlag;                            // 0x04E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E9[0x3];                                      // 0x04E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         SelectedPlayerCountCache;                          // 0x04EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bIsCPUBoostFlag;                                   // 0x04F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBPC_DuelCompeNoticeEventEnd_C*         BPC_DuelCompeNoticeEventEnd;                       // 0x0440(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBPC_PlayMission_C*                     BPC_PlayMission;                                   // 0x0448(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBPC_LegendCompeHonorTitleLevelUp_C*    BPC_LegendCompeHonorTitleLevelUp;                  // 0x0450(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBPC_ExchangeSequenceState_C*           BPC_ExchangeSequenceState;                         // 0x0458(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBPC_ReceiveOnlineReward_C*             BPC_ReceiveOnlineReward;                           // 0x0460(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBPC_SegaAccount_C*                     BPC_SegaAccount;                                   // 0x0468(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBPC_OnlineRewardRestoration_C*         BPC_OnlineRewardRestoration;                       // 0x0470(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBPC_LegendCompeNoticeEventEnd_C*       BPC_LegendCompeNoticeEventEnd;                     // 0x0478(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBPC_Etcetera_C*                        BPC_Etcetera;                                      // 0x0480(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBPC_DodonpaEventState_C*               BPC_DodonpaEventState;                             // 0x0488(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBPC_NoticePopup_C*                     BPC_NoticePopup;                                   // 0x0490(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBPC_PlayerProfile_C*                   BPC_PlayerProfile;                                 // 0x0498(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBPC_GadgetCustomize2State_C*           BPC_GadgetCustomize2State;                         // 0x04A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBPC_GetDLCFreeContent_C*               BPC_GetDLCFreeContent;                             // 0x04A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBPC_NoticeEventEnd_C*                  BPC_NoticeEventEnd;                                // 0x04B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBPC_PreNotice_C*                       BPC_PreNotice;                                     // 0x04B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBPC_FriendList_C*                      BPC_FriendList;                                    // 0x04C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBPC_LobbyPlayerList_C*                 BPC_LobbyPlayerList;                               // 0x04C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UWBP_TopMenu_C*                         TopMenu;                                           // 0x04D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FName                                   LobbyLevel;                                        // 0x04D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 MainCamera;                                        // 0x04E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UHintPopupWindow*                       TipsWindow;                                        // 0x04E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AMenuCameraManager*                     CameraManager;                                     // 0x04F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	ETopMenuSequenceState                         BackToState;                                       // 0x04F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EHintId                                       UnLockSubMenuTipsID;                               // 0x04F9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bTopGameModeToCharamachine;                        // 0x04FA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bTopSubModeToCharamachine;                         // 0x04FB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bDisableInAnimationFlag;                           // 0x04FC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsAlone;                                          // 0x04FD(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4FE[0x2];                                      // 0x04FE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        GarageDisableTime;                                 // 0x0500(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsPlayerListInputFlag;                            // 0x0508(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_509[0x3];                                      // 0x0509(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         SelectedPlayerCountCache;                          // 0x050C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsCPUBoostFlag;                                   // 0x0510(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AttachMainCamera();
+	void AttachMainCameraToPlayer();
 	void BackFromNoticePopup(ETopMenuSequenceState ReturnState);
 	void BndEvt__BP_TopMenuSequence_BPC_Etcetera_K2Node_ComponentBoundEvent_0_OnChangeStateDelegate__DelegateSignature(EMenuSequenceSubState State);
 	void BndEvt__BP_TopMenuSequence_BPC_FriendList_K2Node_ComponentBoundEvent_0_OnChangeStateDelegate__DelegateSignature(EMenuSequenceSubState State);
+	void BndEvt__BP_TopMenuSequence_BPC_PlayMission_K2Node_ComponentBoundEvent_0_OnChangeStateDelegate__DelegateSignature(EMenuSequenceSubState State);
 	void Call_DodonpaEvent_Fever();
 	void Call_DodonpaEvent_GadgetCustom();
 	void Call_DodonpaEvent_GrandPrixIntro();
 	void Call_DodonpaEvent_RaceParkCleard();
 	void Call_DodonpaEvent_RaceParkCleard_BackToRacePark();
 	void Call_DodonpaEvent_RaceParkIntro();
-	void CallDodonpaEvent(class FName EventName, EGrandPrixEventFlag SaveDataFlagId, EMenuSequenceBGM BGM_ID);
+	void Call_DodonpaEvent_RivalDuel();
+	void CallDodonpaEvent(class FName EventName, EGrandPrixEventFlag SaveFlagId, EMenuSequenceBGM BGM_ID);
+	void CallDodonpaEventSeason2(class FName EventName, EAppendDialogueEventBitFlag SaveFlagId, EMenuSequenceBGM BGM_ID);
 	void CreateMenuRacer();
 	void CreateTipsWindow(EHintId InHintId);
 	void DecisionStoreEvent(bool IsAccept);
 	void DodonpaEventEnd_Fever_NextGarage();
+	void ExchangeToGarage(EMenuSequenceSubState State);
 	void ExecuteUbergraph_BP_TopMenuSequence(int32 EntryPoint);
 	void FadeOutCheck();
 	void FadeStraightToSelectPlayMode(EUnionUIFadeDirection FadeDirection);
 	void Finished_57F6DED141952D93143C6FBA818D757E();
 	void FinishedFadeToCharaMachineSelect(EUnionUIFadeDirection FadeDirection);
+	void FinishedFadeToExchange(EUnionUIFadeDirection FadeDirection);
 	void FinishedFadeToGadgetCustom(EUnionUIFadeDirection FadeDirection);
 	void FinishedFadeToGarage(EUnionUIFadeDirection FadeDirection);
 	void FinishedFadeToGarageAndCharaMachineSelectCommonProcess(ETopMenuSequenceState InState, ETopMenuSequenceState PrevState);
@@ -91,7 +101,10 @@ public:
 	class UObject* GetOwnerMenuSequence();
 	void GetPlayerName(class FString* playerName);
 	void GetTipsHintId(EHintId* OutTipsHintId);
+	void GotoExchange();
 	void GotoOnlineFromFriendList();
+	void GotoOnlineFromPlayMission();
+	void GoToPlayMission();
 	void InitBinds();
 	void IsShowAddGadgetTips(EGadgetPlateId InGadgetPlateRank, EUnionRomVersion InVersionNum, bool* bOutShowTips);
 	void IsTipsHint(bool* OutTipsFlag);
@@ -99,6 +112,7 @@ public:
 	void NextSelectPlayMode();
 	void OnCancelCharaMachine(EMenuSequenceSubState State);
 	void OnCancelCharaMachineFade(EUnionUIFadeDirection FadeDirection);
+	void OnCancelExchange(EMenuSequenceSubState State);
 	void OnCancelGadgetCustomize(EMenuSequenceSubState State);
 	void OnCancelGameMode(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex);
 	void OnCancelGarage(EMenuSequenceSubState State);
@@ -157,6 +171,7 @@ public:
 	void Set_SubLevelVisible_by_in_State(ETopMenuSequenceState In_State);
 	void Set_Top_UIVisivility(ESlateVisibility Visibility, bool SetTopMenu, bool SetSubMenu, bool SetHeader);
 	void Set_UIVisible_by_in_State(ETopMenuSequenceState In_State);
+	void SetGameModeId(ETopMenuGameMode Selection);
 	void SetHintRequestIfUnread(EHintId InputPin);
 	void SetklaxonEnableByInState(ETopMenuSequenceState In_State);
 	void SetMenuDirectionKeyEnable(bool bEnableDirection);
@@ -165,10 +180,10 @@ public:
 	void SetMouseInteraction_by_in_State(ETopMenuSequenceState In_State);
 	void SetNextTopMenuSequenceState(ETopMenuSequenceState InState, ETopMenuSequenceState PrevState);
 	void SetStoreUIVisibility(ESlateVisibility Visibility);
+	void SetTopMenuUIVisibility(const ESlateVisibility InVisibility, bool bIsSetTopMenu, bool bIsSetSubMenu, bool bIsSetHeader);
 	void SetupBaseWidget();
 	void SetupSubLevel(class ULevelStreaming* SubLevel);
 	void StreamingInstallErrorWindow();
-	void UpdateTimeTable();
 
 public:
 	static class UClass* StaticClass()

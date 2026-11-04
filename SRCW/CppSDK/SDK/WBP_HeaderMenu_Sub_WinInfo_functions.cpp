@@ -51,6 +51,20 @@ void UWBP_HeaderMenu_Sub_WinInfo_C::ExecuteUbergraph_WBP_HeaderMenu_Sub_WinInfo(
 }
 
 
+// Function WBP_HeaderMenu_Sub_WinInfo.WBP_HeaderMenu_Sub_WinInfo_C.PlayWinCountsInAnimation
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_HeaderMenu_Sub_WinInfo_C::PlayWinCountsInAnimation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_HeaderMenu_Sub_WinInfo_C", "PlayWinCountsInAnimation");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_HeaderMenu_Sub_WinInfo.WBP_HeaderMenu_Sub_WinInfo_C.SetWinCounts
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:

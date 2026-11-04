@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "UNION_structs.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_structs.hpp"
 
 
 namespace SDK::Params
@@ -68,12 +68,15 @@ public:
 DUMPER7_ASSERTS_ABP_Zavok_Physics_C_HoverboardItemHoldBlendRight;
 
 // Function ABP_Zavok_Physics.ABP_Zavok_Physics_C.KawaiiPhysicsLayer
-// 0x0020 (0x0020 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct ABP_Zavok_Physics_C_KawaiiPhysicsLayer final
 {
 public:
 	struct FPoseLink                              InPose;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	struct FPoseLink                              KawaiiPhysicsLayer_0;                              // 0x0010(0x0010)(Parm, OutParm, NoDestructor)
+	bool                                          bUseRace;                                          // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPoseLink                              InNoTransPose;                                     // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	struct FPoseLink                              KawaiiPhysicsLayer_0;                              // 0x0028(0x0010)(Parm, OutParm, NoDestructor)
 };
 DUMPER7_ASSERTS_ABP_Zavok_Physics_C_KawaiiPhysicsLayer;
 

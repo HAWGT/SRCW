@@ -65,6 +65,34 @@ void UWBP_RaceBefore_VoltageMaxInfo_C::OnOutAnimFinished()
 }
 
 
+// Function WBP_RaceBefore_VoltageMaxInfo.WBP_RaceBefore_VoltageMaxInfo_C.SetUpChanceUpImage
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_RaceBefore_VoltageMaxInfo_C::SetUpChanceUpImage()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_RaceBefore_VoltageMaxInfo_C", "SetUpChanceUpImage");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_RaceBefore_VoltageMaxInfo.WBP_RaceBefore_VoltageMaxInfo_C.SetupDuelCompeChanceUpText
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWBP_RaceBefore_VoltageMaxInfo_C::SetupDuelCompeChanceUpText()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_RaceBefore_VoltageMaxInfo_C", "SetupDuelCompeChanceUpText");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_RaceBefore_VoltageMaxInfo.WBP_RaceBefore_VoltageMaxInfo_C.SetupLegendCompeChanupText
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 

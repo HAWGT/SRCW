@@ -11,12 +11,12 @@
 #include "Basic.hpp"
 
 #include "MediaIOCore_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "CoreUObject_classes.hpp"
-#include "OpenColorIO_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "OpenColorIO_structs.hpp"
 #include "MediaAssets_classes.hpp"
+#include "CoreUObject_structs.hpp"
+#include "CoreUObject_classes.hpp"
 #include "ImageWriteQueue_structs.hpp"
 
 

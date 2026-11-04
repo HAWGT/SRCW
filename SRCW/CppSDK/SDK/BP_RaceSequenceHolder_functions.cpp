@@ -163,6 +163,76 @@ void ABP_RaceSequenceHolder_C::StartErrorHandling()
 }
 
 
+// Function BP_RaceSequenceHolder.BP_RaceSequenceHolder_C.StartFinalize_GrandPrix
+// (Event, Protected, BlueprintEvent)
+
+void ABP_RaceSequenceHolder_C::StartFinalize_GrandPrix()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_RaceSequenceHolder_C", "StartFinalize_GrandPrix");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_RaceSequenceHolder.BP_RaceSequenceHolder_C.StartFinalize_MatchRace
+// (Event, Protected, BlueprintEvent)
+
+void ABP_RaceSequenceHolder_C::StartFinalize_MatchRace()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_RaceSequenceHolder_C", "StartFinalize_MatchRace");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_RaceSequenceHolder.BP_RaceSequenceHolder_C.StartFinalize_PartyRace
+// (Event, Protected, BlueprintEvent)
+
+void ABP_RaceSequenceHolder_C::StartFinalize_PartyRace()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_RaceSequenceHolder_C", "StartFinalize_PartyRace");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_RaceSequenceHolder.BP_RaceSequenceHolder_C.StartFinalize_RivalDuel
+// (Event, Protected, BlueprintEvent)
+
+void ABP_RaceSequenceHolder_C::StartFinalize_RivalDuel()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_RaceSequenceHolder_C", "StartFinalize_RivalDuel");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_RaceSequenceHolder.BP_RaceSequenceHolder_C.StartFinalize_TimeTrial
+// (Event, Protected, BlueprintEvent)
+
+void ABP_RaceSequenceHolder_C::StartFinalize_TimeTrial()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_RaceSequenceHolder_C", "StartFinalize_TimeTrial");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_RaceSequenceHolder.BP_RaceSequenceHolder_C.StartGrandPrix
 // (BlueprintCallable, BlueprintEvent)
 

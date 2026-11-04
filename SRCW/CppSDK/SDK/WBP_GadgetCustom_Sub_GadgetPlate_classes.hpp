@@ -10,58 +10,30 @@
 
 #include "Basic.hpp"
 
-#include "UnionSystem_structs.hpp"
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
-#include "UMG_structs.hpp"
+#include "UNION_classes.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_GadgetCustom_Sub_GadgetPlate.WBP_GadgetCustom_Sub_GadgetPlate_C
-// 0x00A8 (0x0590 - 0x04E8)
+// 0x0040 (0x0598 - 0x0558)
 class UWBP_GadgetCustom_Sub_GadgetPlate_C final : public UGadgetPlateWindow
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04E8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 base;                                              // 0x04F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_GadgetIcon_C*                      DSP_PreviewEquippedGadget;                         // 0x04F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_GadgetCustom_Sub_Tab_C*            DSP_WBP_GadgetCustom_Sub_Tab;                      // 0x0500(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_GadgetIcon_C*                      DSP_WBP_GadgetIcon_02;                             // 0x0508(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_GadgetIcon_C*                      DSP_WBP_GadgetIcon_03;                             // 0x0510(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_GadgetIcon_C*                      DSP_WBP_GadgetIcon_05;                             // 0x0518(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_GadgetIcon_C*                      DSP_WBP_GadgetIcon_06;                             // 0x0520(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_GadgetIcon_C*                      DummyGadgetIcon;                                   // 0x0528(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 PAT_GadgetPlate;                                   // 0x0530(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               PlateOverlay;                                      // 0x0538(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UUnionRichTextBlock*                    TXT_ClassName;                                     // 0x0540(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_GadgetIcon_C*                      WBP_GadgetIcon_01;                                 // 0x0548(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_GadgetIcon_C*                      WBP_GadgetIcon_04;                                 // 0x0550(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_GadgetIcon_C*                      WBP_GadgetIcon_EX_01;                              // 0x0558(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_GadgetIcon_C*                      WBP_GadgetIcon_EX_02;                              // 0x0560(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_GadgetIcon_C*                      WBP_GadgetIcon_EX_03;                              // 0x0568(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void()>              CaptionEvent;                                      // 0x0570(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          IsVisibleTabWidget;                                // 0x0580(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_581[0x7];                                      // 0x0581(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UDummyWidget*                           DummyWidget;                                       // 0x0588(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0558(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 base;                                              // 0x0560(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               PlateOverlay;                                      // 0x0568(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_GadgetIcon_C*                      WBP_GadgetIcon_EX_01;                              // 0x0570(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_GadgetIcon_C*                      WBP_GadgetIcon_EX_02;                              // 0x0578(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_GadgetIcon_C*                      WBP_GadgetIcon_EX_03;                              // 0x0580(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void()>              CaptionEvent;                                      // 0x0588(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void BindDelegateEvents();
-	void Construct();
+	void CreateDummyWidget();
 	void ExecuteUbergraph_WBP_GadgetCustom_Sub_GadgetPlate(int32 EntryPoint);
-	void GetGadgetIds(TArray<EGadgetId>* OutGadgetIds);
-	void InVisiblePreviewEquippedGadget();
-	void OnConstDummyGadgetIconRef();
-	void OnConstDummyGadgetIconSetup();
-	void OnConstDummyWidget();
-	void OnConstGadgetIconRef();
-	void OnConstGadgetIconSetup();
-	void OnConstGridLayoutControl();
-	void OnConstPlateImageRef();
-	void OnConstPresetCustomTabRef();
-	void OnConstPreviewEquippedGadgetRef();
-	void OnConstTextClassNameRef();
 	void PlayTabSound();
 	void Refresh();
 	void Scene_OnCancel(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex);
@@ -73,10 +45,6 @@ public:
 	void SetShouldPlayCancelSound(bool bInShouldPlay);
 	void SetShouldPlayDecisionSound(bool bInShouldPlay);
 	void SetTabWidgetVisible(bool bInIsVisible);
-	void SetupGadgetIcons(const bool InRankUp, const int32 InSlotNum);
-	void SetupGadgetIconsToPlayerDetail(const bool InRankUp, const int32 InSlotNum);
-	void UpdatePreviewEquippedGadget(const int32 InPlayerIndex, const int32 InSlotNum, const EGadgetId InGadgetId);
-	void VisiblePreviewEquippedGadget(const int32 InPlayerIndex, const int32 InSlotNum, const EGadgetId InGadgetId);
 
 public:
 	static class UClass* StaticClass()

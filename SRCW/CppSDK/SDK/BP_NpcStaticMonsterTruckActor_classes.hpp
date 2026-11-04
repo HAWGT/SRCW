@@ -10,23 +10,23 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_NpcStaticMonsterTruckActor.BP_NpcStaticMonsterTruckActor_C
-// 0x0018 (0x0E40 - 0x0E28)
+// 0x0018 (0x0E48 - 0x0E30)
 class ABP_NpcStaticMonsterTruckActor_C final : public ASimpleNpcMonsterTruckActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0E28(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	float                                         Timeline_CountDown_CountDown_B88CCEC04F046E8498E9F6A08A361ED4; // 0x0E30(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            Timeline_CountDown__Direction_B88CCEC04F046E8498E9F6A08A361ED4; // 0x0E34(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E35[0x3];                                      // 0x0E35(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     Timeline_CountDown;                                // 0x0E38(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0E30(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	float                                         Timeline_CountDown_CountDown_B88CCEC04F046E8498E9F6A08A361ED4; // 0x0E38(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            Timeline_CountDown__Direction_B88CCEC04F046E8498E9F6A08A361ED4; // 0x0E3C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E3D[0x3];                                      // 0x0E3D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     Timeline_CountDown;                                // 0x0E40(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_NpcStaticMonsterTruckActor(int32 EntryPoint);

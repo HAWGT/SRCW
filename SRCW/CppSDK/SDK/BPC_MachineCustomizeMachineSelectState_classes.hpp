@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
+#include "UnionRun_structs.hpp"
 #include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
-#include "UnionRun_structs.hpp"
+#include "UNION_classes.hpp"
 #include "UnionLib_structs.hpp"
 
 
@@ -54,6 +54,7 @@ public:
 	void UnbindPage();
 	void BindMachineTypeSelectWindow(class UMachineTypeScrollControl* InMachineTypeSelectWindow);
 	void UnbindMachineTypeSelectWindow(class UMachineTypeScrollControl* InMachineTypeSelectWindow);
+	void RemoveTipsWindow();
 	void ExecuteUbergraph_BPC_MachineCustomizeMachineSelectState(int32 EntryPoint);
 
 	class AGarageCamera* GetCamera() const;

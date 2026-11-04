@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
 #include "UnionUI_structs.hpp"
 
 
@@ -21,16 +21,14 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BPC_NoticeEventEnd.BPC_NoticeEventEnd_C
-// 0x0088 (0x01B0 - 0x0128)
+// 0x0080 (0x01B0 - 0x0130)
 class UBPC_NoticeEventEnd_C final : public UNoticeEventEndState
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0128(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWBP_EventEndInfo_CMN_window_C*         EventEndInfo;                                      // 0x0130(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         EventPoint;                                        // 0x0138(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         EventRanking;                                      // 0x013C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         EndFestaID;                                        // 0x0140(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_144[0x4];                                      // 0x0144(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0130(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWBP_EventEndInfo_CMN_window_C*         EventEndInfo;                                      // 0x0138(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         EventRanking;                                      // 0x0140(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         EndFestaID;                                        // 0x0144(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TSoftObjectPtr<class UTexture2D>              EventEndBG;                                        // 0x0148(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	class FText                                   FestaName;                                         // 0x0170(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                          DebugMode;                                         // 0x0180(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -42,20 +40,24 @@ public:
 	class UWBP_Result_DonpaTicket_C*              ResultDonpaTicketWidget;                           // 0x01A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void GetFestaIdValue(int32* festaId);
-	void Set_Footer_Visibility(bool IsVisible);
-	void OnInitState();
-	void OnExitState();
-	void OnClosed_ItemGet();
-	void OnClosed_EventEndWidget();
-	void StartClaimRankingRewards();
-	void OnSaveComplete(ESaveDataStatus Status);
-	void OnFinishedFade(EUnionUIFadeDirection FadeDirection);
-	void NoReward();
-	void SaveStart();
-	void FinishNoticeEventEnd();
-	void ShowDonpaTicketDiff();
 	void ExecuteUbergraph_BPC_NoticeEventEnd(int32 EntryPoint);
+	void FinishNoticeEventEnd();
+	void GetFestaIdValue(int32* festaId);
+	void GetPlayerRankingPoint(int32* Point);
+	void GetRewardDialogTitle(class FText* Text);
+	void IsShowEventEndInfoWindow(bool* IsShown);
+	void NoReward();
+	void OnClosed_EventEndWidget();
+	void OnClosed_ItemGet();
+	void OnExitState();
+	void OnFinishedFade(EUnionUIFadeDirection FadeDirection);
+	void OnInitState();
+	void OnSaveComplete(ESaveDataStatus Status);
+	void OnSkiped_ShowEventEndWidget();
+	void SaveStart();
+	void Set_Footer_Visibility(bool IsVisible);
+	void ShowDonpaTicketDiff();
+	void StartClaimRankingRewards();
 
 public:
 	static class UClass* StaticClass()

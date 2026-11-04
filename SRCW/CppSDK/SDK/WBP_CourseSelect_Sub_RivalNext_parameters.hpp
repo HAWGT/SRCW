@@ -54,6 +54,16 @@ public:
 };
 DUMPER7_ASSERTS_WBP_CourseSelect_Sub_RivalNext_C_PreConstruct;
 
+// Function WBP_CourseSelect_Sub_RivalNext.WBP_CourseSelect_Sub_RivalNext_C.SetControllerButtonIndex
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_CourseSelect_Sub_RivalNext_C_SetControllerButtonIndex final
+{
+public:
+	int32                                         SwitherIndex;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ButtonIndex_0;                                     // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_CourseSelect_Sub_RivalNext_C_SetControllerButtonIndex;
+
 // Function WBP_CourseSelect_Sub_RivalNext.WBP_CourseSelect_Sub_RivalNext_C.UpdateDisplayLevel
 // 0x0068 (0x0068 - 0x0000)
 struct WBP_CourseSelect_Sub_RivalNext_C_UpdateDisplayLevel final

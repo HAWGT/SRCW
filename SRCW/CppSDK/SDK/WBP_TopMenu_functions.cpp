@@ -412,6 +412,48 @@ void UWBP_TopMenu_C::SetupPlayMode(const TArray<ETopMenuPlayMode>& TopMenuPlayMo
 }
 
 
+// Function WBP_TopMenu.WBP_TopMenu_C.SetVisibilityGameModeButtons
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ESlateVisibility                        InVisibility                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_TopMenu_C::SetVisibilityGameModeButtons(ESlateVisibility InVisibility)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_TopMenu_C", "SetVisibilityGameModeButtons");
+
+	Params::WBP_TopMenu_C_SetVisibilityGameModeButtons Parms{};
+
+	Parms.InVisibility = InVisibility;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_TopMenu.WBP_TopMenu_C.Tick
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_TopMenu_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_TopMenu_C", "Tick");
+
+	Params::WBP_TopMenu_C_Tick Parms{};
+
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InDeltaTime = InDeltaTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_TopMenu.WBP_TopMenu_C.UnbindAllEvent
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 

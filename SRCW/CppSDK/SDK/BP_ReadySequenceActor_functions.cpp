@@ -133,19 +133,22 @@ void ABP_ReadySequenceActor_C::CheckInputEvent(class UObject* Object, const int3
 }
 
 
-// Function BP_ReadySequenceActor.BP_ReadySequenceActor_C.CheckTimeTrialDisableGadget
+// Function BP_ReadySequenceActor.BP_ReadySequenceActor_C.CheckSinglePlayDisableGadget
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
+// EGameModeId                             InGmaeModeId                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool*                                   bIsValid                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_ReadySequenceActor_C::CheckTimeTrialDisableGadget(bool* bIsValid)
+void ABP_ReadySequenceActor_C::CheckSinglePlayDisableGadget(EGameModeId InGmaeModeId, bool* bIsValid)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "CheckTimeTrialDisableGadget");
+		Func = Class->GetFunction("BP_ReadySequenceActor_C", "CheckSinglePlayDisableGadget");
 
-	Params::BP_ReadySequenceActor_C_CheckTimeTrialDisableGadget Parms{};
+	Params::BP_ReadySequenceActor_C_CheckSinglePlayDisableGadget Parms{};
+
+	Parms.InGmaeModeId = InGmaeModeId;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -947,28 +950,6 @@ void ABP_ReadySequenceActor_C::SetUpOptionEvent()
 }
 
 
-// Function BP_ReadySequenceActor.BP_ReadySequenceActor_C.SetupParamWindow
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   PlayerIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    IsSlide                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_ReadySequenceActor_C::SetupParamWindow(int32 PlayerIndex, bool IsSlide)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "SetupParamWindow");
-
-	Params::BP_ReadySequenceActor_C_SetupParamWindow Parms{};
-
-	Parms.PlayerIndex = PlayerIndex;
-	Parms.IsSlide = IsSlide;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_ReadySequenceActor.BP_ReadySequenceActor_C.SetUpParamWindowEvent
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -1006,28 +987,6 @@ void ABP_ReadySequenceActor_C::SetUpPlayersParam(int32 PlayerIndex)
 	Params::BP_ReadySequenceActor_C_SetUpPlayersParam Parms{};
 
 	Parms.PlayerIndex = PlayerIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_ReadySequenceActor.BP_ReadySequenceActor_C.SetVisibleCharaMachineParam
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   PlayerIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Visible                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_ReadySequenceActor_C::SetVisibleCharaMachineParam(int32 PlayerIndex, bool Visible)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "SetVisibleCharaMachineParam");
-
-	Params::BP_ReadySequenceActor_C_SetVisibleCharaMachineParam Parms{};
-
-	Parms.PlayerIndex = PlayerIndex;
-	Parms.Visible = Visible;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

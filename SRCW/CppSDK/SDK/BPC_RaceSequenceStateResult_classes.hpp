@@ -11,16 +11,16 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BPC_RaceSequenceStateResult.BPC_RaceSequenceStateResult_C
-// 0x0038 (0x0160 - 0x0128)
+// 0x0070 (0x0198 - 0x0128)
 class UBPC_RaceSequenceStateResult_C final : public URaceSequenceStateResult
 {
 public:
@@ -31,6 +31,7 @@ public:
 	class UUserWidget*                            RusultWidget;                                      // 0x0148(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWBP_GroupResult_C*                     GroupResultWidget;                                 // 0x0150(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWBP_EndMenu_GudgetLv_Window_C*         ResultGadgetPlateWidget;                           // 0x0158(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FGadgetPlateData                       TempGadgetPlateData;                               // 0x0160(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_BPC_RaceSequenceStateResult(int32 EntryPoint);

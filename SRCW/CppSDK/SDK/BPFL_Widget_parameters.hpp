@@ -34,6 +34,25 @@ public:
 };
 DUMPER7_ASSERTS_BPFL_Widget_C_ChangeInputRegistrationOnVisibilityChanged;
 
+// Function BPFL_Widget.BPFL_Widget_C.CreateWidgetFromSoftClass
+// 0x0080 (0x0080 - 0x0000)
+struct BPFL_Widget_C_CreateWidgetFromSoftClass final
+{
+public:
+	TSoftClassPtr<class UClass>                   SoftClass;                                         // 0x0000(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	class APlayerController*                      OwningPlayer;                                      // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            UserWidget;                                        // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_SoftClassReferenceToString_ReturnValue; // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class UClass*                                 CallFunc_LoadClassAsset_Blocking_ReturnValue;      // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class UClass*                                 K2Node_ClassDynamicCast_As__________;              // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_ClassDynamicCast_bSuccess;                  // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUserWidget*                            CallFunc_Create_ReturnValue;                       // 0x0078(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPFL_Widget_C_CreateWidgetFromSoftClass;
+
 // Function BPFL_Widget.BPFL_Widget_C.ReplacementPlatformIconTexture 
 // 0x0048 (0x0048 - 0x0000)
 struct BPFL_Widget_C_ReplacementPlatformIconTexture_ final

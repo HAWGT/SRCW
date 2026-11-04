@@ -10,16 +10,16 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_TopMenu_Sub_ModeMenu.WBP_TopMenu_Sub_ModeMenu_C
-// 0x0020 (0x0318 - 0x02F8)
+// 0x0028 (0x0320 - 0x02F8)
 class UWBP_TopMenu_Sub_ModeMenu_C final : public UTopMenuGameModeMenu
 {
 public:
@@ -27,11 +27,13 @@ public:
 	class UWBP_TopMenu_Sub_BtnMode_Offline_C*     WBP_TopMenu_Sub_BtnMode_Offline_01;                // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_TopMenu_Sub_BtnMode_Offline_C*     WBP_TopMenu_Sub_BtnMode_Offline_02;                // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_TopMenu_Sub_BtnMode_Offline_C*     WBP_TopMenu_Sub_BtnMode_Offline_03;                // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_TopMenu_Sub_BtnMode_Offline_C*     WBP_TopMenu_Sub_BtnMode_Offline_04;                // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_TopMenu_Sub_ModeMenu(int32 EntryPoint);
 	void InitializeGameModeMenu(const TArray<ETopMenuGameMode>& BeltButtonTypeArr, class UCommonMenuSubMenu* SubMenu);
 	void SetupGameModeMenu();
+	void UpdateRivalDuelButtonRivalTexture();
 
 public:
 	static class UClass* StaticClass()

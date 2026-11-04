@@ -93,26 +93,6 @@ void UWBP_CMN_LR_Arrow_C::PlayAnimationRightIn()
 }
 
 
-// Function WBP_CMN_LR_Arrow.WBP_CMN_LR_Arrow_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_CMN_LR_Arrow_C::PreConstruct(bool IsDesignTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_LR_Arrow_C", "PreConstruct");
-
-	Params::WBP_CMN_LR_Arrow_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_CMN_LR_Arrow.WBP_CMN_LR_Arrow_C.SetIsGamepadKey
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -133,21 +113,21 @@ void UWBP_CMN_LR_Arrow_C::SetIsGamepadKey(bool Is_Game_Pad_Key)
 }
 
 
-// Function WBP_CMN_LR_Arrow.WBP_CMN_LR_Arrow_C.SetVisibleButton
+// Function WBP_CMN_LR_Arrow.WBP_CMN_LR_Arrow_C.SetVisibilityControllerBtn
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    IsVisibility                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ESlateVisibility                        InVisibility                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_CMN_LR_Arrow_C::SetVisibleButton(bool IsVisibility)
+void UWBP_CMN_LR_Arrow_C::SetVisibilityControllerBtn(ESlateVisibility InVisibility)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_LR_Arrow_C", "SetVisibleButton");
+		Func = Class->GetFunction("WBP_CMN_LR_Arrow_C", "SetVisibilityControllerBtn");
 
-	Params::WBP_CMN_LR_Arrow_C_SetVisibleButton Parms{};
+	Params::WBP_CMN_LR_Arrow_C_SetVisibilityControllerBtn Parms{};
 
-	Parms.IsVisibility = IsVisibility;
+	Parms.InVisibility = InVisibility;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

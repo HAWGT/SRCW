@@ -18,24 +18,50 @@ namespace SDK::Params
 {
 
 // Function WBP_RaceBefore_VoltageMaxInfo.WBP_RaceBefore_VoltageMaxInfo_C.ExecuteUbergraph_WBP_RaceBefore_VoltageMaxInfo
-// 0x0080 (0x0080 - 0x0000)
+// 0x0090 (0x0090 - 0x0000)
 struct WBP_RaceBefore_VoltageMaxInfo_C_ExecuteUbergraph_WBP_RaceBefore_VoltageMaxInfo final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0004(0x0038)(IsPlainOldData, NoDestructor)
-	float                                         K2Node_Event_InDeltaTime;                          // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetFestaChanceUpRatio_ReturnValue;        // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGameModeId                                   CallFunc_GetSelectedGameModeId_ReturnValue;        // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_55[0x3];                                       // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_GetFestaChanceUpRatioText_ReturnValue;    // 0x0058(0x0010)()
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_69[0x3];                                       // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x006C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetFestaChanceUpRatio_ReturnValue;        // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EGameModeId                                   CallFunc_GetSelectedGameModeId_ReturnValue;        // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_GetFestaChanceUpRatioText_ReturnValue;    // 0x0020(0x0010)()
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0034(0x0038)(IsPlainOldData, NoDestructor)
+	float                                         K2Node_Event_InDeltaTime;                          // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EDuelCompeChanceUpType                        CallFunc_GetDuelCompeChanceUpType_ReturnValue;     // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ELegendCompeChanceUpType                      CallFunc_GetLegendCompeChanceUpType_ReturnValue;   // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0072(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x0073(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ERankMachChanceUpType                         CallFunc_GetRankMatchChanceUpType_ReturnValue;     // 0x0074(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_2;        // 0x0075(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_76[0x2];                                       // 0x0076(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0078(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_2;              // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_RaceBefore_VoltageMaxInfo_C_ExecuteUbergraph_WBP_RaceBefore_VoltageMaxInfo;
+
+// Function WBP_RaceBefore_VoltageMaxInfo.WBP_RaceBefore_VoltageMaxInfo_C.SetupDuelCompeChanceUpText
+// 0x0048 (0x0048 - 0x0000)
+struct WBP_RaceBefore_VoltageMaxInfo_C_SetupDuelCompeChanceUpText final
+{
+public:
+	int32                                         CallFunc_GetDuelCompeChanceUpRatio_ReturnValue;    // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_GetDuelCompeChanceUpTypeText_ReturnValue; // 0x0008(0x0010)()
+	class FText                                   CallFunc_GetDuelCompeChanceUpRatioText_ReturnValue; // 0x0018(0x0010)()
+	int32                                         CallFunc_GetDuelCompeChanceUpRatio_ReturnValue_1;  // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetDuelCompeChanceUpOrder_ReturnValue;    // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetDuelCompeChanceUpRatio_ReturnValue_2;  // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_GetDuelCompeChanceDetailText_ReturnValue; // 0x0038(0x0010)()
+};
+DUMPER7_ASSERTS_WBP_RaceBefore_VoltageMaxInfo_C_SetupDuelCompeChanceUpText;
 
 // Function WBP_RaceBefore_VoltageMaxInfo.WBP_RaceBefore_VoltageMaxInfo_C.SetupLegendCompeChanupText
 // 0x0090 (0x0090 - 0x0000)
@@ -73,10 +99,11 @@ public:
 	int32                                         OrderValue;                                        // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FText                                   RatioValueText;                                    // 0x0018(0x0010)(Edit, BlueprintVisible)
 	class FText                                   ChanceUpTypeText;                                  // 0x0028(0x0010)(Edit, BlueprintVisible)
-	class FText                                   CallFunc_GetRankMatchChanceUpTypeText_ReturnValue; // 0x0038(0x0010)()
-	class FText                                   CallFunc_GetRankMatchChanceUpRatioText_ReturnValue; // 0x0048(0x0010)()
-	int32                                         CallFunc_GetRankMatchChanceUpOrder_ReturnValue;    // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_GetRankMatchChanceUpRatioText_ReturnValue; // 0x0038(0x0010)()
+	class FText                                   CallFunc_GetRankMatchChanceUpTypeText_ReturnValue; // 0x0048(0x0010)()
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetRankMatchChanceUpOrder_ReturnValue;    // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FText                                   CallFunc_GetRankMatchChanceDetailText_ReturnValue; // 0x0060(0x0010)()
 	int32                                         CallFunc_GetRankMatchChanceUpRatio_ReturnValue;    // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ERankMachChanceUpType                         CallFunc_GetRankMatchChanceUpType_ReturnValue;     // 0x0074(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

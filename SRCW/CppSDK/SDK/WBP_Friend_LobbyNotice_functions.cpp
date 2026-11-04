@@ -79,6 +79,20 @@ void UWBP_Friend_LobbyNotice_C::Finished_A30B153F4C34604DA75029AB1A775F07()
 }
 
 
+// Function WBP_Friend_LobbyNotice.WBP_Friend_LobbyNotice_C.FinishShowingNoticeEvent
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_Friend_LobbyNotice_C::FinishShowingNoticeEvent()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Friend_LobbyNotice_C", "FinishShowingNoticeEvent");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_Friend_LobbyNotice.WBP_Friend_LobbyNotice_C.OnAnimationInFinished
 // (BlueprintCallable, BlueprintEvent)
 
@@ -129,20 +143,6 @@ struct FEventReply UWBP_Friend_LobbyNotice_C::OnFocusReceived(const struct FGeom
 	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
-}
-
-
-// Function WBP_Friend_LobbyNotice.WBP_Friend_LobbyNotice_C.OnHoldInputEnd
-// (BlueprintEvent)
-
-void UWBP_Friend_LobbyNotice_C::OnHoldInputEnd()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_LobbyNotice_C", "OnHoldInputEnd");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -257,6 +257,20 @@ void UWBP_Friend_LobbyNotice_C::RegisterMenuInputReceiveObject()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("WBP_Friend_LobbyNotice_C", "RegisterMenuInputReceiveObject");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Friend_LobbyNotice.WBP_Friend_LobbyNotice_C.SequenceEvent__ENTRYPOINTWBP_Friend_LobbyNotice
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Friend_LobbyNotice_C::SequenceEvent__ENTRYPOINTWBP_Friend_LobbyNotice()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Friend_LobbyNotice_C", "SequenceEvent__ENTRYPOINTWBP_Friend_LobbyNotice");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

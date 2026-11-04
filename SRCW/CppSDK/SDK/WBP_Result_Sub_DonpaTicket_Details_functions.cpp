@@ -65,6 +65,41 @@ void UWBP_Result_Sub_DonpaTicket_Details_C::Finished_C97A90134C1BA541CDC1A689E8D
 }
 
 
+// Function WBP_Result_Sub_DonpaTicket_Details.WBP_Result_Sub_DonpaTicket_Details_C.IsChanceUpTicketType
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool*                                   IsChanceUpTicket                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Result_Sub_DonpaTicket_Details_C::IsChanceUpTicketType(bool* IsChanceUpTicket)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Result_Sub_DonpaTicket_Details_C", "IsChanceUpTicketType");
+
+	Params::WBP_Result_Sub_DonpaTicket_Details_C_IsChanceUpTicketType Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (IsChanceUpTicket != nullptr)
+		*IsChanceUpTicket = Parms.IsChanceUpTicket;
+}
+
+
+// Function WBP_Result_Sub_DonpaTicket_Details.WBP_Result_Sub_DonpaTicket_Details_C.OnAddPlayTicketInAnimeEvent
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_Result_Sub_DonpaTicket_Details_C::OnAddPlayTicketInAnimeEvent()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Result_Sub_DonpaTicket_Details_C", "OnAddPlayTicketInAnimeEvent");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_Result_Sub_DonpaTicket_Details.WBP_Result_Sub_DonpaTicket_Details_C.PlayRSRAnimation
 // (BlueprintCallable, BlueprintEvent)
 
@@ -119,6 +154,28 @@ void UWBP_Result_Sub_DonpaTicket_Details_C::SetDonpaTicketNum(int32 Num)
 }
 
 
+// Function WBP_Result_Sub_DonpaTicket_Details.WBP_Result_Sub_DonpaTicket_Details_C.SetDuelHonor
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ECommendationCategory                   InStar                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FText&                      InText                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UWBP_Result_Sub_DonpaTicket_Details_C::SetDuelHonor(ECommendationCategory InStar, const class FText& InText)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Result_Sub_DonpaTicket_Details_C", "SetDuelHonor");
+
+	Params::WBP_Result_Sub_DonpaTicket_Details_C_SetDuelHonor Parms{};
+
+	Parms.InStar = InStar;
+	Parms.InText = std::move(InText);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_Result_Sub_DonpaTicket_Details.WBP_Result_Sub_DonpaTicket_Details_C.SetHonor
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -136,6 +193,28 @@ void UWBP_Result_Sub_DonpaTicket_Details_C::SetHonor(ECommendationCategory Star,
 
 	Parms.Star = Star;
 	Parms.Text = std::move(Text);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Result_Sub_DonpaTicket_Details.WBP_Result_Sub_DonpaTicket_Details_C.SetOnlineRivalWinHonor
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ECommendationCategory                   InStar                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FText&                      InText                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UWBP_Result_Sub_DonpaTicket_Details_C::SetOnlineRivalWinHonor(ECommendationCategory InStar, const class FText& InText)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Result_Sub_DonpaTicket_Details_C", "SetOnlineRivalWinHonor");
+
+	Params::WBP_Result_Sub_DonpaTicket_Details_C_SetOnlineRivalWinHonor Parms{};
+
+	Parms.InStar = InStar;
+	Parms.InText = std::move(InText);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -232,20 +311,6 @@ void UWBP_Result_Sub_DonpaTicket_Details_C::SkipAnimationSub(int32 Index_0)
 	Parms.Index_0 = Index_0;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Result_Sub_DonpaTicket_Details.WBP_Result_Sub_DonpaTicket_Details_C.カスタムイベント
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_Result_Sub_DonpaTicket_Details_C::カスタムイベント()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_DonpaTicket_Details_C", "カスタムイベント");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

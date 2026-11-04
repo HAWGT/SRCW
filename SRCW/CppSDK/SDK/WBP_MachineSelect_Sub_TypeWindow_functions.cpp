@@ -79,6 +79,26 @@ void UWBP_MachineSelect_Sub_TypeWindow_C::BndEvt__WBP_MachineSelect_Sub_TypeWind
 }
 
 
+// Function WBP_MachineSelect_Sub_TypeWindow.WBP_MachineSelect_Sub_TypeWindow_C.BndEvt__WBP_MachineSelect_Sub_TypeWindow_MLC_Up_Button_K2Node_ComponentBoundEvent_3_OnUnionButtonEvent__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UUnionUIButtonBase*               Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_MachineSelect_Sub_TypeWindow_C::BndEvt__WBP_MachineSelect_Sub_TypeWindow_MLC_Up_Button_K2Node_ComponentBoundEvent_3_OnUnionButtonEvent__DelegateSignature(class UUnionUIButtonBase* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "BndEvt__WBP_MachineSelect_Sub_TypeWindow_MLC_Up_Button_K2Node_ComponentBoundEvent_3_OnUnionButtonEvent__DelegateSignature");
+
+	Params::WBP_MachineSelect_Sub_TypeWindow_C_BndEvt__WBP_MachineSelect_Sub_TypeWindow_MLC_Up_Button_K2Node_ComponentBoundEvent_3_OnUnionButtonEvent__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_MachineSelect_Sub_TypeWindow.WBP_MachineSelect_Sub_TypeWindow_C.BndEvt__WBP_MachineSelect_Sub_TypeWindow_MLC_Up_Button_K2Node_ComponentBoundEvent_7_OnTakePicture__DelegateSignature
 // (BlueprintEvent)
 

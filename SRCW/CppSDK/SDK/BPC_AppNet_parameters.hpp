@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UnionSystem_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
@@ -39,6 +39,16 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_AppNet_C_CheckInvitationNoticeDisplay;
+
+// Function BPC_AppNet.BPC_AppNet_C.CREATEDELEGATE_PROXYFUNCTION_0
+// 0x0098 (0x0098 - 0x0000)
+struct BPC_AppNet_C_CREATEDELEGATE_PROXYFUNCTION_0 final
+{
+public:
+	struct FLobbyInvitationNoticeInfo             LobbyInvitationNoticeInfo_0;                       // 0x0000(0x0090)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	class ULobbyJoinInfo*                         LobbyInfo;                                         // 0x0090(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_AppNet_C_CREATEDELEGATE_PROXYFUNCTION_0;
 
 // Function BPC_AppNet.BPC_AppNet_C.ExecuteUbergraph_BPC_AppNet
 // 0x0B70 (0x0B70 - 0x0000)
@@ -262,17 +272,17 @@ public:
 	class ULobbySubsystem*                        CallFunc_GetGameInstanceSubsystem_ReturnValue_14;  // 0x0A48(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_19;                   // 0x0A50(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_A51[0x7];                                      // 0x0A51(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FCommon_UserSearchData                 CallFunc_GetUserSearchDataByProductUserId_OutUserSearchData; // 0x0A58(0x00E0)()
-	bool                                          CallFunc_GetUserSearchDataByProductUserId_ReturnValue; // 0x0B38(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B39[0x7];                                      // 0x0B39(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FCommon_UserSearchData>         K2Node_MakeArray_Array_3;                          // 0x0B40(0x0010)(ConstParm, ReferenceParm)
-	bool                                          CallFunc_ShouldSendSessionInvitePlatform_ReturnValue; // 0x0B50(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_20;                   // 0x0B51(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_Successful;                     // 0x0B52(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_21;                   // 0x0B53(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B54[0x4];                                      // 0x0B54(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_SquadContext_C*                     CallFunc_GetSqueadContext_SquadContext;            // 0x0B58(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsJoining_ReturnValue;                    // 0x0B60(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FCommon_UserSearchData                 CallFunc_GetUserSearchDataByProductUserId_OutUserSearchData; // 0x0A58(0x00E8)()
+	bool                                          CallFunc_GetUserSearchDataByProductUserId_ReturnValue; // 0x0B40(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B41[0x7];                                      // 0x0B41(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FCommon_UserSearchData>         K2Node_MakeArray_Array_3;                          // 0x0B48(0x0010)(ConstParm, ReferenceParm)
+	bool                                          CallFunc_ShouldSendSessionInvitePlatform_ReturnValue; // 0x0B58(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_20;                   // 0x0B59(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_Successful;                     // 0x0B5A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_21;                   // 0x0B5B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B5C[0x4];                                      // 0x0B5C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_SquadContext_C*                     CallFunc_GetSqueadContext_SquadContext;            // 0x0B60(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsJoining_ReturnValue;                    // 0x0B68(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_AppNet_C_ExecuteUbergraph_BPC_AppNet;
 

@@ -57,36 +57,6 @@ void UWBP_CMN_PlayerDetail_Sub_Info_Machine_C::OnLoaded_63E3412942D2292B63AF1FBE
 }
 
 
-// Function WBP_CMN_PlayerDetail_Sub_Info_Machine.WBP_CMN_PlayerDetail_Sub_Info_Machine_C.Set Racer Param
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EDriverId                               InDriverId                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EMachineId                              InFrontPartsId                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EMachineId                              InRearPartsId                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EMachineId                              InTirePartsId                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TArray<EGadgetId>&                      InGadgetIds                                            (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UWBP_CMN_PlayerDetail_Sub_Info_Machine_C::Set_Racer_Param(EDriverId InDriverId, EMachineId InFrontPartsId, EMachineId InRearPartsId, EMachineId InTirePartsId, TArray<EGadgetId>& InGadgetIds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PlayerDetail_Sub_Info_Machine_C", "Set Racer Param");
-
-	Params::WBP_CMN_PlayerDetail_Sub_Info_Machine_C_Set_Racer_Param Parms{};
-
-	Parms.InDriverId = InDriverId;
-	Parms.InFrontPartsId = InFrontPartsId;
-	Parms.InRearPartsId = InRearPartsId;
-	Parms.InTirePartsId = InTirePartsId;
-	Parms.InGadgetIds = std::move(InGadgetIds);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	InGadgetIds = std::move(Parms.InGadgetIds);
-}
-
-
 // Function WBP_CMN_PlayerDetail_Sub_Info_Machine.WBP_CMN_PlayerDetail_Sub_Info_Machine_C.SetFrontPartsData
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:

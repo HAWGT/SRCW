@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "ST_GarageData_structs.hpp"
-#include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
-#include "UnionSystem_structs.hpp"
 #include "UnionRun_structs.hpp"
+#include "Engine_structs.hpp"
+#include "UnionSystem_structs.hpp"
 #include "EMachineCustomizeSequenceMode_structs.hpp"
 
 
@@ -256,61 +256,79 @@ public:
 DUMPER7_ASSERTS_BP_MachineCustomizeSequence_C_SetupMessageBar;
 
 // Function BP_MachineCustomizeSequence.BP_MachineCustomizeSequence_C.UpdateParamWindowByCustomizeData
-// 0x02A8 (0x02A8 - 0x0000)
+// 0x0320 (0x0320 - 0x0000)
 struct BP_MachineCustomizeSequence_C_UpdateParamWindowByCustomizeData final
 {
 public:
 	struct FUserMachineCustomizeData              InCurrentCustomizeData;                            // 0x0000(0x0078)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	struct FUserMachineCustomizeData              InCandCustomizeData;                               // 0x0078(0x0078)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	class UCharaMachineParamWindow*               ParamWindow;                                       // 0x00F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TArray<EGadgetId>                             TempGadgetIds;                                     // 0x00F8(0x0010)(Edit, BlueprintVisible)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x010C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_114[0x4];                                      // 0x0114(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGadgetPlateUIData                     CallFunc_GetSelectedGadgetPlateUIData_OutGadgetPlateUIData; // 0x0118(0x0028)()
-	struct FUserGadgetData                        CallFunc_Array_Get_Item;                           // 0x0140(0x0008)(NoDestructor)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0148(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x014C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14D[0x3];                                      // 0x014D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRacerParamData                        K2Node_MakeStruct_RacerParamData;                  // 0x0154(0x0050)(NoDestructor)
-	struct FRacerParamData                        K2Node_MakeStruct_RacerParamData_1;                // 0x01A4(0x0050)(NoDestructor)
-	uint8                                         Pad_1F4[0x4];                                      // 0x01F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<EGadgetId>                             K2Node_MakeArray_Array;                            // 0x01F8(0x0010)(ConstParm, ReferenceParm)
-	struct FRacerParamData                        CallFunc_GetParamData_OutParamData;                // 0x0208(0x0050)(NoDestructor)
-	struct FRacerParamData                        CallFunc_GetParamData_OutParamData_1;              // 0x0258(0x0050)(NoDestructor)
+	TArray<EGadgetId>                             TempSpGadgetIds;                                   // 0x00F0(0x0010)(Edit, BlueprintVisible)
+	struct FGadgetPlateUIData                     TempPlatePreset;                                   // 0x0100(0x0038)(Edit, BlueprintVisible)
+	class UCharaMachineParamWindow*               ParamWindow;                                       // 0x0138(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TArray<EGadgetId>                             TempGadgetIds;                                     // 0x0140(0x0010)(Edit, BlueprintVisible)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0154(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0158(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x015C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0160(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0164(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUserGadgetData                        CallFunc_Array_Get_Item;                           // 0x0168(0x0008)(NoDestructor)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0170(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0174(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_175[0x3];                                      // 0x0175(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0178(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUserGadgetData                        CallFunc_Array_Get_Item_1;                         // 0x017C(0x0008)(NoDestructor)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0184(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_189[0x7];                                      // 0x0189(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGadgetPlateUIData                     CallFunc_GetSelectedSavedGadgetPlatePreset_OutPlateUiData; // 0x0190(0x0038)()
+	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x01C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRacerParamData                        K2Node_MakeStruct_RacerParamData;                  // 0x01CC(0x0050)(NoDestructor)
+	struct FRacerParamData                        K2Node_MakeStruct_RacerParamData_1;                // 0x021C(0x0050)(NoDestructor)
+	uint8                                         Pad_26C[0x4];                                      // 0x026C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<EGadgetId>                             K2Node_MakeArray_Array;                            // 0x0270(0x0010)(ConstParm, ReferenceParm)
+	struct FRacerParamData                        CallFunc_GetParamData_OutParamData;                // 0x0280(0x0050)(NoDestructor)
+	struct FRacerParamData                        CallFunc_GetParamData_OutParamData_1;              // 0x02D0(0x0050)(NoDestructor)
 };
 DUMPER7_ASSERTS_BP_MachineCustomizeSequence_C_UpdateParamWindowByCustomizeData;
 
 // Function BP_MachineCustomizeSequence.BP_MachineCustomizeSequence_C.UpdateParamWindowBySelectedData
-// 0x0308 (0x0308 - 0x0000)
+// 0x0348 (0x0348 - 0x0000)
 struct BP_MachineCustomizeSequence_C_UpdateParamWindowBySelectedData final
 {
 public:
-	TArray<EGadgetId>                             TempGadgetData;                                    // 0x0000(0x0010)(Edit, BlueprintVisible)
-	struct FRacerParamData                        TempParamData;                                     // 0x0010(0x0050)(Edit, BlueprintVisible, NoDestructor)
-	bool                                          Temp_bool_Variable;                                // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_61[0x3];                                       // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGadgetPlateUIData                     CallFunc_GetSelectedGadgetPlateUIData_OutGadgetPlateUIData; // 0x0070(0x0028)()
-	struct FUserGadgetData                        CallFunc_Array_Get_Item;                           // 0x0098(0x0008)(NoDestructor)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A5[0x3];                                       // 0x00A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRacerParamData                        K2Node_MakeStruct_RacerParamData;                  // 0x00AC(0x0050)(NoDestructor)
-	uint8                                         Pad_FC[0x4];                                       // 0x00FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUserMachineCustomizeData              CallFunc_GetSelectedMachineCustomizeData_ReturnValue; // 0x0100(0x0078)()
-	class FText                                   CallFunc_Conv_BoolToText_ReturnValue;              // 0x0178(0x0010)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0188(0x0048)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x01D0(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x01E0(0x0010)()
-	struct FUserMachineCustomizeData              CallFunc_GetSelectedMachineCustomizeData_ReturnValue_1; // 0x01F0(0x0078)()
-	struct FRacerParamData                        CallFunc_GetParamData_OutParamData;                // 0x0268(0x0050)(NoDestructor)
-	struct FRacerParamData                        K2Node_Select_Default;                             // 0x02B8(0x0050)(ConstParm, NoDestructor)
+	TArray<EGadgetId>                             TempSpGadgetData;                                  // 0x0000(0x0010)(Edit, BlueprintVisible)
+	TArray<EGadgetId>                             TempGadgetData;                                    // 0x0010(0x0010)(Edit, BlueprintVisible)
+	struct FRacerParamData                        TempParamData;                                     // 0x0020(0x0050)(Edit, BlueprintVisible, NoDestructor)
+	bool                                          Temp_bool_Variable;                                // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_71[0x3];                                       // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGadgetPlateUIData                     CallFunc_GetSelectedSavedGadgetPlatePreset_OutPlateUiData; // 0x0090(0x0038)()
+	struct FUserGadgetData                        CallFunc_Array_Get_Item;                           // 0x00C8(0x0008)(NoDestructor)
+	struct FUserGadgetData                        CallFunc_Array_Get_Item_1;                         // 0x00D0(0x0008)(NoDestructor)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x00DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x00E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_EA[0x2];                                       // 0x00EA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRacerParamData                        K2Node_MakeStruct_RacerParamData;                  // 0x00EC(0x0050)(NoDestructor)
+	uint8                                         Pad_13C[0x4];                                      // 0x013C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUserMachineCustomizeData              CallFunc_GetSelectedMachineCustomizeData_ReturnValue; // 0x0140(0x0078)()
+	class FText                                   CallFunc_Conv_BoolToText_ReturnValue;              // 0x01B8(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x01C8(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0210(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0220(0x0010)()
+	struct FUserMachineCustomizeData              CallFunc_GetSelectedMachineCustomizeData_ReturnValue_1; // 0x0230(0x0078)()
+	struct FRacerParamData                        CallFunc_GetParamData_OutParamData;                // 0x02A8(0x0050)(NoDestructor)
+	struct FRacerParamData                        K2Node_Select_Default;                             // 0x02F8(0x0050)(ConstParm, NoDestructor)
 };
 DUMPER7_ASSERTS_BP_MachineCustomizeSequence_C_UpdateParamWindowBySelectedData;
 
@@ -360,7 +378,7 @@ public:
 DUMPER7_ASSERTS_BP_MachineCustomizeSequence_C_GetMachineCustomTop;
 
 // Function BP_MachineCustomizeSequence.BP_MachineCustomizeSequence_C.GetParamData
-// 0x00C0 (0x00C0 - 0x0000)
+// 0x00C8 (0x00C8 - 0x0000)
 struct BP_MachineCustomizeSequence_C_GetParamData final
 {
 public:
@@ -370,9 +388,9 @@ public:
 	EMachineId                                    InTirePartsId;                                     // 0x0003(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<EGadgetId>                             InGadgetIds;                                       // 0x0008(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	struct FRacerParamData                        OutParamData;                                      // 0x0018(0x0050)(Parm, OutParm, NoDestructor)
-	class UMasterDataManageSubsystem*             CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FRacerParamData                        CallFunc_GetParamData_OutParamData;                // 0x0070(0x0050)(NoDestructor)
+	TArray<EGadgetId>                             InSpGadgetIds;                                     // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FRacerParamData                        OutParamData;                                      // 0x0028(0x0050)(Parm, OutParm, NoDestructor)
+	struct FRacerParamData                        CallFunc_GetParamData_OutParamData;                // 0x0078(0x0050)(NoDestructor)
 };
 DUMPER7_ASSERTS_BP_MachineCustomizeSequence_C_GetParamData;
 

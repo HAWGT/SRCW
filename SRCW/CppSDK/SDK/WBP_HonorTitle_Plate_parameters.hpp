@@ -18,100 +18,38 @@ namespace SDK::Params
 {
 
 // Function WBP_HonorTitle_Plate.WBP_HonorTitle_Plate_C.ExecuteUbergraph_WBP_HonorTitle_Plate
-// 0x0238 (0x0238 - 0x0000)
+// 0x001C (0x001C - 0x0000)
 struct WBP_HonorTitle_Plate_C_ExecuteUbergraph_WBP_HonorTitle_Plate final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHonorTitleListData                    K2Node_Event_SetupData;                            // 0x0008(0x0068)(ConstParm)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_71[0x3];                                       // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(ESlateVisibility InVisibility)> K2Node_CreateDelegate_OutputDelegate;             // 0x0074(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_CustomEvent_InVisibility;                   // 0x0084(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x0085(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue_1;          // 0x0086(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0087(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TSoftObjectPtr<class UObject>                 K2Node_CustomEvent_PlateImageTexture2D_2;          // 0x0088(0x0028)(HasGetValueTypeHash)
-	EHonorTitleFontColor                          K2Node_CustomEvent_FontColor_2;                    // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_CustomEvent_HonorTitleVB_3;                 // 0x00B8(0x0010)()
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CC[0x4];                                       // 0x00CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class UObject>                 K2Node_CustomEvent_PlateImageTexture2D_1;          // 0x00D0(0x0028)(HasGetValueTypeHash)
-	EHonorTitleFontColor                          K2Node_CustomEvent_FontColor_1;                    // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F9[0x7];                                       // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_CustomEvent_HonorTitleVB_2;                 // 0x0100(0x0010)()
-	int32                                         K2Node_CustomEvent_RoundCount;                     // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_114[0x4];                                      // 0x0114(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0118(0x0010)()
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_1;             // 0x0128(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EHonorTitleFontColor                          Temp_byte_Variable;                                // 0x012C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_12D[0x3];                                      // 0x012D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable;                                 // 0x0130(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_134[0x4];                                      // 0x0134(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUnionFontScroll*                       K2Node_Select_Default;                             // 0x0138(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	EHonorTitleFontColor                          Temp_byte_Variable_1;                              // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0141(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_142[0x6];                                      // 0x0142(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x0148(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                Temp_object_Variable;                              // 0x0150(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUnionFontScroll*                       K2Node_Select_Default_1;                           // 0x0158(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	class UTexture2D*                             K2Node_DynamicCast_As_____2D;                      // 0x0160(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_169[0x7];                                      // 0x0169(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                K2Node_CustomEvent_Loaded;                         // 0x0170(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class UObject* Loaded)>        K2Node_CreateDelegate_OutputDelegate_1;            // 0x0178(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_189[0x7];                                      // 0x0189(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class UObject>                 K2Node_CustomEvent_PlateImageTexture2D;            // 0x0190(0x0028)(HasGetValueTypeHash)
-	EHonorTitleFontColor                          K2Node_CustomEvent_FontColor;                      // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1B9[0x7];                                      // 0x01B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_CustomEvent_HonorTitleVB_1;                 // 0x01C0(0x0010)()
-	EHonorTitleDisplayControlCategory             K2Node_CustomEvent_DisplayControlCategory;         // 0x01D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D1[0x3];                                      // 0x01D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         K2Node_CustomEvent_DisplayControlSubParam_1;       // 0x01D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class UObject* Loaded)>        K2Node_CreateDelegate_OutputDelegate_2;            // 0x01D8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x01E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1E9[0x7];                                      // 0x01E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_CustomEvent_HonorTitleVB;                   // 0x01F0(0x0010)()
-	int32                                         K2Node_CustomEvent_DisplayControlSubParam;         // 0x0200(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_204[0x4];                                      // 0x0204(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                Temp_object_Variable_1;                            // 0x0208(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UTexture2D*                             K2Node_DynamicCast_As_____2D_1;                    // 0x0210(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0218(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_219[0x7];                                      // 0x0219(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUnionFontScroll*                       K2Node_Select_Default_2;                           // 0x0220(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	class UObject*                                K2Node_CustomEvent_Loaded_1;                       // 0x0228(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0230(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(ESlateVisibility InVisibility)> K2Node_CreateDelegate_OutputDelegate;             // 0x0008(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_CustomEvent_InVisibility;                   // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue_1;          // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x001B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_HonorTitle_Plate_C_ExecuteUbergraph_WBP_HonorTitle_Plate;
 
-// Function WBP_HonorTitle_Plate.WBP_HonorTitle_Plate_C.OnLoaded_BB0FBEFC4AB0250706392F9C5C9D14C8
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_HonorTitle_Plate_C_OnLoaded_BB0FBEFC4AB0250706392F9C5C9D14C8 final
+// Function WBP_HonorTitle_Plate.WBP_HonorTitle_Plate_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_HonorTitle_Plate_C_PreConstruct final
 {
 public:
-	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WBP_HonorTitle_Plate_C_OnLoaded_BB0FBEFC4AB0250706392F9C5C9D14C8;
-
-// Function WBP_HonorTitle_Plate.WBP_HonorTitle_Plate_C.OnLoaded_EEF55983447D6E2AAAF1AB9849C4A735
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_HonorTitle_Plate_C_OnLoaded_EEF55983447D6E2AAAF1AB9849C4A735 final
-{
-public:
-	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_HonorTitle_Plate_C_OnLoaded_EEF55983447D6E2AAAF1AB9849C4A735;
+DUMPER7_ASSERTS_WBP_HonorTitle_Plate_C_PreConstruct;
 
 // Function WBP_HonorTitle_Plate.WBP_HonorTitle_Plate_C.SetHonorTitle
-// 0x00A0 (0x00A0 - 0x0000)
+// 0x00E0 (0x00E0 - 0x0000)
 struct WBP_HonorTitle_Plate_C_SetHonorTitle final
 {
 public:
-	int32                                         InHonorId;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         SetHonorTitleId;                                   // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         InHonorTitleId;                                    // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_HonorTitleId;                                    // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetIsHonorTitleReleased_ReturnValue;      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMasterDataManageSubsystem*             CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -122,69 +60,10 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHonorTitleListData                    CallFunc_Map_Find_Value;                           // 0x0030(0x0068)()
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHonorTitleListData                    CallFunc_Map_Find_Value;                           // 0x0030(0x00A8)()
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_HonorTitle_Plate_C_SetHonorTitle;
-
-// Function WBP_HonorTitle_Plate.WBP_HonorTitle_Plate_C.SetupLegendCompeHonorTitle
-// 0x0048 (0x0048 - 0x0000)
-struct WBP_HonorTitle_Plate_C_SetupLegendCompeHonorTitle final
-{
-public:
-	TSoftObjectPtr<class UObject>                 PlateImageTexture2D;                               // 0x0000(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-	EHonorTitleFontColor                          FontColor;                                         // 0x0028(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   HonorTitleVB;                                      // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-	int32                                         RoundCount;                                        // 0x0040(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_HonorTitle_Plate_C_SetupLegendCompeHonorTitle;
-
-// Function WBP_HonorTitle_Plate.WBP_HonorTitle_Plate_C.SetupNormalHonorTitlePlate
-// 0x0040 (0x0040 - 0x0000)
-struct WBP_HonorTitle_Plate_C_SetupNormalHonorTitlePlate final
-{
-public:
-	TSoftObjectPtr<class UObject>                 PlateImageTexture2D;                               // 0x0000(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-	EHonorTitleFontColor                          FontColor;                                         // 0x0028(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   HonorTitleVB;                                      // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-};
-DUMPER7_ASSERTS_WBP_HonorTitle_Plate_C_SetupNormalHonorTitlePlate;
-
-// Function WBP_HonorTitle_Plate.WBP_HonorTitle_Plate_C.SetupOtherTypeHonorTitle
-// 0x0048 (0x0048 - 0x0000)
-struct WBP_HonorTitle_Plate_C_SetupOtherTypeHonorTitle final
-{
-public:
-	TSoftObjectPtr<class UObject>                 PlateImageTexture2D;                               // 0x0000(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-	EHonorTitleFontColor                          FontColor;                                         // 0x0028(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   HonorTitleVB;                                      // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-	EHonorTitleDisplayControlCategory             DisplayControlCategory;                            // 0x0040(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         DisplayControlSubParam;                            // 0x0044(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_HonorTitle_Plate_C_SetupOtherTypeHonorTitle;
-
-// Function WBP_HonorTitle_Plate.WBP_HonorTitle_Plate_C.SetupTitlePlate
-// 0x0068 (0x0068 - 0x0000)
-struct WBP_HonorTitle_Plate_C_SetupTitlePlate final
-{
-public:
-	struct FHonorTitleListData                    SetUpData;                                         // 0x0000(0x0068)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm)
-};
-DUMPER7_ASSERTS_WBP_HonorTitle_Plate_C_SetupTitlePlate;
-
-// Function WBP_HonorTitle_Plate.WBP_HonorTitle_Plate_C.SetupTournamentHonorTitle
-// 0x0018 (0x0018 - 0x0000)
-struct WBP_HonorTitle_Plate_C_SetupTournamentHonorTitle final
-{
-public:
-	class FText                                   HonorTitleVB;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-	int32                                         DisplayControlSubParam;                            // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_HonorTitle_Plate_C_SetupTournamentHonorTitle;
 
 // Function WBP_HonorTitle_Plate.WBP_HonorTitle_Plate_C.UpdateWhenVisbilityChanged
 // 0x0001 (0x0001 - 0x0000)

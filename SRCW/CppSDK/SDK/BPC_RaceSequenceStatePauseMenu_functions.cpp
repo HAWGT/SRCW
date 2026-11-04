@@ -17,17 +17,45 @@
 namespace SDK
 {
 
-// Function BPC_RaceSequenceStatePauseMenu.BPC_RaceSequenceStatePauseMenu_C.カスタムイベント
+// Function BPC_RaceSequenceStatePauseMenu.BPC_RaceSequenceStatePauseMenu_C.CreatePauseMenu
 // (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    IsCreate                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UWBP_PauseMenu_C*                 PauseMenu                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_RaceSequenceStatePauseMenu_C::カスタムイベント()
+void UBPC_RaceSequenceStatePauseMenu_C::CreatePauseMenu(bool IsCreate, class UWBP_PauseMenu_C* PauseMenu)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStatePauseMenu_C", "カスタムイベント");
+		Func = Class->GetFunction("BPC_RaceSequenceStatePauseMenu_C", "CreatePauseMenu");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BPC_RaceSequenceStatePauseMenu_C_CreatePauseMenu Parms{};
+
+	Parms.IsCreate = IsCreate;
+	Parms.PauseMenu = PauseMenu;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_RaceSequenceStatePauseMenu.BPC_RaceSequenceStatePauseMenu_C.ExecuteUbergraph_BPC_RaceSequenceStatePauseMenu
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_RaceSequenceStatePauseMenu_C::ExecuteUbergraph_BPC_RaceSequenceStatePauseMenu(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_RaceSequenceStatePauseMenu_C", "ExecuteUbergraph_BPC_RaceSequenceStatePauseMenu");
+
+	Params::BPC_RaceSequenceStatePauseMenu_C_ExecuteUbergraph_BPC_RaceSequenceStatePauseMenu Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -73,45 +101,17 @@ void UBPC_RaceSequenceStatePauseMenu_C::ReceiveBeginPlay()
 }
 
 
-// Function BPC_RaceSequenceStatePauseMenu.BPC_RaceSequenceStatePauseMenu_C.CreatePauseMenu
+// Function BPC_RaceSequenceStatePauseMenu.BPC_RaceSequenceStatePauseMenu_C.カスタムイベント
 // (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    IsCreate                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UWBP_PauseMenu_C*                 PauseMenu                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_RaceSequenceStatePauseMenu_C::CreatePauseMenu(bool IsCreate, class UWBP_PauseMenu_C* PauseMenu)
+void UBPC_RaceSequenceStatePauseMenu_C::カスタムイベント()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStatePauseMenu_C", "CreatePauseMenu");
+		Func = Class->GetFunction("BPC_RaceSequenceStatePauseMenu_C", "カスタムイベント");
 
-	Params::BPC_RaceSequenceStatePauseMenu_C_CreatePauseMenu Parms{};
-
-	Parms.IsCreate = IsCreate;
-	Parms.PauseMenu = PauseMenu;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_RaceSequenceStatePauseMenu.BPC_RaceSequenceStatePauseMenu_C.ExecuteUbergraph_BPC_RaceSequenceStatePauseMenu
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_RaceSequenceStatePauseMenu_C::ExecuteUbergraph_BPC_RaceSequenceStatePauseMenu(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStatePauseMenu_C", "ExecuteUbergraph_BPC_RaceSequenceStatePauseMenu");
-
-	Params::BPC_RaceSequenceStatePauseMenu_C_ExecuteUbergraph_BPC_RaceSequenceStatePauseMenu Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

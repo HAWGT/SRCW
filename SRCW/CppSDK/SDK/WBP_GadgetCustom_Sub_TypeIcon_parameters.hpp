@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "SlateCore_structs.hpp"
+#include "UNION_structs.hpp"
 #include "Engine_structs.hpp"
 #include "UnionSystem_structs.hpp"
-#include "UNION_structs.hpp"
 #include "UMG_structs.hpp"
-#include "SlateCore_structs.hpp"
 
 
 namespace SDK::Params
@@ -102,15 +102,16 @@ public:
 DUMPER7_ASSERTS_WBP_GadgetCustom_Sub_TypeIcon_C_SetupAsLocked;
 
 // Function WBP_GadgetCustom_Sub_TypeIcon.WBP_GadgetCustom_Sub_TypeIcon_C.SetupAsUnpurchased
-// 0x00D0 (0x00D0 - 0x0000)
+// 0x01B0 (0x01B0 - 0x0000)
 struct WBP_GadgetCustom_Sub_TypeIcon_C_SetupAsUnpurchased final
 {
 public:
 	EGadgetId                                     InGadgetId;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bCanPurchase;                                      // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGadgetData                            CallFunc_GetGadgetData_OutGadgetData;              // 0x0008(0x00C0)()
-	bool                                          CallFunc_GetGadgetData_ReturnValue;                // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGadgetData                            TempGadgetData;                                    // 0x0008(0x00D0)(Edit, BlueprintVisible)
+	struct FGadgetData                            CallFunc_GetGadgetData_OutGadgetId;                // 0x00D8(0x00D0)()
+	bool                                          CallFunc_GetGadgetData_ReturnValue;                // 0x01A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_GadgetCustom_Sub_TypeIcon_C_SetupAsUnpurchased;
 

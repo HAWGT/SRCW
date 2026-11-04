@@ -10,9 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
-#include "UNION_structs.hpp"
+#include "UnionSystem_structs.hpp"
 #include "SlateCore_structs.hpp"
 
 
@@ -94,7 +93,7 @@ public:
 DUMPER7_ASSERTS_WBP_EndMenu_GudgetLv_Window_C_ResetGadgetRankGauge;
 
 // Function WBP_EndMenu_GudgetLv_Window.WBP_EndMenu_GudgetLv_Window_C.Set Gadget Plate Empty from Plate Id
-// 0x0028 (0x0028 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct WBP_EndMenu_GudgetLv_Window_C_Set_Gadget_Plate_Empty_from_Plate_Id final
 {
 public:
@@ -102,15 +101,17 @@ public:
 	bool                                          InRunkUp;                                          // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          InLevelUp;                                         // 0x0002(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EGadgetPlateId                                TempGadgetId;                                      // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0008(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0018(0x0010)()
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0020(0x0010)()
+	class UGadgetCustomTab*                       CallFunc_GetGadgetCustomTabRef_ReturnValue;        // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_EndMenu_GudgetLv_Window_C_Set_Gadget_Plate_Empty_from_Plate_Id;
 
 // Function WBP_EndMenu_GudgetLv_Window.WBP_EndMenu_GudgetLv_Window_C.Set Gadget Plate Empty from Race Count
-// 0x0030 (0x0030 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct WBP_EndMenu_GudgetLv_Window_C_Set_Gadget_Plate_Empty_from_Race_Count final
 {
 public:
@@ -118,11 +119,12 @@ public:
 	bool                                          InRunkUp;                                          // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          InLevelUp;                                         // 0x0005(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EGadgetPlateId                                TempGadgetId;                                      // 0x0006(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGadgetPlateId                                CallFunc_GetGadgetPlateId_ReturnValue;             // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EGadgetPlateId                                CallFunc_GetGadgetPlateIdFromTotalRaceCount_ReturnValue; // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0010(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0020(0x0010)()
+	class UGadgetCustomTab*                       CallFunc_GetGadgetCustomTabRef_ReturnValue;        // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0018(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0028(0x0010)()
 };
 DUMPER7_ASSERTS_WBP_EndMenu_GudgetLv_Window_C_Set_Gadget_Plate_Empty_from_Race_Count;
 

@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
 #include "UnionSystem_structs.hpp"
 #include "UnionSystem_classes.hpp"
 #include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
@@ -34,6 +34,7 @@ public:
 
 public:
 	void Construct();
+	void Destruct();
 	void ExecuteUbergraph_WBP_System_AutoSave(int32 EntryPoint);
 	void OnInAnimFinished();
 	void OnOutAnimFinished();

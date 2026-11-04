@@ -10,23 +10,23 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_NpcStaticActor.BP_NpcStaticActor_C
-// 0x0018 (0x0AF8 - 0x0AE0)
+// 0x0018 (0x0B00 - 0x0AE8)
 class ABP_NpcStaticActor_C final : public ASimpleNPCStaticActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AE0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	float                                         Timeline_Damage_Spin_DamegeSpin_99E1231D46B8A2069479F4B29E10DF71; // 0x0AE8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            Timeline_Damage_Spin__Direction_99E1231D46B8A2069479F4B29E10DF71; // 0x0AEC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AED[0x3];                                      // 0x0AED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     Timeline_Damage_Spin;                              // 0x0AF0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AE8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	float                                         Timeline_Damage_Spin_DamegeSpin_99E1231D46B8A2069479F4B29E10DF71; // 0x0AF0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            Timeline_Damage_Spin__Direction_99E1231D46B8A2069479F4B29E10DF71; // 0x0AF4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_AF5[0x3];                                      // 0x0AF5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     Timeline_Damage_Spin;                              // 0x0AF8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void DamageSpinStart(float Direction);

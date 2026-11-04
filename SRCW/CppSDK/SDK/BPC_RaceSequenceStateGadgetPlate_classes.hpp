@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
 #include "UnionUI_structs.hpp"
 
 
@@ -21,13 +21,14 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BPC_RaceSequenceStateGadgetPlate.BPC_RaceSequenceStateGadgetPlate_C
-// 0x0018 (0x0128 - 0x0110)
+// 0x0050 (0x0160 - 0x0110)
 class UBPC_RaceSequenceStateGadgetPlate_C final : public URaceSequenceStateGadgetPlate
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0110(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class ABP_RaceGadgetPlateSequence_C*          GadgetPlateSequence;                               // 0x0118(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class UWBP_EndMenu_GudgetLv_Window_C*         ResultGadgetPlateWidget;                           // 0x0120(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FGadgetPlateData                       TempGadgetPlateData;                               // 0x0128(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_BPC_RaceSequenceStateGadgetPlate(int32 EntryPoint);

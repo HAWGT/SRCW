@@ -17,15 +17,15 @@
 namespace SDK
 {
 
-// Function BPC_MenuStateTopMenu.BPC_MenuStateTopMenu_C.SetupRacerConfig
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BPC_MenuStateTopMenu.BPC_MenuStateTopMenu_C.ClearRewardDisplayRequest
+// (BlueprintCallable, BlueprintEvent)
 
-void UBPC_MenuStateTopMenu_C::SetupRacerConfig()
+void UBPC_MenuStateTopMenu_C::ClearRewardDisplayRequest()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "SetupRacerConfig");
+		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "ClearRewardDisplayRequest");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -93,72 +93,6 @@ void UBPC_MenuStateTopMenu_C::CreateRewardGetDisplay()
 }
 
 
-// Function BPC_MenuStateTopMenu.BPC_MenuStateTopMenu_C.OnRewardDisplayEnd_Impl
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_MenuStateTopMenu_C::OnRewardDisplayEnd_Impl()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "OnRewardDisplayEnd_Impl");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_MenuStateTopMenu.BPC_MenuStateTopMenu_C.SetRewardDisplayParam
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_MenuStateTopMenu_C::SetRewardDisplayParam()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "SetRewardDisplayParam");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_MenuStateTopMenu.BPC_MenuStateTopMenu_C.ClearRewardDisplayRequest
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_MenuStateTopMenu_C::ClearRewardDisplayRequest()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "ClearRewardDisplayRequest");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_MenuStateTopMenu.BPC_MenuStateTopMenu_C.OnUISceneDecisionEvent_Impl
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UUnionUIButtonBase*               Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// int32                                   PanelIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   ButtonIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_MenuStateTopMenu_C::OnUISceneDecisionEvent_Impl(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "OnUISceneDecisionEvent_Impl");
-
-	Params::BPC_MenuStateTopMenu_C_OnUISceneDecisionEvent_Impl Parms{};
-
-	Parms.Button = Button;
-	Parms.PanelIndex = PanelIndex;
-	Parms.ButtonIndex = ButtonIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BPC_MenuStateTopMenu.BPC_MenuStateTopMenu_C.CreateRewardGetDisplayConfirmWindow
 // (BlueprintCallable, BlueprintEvent)
 
@@ -168,40 +102,6 @@ void UBPC_MenuStateTopMenu_C::CreateRewardGetDisplayConfirmWindow()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "CreateRewardGetDisplayConfirmWindow");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_MenuStateTopMenu.BPC_MenuStateTopMenu_C.OnRewardDisplayEndSaveComplete
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// ESaveDataStatus                         Status                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_MenuStateTopMenu_C::OnRewardDisplayEndSaveComplete(ESaveDataStatus Status)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "OnRewardDisplayEndSaveComplete");
-
-	Params::BPC_MenuStateTopMenu_C_OnRewardDisplayEndSaveComplete Parms{};
-
-	Parms.Status = Status;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_MenuStateTopMenu.BPC_MenuStateTopMenu_C.StartRewardGetDisplay
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_MenuStateTopMenu_C::StartRewardGetDisplay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "StartRewardGetDisplay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -221,37 +121,71 @@ void UBPC_MenuStateTopMenu_C::EndRewardGetDisplay()
 }
 
 
-// Function BPC_MenuStateTopMenu.BPC_MenuStateTopMenu_C.OnInitState
-// (Event, Public, BlueprintEvent)
+// Function BPC_MenuStateTopMenu.BPC_MenuStateTopMenu_C.EventFinishedFade
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EUnionUIFadeDirection                   FadeDirection                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_MenuStateTopMenu_C::OnInitState()
+void UBPC_MenuStateTopMenu_C::EventFinishedFade(EUnionUIFadeDirection FadeDirection)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "OnInitState");
+		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "EventFinishedFade");
+
+	Params::BPC_MenuStateTopMenu_C_EventFinishedFade Parms{};
+
+	Parms.FadeDirection = FadeDirection;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_MenuStateTopMenu.BPC_MenuStateTopMenu_C.ExecuteUbergraph_BPC_MenuStateTopMenu
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_MenuStateTopMenu_C::ExecuteUbergraph_BPC_MenuStateTopMenu(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "ExecuteUbergraph_BPC_MenuStateTopMenu");
+
+	Params::BPC_MenuStateTopMenu_C_ExecuteUbergraph_BPC_MenuStateTopMenu Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_MenuStateTopMenu.BPC_MenuStateTopMenu_C.NgCreatePopupWindow
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_MenuStateTopMenu_C::NgCreatePopupWindow()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "NgCreatePopupWindow");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BPC_MenuStateTopMenu.BPC_MenuStateTopMenu_C.OnUpdateState
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BPC_MenuStateTopMenu.BPC_MenuStateTopMenu_C.OnBackEvent
+// (BlueprintCallable, BlueprintEvent)
 
-void UBPC_MenuStateTopMenu_C::OnUpdateState(float InDeltaTime)
+void UBPC_MenuStateTopMenu_C::OnBackEvent()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "OnUpdateState");
+		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "OnBackEvent");
 
-	Params::BPC_MenuStateTopMenu_C_OnUpdateState Parms{};
-
-	Parms.InDeltaTime = InDeltaTime;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -264,6 +198,42 @@ void UBPC_MenuStateTopMenu_C::OnExitState()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "OnExitState");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_MenuStateTopMenu.BPC_MenuStateTopMenu_C.OnFinishedTopMenuEvent
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ETopMenuPlayMode                        TopMenuPlayMode                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ETopMenuGameMode                        TopMenuGameMode                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_MenuStateTopMenu_C::OnFinishedTopMenuEvent(ETopMenuPlayMode TopMenuPlayMode, ETopMenuGameMode TopMenuGameMode)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "OnFinishedTopMenuEvent");
+
+	Params::BPC_MenuStateTopMenu_C_OnFinishedTopMenuEvent Parms{};
+
+	Parms.TopMenuPlayMode = TopMenuPlayMode;
+	Parms.TopMenuGameMode = TopMenuGameMode;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_MenuStateTopMenu.BPC_MenuStateTopMenu_C.OnInitState
+// (Event, Public, BlueprintEvent)
+
+void UBPC_MenuStateTopMenu_C::OnInitState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "OnInitState");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -293,93 +263,123 @@ void UBPC_MenuStateTopMenu_C::OnPopupOK(class UUnionUIButtonBase* Button, int32 
 }
 
 
-// Function BPC_MenuStateTopMenu.BPC_MenuStateTopMenu_C.NgCreatePopupWindow
+// Function BPC_MenuStateTopMenu.BPC_MenuStateTopMenu_C.OnRewardDisplayEnd_Impl
 // (BlueprintCallable, BlueprintEvent)
 
-void UBPC_MenuStateTopMenu_C::NgCreatePopupWindow()
+void UBPC_MenuStateTopMenu_C::OnRewardDisplayEnd_Impl()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "NgCreatePopupWindow");
+		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "OnRewardDisplayEnd_Impl");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BPC_MenuStateTopMenu.BPC_MenuStateTopMenu_C.EventFinishedFade
+// Function BPC_MenuStateTopMenu.BPC_MenuStateTopMenu_C.OnRewardDisplayEndSaveComplete
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EUnionUIFadeDirection                   FadeDirection                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ESaveDataStatus                         Status                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_MenuStateTopMenu_C::EventFinishedFade(EUnionUIFadeDirection FadeDirection)
+void UBPC_MenuStateTopMenu_C::OnRewardDisplayEndSaveComplete(ESaveDataStatus Status)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "EventFinishedFade");
+		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "OnRewardDisplayEndSaveComplete");
 
-	Params::BPC_MenuStateTopMenu_C_EventFinishedFade Parms{};
+	Params::BPC_MenuStateTopMenu_C_OnRewardDisplayEndSaveComplete Parms{};
 
-	Parms.FadeDirection = FadeDirection;
+	Parms.Status = Status;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BPC_MenuStateTopMenu.BPC_MenuStateTopMenu_C.OnFinishedTopMenuEvent
+// Function BPC_MenuStateTopMenu.BPC_MenuStateTopMenu_C.OnUISceneDecisionEvent_Impl
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// ETopMenuPlayMode                        TopMenuPlayMode                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// ETopMenuGameMode                        TopMenuGameMode                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UUnionUIButtonBase*               Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// int32                                   PanelIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   ButtonIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_MenuStateTopMenu_C::OnFinishedTopMenuEvent(ETopMenuPlayMode TopMenuPlayMode, ETopMenuGameMode TopMenuGameMode)
+void UBPC_MenuStateTopMenu_C::OnUISceneDecisionEvent_Impl(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "OnFinishedTopMenuEvent");
+		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "OnUISceneDecisionEvent_Impl");
 
-	Params::BPC_MenuStateTopMenu_C_OnFinishedTopMenuEvent Parms{};
+	Params::BPC_MenuStateTopMenu_C_OnUISceneDecisionEvent_Impl Parms{};
 
-	Parms.TopMenuPlayMode = TopMenuPlayMode;
-	Parms.TopMenuGameMode = TopMenuGameMode;
+	Parms.Button = Button;
+	Parms.PanelIndex = PanelIndex;
+	Parms.ButtonIndex = ButtonIndex;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BPC_MenuStateTopMenu.BPC_MenuStateTopMenu_C.OnBackEvent
-// (BlueprintCallable, BlueprintEvent)
+// Function BPC_MenuStateTopMenu.BPC_MenuStateTopMenu_C.OnUpdateState
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_MenuStateTopMenu_C::OnBackEvent()
+void UBPC_MenuStateTopMenu_C::OnUpdateState(float InDeltaTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "OnBackEvent");
+		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "OnUpdateState");
+
+	Params::BPC_MenuStateTopMenu_C_OnUpdateState Parms{};
+
+	Parms.InDeltaTime = InDeltaTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_MenuStateTopMenu.BPC_MenuStateTopMenu_C.SetRewardDisplayParam
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_MenuStateTopMenu_C::SetRewardDisplayParam()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "SetRewardDisplayParam");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BPC_MenuStateTopMenu.BPC_MenuStateTopMenu_C.ExecuteUbergraph_BPC_MenuStateTopMenu
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BPC_MenuStateTopMenu.BPC_MenuStateTopMenu_C.SetupRacerConfig
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UBPC_MenuStateTopMenu_C::ExecuteUbergraph_BPC_MenuStateTopMenu(int32 EntryPoint)
+void UBPC_MenuStateTopMenu_C::SetupRacerConfig()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "ExecuteUbergraph_BPC_MenuStateTopMenu");
+		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "SetupRacerConfig");
 
-	Params::BPC_MenuStateTopMenu_C_ExecuteUbergraph_BPC_MenuStateTopMenu Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
 
-	UObject::ProcessEvent(Func, &Parms);
+// Function BPC_MenuStateTopMenu.BPC_MenuStateTopMenu_C.StartRewardGetDisplay
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_MenuStateTopMenu_C::StartRewardGetDisplay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "StartRewardGetDisplay");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

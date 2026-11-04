@@ -17,6 +17,24 @@
 namespace SDK::Params
 {
 
+// Function BPC_MachineCustomizeHornSelectState.BPC_MachineCustomizeHornSelectState_C.PlaySoundPossible
+// 0x0004 (0x0004 - 0x0000)
+struct BPC_MachineCustomizeHornSelectState_C_PlaySoundPossible final
+{
+public:
+	struct FSoundHandle                           CallFunc_SoundPlay_ReturnValue;                    // 0x0000(0x0004)()
+};
+DUMPER7_ASSERTS_BPC_MachineCustomizeHornSelectState_C_PlaySoundPossible;
+
+// Function BPC_MachineCustomizeHornSelectState.BPC_MachineCustomizeHornSelectState_C.PlaySoundImpossible
+// 0x0004 (0x0004 - 0x0000)
+struct BPC_MachineCustomizeHornSelectState_C_PlaySoundImpossible final
+{
+public:
+	struct FSoundHandle                           CallFunc_SoundPlay_ReturnValue;                    // 0x0000(0x0004)()
+};
+DUMPER7_ASSERTS_BPC_MachineCustomizeHornSelectState_C_PlaySoundImpossible;
+
 // Function BPC_MachineCustomizeHornSelectState.BPC_MachineCustomizeHornSelectState_C.CreateRewardDialog
 // 0x0018 (0x0018 - 0x0000)
 struct BPC_MachineCustomizeHornSelectState_C_CreateRewardDialog final
@@ -29,24 +47,6 @@ public:
 	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_MachineCustomizeHornSelectState_C_CreateRewardDialog;
-
-// Function BPC_MachineCustomizeHornSelectState.BPC_MachineCustomizeHornSelectState_C.PlaySoundImpossible
-// 0x0004 (0x0004 - 0x0000)
-struct BPC_MachineCustomizeHornSelectState_C_PlaySoundImpossible final
-{
-public:
-	struct FSoundHandle                           CallFunc_SoundPlay_ReturnValue;                    // 0x0000(0x0004)()
-};
-DUMPER7_ASSERTS_BPC_MachineCustomizeHornSelectState_C_PlaySoundImpossible;
-
-// Function BPC_MachineCustomizeHornSelectState.BPC_MachineCustomizeHornSelectState_C.PlaySoundPossible
-// 0x0004 (0x0004 - 0x0000)
-struct BPC_MachineCustomizeHornSelectState_C_PlaySoundPossible final
-{
-public:
-	struct FSoundHandle                           CallFunc_SoundPlay_ReturnValue;                    // 0x0000(0x0004)()
-};
-DUMPER7_ASSERTS_BPC_MachineCustomizeHornSelectState_C_PlaySoundPossible;
 
 // Function BPC_MachineCustomizeHornSelectState.BPC_MachineCustomizeHornSelectState_C.GetCamera
 // 0x0078 (0x0078 - 0x0000)

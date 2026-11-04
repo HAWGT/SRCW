@@ -205,6 +205,20 @@ void UBPC_GetDLCFreeContent_C::MainFlow_FreeContent()
 }
 
 
+// Function BPC_GetDLCFreeContent.BPC_GetDLCFreeContent_C.MainFlow_RivalDuelSpecialReward
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_GetDLCFreeContent_C::MainFlow_RivalDuelSpecialReward()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_GetDLCFreeContent_C", "MainFlow_RivalDuelSpecialReward");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BPC_GetDLCFreeContent.BPC_GetDLCFreeContent_C.NoRewardError
 // (BlueprintCallable, BlueprintEvent)
 
@@ -242,6 +256,20 @@ void UBPC_GetDLCFreeContent_C::OnClosed_FreeContentNoticeUnlockItem()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BPC_GetDLCFreeContent_C", "OnClosed_FreeContentNoticeUnlockItem");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_GetDLCFreeContent.BPC_GetDLCFreeContent_C.OnClosed_RivalDuelSpecialRewardNoticeUnlockItem
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_GetDLCFreeContent_C::OnClosed_RivalDuelSpecialRewardNoticeUnlockItem()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_GetDLCFreeContent_C", "OnClosed_RivalDuelSpecialRewardNoticeUnlockItem");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -290,6 +318,20 @@ void UBPC_GetDLCFreeContent_C::OnEndAnim_FreeContentUnclockCharacter()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BPC_GetDLCFreeContent_C", "OnEndAnim_FreeContentUnclockCharacter");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_GetDLCFreeContent.BPC_GetDLCFreeContent_C.OnEndAnim_RivalDuelSpecialRewardUnlockCharacter
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_GetDLCFreeContent_C::OnEndAnim_RivalDuelSpecialRewardUnlockCharacter()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_GetDLCFreeContent_C", "OnEndAnim_RivalDuelSpecialRewardUnlockCharacter");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -360,11 +402,11 @@ void UBPC_GetDLCFreeContent_C::OnSkip()
 // Function BPC_GetDLCFreeContent.BPC_GetDLCFreeContent_C.OpenRewardWindow
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<struct FRewardGetWindowParam>&   rewardList                                             (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<struct FRewardGetWindowParam>&   RewardList                                             (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // const class FText&                      Title                                                  (BlueprintVisible, BlueprintReadOnly, Parm)
 // class UWBP_ItemGet_Window_C**           newParam                                               (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_GetDLCFreeContent_C::OpenRewardWindow(TArray<struct FRewardGetWindowParam>& rewardList, const class FText& Title, class UWBP_ItemGet_Window_C** newParam)
+void UBPC_GetDLCFreeContent_C::OpenRewardWindow(TArray<struct FRewardGetWindowParam>& RewardList, const class FText& Title, class UWBP_ItemGet_Window_C** newParam)
 {
 	static class UFunction* Func = nullptr;
 
@@ -373,27 +415,69 @@ void UBPC_GetDLCFreeContent_C::OpenRewardWindow(TArray<struct FRewardGetWindowPa
 
 	Params::BPC_GetDLCFreeContent_C_OpenRewardWindow Parms{};
 
-	Parms.rewardList = std::move(rewardList);
+	Parms.RewardList = std::move(RewardList);
 	Parms.Title = std::move(Title);
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	rewardList = std::move(Parms.rewardList);
+	RewardList = std::move(Parms.RewardList);
 
 	if (newParam != nullptr)
 		*newParam = Parms.newParam;
 }
 
 
-// Function BPC_GetDLCFreeContent.BPC_GetDLCFreeContent_C.OpenUnlockCharacter
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BPC_GetDLCFreeContent.BPC_GetDLCFreeContent_C.RivalDuelSpecialReward_RewardDialog
+// (BlueprintCallable, BlueprintEvent)
 
-void UBPC_GetDLCFreeContent_C::OpenUnlockCharacter()
+void UBPC_GetDLCFreeContent_C::RivalDuelSpecialReward_RewardDialog()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GetDLCFreeContent_C", "OpenUnlockCharacter");
+		Func = Class->GetFunction("BPC_GetDLCFreeContent_C", "RivalDuelSpecialReward_RewardDialog");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_GetDLCFreeContent.BPC_GetDLCFreeContent_C.RivalDuelSpecialReward_UnlockCharacter
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_GetDLCFreeContent_C::RivalDuelSpecialReward_UnlockCharacter()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_GetDLCFreeContent_C", "RivalDuelSpecialReward_UnlockCharacter");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_GetDLCFreeContent.BPC_GetDLCFreeContent_C.RivalDuelSpecialRewardFlow_End
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_GetDLCFreeContent_C::RivalDuelSpecialRewardFlow_End()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_GetDLCFreeContent_C", "RivalDuelSpecialRewardFlow_End");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_GetDLCFreeContent.BPC_GetDLCFreeContent_C.RivalDuelSpecialRewardFlow_Start
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_GetDLCFreeContent_C::RivalDuelSpecialRewardFlow_Start()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_GetDLCFreeContent_C", "RivalDuelSpecialRewardFlow_Start");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -422,6 +506,20 @@ void UBPC_GetDLCFreeContent_C::SKIPFreeContent_UnlockCharacter()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BPC_GetDLCFreeContent_C", "SKIPFreeContent_UnlockCharacter");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_GetDLCFreeContent.BPC_GetDLCFreeContent_C.SkipRivalDuelSpecialReward_UnlockCharacter
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_GetDLCFreeContent_C::SkipRivalDuelSpecialReward_UnlockCharacter()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_GetDLCFreeContent_C", "SkipRivalDuelSpecialReward_UnlockCharacter");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

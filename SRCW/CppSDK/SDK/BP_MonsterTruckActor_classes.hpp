@@ -11,25 +11,25 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_MonsterTruckActor.BP_MonsterTruckActor_C
-// 0x0068 (0x0C60 - 0x0BF8)
+// 0x0068 (0x0C68 - 0x0C00)
 class ABP_MonsterTruckActor_C final : public AMonsterTruckInRaceActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BF8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	float                                         Timeline_CountDown_CountDown_F5ABB8A74F83AC7C8C8844AA86BCD341; // 0x0C00(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            Timeline_CountDown__Direction_F5ABB8A74F83AC7C8C8844AA86BCD341; // 0x0C04(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C05[0x3];                                      // 0x0C05(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     Timeline_CountDown;                                // 0x0C08(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FMonsterTruckCockpitData               MonsterTruckData;                                  // 0x0C10(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0C00(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	float                                         Timeline_CountDown_CountDown_F5ABB8A74F83AC7C8C8844AA86BCD341; // 0x0C08(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            Timeline_CountDown__Direction_F5ABB8A74F83AC7C8C8844AA86BCD341; // 0x0C0C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C0D[0x3];                                      // 0x0C0D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     Timeline_CountDown;                                // 0x0C10(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FMonsterTruckCockpitData               MonsterTruckData;                                  // 0x0C18(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_BP_MonsterTruckActor(int32 EntryPoint);

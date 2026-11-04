@@ -17,12 +17,9 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_CMN_TextBalloon.WBP_CMN_TextBalloon_C
-// 0x0008 (0x0300 - 0x02F8)
+// 0x0000 (0x0300 - 0x0300)
 class UWBP_CMN_TextBalloon_C final : public UCommonTextBalloon
 {
-public:
-	class UCanvasPanel*                           CanvasPanel_20;                                    // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-
 public:
 	void SetPositionOffset(const struct FVector2D& Translation);
 

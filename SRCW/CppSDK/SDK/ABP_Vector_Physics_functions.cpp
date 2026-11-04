@@ -86,9 +86,11 @@ void UABP_Vector_Physics_C::HoverboardControlRogLayer(const struct FPoseLink& Ho
 // (HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FPoseLink&                 InPose                                                 (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// bool                                    bUseRace                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FPoseLink&                 InNoTransPose                                          (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 // struct FPoseLink*                       KawaiiPhysicsLayer_0                                   (Parm, OutParm, NoDestructor)
 
-void UABP_Vector_Physics_C::KawaiiPhysicsLayer(const struct FPoseLink& InPose, struct FPoseLink* KawaiiPhysicsLayer_0)
+void UABP_Vector_Physics_C::KawaiiPhysicsLayer(const struct FPoseLink& InPose, bool bUseRace, const struct FPoseLink& InNoTransPose, struct FPoseLink* KawaiiPhysicsLayer_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -98,6 +100,8 @@ void UABP_Vector_Physics_C::KawaiiPhysicsLayer(const struct FPoseLink& InPose, s
 	Params::ABP_Vector_Physics_C_KawaiiPhysicsLayer Parms{};
 
 	Parms.InPose = std::move(InPose);
+	Parms.bUseRace = bUseRace;
+	Parms.InNoTransPose = std::move(InNoTransPose);
 
 	UObject::ProcessEvent(Func, &Parms);
 

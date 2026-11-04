@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_classes.hpp"
 #include "UdpMessaging_structs.hpp"
+#include "CoreUObject_classes.hpp"
 
 
 namespace SDK

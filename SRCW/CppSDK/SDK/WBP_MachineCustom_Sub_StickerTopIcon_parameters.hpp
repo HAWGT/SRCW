@@ -10,16 +10,17 @@
 
 #include "Basic.hpp"
 
-#include "UMG_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "UMG_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "UnionSystem_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function WBP_MachineCustom_Sub_StickerTopIcon.WBP_MachineCustom_Sub_StickerTopIcon_C.ExecuteUbergraph_WBP_MachineCustom_Sub_StickerTopIcon
-// 0x0030 (0x0030 - 0x0000)
+// 0x0050 (0x0050 - 0x0000)
 struct WBP_MachineCustom_Sub_StickerTopIcon_C_ExecuteUbergraph_WBP_MachineCustom_Sub_StickerTopIcon final
 {
 public:
@@ -28,6 +29,16 @@ public:
 	class FText                                   CallFunc_MakeLiteralText_ReturnValue;              // 0x0008(0x0010)()
 	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           CallFunc_MakeColor_ReturnValue;                    // 0x0020(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSoundHandle                           CallFunc_SoundPlay_ReturnValue;                    // 0x0030(0x0004)()
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSpecifiedMachineCustomConditionResult CallFunc_GetSpecifiedMachineCustomConditionResult_ReturnValue; // 0x0035(0x000A)(NoDestructor)
+	struct FSpecifiedMachineCustomConditionResult CallFunc_GetSpecifiedMachineCustomConditionResult_ReturnValue_1; // 0x003F(0x000A)(NoDestructor)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x004A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_2;        // 0x004B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_3;        // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x004D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x004E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_MachineCustom_Sub_StickerTopIcon_C_ExecuteUbergraph_WBP_MachineCustom_Sub_StickerTopIcon;
 

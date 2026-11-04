@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "UNION_structs.hpp"
-#include "UNION_classes.hpp"
 #include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_structs.hpp"
+#include "UNION_classes.hpp"
 
 
 namespace SDK
@@ -31,21 +31,21 @@ public:
 	bool                                          In_End_Hide;                                       // 0x0140(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void NextCeremony();
 	void BindOnLoadingEndAnimFinished();
-	void SetSelectMode();
-	void SetGrandPrixNextRaceSetting();
 	void ConstructionScript();
-	void StartOpenLevelToMenu();
-	void StartMatchRace();
-	void StartErrorHandling();
-	void StartGrandPrix();
-	void StartTimeTrial();
-	void StartMiddleLoading(int32 InLoadingPhaseNum, bool bInLoadingProgressMode, bool bInEndHide);
-	void StartParty();
+	void ExecuteUbergraph_BPC_RaceSequenceStateTermination(int32 EntryPoint);
+	void NextCeremony();
 	void OnInitState();
 	void OnRaceTermination();
-	void ExecuteUbergraph_BPC_RaceSequenceStateTermination(int32 EntryPoint);
+	void SetGrandPrixNextRaceSetting();
+	void SetSelectMode();
+	void StartErrorHandling();
+	void StartGrandPrix();
+	void StartMatchRace();
+	void StartMiddleLoading(int32 InLoadingPhaseNum, bool bInLoadingProgressMode, bool bInEndHide);
+	void StartOpenLevelToMenu();
+	void StartParty();
+	void StartTimeTrial();
 
 public:
 	static class UClass* StaticClass()

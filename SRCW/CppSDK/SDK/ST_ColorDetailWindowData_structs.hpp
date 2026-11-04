@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "ST_ColorDetailWindowColorItemData_structs.hpp"
-#include "ST_PullDownMenuData_structs.hpp"
 #include "ST_ColorDetailWindowSurfaceItemData_structs.hpp"
 #include "EColorDetailWindowMode_structs.hpp"
+#include "ST_PullDownMenuData_structs.hpp"
 
 
 namespace SDK

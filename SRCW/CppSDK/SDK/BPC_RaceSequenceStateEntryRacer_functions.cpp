@@ -31,6 +31,82 @@ void UBPC_RaceSequenceStateEntryRacer_C::CloseRaceRuleInfoUIForFriendMatch()
 }
 
 
+// Function BPC_RaceSequenceStateEntryRacer.BPC_RaceSequenceStateEntryRacer_C.CreateEntryEvent
+// (Event, Protected, BlueprintEvent)
+
+void UBPC_RaceSequenceStateEntryRacer_C::CreateEntryEvent()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_RaceSequenceStateEntryRacer_C", "CreateEntryEvent");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_RaceSequenceStateEntryRacer.BPC_RaceSequenceStateEntryRacer_C.CreateEntryRacerUI_Duel
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UBPC_RaceSequenceStateEntryRacer_C::CreateEntryRacerUI_Duel()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_RaceSequenceStateEntryRacer_C", "CreateEntryRacerUI_Duel");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_RaceSequenceStateEntryRacer.BPC_RaceSequenceStateEntryRacer_C.CreateEntryRaceUI
+// (Event, Protected, BlueprintEvent)
+
+void UBPC_RaceSequenceStateEntryRacer_C::CreateEntryRaceUI()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_RaceSequenceStateEntryRacer_C", "CreateEntryRaceUI");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_RaceSequenceStateEntryRacer.BPC_RaceSequenceStateEntryRacer_C.DestroyEntryRaceUI
+// (Event, Protected, BlueprintEvent)
+
+void UBPC_RaceSequenceStateEntryRacer_C::DestroyEntryRaceUI()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_RaceSequenceStateEntryRacer_C", "DestroyEntryRaceUI");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_RaceSequenceStateEntryRacer.BPC_RaceSequenceStateEntryRacer_C.ExecuteUbergraph_BPC_RaceSequenceStateEntryRacer
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_RaceSequenceStateEntryRacer_C::ExecuteUbergraph_BPC_RaceSequenceStateEntryRacer(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_RaceSequenceStateEntryRacer_C", "ExecuteUbergraph_BPC_RaceSequenceStateEntryRacer");
+
+	Params::BPC_RaceSequenceStateEntryRacer_C_ExecuteUbergraph_BPC_RaceSequenceStateEntryRacer Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BPC_RaceSequenceStateEntryRacer.BPC_RaceSequenceStateEntryRacer_C.GetOffsetTransformByStageId
 // (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -57,37 +133,31 @@ void UBPC_RaceSequenceStateEntryRacer_C::GetOffsetTransformByStageId(EStageId In
 }
 
 
-// Function BPC_RaceSequenceStateEntryRacer.BPC_RaceSequenceStateEntryRacer_C.OnInitState
-// (Event, Public, BlueprintEvent)
+// Function BPC_RaceSequenceStateEntryRacer.BPC_RaceSequenceStateEntryRacer_C.OnChangeSequence
+// (BlueprintCallable, BlueprintEvent)
 
-void UBPC_RaceSequenceStateEntryRacer_C::OnInitState()
+void UBPC_RaceSequenceStateEntryRacer_C::OnChangeSequence()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateEntryRacer_C", "OnInitState");
+		Func = Class->GetFunction("BPC_RaceSequenceStateEntryRacer_C", "OnChangeSequence");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BPC_RaceSequenceStateEntryRacer.BPC_RaceSequenceStateEntryRacer_C.OnUpdateState
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BPC_RaceSequenceStateEntryRacer.BPC_RaceSequenceStateEntryRacer_C.OnEnabledSkip
+// (BlueprintCallable, BlueprintEvent)
 
-void UBPC_RaceSequenceStateEntryRacer_C::OnUpdateState(float InDeltaTime)
+void UBPC_RaceSequenceStateEntryRacer_C::OnEnabledSkip()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateEntryRacer_C", "OnUpdateState");
+		Func = Class->GetFunction("BPC_RaceSequenceStateEntryRacer_C", "OnEnabledSkip");
 
-	Params::BPC_RaceSequenceStateEntryRacer_C_OnUpdateState Parms{};
-
-	Parms.InDeltaTime = InDeltaTime;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -119,15 +189,29 @@ void UBPC_RaceSequenceStateEntryRacer_C::OnFinishedPlay_Sequence()
 }
 
 
-// Function BPC_RaceSequenceStateEntryRacer.BPC_RaceSequenceStateEntryRacer_C.OnChangeSequence
+// Function BPC_RaceSequenceStateEntryRacer.BPC_RaceSequenceStateEntryRacer_C.OnFullScreenMouseClick
 // (BlueprintCallable, BlueprintEvent)
 
-void UBPC_RaceSequenceStateEntryRacer_C::OnChangeSequence()
+void UBPC_RaceSequenceStateEntryRacer_C::OnFullScreenMouseClick()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateEntryRacer_C", "OnChangeSequence");
+		Func = Class->GetFunction("BPC_RaceSequenceStateEntryRacer_C", "OnFullScreenMouseClick");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_RaceSequenceStateEntryRacer.BPC_RaceSequenceStateEntryRacer_C.OnInitState
+// (Event, Public, BlueprintEvent)
+
+void UBPC_RaceSequenceStateEntryRacer_C::OnInitState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_RaceSequenceStateEntryRacer_C", "OnInitState");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -167,51 +251,37 @@ void UBPC_RaceSequenceStateEntryRacer_C::OnScenePlayerFinishedUI()
 }
 
 
-// Function BPC_RaceSequenceStateEntryRacer.BPC_RaceSequenceStateEntryRacer_C.OnFullScreenMouseClick
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_RaceSequenceStateEntryRacer_C::OnFullScreenMouseClick()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateEntryRacer_C", "OnFullScreenMouseClick");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_RaceSequenceStateEntryRacer.BPC_RaceSequenceStateEntryRacer_C.OnEnabledSkip
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_RaceSequenceStateEntryRacer_C::OnEnabledSkip()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateEntryRacer_C", "OnEnabledSkip");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_RaceSequenceStateEntryRacer.BPC_RaceSequenceStateEntryRacer_C.ExecuteUbergraph_BPC_RaceSequenceStateEntryRacer
-// (Final, UbergraphFunction, HasDefaults)
+// Function BPC_RaceSequenceStateEntryRacer.BPC_RaceSequenceStateEntryRacer_C.OnUpdateState
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_RaceSequenceStateEntryRacer_C::ExecuteUbergraph_BPC_RaceSequenceStateEntryRacer(int32 EntryPoint)
+void UBPC_RaceSequenceStateEntryRacer_C::OnUpdateState(float InDeltaTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateEntryRacer_C", "ExecuteUbergraph_BPC_RaceSequenceStateEntryRacer");
+		Func = Class->GetFunction("BPC_RaceSequenceStateEntryRacer_C", "OnUpdateState");
 
-	Params::BPC_RaceSequenceStateEntryRacer_C_ExecuteUbergraph_BPC_RaceSequenceStateEntryRacer Parms{};
+	Params::BPC_RaceSequenceStateEntryRacer_C_OnUpdateState Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.InDeltaTime = InDeltaTime;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_RaceSequenceStateEntryRacer.BPC_RaceSequenceStateEntryRacer_C.WidgetStartDisplayEvent
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_RaceSequenceStateEntryRacer_C::WidgetStartDisplayEvent()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_RaceSequenceStateEntryRacer_C", "WidgetStartDisplayEvent");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

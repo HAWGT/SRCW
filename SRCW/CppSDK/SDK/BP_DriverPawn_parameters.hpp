@@ -10,9 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "UNION_structs.hpp"
-#include "UnionSystem_structs.hpp"
 #include "UnionRun_structs.hpp"
+#include "UnionSystem_structs.hpp"
+#include "Engine_structs.hpp"
+#include "UNION_structs.hpp"
 
 
 namespace SDK::Params
@@ -72,33 +73,29 @@ public:
 DUMPER7_ASSERTS_BP_DriverPawn_C_ExecuteUbergraph_BP_DriverPawn;
 
 // Function BP_DriverPawn.BP_DriverPawn_C.LoadSkeletalMesh
-// 0x0408 (0x0408 - 0x0000)
+// 0x04E0 (0x04E0 - 0x0000)
 struct BP_DriverPawn_C_LoadSkeletalMesh final
 {
 public:
 	EDriverId                                     In_DriverId;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   CallFunc_GetEnumeratorName_ReturnValue;            // 0x0004(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkeletalMesh*                          CallFunc_GetRivalMesh_ReturnValue;                 // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FDriverData                            CallFunc_GetDataTableRowFromName_OutRow;           // 0x0018(0x0398)()
-	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x03B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x03B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B2[0x6];                                      // 0x03B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UObject>                    CallFunc_Conv_SoftClassReferenceToClass_ReturnValue; // 0x03B8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	class UClass*                                 K2Node_ClassDynamicCast_AsAnim______;              // 0x03C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_ClassDynamicCast_bSuccess;                  // 0x03C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3C9[0x7];                                      // 0x03C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue; // 0x03D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UStaticMesh*                            K2Node_DynamicCast_As__________;                   // 0x03D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x03E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3E1[0x7];                                      // 0x03E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue_1; // 0x03E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMesh*                          K2Node_DynamicCast_As_________;                    // 0x03F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x03F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetStaticMesh_ReturnValue;                // 0x03F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3FA[0x6];                                      // 0x03FA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkinnedAsset*                          K2Node_Select_Default;                             // 0x0400(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDriverRivalSkinColorData              NewLocalVar;                                       // 0x0008(0x0068)(Edit, BlueprintVisible)
+	class FName                                   CallFunc_GetEnumeratorName_ReturnValue;            // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FDriverData                            CallFunc_GetDataTableRowFromName_OutRow;           // 0x0078(0x0418)()
+	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0490(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_491[0x7];                                      // 0x0491(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UObject>                    CallFunc_Conv_SoftClassReferenceToClass_ReturnValue; // 0x0498(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	class UObject*                                CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue; // 0x04A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 K2Node_ClassDynamicCast_AsAnim______;              // 0x04A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_ClassDynamicCast_bSuccess;                  // 0x04B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4B1[0x7];                                      // 0x04B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UStaticMesh*                            K2Node_DynamicCast_As__________;                   // 0x04B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x04C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetStaticMesh_ReturnValue;                // 0x04C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4C2[0x6];                                      // 0x04C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue_1; // 0x04C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMesh*                          K2Node_DynamicCast_As_________;                    // 0x04D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x04D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_DriverPawn_C_LoadSkeletalMesh;
 
@@ -171,6 +168,24 @@ public:
 };
 DUMPER7_ASSERTS_BP_DriverPawn_C_SetRideableStatusType;
 
+// Function BP_DriverPawn.BP_DriverPawn_C.SetSkeletalMeshLOD
+// 0x0098 (0x0098 - 0x0000)
+struct BP_DriverPawn_C_SetSkeletalMeshLOD final
+{
+public:
+	int32                                         InLOD;                                             // 0x0000(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0010(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0058(0x0010)(ReferenceParm)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x0068(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0078(0x0010)()
+	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0088(0x0010)()
+};
+DUMPER7_ASSERTS_BP_DriverPawn_C_SetSkeletalMeshLOD;
+
 // Function BP_DriverPawn.BP_DriverPawn_C.SetupCharacterById
 // 0x0018 (0x0018 - 0x0000)
 struct BP_DriverPawn_C_SetupCharacterById final
@@ -233,7 +248,7 @@ public:
 DUMPER7_ASSERTS_BP_DriverPawn_C_UserConstructionScript;
 
 // Function BP_DriverPawn.BP_DriverPawn_C.GetRivalMesh
-// 0x0E68 (0x0E68 - 0x0000)
+// 0x1B88 (0x1B88 - 0x0000)
 struct BP_DriverPawn_C_GetRivalMesh final
 {
 public:
@@ -332,10 +347,94 @@ public:
 	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_87;                       // 0x0DB0(0x0028)(UObjectWrapper, HasGetValueTypeHash)
 	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_88;                       // 0x0DD8(0x0028)(UObjectWrapper, HasGetValueTypeHash)
 	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_89;                       // 0x0E00(0x0028)(UObjectWrapper, HasGetValueTypeHash)
-	TSoftObjectPtr<class UObject>                 K2Node_Select_Default;                             // 0x0E28(0x0028)(UObjectWrapper, HasGetValueTypeHash)
-	class UObject*                                CallFunc_LoadAsset_Blocking_ReturnValue;           // 0x0E50(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMesh*                          K2Node_DynamicCast_As_________;                    // 0x0E58(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0E60(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_90;                       // 0x0E28(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_91;                       // 0x0E50(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_92;                       // 0x0E78(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_93;                       // 0x0EA0(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_94;                       // 0x0EC8(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_95;                       // 0x0EF0(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_96;                       // 0x0F18(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_97;                       // 0x0F40(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_98;                       // 0x0F68(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_99;                       // 0x0F90(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_100;                      // 0x0FB8(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_101;                      // 0x0FE0(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_102;                      // 0x1008(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_103;                      // 0x1030(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_104;                      // 0x1058(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_105;                      // 0x1080(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_106;                      // 0x10A8(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_107;                      // 0x10D0(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_108;                      // 0x10F8(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_109;                      // 0x1120(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_110;                      // 0x1148(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_111;                      // 0x1170(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_112;                      // 0x1198(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_113;                      // 0x11C0(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_114;                      // 0x11E8(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_115;                      // 0x1210(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_116;                      // 0x1238(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_117;                      // 0x1260(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_118;                      // 0x1288(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_119;                      // 0x12B0(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_120;                      // 0x12D8(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_121;                      // 0x1300(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_122;                      // 0x1328(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_123;                      // 0x1350(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_124;                      // 0x1378(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_125;                      // 0x13A0(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_126;                      // 0x13C8(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_127;                      // 0x13F0(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_128;                      // 0x1418(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_129;                      // 0x1440(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_130;                      // 0x1468(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_131;                      // 0x1490(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_132;                      // 0x14B8(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_133;                      // 0x14E0(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_134;                      // 0x1508(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_135;                      // 0x1530(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_136;                      // 0x1558(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_137;                      // 0x1580(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_138;                      // 0x15A8(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_139;                      // 0x15D0(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_140;                      // 0x15F8(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_141;                      // 0x1620(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_142;                      // 0x1648(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_143;                      // 0x1670(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_144;                      // 0x1698(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_145;                      // 0x16C0(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_146;                      // 0x16E8(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_147;                      // 0x1710(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_148;                      // 0x1738(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_149;                      // 0x1760(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_150;                      // 0x1788(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_151;                      // 0x17B0(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_152;                      // 0x17D8(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_153;                      // 0x1800(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_154;                      // 0x1828(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_155;                      // 0x1850(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_156;                      // 0x1878(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_157;                      // 0x18A0(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_158;                      // 0x18C8(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_159;                      // 0x18F0(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_160;                      // 0x1918(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_161;                      // 0x1940(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_162;                      // 0x1968(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_163;                      // 0x1990(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_164;                      // 0x19B8(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_165;                      // 0x19E0(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_166;                      // 0x1A08(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_167;                      // 0x1A30(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_168;                      // 0x1A58(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_169;                      // 0x1A80(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_170;                      // 0x1AA8(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_171;                      // 0x1AD0(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_172;                      // 0x1AF8(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 Temp_softobject_Variable_173;                      // 0x1B20(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 K2Node_Select_Default;                             // 0x1B48(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	class UObject*                                CallFunc_LoadAsset_Blocking_ReturnValue;           // 0x1B70(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMesh*                          K2Node_DynamicCast_As_________;                    // 0x1B78(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x1B80(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_DriverPawn_C_GetRivalMesh;
 

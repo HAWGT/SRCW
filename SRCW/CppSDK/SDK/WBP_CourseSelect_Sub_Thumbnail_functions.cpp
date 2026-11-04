@@ -74,6 +74,34 @@ void UWBP_CourseSelect_Sub_Thumbnail_C::ExecuteUbergraph_WBP_CourseSelect_Sub_Th
 }
 
 
+// Function WBP_CourseSelect_Sub_Thumbnail.WBP_CourseSelect_Sub_Thumbnail_C.Finished_D56D3939498B3A43529FA3B2F2E7E2C8
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_CourseSelect_Sub_Thumbnail_C::Finished_D56D3939498B3A43529FA3B2F2E7E2C8()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_C", "Finished_D56D3939498B3A43529FA3B2F2E7E2C8");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_CourseSelect_Sub_Thumbnail.WBP_CourseSelect_Sub_Thumbnail_C.InitUnlockAnimation
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_CourseSelect_Sub_Thumbnail_C::InitUnlockAnimation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_C", "InitUnlockAnimation");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_CourseSelect_Sub_Thumbnail.WBP_CourseSelect_Sub_Thumbnail_C.OnBackKeyPressed
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 
@@ -144,6 +172,20 @@ void UWBP_CourseSelect_Sub_Thumbnail_C::OnDownKeyPressed()
 }
 
 
+// Function WBP_CourseSelect_Sub_Thumbnail.WBP_CourseSelect_Sub_Thumbnail_C.OnFaceButtonTopPressed
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_CourseSelect_Sub_Thumbnail_C::OnFaceButtonTopPressed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_C", "OnFaceButtonTopPressed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_CourseSelect_Sub_Thumbnail.WBP_CourseSelect_Sub_Thumbnail_C.OnLeftKeyPressed
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 
@@ -158,6 +200,20 @@ void UWBP_CourseSelect_Sub_Thumbnail_C::OnLeftKeyPressed()
 }
 
 
+// Function WBP_CourseSelect_Sub_Thumbnail.WBP_CourseSelect_Sub_Thumbnail_C.OnLeftKeyReleased
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_CourseSelect_Sub_Thumbnail_C::OnLeftKeyReleased()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_C", "OnLeftKeyReleased");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_CourseSelect_Sub_Thumbnail.WBP_CourseSelect_Sub_Thumbnail_C.OnRightKeyPressed
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 
@@ -167,6 +223,20 @@ void UWBP_CourseSelect_Sub_Thumbnail_C::OnRightKeyPressed()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_C", "OnRightKeyPressed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_CourseSelect_Sub_Thumbnail.WBP_CourseSelect_Sub_Thumbnail_C.OnRightKeyReleased
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_CourseSelect_Sub_Thumbnail_C::OnRightKeyReleased()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_C", "OnRightKeyReleased");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -220,6 +290,20 @@ void UWBP_CourseSelect_Sub_Thumbnail_C::OnUpKeyPressed()
 }
 
 
+// Function WBP_CourseSelect_Sub_Thumbnail.WBP_CourseSelect_Sub_Thumbnail_C.PlayUnlockAnimation
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_CourseSelect_Sub_Thumbnail_C::PlayUnlockAnimation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_C", "PlayUnlockAnimation");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_CourseSelect_Sub_Thumbnail.WBP_CourseSelect_Sub_Thumbnail_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
@@ -251,6 +335,26 @@ void UWBP_CourseSelect_Sub_Thumbnail_C::PreLaunchSetValidCourse()
 		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_C", "PreLaunchSetValidCourse");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_CourseSelect_Sub_Thumbnail.WBP_CourseSelect_Sub_Thumbnail_C.Set Lock Icon Only
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    IsLocked                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_CourseSelect_Sub_Thumbnail_C::Set_Lock_Icon_Only(bool IsLocked)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_C", "Set Lock Icon Only");
+
+	Params::WBP_CourseSelect_Sub_Thumbnail_C_Set_Lock_Icon_Only Parms{};
+
+	Parms.IsLocked = IsLocked;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -313,6 +417,30 @@ void UWBP_CourseSelect_Sub_Thumbnail_C::SetCourseNameText(const class FText& InT
 	Params::WBP_CourseSelect_Sub_Thumbnail_C_SetCourseNameText Parms{};
 
 	Parms.InText = std::move(InText);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_CourseSelect_Sub_Thumbnail.WBP_CourseSelect_Sub_Thumbnail_C.SetDriverIcon
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EDriverId                               DriverId_0                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TSoftObjectPtr<class UTexture2D>        DriverTexture                                          (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// bool                                    SetDriver                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_CourseSelect_Sub_Thumbnail_C::SetDriverIcon(EDriverId DriverId_0, TSoftObjectPtr<class UTexture2D> DriverTexture, bool SetDriver)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_C", "SetDriverIcon");
+
+	Params::WBP_CourseSelect_Sub_Thumbnail_C_SetDriverIcon Parms{};
+
+	Parms.DriverId_0 = DriverId_0;
+	Parms.DriverTexture = DriverTexture;
+	Parms.SetDriver = SetDriver;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

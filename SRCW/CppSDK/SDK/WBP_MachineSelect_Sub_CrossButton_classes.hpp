@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "UNION_classes.hpp"
 
 
 namespace SDK
@@ -42,6 +42,7 @@ public:
 	void OnFocus_Impl(class UUnionUIButtonBase* Button);
 	void OnFocusLost(const struct FFocusEvent& InFocusEvent);
 	struct FEventReply OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent);
+	void OnRightShoulderPressed();
 	void OnSpecialPressed();
 	void PlaySEError();
 	void PlaySESelect();

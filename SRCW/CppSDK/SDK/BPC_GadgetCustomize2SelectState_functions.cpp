@@ -17,6 +17,82 @@
 namespace SDK
 {
 
+// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.CREATEDELEGATE_PROXYFUNCTION_0
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          Object                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const int32&                            PlayerControllerIndex                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_GadgetCustomize2SelectState_C::CREATEDELEGATE_PROXYFUNCTION_0(class UObject* Object, const int32& PlayerControllerIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "CREATEDELEGATE_PROXYFUNCTION_0");
+
+	Params::BPC_GadgetCustomize2SelectState_C_CREATEDELEGATE_PROXYFUNCTION_0 Parms{};
+
+	Parms.Object = Object;
+	Parms.PlayerControllerIndex = PlayerControllerIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.UpdateDonpaTicketBox
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UBPC_GadgetCustomize2SelectState_C::UpdateDonpaTicketBox()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "UpdateDonpaTicketBox");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.ChangeCustomizeWindowZOrder
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const int32                             InZOrder                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_GadgetCustomize2SelectState_C::ChangeCustomizeWindowZOrder(const int32 InZOrder)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "ChangeCustomizeWindowZOrder");
+
+	Params::BPC_GadgetCustomize2SelectState_C_ChangeCustomizeWindowZOrder Parms{};
+
+	Parms.InZOrder = InZOrder;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.SequenceEnd_FadeInFinished
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const EUnionUIFadeDirection             InFadeDirection                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_GadgetCustomize2SelectState_C::SequenceEnd_FadeInFinished(const EUnionUIFadeDirection InFadeDirection)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "SequenceEnd_FadeInFinished");
+
+	Params::BPC_GadgetCustomize2SelectState_C_SequenceEnd_FadeInFinished Parms{};
+
+	Parms.InFadeDirection = InFadeDirection;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.CreateGadgetPurchasePopup
 // (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -55,9 +131,9 @@ void UBPC_GadgetCustomize2SelectState_C::SetFocusToDummyAll()
 // Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.SetFocusToDummy
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const int32&                            InPlayerIndex_0                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const int32&                            InPlayerIndex                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_GadgetCustomize2SelectState_C::SetFocusToDummy(const int32& InPlayerIndex_0)
+void UBPC_GadgetCustomize2SelectState_C::SetFocusToDummy(const int32& InPlayerIndex)
 {
 	static class UFunction* Func = nullptr;
 
@@ -66,37 +142,9 @@ void UBPC_GadgetCustomize2SelectState_C::SetFocusToDummy(const int32& InPlayerIn
 
 	Params::BPC_GadgetCustomize2SelectState_C_SetFocusToDummy Parms{};
 
-	Parms.InPlayerIndex_0 = InPlayerIndex_0;
+	Parms.InPlayerIndex = InPlayerIndex;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.PlaySoundGadgetAttachCancel
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UBPC_GadgetCustomize2SelectState_C::PlaySoundGadgetAttachCancel()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "PlaySoundGadgetAttachCancel");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.PlaySoundGadgetAttach
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UBPC_GadgetCustomize2SelectState_C::PlaySoundGadgetAttach()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "PlaySoundGadgetAttach");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -120,32 +168,12 @@ void UBPC_GadgetCustomize2SelectState_C::SetSequenceDirty(const bool InDirty)
 }
 
 
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.UpdateGadgetDetailWindowFromGadgetPlateLastFocus
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const int32                             InPlayerIndex_0                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_GadgetCustomize2SelectState_C::UpdateGadgetDetailWindowFromGadgetPlateLastFocus(const int32 InPlayerIndex_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "UpdateGadgetDetailWindowFromGadgetPlateLastFocus");
-
-	Params::BPC_GadgetCustomize2SelectState_C_UpdateGadgetDetailWindowFromGadgetPlateLastFocus Parms{};
-
-	Parms.InPlayerIndex_0 = InPlayerIndex_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.UnbindGadgetPlateDelegate
 // (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const int32                             InPlayerIndex_0                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const int32                             InPlayerIndex                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_GadgetCustomize2SelectState_C::UnbindGadgetPlateDelegate(const int32 InPlayerIndex_0)
+void UBPC_GadgetCustomize2SelectState_C::UnbindGadgetPlateDelegate(const int32 InPlayerIndex)
 {
 	static class UFunction* Func = nullptr;
 
@@ -154,7 +182,7 @@ void UBPC_GadgetCustomize2SelectState_C::UnbindGadgetPlateDelegate(const int32 I
 
 	Params::BPC_GadgetCustomize2SelectState_C_UnbindGadgetPlateDelegate Parms{};
 
-	Parms.InPlayerIndex_0 = InPlayerIndex_0;
+	Parms.InPlayerIndex = InPlayerIndex;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -163,9 +191,9 @@ void UBPC_GadgetCustomize2SelectState_C::UnbindGadgetPlateDelegate(const int32 I
 // Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.BindGadgetPlateDelegate
 // (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const int32                             InPlayerIndex_0                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const int32                             InPlayerIndex                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_GadgetCustomize2SelectState_C::BindGadgetPlateDelegate(const int32 InPlayerIndex_0)
+void UBPC_GadgetCustomize2SelectState_C::BindGadgetPlateDelegate(const int32 InPlayerIndex)
 {
 	static class UFunction* Func = nullptr;
 
@@ -174,7 +202,7 @@ void UBPC_GadgetCustomize2SelectState_C::BindGadgetPlateDelegate(const int32 InP
 
 	Params::BPC_GadgetCustomize2SelectState_C_BindGadgetPlateDelegate Parms{};
 
-	Parms.InPlayerIndex_0 = InPlayerIndex_0;
+	Parms.InPlayerIndex = InPlayerIndex;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -183,9 +211,9 @@ void UBPC_GadgetCustomize2SelectState_C::BindGadgetPlateDelegate(const int32 InP
 // Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.BindGadgetSelectWindowDelegate
 // (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const int32                             InPlayerIndex_0                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const int32                             InPlayerIndex                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_GadgetCustomize2SelectState_C::BindGadgetSelectWindowDelegate(const int32 InPlayerIndex_0)
+void UBPC_GadgetCustomize2SelectState_C::BindGadgetSelectWindowDelegate(const int32 InPlayerIndex)
 {
 	static class UFunction* Func = nullptr;
 
@@ -194,7 +222,7 @@ void UBPC_GadgetCustomize2SelectState_C::BindGadgetSelectWindowDelegate(const in
 
 	Params::BPC_GadgetCustomize2SelectState_C_BindGadgetSelectWindowDelegate Parms{};
 
-	Parms.InPlayerIndex_0 = InPlayerIndex_0;
+	Parms.InPlayerIndex = InPlayerIndex;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -237,20 +265,6 @@ void UBPC_GadgetCustomize2SelectState_C::SetupDonpaTicketBoxWidget()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "SetupDonpaTicketBoxWidget");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.SetupMachineParameterWidget
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UBPC_GadgetCustomize2SelectState_C::SetupMachineParameterWidget()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "SetupMachineParameterWidget");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -384,35 +398,13 @@ void UBPC_GadgetCustomize2SelectState_C::SetupFestaSpecialRule()
 }
 
 
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.UpdateGadgetDetailWindow
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const int32                             InPlayerIndex_0                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const EGadgetId                         InGadgetId                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_GadgetCustomize2SelectState_C::UpdateGadgetDetailWindow(const int32 InPlayerIndex_0, const EGadgetId InGadgetId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "UpdateGadgetDetailWindow");
-
-	Params::BPC_GadgetCustomize2SelectState_C_UpdateGadgetDetailWindow Parms{};
-
-	Parms.InPlayerIndex_0 = InPlayerIndex_0;
-	Parms.InGadgetId = InGadgetId;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.UpdateGadgetCustomWindow
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const int32                             InPlayerIndex_0                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const int32                             InPlayerIndex                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const int32                             InPlateSlotFocusIndex                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_GadgetCustomize2SelectState_C::UpdateGadgetCustomWindow(const int32 InPlayerIndex_0, const int32 InPlateSlotFocusIndex)
+void UBPC_GadgetCustomize2SelectState_C::UpdateGadgetCustomWindow(const int32 InPlayerIndex, const int32 InPlateSlotFocusIndex)
 {
 	static class UFunction* Func = nullptr;
 
@@ -421,64 +413,8 @@ void UBPC_GadgetCustomize2SelectState_C::UpdateGadgetCustomWindow(const int32 In
 
 	Params::BPC_GadgetCustomize2SelectState_C_UpdateGadgetCustomWindow Parms{};
 
-	Parms.InPlayerIndex_0 = InPlayerIndex_0;
+	Parms.InPlayerIndex = InPlayerIndex;
 	Parms.InPlateSlotFocusIndex = InPlateSlotFocusIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.UpdateMachineParameterAll
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void UBPC_GadgetCustomize2SelectState_C::UpdateMachineParameterAll()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "UpdateMachineParameterAll");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.UpdateMachineParameter
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const int32                             InPlayerIndex_0                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const bool                              bDiffVisible                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_GadgetCustomize2SelectState_C::UpdateMachineParameter(const int32 InPlayerIndex_0, const bool bDiffVisible)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "UpdateMachineParameter");
-
-	Params::BPC_GadgetCustomize2SelectState_C_UpdateMachineParameter Parms{};
-
-	Parms.InPlayerIndex_0 = InPlayerIndex_0;
-	Parms.bDiffVisible = bDiffVisible;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.SetPlateWindowInValidIcons
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InPlayerId                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_GadgetCustomize2SelectState_C::SetPlateWindowInValidIcons(int32 InPlayerId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "SetPlateWindowInValidIcons");
-
-	Params::BPC_GadgetCustomize2SelectState_C_SetPlateWindowInValidIcons Parms{};
-
-	Parms.InPlayerId = InPlayerId;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -487,11 +423,11 @@ void UBPC_GadgetCustomize2SelectState_C::SetPlateWindowInValidIcons(int32 InPlay
 // Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.Custom Window on Item Focused
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   InPlayerIndex_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InPlayerIndex                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EGadgetId                               InGadgetId                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EGadgetState                            InGadgetState                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_GadgetCustomize2SelectState_C::Custom_Window_on_Item_Focused(int32 InPlayerIndex_0, EGadgetId InGadgetId, EGadgetState InGadgetState)
+void UBPC_GadgetCustomize2SelectState_C::Custom_Window_on_Item_Focused(int32 InPlayerIndex, EGadgetId InGadgetId, EGadgetState InGadgetState)
 {
 	static class UFunction* Func = nullptr;
 
@@ -500,25 +436,11 @@ void UBPC_GadgetCustomize2SelectState_C::Custom_Window_on_Item_Focused(int32 InP
 
 	Params::BPC_GadgetCustomize2SelectState_C_Custom_Window_on_Item_Focused Parms{};
 
-	Parms.InPlayerIndex_0 = InPlayerIndex_0;
+	Parms.InPlayerIndex = InPlayerIndex;
 	Parms.InGadgetId = InGadgetId;
 	Parms.InGadgetState = InGadgetState;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.FinalizeRewardDialog
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBPC_GadgetCustomize2SelectState_C::FinalizeRewardDialog()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "FinalizeRewardDialog");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -542,38 +464,24 @@ void UBPC_GadgetCustomize2SelectState_C::SetBeforeGadgetPlateRankUpTipsWindowFla
 }
 
 
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.Set Gadget Plate Rank Up ID
+// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.Set Tips Id Gadget Plate
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool*                                   EnableOpenWindow                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_GadgetCustomize2SelectState_C::Set_Gadget_Plate_Rank_Up_ID(bool* EnableOpenWindow)
+void UBPC_GadgetCustomize2SelectState_C::Set_Tips_Id_Gadget_Plate(bool* EnableOpenWindow)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "Set Gadget Plate Rank Up ID");
+		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "Set Tips Id Gadget Plate");
 
-	Params::BPC_GadgetCustomize2SelectState_C_Set_Gadget_Plate_Rank_Up_ID Parms{};
+	Params::BPC_GadgetCustomize2SelectState_C_Set_Tips_Id_Gadget_Plate Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
 	if (EnableOpenWindow != nullptr)
 		*EnableOpenWindow = Parms.EnableOpenWindow;
-}
-
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.SetRacerGadgetPlateDataAll
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UBPC_GadgetCustomize2SelectState_C::SetRacerGadgetPlateDataAll()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "SetRacerGadgetPlateDataAll");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -605,74 +513,6 @@ void UBPC_GadgetCustomize2SelectState_C::SetupInputReceiver()
 }
 
 
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.UpdateTicketBox
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBPC_GadgetCustomize2SelectState_C::UpdateTicketBox()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "UpdateTicketBox");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.ReturnFocusAll
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBPC_GadgetCustomize2SelectState_C::ReturnFocusAll()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "ReturnFocusAll");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.ReturnFocus
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InPlayerIndex_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_GadgetCustomize2SelectState_C::ReturnFocus(int32 InPlayerIndex_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "ReturnFocus");
-
-	Params::BPC_GadgetCustomize2SelectState_C_ReturnFocus Parms{};
-
-	Parms.InPlayerIndex_0 = InPlayerIndex_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.SetAttachedGadgetIdsToWindow
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InPlayerIndex_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_GadgetCustomize2SelectState_C::SetAttachedGadgetIdsToWindow(int32 InPlayerIndex_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "SetAttachedGadgetIdsToWindow");
-
-	Params::BPC_GadgetCustomize2SelectState_C_SetAttachedGadgetIdsToWindow Parms{};
-
-	Parms.InPlayerIndex_0 = InPlayerIndex_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.FinalizeWidgets
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -688,7 +528,7 @@ void UBPC_GadgetCustomize2SelectState_C::FinalizeWidgets()
 
 
 // Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.SetProperties
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBPC_GadgetCustomize2SelectState_C::SetProperties()
 {
@@ -701,163 +541,17 @@ void UBPC_GadgetCustomize2SelectState_C::SetProperties()
 }
 
 
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.CustomWindow_OnFocusChangeUp
+// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.OnAllTipsFinished
 // (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   PlayerIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EGadgetId                               gadgetId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EGadgetCategory                         CategoryId                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EGadgetState                            GadgetState                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_GadgetCustomize2SelectState_C::CustomWindow_OnFocusChangeUp(int32 PlayerIndex, EGadgetId gadgetId, EGadgetCategory CategoryId, EGadgetState GadgetState)
+void UBPC_GadgetCustomize2SelectState_C::OnAllTipsFinished()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "CustomWindow_OnFocusChangeUp");
-
-	Params::BPC_GadgetCustomize2SelectState_C_CustomWindow_OnFocusChangeUp Parms{};
-
-	Parms.PlayerIndex = PlayerIndex;
-	Parms.gadgetId = gadgetId;
-	Parms.CategoryId = CategoryId;
-	Parms.GadgetState = GadgetState;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.CustomWindow_OnFocusChangeDown
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   PlayerIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EGadgetId                               gadgetId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EGadgetCategory                         CategoryId                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EGadgetState                            GadgetState                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_GadgetCustomize2SelectState_C::CustomWindow_OnFocusChangeDown(int32 PlayerIndex, EGadgetId gadgetId, EGadgetCategory CategoryId, EGadgetState GadgetState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "CustomWindow_OnFocusChangeDown");
-
-	Params::BPC_GadgetCustomize2SelectState_C_CustomWindow_OnFocusChangeDown Parms{};
-
-	Parms.PlayerIndex = PlayerIndex;
-	Parms.gadgetId = gadgetId;
-	Parms.CategoryId = CategoryId;
-	Parms.GadgetState = GadgetState;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.CustomWindow_OnFocusChangeRight
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   PlayerIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EGadgetId                               gadgetId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EGadgetCategory                         CategoryId                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EGadgetState                            GadgetState                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_GadgetCustomize2SelectState_C::CustomWindow_OnFocusChangeRight(int32 PlayerIndex, EGadgetId gadgetId, EGadgetCategory CategoryId, EGadgetState GadgetState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "CustomWindow_OnFocusChangeRight");
-
-	Params::BPC_GadgetCustomize2SelectState_C_CustomWindow_OnFocusChangeRight Parms{};
-
-	Parms.PlayerIndex = PlayerIndex;
-	Parms.gadgetId = gadgetId;
-	Parms.CategoryId = CategoryId;
-	Parms.GadgetState = GadgetState;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.CustomWindow_OnFocusChangeLeft
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   PlayerIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EGadgetId                               gadgetId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EGadgetCategory                         CategoryId                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EGadgetState                            GadgetState                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_GadgetCustomize2SelectState_C::CustomWindow_OnFocusChangeLeft(int32 PlayerIndex, EGadgetId gadgetId, EGadgetCategory CategoryId, EGadgetState GadgetState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "CustomWindow_OnFocusChangeLeft");
-
-	Params::BPC_GadgetCustomize2SelectState_C_CustomWindow_OnFocusChangeLeft Parms{};
-
-	Parms.PlayerIndex = PlayerIndex;
-	Parms.gadgetId = gadgetId;
-	Parms.CategoryId = CategoryId;
-	Parms.GadgetState = GadgetState;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.CreateTipsWindow
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EHintId                                 InHintId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_GadgetCustomize2SelectState_C::CreateTipsWindow(EHintId InHintId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "CreateTipsWindow");
-
-	Params::BPC_GadgetCustomize2SelectState_C_CreateTipsWindow Parms{};
-
-	Parms.InHintId = InHintId;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.TipsWindow_CloseEndDelegate
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_GadgetCustomize2SelectState_C::TipsWindow_CloseEndDelegate()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "TipsWindow_CloseEndDelegate");
+		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "OnAllTipsFinished");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.OnDetachGadget
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UObject*                          Object                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// const int32&                            PlayerControllerIndex                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_GadgetCustomize2SelectState_C::OnDetachGadget(class UObject* Object, const int32& PlayerControllerIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "OnDetachGadget");
-
-	Params::BPC_GadgetCustomize2SelectState_C_OnDetachGadget Parms{};
-
-	Parms.Object = Object;
-	Parms.PlayerControllerIndex = PlayerControllerIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -883,14 +577,28 @@ void UBPC_GadgetCustomize2SelectState_C::OnViewParameter(class UObject* Object, 
 }
 
 
+// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.TipsWindow_CloseEndDelegate
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_GadgetCustomize2SelectState_C::TipsWindow_CloseEndDelegate()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "TipsWindow_CloseEndDelegate");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.SelectWindow_OnItemSelected
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int32                                   PlayerIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EGadgetId                               gadgetId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EGadgetId                               GadgetID                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EGadgetState                            GadgetState                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_GadgetCustomize2SelectState_C::SelectWindow_OnItemSelected(int32 PlayerIndex, EGadgetId gadgetId, EGadgetState GadgetState)
+void UBPC_GadgetCustomize2SelectState_C::SelectWindow_OnItemSelected(int32 PlayerIndex, EGadgetId GadgetID, EGadgetState GadgetState)
 {
 	static class UFunction* Func = nullptr;
 
@@ -900,28 +608,8 @@ void UBPC_GadgetCustomize2SelectState_C::SelectWindow_OnItemSelected(int32 Playe
 	Params::BPC_GadgetCustomize2SelectState_C_SelectWindow_OnItemSelected Parms{};
 
 	Parms.PlayerIndex = PlayerIndex;
-	Parms.gadgetId = gadgetId;
+	Parms.GadgetID = GadgetID;
 	Parms.GadgetState = GadgetState;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.SelectWindow_OnCancel
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   PlayerIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_GadgetCustomize2SelectState_C::SelectWindow_OnCancel(int32 PlayerIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "SelectWindow_OnCancel");
-
-	Params::BPC_GadgetCustomize2SelectState_C_SelectWindow_OnCancel Parms{};
-
-	Parms.PlayerIndex = PlayerIndex;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -931,10 +619,10 @@ void UBPC_GadgetCustomize2SelectState_C::SelectWindow_OnCancel(int32 PlayerIndex
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int32                                   PlayerIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EGadgetId                               gadgetId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EGadgetId                               GadgetID                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EGadgetState                            GadgetState                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_GadgetCustomize2SelectState_C::SelectWindow_OnItemFocused(int32 PlayerIndex, EGadgetId gadgetId, EGadgetState GadgetState)
+void UBPC_GadgetCustomize2SelectState_C::SelectWindow_OnItemFocused(int32 PlayerIndex, EGadgetId GadgetID, EGadgetState GadgetState)
 {
 	static class UFunction* Func = nullptr;
 
@@ -944,212 +632,8 @@ void UBPC_GadgetCustomize2SelectState_C::SelectWindow_OnItemFocused(int32 Player
 	Params::BPC_GadgetCustomize2SelectState_C_SelectWindow_OnItemFocused Parms{};
 
 	Parms.PlayerIndex = PlayerIndex;
-	Parms.gadgetId = gadgetId;
+	Parms.GadgetID = GadgetID;
 	Parms.GadgetState = GadgetState;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.RewardDialog_Purchase_OnResult
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EDialogResult                           Result                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_GadgetCustomize2SelectState_C::RewardDialog_Purchase_OnResult(EDialogResult Result)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "RewardDialog_Purchase_OnResult");
-
-	Params::BPC_GadgetCustomize2SelectState_C_RewardDialog_Purchase_OnResult Parms{};
-
-	Parms.Result = Result;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.RewardDialog_Unlock_OnResult
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EDialogResult                           Result                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_GadgetCustomize2SelectState_C::RewardDialog_Unlock_OnResult(EDialogResult Result)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "RewardDialog_Unlock_OnResult");
-
-	Params::BPC_GadgetCustomize2SelectState_C_RewardDialog_Unlock_OnResult Parms{};
-
-	Parms.Result = Result;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.SelectWindow_OnPurchaseAnimFinished
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_GadgetCustomize2SelectState_C::SelectWindow_OnPurchaseAnimFinished()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "SelectWindow_OnPurchaseAnimFinished");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.PlateWindow_OnItemFocused
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   PlayerIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   SlotState                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   SlotIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_GadgetCustomize2SelectState_C::PlateWindow_OnItemFocused(int32 PlayerIndex, int32 SlotState, int32 SlotIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "PlateWindow_OnItemFocused");
-
-	Params::BPC_GadgetCustomize2SelectState_C_PlateWindow_OnItemFocused Parms{};
-
-	Parms.PlayerIndex = PlayerIndex;
-	Parms.SlotState = SlotState;
-	Parms.SlotIndex = SlotIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.PlateWindow_OnItemSelected
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   PlayerIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   SlotState                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   SlotIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_GadgetCustomize2SelectState_C::PlateWindow_OnItemSelected(int32 PlayerIndex, int32 SlotState, int32 SlotIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "PlateWindow_OnItemSelected");
-
-	Params::BPC_GadgetCustomize2SelectState_C_PlateWindow_OnItemSelected Parms{};
-
-	Parms.PlayerIndex = PlayerIndex;
-	Parms.SlotState = SlotState;
-	Parms.SlotIndex = SlotIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.PlateWindow_OnCancel
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   PlayerIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_GadgetCustomize2SelectState_C::PlateWindow_OnCancel(int32 PlayerIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "PlateWindow_OnCancel");
-
-	Params::BPC_GadgetCustomize2SelectState_C_PlateWindow_OnCancel Parms{};
-
-	Parms.PlayerIndex = PlayerIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.PlateWindow_OnLeftShoulder
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   PlayerIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_GadgetCustomize2SelectState_C::PlateWindow_OnLeftShoulder(int32 PlayerIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "PlateWindow_OnLeftShoulder");
-
-	Params::BPC_GadgetCustomize2SelectState_C_PlateWindow_OnLeftShoulder Parms{};
-
-	Parms.PlayerIndex = PlayerIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.PlateWindow_OnRightShoulder
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   PlayerIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_GadgetCustomize2SelectState_C::PlateWindow_OnRightShoulder(int32 PlayerIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "PlateWindow_OnRightShoulder");
-
-	Params::BPC_GadgetCustomize2SelectState_C_PlateWindow_OnRightShoulder Parms{};
-
-	Parms.PlayerIndex = PlayerIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.Finished_SequenceEnd_FadeIn
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EUnionUIFadeDirection                   FadeDirection                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_GadgetCustomize2SelectState_C::Finished_SequenceEnd_FadeIn(EUnionUIFadeDirection FadeDirection)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "Finished_SequenceEnd_FadeIn");
-
-	Params::BPC_GadgetCustomize2SelectState_C_Finished_SequenceEnd_FadeIn Parms{};
-
-	Parms.FadeDirection = FadeDirection;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.GadgetTabSelect
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InPlayerIndex_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InPresetNum                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_GadgetCustomize2SelectState_C::GadgetTabSelect(int32 InPlayerIndex_0, int32 InPresetNum)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "GadgetTabSelect");
-
-	Params::BPC_GadgetCustomize2SelectState_C_GadgetTabSelect Parms{};
-
-	Parms.InPlayerIndex_0 = InPlayerIndex_0;
-	Parms.InPresetNum = InPresetNum;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -1217,81 +701,37 @@ void UBPC_GadgetCustomize2SelectState_C::Finished_SequenceBegin_FadeOut(EUnionUI
 }
 
 
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.GadgetCustomWindow_OnSctollStart
+// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.CreateTipsWindow
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   SelectedPlayerControllerIndex                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EGadgetCategory                         SelectedGadgetCategory                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EGadgetId                               SelectedGadgetId                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EGadgetState                            SelectedGadgetState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EHintId                                 InHintId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_GadgetCustomize2SelectState_C::GadgetCustomWindow_OnSctollStart(int32 SelectedPlayerControllerIndex, EGadgetCategory SelectedGadgetCategory, EGadgetId SelectedGadgetId, EGadgetState SelectedGadgetState)
+void UBPC_GadgetCustomize2SelectState_C::CreateTipsWindow(EHintId InHintId)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "GadgetCustomWindow_OnSctollStart");
+		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "CreateTipsWindow");
 
-	Params::BPC_GadgetCustomize2SelectState_C_GadgetCustomWindow_OnSctollStart Parms{};
+	Params::BPC_GadgetCustomize2SelectState_C_CreateTipsWindow Parms{};
 
-	Parms.SelectedPlayerControllerIndex = SelectedPlayerControllerIndex;
-	Parms.SelectedGadgetCategory = SelectedGadgetCategory;
-	Parms.SelectedGadgetId = SelectedGadgetId;
-	Parms.SelectedGadgetState = SelectedGadgetState;
+	Parms.InHintId = InHintId;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.GadgetCustomWindow_OnGadgetCategoryCancel
+// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.RequestNextTips
 // (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   SelectedPlayerControllerIndex                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EGadgetCategory                         SelectedGadgetCategory                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EGadgetId                               SelectedGadgetId                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EGadgetState                            SelectedGadgetState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_GadgetCustomize2SelectState_C::GadgetCustomWindow_OnGadgetCategoryCancel(int32 SelectedPlayerControllerIndex, EGadgetCategory SelectedGadgetCategory, EGadgetId SelectedGadgetId, EGadgetState SelectedGadgetState)
+void UBPC_GadgetCustomize2SelectState_C::RequestNextTips()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "GadgetCustomWindow_OnGadgetCategoryCancel");
+		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "RequestNextTips");
 
-	Params::BPC_GadgetCustomize2SelectState_C_GadgetCustomWindow_OnGadgetCategoryCancel Parms{};
-
-	Parms.SelectedPlayerControllerIndex = SelectedPlayerControllerIndex;
-	Parms.SelectedGadgetCategory = SelectedGadgetCategory;
-	Parms.SelectedGadgetId = SelectedGadgetId;
-	Parms.SelectedGadgetState = SelectedGadgetState;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_GadgetCustomize2SelectState.BPC_GadgetCustomize2SelectState_C.GadgetCustomWindow_OnGadgetCategoryDecide
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   SelectedPlayerControllerIndex                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EGadgetCategory                         SelectedGadgetCategory                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EGadgetId                               SelectedGadgetId                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EGadgetState                            SelectedGadgetState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_GadgetCustomize2SelectState_C::GadgetCustomWindow_OnGadgetCategoryDecide(int32 SelectedPlayerControllerIndex, EGadgetCategory SelectedGadgetCategory, EGadgetId SelectedGadgetId, EGadgetState SelectedGadgetState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2SelectState_C", "GadgetCustomWindow_OnGadgetCategoryDecide");
-
-	Params::BPC_GadgetCustomize2SelectState_C_GadgetCustomWindow_OnGadgetCategoryDecide Parms{};
-
-	Parms.SelectedPlayerControllerIndex = SelectedPlayerControllerIndex;
-	Parms.SelectedGadgetCategory = SelectedGadgetCategory;
-	Parms.SelectedGadgetId = SelectedGadgetId;
-	Parms.SelectedGadgetState = SelectedGadgetState;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

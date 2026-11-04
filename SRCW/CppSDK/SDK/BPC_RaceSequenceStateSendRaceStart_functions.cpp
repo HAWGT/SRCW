@@ -264,12 +264,12 @@ void UBPC_RaceSequenceStateSendRaceStart_C::GetLobbyContextParam()
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int32*                                  characterId                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32*                                  courseId                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32*                                  CourseId                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // struct FCommon_MachineData*             MachineData                                            (Parm, OutParm)
 // struct FCommon_GadgetData*              GadgetData                                             (Parm, OutParm, NoDestructor)
 // struct FCommon_DegreeData*              DegreeData                                             (Parm, OutParm, NoDestructor)
 
-void UBPC_RaceSequenceStateSendRaceStart_C::GetStartSaveRequestParam(int32* characterId, int32* courseId, struct FCommon_MachineData* MachineData, struct FCommon_GadgetData* GadgetData, struct FCommon_DegreeData* DegreeData)
+void UBPC_RaceSequenceStateSendRaceStart_C::GetStartSaveRequestParam(int32* characterId, int32* CourseId, struct FCommon_MachineData* MachineData, struct FCommon_GadgetData* GadgetData, struct FCommon_DegreeData* DegreeData)
 {
 	static class UFunction* Func = nullptr;
 
@@ -283,8 +283,8 @@ void UBPC_RaceSequenceStateSendRaceStart_C::GetStartSaveRequestParam(int32* char
 	if (characterId != nullptr)
 		*characterId = Parms.characterId;
 
-	if (courseId != nullptr)
-		*courseId = Parms.courseId;
+	if (CourseId != nullptr)
+		*CourseId = Parms.CourseId;
 
 	if (MachineData != nullptr)
 		*MachineData = std::move(Parms.MachineData);

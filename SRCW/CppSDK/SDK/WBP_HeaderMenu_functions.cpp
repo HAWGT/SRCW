@@ -247,6 +247,48 @@ void UWBP_HeaderMenu_C::SetChallengeNotice(TArray<struct FChallengeStruct>& InPa
 }
 
 
+// Function WBP_HeaderMenu.WBP_HeaderMenu_C.SetHeaderDuelCompeRateIconData
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// const int32                             InRoundPoint                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_HeaderMenu_C::SetHeaderDuelCompeRateIconData(const int32 InRoundPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_HeaderMenu_C", "SetHeaderDuelCompeRateIconData");
+
+	Params::WBP_HeaderMenu_C_SetHeaderDuelCompeRateIconData Parms{};
+
+	Parms.InRoundPoint = InRoundPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_HeaderMenu.WBP_HeaderMenu_C.SetHeaderLegendCompeRateIconData
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// ELegendCompeRateGrade                   LegendGrade                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InLegendRate                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_HeaderMenu_C::SetHeaderLegendCompeRateIconData(ELegendCompeRateGrade LegendGrade, int32 InLegendRate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_HeaderMenu_C", "SetHeaderLegendCompeRateIconData");
+
+	Params::WBP_HeaderMenu_C_SetHeaderLegendCompeRateIconData Parms{};
+
+	Parms.LegendGrade = LegendGrade;
+	Parms.InLegendRate = InLegendRate;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_HeaderMenu.WBP_HeaderMenu_C.SetHeaderUserData
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -358,6 +400,26 @@ void UWBP_HeaderMenu_C::SetVisibleLR(bool bIsLButton, ESlateVisibility Visibilit
 
 	Parms.bIsLButton = bIsLButton;
 	Parms.Visibility_0 = Visibility_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_HeaderMenu.WBP_HeaderMenu_C.SetWinStreakWidgetVisibility
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsVisible_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_HeaderMenu_C::SetWinStreakWidgetVisibility(bool IsVisible_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_HeaderMenu_C", "SetWinStreakWidgetVisibility");
+
+	Params::WBP_HeaderMenu_C_SetWinStreakWidgetVisibility Parms{};
+
+	Parms.IsVisible_0 = IsVisible_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

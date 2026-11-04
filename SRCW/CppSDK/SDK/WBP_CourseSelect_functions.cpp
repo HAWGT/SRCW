@@ -17,6 +17,62 @@
 namespace SDK
 {
 
+// Function WBP_CourseSelect.WBP_CourseSelect_C.BindDefaultButton
+// (Event, Protected, BlueprintEvent)
+
+void UWBP_CourseSelect_C::BindDefaultButton()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_CourseSelect_C", "BindDefaultButton");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_CourseSelect.WBP_CourseSelect_C.BindFriendMatchButton
+// (Event, Protected, BlueprintEvent)
+
+void UWBP_CourseSelect_C::BindFriendMatchButton()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_CourseSelect_C", "BindFriendMatchButton");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_CourseSelect.WBP_CourseSelect_C.BindGrandPrixButton
+// (Event, Protected, BlueprintEvent)
+
+void UWBP_CourseSelect_C::BindGrandPrixButton()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_CourseSelect_C", "BindGrandPrixButton");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_CourseSelect.WBP_CourseSelect_C.BindRivalDuelButton
+// (Event, Protected, BlueprintEvent)
+
+void UWBP_CourseSelect_C::BindRivalDuelButton()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_CourseSelect_C", "BindRivalDuelButton");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_CourseSelect.WBP_CourseSelect_C.CalcRandomStageIndexBP
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:

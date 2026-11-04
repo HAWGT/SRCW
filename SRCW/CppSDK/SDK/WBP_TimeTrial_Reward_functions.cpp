@@ -142,27 +142,6 @@ void UWBP_TimeTrial_Reward_C::GetTicketNum(int32* Num)
 }
 
 
-// Function WBP_TimeTrial_Reward.WBP_TimeTrial_Reward_C.IsResultReward
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool*                                   bIsResultReward                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_TimeTrial_Reward_C::IsResultReward(bool* bIsResultReward)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Reward_C", "IsResultReward");
-
-	Params::WBP_TimeTrial_Reward_C_IsResultReward Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (bIsResultReward != nullptr)
-		*bIsResultReward = Parms.bIsResultReward;
-}
-
-
 // Function WBP_TimeTrial_Reward.WBP_TimeTrial_Reward_C.IsRewardDispComplete
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:

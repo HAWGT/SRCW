@@ -308,26 +308,6 @@ void UWBP_GadgetCustom_Sub_TypeBox_C::SetFocusIndex(int32 InCategoryIndex)
 }
 
 
-// Function WBP_GadgetCustom_Sub_TypeBox.WBP_GadgetCustom_Sub_TypeBox_C.SetLightVer
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    IsLight                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_GadgetCustom_Sub_TypeBox_C::SetLightVer(bool IsLight)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TypeBox_C", "SetLightVer");
-
-	Params::WBP_GadgetCustom_Sub_TypeBox_C_SetLightVer Parms{};
-
-	Parms.IsLight = IsLight;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_GadgetCustom_Sub_TypeBox.WBP_GadgetCustom_Sub_TypeBox_C.SetMode
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:

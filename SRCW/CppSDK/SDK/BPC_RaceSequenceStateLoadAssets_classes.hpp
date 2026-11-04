@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
 #include "UnionRun_structs.hpp"
-#include "UNION_structs.hpp"
-#include "UNION_classes.hpp"
 #include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
+#include "UNION_structs.hpp"
+#include "UNION_classes.hpp"
 #include "UnionUI_structs.hpp"
 
 
@@ -23,7 +23,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BPC_RaceSequenceStateLoadAssets.BPC_RaceSequenceStateLoadAssets_C
-// 0x0360 (0x0590 - 0x0230)
+// 0x0388 (0x05B8 - 0x0230)
 class UBPC_RaceSequenceStateLoadAssets_C final : public URaceSequenceStateLoadAssets
 {
 public:
@@ -37,7 +37,7 @@ public:
 	int32                                         TempDomainIndex;                                   // 0x0270(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_274[0x4];                                      // 0x0274(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDateTime                              StartTime;                                         // 0x0278(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FDateTime                              endTime;                                           // 0x0280(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FDateTime                              EndTime;                                           // 0x0280(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class UUnionComPathBinaryDataAsset*           TempComPathAsset;                                  // 0x0288(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FPrimaryAssetId>                LoadCourseAssetIdList;                             // 0x0290(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TMap<EStageId, struct FPrimaryAssetId>        StageDataAssetMap;                                 // 0x02A0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
@@ -77,59 +77,61 @@ public:
 	TArray<class UStaticMesh*>                    TempEntranceMesh;                                  // 0x0568(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TArray<class UStaticMesh*>                    TempExitMesh;                                      // 0x0578(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                          NewVar_0;                                          // 0x0588(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_589[0x7];                                      // 0x0589(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UWorld>                  TempIrregularLevel;                                // 0x0590(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash)
 
 public:
+	void BeginLoadTimeMeasurement();
+	void Completed_0236B9464600658108D0BDBEFF5198A5(const TArray<class UObject*>& Loaded);
+	void Completed_C44C0BCB4761CE1EEC04BEB933867411(const TArray<class UObject*>& Loaded);
 	void DevelopmentTimerLap(const class FString& Tag);
+	void EndLoadTimeMeasurement();
+	void ExecuteUbergraph_BPC_RaceSequenceStateLoadAssets(int32 EntryPoint);
+	void OnExitState();
+	void OnInitState();
+	void OnLoaded_0226E8684E9F4CF1912DD2B08BCDD432(class UObject* Loaded);
+	void OnLoaded_1881E30949760AF8F517E1A80588BBD2(class UObject* Loaded);
+	void OnLoaded_1881E30949760AF8F517E1A8502FCB2D(class UObject* Loaded);
+	void OnLoaded_1881E30949760AF8F517E1A8BAAC9964(class UObject* Loaded);
+	void OnLoaded_1881E30949760AF8F517E1A8E8E12334(class UObject* Loaded);
+	void OnLoaded_2099005542700D2022F146817F7CD551(class UObject* Loaded);
+	void OnLoaded_26872E9640F7F23EF04A41B77864513E(class UObject* Loaded);
+	void OnLoaded_31E9E3EE486E6EF4E8ECDC82813540EA(class UObject* Loaded);
+	void OnLoaded_35CC1E574E5588E39448ADBB4E57CA00(class UObject* Loaded);
+	void OnLoaded_44A7D1534DFE4EE4FB91AD8375BFD3E2(class UObject* Loaded);
+	void OnLoaded_44C233E04C497E898A6EE68EA5506F5A(class UObject* Loaded);
+	void OnLoaded_470FF1454207867BDDE76AB7420F01A4(class UObject* Loaded);
+	void OnLoaded_53F9E91A46FA061383A2709D7D14B927(class UObject* Loaded);
+	void OnLoaded_697F5A3248F5E8F3196B0098EA6A45BF(class UObject* Loaded);
+	void OnLoaded_74D1CC7A4F84EBED1C5CFC8D43B48DB7(class UObject* Loaded);
+	void OnLoaded_7996DEF049A092A6E49671B674D70BB1(class UObject* Loaded);
+	void OnLoaded_7FB8D15543DD9CE9EC69B19710B777B9(class UObject* Loaded);
+	void OnLoaded_85DA89AA4A74182281DE208A379588AE(class UObject* Loaded);
+	void OnLoaded_85DA89AA4A74182281DE208A65D832FE(class UObject* Loaded);
+	void OnLoaded_85DA89AA4A74182281DE208A88B1AA18(class UObject* Loaded);
+	void OnLoaded_85DA89AA4A74182281DE208ADD16DAE7(class UObject* Loaded);
+	void OnLoaded_9FF53A5440DBF220AB61D1A2BE554E6B(class UObject* Loaded);
+	void OnLoaded_AC84F9DA4173DFEB8B103D821EDCE00B(class UObject* Loaded);
+	void OnLoaded_D6D8FBBE4351F56F8B516DAE7F6C1B0F(class UObject* Loaded);
+	void OnLoaded_DAE0F2D042E1EE8E981273800B5808ED(class UObject* Loaded);
+	void OnLoaded_DAE0F2D042E1EE8E981273805EFF7812(class UObject* Loaded);
+	void OnLoaded_DAE0F2D042E1EE8E98127380B47C2A5B(class UObject* Loaded);
+	void OnLoaded_DAE0F2D042E1EE8E98127380E631900B(class UObject* Loaded);
+	void OnLoaded_E29ACA1D498FE0A77FA03FBA82F46999(class UObject* Loaded);
+	void OnLoaded_F240FC9447C9A18C546668AD2026A89D(class UObject* Loaded);
+	void OnLoaded_F240FC9447C9A18C546668AD7581D862(class UObject* Loaded);
+	void OnLoaded_F240FC9447C9A18C546668AD9F028A2B(class UObject* Loaded);
+	void OnLoaded_F240FC9447C9A18C546668ADCD4F307B(class UObject* Loaded);
+	void OnLoaded_F53382BD4C684157B17F42A5912B4B19(class UObject* Loaded);
+	void OnLoaded_FFB6617641135AD0D32A768FC1989049(class UObject* Loaded);
+	void OnLoadedStageAsset(int32 StageIndex);
+	void PreCreateRaceSingle(EStageId StageId, class UUnionBtCollisionBinaryAsset* CollisionAsset, class UUnionNavigationBinaryDataAsset* NavigationAsset, class UUnionRunPathBinaryDataAsset* RuPathAsset, class UUnionComPathBinaryDataAsset* ComPathAsset);
+	void Register_Object_Level(class UPrimaryStageDataAsset* StageData);
 	void SelectMaterialInstance(TSoftObjectPtr<class UMaterialInstance> A, TSoftObjectPtr<class UMaterialInstance> B, bool Select, TSoftObjectPtr<class UMaterialInstance>* Ret);
 	void SelectTextureCube(TSoftObjectPtr<class UTextureCube> A, TSoftObjectPtr<class UTextureCube> B, bool Select, TSoftObjectPtr<class UTextureCube>* Ret);
-	void RegisterObjectLevel(class UPrimaryStageDataAsset* StageData);
-	void EndLoadTimeMeasurement();
-	void BeginLoadTimeMeasurement();
-	void PreCreateRaceSingle(EStageId StageId, class UUnionBtCollisionBinaryAsset* CollisionAsset, class UUnionNavigationBinaryDataAsset* NavigationAsset, class UUnionRunPathBinaryDataAsset* RuPathAsset, class UUnionComPathBinaryDataAsset* ComPathAsset);
-	void OnLoaded_1881E30949760AF8F517E1A8E8E12334(class UObject* Loaded);
-	void OnLoaded_85DA89AA4A74182281DE208A65D832FE(class UObject* Loaded);
-	void OnLoaded_DAE0F2D042E1EE8E98127380E631900B(class UObject* Loaded);
-	void OnLoaded_F240FC9447C9A18C546668ADCD4F307B(class UObject* Loaded);
-	void OnLoaded_35CC1E574E5588E39448ADBB4E57CA00(class UObject* Loaded);
-	void OnLoaded_F53382BD4C684157B17F42A5912B4B19(class UObject* Loaded);
-	void OnLoaded_1881E30949760AF8F517E1A80588BBD2(class UObject* Loaded);
-	void OnLoaded_85DA89AA4A74182281DE208A88B1AA18(class UObject* Loaded);
-	void OnLoaded_DAE0F2D042E1EE8E981273800B5808ED(class UObject* Loaded);
-	void OnLoaded_F240FC9447C9A18C546668AD2026A89D(class UObject* Loaded);
-	void OnLoaded_1881E30949760AF8F517E1A8502FCB2D(class UObject* Loaded);
-	void OnLoaded_85DA89AA4A74182281DE208ADD16DAE7(class UObject* Loaded);
-	void Completed_0236B9464600658108D0BDBEFF5198A5(const TArray<class UObject*>& Loaded);
-	void OnLoaded_74D1CC7A4F84EBED1C5CFC8D43B48DB7(class UObject* Loaded);
-	void OnLoaded_FFB6617641135AD0D32A768FC1989049(class UObject* Loaded);
-	void OnLoaded_7FB8D15543DD9CE9EC69B19710B777B9(class UObject* Loaded);
-	void OnLoaded_26872E9640F7F23EF04A41B77864513E(class UObject* Loaded);
-	void OnLoaded_44A7D1534DFE4EE4FB91AD8375BFD3E2(class UObject* Loaded);
-	void OnLoaded_31E9E3EE486E6EF4E8ECDC82813540EA(class UObject* Loaded);
-	void OnLoaded_AC84F9DA4173DFEB8B103D821EDCE00B(class UObject* Loaded);
-	void OnLoaded_7996DEF049A092A6E49671B674D70BB1(class UObject* Loaded);
-	void OnLoaded_E29ACA1D498FE0A77FA03FBA82F46999(class UObject* Loaded);
-	void OnLoaded_53F9E91A46FA061383A2709D7D14B927(class UObject* Loaded);
-	void OnLoaded_0226E8684E9F4CF1912DD2B08BCDD432(class UObject* Loaded);
-	void OnLoaded_44C233E04C497E898A6EE68EA5506F5A(class UObject* Loaded);
-	void OnLoaded_2099005542700D2022F146817F7CD551(class UObject* Loaded);
-	void OnLoaded_DAE0F2D042E1EE8E981273805EFF7812(class UObject* Loaded);
-	void OnLoaded_697F5A3248F5E8F3196B0098EA6A45BF(class UObject* Loaded);
-	void OnLoaded_470FF1454207867BDDE76AB7420F01A4(class UObject* Loaded);
-	void OnLoaded_9FF53A5440DBF220AB61D1A2BE554E6B(class UObject* Loaded);
-	void OnLoaded_D6D8FBBE4351F56F8B516DAE7F6C1B0F(class UObject* Loaded);
-	void OnLoaded_F240FC9447C9A18C546668AD7581D862(class UObject* Loaded);
-	void Completed_C44C0BCB4761CE1EEC04BEB933867411(const TArray<class UObject*>& Loaded);
-	void OnLoaded_F240FC9447C9A18C546668AD9F028A2B(class UObject* Loaded);
-	void OnLoaded_DAE0F2D042E1EE8E98127380B47C2A5B(class UObject* Loaded);
-	void OnLoaded_85DA89AA4A74182281DE208A379588AE(class UObject* Loaded);
-	void OnLoaded_1881E30949760AF8F517E1A8BAAC9964(class UObject* Loaded);
-	void OnInitState();
-	void OnLoadedStageAsset(int32 StageIndex);
-	void OnExitState();
-	void ExecuteUbergraph_BPC_RaceSequenceStateLoadAssets(int32 EntryPoint);
 
-	void GetGroupRuleData(EGroupRaceRule GroupRaceRule, struct FGroupRaceRuleData* GroupRaceRuleData) const;
 	void Get_Group_Rule_Data_Impl(EGroupRaceRule GroupRaceRule, struct FGroupRaceRuleData* GroupRaceRuleData) const;
+	void GetGroupRuleData(EGroupRaceRule GroupRaceRule, struct FGroupRaceRuleData* GroupRaceRuleData) const;
 
 public:
 	static class UClass* StaticClass()

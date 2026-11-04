@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
 #include "UnionUI_structs.hpp"
 
 
@@ -85,6 +85,7 @@ public:
 	void OnLeftStickButtonReleasedWithPlayerId(const int32& PlayerControllerIndex);
 	void OnPanelCancel_Impl(class UUnionUIButtonBase* Button, int32 ButtonIndex);
 	void OnPanelDecision_Impl(class UUnionUIButtonBase* Button, int32 ButtonIndex);
+	void OnPanelDecisionDown_Impl(class UUnionUIButtonBase* Button, int32 ButtonIndex);
 	void OnRightKeyPressed();
 	void OnRightKeyPressedWithPlayerId(const int32& PlayerControllerIndex);
 	void OnRightKeyReleased();
@@ -114,7 +115,7 @@ public:
 	void PlayPopupOutAnim(bool bGetOutAnimCallback);
 	void SetButtonFocusType(EButtonFocusType ButtonFocusType);
 	void SetButtonsInteractableState(class UUnionUIButtonsPanel* Buttons, bool bIsInteractable);
-	void SettingGrayOutButton(int32 SwitcherIndex, int32 ButtonIndex);
+	void SettingGrayOutButton(int32 SwitcherIndex, int32 ButtonIndex, bool bGrayOut);
 	void Setup(int32 SwitcherIndex, EPrivateMatchShowMenuType OpenShowMenuType);
 	void SetupButtonsPanels();
 	void SetupCompletedWindow(bool bJoin);

@@ -17,6 +17,40 @@
 namespace SDK
 {
 
+// Function BPC_NoticeEventEnd.BPC_NoticeEventEnd_C.ExecuteUbergraph_BPC_NoticeEventEnd
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_NoticeEventEnd_C::ExecuteUbergraph_BPC_NoticeEventEnd(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_NoticeEventEnd_C", "ExecuteUbergraph_BPC_NoticeEventEnd");
+
+	Params::BPC_NoticeEventEnd_C_ExecuteUbergraph_BPC_NoticeEventEnd Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_NoticeEventEnd.BPC_NoticeEventEnd_C.FinishNoticeEventEnd
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_NoticeEventEnd_C::FinishNoticeEventEnd()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_NoticeEventEnd_C", "FinishNoticeEventEnd");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BPC_NoticeEventEnd.BPC_NoticeEventEnd_C.GetFestaIdValue
 // (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -38,63 +72,78 @@ void UBPC_NoticeEventEnd_C::GetFestaIdValue(int32* festaId)
 }
 
 
-// Function BPC_NoticeEventEnd.BPC_NoticeEventEnd_C.Set Footer Visibility
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BPC_NoticeEventEnd.BPC_NoticeEventEnd_C.GetPlayerRankingPoint
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    IsVisible                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32*                                  Point                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_NoticeEventEnd_C::Set_Footer_Visibility(bool IsVisible)
+void UBPC_NoticeEventEnd_C::GetPlayerRankingPoint(int32* Point)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_NoticeEventEnd_C", "Set Footer Visibility");
+		Func = Class->GetFunction("BPC_NoticeEventEnd_C", "GetPlayerRankingPoint");
 
-	Params::BPC_NoticeEventEnd_C_Set_Footer_Visibility Parms{};
-
-	Parms.IsVisible = IsVisible;
+	Params::BPC_NoticeEventEnd_C_GetPlayerRankingPoint Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (Point != nullptr)
+		*Point = Parms.Point;
 }
 
 
-// Function BPC_NoticeEventEnd.BPC_NoticeEventEnd_C.OnInitState
-// (Event, Public, BlueprintEvent)
+// Function BPC_NoticeEventEnd.BPC_NoticeEventEnd_C.GetRewardDialogTitle
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class FText*                            Text                                                   (Parm, OutParm)
 
-void UBPC_NoticeEventEnd_C::OnInitState()
+void UBPC_NoticeEventEnd_C::GetRewardDialogTitle(class FText* Text)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_NoticeEventEnd_C", "OnInitState");
+		Func = Class->GetFunction("BPC_NoticeEventEnd_C", "GetRewardDialogTitle");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BPC_NoticeEventEnd_C_GetRewardDialogTitle Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Text != nullptr)
+		*Text = std::move(Parms.Text);
 }
 
 
-// Function BPC_NoticeEventEnd.BPC_NoticeEventEnd_C.OnExitState
-// (Event, Public, BlueprintEvent)
+// Function BPC_NoticeEventEnd.BPC_NoticeEventEnd_C.IsShowEventEndInfoWindow
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool*                                   IsShown                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_NoticeEventEnd_C::OnExitState()
+void UBPC_NoticeEventEnd_C::IsShowEventEndInfoWindow(bool* IsShown)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_NoticeEventEnd_C", "OnExitState");
+		Func = Class->GetFunction("BPC_NoticeEventEnd_C", "IsShowEventEndInfoWindow");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BPC_NoticeEventEnd_C_IsShowEventEndInfoWindow Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (IsShown != nullptr)
+		*IsShown = Parms.IsShown;
 }
 
 
-// Function BPC_NoticeEventEnd.BPC_NoticeEventEnd_C.OnClosed_ItemGet
+// Function BPC_NoticeEventEnd.BPC_NoticeEventEnd_C.NoReward
 // (BlueprintCallable, BlueprintEvent)
 
-void UBPC_NoticeEventEnd_C::OnClosed_ItemGet()
+void UBPC_NoticeEventEnd_C::NoReward()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_NoticeEventEnd_C", "OnClosed_ItemGet");
+		Func = Class->GetFunction("BPC_NoticeEventEnd_C", "NoReward");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -114,15 +163,63 @@ void UBPC_NoticeEventEnd_C::OnClosed_EventEndWidget()
 }
 
 
-// Function BPC_NoticeEventEnd.BPC_NoticeEventEnd_C.StartClaimRankingRewards
+// Function BPC_NoticeEventEnd.BPC_NoticeEventEnd_C.OnClosed_ItemGet
 // (BlueprintCallable, BlueprintEvent)
 
-void UBPC_NoticeEventEnd_C::StartClaimRankingRewards()
+void UBPC_NoticeEventEnd_C::OnClosed_ItemGet()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_NoticeEventEnd_C", "StartClaimRankingRewards");
+		Func = Class->GetFunction("BPC_NoticeEventEnd_C", "OnClosed_ItemGet");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_NoticeEventEnd.BPC_NoticeEventEnd_C.OnExitState
+// (Event, Public, BlueprintEvent)
+
+void UBPC_NoticeEventEnd_C::OnExitState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_NoticeEventEnd_C", "OnExitState");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_NoticeEventEnd.BPC_NoticeEventEnd_C.OnFinishedFade
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EUnionUIFadeDirection                   FadeDirection                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_NoticeEventEnd_C::OnFinishedFade(EUnionUIFadeDirection FadeDirection)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_NoticeEventEnd_C", "OnFinishedFade");
+
+	Params::BPC_NoticeEventEnd_C_OnFinishedFade Parms{};
+
+	Parms.FadeDirection = FadeDirection;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_NoticeEventEnd.BPC_NoticeEventEnd_C.OnInitState
+// (Event, Public, BlueprintEvent)
+
+void UBPC_NoticeEventEnd_C::OnInitState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_NoticeEventEnd_C", "OnInitState");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -148,35 +245,15 @@ void UBPC_NoticeEventEnd_C::OnSaveComplete(ESaveDataStatus Status)
 }
 
 
-// Function BPC_NoticeEventEnd.BPC_NoticeEventEnd_C.OnFinishedFade
+// Function BPC_NoticeEventEnd.BPC_NoticeEventEnd_C.OnSkiped_ShowEventEndWidget
 // (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EUnionUIFadeDirection                   FadeDirection                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_NoticeEventEnd_C::OnFinishedFade(EUnionUIFadeDirection FadeDirection)
+void UBPC_NoticeEventEnd_C::OnSkiped_ShowEventEndWidget()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_NoticeEventEnd_C", "OnFinishedFade");
-
-	Params::BPC_NoticeEventEnd_C_OnFinishedFade Parms{};
-
-	Parms.FadeDirection = FadeDirection;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_NoticeEventEnd.BPC_NoticeEventEnd_C.NoReward
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_NoticeEventEnd_C::NoReward()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_NoticeEventEnd_C", "NoReward");
+		Func = Class->GetFunction("BPC_NoticeEventEnd_C", "OnSkiped_ShowEventEndWidget");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -196,17 +273,23 @@ void UBPC_NoticeEventEnd_C::SaveStart()
 }
 
 
-// Function BPC_NoticeEventEnd.BPC_NoticeEventEnd_C.FinishNoticeEventEnd
-// (BlueprintCallable, BlueprintEvent)
+// Function BPC_NoticeEventEnd.BPC_NoticeEventEnd_C.Set Footer Visibility
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    IsVisible                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_NoticeEventEnd_C::FinishNoticeEventEnd()
+void UBPC_NoticeEventEnd_C::Set_Footer_Visibility(bool IsVisible)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_NoticeEventEnd_C", "FinishNoticeEventEnd");
+		Func = Class->GetFunction("BPC_NoticeEventEnd_C", "Set Footer Visibility");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BPC_NoticeEventEnd_C_Set_Footer_Visibility Parms{};
+
+	Parms.IsVisible = IsVisible;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -224,23 +307,17 @@ void UBPC_NoticeEventEnd_C::ShowDonpaTicketDiff()
 }
 
 
-// Function BPC_NoticeEventEnd.BPC_NoticeEventEnd_C.ExecuteUbergraph_BPC_NoticeEventEnd
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BPC_NoticeEventEnd.BPC_NoticeEventEnd_C.StartClaimRankingRewards
+// (BlueprintCallable, BlueprintEvent)
 
-void UBPC_NoticeEventEnd_C::ExecuteUbergraph_BPC_NoticeEventEnd(int32 EntryPoint)
+void UBPC_NoticeEventEnd_C::StartClaimRankingRewards()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_NoticeEventEnd_C", "ExecuteUbergraph_BPC_NoticeEventEnd");
+		Func = Class->GetFunction("BPC_NoticeEventEnd_C", "StartClaimRankingRewards");
 
-	Params::BPC_NoticeEventEnd_C_ExecuteUbergraph_BPC_NoticeEventEnd Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

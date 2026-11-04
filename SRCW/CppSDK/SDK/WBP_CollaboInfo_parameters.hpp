@@ -14,6 +14,20 @@
 namespace SDK::Params
 {
 
+// Function WBP_CollaboInfo.WBP_CollaboInfo_C.ReleaseResource
+// 0x0020 (0x0020 - 0x0000)
+struct WBP_CollaboInfo_C_ReleaseResource final
+{
+public:
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               CallFunc_Array_Get_Item;                           // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_CollaboInfo_C_ReleaseResource;
+
 // Function WBP_CollaboInfo.WBP_CollaboInfo_C.SetSchedule
 // 0x0010 (0x0010 - 0x0000)
 struct WBP_CollaboInfo_C_SetSchedule final
@@ -24,12 +38,13 @@ public:
 DUMPER7_ASSERTS_WBP_CollaboInfo_C_SetSchedule;
 
 // Function WBP_CollaboInfo.WBP_CollaboInfo_C.SetTextureBG
-// 0x0010 (0x0010 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct WBP_CollaboInfo_C_SetTextureBG final
 {
 public:
 	class UTexture2D*                             Texture;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_CollaboInfo_C_SetTextureBG;
 

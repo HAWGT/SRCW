@@ -17,6 +17,20 @@
 namespace SDK
 {
 
+// Function WBP_EventEndInfo_CMN_window.WBP_EventEndInfo_CMN_window_C.BndEvt__WBP_EventEndInfo_CMN_window_MouseInteraction_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWBP_EventEndInfo_CMN_window_C::BndEvt__WBP_EventEndInfo_CMN_window_MouseInteraction_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "BndEvt__WBP_EventEndInfo_CMN_window_MouseInteraction_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_EventEndInfo_CMN_window.WBP_EventEndInfo_CMN_window_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
@@ -1133,6 +1147,26 @@ void UWBP_EventEndInfo_CMN_window_C::Set_Event_Name(const class FText& FestaName
 }
 
 
+// Function WBP_EventEndInfo_CMN_window.WBP_EventEndInfo_CMN_window_C.SetFestaRankingType
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EFestaRankingType                       InRankingType                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_EventEndInfo_CMN_window_C::SetFestaRankingType(EFestaRankingType InRankingType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "SetFestaRankingType");
+
+	Params::WBP_EventEndInfo_CMN_window_C_SetFestaRankingType Parms{};
+
+	Parms.InRankingType = InRankingType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_EventEndInfo_CMN_window.WBP_EventEndInfo_CMN_window_C.SetRankingLabelText
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -1148,26 +1182,6 @@ void UWBP_EventEndInfo_CMN_window_C::SetRankingLabelText(const class FText& Rank
 	Params::WBP_EventEndInfo_CMN_window_C_SetRankingLabelText Parms{};
 
 	Parms.RankingLavelText = std::move(RankingLavelText);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_EventEndInfo_CMN_window.WBP_EventEndInfo_CMN_window_C.SetRankingTitleText
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FText&                      TitleName                                              (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void UWBP_EventEndInfo_CMN_window_C::SetRankingTitleText(const class FText& TitleName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "SetRankingTitleText");
-
-	Params::WBP_EventEndInfo_CMN_window_C_SetRankingTitleText Parms{};
-
-	Parms.TitleName = std::move(TitleName);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -1199,9 +1213,9 @@ void UWBP_EventEndInfo_CMN_window_C::SetResult(int32 Ranking_0, int32 Point_0)
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const struct FDateTime&                 StartTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// const struct FDateTime&                 endTime                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FDateTime&                 EndTime                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_EventEndInfo_CMN_window_C::SetSchedule(const struct FDateTime& StartTime, const struct FDateTime& endTime)
+void UWBP_EventEndInfo_CMN_window_C::SetSchedule(const struct FDateTime& StartTime, const struct FDateTime& EndTime)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1211,7 +1225,7 @@ void UWBP_EventEndInfo_CMN_window_C::SetSchedule(const struct FDateTime& StartTi
 	Params::WBP_EventEndInfo_CMN_window_C_SetSchedule Parms{};
 
 	Parms.StartTime = std::move(StartTime);
-	Parms.endTime = std::move(endTime);
+	Parms.EndTime = std::move(EndTime);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

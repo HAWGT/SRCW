@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
 
 
 namespace SDK
@@ -45,6 +45,7 @@ public:
 	void BindOnReceiveInvite();
 	void CallSendInvitationFailed();
 	void CheckInvitationNoticeDisplay(class ULobbyJoinInfo* InLobbyJoinInfo, bool* bOutDisplay);
+	void CREATEDELEGATE_PROXYFUNCTION_0(const struct FLobbyInvitationNoticeInfo& LobbyInvitationNoticeInfo_0, class ULobbyJoinInfo* LobbyInfo);
 	void DisplayFinishEvent();
 	void ExecuteUbergraph_BPC_AppNet(int32 EntryPoint);
 	void GetFriendMatchLobbyContext(class UFriendMatchLobbyContext** FriendMatchLobbyContext);

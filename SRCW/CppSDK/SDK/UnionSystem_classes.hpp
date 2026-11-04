@@ -10,6 +10,8 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
+#include "CoreUObject_classes.hpp"
 #include "InputCore_structs.hpp"
 #include "UnionSystem_structs.hpp"
 #include "CriWareRuntime_structs.hpp"
@@ -17,8 +19,8 @@
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "SlateCore_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "CoreUObject_classes.hpp"
+#include "LevelSequence_classes.hpp"
+#include "MovieScene_structs.hpp"
 #include "UMG_classes.hpp"
 #include "DeveloperSettings_classes.hpp"
 #include "EnhancedInput_classes.hpp"
@@ -31,192 +33,6 @@
 
 namespace SDK
 {
-
-// Class UnionSystem.UnionAddOnBase
-// 0x0000 (0x0028 - 0x0028)
-class UUnionAddOnBase : public UObject
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("UnionAddOnBase")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"UnionAddOnBase")
-	}
-	static class UUnionAddOnBase* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UUnionAddOnBase>();
-	}
-};
-DUMPER7_ASSERTS_UUnionAddOnBase;
-
-// Class UnionSystem.UnionAddOnNX
-// 0x0050 (0x0078 - 0x0028)
-class UUnionAddOnNX final : public UUnionAddOnBase
-{
-public:
-	uint8                                         Pad_28[0x50];                                      // 0x0028(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("UnionAddOnNX")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"UnionAddOnNX")
-	}
-	static class UUnionAddOnNX* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UUnionAddOnNX>();
-	}
-};
-DUMPER7_ASSERTS_UUnionAddOnNX;
-
-// Class UnionSystem.AppControllerInputManager
-// 0x0018 (0x0058 - 0x0040)
-class UAppControllerInputManager final : public UTickableWorldSubsystem
-{
-public:
-	TArray<class AAppPlayerController*>           Controllers;                                       // 0x0040(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_50[0x8];                                       // 0x0050(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	class AMenuPlayerController* GetMenuPlayerController(int32 PlayerControllerIndex);
-	class AAppPlayerController* GetPlayerController(int32 PlayerControllerIndex);
-	bool IsMenuMouseInputMode(int32 PlayerControllerIndex);
-	void RemovePlayer(class APlayerController* PlayerController, bool bDestroyPawn);
-	void SetTickable(bool bTickable);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("AppControllerInputManager")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"AppControllerInputManager")
-	}
-	static class UAppControllerInputManager* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAppControllerInputManager>();
-	}
-};
-DUMPER7_ASSERTS_UAppControllerInputManager;
-
-// Class UnionSystem.AppTimeSubsystem
-// 0x0050 (0x0080 - 0x0030)
-class UAppTimeSubsystem final : public UGameInstanceSubsystem
-{
-public:
-	TMap<class FName, struct FDateTime>           NamedDateTime;                                     // 0x0030(0x0050)(NativeAccessSpecifierPrivate)
-
-public:
-	void AddNamedDateTimeNow(const class FName& InTimeName);
-	bool GetTimeSpanMillisecondsByNamedDateTimes(const class FName& InBeginTimeName, const class FName& InEndTimeName, int32* OutTimeSpan);
-	void LogTimeSpanMillisecondsByNamedDateTimes(const class FName& InBeginTimeName, const class FName& InEndTimeName);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("AppTimeSubsystem")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"AppTimeSubsystem")
-	}
-	static class UAppTimeSubsystem* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAppTimeSubsystem>();
-	}
-};
-DUMPER7_ASSERTS_UAppTimeSubsystem;
-
-// Class UnionSystem.AppFunctionLibrary
-// 0x0000 (0x0028 - 0x0028)
-class UAppFunctionLibrary final : public UBlueprintFunctionLibrary
-{
-public:
-	static int32 GetClampUserNameLength();
-	static class FString GetDateString(const struct FDateTime& DateTime);
-	static class FString GetDateTimeString(const struct FDateTime& DateTime);
-	static class FString GetDateTimeStringWithoutSecond(const struct FDateTime& DateTime);
-	static class FString GetHexString(int32 Input, int32 Length, bool AddZero);
-	static struct FDateTime GetLocalDateTime(int64 UnixTimestampFromServer);
-	static class FString GetLocalDateTimeString(int64 UnixTimestampFromServer);
-	static EMilestoneVersion GetMileStoneVersion();
-	static EMilestoneVersion GetMileStoneVersionWithWorldContext(const class UObject* WorldContextObject);
-	static EAppSupportedPlatform GetPlatform();
-	static ECrossplayPlatform GetPlatformGroup();
-	static class FString GetUtcDateTimeString(int64 UnixTimestampFromServer);
-	static int32 HexToNumber(const class FString& str);
-	static bool Is2ndRom();
-	static bool Is2ndRomWithWorldContext(const class UObject* WorldContextObject);
-	static bool IsDevelopmentBuild();
-	static bool IsMasterLaunchOptionEnabled();
-	static bool IsPlayInEditor();
-	static bool IsPlayStation();
-	static bool IsPre2ndRom();
-	static bool IsReachedTargetVersion(EUnionRomVersion TargetVersion);
-	static bool IsShippingBuild();
-	static bool IsSupportHDVibration();
-	static bool IsSwitch();
-	static bool IsTestBuild();
-	static bool IsVersionOverThan10100();
-	static bool IsWindows();
-	static bool IsXbox();
-	static void OutputUE_LOG(EAppLogLevel InLevel, const class FString& Message);
-	static void SetMilestoneVersion(EMilestoneVersion NewMilestoneVersion);
-	static class FString TruncateStringWithEllipsis(const class FString& str, int32 Length);
-	static class FText TruncateTextWithEllipsis(const class FText& Text, int32 Length);
-	static class UObject* TryLoadAsset(const class FString& AssetPath);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("AppFunctionLibrary")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"AppFunctionLibrary")
-	}
-	static class UAppFunctionLibrary* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAppFunctionLibrary>();
-	}
-};
-DUMPER7_ASSERTS_UAppFunctionLibrary;
-
-// Class UnionSystem.CollectHelper
-// 0x0000 (0x0028 - 0x0028)
-class UCollectHelper final : public UBlueprintFunctionLibrary
-{
-public:
-	static class FString CollectBytesData(const class FString& Name_0, const class FString& Suffix, const TArray<uint8>& Data);
-	static class FString CollectCacheDirectory();
-	static class FString CollectChangeList();
-	static bool CollectCheckEnabled();
-	static class FString CollectLevelName();
-	static class FString CollectScreenShot(const class FString& Name_0);
-	static class FString CollectStringData(const class FString& Name_0, const class FString& Suffix, const class FString& Data);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("CollectHelper")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"CollectHelper")
-	}
-	static class UCollectHelper* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UCollectHelper>();
-	}
-};
-DUMPER7_ASSERTS_UCollectHelper;
 
 // Class UnionSystem.AppPlayerController
 // 0x01D8 (0x0A30 - 0x0858)
@@ -233,7 +49,9 @@ public:
 	TMulticastInlineDelegate<void()>              OnMouseLeftButtonReleasedEvent;                    // 0x08A8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_8B8[0x100];                                    // 0x08B8(0x0100)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                LastHoveredObject;                                 // 0x09B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_9C0[0x70];                                     // 0x09C0(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9C0[0x22];                                     // 0x09C0(0x0022)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bIsDuelRace;                                       // 0x09E2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_9E3[0x4D];                                     // 0x09E3(0x004D)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void AddRegisterSubMenu(class UObject* InMenuObject, int32 InPriority);
@@ -267,6 +85,7 @@ public:
 	void SetEnableSubMenuUpperPriority(bool IsEnable, int32 InPrioirty);
 	void SetForceNonConsumeMouseEvent(bool bEnable);
 	void SetInputBlocked(bool InBlocked);
+	void SetIsDuelRace(bool NewValue);
 	void SetLastHoveredObject(class UObject* HoveredObject);
 	bool UnregisterMainMenu(const class UObject* InObject);
 	void UnregisterMainMenuAll();
@@ -299,30 +118,404 @@ public:
 };
 DUMPER7_ASSERTS_AAppPlayerController;
 
-// Class UnionSystem.MenuPlayerController
-// 0x0000 (0x0A30 - 0x0A30)
-class AMenuPlayerController : public AAppPlayerController
+// Class UnionSystem.RacePlayerController
+// 0x0160 (0x0B90 - 0x0A30)
+class ARacePlayerController : public AAppPlayerController
 {
 public:
-	void SetMenuDirectionKeyEnable(bool bEnableDirection);
+	uint8                                         Pad_A30[0x8];                                      // 0x0A30(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class APawn*                                  RaceInputReciever;                                 // 0x0A38(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_A40[0x150];                                    // 0x0A40(0x0150)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
-	bool GetMenuDirectionKeyEnable() const;
+public:
+	void DoInputRacePressed(ERaceInputKey InKey, float Amount);
+	void DoInputRaceReleased(ERaceInputKey InKey);
+	void SetSubMode(ERacePlayerControllerSubMode InSubMode);
+
+	ERacePlayerControllerSubMode GetSubMode() const;
+	bool IsRaceInputEnabled() const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("MenuPlayerController")
+		STATIC_CLASS_IMPL("RacePlayerController")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"MenuPlayerController")
+		STATIC_NAME_IMPL(L"RacePlayerController")
 	}
-	static class AMenuPlayerController* GetDefaultObj()
+	static class ARacePlayerController* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<AMenuPlayerController>();
+		return GetDefaultObjImpl<ARacePlayerController>();
 	}
 };
-DUMPER7_ASSERTS_AMenuPlayerController;
+DUMPER7_ASSERTS_ARacePlayerController;
+
+// Class UnionSystem.ActorMessageListener
+// 0x0000 (0x0000 - 0x0000)
+class IActorMessageListener final
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ActorMessageListener")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ActorMessageListener")
+	}
+	static class IActorMessageListener* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IActorMessageListener>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+DUMPER7_ASSERTS_IActorMessageListener;
+
+// Class UnionSystem.AppSaveGame
+// 0x0EA0 (0x0EC8 - 0x0028)
+class UAppSaveGame final : public USaveGame
+{
+public:
+	struct FSaveDataHeader                        _Header;                                           // 0x0028(0x000C)(NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUserCommonData                        _UserCommonData;                                   // 0x0038(0x0098)(NativeAccessSpecifierPublic)
+	struct FUserMachineAssemblyData               _UserMachineAssemblyData;                          // 0x00D0(0x03B0)(NativeAccessSpecifierPublic)
+	struct FUserGrandPrixData                     _UserGrandPrixData;                                // 0x0480(0x01D0)(NativeAccessSpecifierPublic)
+	struct FUserTimeTrialData                     _UserTimeTrialData;                                // 0x0650(0x0018)(NativeAccessSpecifierPublic)
+	struct FChallengeSaveData                     _UserChallengeData;                                // 0x0668(0x0058)(NativeAccessSpecifierPublic)
+	struct FUserTutorialData                      _UserTutorialData;                                 // 0x06C0(0x00A8)(NativeAccessSpecifierPublic)
+	struct FUserDriverData                        _UserDriverData;                                   // 0x0768(0x0050)(NativeAccessSpecifierPublic)
+	struct FUserHintData                          _UserHintData;                                     // 0x07B8(0x0018)(NativeAccessSpecifierPublic)
+	TArray<struct FUserAssistData>                _UserAssistData;                                   // 0x07D0(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FUserRewardGetDisplayRequestData       _UserRewardGetDisplayRequestData;                  // 0x07E0(0x0010)(NativeAccessSpecifierPublic)
+	struct FStatsSaveData                         _StatsData;                                        // 0x07F0(0x0140)(NativeAccessSpecifierPublic)
+	struct FAppFriendUserData                     _AppFriendUserData;                                // 0x0930(0x0078)(NativeAccessSpecifierPublic)
+	struct FUserNoticeData                        _AppNoticeData;                                    // 0x09A8(0x0070)(NativeAccessSpecifierPublic)
+	struct FUserPartyRaceData                     _UserPartyRaceData;                                // 0x0A18(0x0120)(NativeAccessSpecifierPublic)
+	struct FUserPartyRaceRivalData                _UserPartyRaceRivalData;                           // 0x0B38(0x0004)(NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B3C[0x4];                                      // 0x0B3C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUserHonorTitleData                    _UserHonorTitleData;                               // 0x0B40(0x0068)(NativeAccessSpecifierPublic)
+	struct FUserCustomLapBGMData                  _UserCustomLapBGMData;                             // 0x0BA8(0x0010)(NativeAccessSpecifierPublic)
+	struct FUserJukeboxData                       _UserJukeboxData;                                  // 0x0BB8(0x00A8)(NativeAccessSpecifierPublic)
+	struct FUserFriendShipData                    _UserFriendShipData;                               // 0x0C60(0x0050)(NativeAccessSpecifierPublic)
+	struct FUserGadgetCustomizeData               _UserGadgetCustomizeData;                          // 0x0CB0(0x0001)(NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_CB1[0x7];                                      // 0x0CB1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUserActivityCardFlagData              _UserActivityCardFlagData;                         // 0x0CB8(0x0028)(NoDestructor, NativeAccessSpecifierPublic)
+	struct FCompensationData                      _CompensationData;                                 // 0x0CE0(0x0010)(NativeAccessSpecifierPublic)
+	struct FUserLegendCompeData                   _UserLegendCompeData;                              // 0x0CF0(0x0028)(NativeAccessSpecifierPublic)
+	struct FUserRestorationData                   _UserRestorationData;                              // 0x0D18(0x0050)(NativeAccessSpecifierPublic)
+	struct FUserRivalDuelData                     _UserRivalDuelData;                                // 0x0D68(0x00D0)(NativeAccessSpecifierPublic)
+	struct FUserDuelCompeData                     _UserDuelCompeData;                                // 0x0E38(0x0028)(NativeAccessSpecifierPublic)
+	struct FUserDuelMedalData                     _UserDuelMedalData;                                // 0x0E60(0x000C)(NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E6C[0x4];                                      // 0x0E6C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FUserPlayMissionData>           _UserPlayMissionData;                              // 0x0E70(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FUserCurrencyData                      _UserCurrencyData;                                 // 0x0E80(0x0040)(NativeAccessSpecifierPublic)
+	struct FUserAppendDodonpaEvent                _UserAppendDodonpaEvent;                           // 0x0EC0(0x0001)(NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_EC1[0x7];                                      // 0x0EC1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("AppSaveGame")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AppSaveGame")
+	}
+	static class UAppSaveGame* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAppSaveGame>();
+	}
+};
+DUMPER7_ASSERTS_UAppSaveGame;
+
+// Class UnionSystem.ActorMessageComponent
+// 0x0010 (0x00B0 - 0x00A0)
+class UActorMessageComponent final : public UActorComponent
+{
+public:
+	uint8                                         Pad_A0[0x10];                                      // 0x00A0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ActorMessageComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ActorMessageComponent")
+	}
+	static class UActorMessageComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UActorMessageComponent>();
+	}
+};
+DUMPER7_ASSERTS_UActorMessageComponent;
+
+// Class UnionSystem.BPFL_AutoPlay
+// 0x0000 (0x0028 - 0x0028)
+class UBPFL_AutoPlay final : public UBlueprintFunctionLibrary
+{
+public:
+	static void DoInputKey(class APlayerController* Controller, const struct FKey& Key, EInputEvent EventType, double Delta, bool bGamepad);
+	static void DoInputMenu(class AAppPlayerController* AppController, EMenuInputKey InKey);
+	static void DoInputRacePressed(class ARacePlayerController* RaceController, ERaceInputKey InKey, float Amount);
+	static void DoInputRaceReleased(class ARacePlayerController* RaceController, ERaceInputKey InKey);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BPFL_AutoPlay")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BPFL_AutoPlay")
+	}
+	static class UBPFL_AutoPlay* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBPFL_AutoPlay>();
+	}
+};
+DUMPER7_ASSERTS_UBPFL_AutoPlay;
+
+// Class UnionSystem.LobbySubsystemLobbySearchQueryUtility
+// 0x0000 (0x0028 - 0x0028)
+class ULobbySubsystemLobbySearchQueryUtility final : public UBlueprintFunctionLibrary
+{
+public:
+	static void AddLobbySearchQueryFilter_Bool(struct FLobbySubsystemLobbySearchQuery& Query, const class FString& Key, bool bValue, ELobbySubsystemLobbySearchQueryFilterComparator Comparator);
+	static void AddLobbySearchQueryFilter_Float(struct FLobbySubsystemLobbySearchQuery& Query, const class FString& Key, float Value, ELobbySubsystemLobbySearchQueryFilterComparator Comparator);
+	static void AddLobbySearchQueryFilter_Int64(struct FLobbySubsystemLobbySearchQuery& Query, const class FString& Key, int64 Value, ELobbySubsystemLobbySearchQueryFilterComparator Comparator);
+	static void AddLobbySearchQueryFilter_String(struct FLobbySubsystemLobbySearchQuery& Query, const class FString& Key, const class FString& Value, ELobbySubsystemLobbySearchQueryFilterComparator Comparator);
+	static void SetLimit(struct FLobbySubsystemLobbySearchQuery& Query, int32 NewLimit);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("LobbySubsystemLobbySearchQueryUtility")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LobbySubsystemLobbySearchQueryUtility")
+	}
+	static class ULobbySubsystemLobbySearchQueryUtility* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULobbySubsystemLobbySearchQueryUtility>();
+	}
+};
+DUMPER7_ASSERTS_ULobbySubsystemLobbySearchQueryUtility;
+
+// Class UnionSystem.AppControllerInputManager
+// 0x0018 (0x0058 - 0x0040)
+class UAppControllerInputManager final : public UTickableWorldSubsystem
+{
+public:
+	TArray<class AAppPlayerController*>           Controllers;                                       // 0x0040(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_50[0x8];                                       // 0x0050(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	class AMenuPlayerController* GetMenuPlayerController(int32 PlayerControllerIndex);
+	class AAppPlayerController* GetPlayerController(int32 PlayerControllerIndex);
+	bool IsMenuMouseInputMode(int32 PlayerControllerIndex);
+	void RemovePlayer(class APlayerController* PlayerController, bool bDestroyPawn);
+	void SetTickable(bool bTickable);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("AppControllerInputManager")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AppControllerInputManager")
+	}
+	static class UAppControllerInputManager* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAppControllerInputManager>();
+	}
+};
+DUMPER7_ASSERTS_UAppControllerInputManager;
+
+// Class UnionSystem.GameHttpSubsystem
+// 0x03E0 (0x0410 - 0x0030)
+class UGameHttpSubsystem final : public UGameInstanceSubsystem
+{
+public:
+	uint8                                         Pad_30[0x280];                                     // 0x0030(0x0280)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FServerList                            ServerList;                                        // 0x02B0(0x0160)(NativeAccessSpecifierPrivate)
+
+public:
+	bool ReceiveFromServerRaw(int32 Handle, class FString* OutData, bool* OutError);
+	int32 SendPingToServer(const struct FGameHttpRequestOption& Option, const class FString& ApiName);
+	void SendPingToServerCallbacked(const struct FGameHttpRequestOption& Option, const class FString& ApiName, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	int32 SendToServerRaw(const struct FGameHttpRequestOption& Option, const class FString& ApiName, const class FString& Data);
+	void SendToServerRawCallbacked(const struct FGameHttpRequestOption& Option, const class FString& ApiName, const class FString& Data, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GameHttpSubsystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameHttpSubsystem")
+	}
+	static class UGameHttpSubsystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGameHttpSubsystem>();
+	}
+};
+DUMPER7_ASSERTS_UGameHttpSubsystem;
+
+// Class UnionSystem.AppFunctionLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UAppFunctionLibrary final : public UBlueprintFunctionLibrary
+{
+public:
+	static int32 GetClampUserNameLength();
+	static class FString GetDateString(const struct FDateTime& DateTime);
+	static class FString GetDateTimeString(const struct FDateTime& DateTime);
+	static class FString GetDateTimeStringWithoutSecond(const struct FDateTime& DateTime);
+	static class FString GetHexString(int32 Input, int32 Length, bool AddZero);
+	static struct FDateTime GetLocalDateTime(int64 UnixTimestampFromServer);
+	static class FString GetLocalDateTimeString(int64 UnixTimestampFromServer);
+	static EMilestoneVersion GetMileStoneVersion();
+	static EMilestoneVersion GetMileStoneVersionWithWorldContext(const class UObject* WorldContextObject);
+	static EAppSupportedPlatform GetPlatform();
+	static ECrossplayPlatform GetPlatformGroup();
+	static class FString GetUtcDateTimeString(int64 UnixTimestampFromServer);
+	static int32 HexToNumber(const class FString& str);
+	static bool Is2ndRom();
+	static bool Is2ndRomWithWorldContext(const class UObject* WorldContextObject);
+	static bool IsDevelopmentBuild();
+	static bool IsMasterLaunchOptionEnabled();
+	static bool IsPlayInEditor();
+	static bool IsPlayStation();
+	static bool IsPre2ndRom();
+	static bool IsReachedTargetVersion(EUnionRomVersion TargetVersion);
+	static bool IsShippingBuild();
+	static bool IsSupportHDVibration();
+	static bool IsSwitch();
+	static bool IsSwitch1();
+	static bool IsSwitch2();
+	static bool IsTestBuild();
+	static bool IsVersionOverThan10100();
+	static bool IsWindows();
+	static bool IsXbox();
+	static void OutputUE_LOG(EAppLogLevel InLevel, const class FString& Message);
+	static void SetMilestoneVersion(EMilestoneVersion NewMilestoneVersion);
+	static class FString TruncateStringWithEllipsis(const class FString& str, int32 Length);
+	static class FText TruncateTextWithEllipsis(const class FText& Text, int32 Length);
+	static class UObject* TryLoadAsset(const class FString& AssetPath);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("AppFunctionLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AppFunctionLibrary")
+	}
+	static class UAppFunctionLibrary* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAppFunctionLibrary>();
+	}
+};
+DUMPER7_ASSERTS_UAppFunctionLibrary;
+
+// Class UnionSystem.GhostSubSystem
+// 0x01D0 (0x0200 - 0x0030)
+class UGhostSubSystem final : public UGameInstanceSubsystem
+{
+public:
+	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGhostDebugMenu*                        m_GhostDebugMenu;                                  // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_40[0x50];                                      // 0x0040(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FReplaySaveInfo                        m_DownloadGhostData;                               // 0x0090(0x0140)(NativeAccessSpecifierPrivate)
+	class FString                                 m_CurrentUserId;                                   // 0x01D0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	ESpeedClassId                                 m_CurrentSpeedClassId;                             // 0x01E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	EStageId                                      m_CurrentStageId;                                  // 0x01E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1E2[0x6];                                      // 0x01E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 m_CurrentDateTime;                                 // 0x01E8(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1F8[0x8];                                      // 0x01F8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool CheckCachedGhostDataUserMatch(const class FString& InUserId, const ESpeedClassId InSpeedClass, const EStageId InStageId, const class FString& InDateTime);
+	bool GetDownloadGhostData(struct FReplaySaveInfo* OutGhostData);
+	void ResetDownloadGhostData();
+	void SetDownloadGhostData(const class FString& InUserId, const ESpeedClassId InSpeedClass, const EStageId InStageId, const class FString& InDateTime, const class FString& InRankingName, const struct FReplaySaveInfo& InGhostData);
+	void SetGhostRequestFailed(bool InFailed);
+
+	bool GetDebugEnableGhostUploadCancel() const;
+	bool IsGhostRequestFailed() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GhostSubSystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GhostSubSystem")
+	}
+	static class UGhostSubSystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGhostSubSystem>();
+	}
+};
+DUMPER7_ASSERTS_UGhostSubSystem;
+
+// Class UnionSystem.PlatformStoreMessageDataAsset
+// 0x00D0 (0x0100 - 0x0030)
+class UPlatformStoreMessageDataAsset final : public UDataAsset
+{
+public:
+	class FText                                   PlayStationPlatformStoreMessage;                   // 0x0030(0x0010)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	class FText                                   XboxPlatformStoreMessage;                          // 0x0040(0x0010)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	class FText                                   SwitchPlatformStoreMessage;                        // 0x0050(0x0010)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	class FText                                   SteamPlatformStoreMessage;                         // 0x0060(0x0010)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	class FText                                   EpicPlatformStoreMessage;                          // 0x0070(0x0010)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	class FText                                   AcceptButtonText;                                  // 0x0080(0x0010)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	class FText                                   CancelButtonText;                                  // 0x0090(0x0010)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	class FText                                   PlatformStoreButtonMessage;                        // 0x00A0(0x0010)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	class FText                                   PlayStationPlatformStoreButtonMessage;             // 0x00B0(0x0010)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	class FText                                   XboxPlatformStoreButtonMessage;                    // 0x00C0(0x0010)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	class FText                                   SwitchPlatformStoreButtonMessage;                  // 0x00D0(0x0010)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	class FText                                   SteamPlatformStoreButtonMessage;                   // 0x00E0(0x0010)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	class FText                                   EpicPlatformStoreButtonMessage;                    // 0x00F0(0x0010)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+
+public:
+	void GetPlatformStoreButtonText(class FText* AcceptText, class FText* CancelText);
+
+	EPlatformStoreType GetCurrentPlatform() const;
+	class FText GetPlatformStoreButtonMessage() const;
+	class FText GetPlatformStoreMessage(EPlatformStoreType PlatformType) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PlatformStoreMessageDataAsset")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlatformStoreMessageDataAsset")
+	}
+	static class UPlatformStoreMessageDataAsset* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPlatformStoreMessageDataAsset>();
+	}
+};
+DUMPER7_ASSERTS_UPlatformStoreMessageDataAsset;
 
 // Class UnionSystem.AppGameInstance
 // 0x0020 (0x01E0 - 0x01C0)
@@ -354,44 +547,6 @@ public:
 };
 DUMPER7_ASSERTS_UAppGameInstance;
 
-// Class UnionSystem.HonorTitleListDataAsset
-// 0x00A8 (0x00D8 - 0x0030)
-class UHonorTitleListDataAsset final : public UDataAsset
-{
-public:
-	class UDataTable*                             HonorTitleCompositeDataTable;                      // 0x0030(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<int32, struct FHonorTitleListData>       HonorTitleTableDataMap;                            // 0x0038(0x0050)(Edit, BlueprintVisible, EditConst, NativeAccessSpecifierPublic)
-	TMap<int32, int32>                            HonorTitleFestaSortId;                             // 0x0088(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-
-public:
-	void ClearData();
-	void Update();
-
-	TArray<struct FHonorTitleListData> GetAllHonorTitleAndIdWithRarity(int32 Rarity, TArray<int32>* outHonorTitleIdArray) const;
-	TArray<struct FHonorTitleListData> GetAllHonorTitleWithRarity(int32 Rarity) const;
-	int32 GetHonorTitleFestaSortId(int32 festaId) const;
-	void GetHonorTitleLegendCompeInfo(int32 HonorTitleIndex, bool* IsLegendCompe, int32* RoundNum) const;
-	TSoftObjectPtr<class UTexture2D> GetHonorTitlePlate(int32 HonorTitleId) const;
-	int32 GetHonorTitleRarity(int32 HonorTitleId) const;
-	class FText GetHonorTitleVBName(int32 HonorTitleId, bool* IsValid) const;
-	bool GetIsHonorTitleDLC(int32 HonorTitleIndex) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("HonorTitleListDataAsset")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"HonorTitleListDataAsset")
-	}
-	static class UHonorTitleListDataAsset* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UHonorTitleListDataAsset>();
-	}
-};
-DUMPER7_ASSERTS_UHonorTitleListDataAsset;
-
 // Class UnionSystem.AppGameMode
 // 0x0000 (0x0328 - 0x0328)
 class AAppGameMode : public AGameModeBase
@@ -411,65 +566,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_AAppGameMode;
-
-// Class UnionSystem.ControllerButtonData
-// 0x0050 (0x0080 - 0x0030)
-class UControllerButtonData final : public UDataAsset
-{
-public:
-	TMap<struct FKey, EControllerButtonTextureIndex> KeyConfig;                                      // 0x0030(0x0050)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ControllerButtonData")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ControllerButtonData")
-	}
-	static class UControllerButtonData* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UControllerButtonData>();
-	}
-};
-DUMPER7_ASSERTS_UControllerButtonData;
-
-// Class UnionSystem.SessionManager
-// 0x0130 (0x0160 - 0x0030)
-class USessionManager final : public UGameInstanceSubsystem
-{
-public:
-	uint8                                         Pad_30[0x130];                                     // 0x0030(0x0130)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	bool GetDisplayCode(class FString* displayCode);
-	bool GetExternalAddressRegionName(class FString* AddressRegionName);
-	bool GetFairPlayPoint(int32* OutFairPlayPoint);
-	bool GetIsBan(bool* bOutIsBan);
-	bool GetLoginComplete();
-	bool GetPenaltyEndTime(class FString* endTime);
-	bool GetRegionCode(class FString* regionCode);
-	EResponseCodeAbstract GetResponseCodeAbstract();
-	bool GetSwitchOnlineCode(int32* switchOnlineCode);
-	bool GetUserID(class FString* UserId);
-	void StartLogin(TDelegate<void(bool Error, bool SavedataDeleted)> Callback);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SessionManager")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SessionManager")
-	}
-	static class USessionManager* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USessionManager>();
-	}
-};
-DUMPER7_ASSERTS_USessionManager;
 
 // Class UnionSystem.AppListenerFocusPoint
 // 0x0000 (0x0240 - 0x0240)
@@ -520,8 +616,11 @@ public:
 	static void ApplyUseDisplay(bool ApplyImmediately);
 	static void ApplyVSync(bool ApplyImmediately);
 	static void CalcGetUserAssistData(TArray<struct FUserAssistData>* OutAssistData);
+	static bool CanSendAndReceiveHornInRace();
 	static ECaptionVisible GetCaptionVisibility();
 	static EKeyConfigOperationType GetControllerOperationType(int32 InPlayerIndex);
+	static ECutInVisible GetCutInVisible();
+	static bool GetDuelDashKeyDefault();
 	static bool GetEnableAutoSelectRentalPlate();
 	static EForceFeedbackLevel GetForceFeedbackLevel(int32 PlayerIndex);
 	static ESecondaryGadgetButtonType GetSecondaryGadgetButtonType(int32 InPlayerIndex);
@@ -533,19 +632,28 @@ public:
 	static bool IsControllerOperationTypeCustom(int32 InPlayerIndex);
 	static bool IsDiffUserAssistDataWithSaveData(const TArray<struct FUserAssistData>& InAssistData);
 	static bool IsDirty_ControllerSettings(int32 PlayerIndex, const struct FControllerSettings& EditingSetting, const struct FControllerAdditionalSetting& EditingAditionalSetting);
+	static bool IsDirty_OnlineSettings(const struct FOnlineSettings& EditingSetting, const struct FOnlineAdditionalSetting& EditingAditionalSetting);
 	static bool IsDirty_RaceSettings(const struct FOptionRaceSettings& EditingSetting, const struct FRaceAdditionalSetting& EditingAditionalSetting);
 	static bool IsInverseAcceptAndCancel(int32 InPlayerIndex);
 	static bool IsInverseFlyModeUpDown(int32 InPlayerIndex);
 	static bool IsRunningOnSteamDeck();
+	static bool IsShowDuelRacerInfo();
+	static bool IsShowItemSlotSelf();
+	static bool IsShowOpponentApproach();
+	static bool IsShowOpponentItemAndRing();
+	static bool IsStreamerMode();
 	static TArray<struct FControllerAdditionalSetting> ReadControlAdditionalSettingArrayBySave(int32 ArrayLength);
+	static struct FOnlineAdditionalSetting ReadOnlineAdditionalSettingBySave();
 	static struct FRaceAdditionalSetting ReadRaceAdditionalSettingBySave();
 	static void ResetControlAdditionalSettingArrayForSaveDataDefault(TArray<struct FControllerAdditionalSetting>* Settings);
 	static void ResetControlAdditionalSettingForSaveDataDefault(struct FControllerAdditionalSetting* Setting);
 	static void ResetControllerSettingsForLocalMultiPlayer();
+	static void ResetOnlineAdditionalSettingForSaveDataDefault(struct FOnlineAdditionalSetting* Setting);
 	static void ResetRaceAdditionalSettingForSaveDataDefault(struct FRaceAdditionalSetting* Setting);
 	static void SetAllPlayerForceFeedbackLevelFromSave();
 	static void SetControllerGyroAssistEnabled(int32 InPlayerIndex, bool InEnable);
 	static void SetControllerOperationType(int32 InPlayerIndex, EKeyConfigOperationType InOperationType);
+	static void SetDuelDashKeyDefault(bool InValue);
 	static void SetEnableAutoSelectRentalPlate(bool InEnable);
 	static void SetForceFeedbackLevel(int32 PlayerIndex, EForceFeedbackLevel VibrationLevel);
 	static void SetInverseAcceptAndCancel(int32 InPlayerIndex, bool InInverse);
@@ -554,6 +662,7 @@ public:
 	static void SetVoiceLangToSave(ELanguage NewLanguage);
 	static bool UpdateGraphicSettingsAtFirstTime();
 	static bool WriteControlAdditionalSettingArrayForSave(const TArray<struct FControllerAdditionalSetting>& Source);
+	static bool WriteOnlineAdditionalSettingForSave(const struct FOnlineAdditionalSetting& Source);
 	static bool WriteRaceAdditionalSettingForSave(const struct FRaceAdditionalSetting& Source);
 
 public:
@@ -699,11 +808,14 @@ class UAppSaveGameHelper final : public UBlueprintFunctionLibrary
 public:
 	static void AddALLRivalWinCount();
 	static void AddCompensationData(int32 ID);
+	static bool AddDuelCompeEnteredSeason(int32 InSeason);
+	static void AddDuelCompeRecievedFinalResultSeason(int32 InSeason);
 	static bool AddLegendCompeEnteredSeason(int32 InSeason);
 	static void AddLegendCompeRecievedFinalResultSeason(int32 InSeason);
 	static void AddRaceStatsValue(const EStatsEventId InStatsId, const int32 Value);
 	static void AddRewardGetDisplayRequestData(ERewardAchievementType InRewardAchievementType);
 	static void AddRivalWinCount(EDriverId DriverId);
+	static TArray<int32> CalcDuelCompeNeedFinalResultSeason();
 	static TArray<int32> CalcLegendCompeNeedFinalResultSeason();
 	static bool CheckRewardGetDisplayRequest(ERewardAchievementType InRewardAchievementType);
 	static bool CheckRewardGetDisplayRequestData();
@@ -726,8 +838,14 @@ public:
 	static TArray<EStageId> GetCourseSwitchSetting(EGameModeId InGameModeId);
 	static struct FUserAlbumTrackID GetCustomLapBGM(int32 Lap);
 	static bool GetDodonpaEventCompleteFlag(EGrandPrixEventFlag SaveDataFlagId);
+	static TArray<int32> GetDuelCompeEnteredSeason();
+	static bool GetFirstRivalCourseEliminatedStatus(EStageId Stage);
 	static int32 GetFriendShipGivedTicket(EDriverId ID);
 	static struct FUserGadgetCustomizeData GetGadgetCustomizeData();
+	static const bool GetGadgetItemProperty(const EGadgetId InGadgetId, struct FUserItemProperty* OutGadgetItemProperty);
+	static bool GetGadgetPlateNormalGadgetPresetData(const int32 InPlayerIndex, const int32 InPresetIndex, struct FUserGadgetPresetData* OutPresetData);
+	static bool GetGadgetPlateSpecialGadgetPresetData(const int32 InPlayerIndex, const int32 InPresetIndex, struct FUserSpGadgetPresetData* OutPresetData);
+	static const int32 GetGadgetPlateUnlockSlotNum();
 	static int32 GetGrandPrixBeforeRivalLevel(EMenuSpeedClassId SpeedClassId);
 	static int32 GetGrandPrixClassClearedCountByMenuSpeedClass(const EMenuSpeedClassId& SpeedClassId);
 	static int32 GetGrandPrixClassClearedCountByMenuSpeedClassIgnoreContinuity(const EMenuSpeedClassId& SpeedClassId);
@@ -737,6 +855,7 @@ public:
 	static struct FHonorTitleListData GetHonorTitleInfo();
 	static bool GetHonorTitleUnlock(int32 HonorTitleIndex);
 	static bool GetIsGhostUploaded(const EStageId InStageId, const ESpeedClassId InSpeedClassId, bool* bOutIsValid);
+	static bool GetIsS2Played();
 	static bool GetIsValidGhost(const EStageId InStageId, const ESpeedClassId InSpeedClassId);
 	static struct FItemSwitchSetting GetItemSwitchSetting(EGameModeId InGameModeId);
 	static struct FItemSwitchSettingSave GetItemSwitchSettingSave(EGameModeId InGameModeId);
@@ -754,6 +873,9 @@ public:
 	static TArray<bool> GetRedStarRingAcquisitionPerStage(const EStageId InStageId);
 	static int32 GetRivalAppearanceCount(EDriverId DriverId);
 	static int32 GetRivalAppearanceCountMin(const TArray<EDriverId>& CheckDriverIds, const TArray<EDriverId>& IgnoreDriverIds);
+	static TArray<bool> GetRivalDuelRedStarRingAcquisition(const EStageId InStageId);
+	static bool GetRivalDuelSpecialRewardAcquired();
+	static bool GetRivalDuelUnlockedStage(EStageId* OutUnlockedStage);
 	static int32 GetRivalLevelAdjust();
 	static int32 GetRivalWinCount(EDriverId DriverId);
 	static int32 GetRivalWinRewardEventCount();
@@ -766,6 +888,7 @@ public:
 	static uint8 GetTipsDisplayIndex();
 	static uint8 GetTopKnockdownRivalLevel(const EMenuSpeedClassId SpeedClassId, const EDriverId DriverId);
 	static TArray<uint8> GetTopKnockdownRivalLevelArray(const EMenuSpeedClassId SpeedClassId);
+	static int32 GetTotalRaceCount();
 	static bool GetTrackAvailable(int32 ID);
 	static bool GetTutorialActionCompletedFlag(const ETutorialAction tutorialAction);
 	static bool GetTutorialCompletedFlagPerStage(const EStageId InStageId);
@@ -843,6 +966,8 @@ public:
 	static void SetDriverSelectable(EDriverId InDriverId);
 	static void SetDriverUnselectable(EDriverId InDriverId);
 	static void SetGadgetCustomizeDataSelectedIndex(int32 SelectedIndex);
+	static bool SetGadgetPlateNormalGadgetPresetData(const int32 InPlayerIndex, const int32 InPresetIndex, const struct FUserGadgetPresetData& InPresetData);
+	static bool SetGadgetPlateSpecialGadgetPresetData(const int32 InPlayerIndex, const int32 InPresetIndex, const struct FUserSpGadgetPresetData& InPresetData);
 	static void SetGrandPrixALLKnockDownRivalLevel(const uint8 SetValue);
 	static void SetGrandPrixALLRivalLevel(const uint8 SetValue);
 	static void SetGrandPrixFirstIrregularAppeared(bool bAppeared);
@@ -854,6 +979,7 @@ public:
 	static void SetHintRead(EHintId InHintId);
 	static void SetHonorTitleIndex(int32 HonorTitleIndex);
 	static void SetIsGhostUploaded(const EStageId InStageId, const ESpeedClassId InSpeedClassId, bool bInIsGhostUploaded);
+	static void SetIsS2Played(bool IsPlayed);
 	static void SetIsValidGhost(const EStageId InStageId, const ESpeedClassId InSpeedClassId, bool bInIsValidGhost);
 	static void SetItemSwitchSetting(EGameModeId InGameModeId, const struct FItemSwitchSettingSave& InItemSwitchSetting);
 	static void SetItemSwitchSettingSave(EGameModeId InGameModeId, const struct FItemSwitchSettingSave& InItemSwitchSetting);
@@ -865,8 +991,10 @@ public:
 	static void SetRaceParkCustomRaceSetting(const struct FPartyRacePresetSetting& PartyRacePresetSetting);
 	static void SetRedStarRingAcquisitionPerStage(const EStageId InStageId, const TArray<bool>& InAcquisition);
 	static void SetRivalAppearanceCount(EDriverId DriverId, int32 NewCount);
+	static void SetRivalDuelRedStarRingAcquisition(const EStageId InStageId, const TArray<bool>& InAcquisition);
 	static void SetRivalLevelAdjust(int32 NewAmount);
 	static void SetRivalWinCount(EDriverId DriverId, int32 NewCount);
+	static void SetSeason2LegendCompeRoundNum(int32 InRoundNum);
 	static void SetSelectedGadgetPresetId(int32 InPlayerIndex, int32 InPresetId);
 	static void SetSpawnGrandPrixALLLevelDownUIFlag(const bool SetEnabled);
 	static void SetSpawnGrandPrixLevelDownUIFlag(const EMenuSpeedClassId SpeedClassId, const bool SetEnabled);
@@ -900,56 +1028,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UAppSaveGameHelper;
-
-// Class UnionSystem.AppSaveGame
-// 0x0CA8 (0x0CD0 - 0x0028)
-class UAppSaveGame final : public USaveGame
-{
-public:
-	struct FSaveDataHeader                        _Header;                                           // 0x0028(0x000C)(NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUserCommonData                        _UserCommonData;                                   // 0x0038(0x0078)(NativeAccessSpecifierPublic)
-	struct FUserMachineAssemblyData               _UserMachineAssemblyData;                          // 0x00B0(0x0390)(NativeAccessSpecifierPublic)
-	struct FUserGrandPrixData                     _UserGrandPrixData;                                // 0x0440(0x01D0)(NativeAccessSpecifierPublic)
-	struct FUserTimeTrialData                     _UserTimeTrialData;                                // 0x0610(0x0018)(NativeAccessSpecifierPublic)
-	struct FChallengeSaveData                     _UserChallengeData;                                // 0x0628(0x0058)(NativeAccessSpecifierPublic)
-	struct FUserTutorialData                      _UserTutorialData;                                 // 0x0680(0x00A8)(NativeAccessSpecifierPublic)
-	struct FUserDriverData                        _UserDriverData;                                   // 0x0728(0x0050)(NativeAccessSpecifierPublic)
-	struct FUserHintData                          _UserHintData;                                     // 0x0778(0x0018)(NativeAccessSpecifierPublic)
-	TArray<struct FUserAssistData>                _UserAssistData;                                   // 0x0790(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FUserRewardGetDisplayRequestData       _UserRewardGetDisplayRequestData;                  // 0x07A0(0x0010)(NativeAccessSpecifierPublic)
-	struct FStatsSaveData                         _StatsData;                                        // 0x07B0(0x0140)(NativeAccessSpecifierPublic)
-	struct FAppFriendUserData                     _AppFriendUserData;                                // 0x08F0(0x0078)(NativeAccessSpecifierPublic)
-	struct FUserNoticeData                        _AppNoticeData;                                    // 0x0968(0x0020)(NativeAccessSpecifierPublic)
-	struct FUserPartyRaceData                     _UserPartyRaceData;                                // 0x0988(0x0120)(NativeAccessSpecifierPublic)
-	struct FUserPartyRaceRivalData                _UserPartyRaceRivalData;                           // 0x0AA8(0x0004)(NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_AAC[0x4];                                      // 0x0AAC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUserHonorTitleData                    _UserHonorTitleData;                               // 0x0AB0(0x0068)(NativeAccessSpecifierPublic)
-	struct FUserCustomLapBGMData                  _UserCustomLapBGMData;                             // 0x0B18(0x0010)(NativeAccessSpecifierPublic)
-	struct FUserJukeboxData                       _UserJukeboxData;                                  // 0x0B28(0x00A8)(NativeAccessSpecifierPublic)
-	struct FUserFriendShipData                    _UserFriendShipData;                               // 0x0BD0(0x0050)(NativeAccessSpecifierPublic)
-	struct FUserGadgetCustomizeData               _UserGadgetCustomizeData;                          // 0x0C20(0x0001)(NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C21[0x7];                                      // 0x0C21(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUserActivityCardFlagData              _UserActivityCardFlagData;                         // 0x0C28(0x0028)(NoDestructor, NativeAccessSpecifierPublic)
-	struct FCompensationData                      _CompensationData;                                 // 0x0C50(0x0010)(NativeAccessSpecifierPublic)
-	struct FUserLegendCompeData                   _UserLegendCompeData;                              // 0x0C60(0x0020)(NativeAccessSpecifierPublic)
-	struct FUserRestorationData                   _UserRestorationData;                              // 0x0C80(0x0050)(NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("AppSaveGame")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"AppSaveGame")
-	}
-	static class UAppSaveGame* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAppSaveGame>();
-	}
-};
-DUMPER7_ASSERTS_UAppSaveGame;
 
 // Class UnionSystem.AppSequenceLogManagerSubsystem
 // 0x0008 (0x0038 - 0x0030)
@@ -985,6 +1063,34 @@ public:
 };
 DUMPER7_ASSERTS_UAppSequenceLogManagerSubsystem;
 
+// Class UnionSystem.AppTimeSubsystem
+// 0x0050 (0x0080 - 0x0030)
+class UAppTimeSubsystem final : public UGameInstanceSubsystem
+{
+public:
+	TMap<class FName, struct FDateTime>           NamedDateTime;                                     // 0x0030(0x0050)(NativeAccessSpecifierPrivate)
+
+public:
+	void AddNamedDateTimeNow(const class FName& InTimeName);
+	bool GetTimeSpanMillisecondsByNamedDateTimes(const class FName& InBeginTimeName, const class FName& InEndTimeName, int32* OutTimeSpan);
+	void LogTimeSpanMillisecondsByNamedDateTimes(const class FName& InBeginTimeName, const class FName& InEndTimeName);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("AppTimeSubsystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AppTimeSubsystem")
+	}
+	static class UAppTimeSubsystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAppTimeSubsystem>();
+	}
+};
+DUMPER7_ASSERTS_UAppTimeSubsystem;
+
 // Class UnionSystem.AppTimeUtil
 // 0x0000 (0x0028 - 0x0028)
 class UAppTimeUtil final : public UBlueprintFunctionLibrary
@@ -993,10 +1099,12 @@ public:
 	static void AddNamedDateTimeNow(const class FName& InTimeName);
 	static struct FDateTime ConvertUtcToLocalTime(const struct FDateTime& UtcDateTime);
 	static class FText LocalizeDateTimePlaceholder(const class FText& BaseText, const struct FDateTime& StartDateUTCTime, const struct FDateTime& EndDateUTCTime);
+	static class FText LocalizeStartDateTimePlaceholder(const class FText& BaseText, const struct FDateTime& StartDateUTCTime);
 	static void LogTimeSpanMillisecondsByNamedDateTimes(const class FName& InBeginTimeName, const class FName& InEndTimeName);
 	static class FText MakeDateText(const struct FDateTime& DateTime);
 	static class FText MakeDateTimeText(const struct FDateTime& DateTime);
 	static class FText ReplaceDateTimePlaceholder(const class FText& BaseText, const struct FDateTime& StartDateLocalTime, const struct FDateTime& EndDateLocalTime);
+	static class FText ReplaceStartDateTimePlaceholder(const class FText& BaseText, const struct FDateTime& StartDateTime);
 	static struct FTimespan Sub_DateTimeDateTime(const struct FDateTime& A, const struct FDateTime& B);
 	static bool UnionDateTimeParse(class FString& DateTimeString, struct FDateTime* OutDateTime);
 
@@ -1116,32 +1224,6 @@ public:
 };
 DUMPER7_ASSERTS_UBPFL_AppInputUtil;
 
-// Class UnionSystem.BPFL_AutoPlay
-// 0x0000 (0x0028 - 0x0028)
-class UBPFL_AutoPlay final : public UBlueprintFunctionLibrary
-{
-public:
-	static void DoInputKey(class APlayerController* Controller, const struct FKey& Key, EInputEvent EventType, double Delta, bool bGamepad);
-	static void DoInputMenu(class AAppPlayerController* AppController, EMenuInputKey InKey);
-	static void DoInputRacePressed(class ARacePlayerController* RaceController, ERaceInputKey InKey, float Amount);
-	static void DoInputRaceReleased(class ARacePlayerController* RaceController, ERaceInputKey InKey);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("BPFL_AutoPlay")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BPFL_AutoPlay")
-	}
-	static class UBPFL_AutoPlay* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UBPFL_AutoPlay>();
-	}
-};
-DUMPER7_ASSERTS_UBPFL_AutoPlay;
-
 // Class UnionSystem.ChallengeStatsUtility
 // 0x0000 (0x0028 - 0x0028)
 class UChallengeStatsUtility final : public UBlueprintFunctionLibrary
@@ -1185,6 +1267,79 @@ public:
 };
 DUMPER7_ASSERTS_UChallengeStatsUtility;
 
+// Class UnionSystem.CollectHelper
+// 0x0000 (0x0028 - 0x0028)
+class UCollectHelper final : public UBlueprintFunctionLibrary
+{
+public:
+	static class FString CollectBytesData(const class FString& Name_0, const class FString& Suffix, const TArray<uint8>& Data);
+	static class FString CollectCacheDirectory();
+	static class FString CollectChangeList();
+	static bool CollectCheckEnabled();
+	static class FString CollectLevelName();
+	static class FString CollectScreenShot(const class FString& Name_0);
+	static class FString CollectStringData(const class FString& Name_0, const class FString& Suffix, const class FString& Data);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CollectHelper")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CollectHelper")
+	}
+	static class UCollectHelper* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCollectHelper>();
+	}
+};
+DUMPER7_ASSERTS_UCollectHelper;
+
+// Class UnionSystem.UnionLevelSequenceActor
+// 0x0000 (0x0338 - 0x0338)
+class AUnionLevelSequenceActor : public ALevelSequenceActor
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UnionLevelSequenceActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UnionLevelSequenceActor")
+	}
+	static class AUnionLevelSequenceActor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AUnionLevelSequenceActor>();
+	}
+};
+DUMPER7_ASSERTS_AUnionLevelSequenceActor;
+
+// Class UnionSystem.CourseResultLevelSequenceActor
+// 0x0028 (0x0360 - 0x0338)
+class ACourseResultLevelSequenceActor final : public AUnionLevelSequenceActor
+{
+public:
+	TArray<struct FMovieSceneObjectBindingID>     RingActorBindingIdList;                            // 0x0338(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPrivate)
+	struct FMovieSceneObjectBindingID             RingRootActorBindingID;                            // 0x0348(0x0018)(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CourseResultLevelSequenceActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CourseResultLevelSequenceActor")
+	}
+	static class ACourseResultLevelSequenceActor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ACourseResultLevelSequenceActor>();
+	}
+};
+DUMPER7_ASSERTS_ACourseResultLevelSequenceActor;
+
 // Class UnionSystem.CryptoHelper
 // 0x0000 (0x0028 - 0x0028)
 class UCryptoHelper final : public UBlueprintFunctionLibrary
@@ -1211,11 +1366,11 @@ public:
 DUMPER7_ASSERTS_UCryptoHelper;
 
 // Class UnionSystem.DataCollectSubsystem
-// 0x00F0 (0x0120 - 0x0030)
+// 0x0108 (0x0138 - 0x0030)
 class UDataCollectSubsystem final : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_30[0xF0];                                      // 0x0030(0x00F0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x108];                                     // 0x0030(0x0108)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	class FString CollectBytesData(const class FString& Name_0, const class FString& Suffix, const TArray<uint8>& Data);
@@ -1360,6 +1515,7 @@ public:
 	static bool IsDebugAutoPlay();
 	static bool IsDebugAutoPlayMonkeyTest();
 	static bool IsDebugAutoPlayShortRace();
+	static bool IsFriendMode();
 	static void SetDebugAutoPlay(bool flg);
 	static void SetDebugAutoPlayMode(int32 Mode);
 	static void SetDebugAutoPlayMonkeyTest(bool flg);
@@ -1380,6 +1536,34 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UDebugOnlineAutoPlaySetting;
+
+// Class UnionSystem.DebugStagingServer
+// 0x0000 (0x0028 - 0x0028)
+class UDebugStagingServer final : public UBlueprintFunctionLibrary
+{
+public:
+	static bool GetIndexToServerDisplayName(int32 Index_0, class FText* DisplayName);
+	static bool GetIndexToServerName(int32 Index_0, class FString* ServerName);
+	static bool GetServerNameToDisplayName(const class FString& ServerName, class FText* DisplayName);
+	static bool GetServerNameToIndex(const class FString& ServerName, int32* Index_0);
+	static int32 GetServerNum();
+	static void SetServerStagingName(const class FString& ServerStagingName);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("DebugStagingServer")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DebugStagingServer")
+	}
+	static class UDebugStagingServer* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UDebugStagingServer>();
+	}
+};
+DUMPER7_ASSERTS_UDebugStagingServer;
 
 // Class UnionSystem.DeviceChangeInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -1419,8 +1603,12 @@ DUMPER7_ASSERTS_IDeviceChangeInterface;
 class UDriverIdUtilityLibrary final : public UBlueprintFunctionLibrary
 {
 public:
+	static EDriverId ConvertColorChangeRivalDriverId(const EDriverId InDriverId);
+	static EDriverId ConvertOriginalVoiceDriverId(const EDriverId InDriverId);
 	static EDriverId GetRaceRivalDriverId(EGameModeId GameModeID, EDriverId InDriverId);
 	static EDriverId GetRivalDriverId(EDriverId InDriverId);
+	static bool IsExtndDriverId(const EDriverId InDriverId);
+	static bool IsNoVoiceDriverId(const EDriverId InDriverId);
 
 public:
 	static class UClass* StaticClass()
@@ -1437,6 +1625,163 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UDriverIdUtilityLibrary;
+
+// Class UnionSystem.DuelCompeChanceUpUtil
+// 0x0000 (0x0028 - 0x0028)
+class UDuelCompeChanceUpUtil final : public UBlueprintFunctionLibrary
+{
+public:
+	static class FText GetDuelCompeChanceDetailText(int32 order, int32 Ratio);
+	static class FText GetDuelCompeChanceUpRatioText(int32 Ratio);
+	static class FText GetDuelCompeChanceUpTypeText();
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("DuelCompeChanceUpUtil")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DuelCompeChanceUpUtil")
+	}
+	static class UDuelCompeChanceUpUtil* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UDuelCompeChanceUpUtil>();
+	}
+};
+DUMPER7_ASSERTS_UDuelCompeChanceUpUtil;
+
+// Class UnionSystem.UnionDuelRubberBandParams
+// 0x0040 (0x0070 - 0x0030)
+class UUnionDuelRubberBandParams final : public UDataAsset
+{
+public:
+	float                                         BandHandleRate;                                    // 0x0030(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BoostStartDistanceVsPlayer;                        // 0x0034(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BoostMaxDistanceVsPlayer;                          // 0x0038(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BoostMaxSpeedAdditionVsPlayer;                     // 0x003C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BoostStartDistanceVsComToPlayer;                   // 0x0040(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BoostMaxDistanceVsComToPlayer;                     // 0x0044(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BoostMaxSpeedAdditionVsComToPlayer;                // 0x0048(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BoostStartDistanceVsComToCom;                      // 0x004C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BoostMaxDistanceVsComToCom;                        // 0x0050(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BoostMaxSpeedAdditionVsComToCom;                   // 0x0054(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          BandVisible;                                       // 0x0058(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MaxThickness;                                      // 0x005C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinThicknessDist;                                  // 0x0060(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinThickness;                                      // 0x0064(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxThicknessDist;                                  // 0x0068(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BandOffsetRadius;                                  // 0x006C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UnionDuelRubberBandParams")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UnionDuelRubberBandParams")
+	}
+	static class UUnionDuelRubberBandParams* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UUnionDuelRubberBandParams>();
+	}
+};
+DUMPER7_ASSERTS_UUnionDuelRubberBandParams;
+
+// Class UnionSystem.RivalDuelDataAsset
+// 0x0170 (0x01A0 - 0x0030)
+class URivalDuelDataAsset final : public UDataAsset
+{
+public:
+	TMap<EStageId, EDriverId>                     FirstRivalCourseData;                              // 0x0030(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	TMap<EStageId, struct FRivalDuelRewardData>   FirstRivalCourseRewardData;                        // 0x0080(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	TArray<struct FRivalDuelRewardData>           FirstRivalAllEliminatedData;                       // 0x00D0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FRivalDuelRewardData>           RedStarRingAllAcquiredReward;                      // 0x00E0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FRivalDuelRewardData>           EndContentRewardList;                              // 0x00F0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FRivalDuelSpecialRewardData            SpecialRewardData;                                 // 0x0100(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	TArray<struct FRivalDuelTargetRivalCourseStruct> CollabCourseRivalData;                          // 0x0118(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	TMap<EGrandPrixId, EGrandPrixId>              NextGrandPrixOrder;                                // 0x0128(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	bool                                          IsAutoLevelUpByWinStreak;                          // 0x0178(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_179[0x3];                                      // 0x0179(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         AutoLevelUpCount;                                  // 0x017C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         AutoLevelDownCount;                                // 0x0180(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         DefaultRivalLevel;                                 // 0x0184(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxAutoLevelUpRivalLevel;                          // 0x0188(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         GetRewardWinCountForEndContents;                   // 0x018C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<EDriverId>                             InvincibleDriverList;                              // 0x0190(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("RivalDuelDataAsset")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"RivalDuelDataAsset")
+	}
+	static class URivalDuelDataAsset* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<URivalDuelDataAsset>();
+	}
+};
+DUMPER7_ASSERTS_URivalDuelDataAsset;
+
+// Class UnionSystem.DuelUIParamDataAsset
+// 0x00E0 (0x0110 - 0x0030)
+class UDuelUIParamDataAsset final : public UDataAsset
+{
+public:
+	TMap<EDriverId, struct FDuelUIParamData>      DuelUIParamData;                                   // 0x0030(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	TMap<EDuelCompeRank, class FText>             DuelRankTextParamData;                             // 0x0080(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FDuelPointTextData                     DuelPointTextData;                                 // 0x00D0(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FDuelWinStreakTextData                 DuelWinStreakTextData;                             // 0x00F0(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+
+public:
+	void BuildData();
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("DuelUIParamDataAsset")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DuelUIParamDataAsset")
+	}
+	static class UDuelUIParamDataAsset* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UDuelUIParamDataAsset>();
+	}
+};
+DUMPER7_ASSERTS_UDuelUIParamDataAsset;
+
+// Class UnionSystem.DuelRaceParam
+// 0x0010 (0x0040 - 0x0030)
+class UDuelRaceParam final : public UDataAsset
+{
+public:
+	float                                         CatchUpMinDist;                                    // 0x0030(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CatchUpMaxDist;                                    // 0x0034(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CatchUpSpeed;                                      // 0x0038(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("DuelRaceParam")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DuelRaceParam")
+	}
+	static class UDuelRaceParam* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UDuelRaceParam>();
+	}
+};
+DUMPER7_ASSERTS_UDuelRaceParam;
 
 // Class UnionSystem.LobbyMemberContextBase
 // 0x0078 (0x00A0 - 0x0028)
@@ -1547,6 +1892,26 @@ public:
 };
 DUMPER7_ASSERTS_UEnhancedInputHelper;
 
+// Class UnionSystem.ExchangeHelper
+// 0x0000 (0x0028 - 0x0028)
+class UExchangeHelper final : public UBlueprintFunctionLibrary
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ExchangeHelper")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ExchangeHelper")
+	}
+	static class UExchangeHelper* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UExchangeHelper>();
+	}
+};
+DUMPER7_ASSERTS_UExchangeHelper;
+
 // Class UnionSystem.FestaUIDataAsset
 // 0x0058 (0x0088 - 0x0030)
 class UFestaUIDataAsset final : public UDataAsset
@@ -1588,13 +1953,17 @@ class UFestaUtil final : public UBlueprintFunctionLibrary
 {
 public:
 	static int32 ConvertFestaIdToTypeId(const int32 festaId);
+	static class FName ConvertGroupColorIdToRowName(EGroupColorId GroupColorID);
+	static int32 GetCurrentFestaMachineColorId();
 	static class FText GetFestaChanceUpRatioText(int32 Ratio);
 	static EGroupColorId GetFestaGroupColorId(int32 festaId, int32 GroupIndex);
 	static int32 GetFestaIdUtil();
+	static EWinStreakGrade GetFestalWinStreakGrade(const int32 InWinStreak);
 	static struct FColor GetFestaMainColor(int32 GroupIndex);
 	static class FText GetFestaPointText(int32 Point);
 	static class FText GetFestaRentalPlateText(const class FText& TargetGadgetname);
 	static struct FUIColorInfo GetFestaUIColorInfo(int32 festaId, int32 GroupIndex);
+	static bool IsFestaCustomColor(EGroupColorId GroupColorID);
 
 public:
 	static class UClass* StaticClass()
@@ -1636,11 +2005,11 @@ public:
 DUMPER7_ASSERTS_UFlagFileManager;
 
 // Class UnionSystem.FriendSubsystem
-// 0x0CC0 (0x0CF0 - 0x0030)
+// 0x0CD0 (0x0D00 - 0x0030)
 class UFriendSubsystem final : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_30[0xCC0];                                     // 0x0030(0x0CC0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0xCD0];                                     // 0x0030(0x0CD0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void AddBlockPlayer(const class FString& ProductUserId, TDelegate<void(EBlockPlayerErrorCode ErrorCode, const class FString& ProductUserId)> OnComplete);
@@ -1741,19 +2110,20 @@ public:
 DUMPER7_ASSERTS_UFriendSubsystem;
 
 // Class UnionSystem.GadgetSettingData
-// 0x0348 (0x0378 - 0x0030)
+// 0x03B8 (0x03E8 - 0x0030)
 class UGadgetSettingData final : public UDataAsset
 {
 public:
-	struct FGadgetSetting                         GadgetSettingTable[0xA8];                          // 0x0030(0x0005)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FGadgetSetting                         GadgetSettingTable[0xBD];                          // 0x0030(0x0005)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3E1[0x7];                                      // 0x03E1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void UpdateGadgetSetting();
 
-	EGadgetMenuCategory GadgetMenuCategory(EGadgetId gadgetId) const;
-	bool IsEquippable(EGadgetId gadgetId) const;
-	bool IsGadgetKit(EGadgetId gadgetId) const;
-	bool IsHiddenGadget(EGadgetId gadgetId) const;
+	EGadgetMenuCategory GadgetMenuCategory(EGadgetId GadgetID) const;
+	bool IsEquippable(EGadgetId GadgetID) const;
+	bool IsGadgetKit(EGadgetId GadgetID) const;
+	bool IsHiddenGadget(EGadgetId GadgetID) const;
 
 public:
 	static class UClass* StaticClass()
@@ -1796,34 +2166,36 @@ public:
 };
 DUMPER7_ASSERTS_UGameActivitySubsystem;
 
-// Class UnionSystem.GameHttpSubsystem
-// 0x03E0 (0x0410 - 0x0030)
-class UGameHttpSubsystem final : public UGameInstanceSubsystem
+// Class UnionSystem.GameModeIdUtilityLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UGameModeIdUtilityLibrary final : public UBlueprintFunctionLibrary
 {
 public:
-	uint8                                         Pad_30[0x280];                                     // 0x0030(0x0280)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FServerList                            ServerList;                                        // 0x02B0(0x0160)(NativeAccessSpecifierPrivate)
-
-public:
-	bool ReceiveFromServerRaw(int32 Handle, class FString* OutData, bool* OutError);
-	int32 SendToServerRaw(const struct FGameHttpRequestOption& Option, const class FString& ApiName, const class FString& Data);
-	void SendToServerRawCallbacked(const struct FGameHttpRequestOption& Option, const class FString& ApiName, const class FString& Data, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static bool GameModeContainsDisabledGadgets(const EGameModeId& InGameModeId);
+	static bool IsActiveGameModeId(const EGameModeId InGameModeId, bool bIsIncludeDevRun);
+	static bool IsAssistEnabledGameModeId(const EGameModeId InGameModeId);
+	static bool IsDuelRaceGameModeId(const EGameModeId InGameModeId);
+	static bool IsFriendMatchGameModeId(const EGameModeId InGameModeId);
+	static bool IsGroupRaceGameModeId(const EGameModeId InGameModeId);
+	static bool IsOfflineGameModeId(const EGameModeId InGameModeId, bool bIsIncludeDevRun);
+	static bool IsOnlineGameModeId(const EGameModeId InGameModeId, bool bIsIncludeDevRun);
+	static bool IsOnlineMatchingGameModeId(const EGameModeId InGameModeId);
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("GameHttpSubsystem")
+		STATIC_CLASS_IMPL("GameModeIdUtilityLibrary")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"GameHttpSubsystem")
+		STATIC_NAME_IMPL(L"GameModeIdUtilityLibrary")
 	}
-	static class UGameHttpSubsystem* GetDefaultObj()
+	static class UGameModeIdUtilityLibrary* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UGameHttpSubsystem>();
+		return GetDefaultObjImpl<UGameModeIdUtilityLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UGameHttpSubsystem;
+DUMPER7_ASSERTS_UGameModeIdUtilityLibrary;
 
 // Class UnionSystem.GhostDataController
 // 0x0508 (0x0530 - 0x0028)
@@ -1897,7 +2269,7 @@ DUMPER7_ASSERTS_UGhostDebugMenu;
 
 // Class UnionSystem.GhostDonwnloadController
 // 0x00F8 (0x0388 - 0x0290)
-class AGhostDonwnloadController : public AActor
+class AGhostDonwnloadController final : public AActor
 {
 public:
 	TMulticastInlineDelegate<void(bool OutIsError)> FinishDownload;                                  // 0x0290(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
@@ -1963,11 +2335,11 @@ public:
 DUMPER7_ASSERTS_UGhostDownloader;
 
 // Class UnionSystem.GhostResultUploader
-// 0x0178 (0x01A0 - 0x0028)
+// 0x0180 (0x01A8 - 0x0028)
 class UGhostResultUploader final : public UObject
 {
 public:
-	uint8                                         Pad_28[0x178];                                     // 0x0028(0x0178)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x180];                                     // 0x0028(0x0180)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -1984,48 +2356,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UGhostResultUploader;
-
-// Class UnionSystem.GhostSubSystem
-// 0x01D0 (0x0200 - 0x0030)
-class UGhostSubSystem final : public UGameInstanceSubsystem
-{
-public:
-	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGhostDebugMenu*                        m_GhostDebugMenu;                                  // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_40[0x50];                                      // 0x0040(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FReplaySaveInfo                        m_DownloadGhostData;                               // 0x0090(0x0140)(NativeAccessSpecifierPrivate)
-	class FString                                 m_CurrentUserId;                                   // 0x01D0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	ESpeedClassId                                 m_CurrentSpeedClassId;                             // 0x01E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	EStageId                                      m_CurrentStageId;                                  // 0x01E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1E2[0x6];                                      // 0x01E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 m_CurrentDateTime;                                 // 0x01E8(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1F8[0x8];                                      // 0x01F8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	bool CheckCachedGhostDataUserMatch(const class FString& InUserId, const ESpeedClassId InSpeedClass, const EStageId InStageId, const class FString& InDateTime);
-	bool GetDownloadGhostData(struct FReplaySaveInfo* OutGhostData);
-	void ResetDownloadGhostData();
-	void SetDownloadGhostData(const class FString& InUserId, const ESpeedClassId InSpeedClass, const EStageId InStageId, const class FString& InDateTime, const class FString& InRankingName, const struct FReplaySaveInfo& InGhostData);
-	void SetGhostRequestFailed(bool InFailed);
-
-	bool GetDebugEnableGhostUploadCancel() const;
-	bool IsGhostRequestFailed() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("GhostSubSystem")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"GhostSubSystem")
-	}
-	static class UGhostSubSystem* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGhostSubSystem>();
-	}
-};
-DUMPER7_ASSERTS_UGhostSubSystem;
 
 // Class UnionSystem.GhostUploader
 // 0x00C0 (0x00E8 - 0x0028)
@@ -2089,15 +2419,17 @@ public:
 DUMPER7_ASSERTS_UGrandPrixCommonData;
 
 // Class UnionSystem.UIColorInfoDataAsset
-// 0x0058 (0x0088 - 0x0030)
+// 0x00A8 (0x00D8 - 0x0030)
 class UUIColorInfoDataAsset final : public UDataAsset
 {
 public:
 	class UDataTable*                             UIColorInfoDataTable;                              // 0x0030(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TMap<EGroupColorId, struct FUIColorInfoData>  UIColorInfoDataMap;                                // 0x0038(0x0050)(Edit, BlueprintVisible, EditConst, NativeAccessSpecifierPublic)
+	TMap<class FName, struct FUIColorInfoData>    FestaCustomUIColorInfoDataMap;                     // 0x0088(0x0050)(Edit, BlueprintVisible, EditConst, NativeAccessSpecifierPublic)
 
 public:
 	void ClearData();
+	const struct FUIColorInfo GetFestaCustomUIColorInfo(class FName RowName);
 	const struct FUIColorInfo GetUIColorInfo(EGroupColorId colorId);
 	void Update();
 
@@ -2143,6 +2475,48 @@ public:
 };
 DUMPER7_ASSERTS_UHashHelper;
 
+// Class UnionSystem.HonorTitleListDataAsset
+// 0x0168 (0x0198 - 0x0030)
+class UHonorTitleListDataAsset final : public UDataAsset
+{
+public:
+	class UDataTable*                             HonorTitleCompositeDataTable;                      // 0x0030(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<int32, struct FHonorTitleListData>       HonorTitleTableDataMap;                            // 0x0038(0x0050)(Edit, BlueprintVisible, EditConst, NativeAccessSpecifierPublic)
+	TMap<int32, int32>                            HonorTitleFestaSortId;                             // 0x0088(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	TArray<struct FLegendCompeGrowingTitleDetails> LegendCompeGrowingTitleDetails;                   // 0x00D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+	TMap<EHonorTitleFontColor, int32>             LegendCompeGrowthLevelFontColorMap;                // 0x00E8(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	TMap<EHonorTitleDisplayControlCategory, TSoftClassPtr<class UClass>> HonorTitlePlateWidgetMap;   // 0x0138(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<struct FHonorTitleLegendCompeGradeData> LegendCompeGradePlateDatas;                       // 0x0188(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+
+public:
+	void ClearData();
+	void Update();
+
+	TArray<struct FHonorTitleListData> GetAllHonorTitleWithRarity(int32 Rarity) const;
+	int32 GetHonorTitleFestaSortId(int32 festaId) const;
+	void GetHonorTitleLegendCompeInfo(int32 HonorTitleIndex, bool* IsLegendCompe, int32* RoundNum) const;
+	struct FHonorTitleListData GetHonorTitleListData(int32 HonorTitleId) const;
+	TSoftObjectPtr<class UTexture2D> GetHonorTitlePlate(int32 HonorTitleId) const;
+	int32 GetHonorTitleRarity(int32 HonorTitleId) const;
+	class FText GetHonorTitleVBName(int32 HonorTitleId, bool* IsValid) const;
+	bool GetIsHonorTitleDLC(int32 HonorTitleIndex) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("HonorTitleListDataAsset")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"HonorTitleListDataAsset")
+	}
+	static class UHonorTitleListDataAsset* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UHonorTitleListDataAsset>();
+	}
+};
+DUMPER7_ASSERTS_UHonorTitleListDataAsset;
+
 // Class UnionSystem.HttpHelper
 // 0x0000 (0x0028 - 0x0028)
 class UHttpHelper final : public UBlueprintFunctionLibrary
@@ -2150,7 +2524,7 @@ class UHttpHelper final : public UBlueprintFunctionLibrary
 public:
 	static bool GetCurrentUserId(class FString* UserId);
 	static bool GetIntplServerDateTime(struct FDateTime* OutDateTime);
-	static bool GetLastMaintenanceData(class FString* StartTime, class FString* endTime, int32* noticeId);
+	static bool GetLastMaintenanceData(class FString* StartTime, class FString* EndTime, int32* noticeId);
 	static bool GetLastServerTime(class FString* ServerTime);
 	static void LoginContextInitialize(const class FString& ProductUserId, const class FString& UserId);
 	static void LoginContextInitializeForMaintenance(const class FString& ProviderId);
@@ -2158,15 +2532,28 @@ public:
 	static void Parse_CntReplayGetSignedUrl(const class FString& OutData, int32* ResCode, struct FCntReplayGetSignedUrlResponse* Response);
 	static void Parse_CompensationGetCompensations(const class FString& OutData, int32* ResCode, struct FCompensationGetCompensationsResponse* Response);
 	static void Parse_CompensationSaveCompensations(const class FString& OutData, int32* ResCode, struct FCompensationSaveCompensationsResponse* Response);
+	static void Parse_DebugChangeDuelCompeDuelMedal(const class FString& OutData, int32* ResCode, struct FDebugChangeDuelCompeDuelMedalResponse* Response);
+	static void Parse_DebugChangeDuelCompeRaceCount(const class FString& OutData, int32* ResCode, struct FDebugChangeDuelCompeRaceCountResponse* Response);
+	static void Parse_DebugChangeDuelCompeRate(const class FString& OutData, int32* ResCode, struct FDebugChangeDuelCompeRateResponse* Response);
+	static void Parse_DebugChangeDuelCompeRoundPoint(const class FString& OutData, int32* ResCode, struct FDebugChangeDuelCompeRoundPointResponse* Response);
+	static void Parse_DebugChangeDuelCompeTotalWinStreak(const class FString& OutData, int32* ResCode, struct FDebugChangeDuelCompeTotalWinStreakResponse* Response);
+	static void Parse_DebugChangeDuelCompeWinCount(const class FString& OutData, int32* ResCode, struct FDebugChangeDuelCompeWinCountResponse* Response);
 	static void Parse_DebugChangeFairPlayPoint(const class FString& OutData, int32* ResCode, struct FDebugChangeFairPlayPointResponse* Response);
 	static void Parse_DebugChangeFestaLastOrder(const class FString& OutData, int32* ResCode, struct FDebugChangeFestaLastOrderResponse* Response);
 	static void Parse_DebugChangeLegendCompeLastOrder(const class FString& OutData, int32* ResCode, struct FDebugChangeLegendCompeLastOrderResponse* Response);
 	static void Parse_DebugChangeLegendCompeRate(const class FString& OutData, int32* ResCode, struct FDebugChangeLegendCompeRateResponse* Response);
 	static void Parse_DebugChangeRankMatchRate(const class FString& OutData, int32* ResCode, struct FDebugChangeRankMatchRateResponse* Response);
 	static void Parse_DebugConnectTest(const class FString& OutData, int32* ResCode, struct FDebugConnectTestResponse* Response);
+	static void Parse_DebugMatchmakingSubscribeDuelCompe(const class FString& OutData, int32* ResCode, struct FDebugMatchmakingSubscribeDuelCompeResponse* Response);
 	static void Parse_DebugMatchmakingSubscribeFesta(const class FString& OutData, int32* ResCode, struct FDebugMatchmakingSubscribeFestaResponse* Response);
 	static void Parse_DebugMatchmakingSubscribeLegendCompe(const class FString& OutData, int32* ResCode, struct FDebugMatchmakingSubscribeLegendCompeResponse* Response);
 	static void Parse_DebugMatchmakingSubscribeRankMatch(const class FString& OutData, int32* ResCode, struct FDebugMatchmakingSubscribeRankMatchResponse* Response);
+	static void Parse_DebugResetDuelCompeRewardState(const class FString& OutData, int32* ResCode, struct FDebugResetDuelCompeRewardStateResponse* Response);
+	static void Parse_DuelCompeGetRoundInfo(const class FString& OutData, int32* ResCode, struct FDuelCompeGetRoundInfoResponse* Response);
+	static void Parse_DuelCompeHistory(const class FString& OutData, int32* ResCode, struct FDuelCompeHistoryResponse* Response);
+	static void Parse_DuelCompeRestoration(const class FString& OutData, int32* ResCode, struct FDuelCompeRestorationResponse* Response);
+	static void Parse_DuelCompeRoundResult(const class FString& OutData, int32* ResCode, struct FDuelCompeRoundResultResponse* Response);
+	static void Parse_DuelCompeSaveRewards(const class FString& OutData, int32* ResCode, struct FDuelCompeSaveRewardsResponse* Response);
 	static void Parse_FairPointAddFairPoint(const class FString& OutData, int32* ResCode, struct FFairPointAddFairPointResponse* Response);
 	static void Parse_FairPointCheckFairPoint(const class FString& OutData, int32* ResCode, struct FFairPointCheckFairPointResponse* Response);
 	static void Parse_FairPointSubFairPoint(const class FString& OutData, int32* ResCode, struct FFairPointSubFairPointResponse* Response);
@@ -2185,6 +2572,7 @@ public:
 	static void Parse_GhostGetRankingGhostData(const class FString& OutData, int32* ResCode, struct FGhostGetRankingGhostDataResponse* Response);
 	static void Parse_HealthCheck(const class FString& OutData, int32* ResCode, struct FHealthCheckResponse* Response);
 	static void Parse_LegendCompeCheckLegendCompeReward(const class FString& OutData, int32* ResCode, struct FLegendCompeCheckLegendCompeRewardResponse* Response);
+	static void Parse_LegendCompeGetUserLegendCompe(const class FString& OutData, int32* ResCode, struct FLegendCompeGetUserLegendCompeResponse* Response);
 	static void Parse_LobbyGenerateLobby(const class FString& OutData, int32* ResCode, struct FLobbyGenerateLobbyResponse* Response);
 	static void Parse_LobbyGetEosLobbyId(const class FString& OutData, int32* ResCode, struct FLobbyGetEosLobbyIdResponse* Response);
 	static void Parse_LobbyKeepAlive(const class FString& OutData, int32* ResCode, struct FLobbyKeepAliveResponse* Response);
@@ -2195,6 +2583,7 @@ public:
 	static void Parse_MasterDataGetVersion(const class FString& OutData, int32* ResCode, struct FMasterDataGetVersionResponse* Response);
 	static void Parse_MatchmakingDescribe(const class FString& OutData, int32* ResCode, struct FMatchmakingDescribeResponse* Response);
 	static void Parse_MatchmakingStop(const class FString& OutData, int32* ResCode, struct FMatchmakingStopResponse* Response);
+	static void Parse_MatchmakingSubscribeDuelCompe(const class FString& OutData, int32* ResCode, struct FMatchmakingSubscribeDuelCompeResponse* Response);
 	static void Parse_MatchmakingSubscribeFesta(const class FString& OutData, int32* ResCode, struct FMatchmakingSubscribeFestaResponse* Response);
 	static void Parse_MatchmakingSubscribeLegendCompe(const class FString& OutData, int32* ResCode, struct FMatchmakingSubscribeLegendCompeResponse* Response);
 	static void Parse_MatchmakingSubscribeRankMatch(const class FString& OutData, int32* ResCode, struct FMatchmakingSubscribeRankMatchResponse* Response);
@@ -2202,6 +2591,8 @@ public:
 	static void Parse_OntSaveOntParticipantUser(const class FString& OutData, int32* ResCode, struct FOntSaveOntParticipantUserResponse* Response);
 	static void Parse_OperationSaveAutoReport(const class FString& OutData, int32* ResCode, struct FOperationSaveAutoReportResponse* Response);
 	static void Parse_OperationSaveOperatorReport(const class FString& OutData, int32* ResCode, struct FOperationSaveOperatorReportResponse* Response);
+	static void Parse_PlayMissionGetPlayMissionDatas(const class FString& OutData, int32* ResCode, struct FPlayMissionGetPlayMissionDatasResponse* Response);
+	static void Parse_RankingGetFriendRankingDuelCompe(const class FString& OutData, int32* ResCode, struct FRankingGetFriendRankingDuelCompeResponse* Response);
 	static void Parse_RankingGetFriendRankingFestaPoint(const class FString& OutData, int32* ResCode, struct FRankingGetFriendRankingFestaPointResponse* Response);
 	static void Parse_RankingGetFriendRankingLegendCompe(const class FString& OutData, int32* ResCode, struct FRankingGetFriendRankingLegendCompeResponse* Response);
 	static void Parse_RankingGetFriendRankingRankMatch(const class FString& OutData, int32* ResCode, struct FRankingGetFriendRankingRankMatchResponse* Response);
@@ -2216,6 +2607,7 @@ public:
 	static void Parse_ReceiveRewardGetReceivedRewards(const class FString& OutData, int32* ResCode, struct FReceiveRewardGetReceivedRewardsResponse* Response);
 	static void Parse_ReceiveRewardGetRewards(const class FString& OutData, int32* ResCode, struct FReceiveRewardGetRewardsResponse* Response);
 	static void Parse_ReceiveRewardSaveRewards(const class FString& OutData, int32* ResCode, struct FReceiveRewardSaveRewardsResponse* Response);
+	static void Parse_ResultSaveDuelCompeResult(const class FString& OutData, int32* ResCode, struct FResultSaveDuelCompeResultResponse* Response);
 	static void Parse_ResultSaveFestaResult(const class FString& OutData, int32* ResCode, struct FResultSaveFestaResultResponse* Response);
 	static void Parse_ResultSaveLegendCompeResult(const class FString& OutData, int32* ResCode, struct FResultSaveLegendCompeResultResponse* Response);
 	static void Parse_ResultSaveRankMatchResult(const class FString& OutData, int32* ResCode, struct FResultSaveRankMatchResultResponse* Response);
@@ -2223,6 +2615,7 @@ public:
 	static void Parse_RomCheckRomVersion(const class FString& OutData, int32* ResCode, struct FRomCheckRomVersionResponse* Response);
 	static void Parse_SamplePart1(const class FString& OutData, int32* ResCode, struct FSamplePart1Response* Response);
 	static void Parse_SessionKeepalive(const class FString& OutData, int32* ResCode, struct FSessionKeepaliveResponse* Response);
+	static void Parse_StartSaveDuelCompeStart(const class FString& OutData, int32* ResCode, struct FStartSaveDuelCompeStartResponse* Response);
 	static void Parse_StartSaveFestaStart(const class FString& OutData, int32* ResCode, struct FStartSaveFestaStartResponse* Response);
 	static void Parse_StartSaveLegendCompeStart(const class FString& OutData, int32* ResCode, struct FStartSaveLegendCompeStartResponse* Response);
 	static void Parse_StartSaveRankMatchStart(const class FString& OutData, int32* ResCode, struct FStartSaveRankMatchStartResponse* Response);
@@ -2240,15 +2633,28 @@ public:
 	static bool Receive_CntReplayGetSignedUrl(int32 Handle, bool* OutError, int32* ResCode, struct FCntReplayGetSignedUrlResponse* Response);
 	static bool Receive_CompensationGetCompensations(int32 Handle, bool* OutError, int32* ResCode, struct FCompensationGetCompensationsResponse* Response);
 	static bool Receive_CompensationSaveCompensations(int32 Handle, bool* OutError, int32* ResCode, struct FCompensationSaveCompensationsResponse* Response);
+	static bool Receive_DebugChangeDuelCompeDuelMedal(int32 Handle, bool* OutError, int32* ResCode, struct FDebugChangeDuelCompeDuelMedalResponse* Response);
+	static bool Receive_DebugChangeDuelCompeRaceCount(int32 Handle, bool* OutError, int32* ResCode, struct FDebugChangeDuelCompeRaceCountResponse* Response);
+	static bool Receive_DebugChangeDuelCompeRate(int32 Handle, bool* OutError, int32* ResCode, struct FDebugChangeDuelCompeRateResponse* Response);
+	static bool Receive_DebugChangeDuelCompeRoundPoint(int32 Handle, bool* OutError, int32* ResCode, struct FDebugChangeDuelCompeRoundPointResponse* Response);
+	static bool Receive_DebugChangeDuelCompeTotalWinStreak(int32 Handle, bool* OutError, int32* ResCode, struct FDebugChangeDuelCompeTotalWinStreakResponse* Response);
+	static bool Receive_DebugChangeDuelCompeWinCount(int32 Handle, bool* OutError, int32* ResCode, struct FDebugChangeDuelCompeWinCountResponse* Response);
 	static bool Receive_DebugChangeFairPlayPoint(int32 Handle, bool* OutError, int32* ResCode, struct FDebugChangeFairPlayPointResponse* Response);
 	static bool Receive_DebugChangeFestaLastOrder(int32 Handle, bool* OutError, int32* ResCode, struct FDebugChangeFestaLastOrderResponse* Response);
 	static bool Receive_DebugChangeLegendCompeLastOrder(int32 Handle, bool* OutError, int32* ResCode, struct FDebugChangeLegendCompeLastOrderResponse* Response);
 	static bool Receive_DebugChangeLegendCompeRate(int32 Handle, bool* OutError, int32* ResCode, struct FDebugChangeLegendCompeRateResponse* Response);
 	static bool Receive_DebugChangeRankMatchRate(int32 Handle, bool* OutError, int32* ResCode, struct FDebugChangeRankMatchRateResponse* Response);
 	static bool Receive_DebugConnectTest(int32 Handle, bool* OutError, int32* ResCode, struct FDebugConnectTestResponse* Response);
+	static bool Receive_DebugMatchmakingSubscribeDuelCompe(int32 Handle, bool* OutError, int32* ResCode, struct FDebugMatchmakingSubscribeDuelCompeResponse* Response);
 	static bool Receive_DebugMatchmakingSubscribeFesta(int32 Handle, bool* OutError, int32* ResCode, struct FDebugMatchmakingSubscribeFestaResponse* Response);
 	static bool Receive_DebugMatchmakingSubscribeLegendCompe(int32 Handle, bool* OutError, int32* ResCode, struct FDebugMatchmakingSubscribeLegendCompeResponse* Response);
 	static bool Receive_DebugMatchmakingSubscribeRankMatch(int32 Handle, bool* OutError, int32* ResCode, struct FDebugMatchmakingSubscribeRankMatchResponse* Response);
+	static bool Receive_DebugResetDuelCompeRewardState(int32 Handle, bool* OutError, int32* ResCode, struct FDebugResetDuelCompeRewardStateResponse* Response);
+	static bool Receive_DuelCompeGetRoundInfo(int32 Handle, bool* OutError, int32* ResCode, struct FDuelCompeGetRoundInfoResponse* Response);
+	static bool Receive_DuelCompeHistory(int32 Handle, bool* OutError, int32* ResCode, struct FDuelCompeHistoryResponse* Response);
+	static bool Receive_DuelCompeRestoration(int32 Handle, bool* OutError, int32* ResCode, struct FDuelCompeRestorationResponse* Response);
+	static bool Receive_DuelCompeRoundResult(int32 Handle, bool* OutError, int32* ResCode, struct FDuelCompeRoundResultResponse* Response);
+	static bool Receive_DuelCompeSaveRewards(int32 Handle, bool* OutError, int32* ResCode, struct FDuelCompeSaveRewardsResponse* Response);
 	static bool Receive_FairPointAddFairPoint(int32 Handle, bool* OutError, int32* ResCode, struct FFairPointAddFairPointResponse* Response);
 	static bool Receive_FairPointCheckFairPoint(int32 Handle, bool* OutError, int32* ResCode, struct FFairPointCheckFairPointResponse* Response);
 	static bool Receive_FairPointSubFairPoint(int32 Handle, bool* OutError, int32* ResCode, struct FFairPointSubFairPointResponse* Response);
@@ -2267,6 +2673,7 @@ public:
 	static bool Receive_GhostGetRankingGhostData(int32 Handle, bool* OutError, int32* ResCode, struct FGhostGetRankingGhostDataResponse* Response);
 	static bool Receive_HealthCheck(int32 Handle, bool* OutError, int32* ResCode, struct FHealthCheckResponse* Response);
 	static bool Receive_LegendCompeCheckLegendCompeReward(int32 Handle, bool* OutError, int32* ResCode, struct FLegendCompeCheckLegendCompeRewardResponse* Response);
+	static bool Receive_LegendCompeGetUserLegendCompe(int32 Handle, bool* OutError, int32* ResCode, struct FLegendCompeGetUserLegendCompeResponse* Response);
 	static bool Receive_LobbyGenerateLobby(int32 Handle, bool* OutError, int32* ResCode, struct FLobbyGenerateLobbyResponse* Response);
 	static bool Receive_LobbyGetEosLobbyId(int32 Handle, bool* OutError, int32* ResCode, struct FLobbyGetEosLobbyIdResponse* Response);
 	static bool Receive_LobbyKeepAlive(int32 Handle, bool* OutError, int32* ResCode, struct FLobbyKeepAliveResponse* Response);
@@ -2277,6 +2684,7 @@ public:
 	static bool Receive_MasterDataGetVersion(int32 Handle, bool* OutError, int32* ResCode, struct FMasterDataGetVersionResponse* Response);
 	static bool Receive_MatchmakingDescribe(int32 Handle, bool* OutError, int32* ResCode, struct FMatchmakingDescribeResponse* Response);
 	static bool Receive_MatchmakingStop(int32 Handle, bool* OutError, int32* ResCode, struct FMatchmakingStopResponse* Response);
+	static bool Receive_MatchmakingSubscribeDuelCompe(int32 Handle, bool* OutError, int32* ResCode, struct FMatchmakingSubscribeDuelCompeResponse* Response);
 	static bool Receive_MatchmakingSubscribeFesta(int32 Handle, bool* OutError, int32* ResCode, struct FMatchmakingSubscribeFestaResponse* Response);
 	static bool Receive_MatchmakingSubscribeLegendCompe(int32 Handle, bool* OutError, int32* ResCode, struct FMatchmakingSubscribeLegendCompeResponse* Response);
 	static bool Receive_MatchmakingSubscribeRankMatch(int32 Handle, bool* OutError, int32* ResCode, struct FMatchmakingSubscribeRankMatchResponse* Response);
@@ -2284,6 +2692,9 @@ public:
 	static bool Receive_OntSaveOntParticipantUser(int32 Handle, bool* OutError, int32* ResCode, struct FOntSaveOntParticipantUserResponse* Response);
 	static bool Receive_OperationSaveAutoReport(int32 Handle, bool* OutError, int32* ResCode, struct FOperationSaveAutoReportResponse* Response);
 	static bool Receive_OperationSaveOperatorReport(int32 Handle, bool* OutError, int32* ResCode, struct FOperationSaveOperatorReportResponse* Response);
+	static bool Receive_PingPong(int32 Handle, bool* OutError, int32* ResCode, struct FPingPongResponse* Response);
+	static bool Receive_PlayMissionGetPlayMissionDatas(int32 Handle, bool* OutError, int32* ResCode, struct FPlayMissionGetPlayMissionDatasResponse* Response);
+	static bool Receive_RankingGetFriendRankingDuelCompe(int32 Handle, bool* OutError, int32* ResCode, struct FRankingGetFriendRankingDuelCompeResponse* Response);
 	static bool Receive_RankingGetFriendRankingFestaPoint(int32 Handle, bool* OutError, int32* ResCode, struct FRankingGetFriendRankingFestaPointResponse* Response);
 	static bool Receive_RankingGetFriendRankingLegendCompe(int32 Handle, bool* OutError, int32* ResCode, struct FRankingGetFriendRankingLegendCompeResponse* Response);
 	static bool Receive_RankingGetFriendRankingRankMatch(int32 Handle, bool* OutError, int32* ResCode, struct FRankingGetFriendRankingRankMatchResponse* Response);
@@ -2298,6 +2709,7 @@ public:
 	static bool Receive_ReceiveRewardGetReceivedRewards(int32 Handle, bool* OutError, int32* ResCode, struct FReceiveRewardGetReceivedRewardsResponse* Response);
 	static bool Receive_ReceiveRewardGetRewards(int32 Handle, bool* OutError, int32* ResCode, struct FReceiveRewardGetRewardsResponse* Response);
 	static bool Receive_ReceiveRewardSaveRewards(int32 Handle, bool* OutError, int32* ResCode, struct FReceiveRewardSaveRewardsResponse* Response);
+	static bool Receive_ResultSaveDuelCompeResult(int32 Handle, bool* OutError, int32* ResCode, struct FResultSaveDuelCompeResultResponse* Response);
 	static bool Receive_ResultSaveFestaResult(int32 Handle, bool* OutError, int32* ResCode, struct FResultSaveFestaResultResponse* Response);
 	static bool Receive_ResultSaveLegendCompeResult(int32 Handle, bool* OutError, int32* ResCode, struct FResultSaveLegendCompeResultResponse* Response);
 	static bool Receive_ResultSaveRankMatchResult(int32 Handle, bool* OutError, int32* ResCode, struct FResultSaveRankMatchResultResponse* Response);
@@ -2305,6 +2717,7 @@ public:
 	static bool Receive_RomCheckRomVersion(int32 Handle, bool* OutError, int32* ResCode, struct FRomCheckRomVersionResponse* Response);
 	static bool Receive_SamplePart1(int32 Handle, bool* OutError, int32* ResCode, struct FSamplePart1Response* Response);
 	static bool Receive_SessionKeepalive(int32 Handle, bool* OutError, int32* ResCode, struct FSessionKeepaliveResponse* Response);
+	static bool Receive_StartSaveDuelCompeStart(int32 Handle, bool* OutError, int32* ResCode, struct FStartSaveDuelCompeStartResponse* Response);
 	static bool Receive_StartSaveFestaStart(int32 Handle, bool* OutError, int32* ResCode, struct FStartSaveFestaStartResponse* Response);
 	static bool Receive_StartSaveLegendCompeStart(int32 Handle, bool* OutError, int32* ResCode, struct FStartSaveLegendCompeStartResponse* Response);
 	static bool Receive_StartSaveRankMatchStart(int32 Handle, bool* OutError, int32* ResCode, struct FStartSaveRankMatchStartResponse* Response);
@@ -2330,6 +2743,30 @@ public:
 	static void Send_CompensationSaveCompensations_Callbacked(const struct FCompensationSaveCompensationsRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
 	static void Send_CompensationSaveCompensations_Callbacked_NoResend(const struct FCompensationSaveCompensationsRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
 	static int32 Send_CompensationSaveCompensations_NoResend(const struct FCompensationSaveCompensationsRequest& Request);
+	static int32 Send_DebugChangeDuelCompeDuelMedal(const struct FDebugChangeDuelCompeDuelMedalRequest& Request);
+	static void Send_DebugChangeDuelCompeDuelMedal_Callbacked(const struct FDebugChangeDuelCompeDuelMedalRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static void Send_DebugChangeDuelCompeDuelMedal_Callbacked_NoResend(const struct FDebugChangeDuelCompeDuelMedalRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static int32 Send_DebugChangeDuelCompeDuelMedal_NoResend(const struct FDebugChangeDuelCompeDuelMedalRequest& Request);
+	static int32 Send_DebugChangeDuelCompeRaceCount(const struct FDebugChangeDuelCompeRaceCountRequest& Request);
+	static void Send_DebugChangeDuelCompeRaceCount_Callbacked(const struct FDebugChangeDuelCompeRaceCountRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static void Send_DebugChangeDuelCompeRaceCount_Callbacked_NoResend(const struct FDebugChangeDuelCompeRaceCountRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static int32 Send_DebugChangeDuelCompeRaceCount_NoResend(const struct FDebugChangeDuelCompeRaceCountRequest& Request);
+	static int32 Send_DebugChangeDuelCompeRate(const struct FDebugChangeDuelCompeRateRequest& Request);
+	static void Send_DebugChangeDuelCompeRate_Callbacked(const struct FDebugChangeDuelCompeRateRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static void Send_DebugChangeDuelCompeRate_Callbacked_NoResend(const struct FDebugChangeDuelCompeRateRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static int32 Send_DebugChangeDuelCompeRate_NoResend(const struct FDebugChangeDuelCompeRateRequest& Request);
+	static int32 Send_DebugChangeDuelCompeRoundPoint(const struct FDebugChangeDuelCompeRoundPointRequest& Request);
+	static void Send_DebugChangeDuelCompeRoundPoint_Callbacked(const struct FDebugChangeDuelCompeRoundPointRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static void Send_DebugChangeDuelCompeRoundPoint_Callbacked_NoResend(const struct FDebugChangeDuelCompeRoundPointRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static int32 Send_DebugChangeDuelCompeRoundPoint_NoResend(const struct FDebugChangeDuelCompeRoundPointRequest& Request);
+	static int32 Send_DebugChangeDuelCompeTotalWinStreak(const struct FDebugChangeDuelCompeTotalWinStreakRequest& Request);
+	static void Send_DebugChangeDuelCompeTotalWinStreak_Callbacked(const struct FDebugChangeDuelCompeTotalWinStreakRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static void Send_DebugChangeDuelCompeTotalWinStreak_Callbacked_NoResend(const struct FDebugChangeDuelCompeTotalWinStreakRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static int32 Send_DebugChangeDuelCompeTotalWinStreak_NoResend(const struct FDebugChangeDuelCompeTotalWinStreakRequest& Request);
+	static int32 Send_DebugChangeDuelCompeWinCount(const struct FDebugChangeDuelCompeWinCountRequest& Request);
+	static void Send_DebugChangeDuelCompeWinCount_Callbacked(const struct FDebugChangeDuelCompeWinCountRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static void Send_DebugChangeDuelCompeWinCount_Callbacked_NoResend(const struct FDebugChangeDuelCompeWinCountRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static int32 Send_DebugChangeDuelCompeWinCount_NoResend(const struct FDebugChangeDuelCompeWinCountRequest& Request);
 	static int32 Send_DebugChangeFairPlayPoint(const struct FDebugChangeFairPlayPointRequest& Request);
 	static void Send_DebugChangeFairPlayPoint_Callbacked(const struct FDebugChangeFairPlayPointRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
 	static void Send_DebugChangeFairPlayPoint_Callbacked_NoResend(const struct FDebugChangeFairPlayPointRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
@@ -2354,6 +2791,10 @@ public:
 	static void Send_DebugConnectTest_Callbacked(const struct FDebugConnectTestRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
 	static void Send_DebugConnectTest_Callbacked_NoResend(const struct FDebugConnectTestRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
 	static int32 Send_DebugConnectTest_NoResend(const struct FDebugConnectTestRequest& Request);
+	static int32 Send_DebugMatchmakingSubscribeDuelCompe(const struct FDebugMatchmakingSubscribeDuelCompeRequest& Request);
+	static void Send_DebugMatchmakingSubscribeDuelCompe_Callbacked(const struct FDebugMatchmakingSubscribeDuelCompeRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static void Send_DebugMatchmakingSubscribeDuelCompe_Callbacked_NoResend(const struct FDebugMatchmakingSubscribeDuelCompeRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static int32 Send_DebugMatchmakingSubscribeDuelCompe_NoResend(const struct FDebugMatchmakingSubscribeDuelCompeRequest& Request);
 	static int32 Send_DebugMatchmakingSubscribeFesta(const struct FDebugMatchmakingSubscribeFestaRequest& Request);
 	static void Send_DebugMatchmakingSubscribeFesta_Callbacked(const struct FDebugMatchmakingSubscribeFestaRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
 	static void Send_DebugMatchmakingSubscribeFesta_Callbacked_NoResend(const struct FDebugMatchmakingSubscribeFestaRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
@@ -2366,6 +2807,30 @@ public:
 	static void Send_DebugMatchmakingSubscribeRankMatch_Callbacked(const struct FDebugMatchmakingSubscribeRankMatchRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
 	static void Send_DebugMatchmakingSubscribeRankMatch_Callbacked_NoResend(const struct FDebugMatchmakingSubscribeRankMatchRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
 	static int32 Send_DebugMatchmakingSubscribeRankMatch_NoResend(const struct FDebugMatchmakingSubscribeRankMatchRequest& Request);
+	static int32 Send_DebugResetDuelCompeRewardState(const struct FDebugResetDuelCompeRewardStateRequest& Request);
+	static void Send_DebugResetDuelCompeRewardState_Callbacked(const struct FDebugResetDuelCompeRewardStateRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static void Send_DebugResetDuelCompeRewardState_Callbacked_NoResend(const struct FDebugResetDuelCompeRewardStateRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static int32 Send_DebugResetDuelCompeRewardState_NoResend(const struct FDebugResetDuelCompeRewardStateRequest& Request);
+	static int32 Send_DuelCompeGetRoundInfo(const struct FDuelCompeGetRoundInfoRequest& Request);
+	static void Send_DuelCompeGetRoundInfo_Callbacked(const struct FDuelCompeGetRoundInfoRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static void Send_DuelCompeGetRoundInfo_Callbacked_NoResend(const struct FDuelCompeGetRoundInfoRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static int32 Send_DuelCompeGetRoundInfo_NoResend(const struct FDuelCompeGetRoundInfoRequest& Request);
+	static int32 Send_DuelCompeHistory(const struct FDuelCompeHistoryRequest& Request);
+	static void Send_DuelCompeHistory_Callbacked(const struct FDuelCompeHistoryRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static void Send_DuelCompeHistory_Callbacked_NoResend(const struct FDuelCompeHistoryRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static int32 Send_DuelCompeHistory_NoResend(const struct FDuelCompeHistoryRequest& Request);
+	static int32 Send_DuelCompeRestoration(const struct FDuelCompeRestorationRequest& Request);
+	static void Send_DuelCompeRestoration_Callbacked(const struct FDuelCompeRestorationRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static void Send_DuelCompeRestoration_Callbacked_NoResend(const struct FDuelCompeRestorationRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static int32 Send_DuelCompeRestoration_NoResend(const struct FDuelCompeRestorationRequest& Request);
+	static int32 Send_DuelCompeRoundResult(const struct FDuelCompeRoundResultRequest& Request);
+	static void Send_DuelCompeRoundResult_Callbacked(const struct FDuelCompeRoundResultRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static void Send_DuelCompeRoundResult_Callbacked_NoResend(const struct FDuelCompeRoundResultRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static int32 Send_DuelCompeRoundResult_NoResend(const struct FDuelCompeRoundResultRequest& Request);
+	static int32 Send_DuelCompeSaveRewards(const struct FDuelCompeSaveRewardsRequest& Request);
+	static void Send_DuelCompeSaveRewards_Callbacked(const struct FDuelCompeSaveRewardsRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static void Send_DuelCompeSaveRewards_Callbacked_NoResend(const struct FDuelCompeSaveRewardsRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static int32 Send_DuelCompeSaveRewards_NoResend(const struct FDuelCompeSaveRewardsRequest& Request);
 	static int32 Send_FairPointAddFairPoint(const struct FFairPointAddFairPointRequest& Request);
 	static void Send_FairPointAddFairPoint_Callbacked(const struct FFairPointAddFairPointRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
 	static void Send_FairPointAddFairPoint_Callbacked_NoResend(const struct FFairPointAddFairPointRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
@@ -2438,6 +2903,10 @@ public:
 	static void Send_LegendCompeCheckLegendCompeReward_Callbacked(const struct FLegendCompeCheckLegendCompeRewardRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
 	static void Send_LegendCompeCheckLegendCompeReward_Callbacked_NoResend(const struct FLegendCompeCheckLegendCompeRewardRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
 	static int32 Send_LegendCompeCheckLegendCompeReward_NoResend(const struct FLegendCompeCheckLegendCompeRewardRequest& Request);
+	static int32 Send_LegendCompeGetUserLegendCompe(const struct FLegendCompeGetUserLegendCompeRequest& Request);
+	static void Send_LegendCompeGetUserLegendCompe_Callbacked(const struct FLegendCompeGetUserLegendCompeRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static void Send_LegendCompeGetUserLegendCompe_Callbacked_NoResend(const struct FLegendCompeGetUserLegendCompeRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static int32 Send_LegendCompeGetUserLegendCompe_NoResend(const struct FLegendCompeGetUserLegendCompeRequest& Request);
 	static int32 Send_LobbyGenerateLobby(const struct FLobbyGenerateLobbyRequest& Request);
 	static void Send_LobbyGenerateLobby_Callbacked(const struct FLobbyGenerateLobbyRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
 	static void Send_LobbyGenerateLobby_Callbacked_NoResend(const struct FLobbyGenerateLobbyRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
@@ -2478,6 +2947,10 @@ public:
 	static void Send_MatchmakingStop_Callbacked(const struct FMatchmakingStopRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
 	static void Send_MatchmakingStop_Callbacked_NoResend(const struct FMatchmakingStopRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
 	static int32 Send_MatchmakingStop_NoResend(const struct FMatchmakingStopRequest& Request);
+	static int32 Send_MatchmakingSubscribeDuelCompe(const struct FMatchmakingSubscribeDuelCompeRequest& Request);
+	static void Send_MatchmakingSubscribeDuelCompe_Callbacked(const struct FMatchmakingSubscribeDuelCompeRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static void Send_MatchmakingSubscribeDuelCompe_Callbacked_NoResend(const struct FMatchmakingSubscribeDuelCompeRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static int32 Send_MatchmakingSubscribeDuelCompe_NoResend(const struct FMatchmakingSubscribeDuelCompeRequest& Request);
 	static int32 Send_MatchmakingSubscribeFesta(const struct FMatchmakingSubscribeFestaRequest& Request);
 	static void Send_MatchmakingSubscribeFesta_Callbacked(const struct FMatchmakingSubscribeFestaRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
 	static void Send_MatchmakingSubscribeFesta_Callbacked_NoResend(const struct FMatchmakingSubscribeFestaRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
@@ -2506,6 +2979,16 @@ public:
 	static void Send_OperationSaveOperatorReport_Callbacked(const struct FOperationSaveOperatorReportRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
 	static void Send_OperationSaveOperatorReport_Callbacked_NoResend(const struct FOperationSaveOperatorReportRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
 	static int32 Send_OperationSaveOperatorReport_NoResend(const struct FOperationSaveOperatorReportRequest& Request);
+	static int32 Send_PingPong(const struct FPingPongRequest& Request);
+	static void Send_PingPong_Callbacked(const struct FPingPongRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static int32 Send_PlayMissionGetPlayMissionDatas(const struct FPlayMissionGetPlayMissionDatasRequest& Request);
+	static void Send_PlayMissionGetPlayMissionDatas_Callbacked(const struct FPlayMissionGetPlayMissionDatasRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static void Send_PlayMissionGetPlayMissionDatas_Callbacked_NoResend(const struct FPlayMissionGetPlayMissionDatasRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static int32 Send_PlayMissionGetPlayMissionDatas_NoResend(const struct FPlayMissionGetPlayMissionDatasRequest& Request);
+	static int32 Send_RankingGetFriendRankingDuelCompe(const struct FRankingGetFriendRankingDuelCompeRequest& Request);
+	static void Send_RankingGetFriendRankingDuelCompe_Callbacked(const struct FRankingGetFriendRankingDuelCompeRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static void Send_RankingGetFriendRankingDuelCompe_Callbacked_NoResend(const struct FRankingGetFriendRankingDuelCompeRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static int32 Send_RankingGetFriendRankingDuelCompe_NoResend(const struct FRankingGetFriendRankingDuelCompeRequest& Request);
 	static int32 Send_RankingGetFriendRankingFestaPoint(const struct FRankingGetFriendRankingFestaPointRequest& Request);
 	static void Send_RankingGetFriendRankingFestaPoint_Callbacked(const struct FRankingGetFriendRankingFestaPointRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
 	static void Send_RankingGetFriendRankingFestaPoint_Callbacked_NoResend(const struct FRankingGetFriendRankingFestaPointRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
@@ -2562,6 +3045,10 @@ public:
 	static void Send_ReceiveRewardSaveRewards_Callbacked(const struct FReceiveRewardSaveRewardsRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
 	static void Send_ReceiveRewardSaveRewards_Callbacked_NoResend(const struct FReceiveRewardSaveRewardsRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
 	static int32 Send_ReceiveRewardSaveRewards_NoResend(const struct FReceiveRewardSaveRewardsRequest& Request);
+	static int32 Send_ResultSaveDuelCompeResult(const struct FResultSaveDuelCompeResultRequest& Request);
+	static void Send_ResultSaveDuelCompeResult_Callbacked(const struct FResultSaveDuelCompeResultRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static void Send_ResultSaveDuelCompeResult_Callbacked_NoResend(const struct FResultSaveDuelCompeResultRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static int32 Send_ResultSaveDuelCompeResult_NoResend(const struct FResultSaveDuelCompeResultRequest& Request);
 	static int32 Send_ResultSaveFestaResult(const struct FResultSaveFestaResultRequest& Request);
 	static void Send_ResultSaveFestaResult_Callbacked(const struct FResultSaveFestaResultRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
 	static void Send_ResultSaveFestaResult_Callbacked_NoResend(const struct FResultSaveFestaResultRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
@@ -2590,6 +3077,10 @@ public:
 	static void Send_SessionKeepalive_Callbacked(const struct FSessionKeepaliveRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
 	static void Send_SessionKeepalive_Callbacked_NoResend(const struct FSessionKeepaliveRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
 	static int32 Send_SessionKeepalive_NoResend(const struct FSessionKeepaliveRequest& Request);
+	static int32 Send_StartSaveDuelCompeStart(const struct FStartSaveDuelCompeStartRequest& Request);
+	static void Send_StartSaveDuelCompeStart_Callbacked(const struct FStartSaveDuelCompeStartRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static void Send_StartSaveDuelCompeStart_Callbacked_NoResend(const struct FStartSaveDuelCompeStartRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static int32 Send_StartSaveDuelCompeStart_NoResend(const struct FStartSaveDuelCompeStartRequest& Request);
 	static int32 Send_StartSaveFestaStart(const struct FStartSaveFestaStartRequest& Request);
 	static void Send_StartSaveFestaStart_Callbacked(const struct FStartSaveFestaStartRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
 	static void Send_StartSaveFestaStart_Callbacked_NoResend(const struct FStartSaveFestaStartRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
@@ -2646,8 +3137,8 @@ public:
 	static int32 TransferDataForDownloadDetail(const class FString& Uri, TArray<uint8>* Bytes, TDelegate<void(int32 ResCode, int32 ContentLength, float ElapsedTime, bool Error)> OnComplete, TDelegate<void(int32 Length, float Rate)> OnProgress);
 	static const int32 TransferDataGetInvalidHandle();
 	static void TransferDataTryCancel(int32 Handle);
-	static int32 TransferGhostDataForUpload(const class FString& Uri, const TArray<uint8>& Bytes, TDelegate<void(int32 ResCode, bool Error)> OnComplete, TDelegate<void(int32 Length, float Rate)> OnProgress, int32 courseId, int32 speedType, const class FString& Date);
-	static int32 TransferGhostDataForUploadDetail(const class FString& Uri, const TArray<uint8>& Bytes, TDelegate<void(int32 ResCode, int32 ContentLength, float ElapsedTime, bool Error)> OnComplete, TDelegate<void(int32 Length, float Rate)> OnProgress, int32 courseId, int32 speedType, const class FString& Date);
+	static int32 TransferGhostDataForUpload(const class FString& Uri, const TArray<uint8>& Bytes, TDelegate<void(int32 ResCode, bool Error)> OnComplete, TDelegate<void(int32 Length, float Rate)> OnProgress, int32 CourseId, int32 speedType, const class FString& Date);
+	static int32 TransferGhostDataForUploadDetail(const class FString& Uri, const TArray<uint8>& Bytes, TDelegate<void(int32 ResCode, int32 ContentLength, float ElapsedTime, bool Error)> OnComplete, TDelegate<void(int32 Length, float Rate)> OnProgress, int32 CourseId, int32 speedType, const class FString& Date);
 	static class FString TransferGhostDataGetUriForUpload();
 	static TArray<uint8> TransferMakeRandomBytes(int32 Size);
 	static int32 TransferReplayDataForUpload(const class FString& Uri, const TArray<uint8>& Bytes, TDelegate<void(int32 ResCode, bool Error)> OnComplete, TDelegate<void(int32 Length, float Rate)> OnProgress, const class FString& Name_0);
@@ -2807,6 +3298,29 @@ public:
 };
 DUMPER7_ASSERTS_UJukeboxDataAsset;
 
+// Class UnionSystem.ControllerButtonData
+// 0x0050 (0x0080 - 0x0030)
+class UControllerButtonData final : public UDataAsset
+{
+public:
+	TMap<struct FKey, EControllerButtonTextureIndex> KeyConfig;                                      // 0x0030(0x0050)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ControllerButtonData")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ControllerButtonData")
+	}
+	static class UControllerButtonData* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UControllerButtonData>();
+	}
+};
+DUMPER7_ASSERTS_UControllerButtonData;
+
 // Class UnionSystem.KeyConfigItem
 // 0x00E8 (0x0110 - 0x0028)
 class UKeyConfigItem final : public UObject
@@ -2854,16 +3368,16 @@ class UKeyConfigHelpers final : public UBlueprintFunctionLibrary
 {
 public:
 	static EControllerButtonType CalcButtonViewTypeByKey(const struct FKey& InKey);
-	static void ClearAssignedKey(int32 InPlayerControllerIndex, const class FName& MappingName);
-	static void ClearCustomKeyConfigs(int32 InPlayerControllerIndex);
+	static void ClearAssignedKey(int32 InPlayerControllerIndex, const class FName& MappingName, bool bInIsDuelMode);
+	static void ClearCustomKeyConfigs(int32 InPlayerControllerIndex, bool bInIsDuelMode);
 	static bool CompareCustomKeyConfigs(const TMap<class FName, struct FKey>& CustomKeyConfigs1, const TMap<class FName, struct FKey>& CustomKeyConfigs2);
-	static bool FindInputConfig(class UInputDataAsset* InputDataAsset, EKeyConfigOperationType OperationType, ESecondaryGadgetButtonType SecondaryGadgetButtonType, struct FInputConfig* OutInputConfig);
-	static struct FKey GetAssignedKey(int32 InPlayerControllerIndex, const class FName& MappingName, bool* IsFound);
-	static bool GetCustomKeyConfigs(int32 InPlayerControllerIndex, TMap<class FName, struct FKey>* OutCustomKeyConfigs);
-	static void GetKeyConfigItems(int32 InPlayerControllerIndex, const struct FInputConfig& InputConfig, EKeyConfigDeviceType Type, TMap<class FName, class UKeyConfigItem*>* OutKeyConfigItems);
-	static struct FKey GetRaceConfigKey(int32 PlayerIndex, const class FName& InActionName, bool IsPrimary, bool IsGamepad);
-	static void SetAssignedKey(int32 InPlayerControllerIndex, const class FName& MappingName, const struct FKey& NewKey);
-	static void SetCustomKeyConfigs(int32 InPlayerControllerIndex, const TMap<class FName, struct FKey>& InCustomKeyConfigs);
+	static bool FindInputConfig(class UInputDataAsset* InputDataAsset, EKeyConfigOperationType OperationType, ESecondaryGadgetButtonType SecondaryGadgetButtonType, struct FInputConfig* OutInputConfig, bool bInIsDuelMode, bool bInIsDuelDashKeyDefault);
+	static struct FKey GetAssignedKey(int32 InPlayerControllerIndex, const class FName& MappingName, bool* IsFound, bool bInIsDuelMode);
+	static bool GetCustomKeyConfigs(int32 InPlayerControllerIndex, TMap<class FName, struct FKey>* OutCustomKeyConfigs, bool bInIsDuelMode);
+	static void GetKeyConfigItems(int32 InPlayerControllerIndex, const struct FInputConfig& InputConfig, EKeyConfigDeviceType Type, TMap<class FName, class UKeyConfigItem*>* OutKeyConfigItems, bool bInIsDuelMode);
+	static struct FKey GetRaceConfigKey(int32 PlayerIndex, const class FName& InActionName, bool IsPrimary, bool IsGamepad, bool bInIsDuelMode, bool bInIsDuelDashKeyDefault);
+	static void SetAssignedKey(int32 InPlayerControllerIndex, const class FName& MappingName, const struct FKey& NewKey, bool bInIsDuelMode);
+	static void SetCustomKeyConfigs(int32 InPlayerControllerIndex, const TMap<class FName, struct FKey>& InCustomKeyConfigs, bool bInIsDuelMode);
 
 public:
 	static class UClass* StaticClass()
@@ -2943,7 +3457,7 @@ public:
 DUMPER7_ASSERTS_ULegendCompeChanceUpUtil;
 
 // Class UnionSystem.LobbyContextBase
-// 0x0258 (0x0280 - 0x0028)
+// 0x0260 (0x0288 - 0x0028)
 class ULobbyContextBase : public UObject
 {
 public:
@@ -2960,7 +3474,8 @@ public:
 	class ULobbyTransactionParam*                 TransactionParam;                                  // 0x00F0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 	uint8                                         Pad_F8[0x58];                                      // 0x00F8(0x0058)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<int32, class ULobbyMemberContextBase*>   Members;                                           // 0x0150(0x0050)(Transient, Protected, UObjectWrapper, NativeAccessSpecifierProtected, TObjectPtr)
-	uint8                                         Pad_1A0[0xE0];                                     // 0x01A0(0x00E0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class ULobbyMemberContextBase*                DummyMember;                                       // 0x01A0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	uint8                                         Pad_1A8[0xE0];                                     // 0x01A8(0x00E0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool BeginTransaction();
@@ -3057,8 +3572,159 @@ public:
 };
 DUMPER7_ASSERTS_ULobbyContextBase;
 
+// Class UnionSystem.LobbyLevelSequenceActor
+// 0x0020 (0x0358 - 0x0338)
+class ALobbyLevelSequenceActor final : public AUnionLevelSequenceActor
+{
+public:
+	class ACineCameraActor*                       CameraActor;                                       // 0x0338(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	struct FMovieSceneObjectBindingID             CineCameraBindingID;                               // 0x0340(0x0018)(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("LobbyLevelSequenceActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LobbyLevelSequenceActor")
+	}
+	static class ALobbyLevelSequenceActor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ALobbyLevelSequenceActor>();
+	}
+};
+DUMPER7_ASSERTS_ALobbyLevelSequenceActor;
+
+// Class UnionSystem.UnionLevelSequenceComponent
+// 0x0010 (0x00B0 - 0x00A0)
+class UUnionLevelSequenceComponent : public UActorComponent
+{
+public:
+	TSubclassOf<class AUnionLevelSequenceActor>   LevelSequenceActorClass;                           // 0x00A0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class AUnionLevelSequenceActor*               LevelSequenceActorPtr;                             // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+
+public:
+	void Finalize();
+	void Initialize();
+	void OnFinishedEvent();
+	void OnPauseEvent();
+	void OnStartEvent();
+	void OnStopEvent();
+	void SetLevelSequence(class ULevelSequence* InLevelSequence);
+
+	bool IsActiveSequencer() const;
+	bool IsPlaying() const;
+	void OnPause() const;
+	void OnStart() const;
+	void OnStop() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UnionLevelSequenceComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UnionLevelSequenceComponent")
+	}
+	static class UUnionLevelSequenceComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UUnionLevelSequenceComponent>();
+	}
+};
+DUMPER7_ASSERTS_UUnionLevelSequenceComponent;
+
+// Class UnionSystem.MultiLevelSequenceComponent
+// 0x0028 (0x00D8 - 0x00B0)
+class UMultiLevelSequenceComponent : public UUnionLevelSequenceComponent
+{
+public:
+	TArray<TSubclassOf<class AUnionLevelSequenceActor>> LevelSequenceActorClassList;                 // 0x00B0(0x0010)(Edit, ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	TArray<class AUnionLevelSequenceActor*>       LevelSequenceActors;                               // 0x00C0(0x0010)(ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected, TObjectPtr)
+	uint8                                         Pad_D0[0x1];                                       // 0x00D0(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bIsLoop;                                           // 0x00D1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_D2[0x6];                                       // 0x00D2(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void OnMultiFinishedEvent();
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MultiLevelSequenceComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MultiLevelSequenceComponent")
+	}
+	static class UMultiLevelSequenceComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMultiLevelSequenceComponent>();
+	}
+};
+DUMPER7_ASSERTS_UMultiLevelSequenceComponent;
+
+// Class UnionSystem.LobbyLevelSequenceComponent
+// 0x0098 (0x0170 - 0x00D8)
+class ULobbyLevelSequenceComponent final : public UMultiLevelSequenceComponent
+{
+public:
+	uint8                                         Pad_D8[0x8];                                       // 0x00D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             SequencerRootTransform;                            // 0x00E0(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class AActor*                                 SequencerRootActor;                                // 0x0140(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	class ACineCameraActor*                       CameraActor;                                       // 0x0148(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	uint8                                         Pad_150[0x20];                                     // 0x0150(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void SetCameraActor(class ACineCameraActor* InCameraActor);
+	void SetCameraOffset(const struct FVector& InCameraOffset, const float InCameraAngleOffset);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("LobbyLevelSequenceComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LobbyLevelSequenceComponent")
+	}
+	static class ULobbyLevelSequenceComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULobbyLevelSequenceComponent>();
+	}
+};
+DUMPER7_ASSERTS_ULobbyLevelSequenceComponent;
+
+// Class UnionSystem.LobbyRingLevelSequenceComponent
+// 0x0040 (0x0118 - 0x00D8)
+class ULobbyRingLevelSequenceComponent final : public UMultiLevelSequenceComponent
+{
+public:
+	TDelegate<void()>                             FirstSequencerFinishedEvent;                       // 0x00D8(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void()>                             FinalSequencerFinishedEvent;                       // 0x00E8(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class AActor*>                         RingActors;                                        // 0x00F8(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
+	class AActor*                                 CameraActor;                                       // 0x0108(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	class AActor*                                 TravelRingRootActor;                               // 0x0110(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("LobbyRingLevelSequenceComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LobbyRingLevelSequenceComponent")
+	}
+	static class ULobbyRingLevelSequenceComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULobbyRingLevelSequenceComponent>();
+	}
+};
+DUMPER7_ASSERTS_ULobbyRingLevelSequenceComponent;
+
 // Class UnionSystem.LobbySubsystem
-// 0x19E0 (0x1A10 - 0x0030)
+// 0x1A48 (0x1A78 - 0x0030)
 class ULobbySubsystem final : public UGameInstanceSubsystem
 {
 public:
@@ -3071,7 +3737,7 @@ public:
 	TMulticastInlineDelegate<void(const struct FUniqueNetIdRepl& UserId, const struct FLobbyId& LobbyId, const struct FUniqueNetIdRepl& MemberId)> MemberPromotedMulticastDelegate; // 0x0088(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
 	TMulticastInlineDelegate<void(const struct FUniqueNetIdRepl& UserId, class ULobbyJoinInfo* Invite)> InvitationReceivedMulticastDelegate; // 0x0098(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
 	TMulticastInlineDelegate<void()>              PlatformInviteReceivedMulticastDelegate;           // 0x00A8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_B8[0x1958];                                    // 0x00B8(0x1958)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B8[0x19C0];                                    // 0x00B8(0x19C0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void CallInvitationReceivedDelegates(int32 LocalUserNum, const struct FLobbyId& LobbyId);
@@ -3084,12 +3750,16 @@ public:
 	void DeleteLobby(int32 LocalUserNum, const struct FLobbyId& LobbyId, TDelegate<void(bool bSuccessful, const struct FLobbyOperationResult& Result)> OnComplete);
 	bool GetLobbyAttributeValueBool(int32 LocalUserNum, const struct FLobbyId& LobbyId, const class FString& AttrKey, bool* OutAttrValue, bool bUseLobbyAttribute);
 	bool GetLobbyAttributeValueFloat(int32 LocalUserNum, const struct FLobbyId& LobbyId, const class FString& AttrKey, float* OutAttrValue, bool bUseLobbyAttribute);
+	bool GetLobbyAttributeValueInt32(int32 LocalUserNum, const struct FLobbyId& LobbyId, const class FString& AttrKey, int32* OutAttrValue, bool bUseLobbyAttribute);
 	bool GetLobbyAttributeValueInt64(int32 LocalUserNum, const struct FLobbyId& LobbyId, const class FString& AttrKey, int64* OutAttrValue, bool bUseLobbyAttribute);
 	bool GetLobbyAttributeValueString(int32 LocalUserNum, const struct FLobbyId& LobbyId, const class FString& AttrKey, class FString* OutAttrValue, bool bUseLobbyAttribute);
+	bool GetLobbyAttributeValueUInt8(int32 LocalUserNum, const struct FLobbyId& LobbyId, const class FString& AttrKey, uint8* OutAttrValue, bool bUseLobbyAttribute);
 	bool GetMemberAttributeValueBool(int32 LocalUserNum, const struct FLobbyId& LobbyId, const struct FUniqueNetIdRepl& MemberId, const class FString& AttrKey, bool* OutAttrValue, bool bUseLobbyAttribute);
 	bool GetMemberAttributeValueFloat(int32 LocalUserNum, const struct FLobbyId& LobbyId, const struct FUniqueNetIdRepl& MemberId, const class FString& AttrKey, float* OutAttrValue, bool bUseLobbyAttribute);
+	bool GetMemberAttributeValueInt32(int32 LocalUserNum, const struct FLobbyId& LobbyId, const struct FUniqueNetIdRepl& MemberId, const class FString& AttrKey, int32* OutAttrValue, bool bUseLobbyAttribute);
 	bool GetMemberAttributeValueInt64(int32 LocalUserNum, const struct FLobbyId& LobbyId, const struct FUniqueNetIdRepl& MemberId, const class FString& AttrKey, int64* OutAttrValue, bool bUseLobbyAttribute);
 	bool GetMemberAttributeValueString(int32 LocalUserNum, const struct FLobbyId& LobbyId, const struct FUniqueNetIdRepl& MemberId, const class FString& AttrKey, class FString* OutAttrValue, bool bUseLobbyAttribute);
+	bool GetMemberAttributeValueUInt8(int32 LocalUserNum, const struct FLobbyId& LobbyId, const struct FUniqueNetIdRepl& MemberId, const class FString& AttrKey, uint8* OutAttrValue, bool bUseLobbyAttribute);
 	bool GetPendingInviteInfo(int32 LocalUserNum, TArray<class ULobbyJoinInfo*>* OutPendingInvites);
 	bool GetSessionInviteInfo(int32 LocalUserNum, TArray<class ULobbyJoinInfo*>* OutPendingInvites);
 	bool IsRequiredPassword(int32 LocalUserNum, const struct FLobbyId& LobbyId);
@@ -3135,8 +3805,10 @@ public:
 public:
 	void AddAttributeBool(const class FString& Key, bool Value);
 	void AddAttributeFloat(const class FString& Key, float Value);
+	void AddAttributeInt32(const class FString& Key, int32 Value);
 	void AddAttributeInt64(const class FString& Key, int64 Value);
 	void AddAttributeString(const class FString& Key, const class FString& Value);
+	void AddAttributeUInt8(const class FString& Key, uint8 Value);
 	void AddDeleteAttribute(const class FString& Key);
 	void SetCapacity(int64 InCapacity);
 	void SetCreateDefault();
@@ -3171,8 +3843,10 @@ public:
 public:
 	void AddAttributeBool(const class FString& Key, bool Value);
 	void AddAttributeFloat(const class FString& Key, float Value);
+	void AddAttributeInt32(const class FString& Key, int32 Value);
 	void AddAttributeInt64(const class FString& Key, int64 Value);
 	void AddAttributeString(const class FString& Key, const class FString& Value);
+	void AddAttributeUInt8(const class FString& Key, uint8 Value);
 	void AddDeleteAttribute(const class FString& Key);
 
 public:
@@ -3190,33 +3864,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ULobbyMemberTransactionParam;
-
-// Class UnionSystem.LobbySubsystemLobbySearchQueryUtility
-// 0x0000 (0x0028 - 0x0028)
-class ULobbySubsystemLobbySearchQueryUtility final : public UBlueprintFunctionLibrary
-{
-public:
-	static void AddLobbySearchQueryFilter_Bool(struct FLobbySubsystemLobbySearchQuery& Query, const class FString& Key, bool bValue, ELobbySubsystemLobbySearchQueryFilterComparator Comparator);
-	static void AddLobbySearchQueryFilter_Float(struct FLobbySubsystemLobbySearchQuery& Query, const class FString& Key, float Value, ELobbySubsystemLobbySearchQueryFilterComparator Comparator);
-	static void AddLobbySearchQueryFilter_Int64(struct FLobbySubsystemLobbySearchQuery& Query, const class FString& Key, int64 Value, ELobbySubsystemLobbySearchQueryFilterComparator Comparator);
-	static void AddLobbySearchQueryFilter_String(struct FLobbySubsystemLobbySearchQuery& Query, const class FString& Key, const class FString& Value, ELobbySubsystemLobbySearchQueryFilterComparator Comparator);
-	static void SetLimit(struct FLobbySubsystemLobbySearchQuery& Query, int32 NewLimit);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("LobbySubsystemLobbySearchQueryUtility")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"LobbySubsystemLobbySearchQueryUtility")
-	}
-	static class ULobbySubsystemLobbySearchQueryUtility* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ULobbySubsystemLobbySearchQueryUtility>();
-	}
-};
-DUMPER7_ASSERTS_ULobbySubsystemLobbySearchQueryUtility;
 
 // Class UnionSystem.LobbyJoinInfo
 // 0x0038 (0x0060 - 0x0028)
@@ -3255,8 +3902,10 @@ DUMPER7_ASSERTS_ULobbyJoinInfo;
 class ULocalizationFunctionLibrary final : public UBlueprintFunctionLibrary
 {
 public:
+	static bool ContainsArabicCharacters(const class FText& InText);
 	static ELanguage ConvLangToEnumFromString(const class FString& LangString);
 	static class FString ConvLangToStringFromEnum(ELanguage LangEnum);
+	static class FString ForceLeftToRightText(const class FString& InString);
 	static ELanguage GetDefaultTextLang();
 	static float GetFontSizeRate();
 	static class FText GetKeytopButtonTextByFKey(const struct FKey& InKey, uint8 KeytopPattern);
@@ -3266,6 +3915,7 @@ public:
 	static ELanguage GetVoiceLang();
 	static ELanguage GetVoiceLangFromTable();
 	static ELanguage GetVoiceLangFromTableByEnum(ELanguage Lang);
+	static bool IsCurrentCultureRTL();
 	static void SetTextLang(ELanguage Lang);
 	static void SetTextLangByString(const class FString& Lang);
 	static void SetVoiceLang(ELanguage Lang);
@@ -3376,6 +4026,7 @@ class UMachineIdUtilityLibrary final : public UBlueprintFunctionLibrary
 public:
 	static class FString BuildHoverboardCenterPartsPath(EMachineId FrontPartsId, EMachineId RearPartsId);
 	static class FString BuildMachineSidePartsPath(EMachineId FrontPartsId, EMachineId RearPartsId);
+	static EMachineId GetConvertMachineIdToDefaultId(EMachineId InMachineID);
 	static EMachineId GetConvertMachineIdToMachineCustomId(EMachineId InMachineID);
 	static int32 GetPlayerIndexFromSimpleCustomMachineId(EMachineId InMachineID);
 	static bool IsBasicCustomMachineId(EMachineId InMachineID);
@@ -3402,70 +4053,97 @@ public:
 DUMPER7_ASSERTS_UMachineIdUtilityLibrary;
 
 // Class UnionSystem.MasterDataHelper
-// 0x01E8 (0x0210 - 0x0028)
+// 0x02C0 (0x02E8 - 0x0028)
 class UMasterDataHelper : public UObject
 {
 public:
 	class UDataTable*                             DriverData;                                        // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	class UDataTable*                             DriverCustomParamData;                             // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	class UDataTable*                             DriverEffectData;                                  // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             MachineCockpitDataTable;                           // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             MachinePartsDataTable;                             // 0x0048(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             MachineTypeDataTable;                              // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             DefaultMachineCustomizeDataTable;                  // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             MonsterTruckCockpitDataTable;                      // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             MachineColorDataTable;                             // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             MachineSurfaceDataTable;                           // 0x0070(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             MachineGlowDataTable;                              // 0x0078(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             MachineColorPresetDataTable;                       // 0x0080(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             GroupColorIdToMachineColorPresetIdDataTable;       // 0x0088(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             MachineOffsetDataTable;                            // 0x0090(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             MachineOtherNameDataTable;                         // 0x0098(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             MachineBakeAsset;                                  // 0x00A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             MachineHornDataTable;                              // 0x00A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             MachineAuraDataTable;                              // 0x00B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             StageDataTable;                                    // 0x00B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             GadgetDataTable;                                   // 0x00C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             GadgetPlateDataTable;                              // 0x00C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             DefaultGadgetPresetDataTable;                      // 0x00D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             GadgetLayoutDataTable;                             // 0x00D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             GadgetCustomCategoryColorDataTable;                // 0x00E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             StickerDataTable;                                  // 0x00E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             RaceItemDataTable;                                 // 0x00F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             FooterTextDataTable;                               // 0x00F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             RivalTeamDataTable;                                // 0x0100(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             PartyRaceMissionDataTable;                         // 0x0108(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             PartyRacePresetSettingDataTable;                   // 0x0110(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             RewardRivalLevelDataTable;                         // 0x0118(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             RateRankUpExpDataTable;                            // 0x0120(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             UIResultParamTable;                                // 0x0128(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             RewardTimeTrialDataTable;                          // 0x0130(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             OnlineErrorTextLabelTable;                         // 0x0138(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             ServerErrorTextLabelTable;                         // 0x0140(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             CompensationTitleTextLabelTable;                   // 0x0148(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             CompensationBodyTextLabelTable;                    // 0x0150(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             SaveDataTextTable;                                 // 0x0158(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UGrandPrixCommonData*                   GrandPrixCommonData;                               // 0x0160(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             GrandPrixStages;                                   // 0x0168(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataAsset*                             UIColorInfoDataAsset;                              // 0x0170(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataAsset*                             FestaUIDataAsset;                                  // 0x0178(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataAsset*                             HonorTitleDataAsset;                               // 0x0180(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataAsset*                             JukeboxDataAsset;                                  // 0x0188(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataAsset*                             ContentDataAsset;                                  // 0x0190(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             ChallengeDataTable;                                // 0x0198(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             ChallengeProgressRewardTable;                      // 0x01A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             RewardAchievementDataTable;                        // 0x01A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             RewardGrandPrixRivalWinHonorDataTable;             // 0x01B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataAsset*                             IgnoreWidgetDataAsset;                             // 0x01B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             PlatformPresence;                                  // 0x01C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataAsset*                             PlatformStoreMessageDataAsset;                     // 0x01C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             PlayerInteractionData;                             // 0x01D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             RivalInteractionData;                              // 0x01D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             CueSheetIdTable;                                   // 0x01E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             TimeTrialSonicSpeedClearTimeTable;                 // 0x01E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UDataTable*                             TimeTrialSuperSonicSpeedClearTimeTable;            // 0x01F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UUnionLocalizationTextData*             LocalizationTextData;                              // 0x01F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	TArray<class UStringTable*>                   LocalizationStringTableArray;                      // 0x0200(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             DriverRivalSkinColorData;                          // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             MachineCockpitDataTable;                           // 0x0048(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             MachinePartsDataTable;                             // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             MachineTypeDataTable;                              // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             DefaultMachineCustomizeDataTable;                  // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             MachineCustomParamFrontDataTable;                  // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             MachineCustomParamRearDataTable;                   // 0x0070(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             MachineCustomParamTireDataTable;                   // 0x0078(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             MonsterTruckCockpitDataTable;                      // 0x0080(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             MachineColorDataTable;                             // 0x0088(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             MachineSurfaceDataTable;                           // 0x0090(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             MachineGlowDataTable;                              // 0x0098(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             MachineColorPresetDataTable;                       // 0x00A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             GroupColorIdToMachineColorPresetIdDataTable;       // 0x00A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             MachineOffsetDataTable;                            // 0x00B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             MachineOtherNameDataTable;                         // 0x00B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             MachineBakeAsset;                                  // 0x00C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             MachineHornDataTable;                              // 0x00C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             MachineAuraDataTable;                              // 0x00D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             MachineProfileOffsetDataTable;                     // 0x00D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             MachineLobbyCameraOffsetDataTable;                 // 0x00E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             StageDataTable;                                    // 0x00E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             GadgetDataTable;                                   // 0x00F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             GadgetPlateDataTable;                              // 0x00F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             DefaultGadgetPresetDataTable;                      // 0x0100(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             GadgetLayoutDataTable;                             // 0x0108(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             GadgetCustomCategoryColorDataTable;                // 0x0110(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataAsset*                             MiniGadgetListDataAsset;                           // 0x0118(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataAsset*                             TimeTrialDisableGadgetDataAsset;                   // 0x0120(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataAsset*                             RivalDuelDisableGadgetDataAsset;                   // 0x0128(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataAsset*                             DuelMatchDisableGadgetDataAsset;                   // 0x0130(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataAsset*                             FriendDuelDisableGadgetDataAsset;                  // 0x0138(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             StickerDataTable;                                  // 0x0140(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             RaceItemDataTable;                                 // 0x0148(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             FooterTextDataTable;                               // 0x0150(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             SpecifiedMachineDataTable;                         // 0x0158(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataAsset*                             WinStreakGradeDataAsset;                           // 0x0160(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             RivalTeamDataTable;                                // 0x0168(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             PartyRaceMissionDataTable;                         // 0x0170(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             PartyRacePresetSettingDataTable;                   // 0x0178(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             RewardRivalLevelDataTable;                         // 0x0180(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             RateRankUpExpDataTable;                            // 0x0188(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             UIResultParamTable;                                // 0x0190(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             RewardTimeTrialDataTable;                          // 0x0198(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             OnlineErrorTextLabelTable;                         // 0x01A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             ServerErrorTextLabelTable;                         // 0x01A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             CompensationTitleTextLabelTable;                   // 0x01B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             CompensationBodyTextLabelTable;                    // 0x01B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             SaveDataTextTable;                                 // 0x01C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UGrandPrixCommonData*                   GrandPrixCommonData;                               // 0x01C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             GrandPrixStages;                                   // 0x01D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataAsset*                             UIColorInfoDataAsset;                              // 0x01D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataAsset*                             FestaUIDataAsset;                                  // 0x01E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataAsset*                             HonorTitleDataAsset;                               // 0x01E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataAsset*                             JukeboxDataAsset;                                  // 0x01F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataAsset*                             ContentDataAsset;                                  // 0x01F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             ChallengeDataTable;                                // 0x0200(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             ChallengeProgressRewardTable;                      // 0x0208(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             RewardAchievementDataTable;                        // 0x0210(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             RewardGrandPrixRivalWinHonorDataTable;             // 0x0218(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataAsset*                             IgnoreWidgetDataAsset;                             // 0x0220(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             PlatformPresence;                                  // 0x0228(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataAsset*                             PlatformStoreMessageDataAsset;                     // 0x0230(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             PlayerInteractionData;                             // 0x0238(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             RivalInteractionData;                              // 0x0240(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             CueSheetIdTable;                                   // 0x0248(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             TimeTrialSonicSpeedClearTimeTable;                 // 0x0250(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             TimeTrialSuperSonicSpeedClearTimeTable;            // 0x0258(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UUnionLocalizationTextData*             LocalizationTextData;                              // 0x0260(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             RivalDuelRivalDataTable;                           // 0x0268(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             DriverHideLegParameterDataTable;                   // 0x0270(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             RivalDuelRivalLevelDataTable;                      // 0x0278(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             RivalDuelInvincibleRivalLevelDataTable;            // 0x0280(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             DuelCompeComLevelDataTable;                        // 0x0288(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             DuelCompeComGadgetDataTable;                       // 0x0290(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             PlayMissionDataTable;                              // 0x0298(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataAsset*                             RivalDuelDataAsset;                                // 0x02A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             FestaMachineColorPresetDataTable;                  // 0x02A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             DuelHonorDataTable;                                // 0x02B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	TArray<class UStringTable*>                   LocalizationStringTableArray;                      // 0x02B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataAsset*                             DuelUIParamDataAsset;                              // 0x02C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             FestaRivalTeamDataTable;                           // 0x02D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataAsset*                             CrownDataAsset;                                    // 0x02D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             RivalDuelCourseRivalIconDataTable;                 // 0x02E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -3509,11 +4187,11 @@ public:
 DUMPER7_ASSERTS_UMasterDataManageSubsystem;
 
 // Class UnionSystem.MatchmakingRequestContext
-// 0x0028 (0x02A8 - 0x0280)
+// 0x0028 (0x02B0 - 0x0288)
 class UMatchmakingRequestContext : public ULobbyContextBase
 {
 public:
-	uint8                                         Pad_280[0x28];                                     // 0x0280(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_288[0x28];                                     // 0x0288(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void SetNoTriggerMatchmakingComplete(bool bNewValue);
@@ -3537,15 +4215,16 @@ public:
 DUMPER7_ASSERTS_UMatchmakingRequestContext;
 
 // Class UnionSystem.MatchmakingContext_WithFlexMatch
-// 0x0018 (0x02C0 - 0x02A8)
+// 0x0020 (0x02D0 - 0x02B0)
 class UMatchmakingContext_WithFlexMatch : public UMatchmakingRequestContext
 {
 public:
-	float                                         DefaultMatchmakingDescribeTimeSpan;                // 0x02A8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2AC[0x14];                                     // 0x02AC(0x0014)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         DefaultMatchmakingDescribeTimeSpan;                // 0x02B0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2B4[0x1C];                                     // 0x02B4(0x001C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void InitializeFlexMatch(int32 LocalUserNum);
+	void OnUnsubscribeComplete(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error);
 
 public:
 	static class UClass* StaticClass()
@@ -3820,6 +4499,31 @@ public:
 };
 DUMPER7_ASSERTS_IMenuInputRecieveInterface;
 
+// Class UnionSystem.MenuPlayerController
+// 0x0000 (0x0A30 - 0x0A30)
+class AMenuPlayerController : public AAppPlayerController
+{
+public:
+	void SetMenuDirectionKeyEnable(bool bEnableDirection);
+
+	bool GetMenuDirectionKeyEnable() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MenuPlayerController")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MenuPlayerController")
+	}
+	static class AMenuPlayerController* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AMenuPlayerController>();
+	}
+};
+DUMPER7_ASSERTS_AMenuPlayerController;
+
 // Class UnionSystem.MenuPopupWindowInterface
 // 0x0000 (0x0000 - 0x0000)
 class IMenuPopupWindowInterface final
@@ -3943,6 +4647,54 @@ public:
 };
 DUMPER7_ASSERTS_UMilestoneUtil;
 
+// Class UnionSystem.MissionEvaluator
+// 0x01F8 (0x0220 - 0x0028)
+class UMissionEvaluator final : public UObject
+{
+public:
+	uint8                                         Pad_28[0x1F8];                                     // 0x0028(0x01F8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MissionEvaluator")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MissionEvaluator")
+	}
+	static class UMissionEvaluator* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMissionEvaluator>();
+	}
+};
+DUMPER7_ASSERTS_UMissionEvaluator;
+
+// Class UnionSystem.MissionSubsystem
+// 0x0028 (0x0058 - 0x0030)
+class UMissionSubsystem final : public UGameInstanceSubsystem
+{
+public:
+	uint8                                         Pad_30[0x10];                                      // 0x0030(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMissionEvaluator*                      MissionEvaluator;                                  // 0x0040(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	uint8                                         Pad_48[0x10];                                      // 0x0048(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MissionSubsystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MissionSubsystem")
+	}
+	static class UMissionSubsystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMissionSubsystem>();
+	}
+};
+DUMPER7_ASSERTS_UMissionSubsystem;
+
 // Class UnionSystem.MovieFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
 class UMovieFunctionLibrary final : public UBlueprintFunctionLibrary
@@ -3967,17 +4719,15 @@ public:
 DUMPER7_ASSERTS_UMovieFunctionLibrary;
 
 // Class UnionSystem.NetMasterDataManageSubsystem
-// 0x0468 (0x0498 - 0x0030)
+// 0x05F0 (0x0620 - 0x0030)
 class UNetMasterDataManageSubsystem final : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_30[0x468];                                     // 0x0030(0x0468)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x5F0];                                     // 0x0030(0x05F0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	const struct FMasterDataGetMasterDataResponse_MstFestaData GetCurrentFestaData(bool* bResult);
 	bool GetCurrentFestaRuleData(struct FDateTime* FestaStartUTCTime, struct FDateTime* FestaEndUTCTime, int32* raceRuleId, int32* LoopCount, TArray<struct FMasterDataGetMasterDataResponse_MstFestaTimeSceduleData>* TimeScheduleDataArray);
 	bool GetGeneralizedParamData(const class FString& KeyName, struct FMasterDataGetMasterDataResponse_MstGeneralizedParameterData* Out);
-	struct FMasterDataGetMasterDataResponse GetMasterData();
 	bool HasDifferentialData();
 	bool IsBusy();
 	void OnGetHttpCommandComplete(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error);
@@ -4032,14 +4782,14 @@ public:
 DUMPER7_ASSERTS_UNetPingSubsystem;
 
 // Class UnionSystem.NetSaveGame
-// 0x0330 (0x0358 - 0x0028)
+// 0x0450 (0x0478 - 0x0028)
 class UNetSaveGame final : public USaveGame
 {
 public:
 	struct FSaveDataHeader                        _Header;                                           // 0x0028(0x000C)(NoDestructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FNetMasterDataVersionData              _LocalNetMasterDataVersion;                        // 0x0038(0x0010)(NativeAccessSpecifierPublic)
-	struct FAppLocalNetMasterData                 _LocalNetMasterData;                               // 0x0048(0x0310)(NativeAccessSpecifierPublic)
+	struct FAppLocalNetMasterData                 _LocalNetMasterData;                               // 0x0048(0x0430)(NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -4174,14 +4924,35 @@ public:
 };
 DUMPER7_ASSERTS_UOnlineActivitySubsystem;
 
+// Class UnionSystem.OnlineMatchModeIdUtilityLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UOnlineMatchModeIdUtilityLibrary final : public UBlueprintFunctionLibrary
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnlineMatchModeIdUtilityLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnlineMatchModeIdUtilityLibrary")
+	}
+	static class UOnlineMatchModeIdUtilityLibrary* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnlineMatchModeIdUtilityLibrary>();
+	}
+};
+DUMPER7_ASSERTS_UOnlineMatchModeIdUtilityLibrary;
+
 // Class UnionSystem.OnlineMatchSubsystem
-// 0x0230 (0x0260 - 0x0030)
+// 0x0248 (0x0278 - 0x0030)
 class UOnlineMatchSubsystem final : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_30[0x218];                                     // 0x0030(0x0218)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(const struct FUniqueNetIdRepl& UserId, bool bIsConnecting)> PeerChangeStatusClosedDelegate; // 0x0248(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, Protected, NativeAccessSpecifierProtected)
-	class UFont*                                  FontObject;                                        // 0x0258(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	uint8                                         Pad_30[0x220];                                     // 0x0030(0x0220)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(const struct FUniqueNetIdRepl& UserId, bool bIsConnecting)> PeerChangeStatusClosedDelegate; // 0x0250(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, Protected, NativeAccessSpecifierProtected)
+	class UFont*                                  FontObject;                                        // 0x0260(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	uint8                                         Pad_268[0x10];                                     // 0x0268(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static bool IsEnableOnlineSinglePlay();
@@ -4258,7 +5029,7 @@ public:
 DUMPER7_ASSERTS_UOnlineMessageSubsystem;
 
 // Class UnionSystem.OptionConfigSaveGame
-// 0x0078 (0x00A0 - 0x0028)
+// 0x00D8 (0x0100 - 0x0028)
 class UOptionConfigSaveGame final : public USaveGame
 {
 public:
@@ -4273,6 +5044,7 @@ public:
 	struct FOptionAudioSettings                   _AudioSettings;                                    // 0x0074(0x0010)(NoDestructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FOptionAdditionalSettings_1_3          _AdditionalSettings_1_3;                           // 0x0088(0x0018)(NativeAccessSpecifierPublic)
+	struct FOptionAdditionalSettings_2_0          _AdditionalSettings_2_0;                           // 0x00A0(0x0060)(NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -4343,7 +5115,7 @@ DUMPER7_ASSERTS_UP2PConnectionSubsystem;
 
 // Class UnionSystem.PlatformPrivilegeObject
 // 0x0068 (0x02F8 - 0x0290)
-class APlatformPrivilegeObject : public AActor
+class APlatformPrivilegeObject final : public AActor
 {
 public:
 	uint8                                         Pad_290[0x68];                                     // 0x0290(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -4369,48 +5141,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_APlatformPrivilegeObject;
-
-// Class UnionSystem.PlatformStoreMessageDataAsset
-// 0x00D0 (0x0100 - 0x0030)
-class UPlatformStoreMessageDataAsset final : public UDataAsset
-{
-public:
-	class FText                                   PlayStationPlatformStoreMessage;                   // 0x0030(0x0010)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	class FText                                   XboxPlatformStoreMessage;                          // 0x0040(0x0010)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	class FText                                   SwitchPlatformStoreMessage;                        // 0x0050(0x0010)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	class FText                                   SteamPlatformStoreMessage;                         // 0x0060(0x0010)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	class FText                                   EpicPlatformStoreMessage;                          // 0x0070(0x0010)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	class FText                                   AcceptButtonText;                                  // 0x0080(0x0010)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	class FText                                   CancelButtonText;                                  // 0x0090(0x0010)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	class FText                                   PlatformStoreButtonMessage;                        // 0x00A0(0x0010)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	class FText                                   PlayStationPlatformStoreButtonMessage;             // 0x00B0(0x0010)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	class FText                                   XboxPlatformStoreButtonMessage;                    // 0x00C0(0x0010)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	class FText                                   SwitchPlatformStoreButtonMessage;                  // 0x00D0(0x0010)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	class FText                                   SteamPlatformStoreButtonMessage;                   // 0x00E0(0x0010)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	class FText                                   EpicPlatformStoreButtonMessage;                    // 0x00F0(0x0010)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-
-public:
-	void GetPlatformStoreButtonText(class FText* AcceptText, class FText* CancelText);
-
-	EPlatformStoreType GetCurrentPlatform() const;
-	class FText GetPlatformStoreButtonMessage() const;
-	class FText GetPlatformStoreMessage(EPlatformStoreType PlatformType) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("PlatformStoreMessageDataAsset")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"PlatformStoreMessageDataAsset")
-	}
-	static class UPlatformStoreMessageDataAsset* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPlatformStoreMessageDataAsset>();
-	}
-};
-DUMPER7_ASSERTS_UPlatformStoreMessageDataAsset;
 
 // Class UnionSystem.PlatformUIUtilityLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -4440,9 +5170,13 @@ DUMPER7_ASSERTS_UPlatformUIUtilityLibrary;
 class IPlayerNameInterface final
 {
 public:
+	class UImage* GetCharacterIconImage();
+	class UWidget* GetCharacterIconWidget();
+	void SetCharacterImageIF(int32 driverIndex);
 	void SetCOMIF(bool IsCom);
 	void SetCrossPlayIconIF(ECrossplayPlatform CrossplayType);
 	void SetGroupIndexIF(bool IsGroup, int32 GroupIndex, bool IsForce);
+	void SetIsDuelIF(bool IsDuel);
 	void SetNameIF(const class FText& InName);
 	void SetOnlineIF(bool IsRival);
 	void SetPlayerIndexIF(bool IsLocalPlayer, int32 PlayerIndex);
@@ -4490,18 +5224,22 @@ public:
 	static bool CRM_PutCondition(const struct FCRM_Condition& Data);
 	static bool CRM_PutConnection(const struct FCRM_Connection& Data);
 	static bool CRM_PutConnectionError(const struct FCRM_ConnectionError& Data);
+	static bool CRM_PutCurrency(const struct FCRM_Currency& Data);
 	static bool CRM_PutCustomMachineParts(const struct FCRM_CustomMachineParts& Data);
 	static bool CRM_PutCustomMachinePartsSpot(const struct FCRM_CustomMachinePartsSpot& Data);
 	static bool CRM_PutDebugOnlineP2PConnect(const struct FCRM_DebugOnlineP2PConnect& Data);
 	static bool CRM_PutDlc(const struct FCRM_Dlc& Data);
+	static bool CRM_PutDuelMatch(const struct FCRM_DuelMatch& Data);
 	static bool CRM_PutEventFesta(const struct FCRM_EventFesta& Data);
 	static bool CRM_PutEventLegend(const struct FCRM_EventLegend& Data);
+	static bool CRM_PutExchange(const struct FCRM_Exchange& Data);
 	static bool CRM_PutFriendMatch(const struct FCRM_FriendMatch& Data);
 	static bool CRM_PutGadgetPossession(const struct FCRM_GadgetPossession& Data);
 	static bool CRM_PutGadgetUsage(const struct FCRM_GadgetUsage& Data);
 	static bool CRM_PutGameLogin(const struct FCRM_GameLogin& Data);
 	static bool CRM_PutGhost(const struct FCRM_Ghost& Data);
 	static bool CRM_PutGrandprix(const struct FCRM_Grandprix& Data);
+	static bool CRM_PutItemAcquire(const struct FCRM_ItemAcquire& Data);
 	static bool CRM_PutLobbyBasic(const struct FCRM_LobbyBasic& Data);
 	static bool CRM_PutLobbyInvite(const struct FCRM_LobbyInvite& Data);
 	static bool CRM_PutLobbyStage(const struct FCRM_LobbyStage& Data);
@@ -4509,6 +5247,7 @@ public:
 	static bool CRM_PutMatchingRaceStart(const struct FCRM_MatchingRaceStart& Data);
 	static bool CRM_PutMatchingRegistration(const struct FCRM_MatchingRegistration& Data);
 	static bool CRM_PutMatchingResult(const struct FCRM_MatchingResult& Data);
+	static bool CRM_PutMission(const struct FCRM_Mission& Data);
 	static bool CRM_PutOnlineMatch(const struct FCRM_OnlineMatch& Data);
 	static bool CRM_PutParty(const struct FCRM_Party& Data);
 	static bool CRM_PutProgressGrandprix(const struct FCRM_ProgressGrandprix& Data);
@@ -4516,6 +5255,7 @@ public:
 	static bool CRM_PutProgressRival(const struct FCRM_ProgressRival& Data);
 	static bool CRM_PutProgressRivalTeam(const struct FCRM_ProgressRivalTeam& Data);
 	static bool CRM_PutRaceLog(const struct FCRM_RaceLog& Data);
+	static bool CRM_PutRaceSequence(const struct FCRM_RaceSequence& Data);
 	static bool CRM_PutRadjCom(const struct FCRM_RadjCom& Data);
 	static bool CRM_PutRadjDataAccelOff(const struct FCRM_RadjDataAccelOff& Data);
 	static bool CRM_PutRadjDataAccelOn(const struct FCRM_RadjDataAccelOn& Data);
@@ -4582,6 +5322,7 @@ public:
 	static bool CRM_PutRadjMachine(const struct FCRM_RadjMachine& Data);
 	static bool CRM_PutRadjOnlinePlayer(const struct FCRM_RadjOnlinePlayer& Data);
 	static bool CRM_PutRadjRaceSetting(const struct FCRM_RadjRaceSetting& Data);
+	static bool CRM_PutRivalDuel(const struct FCRM_RivalDuel& Data);
 	static bool CRM_PutSequence(const struct FCRM_Sequence& Data);
 	static bool CRM_PutSubMode(const struct FCRM_SubMode& Data);
 	static bool CRM_PutTimeTrial(const struct FCRM_TimeTrial& Data);
@@ -4651,7 +5392,7 @@ public:
 DUMPER7_ASSERTS_UPlaylogManager;
 
 // Class UnionSystem.PlayLogSaveGame
-// 0x9790 (0x97B8 - 0x0028)
+// 0xD338 (0xD360 - 0x0028)
 class UPlayLogSaveGame final : public USaveGame
 {
 public:
@@ -4660,18 +5401,20 @@ public:
 	int64                                         Timestamp;                                         // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FPlayLogSystem                         System;                                            // 0x0040(0x0028)(NativeAccessSpecifierPrivate)
 	struct FPlayLogSaveGameCondition              Condition;                                         // 0x0068(0x0090)(NativeAccessSpecifierPrivate)
-	struct FPlayLogSaveGameProgressGrandprix      ProgressGrandprix;                                 // 0x00F8(0x012C)(NoDestructor, NativeAccessSpecifierPrivate)
-	struct FPlayLogSaveGameProgressRival          ProgressRival;                                     // 0x0224(0x0190)(NoDestructor, NativeAccessSpecifierPrivate)
-	struct FPlayLogSaveGameProgressParty          ProgressParty;                                     // 0x03B4(0x0154)(NoDestructor, NativeAccessSpecifierPrivate)
-	struct FPlayLogSaveGameCharacter              Character;                                         // 0x0508(0x0DE8)(NoDestructor, NativeAccessSpecifierPrivate)
-	struct FPlayLogSaveGameMachine                machine;                                           // 0x12F0(0x6720)(NoDestructor, NativeAccessSpecifierPrivate)
-	struct FPlayLogSaveGameGadget                 gadget;                                            // 0x7A10(0x07D0)(NoDestructor, NativeAccessSpecifierPrivate)
-	struct FPlayLogSaveGameGrandprix              GrandPrix;                                         // 0x81E0(0x0258)(NativeAccessSpecifierPrivate)
-	struct FPlayLogSaveGameParty                  Party;                                             // 0x8438(0x0220)(NativeAccessSpecifierPrivate)
-	struct FPlayLogSaveGameTimeTrial              TimeTrial;                                         // 0x8658(0x0EB8)(NoDestructor, NativeAccessSpecifierPrivate)
-	struct FPlayLogSaveGameFriendMatch            FriendMatch;                                       // 0x9510(0x0088)(NoDestructor, NativeAccessSpecifierPrivate)
-	struct FPlayLogSaveGameEventFesta             EventFesta;                                        // 0x9598(0x0020)(NativeAccessSpecifierPrivate)
-	struct FPlayLogSaveGameMode                   GameMode;                                          // 0x95B8(0x0200)(NativeAccessSpecifierPrivate)
+	struct FPlayLogSaveGameProgressGrandprix      ProgressGrandprix;                                 // 0x00F8(0x0154)(NoDestructor, NativeAccessSpecifierPrivate)
+	struct FPlayLogSaveGameProgressRival          ProgressRival;                                     // 0x024C(0x0190)(NoDestructor, NativeAccessSpecifierPrivate)
+	struct FPlayLogSaveGameProgressParty          ProgressParty;                                     // 0x03DC(0x0168)(NoDestructor, NativeAccessSpecifierPrivate)
+	struct FPlayLogSaveGameCharacter              Character;                                         // 0x0544(0x2070)(NoDestructor, NativeAccessSpecifierPrivate)
+	struct FPlayLogSaveGameMachine                machine;                                           // 0x25B4(0x8BC0)(NoDestructor, NativeAccessSpecifierPrivate)
+	struct FPlayLogSaveGameGadget                 gadget;                                            // 0xB174(0x07D0)(NoDestructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_B944[0x4];                                     // 0xB944(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPlayLogSaveGameGrandprix              GrandPrix;                                         // 0xB948(0x02A0)(NativeAccessSpecifierPrivate)
+	struct FPlayLogSaveGameParty                  Party;                                             // 0xBBE8(0x0240)(NativeAccessSpecifierPrivate)
+	struct FPlayLogSaveGameTimeTrial              TimeTrial;                                         // 0xBE28(0x11D8)(NoDestructor, NativeAccessSpecifierPrivate)
+	struct FPlayLogSaveGameFriendMatch            FriendMatch;                                       // 0xD000(0x0090)(NoDestructor, NativeAccessSpecifierPrivate)
+	struct FPlayLogSaveGameEventFesta             EventFesta;                                        // 0xD090(0x0020)(NativeAccessSpecifierPrivate)
+	struct FPlayLogSaveGameMode                   GameMode;                                          // 0xD0B0(0x0260)(NativeAccessSpecifierPrivate)
+	struct FPlayLogSaveGameRivalDuel              RivalDuel;                                         // 0xD310(0x0050)(NoDestructor, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -4688,6 +5431,37 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UPlayLogSaveGame;
+
+// Class UnionSystem.PlayMissionSubsystem
+// 0x0040 (0x0070 - 0x0030)
+class UPlayMissionSubsystem final : public UGameInstanceSubsystem
+{
+public:
+	uint8                                         Pad_30[0x40];                                      // 0x0030(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void SetEnableForceTransition(const bool bEnable);
+	void SetEnablePlayMission(const bool bEnable);
+
+	bool HasClaimableMissions() const;
+	bool IsEnablePlayMission() const;
+	bool IsForceTransition() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PlayMissionSubsystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlayMissionSubsystem")
+	}
+	static class UPlayMissionSubsystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPlayMissionSubsystem>();
+	}
+};
+DUMPER7_ASSERTS_UPlayMissionSubsystem;
 
 // Class UnionSystem.ProceduralMeshComponentEx
 // 0x0050 (0x05A0 - 0x0550)
@@ -4779,6 +5553,8 @@ public:
 	void OnBrakeInput(float InValue);
 	void OnDriftPressed();
 	void OnDriftReleased();
+	void OnDuelUltimatePressed();
+	void OnDuelUltimateReleased();
 	void OnEmotePressed();
 	void OnEmoteReleased();
 	void OnHornPressed();
@@ -4826,11 +5602,12 @@ public:
 DUMPER7_ASSERTS_IRaceInputRecieveInterface;
 
 // Class UnionSystem.RaceMasterDataAccessor
-// 0x0130 (0x0158 - 0x0028)
+// 0x0178 (0x01A0 - 0x0028)
 class URaceMasterDataAccessor : public UObject
 {
 public:
-	class UObject*                                RunData[0x26];                                     // 0x0028(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UObject*                                RunData[0x2E];                                     // 0x0028(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataAsset*                             m_gadgetParameterAdjusted;                         // 0x0198(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 
 public:
 	void Initialize();
@@ -4852,39 +5629,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_URaceMasterDataAccessor;
-
-// Class UnionSystem.RacePlayerController
-// 0x0160 (0x0B90 - 0x0A30)
-class ARacePlayerController : public AAppPlayerController
-{
-public:
-	uint8                                         Pad_A30[0x8];                                      // 0x0A30(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  RaceInputReciever;                                 // 0x0A38(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_A40[0x150];                                    // 0x0A40(0x0150)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void DoInputRacePressed(ERaceInputKey InKey, float Amount);
-	void DoInputRaceReleased(ERaceInputKey InKey);
-	void SetSubMode(ERacePlayerControllerSubMode InSubMode);
-
-	ERacePlayerControllerSubMode GetSubMode() const;
-	bool IsRaceInputEnabled() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("RacePlayerController")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"RacePlayerController")
-	}
-	static class ARacePlayerController* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ARacePlayerController>();
-	}
-};
-DUMPER7_ASSERTS_ARacePlayerController;
 
 // Class UnionSystem.RankingSubsystem
 // 0x0080 (0x00B0 - 0x0030)
@@ -5181,6 +5925,42 @@ public:
 };
 DUMPER7_ASSERTS_USequenceTriggerComponent;
 
+// Class UnionSystem.SessionManager
+// 0x0148 (0x0178 - 0x0030)
+class USessionManager final : public UGameInstanceSubsystem
+{
+public:
+	uint8                                         Pad_30[0x148];                                     // 0x0030(0x0148)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool GetDisplayCode(class FString* displayCode);
+	bool GetExternalAddressRegionName(class FString* AddressRegionName);
+	bool GetFairPlayPoint(int32* OutFairPlayPoint);
+	bool GetIsBan(bool* bOutIsBan);
+	bool GetLoginComplete();
+	bool GetPenaltyEndTime(class FString* EndTime);
+	bool GetRegionCode(class FString* regionCode);
+	EResponseCodeAbstract GetResponseCodeAbstract();
+	bool GetSwitchOnlineCode(int32* switchOnlineCode);
+	bool GetUserID(class FString* UserId);
+	void StartLogin(TDelegate<void(bool Error, bool SavedataDeleted)> Callback);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SessionManager")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SessionManager")
+	}
+	static class USessionManager* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USessionManager>();
+	}
+};
+DUMPER7_ASSERTS_USessionManager;
+
 // Class UnionSystem.ShareConfig
 // 0x0040 (0x0078 - 0x0038)
 class UShareConfig final : public UDeveloperSettings
@@ -5290,7 +6070,8 @@ class UStageIdUtilityLibrary final : public UBlueprintFunctionLibrary
 {
 public:
 	static class FString BuildStageDirectory(EStageId InId);
-	static class FString BuildStageName(EStageId InId, const class FString& InPrefix);
+	static class FString BuildStageExtndName(EStageId InId);
+	static class FString BuildStageName(EStageId InId, const class FString& InPrefix, bool includeExtnd);
 	static class FString BuildStageString(EStageId InId, const class FString& InPrefix);
 	static EStageId GetEditorLevelStageId();
 	static class FString GetLevelName_BG(EStageId InId);
@@ -5306,16 +6087,18 @@ public:
 	static int32 GetStageEndNumber(EStageId InId);
 	static EStageId GetStageId(int32 InNumber);
 	static EStageId GetStageIdByActor(const class AActor* Actor);
-	static class FString GetStageName(EStageId InId);
+	static class FString GetStageName(EStageId InId, bool includeExtnd);
 	static int32 GetStageNumber(EStageId InId);
-	static class FString GetStageString(EStageId InId);
+	static class FString GetStageString(EStageId InId, bool includeExtnd);
 	static bool IsAnotherStage(EStageId InId);
 	static bool IsCommonStage(EStageId InId);
 	static bool IsDebugAnotherStage(EStageId InId);
 	static bool IsDebugMainStage(EStageId InId);
 	static bool IsDebugStage(EStageId InId);
 	static bool IsExtndMainStage(EStageId InId);
+	static bool IsExtndStage(EStageId InId);
 	static bool IsMainStage(EStageId InId);
+	static bool IsS2ExtndMainStage(EStageId InId);
 	static bool IsStageIdValid(EStageId InId);
 	static EStageId StringToStageId(const class FString& String);
 
@@ -5467,6 +6250,26 @@ public:
 };
 DUMPER7_ASSERTS_UUISubsystem;
 
+// Class UnionSystem.UnionAddOnBase
+// 0x0000 (0x0028 - 0x0028)
+class UUnionAddOnBase : public UObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UnionAddOnBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UnionAddOnBase")
+	}
+	static class UUnionAddOnBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UUnionAddOnBase>();
+	}
+};
+DUMPER7_ASSERTS_UUnionAddOnBase;
+
 // Class UnionSystem.UnionAddOnEpic
 // 0x0070 (0x0098 - 0x0028)
 class UUnionAddOnEpic final : public UUnionAddOnBase
@@ -5489,6 +6292,29 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UUnionAddOnEpic;
+
+// Class UnionSystem.UnionAddOnNX
+// 0x0050 (0x0078 - 0x0028)
+class UUnionAddOnNX final : public UUnionAddOnBase
+{
+public:
+	uint8                                         Pad_28[0x50];                                      // 0x0028(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UnionAddOnNX")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UnionAddOnNX")
+	}
+	static class UUnionAddOnNX* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UUnionAddOnNX>();
+	}
+};
+DUMPER7_ASSERTS_UUnionAddOnNX;
 
 // Class UnionSystem.UnionAddOnPS
 // 0x0098 (0x00C0 - 0x0028)
@@ -5789,21 +6615,24 @@ public:
 DUMPER7_ASSERTS_UUnionContentManager;
 
 // Class UnionSystem.ContentDataAsset
-// 0x02F0 (0x0320 - 0x0030)
+// 0x0320 (0x0350 - 0x0030)
 class UContentDataAsset final : public UDataAsset
 {
 public:
 	TMap<int32, struct FContentCharaData>         CharaDLCMap;                                       // 0x0030(0x0050)(Edit, EditConst, NativeAccessSpecifierPrivate)
 	TMap<EContentId, struct FContentCharaData>    CharaContentSeverTimeMap;                          // 0x0080(0x0050)(Edit, EditConst, NativeAccessSpecifierPrivate)
-	TMap<int32, struct FContentMachineData>       MachineDLCMap;                                     // 0x00D0(0x0050)(Edit, EditConst, NativeAccessSpecifierPrivate)
-	TMap<EContentId, struct FContentMachineData>  MachineContentSeverTimeMap;                        // 0x0120(0x0050)(Edit, EditConst, NativeAccessSpecifierPrivate)
-	TMap<int32, struct FContentStageData>         StageDLCMap;                                       // 0x0170(0x0050)(Edit, EditConst, NativeAccessSpecifierPrivate)
-	TMap<int32, struct FContentStickerData>       StickerDLCMap;                                     // 0x01C0(0x0050)(Edit, EditConst, NativeAccessSpecifierPrivate)
-	TMap<int32, struct FContentHonorTitleData>    HonorOtherTitleDLCMap;                             // 0x0210(0x0050)(Edit, EditConst, NativeAccessSpecifierPrivate)
-	TMap<int32, struct FContentAlbumData>         AlbumDLCMap;                                       // 0x0260(0x0050)(Edit, EditConst, NativeAccessSpecifierPrivate)
-	TMap<EContentId, struct FContentAlbumData>    AlbumSeverTimeMap;                                 // 0x02B0(0x0050)(Edit, EditConst, NativeAccessSpecifierPrivate)
-	TArray<struct FPackageData>                   PackageDataList;                                   // 0x0300(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPrivate)
-	TArray<EContentId>                            ServerTimeContent;                                 // 0x0310(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPrivate)
+	TArray<struct FContentCharaData>              CharaS12List;                                      // 0x00D0(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPrivate)
+	TMap<int32, struct FContentMachineData>       MachineDLCMap;                                     // 0x00E0(0x0050)(Edit, EditConst, NativeAccessSpecifierPrivate)
+	TMap<EContentId, struct FContentMachineData>  MachineContentSeverTimeMap;                        // 0x0130(0x0050)(Edit, EditConst, NativeAccessSpecifierPrivate)
+	TArray<struct FContentMachineData>            MachineS12List;                                    // 0x0180(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPrivate)
+	TMap<int32, struct FContentStageData>         StageDLCMap;                                       // 0x0190(0x0050)(Edit, EditConst, NativeAccessSpecifierPrivate)
+	TMap<int32, struct FContentStickerData>       StickerDLCMap;                                     // 0x01E0(0x0050)(Edit, EditConst, NativeAccessSpecifierPrivate)
+	TArray<struct FContentStickerData>            StickerS12List;                                    // 0x0230(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPrivate)
+	TMap<int32, struct FContentHonorTitleData>    HonorOtherTitleDLCMap;                             // 0x0240(0x0050)(Edit, EditConst, NativeAccessSpecifierPrivate)
+	TMap<int32, struct FContentAlbumData>         AlbumDLCMap;                                       // 0x0290(0x0050)(Edit, EditConst, NativeAccessSpecifierPrivate)
+	TMap<EContentId, struct FContentAlbumData>    AlbumSeverTimeMap;                                 // 0x02E0(0x0050)(Edit, EditConst, NativeAccessSpecifierPrivate)
+	TArray<struct FPackageData>                   PackageDataList;                                   // 0x0330(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPrivate)
+	TArray<EContentId>                            ServerTimeContent;                                 // 0x0340(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPrivate)
 
 public:
 	void Build();
@@ -5833,21 +6662,22 @@ public:
 	static bool CanUseCharacter(EDriverId DriverId);
 	static bool CanUseHonorTitle(int32 HonorTitleId);
 	static bool CanUseMachine(EMachineId MachineId);
+	static bool CanUseMachineParts(EMachineId MachineId, EMachinePart PartId);
 	static bool CanUseStageByGameMode(EGameModeId GameModeID, EStageId StageId);
 	static bool CanUseStageByGameModeForCourseSelect(EGameModeId GameModeID, EStageId StageId);
-	static bool CanUseSticker(int32 stickerId);
+	static bool CanUseSticker(int32 StickerId);
 	static void GetIsItemReleased(const struct FContentItem& CheckItem, bool* IsReleased);
 	static void GetUseItemList(EGameModeId GameModeID, const TArray<struct FContentItem>& CheckItemList, TArray<struct FContentItem>* UnlockItemList);
 	static bool IsAuraReleased(EMachineAuraId AuraId);
 	static bool IsBusyCheckContent();
 	static bool IsCharacterReleased(EDriverId DriverId);
-	static bool IsGadgetReleased(EGadgetId gadgetId);
+	static bool IsGadgetReleased(EGadgetId GadgetID);
 	static bool IsHonorTitleReleased(int32 HonorTitleId);
 	static bool IsHornReleased(EMachineHornType hornId);
 	static bool IsMachineFrontPartsReleased(EMachineId MachineId);
 	static bool IsMachineRearPartsReleased(EMachineId MachineId);
 	static bool IsMachineTirePartsReleased(EMachineId MachineId);
-	static bool IsStickerReleased(int32 stickerId);
+	static bool IsStickerReleased(int32 StickerId);
 	static void RequestCheckContent(bool bEnableMasterData);
 
 public:
@@ -5985,6 +6815,26 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UUnionCueSheetIdDataAsset_05_Union;
+
+// Class UnionSystem.UnionCueSheetIdDataAsset_06_Union
+// 0x0000 (0x0030 - 0x0030)
+class UUnionCueSheetIdDataAsset_06_Union final : public UUnionCueSheetIdDataAsset
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UnionCueSheetIdDataAsset_06_Union")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UnionCueSheetIdDataAsset_06_Union")
+	}
+	static class UUnionCueSheetIdDataAsset_06_Union* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UUnionCueSheetIdDataAsset_06_Union>();
+	}
+};
+DUMPER7_ASSERTS_UUnionCueSheetIdDataAsset_06_Union;
 
 // Class UnionSystem.UnionDateTime
 // 0x0000 (0x0028 - 0x0028)
@@ -6446,6 +7296,26 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UInputModifierAxisToBool;
+
+// Class UnionSystem.UnionJsonUtility
+// 0x0000 (0x0028 - 0x0028)
+class UUnionJsonUtility final : public UBlueprintFunctionLibrary
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UnionJsonUtility")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UnionJsonUtility")
+	}
+	static class UUnionJsonUtility* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UUnionJsonUtility>();
+	}
+};
+DUMPER7_ASSERTS_UUnionJsonUtility;
 
 // Class UnionSystem.UnionLocalizationTextData
 // 0x00E0 (0x0110 - 0x0030)
@@ -7343,7 +8213,7 @@ public:
 DUMPER7_ASSERTS_AUnionStaticMeshActor;
 
 // Class UnionSystem.UnionStatsManager
-// 0x0918 (0x0948 - 0x0030)
+// 0x0A98 (0x0AC8 - 0x0030)
 class UUnionStatsManager final : public UGameInstanceSubsystem
 {
 public:
@@ -7354,7 +8224,7 @@ public:
 	TMulticastInlineDelegate<void(const EStatsEventId StatsEventId, const EDriverId DriverId, int32 StatsValue)> OnCharacterStatsEventUpdate; // 0x0068(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void(const struct FHonorCommendationDataSetList& DataSetList)> OnHonorResultEvent; // 0x0078(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	struct FHonorCommendationDataSetList          HonorList;                                         // 0x0088(0x0010)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	uint8                                         Pad_98[0x8B0];                                     // 0x0098(0x08B0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_98[0xA30];                                     // 0x0098(0x0A30)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	int32 GetCharacterStatsEventValue(const EStatsEventId StatsEventId, const EDriverId DriverId);
@@ -7662,8 +8532,9 @@ public:
 DUMPER7_ASSERTS_AUnionTestPlayerController;
 
 // Class UnionSystem.UnionVATMeshComponent
-// 0x0050 (0x0640 - 0x05F0)
-class UUnionVATMeshComponent : public UVATMeshComponent
+// 0x0060 (0x0650 - 0x05F0)
+#pragma pack(push, 0x1)
+class alignas(0x10) UUnionVATMeshComponent : public UVATMeshComponent
 {
 public:
 	TMulticastInlineDelegate<void(class UUnionVATMeshComponent* VATMeshComponent, const struct FUnionVATSequenceInfo& SequenceInfo)> OnVATSequenceCallback; // 0x05F0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
@@ -7674,7 +8545,7 @@ public:
 	int32                                         MaterialIndice1;                                   // 0x0608(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MaterialIndice2;                                   // 0x060C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MaterialIndice3;                                   // 0x0610(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_614[0x2C];                                     // 0x0614(0x002C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_614[0x34];                                     // 0x0614(0x0034)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void Rebuild(bool ResetState);
@@ -7700,15 +8571,16 @@ public:
 		return GetDefaultObjImpl<UUnionVATMeshComponent>();
 	}
 };
+#pragma pack(pop)
 DUMPER7_ASSERTS_UUnionVATMeshComponent;
 
 // Class UnionSystem.UnionVATAnimEventComponent
-// 0x0020 (0x0660 - 0x0640)
+// 0x0020 (0x0670 - 0x0650)
 class UUnionVATAnimEventComponent final : public UUnionVATMeshComponent
 {
 public:
-	TArray<struct FUnionVATAnimEventSequence>     AnimEventSequences;                                // 0x0640(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
-	uint8                                         Pad_650[0x10];                                     // 0x0650(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<struct FUnionVATAnimEventSequence>     AnimEventSequences;                                // 0x0648(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+	uint8                                         Pad_658[0x18];                                     // 0x0658(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void OnVATSequence(class UUnionVATMeshComponent* VATMeshComponent, const struct FUnionVATSequenceInfo& SequenceInfo);
@@ -7771,7 +8643,7 @@ DUMPER7_ASSERTS_UUnionVersionUtility;
 
 // Class UnionSystem.UnionWidgetComponent
 // 0x0000 (0x0690 - 0x0690)
-class UUnionWidgetComponent : public UWidgetComponent
+class UUnionWidgetComponent final : public UWidgetComponent
 {
 public:
 	static class UClass* StaticClass()
@@ -7993,6 +8865,75 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWinDualSenseUtilSubsystem;
+
+// Class UnionSystem.WinLoseDetailUtilityLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UWinLoseDetailUtilityLibrary final : public UBlueprintFunctionLibrary
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("WinLoseDetailUtilityLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WinLoseDetailUtilityLibrary")
+	}
+	static class UWinLoseDetailUtilityLibrary* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UWinLoseDetailUtilityLibrary>();
+	}
+};
+DUMPER7_ASSERTS_UWinLoseDetailUtilityLibrary;
+
+// Class UnionSystem.WinStreakGradeDataAsset
+// 0x00A0 (0x00D0 - 0x0030)
+class UWinStreakGradeDataAsset final : public UDataAsset
+{
+public:
+	TMap<EWinStreakGrade, int32>                  FestaWinStreakGradeMap;                            // 0x0030(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	TMap<EWinStreakGrade, int32>                  DuelWinStreakGradeMap;                             // 0x0080(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("WinStreakGradeDataAsset")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WinStreakGradeDataAsset")
+	}
+	static class UWinStreakGradeDataAsset* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UWinStreakGradeDataAsset>();
+	}
+};
+DUMPER7_ASSERTS_UWinStreakGradeDataAsset;
+
+// Class UnionSystem.WinStreakGradeUtil
+// 0x0000 (0x0028 - 0x0028)
+class UWinStreakGradeUtil final : public UBlueprintFunctionLibrary
+{
+public:
+	static EWinStreakGrade EvaluateWinStreak(int32 InWinStreak, int32 InSilverThreshold, int32 InGoldThreshold, int32 InRainbowThreshold);
+	static bool GetThresholds(const TMap<EWinStreakGrade, int32>& GradeMap, int32* OutSilverThreshold, int32* OutGoldThreshold, int32* OutRainbowThreshold);
+	static const class UWinStreakGradeDataAsset* GetWinStreakGradeDataAsset();
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("WinStreakGradeUtil")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WinStreakGradeUtil")
+	}
+	static class UWinStreakGradeUtil* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UWinStreakGradeUtil>();
+	}
+};
+DUMPER7_ASSERTS_UWinStreakGradeUtil;
 
 // Class UnionSystem.CommonNetworkSettings
 // 0x0008 (0x0040 - 0x0038)

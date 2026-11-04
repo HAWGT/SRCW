@@ -470,9 +470,10 @@ class UMachineCustomTop* ABP_MachineCustomizeSequence_C::GetMachineCustomTop() c
 // EMachineId                              InRearPartsId                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EMachineId                              InTirePartsId                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const TArray<EGadgetId>&                InGadgetIds                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<EGadgetId>&                      InSpGadgetIds                                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // struct FRacerParamData*                 OutParamData                                           (Parm, OutParm, NoDestructor)
 
-void ABP_MachineCustomizeSequence_C::GetParamData(EDriverId InDriverId, EMachineId InFrontPartsId, EMachineId InRearPartsId, EMachineId InTirePartsId, const TArray<EGadgetId>& InGadgetIds, struct FRacerParamData* OutParamData) const
+void ABP_MachineCustomizeSequence_C::GetParamData(EDriverId InDriverId, EMachineId InFrontPartsId, EMachineId InRearPartsId, EMachineId InTirePartsId, const TArray<EGadgetId>& InGadgetIds, TArray<EGadgetId>& InSpGadgetIds, struct FRacerParamData* OutParamData) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -486,8 +487,11 @@ void ABP_MachineCustomizeSequence_C::GetParamData(EDriverId InDriverId, EMachine
 	Parms.InRearPartsId = InRearPartsId;
 	Parms.InTirePartsId = InTirePartsId;
 	Parms.InGadgetIds = std::move(InGadgetIds);
+	Parms.InSpGadgetIds = std::move(InSpGadgetIds);
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	InSpGadgetIds = std::move(Parms.InSpGadgetIds);
 
 	if (OutParamData != nullptr)
 		*OutParamData = std::move(Parms.OutParamData);

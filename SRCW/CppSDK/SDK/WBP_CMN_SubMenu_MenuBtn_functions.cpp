@@ -96,27 +96,6 @@ void UWBP_CMN_SubMenu_MenuBtn_C::InitializeNewIcon()
 }
 
 
-// Function WBP_CMN_SubMenu_MenuBtn.WBP_CMN_SubMenu_MenuBtn_C.IsDisableGadgetEquipped
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool*                                   DisableListEquipped                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_CMN_SubMenu_MenuBtn_C::IsDisableGadgetEquipped(bool* DisableListEquipped)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_SubMenu_MenuBtn_C", "IsDisableGadgetEquipped");
-
-	Params::WBP_CMN_SubMenu_MenuBtn_C_IsDisableGadgetEquipped Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (DisableListEquipped != nullptr)
-		*DisableListEquipped = Parms.DisableListEquipped;
-}
-
-
 // Function WBP_CMN_SubMenu_MenuBtn.WBP_CMN_SubMenu_MenuBtn_C.IsGadgetNew
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:

@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "UnionSystem_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "UNION_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "ST_StickerPresetPageItemData_structs.hpp"
-#include "SlateCore_structs.hpp"
-#include "UMG_structs.hpp"
 #include "EStickerPresetSelectPageItemType_structs.hpp"
+#include "UMG_structs.hpp"
+#include "UnionSystem_structs.hpp"
 
 
 namespace SDK::Params
@@ -227,18 +227,18 @@ public:
 DUMPER7_ASSERTS_WBP_MachineCustom_Sub_Sticker_PresetIcon_C_UpdateNum;
 
 // Function WBP_MachineCustom_Sub_Sticker_PresetIcon.WBP_MachineCustom_Sub_Sticker_PresetIcon_C.UpdateNumColor
-// 0x01D0 (0x01D0 - 0x0000)
+// 0x01E0 (0x01E0 - 0x0000)
 struct WBP_MachineCustom_Sub_Sticker_PresetIcon_C_UpdateNumColor final
 {
 public:
-	struct FStickerUIData                         UIData;                                            // 0x0000(0x0088)(Edit, BlueprintVisible)
-	struct FST_StickerPresetPageItemData          K2Node_MakeStruct_ST_StickerPresetPageItemData;    // 0x0088(0x0090)(HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_NameToString_ReturnValue;            // 0x0118(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Conv_StringToInt_ReturnValue;             // 0x0128(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_12C[0x4];                                      // 0x012C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FStickerUIData                         CallFunc_GetStickerUIData_OutStickerUIData;        // 0x0130(0x0088)()
-	int32                                         CallFunc_SelectInt_ReturnValue;                    // 0x01B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x01BC(0x0014)()
+	struct FStickerUIData                         UIData;                                            // 0x0000(0x0090)(Edit, BlueprintVisible)
+	struct FST_StickerPresetPageItemData          K2Node_MakeStruct_ST_StickerPresetPageItemData;    // 0x0090(0x0090)(HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_NameToString_ReturnValue;            // 0x0120(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Conv_StringToInt_ReturnValue;             // 0x0130(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_134[0x4];                                      // 0x0134(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FStickerUIData                         CallFunc_GetStickerUIData_OutStickerUIData;        // 0x0138(0x0090)()
+	int32                                         CallFunc_SelectInt_ReturnValue;                    // 0x01C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x01CC(0x0014)()
 };
 DUMPER7_ASSERTS_WBP_MachineCustom_Sub_Sticker_PresetIcon_C_UpdateNumColor;
 

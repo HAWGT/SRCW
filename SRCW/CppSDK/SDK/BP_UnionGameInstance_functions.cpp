@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function BP_UnionGameInstance.BP_UnionGameInstance_C.ExecuteUbergraph_BP_UnionGameInstance
-// (Final, UbergraphFunction, HasDefaults)
+// (Final, UbergraphFunction)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -37,26 +37,6 @@ void UBP_UnionGameInstance_C::ExecuteUbergraph_BP_UnionGameInstance(int32 EntryP
 }
 
 
-// Function BP_UnionGameInstance.BP_UnionGameInstance_C.OnLoaded_C798D8744866C6A781E1E5B0E4C53C75
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UBP_UnionGameInstance_C::OnLoaded_C798D8744866C6A781E1E5B0E4C53C75(class UObject* Loaded)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UnionGameInstance_C", "OnLoaded_C798D8744866C6A781E1E5B0E4C53C75");
-
-	Params::BP_UnionGameInstance_C_OnLoaded_C798D8744866C6A781E1E5B0E4C53C75 Parms{};
-
-	Parms.Loaded = Loaded;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_UnionGameInstance.BP_UnionGameInstance_C.ReceiveInit
 // (Event, Public, BlueprintEvent)
 
@@ -66,20 +46,6 @@ void UBP_UnionGameInstance_C::ReceiveInit()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BP_UnionGameInstance_C", "ReceiveInit");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_UnionGameInstance.BP_UnionGameInstance_C.SetUpMilestone
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_UnionGameInstance_C::SetUpMilestone()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UnionGameInstance_C", "SetUpMilestone");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

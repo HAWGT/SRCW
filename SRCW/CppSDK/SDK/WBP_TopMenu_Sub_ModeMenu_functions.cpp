@@ -72,5 +72,19 @@ void UWBP_TopMenu_Sub_ModeMenu_C::SetupGameModeMenu()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
+
+// Function WBP_TopMenu_Sub_ModeMenu.WBP_TopMenu_Sub_ModeMenu_C.UpdateRivalDuelButtonRivalTexture
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_TopMenu_Sub_ModeMenu_C::UpdateRivalDuelButtonRivalTexture()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_TopMenu_Sub_ModeMenu_C", "UpdateRivalDuelButtonRivalTexture");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
 }
 

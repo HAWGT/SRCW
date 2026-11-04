@@ -10,19 +10,19 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BPC_ReceiveOnlineReward.BPC_ReceiveOnlineReward_C
-// 0x0008 (0x01E0 - 0x01D8)
+// 0x0008 (0x0228 - 0x0220)
 class UBPC_ReceiveOnlineReward_C final : public UReceiveOnlineReward
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x01D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0220(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void CreateNetworkCommunicationUI();

@@ -51,6 +51,26 @@ void UWBP_Sub_Friend_LobbyNoticePlate_C::ExecuteUbergraph_WBP_Sub_Friend_LobbyNo
 }
 
 
+// Function WBP_Sub_Friend_LobbyNoticePlate.WBP_Sub_Friend_LobbyNoticePlate_C.Get_LobbyNoticeBase_Brush
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// struct FSlateBrush                      ReturnValue                                            (Parm, OutParm, ReturnParm)
+
+struct FSlateBrush UWBP_Sub_Friend_LobbyNoticePlate_C::Get_LobbyNoticeBase_Brush()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Sub_Friend_LobbyNoticePlate_C", "Get_LobbyNoticeBase_Brush");
+
+	Params::WBP_Sub_Friend_LobbyNoticePlate_C_Get_LobbyNoticeBase_Brush Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function WBP_Sub_Friend_LobbyNoticePlate.WBP_Sub_Friend_LobbyNoticePlate_C.SetControlGaugeValue
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:

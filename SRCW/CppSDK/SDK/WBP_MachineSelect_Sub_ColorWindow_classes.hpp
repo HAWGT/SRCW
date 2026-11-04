@@ -10,19 +10,19 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_MachineSelect_Sub_ColorWindow.WBP_MachineSelect_Sub_ColorWindow_C
-// 0x0008 (0x0478 - 0x0470)
+// 0x0008 (0x0480 - 0x0478)
 class UWBP_MachineSelect_Sub_ColorWindow_C final : public UMachineColorSelectWindow
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0470(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0478(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void BndEvt__WBP_MachineSelect_Sub_ColorWindow_WBP_MachineCustom_Sub_PresetPaint_K2Node_ComponentBoundEvent_5_OnPageSlideStart__DelegateSignature();

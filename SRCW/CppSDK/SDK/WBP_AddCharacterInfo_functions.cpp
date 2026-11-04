@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function WBP_AddCharacterInfo.WBP_AddCharacterInfo_C.EditOpen
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EDriverId                               characterId                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_AddCharacterInfo_C::EditOpen(EDriverId characterId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_AddCharacterInfo_C", "EditOpen");
-
-	Params::WBP_AddCharacterInfo_C_EditOpen Parms{};
-
-	Parms.characterId = characterId;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_AddCharacterInfo.WBP_AddCharacterInfo_C.ExecuteUbergraph_WBP_AddCharacterInfo
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -120,21 +100,21 @@ void UWBP_AddCharacterInfo_C::OnOpenAnimEnd()
 }
 
 
-// Function WBP_AddCharacterInfo.WBP_AddCharacterInfo_C.Open
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_AddCharacterInfo.WBP_AddCharacterInfo_C.OpenUnlockPresentation
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EDriverId                               characterId                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FUnlockPresentationItem&   CutsceneItemList                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UWBP_AddCharacterInfo_C::Open(EDriverId characterId)
+void UWBP_AddCharacterInfo_C::OpenUnlockPresentation(const struct FUnlockPresentationItem& CutsceneItemList)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_AddCharacterInfo_C", "Open");
+		Func = Class->GetFunction("WBP_AddCharacterInfo_C", "OpenUnlockPresentation");
 
-	Params::WBP_AddCharacterInfo_C_Open Parms{};
+	Params::WBP_AddCharacterInfo_C_OpenUnlockPresentation Parms{};
 
-	Parms.characterId = characterId;
+	Parms.CutsceneItemList = std::move(CutsceneItemList);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

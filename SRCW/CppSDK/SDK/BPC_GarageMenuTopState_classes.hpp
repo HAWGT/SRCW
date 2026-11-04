@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
 
 
 namespace SDK
@@ -29,27 +29,27 @@ public:
 	class UWBP_Garage_MainMenu_C*                 TopWidget;                                         // 0x0138(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UpdateRacer(EGarageChildSequenceId InChildSequenceId);
+	void ExecuteUbergraph_BPC_GarageMenuTopState(int32 EntryPoint);
 	void FinalizeTopWidget();
-	void StartMachineCustomizeSequence();
-	void StartGadgetCustomizeSequence();
-	void TopWidget_OnInAnimationFinished();
-	void TopWidget_OnCancel();
-	void MachineCustomizeSequence_OnExit();
 	void GadgetCustomizeSequence_OnExit();
-	void GadgetCustomizeSequence_OnTurntableControlStateChanged(bool bInIsControllable);
+	void GadgetCustomizeSequence_OnMachinePartsFocused(EMachineId InMachineID, EMachinePartsType InMachinePartsType);
 	void GadgetCustomizeSequence_OnParamWindowControlStateChanged(bool bInIsControllable);
+	void GadgetCustomizeSequence_OnShortcutCustomizeFinished();
+	void GadgetCustomizeSequence_OnTurntableControlStateChanged(bool bInIsControllable);
+	void MachineCustomizeSequence_OnExit();
+	void MachineCustomizeSequence_OnMachineFocused(EMachineId InMachineID);
+	void MachineCustomizeSequence_OnShortcutCustomizeStarted(EMachineId InMachineID, EMachinePartsType InMachinePartsType);
+	void OnExitState();
+	void OnInitState();
+	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
+	void StartGadgetCustomizeSequence();
+	void StartMachineCustomizeSequence();
+	void TopWidget_OnCancel();
+	void TopWidget_OnDecision();
 	void TopWidget_OnDecisionAnimFinished(EGarageChildSequenceId InChildSequenceId);
 	void TopWidget_OnFocus(EGarageChildSequenceId InChildSequenceId);
-	void MachineCustomizeSequence_OnMachineFocused(EMachineId InMachineID);
-	void GadgetCustomizeSequence_OnMachinePartsFocused(EMachineId InMachineID, EMachinePartsType InMachinePartsType);
-	void MachineCustomizeSequence_OnShortcutCustomizeStarted(EMachineId InMachineID, EMachinePartsType InMachinePartsType);
-	void GadgetCustomizeSequence_OnShortcutCustomizeFinished();
-	void TopWidget_OnDecision();
-	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
-	void OnInitState();
-	void OnExitState();
-	void ExecuteUbergraph_BPC_GarageMenuTopState(int32 EntryPoint);
+	void TopWidget_OnInAnimationFinished();
+	void UpdateRacer(EGarageChildSequenceId InChildSequenceId);
 
 public:
 	static class UClass* StaticClass()

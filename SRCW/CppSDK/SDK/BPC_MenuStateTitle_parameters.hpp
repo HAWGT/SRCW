@@ -14,33 +14,6 @@
 namespace SDK::Params
 {
 
-// Function BPC_MenuStateTitle.BPC_MenuStateTitle_C.Play Title BGM
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_MenuStateTitle_C_Play_Title_BGM final
-{
-public:
-	class UMenuSoundSubsystem*                    CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_MenuStateTitle_C_Play_Title_BGM;
-
-// Function BPC_MenuStateTitle.BPC_MenuStateTitle_C.OnLoaded_4765DBF64D84C160A2E9C08B7DD924AD
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_MenuStateTitle_C_OnLoaded_4765DBF64D84C160A2E9C08B7DD924AD final
-{
-public:
-	TSubclassOf<class UObject>                    Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_MenuStateTitle_C_OnLoaded_4765DBF64D84C160A2E9C08B7DD924AD;
-
-// Function BPC_MenuStateTitle.BPC_MenuStateTitle_C.OnUpdateState
-// 0x0004 (0x0004 - 0x0000)
-struct BPC_MenuStateTitle_C_OnUpdateState final
-{
-public:
-	float                                         InDeltaTime;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_MenuStateTitle_C_OnUpdateState;
-
 // Function BPC_MenuStateTitle.BPC_MenuStateTitle_C.ExecuteUbergraph_BPC_MenuStateTitle
 // 0x0058 (0x0058 - 0x0000)
 struct BPC_MenuStateTitle_C_ExecuteUbergraph_BPC_MenuStateTitle final
@@ -64,6 +37,33 @@ public:
 	TDelegate<void(TSubclassOf<class UObject> Loaded)> K2Node_CreateDelegate_OutputDelegate;         // 0x0044(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_MenuStateTitle_C_ExecuteUbergraph_BPC_MenuStateTitle;
+
+// Function BPC_MenuStateTitle.BPC_MenuStateTitle_C.OnLoaded_4765DBF64D84C160A2E9C08B7DD924AD
+// 0x0008 (0x0008 - 0x0000)
+struct BPC_MenuStateTitle_C_OnLoaded_4765DBF64D84C160A2E9C08B7DD924AD final
+{
+public:
+	TSubclassOf<class UObject>                    Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_MenuStateTitle_C_OnLoaded_4765DBF64D84C160A2E9C08B7DD924AD;
+
+// Function BPC_MenuStateTitle.BPC_MenuStateTitle_C.OnUpdateState
+// 0x0004 (0x0004 - 0x0000)
+struct BPC_MenuStateTitle_C_OnUpdateState final
+{
+public:
+	float                                         InDeltaTime;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_MenuStateTitle_C_OnUpdateState;
+
+// Function BPC_MenuStateTitle.BPC_MenuStateTitle_C.Play Title BGM
+// 0x0008 (0x0008 - 0x0000)
+struct BPC_MenuStateTitle_C_Play_Title_BGM final
+{
+public:
+	class UMenuSoundSubsystem*                    CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_MenuStateTitle_C_Play_Title_BGM;
 
 }
 

@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "UnionUI_structs.hpp"
 #include "UMG_classes.hpp"
+#include "UnionUI_structs.hpp"
 
 
 namespace SDK

@@ -392,8 +392,9 @@ void UWBP_Online_PlayerDetail_C::Set_Lobby_Player_Data(const struct FLobbyPlayer
 // const class FString&                    InPlatformId                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // const class FString&                    InPlatform                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // bool                                    bInIsEnableBlockWindowButton                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bExceptGadgetPage                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Online_PlayerDetail_C::SetPlayerDetailData(const struct FLobbyPlayerData& InPlayerData, EBlockPlayerState InBlockType, bool bInIsOwn, bool bInIsSendNice, bool bInIsNPC, int32 InNiceCount, const class FString& InProductUserId, bool bInIsOwnHost, EMatchingLobbyType InLobbyType, const class FString& InPlatformId, const class FString& InPlatform, bool bInIsEnableBlockWindowButton)
+void UWBP_Online_PlayerDetail_C::SetPlayerDetailData(const struct FLobbyPlayerData& InPlayerData, EBlockPlayerState InBlockType, bool bInIsOwn, bool bInIsSendNice, bool bInIsNPC, int32 InNiceCount, const class FString& InProductUserId, bool bInIsOwnHost, EMatchingLobbyType InLobbyType, const class FString& InPlatformId, const class FString& InPlatform, bool bInIsEnableBlockWindowButton, bool bExceptGadgetPage)
 {
 	static class UFunction* Func = nullptr;
 
@@ -414,6 +415,7 @@ void UWBP_Online_PlayerDetail_C::SetPlayerDetailData(const struct FLobbyPlayerDa
 	Parms.InPlatformId = std::move(InPlatformId);
 	Parms.InPlatform = std::move(InPlatform);
 	Parms.bInIsEnableBlockWindowButton = bInIsEnableBlockWindowButton;
+	Parms.bExceptGadgetPage = bExceptGadgetPage;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

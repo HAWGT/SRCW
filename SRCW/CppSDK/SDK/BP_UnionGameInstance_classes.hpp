@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "UnionSystem_structs.hpp"
 #include "UnionSystem_classes.hpp"
-#include "Engine_structs.hpp"
 
 
 namespace SDK
@@ -29,9 +29,7 @@ public:
 
 public:
 	void ExecuteUbergraph_BP_UnionGameInstance(int32 EntryPoint);
-	void OnLoaded_C798D8744866C6A781E1E5B0E4C53C75(class UObject* Loaded);
 	void ReceiveInit();
-	void SetUpMilestone();
 
 	void GetVCSRevisionNumIF(int32* RevisionNum) const;
 	void GetVCSRevisionStrIF(class FString* VCSStr) const;

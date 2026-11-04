@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
 #include "UMG_structs.hpp"
 
 
@@ -60,7 +60,7 @@ public:
 	void RemindLoopAnim();
 	void SetHeaderText(bool bIsWait, bool bIsHost, bool bIsReady);
 	void SetOnlineGameMode(EOnlineGameMode InOnlineGameMode, bool bIsMulti);
-	void SetOnlineGameModeIcon(bool bIsMulti, EOnlineGameMode InOnlineGameMode);
+	void SetOnlineGameModeIcon(bool bIsMulti, EOnlineGameMode InOnlineGameMode, EOnlineGameMode InSquadOnlineGameMode, bool IsVisible_0);
 
 public:
 	static class UClass* StaticClass()

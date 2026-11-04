@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "UnionSystem_structs.hpp"
-#include "UNION_structs.hpp"
-#include "Engine_structs.hpp"
 #include "UnionRun_classes.hpp"
+#include "UnionSystem_structs.hpp"
+#include "Engine_structs.hpp"
+#include "UNION_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UnionLib_structs.hpp"
 
@@ -105,6 +105,7 @@ public:
 	void PlayTotalInAnimForResult();
 	void PlayTotalViewLoop();
 	void PreConstruct(bool IsDesignTime);
+	void RemoveResultDonpaTicket();
 	void SequenceEvent__ENTRYPOINTWBP_Result_Sub_RankingTable_GP_Line(class UWBP_Result_Sub_RankingTable_GP_02_C* WBP_Result_Sub_RankingTable_GP_12_0);
 	void SequenceEvent__ENTRYPOINTWBP_Result_Sub_RankingTable_GP_Line_0(class UWBP_Result_Sub_RankingTable_GP_02_C* WBP_Result_Sub_RankingTable_GP_11_0);
 	void SequenceEvent__ENTRYPOINTWBP_Result_Sub_RankingTable_GP_Line_1(class UWBP_Result_Sub_RankingTable_GP_02_C* WBP_Result_Sub_RankingTable_GP_10_0);

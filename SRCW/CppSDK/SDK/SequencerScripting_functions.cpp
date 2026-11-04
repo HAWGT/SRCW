@@ -6034,9 +6034,9 @@ void UMovieSceneSectionExtensions::SetEndFrameBounded(class UMovieSceneSection* 
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UMovieSceneSection*               Section                                                (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   endTime                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   EndTime                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UMovieSceneSectionExtensions::SetEndFrameSeconds(class UMovieSceneSection* Section, float endTime)
+void UMovieSceneSectionExtensions::SetEndFrameSeconds(class UMovieSceneSection* Section, float EndTime)
 {
 	static class UFunction* Func = nullptr;
 
@@ -6046,7 +6046,7 @@ void UMovieSceneSectionExtensions::SetEndFrameSeconds(class UMovieSceneSection* 
 	Params::MovieSceneSectionExtensions_SetEndFrameSeconds Parms{};
 
 	Parms.Section = Section;
-	Parms.endTime = endTime;
+	Parms.EndTime = EndTime;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -6091,9 +6091,9 @@ void UMovieSceneSectionExtensions::SetRange(class UMovieSceneSection* Section, i
 // Parameters:
 // class UMovieSceneSection*               Section                                                (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   StartTime                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   endTime                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   EndTime                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UMovieSceneSectionExtensions::SetRangeSeconds(class UMovieSceneSection* Section, float StartTime, float endTime)
+void UMovieSceneSectionExtensions::SetRangeSeconds(class UMovieSceneSection* Section, float StartTime, float EndTime)
 {
 	static class UFunction* Func = nullptr;
 
@@ -6104,7 +6104,7 @@ void UMovieSceneSectionExtensions::SetRangeSeconds(class UMovieSceneSection* Sec
 
 	Parms.Section = Section;
 	Parms.StartTime = StartTime;
-	Parms.endTime = endTime;
+	Parms.EndTime = EndTime;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -8004,9 +8004,9 @@ void UMovieSceneSequenceExtensions::SetPlaybackEnd(class UMovieSceneSequence* Se
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UMovieSceneSequence*              Sequence                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   endTime                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   EndTime                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UMovieSceneSequenceExtensions::SetPlaybackEndSeconds(class UMovieSceneSequence* Sequence, float endTime)
+void UMovieSceneSequenceExtensions::SetPlaybackEndSeconds(class UMovieSceneSequence* Sequence, float EndTime)
 {
 	static class UFunction* Func = nullptr;
 
@@ -8016,7 +8016,7 @@ void UMovieSceneSequenceExtensions::SetPlaybackEndSeconds(class UMovieSceneSeque
 	Params::MovieSceneSequenceExtensions_SetPlaybackEndSeconds Parms{};
 
 	Parms.Sequence = Sequence;
-	Parms.endTime = endTime;
+	Parms.EndTime = EndTime;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

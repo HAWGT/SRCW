@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_HoverboardActor.BP_HoverboardActor_C
-// 0x0000 (0x0798 - 0x0798)
+// 0x0000 (0x0B90 - 0x0B90)
 class ABP_HoverboardActor_C final : public AHoverboardInRaceActor
 {
 public:

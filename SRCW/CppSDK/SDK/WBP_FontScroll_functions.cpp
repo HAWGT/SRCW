@@ -51,6 +51,54 @@ void UWBP_FontScroll_C::ExecuteUbergraph_WBP_FontScroll(int32 EntryPoint)
 }
 
 
+// Function WBP_FontScroll.WBP_FontScroll_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_FontScroll_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_FontScroll_C", "PreConstruct");
+
+	Params::WBP_FontScroll_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_FontScroll.WBP_FontScroll_C.RefreshLocalizeText
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_FontScroll_C::RefreshLocalizeText()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_FontScroll_C", "RefreshLocalizeText");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_FontScroll.WBP_FontScroll_C.RefreshScrollDirection
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_FontScroll_C::RefreshScrollDirection()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_FontScroll_C", "RefreshScrollDirection");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_FontScroll.WBP_FontScroll_C.RefreshText
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 
@@ -60,6 +108,20 @@ void UWBP_FontScroll_C::RefreshText()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("WBP_FontScroll_C", "RefreshText");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_FontScroll.WBP_FontScroll_C.RefreshTextJustification
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_FontScroll_C::RefreshTextJustification()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_FontScroll_C", "RefreshTextJustification");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

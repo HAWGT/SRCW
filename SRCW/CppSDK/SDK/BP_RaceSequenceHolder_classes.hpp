@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
 namespace SDK
@@ -42,6 +42,11 @@ public:
 	void SetGrandPrixNextRaceSetting();
 	void SetSelectMode();
 	void StartErrorHandling();
+	void StartFinalize_GrandPrix();
+	void StartFinalize_MatchRace();
+	void StartFinalize_PartyRace();
+	void StartFinalize_RivalDuel();
+	void StartFinalize_TimeTrial();
 	void StartGrandPrix();
 	void StartMatchRace();
 	void StartMiddleLoading(int32 InLoadingPhaseNum, bool bInLoadingProgressMode, bool bInEndHide);

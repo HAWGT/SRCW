@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
 #include "UMG_structs.hpp"
 
 
@@ -97,8 +97,6 @@ public:
 	TMulticastInlineDelegate<void()>              StartAdjustingGauge;                               // 0x0618(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	TMap<ELegendCompeRateGrade, TSoftObjectPtr<class UTexture2D>> LegendGradeIcon;                   // 0x0628(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                          IsCountDown;                                       // 0x0678(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_679[0x3];                                      // 0x0679(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ResultRank;                                        // 0x067C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AddTextImageToTextArray(const TArray<class UImage*>& TargetArray, class UPanelWidget* TextParent);

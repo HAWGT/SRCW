@@ -331,6 +331,16 @@ enum class EWidgetManZLayer : uint8
 	EWidgetManZLayer_MAX                     = 4,
 };
 
+// ScriptStruct UnionUI.UnionRichImageRow
+// 0x0010 (0x00F0 - 0x00E0)
+struct FUnionRichImageRow final : public FRichImageRow
+{
+public:
+	EControllerButtonTextureIndex                 TextureIndex;                                      // 0x00E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E1[0xF];                                       // 0x00E1(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FUnionRichImageRow;
+
 // ScriptStruct UnionUI.UnionUIGridLayoutButtonData
 // 0x0038 (0x0038 - 0x0000)
 struct FUnionUIGridLayoutButtonData final
@@ -348,18 +358,6 @@ public:
 };
 DUMPER7_ASSERTS_FUnionUIGridLayoutButtonData;
 
-// ScriptStruct UnionUI.UnionUIGridLayoutSideNavData
-// 0x0020 (0x0020 - 0x0000)
-struct FUnionUIGridLayoutSideNavData final
-{
-public:
-	EUnionUIGridLayoutSideNavRule                 Rule;                                              // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget*                                Widget;                                            // 0x0008(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	TDelegate<void(EUnionUIControlDir Direction, const struct FUnionUIGridLayoutButtonData& ButtonData)> CustomDelegate; // 0x0010(0x0010)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FUnionUIGridLayoutSideNavData;
-
 // ScriptStruct UnionUI.UnionLoadingCourseImage
 // 0x0050 (0x0058 - 0x0008)
 struct FUnionLoadingCourseImage final : public FTableRowBase
@@ -369,16 +367,6 @@ public:
 	TSoftObjectPtr<class UTexture2D>              CourseIcon;                                        // 0x0030(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FUnionLoadingCourseImage;
-
-// ScriptStruct UnionUI.UnionRichImageRow
-// 0x0010 (0x00F0 - 0x00E0)
-struct FUnionRichImageRow final : public FRichImageRow
-{
-public:
-	EControllerButtonTextureIndex                 TextureIndex;                                      // 0x00E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E1[0xF];                                       // 0x00E1(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FUnionRichImageRow;
 
 // ScriptStruct UnionUI.EmoteStampDataStruct
 // 0x0080 (0x0088 - 0x0008)
@@ -395,6 +383,18 @@ public:
 	TArray<struct FTransform>                     StampBalloonOffsetList;                            // 0x0078(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FEmoteStampDataStruct;
+
+// ScriptStruct UnionUI.UnionUIGridLayoutSideNavData
+// 0x0020 (0x0020 - 0x0000)
+struct FUnionUIGridLayoutSideNavData final
+{
+public:
+	EUnionUIGridLayoutSideNavRule                 Rule;                                              // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                Widget;                                            // 0x0008(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	TDelegate<void(EUnionUIControlDir Direction, const struct FUnionUIGridLayoutButtonData& ButtonData)> CustomDelegate; // 0x0010(0x0010)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FUnionUIGridLayoutSideNavData;
 
 // ScriptStruct UnionUI.UnionUIGridLayoutSideNav
 // 0x0080 (0x0080 - 0x0000)

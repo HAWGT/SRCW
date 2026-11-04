@@ -37,6 +37,55 @@ void UWBP_EventEndInfo_Sub_Details_C::ExecuteUbergraph_WBP_EventEndInfo_Sub_Deta
 }
 
 
+// Function WBP_EventEndInfo_Sub_Details.WBP_EventEndInfo_Sub_Details_C.GetPointAnimTimeLength
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// double*                                 Time                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_EventEndInfo_Sub_Details_C::GetPointAnimTimeLength(double* Time)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_C", "GetPointAnimTimeLength");
+
+	Params::WBP_EventEndInfo_Sub_Details_C_GetPointAnimTimeLength Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Time != nullptr)
+		*Time = Parms.Time;
+}
+
+
+// Function WBP_EventEndInfo_Sub_Details.WBP_EventEndInfo_Sub_Details_C.OnAnim_FinishedPointDisplay
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_EventEndInfo_Sub_Details_C::OnAnim_FinishedPointDisplay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_C", "OnAnim_FinishedPointDisplay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_EventEndInfo_Sub_Details.WBP_EventEndInfo_Sub_Details_C.OnAnim_PlaySoundRankingPraise
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_EventEndInfo_Sub_Details_C::OnAnim_PlaySoundRankingPraise()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_C", "OnAnim_PlaySoundRankingPraise");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_EventEndInfo_Sub_Details.WBP_EventEndInfo_Sub_Details_C.OnInitialized
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
@@ -62,6 +111,70 @@ void UWBP_EventEndInfo_Sub_Details_C::RankingAnimEnd()
 		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_C", "RankingAnimEnd");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_EventEndInfo_Sub_Details.WBP_EventEndInfo_Sub_Details_C.SequenceEvent__ENTRYPOINTWBP_EventEndInfo_Sub_Details
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_EventEndInfo_Sub_Details_C::SequenceEvent__ENTRYPOINTWBP_EventEndInfo_Sub_Details()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_C", "SequenceEvent__ENTRYPOINTWBP_EventEndInfo_Sub_Details");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_EventEndInfo_Sub_Details.WBP_EventEndInfo_Sub_Details_C.SequenceEvent__ENTRYPOINTWBP_EventEndInfo_Sub_Details_0
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_EventEndInfo_Sub_Details_C::SequenceEvent__ENTRYPOINTWBP_EventEndInfo_Sub_Details_0()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_C", "SequenceEvent__ENTRYPOINTWBP_EventEndInfo_Sub_Details_0");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_EventEndInfo_Sub_Details.WBP_EventEndInfo_Sub_Details_C.SequenceEvent__ENTRYPOINTWBP_EventEndInfo_Sub_Details_1
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_EventEndInfo_Sub_Details_C::SequenceEvent__ENTRYPOINTWBP_EventEndInfo_Sub_Details_1()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_C", "SequenceEvent__ENTRYPOINTWBP_EventEndInfo_Sub_Details_1");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_EventEndInfo_Sub_Details.WBP_EventEndInfo_Sub_Details_C.SetFestaPointText
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InPoint                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    UseInvalidText                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_EventEndInfo_Sub_Details_C::SetFestaPointText(int32 InPoint, bool UseInvalidText)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_C", "SetFestaPointText");
+
+	Params::WBP_EventEndInfo_Sub_Details_C_SetFestaPointText Parms{};
+
+	Parms.InPoint = InPoint;
+	Parms.UseInvalidText = UseInvalidText;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -105,6 +218,48 @@ void UWBP_EventEndInfo_Sub_Details_C::SetRankingDisplay(int32 Ranking)
 }
 
 
+// Function WBP_EventEndInfo_Sub_Details.WBP_EventEndInfo_Sub_Details_C.SetRankingType
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EFestaRankingType                       InType                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_EventEndInfo_Sub_Details_C::SetRankingType(EFestaRankingType InType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_C", "SetRankingType");
+
+	Params::WBP_EventEndInfo_Sub_Details_C_SetRankingType Parms{};
+
+	Parms.InType = InType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_EventEndInfo_Sub_Details.WBP_EventEndInfo_Sub_Details_C.SetStreakPointText
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InPoint                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    UseEachPointText                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_EventEndInfo_Sub_Details_C::SetStreakPointText(int32 InPoint, bool UseEachPointText)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_C", "SetStreakPointText");
+
+	Params::WBP_EventEndInfo_Sub_Details_C_SetStreakPointText Parms{};
+
+	Parms.InPoint = InPoint;
+	Parms.UseEachPointText = UseEachPointText;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_EventEndInfo_Sub_Details.WBP_EventEndInfo_Sub_Details_C.SetTextureBG
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -120,6 +275,26 @@ void UWBP_EventEndInfo_Sub_Details_C::SetTextureBG(class UTexture2D* Texture)
 	Params::WBP_EventEndInfo_Sub_Details_C_SetTextureBG Parms{};
 
 	Parms.Texture = Texture;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_EventEndInfo_Sub_Details.WBP_EventEndInfo_Sub_Details_C.SetVisibilityPointWindow
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ESlateVisibility                        Visibility_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_EventEndInfo_Sub_Details_C::SetVisibilityPointWindow(ESlateVisibility Visibility_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_C", "SetVisibilityPointWindow");
+
+	Params::WBP_EventEndInfo_Sub_Details_C_SetVisibilityPointWindow Parms{};
+
+	Parms.Visibility_0 = Visibility_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

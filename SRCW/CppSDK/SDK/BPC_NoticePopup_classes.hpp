@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
 #include "UnionUI_structs.hpp"
 
 
@@ -21,33 +21,32 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BPC_NoticePopup.BPC_NoticePopup_C
-// 0x0048 (0x0270 - 0x0228)
+// 0x0038 (0x0308 - 0x02D0)
 class UBPC_NoticePopup_C final : public UNoticePopupState
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0228(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWBP_TopInfo_C*                         TopInfoWidget;                                     // 0x0230(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class ABP_EventInfoManageActor_C*             EventInfo;                                         // 0x0238(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	ETopMenuSequenceState                         ReturnState;                                       // 0x0240(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsFadeEnd;                                         // 0x0241(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsEnd_ReadPlatformFriend;                          // 0x0242(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsNewDisplay_DLC;                                  // 0x0243(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsNewDisplay_FreeContents;                         // 0x0244(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsNewDisplay_Festa;                                // 0x0245(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsNewDisplay_Emerjency;                            // 0x0246(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETopInfoWidgetPageCategory                    TopInfoReturnPage;                                 // 0x0247(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsOnline;                                          // 0x0248(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_249[0x7];                                      // 0x0249(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ADLCStoreDialogActor*                   DLCStoreDialog;                                    // 0x0250(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(ETopMenuSequenceState ReturnState)> OnBackToTopMenuEvent;          // 0x0258(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          IsNewDisplay_Legend;                               // 0x0268(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class ABP_EventInfoManageActor_C*             EventInfo;                                         // 0x02D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	ETopMenuSequenceState                         ReturnState;                                       // 0x02E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsFadeEnd;                                         // 0x02E1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsEnd_ReadPlatformFriend;                          // 0x02E2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsNewDisplay_DLC;                                  // 0x02E3(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsNewDisplay_FreeContents;                         // 0x02E4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsNewDisplay_Emerjency;                            // 0x02E5(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETopInfoWidgetPageCategory                    TopInfoReturnPage;                                 // 0x02E6(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsOnline;                                          // 0x02E7(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ADLCStoreDialogActor*                   DLCStoreDialog;                                    // 0x02E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(ETopMenuSequenceState ReturnState)> OnBackToTopMenuEvent;          // 0x02F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          IsNewDisplay_Legend;                               // 0x0300(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void CheckFirstDisplayPage(ETopInfoWidgetPageCategory* newParam);
 	void DLCInfoClosed_CreateTopInfo(bool IsAccept);
+	void DuelInfoClosed_CreateTopInfo();
 	void ExecuteUbergraph_BPC_NoticePopup(int32 EntryPoint);
 	void FestaInfoClosed_CreateTopInfo();
 	void ForceReleaseWidget();
+	void GetTopInfoWidget(class UWBP_TopInfo_C** TopInfoWidget, bool* IsValid);
 	bool IsExistWidget();
 	void IsFestaForceStart(bool* IsDebugStart);
 	void LegendCompeInfoClosed_CreateTopInfo();
@@ -64,6 +63,7 @@ public:
 	void ReleaseTopInfo();
 	void Set_Footer_Visibility(bool IsVisible);
 	void TopInfoClosed();
+	void TopInfoClosed_CreateDuelInfo();
 	void TopInfoClosed_CreateFestaInfo();
 	void TopInfoClosed_CreateLegendCompeInfo();
 	void TopInfoClosed_CreateWorldMatchInfo();

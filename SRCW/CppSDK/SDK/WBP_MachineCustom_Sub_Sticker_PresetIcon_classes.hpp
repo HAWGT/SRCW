@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "ST_StickerPresetPageItemData_structs.hpp"
-#include "UMG_structs.hpp"
+#include "UNION_classes.hpp"
 #include "EStickerPresetSelectPageItemType_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK

@@ -17,35 +17,15 @@
 namespace SDK
 {
 
-// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.RewardDialog_Purchase_OnResult
-// (Private, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EDialogResult                           Result                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.Bind
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPC_MachineCustomizeStickerSelectState_C::RewardDialog_Purchase_OnResult(EDialogResult Result)
+void UBPC_MachineCustomizeStickerSelectState_C::Bind()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "RewardDialog_Purchase_OnResult");
-
-	Params::BPC_MachineCustomizeStickerSelectState_C_RewardDialog_Purchase_OnResult Parms{};
-
-	Parms.Result = Result;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.DeleteDialog
-// (Private, BlueprintCallable, BlueprintEvent)
-
-void UBPC_MachineCustomizeStickerSelectState_C::DeleteDialog()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "DeleteDialog");
+		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "Bind");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -65,15 +45,139 @@ void UBPC_MachineCustomizeStickerSelectState_C::CreateDialog()
 }
 
 
-// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.TipsWindow_CloseTipsWindow
+// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.DeleteDialog
 // (Private, BlueprintCallable, BlueprintEvent)
 
-void UBPC_MachineCustomizeStickerSelectState_C::TipsWindow_CloseTipsWindow()
+void UBPC_MachineCustomizeStickerSelectState_C::DeleteDialog()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "TipsWindow_CloseTipsWindow");
+		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "DeleteDialog");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.ExecuteUbergraph_BPC_MachineCustomizeStickerSelectState
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_MachineCustomizeStickerSelectState_C::ExecuteUbergraph_BPC_MachineCustomizeStickerSelectState(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "ExecuteUbergraph_BPC_MachineCustomizeStickerSelectState");
+
+	Params::BPC_MachineCustomizeStickerSelectState_C_ExecuteUbergraph_BPC_MachineCustomizeStickerSelectState Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.HideFooter
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBPC_MachineCustomizeStickerSelectState_C::HideFooter()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "HideFooter");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.HidePopupWindow
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBPC_MachineCustomizeStickerSelectState_C::HidePopupWindow()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "HidePopupWindow");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.LeftShoulderEvent
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UUnionUIButtonBase*               Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// int32                                   PanelIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   ButtonIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_MachineCustomizeStickerSelectState_C::LeftShoulderEvent(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "LeftShoulderEvent");
+
+	Params::BPC_MachineCustomizeStickerSelectState_C_LeftShoulderEvent Parms{};
+
+	Parms.Button = Button;
+	Parms.PanelIndex = PanelIndex;
+	Parms.ButtonIndex = ButtonIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.OnExitState
+// (Event, Public, BlueprintEvent)
+
+void UBPC_MachineCustomizeStickerSelectState_C::OnExitState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "OnExitState");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.OnFocusedEvent
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FST_StickerPresetPageItemData&ItemData                                               (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// int32                                   InPlayerIndex                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   ButtonIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_MachineCustomizeStickerSelectState_C::OnFocusedEvent(const struct FST_StickerPresetPageItemData& ItemData, int32 InPlayerIndex, int32 ButtonIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "OnFocusedEvent");
+
+	Params::BPC_MachineCustomizeStickerSelectState_C_OnFocusedEvent Parms{};
+
+	Parms.ItemData = std::move(ItemData);
+	Parms.InPlayerIndex = InPlayerIndex;
+	Parms.ButtonIndex = ButtonIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.OnInitState
+// (Event, Public, BlueprintEvent)
+
+void UBPC_MachineCustomizeStickerSelectState_C::OnInitState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "OnInitState");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -94,132 +198,6 @@ void UBPC_MachineCustomizeStickerSelectState_C::OpenTipsWindow(EHintId InHintId)
 	Params::BPC_MachineCustomizeStickerSelectState_C_OpenTipsWindow Parms{};
 
 	Parms.InHintId = InHintId;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.StickerSelectPage_OnCancel
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InPlayerIndex                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_MachineCustomizeStickerSelectState_C::StickerSelectPage_OnCancel(int32 InPlayerIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "StickerSelectPage_OnCancel");
-
-	Params::BPC_MachineCustomizeStickerSelectState_C_StickerSelectPage_OnCancel Parms{};
-
-	Parms.InPlayerIndex = InPlayerIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.Unbind
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBPC_MachineCustomizeStickerSelectState_C::Unbind()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "Unbind");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.Bind
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBPC_MachineCustomizeStickerSelectState_C::Bind()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "Bind");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.HideFooter
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBPC_MachineCustomizeStickerSelectState_C::HideFooter()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "HideFooter");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.SetupFooter
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBPC_MachineCustomizeStickerSelectState_C::SetupFooter()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "SetupFooter");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.HidePopupWindow
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBPC_MachineCustomizeStickerSelectState_C::HidePopupWindow()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "HidePopupWindow");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.ShowPopupWindow
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UBPC_MachineCustomizeStickerSelectState_C::ShowPopupWindow()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "ShowPopupWindow");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.TurnStickerFrameVisible
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AUnionStickerBase*                Sticker                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    IsVisible                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_MachineCustomizeStickerSelectState_C::TurnStickerFrameVisible(class AUnionStickerBase* Sticker, bool IsVisible)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "TurnStickerFrameVisible");
-
-	Params::BPC_MachineCustomizeStickerSelectState_C_TurnStickerFrameVisible Parms{};
-
-	Parms.Sticker = Sticker;
-	Parms.IsVisible = IsVisible;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -249,15 +227,149 @@ void UBPC_MachineCustomizeStickerSelectState_C::OverrideStickers(TArray<class AA
 }
 
 
+// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.PopupWindow_OnDecision
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UUnionUIButtonBase*               Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// int32                                   PanelIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   ButtonIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_MachineCustomizeStickerSelectState_C::PopupWindow_OnDecision(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "PopupWindow_OnDecision");
+
+	Params::BPC_MachineCustomizeStickerSelectState_C_PopupWindow_OnDecision Parms{};
+
+	Parms.Button = Button;
+	Parms.PanelIndex = PanelIndex;
+	Parms.ButtonIndex = ButtonIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.RewardDialog_Purchase_OnResult
+// (Private, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EDialogResult                           Result                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_MachineCustomizeStickerSelectState_C::RewardDialog_Purchase_OnResult(EDialogResult Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "RewardDialog_Purchase_OnResult");
+
+	Params::BPC_MachineCustomizeStickerSelectState_C_RewardDialog_Purchase_OnResult Parms{};
+
+	Parms.Result = Result;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.RewardDialog_Unlock_OnResult
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EDialogResult                           Result                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_MachineCustomizeStickerSelectState_C::RewardDialog_Unlock_OnResult(EDialogResult Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "RewardDialog_Unlock_OnResult");
+
+	Params::BPC_MachineCustomizeStickerSelectState_C_RewardDialog_Unlock_OnResult Parms{};
+
+	Parms.Result = Result;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.RightShoulderEvent
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UUnionUIButtonBase*               Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// int32                                   PanelIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   ButtonIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_MachineCustomizeStickerSelectState_C::RightShoulderEvent(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "RightShoulderEvent");
+
+	Params::BPC_MachineCustomizeStickerSelectState_C_RightShoulderEvent Parms{};
+
+	Parms.Button = Button;
+	Parms.PanelIndex = PanelIndex;
+	Parms.ButtonIndex = ButtonIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.SelectExtraSticker
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AUnionStickerBase*                InStickerBase                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32                                   InStickerId                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsRear                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UTexture*                         StickerTexture                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_MachineCustomizeStickerSelectState_C::SelectExtraSticker(class AUnionStickerBase* InStickerBase, int32 InStickerId, bool bIsRear, class UTexture* StickerTexture)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "SelectExtraSticker");
+
+	Params::BPC_MachineCustomizeStickerSelectState_C_SelectExtraSticker Parms{};
+
+	Parms.InStickerBase = InStickerBase;
+	Parms.InStickerId = InStickerId;
+	Parms.bIsRear = bIsRear;
+	Parms.StickerTexture = StickerTexture;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.SetActiveAuraEffect
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    IsActive_0                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_MachineCustomizeStickerSelectState_C::SetActiveAuraEffect(bool IsActive_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "SetActiveAuraEffect");
+
+	Params::BPC_MachineCustomizeStickerSelectState_C_SetActiveAuraEffect Parms{};
+
+	Parms.IsActive_0 = IsActive_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.SetExtraSticker
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    IsExtra                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    IsRear                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EExtraStickerPattern                    Pattern                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   stickerId                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   StickerId                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_MachineCustomizeStickerSelectState_C::SetExtraSticker(bool IsExtra, bool IsRear, EExtraStickerPattern Pattern, int32 stickerId)
+void UBPC_MachineCustomizeStickerSelectState_C::SetExtraSticker(bool IsExtra, bool IsRear, EExtraStickerPattern Pattern, int32 StickerId)
 {
 	static class UFunction* Func = nullptr;
 
@@ -269,7 +381,69 @@ void UBPC_MachineCustomizeStickerSelectState_C::SetExtraSticker(bool IsExtra, bo
 	Parms.IsExtra = IsExtra;
 	Parms.IsRear = IsRear;
 	Parms.Pattern = Pattern;
-	Parms.stickerId = stickerId;
+	Parms.StickerId = StickerId;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.SetFrontMaterial
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UTexture*                         Texture                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_MachineCustomizeStickerSelectState_C::SetFrontMaterial(class UTexture* Texture)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "SetFrontMaterial");
+
+	Params::BPC_MachineCustomizeStickerSelectState_C_SetFrontMaterial Parms{};
+
+	Parms.Texture = Texture;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.SetRearMaterial
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UTexture*                         Texture                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_MachineCustomizeStickerSelectState_C::SetRearMaterial(class UTexture* Texture)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "SetRearMaterial");
+
+	Params::BPC_MachineCustomizeStickerSelectState_C_SetRearMaterial Parms{};
+
+	Parms.Texture = Texture;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.SetStickerColor
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    IsColorChangeable                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AUnionStickerBase*                Sticker                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_MachineCustomizeStickerSelectState_C::SetStickerColor(bool IsColorChangeable, class AUnionStickerBase* Sticker)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "SetStickerColor");
+
+	Params::BPC_MachineCustomizeStickerSelectState_C_SetStickerColor Parms{};
+
+	Parms.IsColorChangeable = IsColorChangeable;
+	Parms.Sticker = Sticker;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -297,15 +471,15 @@ void UBPC_MachineCustomizeStickerSelectState_C::SettingStickersScale(TArray<stru
 }
 
 
-// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.SetupRewardDialogUnlock
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.SetupFooter
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPC_MachineCustomizeStickerSelectState_C::SetupRewardDialogUnlock()
+void UBPC_MachineCustomizeStickerSelectState_C::SetupFooter()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "SetupRewardDialogUnlock");
+		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "SetupFooter");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -325,25 +499,17 @@ void UBPC_MachineCustomizeStickerSelectState_C::SetupRewardDialogPurchase()
 }
 
 
-// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.SetStickerColor
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    IsColorChangeable                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AUnionStickerBase*                Sticker                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.SetupRewardDialogUnlock
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UBPC_MachineCustomizeStickerSelectState_C::SetStickerColor(bool IsColorChangeable, class AUnionStickerBase* Sticker)
+void UBPC_MachineCustomizeStickerSelectState_C::SetupRewardDialogUnlock()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "SetStickerColor");
+		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "SetupRewardDialogUnlock");
 
-	Params::BPC_MachineCustomizeStickerSelectState_C_SetStickerColor Parms{};
-
-	Parms.IsColorChangeable = IsColorChangeable;
-	Parms.Sticker = Sticker;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -361,46 +527,6 @@ void UBPC_MachineCustomizeStickerSelectState_C::SetupStickerMasterSystem()
 }
 
 
-// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.SetRearMaterial
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UTexture*                         Texture                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_MachineCustomizeStickerSelectState_C::SetRearMaterial(class UTexture* Texture)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "SetRearMaterial");
-
-	Params::BPC_MachineCustomizeStickerSelectState_C_SetRearMaterial Parms{};
-
-	Parms.Texture = Texture;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.SetFrontMaterial
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UTexture*                         Texture                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_MachineCustomizeStickerSelectState_C::SetFrontMaterial(class UTexture* Texture)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "SetFrontMaterial");
-
-	Params::BPC_MachineCustomizeStickerSelectState_C_SetFrontMaterial Parms{};
-
-	Parms.Texture = Texture;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.SetupStickerSelect
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
@@ -415,135 +541,17 @@ void UBPC_MachineCustomizeStickerSelectState_C::SetupStickerSelect()
 }
 
 
-// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.OnInitState
-// (Event, Public, BlueprintEvent)
+// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.ShowPopupWindow
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UBPC_MachineCustomizeStickerSelectState_C::OnInitState()
+void UBPC_MachineCustomizeStickerSelectState_C::ShowPopupWindow()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "OnInitState");
+		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "ShowPopupWindow");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.StickerSelectPage_OnItemSelected
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FST_StickerPresetPageItemData&ItemData                                               (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-// int32                                   InPlayerIndex                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_MachineCustomizeStickerSelectState_C::StickerSelectPage_OnItemSelected(const struct FST_StickerPresetPageItemData& ItemData, int32 InPlayerIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "StickerSelectPage_OnItemSelected");
-
-	Params::BPC_MachineCustomizeStickerSelectState_C_StickerSelectPage_OnItemSelected Parms{};
-
-	Parms.ItemData = std::move(ItemData);
-	Parms.InPlayerIndex = InPlayerIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.OnFocusedEvent
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FST_StickerPresetPageItemData&ItemData                                               (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-// int32                                   InPlayerIndex                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   ButtonIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_MachineCustomizeStickerSelectState_C::OnFocusedEvent(const struct FST_StickerPresetPageItemData& ItemData, int32 InPlayerIndex, int32 ButtonIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "OnFocusedEvent");
-
-	Params::BPC_MachineCustomizeStickerSelectState_C_OnFocusedEvent Parms{};
-
-	Parms.ItemData = std::move(ItemData);
-	Parms.InPlayerIndex = InPlayerIndex;
-	Parms.ButtonIndex = ButtonIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.OnExitState
-// (Event, Public, BlueprintEvent)
-
-void UBPC_MachineCustomizeStickerSelectState_C::OnExitState()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "OnExitState");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.RewardDialog_Unlock_OnResult
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EDialogResult                           Result                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_MachineCustomizeStickerSelectState_C::RewardDialog_Unlock_OnResult(EDialogResult Result)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "RewardDialog_Unlock_OnResult");
-
-	Params::BPC_MachineCustomizeStickerSelectState_C_RewardDialog_Unlock_OnResult Parms{};
-
-	Parms.Result = Result;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.StickerSelectPage_OnPurchaseAnimFinished
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_MachineCustomizeStickerSelectState_C::StickerSelectPage_OnPurchaseAnimFinished()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "StickerSelectPage_OnPurchaseAnimFinished");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.PopupWindow_OnDecision
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UUnionUIButtonBase*               Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// int32                                   PanelIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   ButtonIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_MachineCustomizeStickerSelectState_C::PopupWindow_OnDecision(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "PopupWindow_OnDecision");
-
-	Params::BPC_MachineCustomizeStickerSelectState_C_PopupWindow_OnDecision Parms{};
-
-	Parms.Button = Button;
-	Parms.PanelIndex = PanelIndex;
-	Parms.ButtonIndex = ButtonIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -575,91 +583,109 @@ void UBPC_MachineCustomizeStickerSelectState_C::StartOpenTipsWindow()
 }
 
 
-// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.LeftShoulderEvent
+// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.StickerSelectPage_OnCancel
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InPlayerIndex                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_MachineCustomizeStickerSelectState_C::StickerSelectPage_OnCancel(int32 InPlayerIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "StickerSelectPage_OnCancel");
+
+	Params::BPC_MachineCustomizeStickerSelectState_C_StickerSelectPage_OnCancel Parms{};
+
+	Parms.InPlayerIndex = InPlayerIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.StickerSelectPage_OnItemSelected
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UUnionUIButtonBase*               Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// int32                                   PanelIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   ButtonIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FST_StickerPresetPageItemData&ItemData                                               (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// int32                                   InPlayerIndex                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_MachineCustomizeStickerSelectState_C::LeftShoulderEvent(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
+void UBPC_MachineCustomizeStickerSelectState_C::StickerSelectPage_OnItemSelected(const struct FST_StickerPresetPageItemData& ItemData, int32 InPlayerIndex)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "LeftShoulderEvent");
+		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "StickerSelectPage_OnItemSelected");
 
-	Params::BPC_MachineCustomizeStickerSelectState_C_LeftShoulderEvent Parms{};
+	Params::BPC_MachineCustomizeStickerSelectState_C_StickerSelectPage_OnItemSelected Parms{};
 
-	Parms.Button = Button;
-	Parms.PanelIndex = PanelIndex;
-	Parms.ButtonIndex = ButtonIndex;
+	Parms.ItemData = std::move(ItemData);
+	Parms.InPlayerIndex = InPlayerIndex;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.RightShoulderEvent
+// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.StickerSelectPage_OnPurchaseAnimFinished
 // (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UUnionUIButtonBase*               Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// int32                                   PanelIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   ButtonIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_MachineCustomizeStickerSelectState_C::RightShoulderEvent(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
+void UBPC_MachineCustomizeStickerSelectState_C::StickerSelectPage_OnPurchaseAnimFinished()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "RightShoulderEvent");
+		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "StickerSelectPage_OnPurchaseAnimFinished");
 
-	Params::BPC_MachineCustomizeStickerSelectState_C_RightShoulderEvent Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.Button = Button;
-	Parms.PanelIndex = PanelIndex;
-	Parms.ButtonIndex = ButtonIndex;
+
+// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.TipsWindow_CloseTipsWindow
+// (Private, BlueprintCallable, BlueprintEvent)
+
+void UBPC_MachineCustomizeStickerSelectState_C::TipsWindow_CloseTipsWindow()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "TipsWindow_CloseTipsWindow");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.TurnStickerFrameVisible
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AUnionStickerBase*                Sticker                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsVisible                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_MachineCustomizeStickerSelectState_C::TurnStickerFrameVisible(class AUnionStickerBase* Sticker, bool IsVisible)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "TurnStickerFrameVisible");
+
+	Params::BPC_MachineCustomizeStickerSelectState_C_TurnStickerFrameVisible Parms{};
+
+	Parms.Sticker = Sticker;
+	Parms.IsVisible = IsVisible;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.SetActiveAuraEffect
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    IsActive_0                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.Unbind
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPC_MachineCustomizeStickerSelectState_C::SetActiveAuraEffect(bool IsActive_0)
+void UBPC_MachineCustomizeStickerSelectState_C::Unbind()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "SetActiveAuraEffect");
+		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "Unbind");
 
-	Params::BPC_MachineCustomizeStickerSelectState_C_SetActiveAuraEffect Parms{};
-
-	Parms.IsActive_0 = IsActive_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C.ExecuteUbergraph_BPC_MachineCustomizeStickerSelectState
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_MachineCustomizeStickerSelectState_C::ExecuteUbergraph_BPC_MachineCustomizeStickerSelectState(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerSelectState_C", "ExecuteUbergraph_BPC_MachineCustomizeStickerSelectState");
-
-	Params::BPC_MachineCustomizeStickerSelectState_C_ExecuteUbergraph_BPC_MachineCustomizeStickerSelectState Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

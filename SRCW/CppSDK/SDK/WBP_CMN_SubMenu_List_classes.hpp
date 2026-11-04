@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_CMN_SubMenu_List.WBP_CMN_SubMenu_List_C
-// 0x0048 (0x0338 - 0x02F0)
+// 0x0050 (0x0340 - 0x02F0)
 class UWBP_CMN_SubMenu_List_C final : public UCommonMenuSubMenuList
 {
 public:
@@ -26,10 +26,11 @@ public:
 	class UVerticalBox*                           VerticalBox_BtnPlay;                               // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_CMN_SubMenu_MenuBtn_C*             WBP_CMN_SubMenu_MenuBtn_CharaMachine;              // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_CMN_SubMenu_MenuBtn_C*             WBP_CMN_SubMenu_MenuBtn_Etcetera;                  // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_CMN_SubMenu_MenuBtn_C*             WBP_CMN_SubMenu_MenuBtn_FriendList;                // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_CMN_SubMenu_MenuBtn_C*             WBP_CMN_SubMenu_MenuBtn_Gadget;                    // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_CMN_SubMenu_MenuBtn_C*             WBP_CMN_SubMenu_MenuBtn_Garage;                    // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TArray<class UCommonMenuSubMenuButton*>       Buttons;                                           // 0x0328(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	class UWBP_CMN_SubMenu_MenuBtn_C*             WBP_CMN_SubMenu_MenuBtn_Exchange;                  // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_CMN_SubMenu_MenuBtn_C*             WBP_CMN_SubMenu_MenuBtn_FriendList;                // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_CMN_SubMenu_MenuBtn_C*             WBP_CMN_SubMenu_MenuBtn_Gadget;                    // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_CMN_SubMenu_MenuBtn_C*             WBP_CMN_SubMenu_MenuBtn_Garage;                    // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TArray<class UCommonMenuSubMenuButton*>       Buttons;                                           // 0x0330(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 
 public:
 	void Construct();

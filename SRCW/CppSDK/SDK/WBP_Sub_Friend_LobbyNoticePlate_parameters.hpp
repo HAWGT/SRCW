@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "SlateCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "UnionSystem_structs.hpp"
 #include "UMG_structs.hpp"
@@ -67,6 +68,15 @@ public:
 	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast; // 0x00DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_Sub_Friend_LobbyNoticePlate_C_ExecuteUbergraph_WBP_Sub_Friend_LobbyNoticePlate;
+
+// Function WBP_Sub_Friend_LobbyNoticePlate.WBP_Sub_Friend_LobbyNoticePlate_C.Get_LobbyNoticeBase_Brush
+// 0x00D0 (0x00D0 - 0x0000)
+struct WBP_Sub_Friend_LobbyNoticePlate_C_Get_LobbyNoticeBase_Brush final
+{
+public:
+	struct FSlateBrush                            ReturnValue;                                       // 0x0000(0x00D0)(Parm, OutParm, ReturnParm)
+};
+DUMPER7_ASSERTS_WBP_Sub_Friend_LobbyNoticePlate_C_Get_LobbyNoticeBase_Brush;
 
 // Function WBP_Sub_Friend_LobbyNoticePlate.WBP_Sub_Friend_LobbyNoticePlate_C.SetControlGaugeValue
 // 0x0008 (0x0008 - 0x0000)

@@ -17,6 +17,20 @@
 namespace SDK
 {
 
+// Function WBP_DLCInfo.WBP_DLCInfo_C.ReleaseResource
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_DLCInfo_C::ReleaseResource()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_DLCInfo_C", "ReleaseResource");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_DLCInfo.WBP_DLCInfo_C.SetSchedule
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:

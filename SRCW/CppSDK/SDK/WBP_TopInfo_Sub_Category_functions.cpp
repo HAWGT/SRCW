@@ -65,6 +65,20 @@ void UWBP_TopInfo_Sub_Category_C::OnInitialized()
 }
 
 
+// Function WBP_TopInfo_Sub_Category.WBP_TopInfo_Sub_Category_C.ReleaseResource
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_TopInfo_Sub_Category_C::ReleaseResource()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_TopInfo_Sub_Category_C", "ReleaseResource");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_TopInfo_Sub_Category.WBP_TopInfo_Sub_Category_C.SetSwitcherIndex
 // (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -92,8 +106,9 @@ void UWBP_TopInfo_Sub_Category_C::SetSwitcherIndex(int32 Index_0)
 // TArray<int32>&                          DisableGadgetIdRankMatch                               (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // TArray<int32>&                          DisableGadgetIdFesta                                   (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // TArray<int32>&                          DisableGadgetIdLegendCompe                             (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<int32>&                          DisableGadgetIdDuelCompe                               (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UWBP_TopInfo_Sub_Category_C::Setup_Gudget_Info(int32 DetailTextIndex, TArray<int32>& DisableGadgetIdRankMatch, TArray<int32>& DisableGadgetIdFesta, TArray<int32>& DisableGadgetIdLegendCompe)
+void UWBP_TopInfo_Sub_Category_C::Setup_Gudget_Info(int32 DetailTextIndex, TArray<int32>& DisableGadgetIdRankMatch, TArray<int32>& DisableGadgetIdFesta, TArray<int32>& DisableGadgetIdLegendCompe, TArray<int32>& DisableGadgetIdDuelCompe)
 {
 	static class UFunction* Func = nullptr;
 
@@ -106,12 +121,14 @@ void UWBP_TopInfo_Sub_Category_C::Setup_Gudget_Info(int32 DetailTextIndex, TArra
 	Parms.DisableGadgetIdRankMatch = std::move(DisableGadgetIdRankMatch);
 	Parms.DisableGadgetIdFesta = std::move(DisableGadgetIdFesta);
 	Parms.DisableGadgetIdLegendCompe = std::move(DisableGadgetIdLegendCompe);
+	Parms.DisableGadgetIdDuelCompe = std::move(DisableGadgetIdDuelCompe);
 
 	UObject::ProcessEvent(Func, &Parms);
 
 	DisableGadgetIdRankMatch = std::move(Parms.DisableGadgetIdRankMatch);
 	DisableGadgetIdFesta = std::move(Parms.DisableGadgetIdFesta);
 	DisableGadgetIdLegendCompe = std::move(Parms.DisableGadgetIdLegendCompe);
+	DisableGadgetIdDuelCompe = std::move(Parms.DisableGadgetIdDuelCompe);
 }
 
 
@@ -136,30 +153,6 @@ void UWBP_TopInfo_Sub_Category_C::SetupDLCInfo(const class FText& Title, const c
 	Parms.Schedule = std::move(Schedule);
 	Parms.Texture = Texture;
 	Parms.IsButtonEnable = IsButtonEnable;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_TopInfo_Sub_Category.WBP_TopInfo_Sub_Category_C.SetupFestaInfo
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FText&                      Title                                                  (BlueprintVisible, BlueprintReadOnly, Parm)
-// const class FText&                      Schedule                                               (BlueprintVisible, BlueprintReadOnly, Parm)
-// class UTexture2D*                       Texture                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_TopInfo_Sub_Category_C::SetupFestaInfo(const class FText& Title, const class FText& Schedule, class UTexture2D* Texture)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_Sub_Category_C", "SetupFestaInfo");
-
-	Params::WBP_TopInfo_Sub_Category_C_SetupFestaInfo Parms{};
-
-	Parms.Title = std::move(Title);
-	Parms.Schedule = std::move(Schedule);
-	Parms.Texture = Texture;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

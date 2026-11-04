@@ -10,19 +10,19 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BPC_OnlineRewardRestoration.BPC_OnlineRewardRestoration_C
-// 0x0008 (0x01B0 - 0x01A8)
+// 0x0008 (0x01B8 - 0x01B0)
 class UBPC_OnlineRewardRestoration_C final : public UOnlineRewardRestorationState
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x01A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x01B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_BPC_OnlineRewardRestoration(int32 EntryPoint);

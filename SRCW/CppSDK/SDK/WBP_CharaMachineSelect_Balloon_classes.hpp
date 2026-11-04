@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_CharaMachineSelect_Balloon.WBP_CharaMachineSelect_Balloon_C
-// 0x0000 (0x0328 - 0x0328)
+// 0x0000 (0x0340 - 0x0340)
 class UWBP_CharaMachineSelect_Balloon_C final : public UStoreBalloon
 {
 public:
