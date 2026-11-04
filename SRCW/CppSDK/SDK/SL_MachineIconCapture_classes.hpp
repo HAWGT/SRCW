@@ -12,8 +12,9 @@
 
 #include "UnionRun_structs.hpp"
 #include "UnionSystem_structs.hpp"
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_structs.hpp"
+#include "UNION_classes.hpp"
 
 
 namespace SDK
@@ -27,8 +28,8 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UTextureRenderTarget2D*                 RenderTextureColor;                                // 0x02B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class UTextureRenderTarget2D*                 RenderTextureAlpha;                                // 0x02B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class ABP_MenuRacerPreview_C*                 BP_MenuRacerPreview_C_1_ExecuteUbergraph_SL_MachineIconCapture_RefProperty; // 0x02C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ASceneCapture2D*                        SceneCapture2D_1_ExecuteUbergraph_SL_MachineIconCapture_RefProperty; // 0x02C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ASceneCapture2D*                        SceneCapture2D_1_ExecuteUbergraph_SL_MachineIconCapture_RefProperty; // 0x02C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ABP_MenuRacerPreview_C*                 BP_MenuRacerPreview_C_1_ExecuteUbergraph_SL_MachineIconCapture_RefProperty; // 0x02C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Capture(EMachineId InMachineID, int32 InSizeX, int32 InSizeY, const class UDataTable* InCaptureDataTable);

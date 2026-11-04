@@ -34,6 +34,7 @@ namespace Reflect
     bool CallStaticUInt8(const char* className, const char* funcName, uint8_t value);
     bool CallStaticFloat(const char* className, const char* funcName, float value);
     bool CallStaticUInt8Bool(const char* className, const char* funcName, uint8_t p1, bool p2);
+    bool CallStaticUInt8UInt8(const char* className, const char* funcName, uint8_t p1, uint8_t p2);
     bool CallStaticInt32Bool(const char* className, const char* funcName, int32_t p1, bool p2);
     bool CallStaticRaw(const char* className, const char* funcName, void* params, int32_t paramsSize);
 

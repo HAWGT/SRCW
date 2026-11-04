@@ -36,24 +36,6 @@ enum class ESCCModification : uint32
 	ESCCModification_MAX                     = 4,
 };
 
-// ScriptStruct TypedElementFramework.TypedElementWidgetConstructor
-// 0x0028 (0x0028 - 0x0000)
-struct alignas(0x08) FTypedElementWidgetConstructor final
-{
-public:
-	uint8                                         Pad_0[0x28];                                       // 0x0000(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FTypedElementWidgetConstructor;
-
-// ScriptStruct TypedElementFramework.SCCRevisionId
-// 0x0014 (0x0014 - 0x0000)
-struct FSCCRevisionId final
-{
-public:
-	uint32                                        ID[0x5];                                           // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FSCCRevisionId;
-
 // ScriptStruct TypedElementFramework.TypedElementDataStorageColumn
 // 0x0000 (0x0000 - 0x0000)
 #pragma pack(push, 0x1)
@@ -63,14 +45,14 @@ struct alignas(0x01) FTypedElementDataStorageColumn
 #pragma pack(pop)
 DUMPER7_ASSERTS_FTypedElementDataStorageColumn;
 
-// ScriptStruct TypedElementFramework.SCCExternalRevisionIdColumn
-// 0x0014 (0x0014 - 0x0000)
-struct FSCCExternalRevisionIdColumn final : public FTypedElementDataStorageColumn
+// ScriptStruct TypedElementFramework.ObjectOverrideColumn
+// 0x0001 (0x0001 - 0x0000)
+struct FObjectOverrideColumn final : public FTypedElementDataStorageColumn
 {
 public:
-	struct FSCCRevisionId                         RevisionId;                                        // 0x0000(0x0014)(NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FSCCExternalRevisionIdColumn;
+DUMPER7_ASSERTS_FObjectOverrideColumn;
 
 // ScriptStruct TypedElementFramework.ScriptTypedElementHandle
 // 0x0008 (0x0008 - 0x0000)
@@ -128,6 +110,15 @@ public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FTypedElementDataStorageTag;
+
+// ScriptStruct TypedElementFramework.TypedElementWidgetConstructor
+// 0x0028 (0x0028 - 0x0000)
+struct alignas(0x08) FTypedElementWidgetConstructor final
+{
+public:
+	uint8                                         Pad_0[0x28];                                       // 0x0000(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FTypedElementWidgetConstructor;
 
 // ScriptStruct TypedElementFramework.TypedElementParentColumn
 // 0x0008 (0x0008 - 0x0000)
@@ -203,15 +194,6 @@ public:
 	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FTypedElementRowReferenceColumn;
-
-// ScriptStruct TypedElementFramework.ObjectOverrideColumn
-// 0x0001 (0x0001 - 0x0000)
-struct FObjectOverrideColumn final : public FTypedElementDataStorageColumn
-{
-public:
-	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FObjectOverrideColumn;
 
 // ScriptStruct TypedElementFramework.TypedElementPackageUnresolvedReference
 // 0x0018 (0x0018 - 0x0000)
@@ -302,6 +284,15 @@ public:
 };
 DUMPER7_ASSERTS_FSCCStatusColumn;
 
+// ScriptStruct TypedElementFramework.SCCRevisionId
+// 0x0014 (0x0014 - 0x0000)
+struct FSCCRevisionId final
+{
+public:
+	uint32                                        ID[0x5];                                           // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FSCCRevisionId;
+
 // ScriptStruct TypedElementFramework.SCCRevisionIdColumn
 // 0x0014 (0x0014 - 0x0000)
 struct FSCCRevisionIdColumn final : public FTypedElementDataStorageColumn
@@ -310,6 +301,15 @@ public:
 	struct FSCCRevisionId                         RevisionId;                                        // 0x0000(0x0014)(NoDestructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FSCCRevisionIdColumn;
+
+// ScriptStruct TypedElementFramework.SCCExternalRevisionIdColumn
+// 0x0014 (0x0014 - 0x0000)
+struct FSCCExternalRevisionIdColumn final : public FTypedElementDataStorageColumn
+{
+public:
+	struct FSCCRevisionId                         RevisionId;                                        // 0x0000(0x0014)(NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FSCCExternalRevisionIdColumn;
 
 // ScriptStruct TypedElementFramework.SCCUserInfo
 // 0x0010 (0x0010 - 0x0000)

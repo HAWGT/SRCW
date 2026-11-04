@@ -237,6 +237,16 @@ enum class EListItemAlignment : uint8
 	EListItemAlignment_MAX                   = 7,
 };
 
+// ScriptStruct Slate.CharRange
+// 0x0004 (0x0004 - 0x0000)
+struct FCharRange final
+{
+public:
+	uint16                                        First;                                             // 0x0000(0x0002)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint16                                        Last;                                              // 0x0002(0x0002)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FCharRange;
+
 // ScriptStruct Slate.VirtualKeyboardOptions
 // 0x0001 (0x0001 - 0x0000)
 struct FVirtualKeyboardOptions final
@@ -245,15 +255,6 @@ public:
 	bool                                          bEnableAutocorrect;                                // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FVirtualKeyboardOptions;
-
-// ScriptStruct Slate.CustomizedToolMenuSection
-// 0x0004 (0x0004 - 0x0000)
-struct FCustomizedToolMenuSection final
-{
-public:
-	ECustomizedToolMenuVisibility                 Visibility;                                        // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FCustomizedToolMenuSection;
 
 // ScriptStruct Slate.InputChord
 // 0x0020 (0x0020 - 0x0000)
@@ -269,14 +270,14 @@ public:
 };
 DUMPER7_ASSERTS_FInputChord;
 
-// ScriptStruct Slate.CustomizedToolMenuNameArray
-// 0x0010 (0x0010 - 0x0000)
-struct FCustomizedToolMenuNameArray final
+// ScriptStruct Slate.CustomizedToolMenuEntry
+// 0x0004 (0x0004 - 0x0000)
+struct FCustomizedToolMenuEntry final
 {
 public:
-	TArray<class FName>                           Names;                                             // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	ECustomizedToolMenuVisibility                 Visibility;                                        // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCustomizedToolMenuNameArray;
+DUMPER7_ASSERTS_FCustomizedToolMenuEntry;
 
 // ScriptStruct Slate.Anchors
 // 0x0020 (0x0020 - 0x0000)
@@ -288,16 +289,6 @@ public:
 };
 DUMPER7_ASSERTS_FAnchors;
 
-// ScriptStruct Slate.CharRange
-// 0x0004 (0x0004 - 0x0000)
-struct FCharRange final
-{
-public:
-	uint16                                        First;                                             // 0x0000(0x0002)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint16                                        Last;                                              // 0x0002(0x0002)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FCharRange;
-
 // ScriptStruct Slate.CharRangeList
 // 0x0010 (0x0010 - 0x0000)
 struct FCharRangeList final
@@ -307,14 +298,23 @@ public:
 };
 DUMPER7_ASSERTS_FCharRangeList;
 
-// ScriptStruct Slate.CustomizedToolMenuEntry
+// ScriptStruct Slate.CustomizedToolMenuSection
 // 0x0004 (0x0004 - 0x0000)
-struct FCustomizedToolMenuEntry final
+struct FCustomizedToolMenuSection final
 {
 public:
 	ECustomizedToolMenuVisibility                 Visibility;                                        // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCustomizedToolMenuEntry;
+DUMPER7_ASSERTS_FCustomizedToolMenuSection;
+
+// ScriptStruct Slate.CustomizedToolMenuNameArray
+// 0x0010 (0x0010 - 0x0000)
+struct FCustomizedToolMenuNameArray final
+{
+public:
+	TArray<class FName>                           Names;                                             // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FCustomizedToolMenuNameArray;
 
 // ScriptStruct Slate.ToolMenuProfile
 // 0x01A0 (0x01A0 - 0x0000)

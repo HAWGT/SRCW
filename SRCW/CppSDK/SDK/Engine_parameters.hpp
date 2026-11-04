@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Chaos_structs.hpp"
 #include "ImageCore_structs.hpp"
 #include "FieldNotification_structs.hpp"
 #include "InputCore_structs.hpp"
@@ -18,6 +17,7 @@
 #include "TypedElementFramework_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "PhysicsCore_structs.hpp"
+#include "Chaos_structs.hpp"
 #include "UniversalObjectLocator_structs.hpp"
 #include "AudioExtensions_structs.hpp"
 #include "NetCore_structs.hpp"
@@ -17637,9 +17637,9 @@ public:
 };
 DUMPER7_ASSERTS_KismetMathLibrary_RGBLinearToHSV;
 
-// Function Engine.KismetMathLibrary.RGBtoHSV
+// Function Engine.KismetMathLibrary.RGBToHSV
 // 0x0020 (0x0020 - 0x0000)
-struct KismetMathLibrary_RGBtoHSV final
+struct KismetMathLibrary_RGBToHSV final
 {
 public:
 	struct FLinearColor                           InColor;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -17648,7 +17648,7 @@ public:
 	float                                         V;                                                 // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         A;                                                 // 0x001C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_KismetMathLibrary_RGBtoHSV;
+DUMPER7_ASSERTS_KismetMathLibrary_RGBToHSV;
 
 // Function Engine.KismetMathLibrary.RGBToHSV_Vector
 // 0x0020 (0x0020 - 0x0000)

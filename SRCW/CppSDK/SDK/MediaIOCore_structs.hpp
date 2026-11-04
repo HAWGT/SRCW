@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "OpenColorIO_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "OpenColorIO_structs.hpp"
 
 
 namespace SDK
@@ -208,29 +208,6 @@ enum class EMediaCaptureSourceType : uint8
 	EMediaCaptureSourceType_MAX              = 3,
 };
 
-// ScriptStruct MediaIOCore.MediaIODevice
-// 0x000C (0x000C - 0x0000)
-struct FMediaIODevice final
-{
-public:
-	class FName                                   DeviceName;                                        // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         DeviceIdentifier;                                  // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FMediaIODevice;
-
-// ScriptStruct MediaIOCore.MediaIOConnection
-// 0x0020 (0x0020 - 0x0000)
-struct FMediaIOConnection final
-{
-public:
-	struct FMediaIODevice                         Device;                                            // 0x0000(0x000C)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	class FName                                   protocol;                                          // 0x000C(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EMediaIOTransportType                         TransportType;                                     // 0x0014(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EMediaIOQuadLinkTransportType                 QuadTransportType;                                 // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         PortIdentifier;                                    // 0x001C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FMediaIOConnection;
-
 // ScriptStruct MediaIOCore.MediaCaptureOptions
 // 0x00B8 (0x00B8 - 0x0000)
 struct FMediaCaptureOptions final
@@ -265,6 +242,29 @@ public:
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FMediaIOAutoDetectableTimecodeFormat_Backup;
+
+// ScriptStruct MediaIOCore.MediaIODevice
+// 0x000C (0x000C - 0x0000)
+struct FMediaIODevice final
+{
+public:
+	class FName                                   DeviceName;                                        // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         DeviceIdentifier;                                  // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FMediaIODevice;
+
+// ScriptStruct MediaIOCore.MediaIOConnection
+// 0x0020 (0x0020 - 0x0000)
+struct FMediaIOConnection final
+{
+public:
+	struct FMediaIODevice                         Device;                                            // 0x0000(0x000C)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	class FName                                   protocol;                                          // 0x000C(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMediaIOTransportType                         TransportType;                                     // 0x0014(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMediaIOQuadLinkTransportType                 QuadTransportType;                                 // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         PortIdentifier;                                    // 0x001C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FMediaIOConnection;
 
 // ScriptStruct MediaIOCore.MediaIOMode
 // 0x0018 (0x0018 - 0x0000)

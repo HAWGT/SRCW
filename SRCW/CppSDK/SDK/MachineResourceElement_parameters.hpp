@@ -10,17 +10,17 @@
 
 #include "Basic.hpp"
 
-#include "UNION_structs.hpp"
 #include "UnionSystem_structs.hpp"
 #include "UnionRun_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "UNION_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function MachineResourceElement.MachineResourceElement_C.ExecuteUbergraph_MachineResourceElement
-// 0x07D8 (0x07D8 - 0x0000)
+// 0x0808 (0x0808 - 0x0000)
 struct MachineResourceElement_C_ExecuteUbergraph_MachineResourceElement final
 {
 public:
@@ -51,34 +51,34 @@ public:
 	struct FSoftObjectPath                        CallFunc_GetSidePartsPathByMachineId_OutPath;      // 0x0148(0x0020)(ZeroConstructor, HasGetValueTypeHash)
 	class FName                                   CallFunc_GetEnumeratorName_ReturnValue_2;          // 0x0168(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMasterDataManageSubsystem*             CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0170(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FMachinePartsData                      CallFunc_GetDataTableRowFromName_OutRow;           // 0x0178(0x01F8)()
-	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0370(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_371[0x3];                                      // 0x0371(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(class UObject* Loaded)>        K2Node_CreateDelegate_OutputDelegate_1;            // 0x0374(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_384[0x4];                                      // 0x0384(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMachinePartsData                      CallFunc_GetDataTableRowFromName_OutRow_1;         // 0x0388(0x01F8)()
-	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue_1;    // 0x0580(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_581[0x7];                                      // 0x0581(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMachinePartsData                      CallFunc_GetDataTableRowFromName_OutRow_2;         // 0x0588(0x01F8)()
-	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue_2;    // 0x0780(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsLoading_ReturnValue_1;                  // 0x0781(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsHoverboardMachineId_ReturnValue;        // 0x0782(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_783[0x5];                                      // 0x0783(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                Temp_object_Variable_3;                            // 0x0788(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UMachinePartsDataAsset*                 K2Node_DynamicCast_AsMachine_Parts_Data_Asset_1;   // 0x0790(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0798(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_799[0x3];                                      // 0x0799(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(class UObject* Loaded)>        K2Node_CreateDelegate_OutputDelegate_2;            // 0x079C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsLoading_ReturnValue_2;                  // 0x07AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsLoading_ReturnValue_3;                  // 0x07AD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7AE[0x2];                                      // 0x07AE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         K2Node_CustomEvent_PlayerNo;                       // 0x07B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ECarStatusType                                K2Node_CustomEvent_CarStatusType;                  // 0x07B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EMachineId                                    K2Node_CustomEvent_MachineID;                      // 0x07B5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7B6[0x2];                                      // 0x07B6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                K2Node_CustomEvent_Loaded_3;                       // 0x07B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class UObject* Loaded)>        K2Node_CreateDelegate_OutputDelegate_3;            // 0x07C0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsHoverboardMachineId_ReturnValue_1;      // 0x07D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FMachinePartsData                      CallFunc_GetDataTableRowFromName_OutRow;           // 0x0178(0x0208)()
+	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0380(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_381[0x3];                                      // 0x0381(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(class UObject* Loaded)>        K2Node_CreateDelegate_OutputDelegate_1;            // 0x0384(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_394[0x4];                                      // 0x0394(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMachinePartsData                      CallFunc_GetDataTableRowFromName_OutRow_1;         // 0x0398(0x0208)()
+	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue_1;    // 0x05A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5A1[0x7];                                      // 0x05A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMachinePartsData                      CallFunc_GetDataTableRowFromName_OutRow_2;         // 0x05A8(0x0208)()
+	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue_2;    // 0x07B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsLoading_ReturnValue_1;                  // 0x07B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsHoverboardMachineId_ReturnValue;        // 0x07B2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7B3[0x5];                                      // 0x07B3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                Temp_object_Variable_3;                            // 0x07B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UMachinePartsDataAsset*                 K2Node_DynamicCast_AsMachine_Parts_Data_Asset_1;   // 0x07C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x07C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7C9[0x3];                                      // 0x07C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(class UObject* Loaded)>        K2Node_CreateDelegate_OutputDelegate_2;            // 0x07CC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsLoading_ReturnValue_2;                  // 0x07DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsLoading_ReturnValue_3;                  // 0x07DD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7DE[0x2];                                      // 0x07DE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         K2Node_CustomEvent_PlayerNo;                       // 0x07E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ECarStatusType                                K2Node_CustomEvent_CarStatusType;                  // 0x07E4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EMachineId                                    K2Node_CustomEvent_MachineId;                      // 0x07E5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7E6[0x2];                                      // 0x07E6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                K2Node_CustomEvent_Loaded_3;                       // 0x07E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class UObject* Loaded)>        K2Node_CreateDelegate_OutputDelegate_3;            // 0x07F0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsHoverboardMachineId_ReturnValue_1;      // 0x0800(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_MachineResourceElement_C_ExecuteUbergraph_MachineResourceElement;
 

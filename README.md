@@ -1,43 +1,32 @@
 # 🔓 SonicUnlocker
 
-> Unlock everything. Instantly. Cleanly. Efficiently.
+> Unlocks everything in **Sonic Racing CrossWorlds** while removing red exclamation flags.
 
-A lightweight DLL-based unlocker for **Sonic Racing CrossWorlds** that removes progression restrictions, clears warning flags, and enables full access to in-game content.
-
----
-
-## ✨ Features
-
-- 🧩 **Full Unlock System**
-  - Unlock all characters, items, and content
-- 🚫 **Clear Red Exclamation Flags**
-  - Removes all “new/unread” indicators
-- ⚡ **Optimized Execution**
-  - Built-in timer system to reduce redundant unlock calls
-- 🧱 **Modular Design**
-  - Easily extend or modify functionality
-- 💉 **DLL Injection Ready**
-  - Simple drop-in usage, no complicated setup
+If you want to change which features will be unlocked, change the values of SRCWConfig in SRCW/Features.h before compiling it yourself. Then follow the steps in 'Usage' from 2.
+- True : unlocks the feature.
+- False : leaves it as it is.
 
 ---
 
-## 📦 Installation
+## ⚠️ Disclaimer
+
+- Do **not** use not owned (dlc for example) or unreleased characters/tracks/gadgets/titles/etc. in online or time attack mode, as it may result in restrictions or bans.
+- This project is intended for **educational and research purposes only**
+- Use at your own risk (strongly advised to make a backup of your save file before using)
+- Not affiliated with SEGA or Sonic Team
+
+---
+
+## 🌭🦔💨🌀 Usage
+
+0. *(optional)* Backup your game files (code folder + crashpad_db). Path : %APPDATA%\SEGA\SonicRacingCrossWorlds\steam
 
 1. Download the latest release from the **Releases** tab  
-2. Place `umpdc.dll` into: `SonicRacingCrossWorlds\UNION\Binaries\Win64`
+2. Place `umpdc.dll` into `SonicRacingCrossWorlds\UNION\Binaries\Win64`
 3. Launch the game  
-4. Done — everything should now be unlocked
+4. Wait 30 seconds just to make sure the program runs fully (there is 22 steps and 750ms delay between each step). Everything should now be unlocked.
 
----
-
-## 🚀 Usage
-
-No configuration required.
-
-The unlocker runs automatically or on hot key when the game loads and:
-- Applies all unlocks
-- Clears UI flags
-- Maintains performance via timed execution
+5. *(optional)* Then you can remove `umpdc.dll` from `SonicRacingCrossWorlds\UNION\Binaries\Win64`. Everything will still be unlocked, except DLC characters, tracks, etc. if you haven't [bought them](https://store.steampowered.com/dlc/2486820). 
 
 ---
 
@@ -49,20 +38,13 @@ The unlocker runs automatically or on hot key when the game loads and:
 
 git clone https://github.com/HAWGT/SRCW.git
 
+(or git clone https://github.com/GathoChocolat/SRCWUnlocker.git)
+
 3. Open the solution in Visual Studio  
-4. Build in **Release x64**  
+4. Build in **Release x64**
 5. Output DLL will be located in:
 
 /x64/Release/umpdc.dll
-
----
-
-## ⚠️ Disclaimer
-
-- This project is intended for **educational and research purposes only**
-- Use at your own risk
-- Not affiliated with SEGA or Sonic Team
-- Online use may result in restrictions or bans
 
 ---
 

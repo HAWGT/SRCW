@@ -268,7 +268,7 @@ DUMPER7_ASSERTS_USoundModulatorBase;
 
 // Class AudioExtensions.SoundfieldEndpointSettingsBase
 // 0x0000 (0x0028 - 0x0028)
-class USoundfieldEndpointSettingsBase final : public UObject
+class USoundfieldEndpointSettingsBase : public UObject
 {
 public:
 	static class UClass* StaticClass()
@@ -288,7 +288,7 @@ DUMPER7_ASSERTS_USoundfieldEndpointSettingsBase;
 
 // Class AudioExtensions.SoundfieldEncodingSettingsBase
 // 0x0000 (0x0028 - 0x0028)
-class USoundfieldEncodingSettingsBase final : public UObject
+class USoundfieldEncodingSettingsBase : public UObject
 {
 public:
 	static class UClass* StaticClass()

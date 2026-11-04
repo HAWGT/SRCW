@@ -9,262 +9,278 @@
 // FORWARD DECLARATIONS
 
 
-namespace ABP_Cubot { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Menu_ACL_BigCockpit { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_MenuDriver_Cream { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABPT_Menu_CockpitBase { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_HoldCyanLaser { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Jet_Driver { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_SummonRing { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Large_Driver { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Zavok_Physics { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_HoldSummonRing { struct FAnimBlueprintGeneratedConstantData; }
-
 namespace ABP_Silver_Driver { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_MenuDriver_Big { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_HoldDarkChao { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_POW_SmallCockpit { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_MenuDriver_Vector { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Charmy_Physics { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_MenuDriver_Large { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_HoldKingWhiteBoost { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Tails_Physics { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Blaze_Driver { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Menu_SPD_BigCockpit { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Rouge_Driver { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Zazz_Driver { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_MenuDriver_Espio { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Zazz_Physics { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_MenuDriver_Omega { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_SPD_BigCockpit { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Jet_Physics { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_HoldTripleKingWhiteBoost { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_HoldTripleRocketPunch { struct FAnimBlueprintGeneratedConstantData; }
 
 namespace ABP_MenuDriver_Shadow { struct FAnimBlueprintGeneratedConstantData; }
 
-namespace ABP_HoldVioletVoid { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_HoldWhiteBoost { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_MenuDriver_Storm { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_ItemOmochao { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Omega_Driver { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Blaze_Physics { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_SPD_SmallCockpit { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Cream_Driver { struct FAnimBlueprintGeneratedConstantData; }
-
 namespace ABP_MenuDriver_Normal { struct FAnimBlueprintGeneratedConstantData; }
 
-namespace ABP_Amy_Physics { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Eggpawn_Driver { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Display { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_HoldShield { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Sonic_Physics { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Omega_Physics { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Knuckles_Driver { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Eggpawn_Physics { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_MetalSonic_Physics { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Wave_Physics { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Orbot { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_HoldBlackBombLv1 { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_MenuDriver_Sage { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Espio_Physics { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_HND_BigCockpit { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_DialogueCharacter { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Wave_Driver { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Vector_Physics { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_HoldSlime { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Big_Driver { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_MenuDriver_Amy { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_HoldPackageRing { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Eggman_Physics { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_MenuDriver_Rouge { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_HND_SmallCockpit { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Menu_SPD_SmallCockpit { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Menu_ACL_SmallCockpit { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Rouge_Physics { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Shadow_Physics { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_MenuDriver_Jet { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Knuckles_Physics { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_MenuDriver_Zazz { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_MenuDriver_Knuckles { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_HoldDoubleHomingPunch { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_MenuDriver_Wave { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_MenuDriver_Silver { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_MenuDriver_Tails { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_HoldThornBall { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_MenuDriver_Eggpawn { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Cream_Physics { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Amy_Driver { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Shadow_Driver { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Tails_Driver { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_MenuDriver_Blaze { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Normal_Driver { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Storm_Physics { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Storm_Driver { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Vector_Driver { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Charmy_Driver { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_MenuDriver_Eggman { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Eggman_Driver { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Sage_Physics { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Sage_Driver { struct FAnimBlueprintGeneratedConstantData; }
+namespace ABP_HoldDarkChao { struct FAnimBlueprintGeneratedConstantData; }
 
 namespace ABP_Silver_Physics { struct FAnimBlueprintGeneratedConstantData; }
 
-namespace ABP_MenuDriver_MetalSonic { struct FAnimBlueprintGeneratedConstantData; }
+namespace ABP_MenuDriver_Large { struct FAnimBlueprintGeneratedConstantData; }
 
-namespace ABP_MetalSonic_Driver { struct FAnimBlueprintGeneratedConstantData; }
+namespace ABP_MenuDriver_Eggpawn { struct FAnimBlueprintGeneratedConstantData; }
 
-namespace ABP_MenuDriver_Charmy { struct FAnimBlueprintGeneratedConstantData; }
+namespace ABP_MenuDriver_Blaze { struct FAnimBlueprintGeneratedConstantData; }
 
-namespace ABP_Espio_Driver { struct FAnimBlueprintGeneratedConstantData; }
+namespace ABP_Zavok_Physics { struct FAnimBlueprintGeneratedConstantData; }
 
-namespace ABP_Big_Physics { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_ItemDarkChaoHero { struct FAnimBlueprintGeneratedConstantData; }
+namespace ABP_Wave_Physics { struct FAnimBlueprintGeneratedConstantData; }
 
 namespace ABP_HoldRocketPunch { struct FAnimBlueprintGeneratedConstantData; }
 
-namespace ABP_HoldMonsterTruck { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_HoldWeight { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_HoldDoubleRocketPunch { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_HoldOmochao { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_HoldTripleHomingPunch { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_HoldSlicer { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_HoldDoubleWhiteBoost { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_HoldWarpRing { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_HoldTripleWhiteBoost { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Menu_HND_SmallCockpit { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Menu_POW_SmallCockpit { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Menu_HND_BigCockpit { struct FAnimBlueprintGeneratedConstantData; }
-
 namespace ABP_HoldBlackBombLv3 { struct FAnimBlueprintGeneratedConstantData; }
 
-namespace ABP_HoldHomingPunch { struct FAnimBlueprintGeneratedConstantData; }
+namespace ABP_MetalSonic_Driver { struct FAnimBlueprintGeneratedConstantData; }
 
-namespace ABP_HoldSplash { struct FAnimBlueprintGeneratedConstantData; }
+namespace ABP_Large_Driver { struct FAnimBlueprintGeneratedConstantData; }
 
-namespace ABP_HoldMagnet { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_HoldBlackBombLv2 { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_HoldWispDrill { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_KingBoomBoo { struct FAnimBlueprintGeneratedConstantData; }
+namespace ABP_MenuDriver_Cream { struct FAnimBlueprintGeneratedConstantData; }
 
 namespace ABP_Menu_POW_BigCockpit { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_ACL_SmallCockpit { struct FAnimBlueprintGeneratedConstantData; }
 
 namespace ABP_SPD_SmallSimpleCockpit { struct FAnimBlueprintGeneratedConstantData; }
 
 namespace ABP_ACL_BigCockpit { struct FAnimBlueprintGeneratedConstantData; }
 
+namespace ABP_MenuDriver_Sage { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Knuckles_Physics { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_MenuDriver_Zazz { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Cream_Driver { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_ItemOmochao { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_HoldDoubleWhiteBoost { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Charmy_Physics { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Big_Physics { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_SummonRing { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_HoldSplash { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Amy_Physics { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_MenuDriver_Tails { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Storm_Physics { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_HoldTripleHomingPunch { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_HoldMonsterTruck { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Knuckles_Driver { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_HND_BigCockpit { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Storm_Driver { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_KingBoomBoo { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Menu_ACL_SmallCockpit { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Jet_Driver { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Blaze_Physics { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_HoldWispDrill { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Cream_Physics { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_MenuDriver_MetalSonic { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Vector_Driver { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_HoldCyanLaser { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_HoldWarpRing { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_MenuDriver_Jet { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_MenuDriver_Vector { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Omega_Physics { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_HoldPackageRing { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_MenuDriver_Big { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_HoldSummonRing { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Eggman_Physics { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Rouge_Physics { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_HoldTripleKingWhiteBoost { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_HoldBlackBombLv1 { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_HoldBlackBombLv2 { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Menu_ACL_BigCockpit { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Menu_HND_BigCockpit { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Omega_Driver { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_MenuDriver_Espio { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_HoldDoubleHomingPunch { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_MenuDriver_Omega { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_SPD_SmallCockpit { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_HND_SmallCockpit { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_HoldSlicer { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Wave_Driver { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_MenuDriver_Storm { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Sonic_Physics { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Vector_Physics { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_MenuDriver_Amy { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABPT_Menu_CockpitBase { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Menu_SPD_SmallCockpit { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_HoldShield { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Shadow_Physics { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Jet_Physics { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Tails_Physics { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Normal_Driver { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_MenuDriver_Wave { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_MenuDriver_Knuckles { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Shadow_Driver { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Eggpawn_Physics { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Tails_Driver { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Eggpawn_Driver { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_MenuDriver_Rouge { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Blaze_Driver { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Rouge_Driver { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Amy_Driver { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Zazz_Physics { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Zazz_Driver { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Sage_Physics { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_MetalSonic_Physics { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Espio_Physics { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Big_Driver { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Sage_Driver { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Eggman_Driver { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_HoldTripleRocketPunch { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_MenuDriver_Eggman { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Charmy_Driver { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_MenuDriver_Charmy { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace EMachineSelectMode { enum class EMachineSelectMode : uint8; }
+
+namespace ABP_MenuDriver_Silver { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Espio_Driver { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_ItemDarkChaoHero { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_HoldWeight { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_HoldOmochao { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_HoldDoubleRocketPunch { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_HoldTripleWhiteBoost { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_HoldWhiteBoost { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Menu_HND_SmallCockpit { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Menu_POW_SmallCockpit { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Menu_SPD_BigCockpit { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_HoldThornBall { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_HoldHomingPunch { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_HoldVioletVoid { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_HoldSlime { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_HoldMagnet { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_HoldKingWhiteBoost { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_ACL_SmallCockpit { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_POW_SmallCockpit { struct FAnimBlueprintGeneratedConstantData; }
+
 namespace ABP_POW_BigCockpit { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_SPD_BigCockpit { struct FAnimBlueprintGeneratedConstantData; }
 
 namespace ABP_HoldBodyCut { struct FAnimBlueprintGeneratedConstantData; }
 
 namespace UNION { enum class EMachineSelectMode : uint8; }
 
-namespace EMachineSelectMode { enum class EMachineSelectMode : uint8; }
 
+namespace ABPT_SimpleCockpitBase
+{
+	struct FAnimBlueprintGeneratedConstantData;
+	struct FAnimBlueprintGeneratedMutableData;
+}
+
+namespace ABP_ItemDarkChao
+{
+	struct FAnimBlueprintGeneratedMutableData;
+	struct FAnimBlueprintGeneratedConstantData;
+}
+
+namespace ABPT_HoldItem
+{
+	struct FAnimBlueprintGeneratedMutableData;
+	struct FAnimBlueprintGeneratedConstantData;
+}
+
+namespace ABP_MonsterTruck_BigCockpit
+{
+	struct FAnimBlueprintGeneratedMutableData;
+	struct FAnimBlueprintGeneratedConstantData;
+}
 
 namespace ABPT_Driver
 {
@@ -280,14 +296,8 @@ namespace ABP_MonsterTruck_SmallCockpit
 
 namespace ABP_ItemVioletVoid
 {
-	struct FAnimBlueprintGeneratedMutableData;
 	struct FAnimBlueprintGeneratedConstantData;
-}
-
-namespace ABP_ItemDarkChaoPerformance
-{
 	struct FAnimBlueprintGeneratedMutableData;
-	struct FAnimBlueprintGeneratedConstantData;
 }
 
 namespace ABPT_CockpitBase
@@ -298,29 +308,11 @@ namespace ABPT_CockpitBase
 
 namespace ABPT_MenuDriver
 {
-	struct FAnimBlueprintGeneratedMutableData;
-	struct FAnimBlueprintGeneratedConstantData;
-}
-
-namespace ABPT_HoldItem
-{
 	struct FAnimBlueprintGeneratedConstantData;
 	struct FAnimBlueprintGeneratedMutableData;
 }
 
-namespace ABP_MonsterTruck_BigCockpit
-{
-	struct FAnimBlueprintGeneratedConstantData;
-	struct FAnimBlueprintGeneratedMutableData;
-}
-
-namespace ABP_ItemDarkChao
-{
-	struct FAnimBlueprintGeneratedConstantData;
-	struct FAnimBlueprintGeneratedMutableData;
-}
-
-namespace ABPT_SimpleCockpitBase
+namespace ABP_ItemDarkChaoPerformance
 {
 	struct FAnimBlueprintGeneratedConstantData;
 	struct FAnimBlueprintGeneratedMutableData;

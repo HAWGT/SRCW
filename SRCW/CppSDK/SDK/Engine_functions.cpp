@@ -48434,7 +48434,7 @@ struct FLinearColor UKismetMathLibrary::RGBLinearToHSV(const struct FLinearColor
 }
 
 
-// Function Engine.KismetMathLibrary.RGBtoHSV
+// Function Engine.KismetMathLibrary.RGBToHSV
 // (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // const struct FLinearColor&              InColor                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -48443,14 +48443,14 @@ struct FLinearColor UKismetMathLibrary::RGBLinearToHSV(const struct FLinearColor
 // float*                                  V                                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float*                                  A                                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UKismetMathLibrary::RGBtoHSV(const struct FLinearColor& InColor, float* H, float* S, float* V, float* A)
+void UKismetMathLibrary::RGBToHSV(const struct FLinearColor& InColor, float* H, float* S, float* V, float* A)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("KismetMathLibrary", "RGBtoHSV");
+		Func = StaticClass()->GetFunction("KismetMathLibrary", "RGBToHSV");
 
-	Params::KismetMathLibrary_RGBtoHSV Parms{};
+	Params::KismetMathLibrary_RGBToHSV Parms{};
 
 	Parms.InColor = std::move(InColor);
 

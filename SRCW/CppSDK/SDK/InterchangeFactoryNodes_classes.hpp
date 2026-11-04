@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "InterchangeCore_classes.hpp"
 #include "CinematicCamera_structs.hpp"
+#include "InterchangeCore_classes.hpp"
 #include "Engine_structs.hpp"
 #include "InterchangeFactoryNodes_structs.hpp"
 
@@ -52,6 +52,146 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UInterchangeActorFactoryNode;
+
+// Class InterchangeFactoryNodes.InterchangeTextureFactoryNode
+// 0x0290 (0x03D0 - 0x0140)
+class UInterchangeTextureFactoryNode : public UInterchangeFactoryBaseNode
+{
+public:
+	uint8                                         Pad_140[0x290];                                    // 0x0140(0x0290)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void InitializeTextureNode(const class FString& UniqueID, const class FString& DisplayLabel, const class FString& InAssetName);
+	bool SetCustomAdjustBrightness(const float& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomAdjustBrightnessCurve(const float& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomAdjustHue(const float& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomAdjustMaxAlpha(const float& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomAdjustMinAlpha(const float& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomAdjustRGBCurve(const float& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomAdjustSaturation(const float& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomAdjustVibrance(const float& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomAllowNonPowerOfTwo(const bool& AttributeValue);
+	bool SetCustomAlphaCoverageThresholds(const struct FVector4& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustombChromaKeyTexture(const bool& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustombDoScaleMipsForAlphaCoverage(const bool& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustombFlipGreenChannel(const bool& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustombPreserveBorder(const bool& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustombUseLegacyGamma(const bool& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomChromaKeyColor(const struct FColor& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomChromaKeyThreshold(const float& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomCompositePower(const float& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomCompositeTextureMode(const uint8& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomCompressionNoAlpha(const bool& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomCompressionQuality(const uint8& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomCompressionSettings(const uint8& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomDeferCompression(const bool& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomDownscale(const float& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomDownscaleOptions(const uint8& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomFilter(const uint8& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomLODBias(const int32& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomLODGroup(const uint8& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomLossyCompressionAmount(const uint8& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomMaxTextureSize(const int32& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomMipGenSettings(const uint8& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomMipLoadOptions(const uint8& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomPaddingColor(const struct FColor& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomPowerOfTwoMode(const uint8& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomPreferCompressedSourceData(const bool& AttributeValue);
+	bool SetCustomSRGB(const bool& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomTranslatedTextureNodeUid(const class FString& AttributeValue);
+	bool SetCustomVirtualTextureStreaming(const bool& AttributeValue, bool bAddApplyDelegate);
+
+	bool GetCustomAdjustBrightness(float* AttributeValue) const;
+	bool GetCustomAdjustBrightnessCurve(float* AttributeValue) const;
+	bool GetCustomAdjustHue(float* AttributeValue) const;
+	bool GetCustomAdjustMaxAlpha(float* AttributeValue) const;
+	bool GetCustomAdjustMinAlpha(float* AttributeValue) const;
+	bool GetCustomAdjustRGBCurve(float* AttributeValue) const;
+	bool GetCustomAdjustSaturation(float* AttributeValue) const;
+	bool GetCustomAdjustVibrance(float* AttributeValue) const;
+	bool GetCustomAllowNonPowerOfTwo(bool* AttributeValue) const;
+	bool GetCustomAlphaCoverageThresholds(struct FVector4* AttributeValue) const;
+	bool GetCustombChromaKeyTexture(bool* AttributeValue) const;
+	bool GetCustombDoScaleMipsForAlphaCoverage(bool* AttributeValue) const;
+	bool GetCustombFlipGreenChannel(bool* AttributeValue) const;
+	bool GetCustombPreserveBorder(bool* AttributeValue) const;
+	bool GetCustombUseLegacyGamma(bool* AttributeValue) const;
+	bool GetCustomChromaKeyColor(struct FColor* AttributeValue) const;
+	bool GetCustomChromaKeyThreshold(float* AttributeValue) const;
+	bool GetCustomCompositePower(float* AttributeValue) const;
+	bool GetCustomCompositeTextureMode(uint8* AttributeValue) const;
+	bool GetCustomCompressionNoAlpha(bool* AttributeValue) const;
+	bool GetCustomCompressionQuality(uint8* AttributeValue) const;
+	bool GetCustomCompressionSettings(uint8* AttributeValue) const;
+	bool GetCustomDeferCompression(bool* AttributeValue) const;
+	bool GetCustomDownscale(float* AttributeValue) const;
+	bool GetCustomDownscaleOptions(uint8* AttributeValue) const;
+	bool GetCustomFilter(uint8* AttributeValue) const;
+	bool GetCustomLODBias(int32* AttributeValue) const;
+	bool GetCustomLODGroup(uint8* AttributeValue) const;
+	bool GetCustomLossyCompressionAmount(uint8* AttributeValue) const;
+	bool GetCustomMaxTextureSize(int32* AttributeValue) const;
+	bool GetCustomMipGenSettings(uint8* AttributeValue) const;
+	bool GetCustomMipLoadOptions(uint8* AttributeValue) const;
+	bool GetCustomPaddingColor(struct FColor* AttributeValue) const;
+	bool GetCustomPowerOfTwoMode(uint8* AttributeValue) const;
+	bool GetCustomPreferCompressedSourceData(bool* AttributeValue) const;
+	bool GetCustomSRGB(bool* AttributeValue) const;
+	bool GetCustomTranslatedTextureNodeUid(class FString* AttributeValue) const;
+	bool GetCustomVirtualTextureStreaming(bool* AttributeValue) const;
+	class UClass* GetObjectClass() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeTextureFactoryNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeTextureFactoryNode")
+	}
+	static class UInterchangeTextureFactoryNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeTextureFactoryNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeTextureFactoryNode;
+
+// Class InterchangeFactoryNodes.InterchangeTexture2DFactoryNode
+// 0x0098 (0x0468 - 0x03D0)
+class UInterchangeTexture2DFactoryNode : public UInterchangeTextureFactoryNode
+{
+public:
+	uint8                                         Pad_3D0[0x98];                                     // 0x03D0(0x0098)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool SetCustomAddressX(const ETextureAddress AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomAddressY(const ETextureAddress AttributeValue, bool bAddApplyDelegate);
+	void SetSourceBlock(int32 BlockIndex, const class FString& InSourceFile);
+	void SetSourceBlockByCoordinates(int32 X, int32 Y, const class FString& InSourceFile);
+	void SetSourceBlocks(const TMap<int32, class FString>& InSourceBlocks);
+
+	bool GetCustomAddressX(ETextureAddress* AttributeValue) const;
+	bool GetCustomAddressY(ETextureAddress* AttributeValue) const;
+	bool GetSourceBlock(int32 BlockIndex, class FString* OutSourceFile) const;
+	bool GetSourceBlockByCoordinates(int32 X, int32 Y, class FString* OutSourceFile) const;
+	TMap<int32, class FString> GetSourceBlocks() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeTexture2DFactoryNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeTexture2DFactoryNode")
+	}
+	static class UInterchangeTexture2DFactoryNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeTexture2DFactoryNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeTexture2DFactoryNode;
 
 // Class InterchangeFactoryNodes.InterchangePhysicalCameraFactoryNode
 // 0x0040 (0x01C0 - 0x0180)
@@ -158,6 +298,81 @@ public:
 };
 DUMPER7_ASSERTS_UInterchangeDecalActorFactoryNode;
 
+// Class InterchangeFactoryNodes.InterchangeAnimSequenceFactoryNode
+// 0x0340 (0x0480 - 0x0140)
+class UInterchangeAnimSequenceFactoryNode final : public UInterchangeFactoryBaseNode
+{
+public:
+	uint8                                         Pad_140[0x340];                                    // 0x0140(0x0340)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void InitializeAnimSequenceNode(const class FString& UniqueID, const class FString& DisplayLabel);
+	bool RemoveAnimatedAttributeCurveName(const class FString& AttributeCurveName);
+	bool RemoveAnimatedAttributeStepCurveName(const class FString& AttributeStepCurveName);
+	bool RemoveAnimatedMaterialCurveSuffixe(const class FString& MaterialCurveSuffixe);
+	bool SetAnimatedAttributeCurveName(const class FString& AttributeCurveName);
+	bool SetAnimatedAttributeStepCurveName(const class FString& AttributeStepCurveName);
+	bool SetAnimatedMaterialCurveSuffixe(const class FString& MaterialCurveSuffixe);
+	void SetAnimationPayloadKeysForMorphTargetNodeUids(const TMap<class FString, class FString>& MorphTargetAnimationPayloadKeyUids, const TMap<class FString, uint8>& MorphTargetAnimationPayloadKeyTypes);
+	void SetAnimationPayloadKeysForSceneNodeUids(const TMap<class FString, class FString>& SceneNodeAnimationPayloadKeyUids, const TMap<class FString, uint8>& SceneNodeAnimationPayloadKeyTypes);
+	bool SetCustomAddCurveMetadataToSkeleton(const bool& AttributeValue);
+	bool SetCustomDeleteExistingCustomAttributeCurves(const bool& AttributeValue);
+	bool SetCustomDeleteExistingMorphTargetCurves(const bool& AttributeValue);
+	bool SetCustomDeleteExistingNonCurveCustomAttributes(const bool& AttributeValue);
+	bool SetCustomDoNotImportCurveWithZero(const bool& AttributeValue);
+	bool SetCustomImportAttributeCurves(const bool& AttributeValue);
+	bool SetCustomImportBoneTracks(const bool& AttributeValue);
+	bool SetCustomImportBoneTracksRangeStart(const double& AttributeValue);
+	bool SetCustomImportBoneTracksRangeStop(const double& AttributeValue);
+	bool SetCustomImportBoneTracksSampleRate(const double& AttributeValue);
+	bool SetCustomMaterialDriveParameterOnCustomAttribute(const bool& AttributeValue);
+	bool SetCustomRemoveCurveRedundantKeys(const bool& AttributeValue);
+	bool SetCustomSkeletonFactoryNodeUid(const class FString& AttributeValue);
+	bool SetCustomSkeletonSoftObjectPath(const struct FSoftObjectPath& AttributeValue);
+
+	void GetAnimatedAttributeCurveName(const int32 Index_0, class FString* OutAttributeCurveName) const;
+	void GetAnimatedAttributeCurveNames(TArray<class FString>* OutAttributeCurveNames) const;
+	int32 GetAnimatedAttributeCurveNamesCount() const;
+	void GetAnimatedAttributeStepCurveName(const int32 Index_0, class FString* OutAttributeStepCurveName) const;
+	void GetAnimatedAttributeStepCurveNames(TArray<class FString>* OutAttributeStepCurveNames) const;
+	int32 GetAnimatedAttributeStepCurveNamesCount() const;
+	void GetAnimatedMaterialCurveSuffixe(const int32 Index_0, class FString* OutMaterialCurveSuffixe) const;
+	void GetAnimatedMaterialCurveSuffixes(TArray<class FString>* OutMaterialCurveSuffixes) const;
+	int32 GetAnimatedMaterialCurveSuffixesCount() const;
+	bool GetCustomAddCurveMetadataToSkeleton(bool* AttributeValue) const;
+	bool GetCustomDeleteExistingCustomAttributeCurves(bool* AttributeValue) const;
+	bool GetCustomDeleteExistingMorphTargetCurves(bool* AttributeValue) const;
+	bool GetCustomDeleteExistingNonCurveCustomAttributes(bool* AttributeValue) const;
+	bool GetCustomDoNotImportCurveWithZero(bool* AttributeValue) const;
+	bool GetCustomImportAttributeCurves(bool* AttributeValue) const;
+	bool GetCustomImportBoneTracks(bool* AttributeValue) const;
+	bool GetCustomImportBoneTracksRangeStart(double* AttributeValue) const;
+	bool GetCustomImportBoneTracksRangeStop(double* AttributeValue) const;
+	bool GetCustomImportBoneTracksSampleRate(double* AttributeValue) const;
+	bool GetCustomMaterialDriveParameterOnCustomAttribute(bool* AttributeValue) const;
+	bool GetCustomRemoveCurveRedundantKeys(bool* AttributeValue) const;
+	bool GetCustomSkeletonFactoryNodeUid(class FString* AttributeValue) const;
+	bool GetCustomSkeletonSoftObjectPath(struct FSoftObjectPath* AttributeValue) const;
+	void GetMorphTargetNodeAnimationPayloadKeys(TMap<class FString, struct FInterchangeAnimationPayLoadKey>* OutMorphTargetNodeAnimationPayloads) const;
+	class UClass* GetObjectClass() const;
+	void GetSceneNodeAnimationPayloadKeys(TMap<class FString, struct FInterchangeAnimationPayLoadKey>* OutSceneNodeAnimationPayloadKeys) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeAnimSequenceFactoryNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeAnimSequenceFactoryNode")
+	}
+	static class UInterchangeAnimSequenceFactoryNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeAnimSequenceFactoryNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeAnimSequenceFactoryNode;
+
 // Class InterchangeFactoryNodes.InterchangeBaseMaterialFactoryNode
 // 0x0010 (0x0150 - 0x0140)
 class UInterchangeBaseMaterialFactoryNode : public UInterchangeFactoryBaseNode
@@ -216,6 +431,30 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UInterchangeDecalMaterialFactoryNode;
+
+// Class InterchangeFactoryNodes.InterchangeMaterialFunctionFactoryNode
+// 0x0000 (0x0150 - 0x0150)
+class UInterchangeMaterialFunctionFactoryNode final : public UInterchangeBaseMaterialFactoryNode
+{
+public:
+	bool GetInputConnection(const class FString& InputName, class FString* ExpressionNodeUid, class FString* OutputName) const;
+	class UClass* GetObjectClass() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeMaterialFunctionFactoryNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeMaterialFunctionFactoryNode")
+	}
+	static class UInterchangeMaterialFunctionFactoryNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeMaterialFunctionFactoryNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeMaterialFunctionFactoryNode;
 
 // Class InterchangeFactoryNodes.InterchangeLevelSequenceFactoryNode
 // 0x0030 (0x0170 - 0x0140)
@@ -285,6 +524,26 @@ public:
 };
 DUMPER7_ASSERTS_UInterchangeBaseLightFactoryNode;
 
+// Class InterchangeFactoryNodes.InterchangeTextureCubeArrayFactoryNode
+// 0x0000 (0x03D0 - 0x03D0)
+class UInterchangeTextureCubeArrayFactoryNode final : public UInterchangeTextureFactoryNode
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeTextureCubeArrayFactoryNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeTextureCubeArrayFactoryNode")
+	}
+	static class UInterchangeTextureCubeArrayFactoryNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeTextureCubeArrayFactoryNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeTextureCubeArrayFactoryNode;
+
 // Class InterchangeFactoryNodes.InterchangeDirectionalLightFactoryNode
 // 0x0000 (0x01C0 - 0x01C0)
 class UInterchangeDirectionalLightFactoryNode final : public UInterchangeBaseLightFactoryNode
@@ -304,6 +563,34 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UInterchangeDirectionalLightFactoryNode;
+
+// Class InterchangeFactoryNodes.InterchangeMaterialExpressionFactoryNode
+// 0x0010 (0x0150 - 0x0140)
+class UInterchangeMaterialExpressionFactoryNode : public UInterchangeFactoryBaseNode
+{
+public:
+	uint8                                         Pad_140[0x10];                                     // 0x0140(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool SetCustomExpressionClassName(const class FString& AttributeValue);
+
+	bool GetCustomExpressionClassName(class FString* AttributeValue) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeMaterialExpressionFactoryNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeMaterialExpressionFactoryNode")
+	}
+	static class UInterchangeMaterialExpressionFactoryNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeMaterialExpressionFactoryNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeMaterialExpressionFactoryNode;
 
 // Class InterchangeFactoryNodes.InterchangeLightFactoryNode
 // 0x0060 (0x0220 - 0x01C0)
@@ -402,6 +689,67 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UInterchangePointLightFactoryNode;
+
+// Class InterchangeFactoryNodes.InterchangeMeshFactoryNode
+// 0x0180 (0x02C0 - 0x0140)
+class UInterchangeMeshFactoryNode : public UInterchangeFactoryBaseNode
+{
+public:
+	uint8                                         Pad_140[0x180];                                    // 0x0140(0x0180)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool AddLodDataUniqueId(const class FString& LodDataUniqueId);
+	bool RemoveLodDataUniqueId(const class FString& LodDataUniqueId);
+	bool RemoveSlotMaterialDependencyUid(const class FString& SlotName);
+	bool ResetSlotMaterialDependencies();
+	bool SetCustomComputeWeightedNormals(const bool& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomKeepSectionsSeparate(const bool& AttributeValue);
+	bool SetCustomLODGroup(const class FName& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomRecomputeNormals(const bool& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomRecomputeTangents(const bool& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomRemoveDegenerates(const bool& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomUseBackwardsCompatibleF16TruncUVs(const bool& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomUseFullPrecisionUVs(const bool& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomUseHighPrecisionTangentBasis(const bool& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomUseMikkTSpace(const bool& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomVertexColorIgnore(const bool& AttributeValue);
+	bool SetCustomVertexColorOverride(const struct FColor& AttributeValue);
+	bool SetCustomVertexColorReplace(const bool& AttributeValue);
+	bool SetSlotMaterialDependencyUid(const class FString& SlotName, const class FString& MaterialDependencyUid);
+
+	bool GetCustomComputeWeightedNormals(bool* AttributeValue) const;
+	bool GetCustomKeepSectionsSeparate(bool* AttributeValue) const;
+	bool GetCustomLODGroup(class FName* AttributeValue) const;
+	bool GetCustomRecomputeNormals(bool* AttributeValue) const;
+	bool GetCustomRecomputeTangents(bool* AttributeValue) const;
+	bool GetCustomRemoveDegenerates(bool* AttributeValue) const;
+	bool GetCustomUseBackwardsCompatibleF16TruncUVs(bool* AttributeValue) const;
+	bool GetCustomUseFullPrecisionUVs(bool* AttributeValue) const;
+	bool GetCustomUseHighPrecisionTangentBasis(bool* AttributeValue) const;
+	bool GetCustomUseMikkTSpace(bool* AttributeValue) const;
+	bool GetCustomVertexColorIgnore(bool* AttributeValue) const;
+	bool GetCustomVertexColorOverride(struct FColor* AttributeValue) const;
+	bool GetCustomVertexColorReplace(bool* AttributeValue) const;
+	int32 GetLodDataCount() const;
+	void GetLodDataUniqueIds(TArray<class FString>* OutLodDataUniqueIds) const;
+	void GetSlotMaterialDependencies(TMap<class FString, class FString>* OutMaterialDependencies) const;
+	bool GetSlotMaterialDependencyUid(const class FString& SlotName, class FString* OutMaterialDependency) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeMeshFactoryNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeMeshFactoryNode")
+	}
+	static class UInterchangeMeshFactoryNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeMeshFactoryNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeMeshFactoryNode;
 
 // Class InterchangeFactoryNodes.InterchangeSpotLightFactoryNode
 // 0x0020 (0x0260 - 0x0240)
@@ -529,110 +877,6 @@ public:
 };
 DUMPER7_ASSERTS_UInterchangeSkeletonFactoryNode;
 
-// Class InterchangeFactoryNodes.InterchangeTextureFactoryNode
-// 0x0290 (0x03D0 - 0x0140)
-class UInterchangeTextureFactoryNode : public UInterchangeFactoryBaseNode
-{
-public:
-	uint8                                         Pad_140[0x290];                                    // 0x0140(0x0290)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void InitializeTextureNode(const class FString& UniqueID, const class FString& DisplayLabel, const class FString& InAssetName);
-	bool SetCustomAdjustBrightness(const float& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomAdjustBrightnessCurve(const float& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomAdjustHue(const float& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomAdjustMaxAlpha(const float& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomAdjustMinAlpha(const float& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomAdjustRGBCurve(const float& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomAdjustSaturation(const float& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomAdjustVibrance(const float& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomAllowNonPowerOfTwo(const bool& AttributeValue);
-	bool SetCustomAlphaCoverageThresholds(const struct FVector4& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustombChromaKeyTexture(const bool& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustombDoScaleMipsForAlphaCoverage(const bool& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustombFlipGreenChannel(const bool& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustombPreserveBorder(const bool& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustombUseLegacyGamma(const bool& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomChromaKeyColor(const struct FColor& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomChromaKeyThreshold(const float& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomCompositePower(const float& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomCompositeTextureMode(const uint8& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomCompressionNoAlpha(const bool& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomCompressionQuality(const uint8& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomCompressionSettings(const uint8& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomDeferCompression(const bool& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomDownscale(const float& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomDownscaleOptions(const uint8& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomFilter(const uint8& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomLODBias(const int32& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomLODGroup(const uint8& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomLossyCompressionAmount(const uint8& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomMaxTextureSize(const int32& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomMipGenSettings(const uint8& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomMipLoadOptions(const uint8& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomPaddingColor(const struct FColor& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomPowerOfTwoMode(const uint8& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomPreferCompressedSourceData(const bool& AttributeValue);
-	bool SetCustomSRGB(const bool& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomTranslatedTextureNodeUid(const class FString& AttributeValue);
-	bool SetCustomVirtualTextureStreaming(const bool& AttributeValue, bool bAddApplyDelegate);
-
-	bool GetCustomAdjustBrightness(float* AttributeValue) const;
-	bool GetCustomAdjustBrightnessCurve(float* AttributeValue) const;
-	bool GetCustomAdjustHue(float* AttributeValue) const;
-	bool GetCustomAdjustMaxAlpha(float* AttributeValue) const;
-	bool GetCustomAdjustMinAlpha(float* AttributeValue) const;
-	bool GetCustomAdjustRGBCurve(float* AttributeValue) const;
-	bool GetCustomAdjustSaturation(float* AttributeValue) const;
-	bool GetCustomAdjustVibrance(float* AttributeValue) const;
-	bool GetCustomAllowNonPowerOfTwo(bool* AttributeValue) const;
-	bool GetCustomAlphaCoverageThresholds(struct FVector4* AttributeValue) const;
-	bool GetCustombChromaKeyTexture(bool* AttributeValue) const;
-	bool GetCustombDoScaleMipsForAlphaCoverage(bool* AttributeValue) const;
-	bool GetCustombFlipGreenChannel(bool* AttributeValue) const;
-	bool GetCustombPreserveBorder(bool* AttributeValue) const;
-	bool GetCustombUseLegacyGamma(bool* AttributeValue) const;
-	bool GetCustomChromaKeyColor(struct FColor* AttributeValue) const;
-	bool GetCustomChromaKeyThreshold(float* AttributeValue) const;
-	bool GetCustomCompositePower(float* AttributeValue) const;
-	bool GetCustomCompositeTextureMode(uint8* AttributeValue) const;
-	bool GetCustomCompressionNoAlpha(bool* AttributeValue) const;
-	bool GetCustomCompressionQuality(uint8* AttributeValue) const;
-	bool GetCustomCompressionSettings(uint8* AttributeValue) const;
-	bool GetCustomDeferCompression(bool* AttributeValue) const;
-	bool GetCustomDownscale(float* AttributeValue) const;
-	bool GetCustomDownscaleOptions(uint8* AttributeValue) const;
-	bool GetCustomFilter(uint8* AttributeValue) const;
-	bool GetCustomLODBias(int32* AttributeValue) const;
-	bool GetCustomLODGroup(uint8* AttributeValue) const;
-	bool GetCustomLossyCompressionAmount(uint8* AttributeValue) const;
-	bool GetCustomMaxTextureSize(int32* AttributeValue) const;
-	bool GetCustomMipGenSettings(uint8* AttributeValue) const;
-	bool GetCustomMipLoadOptions(uint8* AttributeValue) const;
-	bool GetCustomPaddingColor(struct FColor* AttributeValue) const;
-	bool GetCustomPowerOfTwoMode(uint8* AttributeValue) const;
-	bool GetCustomPreferCompressedSourceData(bool* AttributeValue) const;
-	bool GetCustomSRGB(bool* AttributeValue) const;
-	bool GetCustomTranslatedTextureNodeUid(class FString* AttributeValue) const;
-	bool GetCustomVirtualTextureStreaming(bool* AttributeValue) const;
-	class UClass* GetObjectClass() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InterchangeTextureFactoryNode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InterchangeTextureFactoryNode")
-	}
-	static class UInterchangeTextureFactoryNode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInterchangeTextureFactoryNode>();
-	}
-};
-DUMPER7_ASSERTS_UInterchangeTextureFactoryNode;
-
 // Class InterchangeFactoryNodes.InterchangeTexture2DArrayFactoryNode
 // 0x0030 (0x0400 - 0x03D0)
 class UInterchangeTexture2DArrayFactoryNode final : public UInterchangeTextureFactoryNode
@@ -662,62 +906,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UInterchangeTexture2DArrayFactoryNode;
-
-// Class InterchangeFactoryNodes.InterchangeTexture2DFactoryNode
-// 0x0098 (0x0468 - 0x03D0)
-class UInterchangeTexture2DFactoryNode : public UInterchangeTextureFactoryNode
-{
-public:
-	uint8                                         Pad_3D0[0x98];                                     // 0x03D0(0x0098)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	bool SetCustomAddressX(const ETextureAddress AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomAddressY(const ETextureAddress AttributeValue, bool bAddApplyDelegate);
-	void SetSourceBlock(int32 BlockIndex, const class FString& InSourceFile);
-	void SetSourceBlockByCoordinates(int32 X, int32 Y, const class FString& InSourceFile);
-	void SetSourceBlocks(const TMap<int32, class FString>& InSourceBlocks);
-
-	bool GetCustomAddressX(ETextureAddress* AttributeValue) const;
-	bool GetCustomAddressY(ETextureAddress* AttributeValue) const;
-	bool GetSourceBlock(int32 BlockIndex, class FString* OutSourceFile) const;
-	bool GetSourceBlockByCoordinates(int32 X, int32 Y, class FString* OutSourceFile) const;
-	TMap<int32, class FString> GetSourceBlocks() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InterchangeTexture2DFactoryNode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InterchangeTexture2DFactoryNode")
-	}
-	static class UInterchangeTexture2DFactoryNode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInterchangeTexture2DFactoryNode>();
-	}
-};
-DUMPER7_ASSERTS_UInterchangeTexture2DFactoryNode;
-
-// Class InterchangeFactoryNodes.InterchangeTextureCubeArrayFactoryNode
-// 0x0000 (0x03D0 - 0x03D0)
-class UInterchangeTextureCubeArrayFactoryNode final : public UInterchangeTextureFactoryNode
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InterchangeTextureCubeArrayFactoryNode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InterchangeTextureCubeArrayFactoryNode")
-	}
-	static class UInterchangeTextureCubeArrayFactoryNode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInterchangeTextureCubeArrayFactoryNode>();
-	}
-};
-DUMPER7_ASSERTS_UInterchangeTextureCubeArrayFactoryNode;
 
 // Class InterchangeFactoryNodes.InterchangeTextureCubeFactoryNode
 // 0x0000 (0x03D0 - 0x03D0)
@@ -788,81 +976,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UInterchangeVolumeTextureFactoryNode;
-
-// Class InterchangeFactoryNodes.InterchangeAnimSequenceFactoryNode
-// 0x0340 (0x0480 - 0x0140)
-class UInterchangeAnimSequenceFactoryNode final : public UInterchangeFactoryBaseNode
-{
-public:
-	uint8                                         Pad_140[0x340];                                    // 0x0140(0x0340)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void InitializeAnimSequenceNode(const class FString& UniqueID, const class FString& DisplayLabel);
-	bool RemoveAnimatedAttributeCurveName(const class FString& AttributeCurveName);
-	bool RemoveAnimatedAttributeStepCurveName(const class FString& AttributeStepCurveName);
-	bool RemoveAnimatedMaterialCurveSuffixe(const class FString& MaterialCurveSuffixe);
-	bool SetAnimatedAttributeCurveName(const class FString& AttributeCurveName);
-	bool SetAnimatedAttributeStepCurveName(const class FString& AttributeStepCurveName);
-	bool SetAnimatedMaterialCurveSuffixe(const class FString& MaterialCurveSuffixe);
-	void SetAnimationPayloadKeysForMorphTargetNodeUids(const TMap<class FString, class FString>& MorphTargetAnimationPayloadKeyUids, const TMap<class FString, uint8>& MorphTargetAnimationPayloadKeyTypes);
-	void SetAnimationPayloadKeysForSceneNodeUids(const TMap<class FString, class FString>& SceneNodeAnimationPayloadKeyUids, const TMap<class FString, uint8>& SceneNodeAnimationPayloadKeyTypes);
-	bool SetCustomAddCurveMetadataToSkeleton(const bool& AttributeValue);
-	bool SetCustomDeleteExistingCustomAttributeCurves(const bool& AttributeValue);
-	bool SetCustomDeleteExistingMorphTargetCurves(const bool& AttributeValue);
-	bool SetCustomDeleteExistingNonCurveCustomAttributes(const bool& AttributeValue);
-	bool SetCustomDoNotImportCurveWithZero(const bool& AttributeValue);
-	bool SetCustomImportAttributeCurves(const bool& AttributeValue);
-	bool SetCustomImportBoneTracks(const bool& AttributeValue);
-	bool SetCustomImportBoneTracksRangeStart(const double& AttributeValue);
-	bool SetCustomImportBoneTracksRangeStop(const double& AttributeValue);
-	bool SetCustomImportBoneTracksSampleRate(const double& AttributeValue);
-	bool SetCustomMaterialDriveParameterOnCustomAttribute(const bool& AttributeValue);
-	bool SetCustomRemoveCurveRedundantKeys(const bool& AttributeValue);
-	bool SetCustomSkeletonFactoryNodeUid(const class FString& AttributeValue);
-	bool SetCustomSkeletonSoftObjectPath(const struct FSoftObjectPath& AttributeValue);
-
-	void GetAnimatedAttributeCurveName(const int32 Index_0, class FString* OutAttributeCurveName) const;
-	void GetAnimatedAttributeCurveNames(TArray<class FString>* OutAttributeCurveNames) const;
-	int32 GetAnimatedAttributeCurveNamesCount() const;
-	void GetAnimatedAttributeStepCurveName(const int32 Index_0, class FString* OutAttributeStepCurveName) const;
-	void GetAnimatedAttributeStepCurveNames(TArray<class FString>* OutAttributeStepCurveNames) const;
-	int32 GetAnimatedAttributeStepCurveNamesCount() const;
-	void GetAnimatedMaterialCurveSuffixe(const int32 Index_0, class FString* OutMaterialCurveSuffixe) const;
-	void GetAnimatedMaterialCurveSuffixes(TArray<class FString>* OutMaterialCurveSuffixes) const;
-	int32 GetAnimatedMaterialCurveSuffixesCount() const;
-	bool GetCustomAddCurveMetadataToSkeleton(bool* AttributeValue) const;
-	bool GetCustomDeleteExistingCustomAttributeCurves(bool* AttributeValue) const;
-	bool GetCustomDeleteExistingMorphTargetCurves(bool* AttributeValue) const;
-	bool GetCustomDeleteExistingNonCurveCustomAttributes(bool* AttributeValue) const;
-	bool GetCustomDoNotImportCurveWithZero(bool* AttributeValue) const;
-	bool GetCustomImportAttributeCurves(bool* AttributeValue) const;
-	bool GetCustomImportBoneTracks(bool* AttributeValue) const;
-	bool GetCustomImportBoneTracksRangeStart(double* AttributeValue) const;
-	bool GetCustomImportBoneTracksRangeStop(double* AttributeValue) const;
-	bool GetCustomImportBoneTracksSampleRate(double* AttributeValue) const;
-	bool GetCustomMaterialDriveParameterOnCustomAttribute(bool* AttributeValue) const;
-	bool GetCustomRemoveCurveRedundantKeys(bool* AttributeValue) const;
-	bool GetCustomSkeletonFactoryNodeUid(class FString* AttributeValue) const;
-	bool GetCustomSkeletonSoftObjectPath(struct FSoftObjectPath* AttributeValue) const;
-	void GetMorphTargetNodeAnimationPayloadKeys(TMap<class FString, struct FInterchangeAnimationPayLoadKey>* OutMorphTargetNodeAnimationPayloads) const;
-	class UClass* GetObjectClass() const;
-	void GetSceneNodeAnimationPayloadKeys(TMap<class FString, struct FInterchangeAnimationPayLoadKey>* OutSceneNodeAnimationPayloadKeys) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InterchangeAnimSequenceFactoryNode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InterchangeAnimSequenceFactoryNode")
-	}
-	static class UInterchangeAnimSequenceFactoryNode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInterchangeAnimSequenceFactoryNode>();
-	}
-};
-DUMPER7_ASSERTS_UInterchangeAnimSequenceFactoryNode;
 
 // Class InterchangeFactoryNodes.InterchangeCommonPipelineDataFactoryNode
 // 0x0020 (0x0160 - 0x0140)
@@ -989,34 +1102,6 @@ public:
 };
 DUMPER7_ASSERTS_UInterchangeMaterialFactoryNode;
 
-// Class InterchangeFactoryNodes.InterchangeMaterialExpressionFactoryNode
-// 0x0010 (0x0150 - 0x0140)
-class UInterchangeMaterialExpressionFactoryNode : public UInterchangeFactoryBaseNode
-{
-public:
-	uint8                                         Pad_140[0x10];                                     // 0x0140(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	bool SetCustomExpressionClassName(const class FString& AttributeValue);
-
-	bool GetCustomExpressionClassName(class FString* AttributeValue) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InterchangeMaterialExpressionFactoryNode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InterchangeMaterialExpressionFactoryNode")
-	}
-	static class UInterchangeMaterialExpressionFactoryNode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInterchangeMaterialExpressionFactoryNode>();
-	}
-};
-DUMPER7_ASSERTS_UInterchangeMaterialExpressionFactoryNode;
-
 // Class InterchangeFactoryNodes.InterchangeMaterialInstanceFactoryNode
 // 0x0020 (0x0170 - 0x0150)
 class UInterchangeMaterialInstanceFactoryNode final : public UInterchangeBaseMaterialFactoryNode
@@ -1075,30 +1160,6 @@ public:
 };
 DUMPER7_ASSERTS_UInterchangeMaterialFunctionCallExpressionFactoryNode;
 
-// Class InterchangeFactoryNodes.InterchangeMaterialFunctionFactoryNode
-// 0x0000 (0x0150 - 0x0150)
-class UInterchangeMaterialFunctionFactoryNode final : public UInterchangeBaseMaterialFactoryNode
-{
-public:
-	bool GetInputConnection(const class FString& InputName, class FString* ExpressionNodeUid, class FString* OutputName) const;
-	class UClass* GetObjectClass() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InterchangeMaterialFunctionFactoryNode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InterchangeMaterialFunctionFactoryNode")
-	}
-	static class UInterchangeMaterialFunctionFactoryNode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInterchangeMaterialFunctionFactoryNode>();
-	}
-};
-DUMPER7_ASSERTS_UInterchangeMaterialFunctionFactoryNode;
-
 // Class InterchangeFactoryNodes.InterchangeMeshActorFactoryNode
 // 0x0098 (0x0218 - 0x0180)
 class UInterchangeMeshActorFactoryNode final : public UInterchangeActorFactoryNode
@@ -1132,67 +1193,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UInterchangeMeshActorFactoryNode;
-
-// Class InterchangeFactoryNodes.InterchangeMeshFactoryNode
-// 0x0180 (0x02C0 - 0x0140)
-class UInterchangeMeshFactoryNode : public UInterchangeFactoryBaseNode
-{
-public:
-	uint8                                         Pad_140[0x180];                                    // 0x0140(0x0180)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	bool AddLodDataUniqueId(const class FString& LodDataUniqueId);
-	bool RemoveLodDataUniqueId(const class FString& LodDataUniqueId);
-	bool RemoveSlotMaterialDependencyUid(const class FString& SlotName);
-	bool ResetSlotMaterialDependencies();
-	bool SetCustomComputeWeightedNormals(const bool& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomKeepSectionsSeparate(const bool& AttributeValue);
-	bool SetCustomLODGroup(const class FName& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomRecomputeNormals(const bool& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomRecomputeTangents(const bool& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomRemoveDegenerates(const bool& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomUseBackwardsCompatibleF16TruncUVs(const bool& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomUseFullPrecisionUVs(const bool& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomUseHighPrecisionTangentBasis(const bool& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomUseMikkTSpace(const bool& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomVertexColorIgnore(const bool& AttributeValue);
-	bool SetCustomVertexColorOverride(const struct FColor& AttributeValue);
-	bool SetCustomVertexColorReplace(const bool& AttributeValue);
-	bool SetSlotMaterialDependencyUid(const class FString& SlotName, const class FString& MaterialDependencyUid);
-
-	bool GetCustomComputeWeightedNormals(bool* AttributeValue) const;
-	bool GetCustomKeepSectionsSeparate(bool* AttributeValue) const;
-	bool GetCustomLODGroup(class FName* AttributeValue) const;
-	bool GetCustomRecomputeNormals(bool* AttributeValue) const;
-	bool GetCustomRecomputeTangents(bool* AttributeValue) const;
-	bool GetCustomRemoveDegenerates(bool* AttributeValue) const;
-	bool GetCustomUseBackwardsCompatibleF16TruncUVs(bool* AttributeValue) const;
-	bool GetCustomUseFullPrecisionUVs(bool* AttributeValue) const;
-	bool GetCustomUseHighPrecisionTangentBasis(bool* AttributeValue) const;
-	bool GetCustomUseMikkTSpace(bool* AttributeValue) const;
-	bool GetCustomVertexColorIgnore(bool* AttributeValue) const;
-	bool GetCustomVertexColorOverride(struct FColor* AttributeValue) const;
-	bool GetCustomVertexColorReplace(bool* AttributeValue) const;
-	int32 GetLodDataCount() const;
-	void GetLodDataUniqueIds(TArray<class FString>* OutLodDataUniqueIds) const;
-	void GetSlotMaterialDependencies(TMap<class FString, class FString>* OutMaterialDependencies) const;
-	bool GetSlotMaterialDependencyUid(const class FString& SlotName, class FString* OutMaterialDependency) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InterchangeMeshFactoryNode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InterchangeMeshFactoryNode")
-	}
-	static class UInterchangeMeshFactoryNode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInterchangeMeshFactoryNode>();
-	}
-};
-DUMPER7_ASSERTS_UInterchangeMeshFactoryNode;
 
 // Class InterchangeFactoryNodes.InterchangeSceneImportAssetFactoryNode
 // 0x0000 (0x0140 - 0x0140)

@@ -182,6 +182,29 @@ namespace Reflect
         return true;
     }
 
+    bool Reflect::CallStaticUInt8UInt8(const char* className, const char* funcName, uint8_t p1, uint8_t p2)
+    {
+        SDK::UFunction* func = FindFunction(className, funcName);
+        SDK::UObject* cdo = FindCDO(className);
+
+        if (!func || !cdo)
+            return false;
+
+        uint8_t params[512] = {};
+
+        SDK::FProperty* param0 = FindNthParam(func, 0);
+        SDK::FProperty* param1 = FindNthParam(func, 1);
+
+        if (!param0 || !param1)
+            return false;
+
+        *(uint8_t*)(params + param0->Offset) = p1;
+        *(uint8_t*)(params + param1->Offset) = p2;
+
+        cdo->ProcessEvent(func, params);
+        return true;
+    }
+
     bool CallStaticInt32Bool(const char* className, const char* funcName, int32_t p1, bool p2)
     {
         SDK::UFunction* func = FindFunction(className, funcName);

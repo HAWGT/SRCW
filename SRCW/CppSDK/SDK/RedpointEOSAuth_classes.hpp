@@ -12,8 +12,8 @@
 
 #include "SlateCore_structs.hpp"
 #include "UMG_classes.hpp"
-#include "CoreUObject_classes.hpp"
 #include "RedpointEOSAuth_structs.hpp"
+#include "CoreUObject_classes.hpp"
 
 
 namespace SDK
